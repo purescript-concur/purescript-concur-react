@@ -1,0 +1,19 @@
+{
+  "name": "purescript-concur-react",
+  "version": "0.1.0",
+  "description": "Concur implementation for Purescript, with React bindings",
+  "license": "MIT",
+  "repository": "ajnsit/purescript-concur-react",
+  "author": {
+    "name": "Anupam Jain",
+    "email": "ajnsit@gmail.com"
+  },
+  "files": [],
+  "scripts": {
+    "build": "pulp browserify --main Test.Main --to html/index.js"
+  },
+  "dependencies": {
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2"
+  }
+}
