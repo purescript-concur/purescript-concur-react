@@ -26,8 +26,8 @@ counter :: forall a. Int -> Render a
 counter count = do
   n <- el' D.div'
         [ el D.p' (text ("State: " <> show count))
-        , (pure (count+1)) <* button "Increment"
-        , (pure (count-1)) <* button "Decrement"
+        , button "Increment" $> count+1
+        , button "Decrement" $> count-1
         ]
   counter n
 
