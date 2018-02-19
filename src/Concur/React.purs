@@ -9,6 +9,7 @@ import React as R
 import React.DOM as D
 import React.DOM.Props as P
 import Data.Array (foldl)
+import Data.Monoid (class Monoid, mempty)
 
 type ReactEff state refs =
   ( state :: R.ReactState state
@@ -16,92 +17,87 @@ type ReactEff state refs =
   , refs  :: R.ReactRefs refs
   )
 
-type View = Array R.ReactElement
+type HTML = Array R.ReactElement
 
-type RenderFunc a = (Render a -> EventHandler Unit) -> View
-data Render a = RenderEnd a | Render (RenderFunc a)
+type RenderFunc v a = (Widget v a -> EventHandler Unit) -> v
+data Widget v a = RenderEnd a | Widget (RenderFunc v a)
 
-instance renderFunctor :: Functor Render where
+instance renderFunctor :: Functor (Widget v) where
   map f (RenderEnd a) = RenderEnd (f a)
-  map f (Render r) = Render $ \h -> r (h <<< map f)
+  map f (Widget r) = Widget $ \h -> r (h <<< map f)
 
-instance renderBind :: Bind Render where
+instance renderBind :: Bind (Widget v) where
   bind (RenderEnd a) k = k a
-  bind (Render r) k = Render $ \h -> r (h <<< flip bind k)
+  bind (Widget r) k = Widget $ \h -> r (h <<< flip bind k)
 
-instance renderApplicative :: Applicative Render where
+instance renderApplicative :: Applicative (Widget v) where
   pure = RenderEnd
 
-instance renderApply :: Apply Render where
+instance renderApply :: Apply (Widget v) where
   apply = ap
 
-instance renderMonad :: Monad Render
+instance renderMonad :: Monad (Widget v)
 
-instance renderAlt :: Alt Render where
+-- TODO: Make Widget TailRecursive
+-- instance renderMonadRec :: MonadRec (Widget v) where
+
+instance renderAlt :: Semigroup v => Alt (Widget v) where
   alt (RenderEnd a) _ = RenderEnd a
   alt _ (RenderEnd a) = RenderEnd a
-  alt (Render f) (Render g) = Render $ \h ->
+  alt (Widget f) (Widget g) = Widget $ \h ->
     let hf (RenderEnd a) = h (RenderEnd a)
-        hf ff = h (alt ff (Render g))
+        hf ff = h (alt ff (Widget g))
         hg (RenderEnd b) = h (RenderEnd b)
-        hg gg = h (alt (Render f) gg)
+        hg gg = h (alt (Widget f) gg)
     in f hf <> g hg
 
-instance renderPlus :: Plus Render where
-  empty = display []
+instance renderPlus :: Monoid v => Plus (Widget v) where
+  empty = display mempty
 
-instance renderAlternative :: Alternative Render
+instance renderAlternative :: Monoid v => Alternative (Widget v)
 
-mapView :: forall a. (View -> View) -> Render a -> Render a
-mapView f (Render r) = Render $ f <<< r
+mapView :: forall a v. (v -> v) -> Widget v a -> Widget v a
+mapView f (Widget r) = Widget $ f <<< r
 mapView _ r = r
 
 type NodeName = Array R.ReactElement -> R.ReactElement
+type NodeTag = Array P.Props -> Array R.ReactElement -> R.ReactElement
 
-never :: forall a. Render a
+never :: forall a v. Monoid v => Widget v a
 never = empty
 
-button :: String -> Render Unit
-button label = renderFunc $ \send -> [D.button [P.onClick \_ -> send (pure unit)] [D.text label]]
-
-text :: forall a. String -> Render a
-text label = renderFunc $ \_ -> [ D.text label ]
-
-orr :: forall a. Array (Render a) -> Render a
+orr :: forall a v. Monoid v => Array (Widget v a) -> Widget v a
 orr = foldl (<|>) never
 
-el :: forall a. NodeName -> Render a -> Render a
+el :: forall a. NodeName -> Widget HTML a -> Widget HTML a
 el n = mapView (\v -> [n v])
 
-el' :: forall a. NodeName -> Array (Render a) -> Render a
+el' :: forall a. NodeName -> Array (Widget HTML a) -> Widget HTML a
 el' n = el n <<< orr
 
-renderFunc :: forall a. RenderFunc a -> Render a
-renderFunc f = Render f
-
-display :: forall a. View -> Render a
-display = renderFunc <<< const
+display :: forall a v. v -> Widget v a
+display = Widget <<< const
 
 type EventHandler a = Eff (ReactEff R.ReadWrite R.ReadOnly) a
 type RenderHandler a = Eff (ReactEff R.ReadOnly ()) a
-type This props a = R.ReactThis props (Render a)
+type This props v a = R.ReactThis props (Widget v a)
 
-componentClass :: forall props a. Render a -> R.ReactClass props
+componentClass :: forall props a. Widget HTML a -> R.ReactClass props
 componentClass init = R.createClass (R.spec init render)
   where
-    render :: This props a -> RenderHandler R.ReactElement
+    render :: This props HTML a -> RenderHandler R.ReactElement
     render this = do
       v <- renderInner this
       -- TODO: REFINE THE DIV WRAPPER. THIS IS JUST A PLACEHOLDER
       pure (D.div' v)
-    renderInner :: This props a -> RenderHandler View
+    renderInner :: This props HTML a -> RenderHandler HTML
     renderInner this = do
       ren <- R.readState this
       case ren of
         RenderEnd a -> pure []
-        Render renderView -> do
+        Widget renderView -> do
           let handler r' = void (R.writeState this r')
           pure (renderView handler)
 
-renderComponent :: forall a. Render a -> R.ReactElement
+renderComponent :: forall a. Widget HTML a -> R.ReactElement
 renderComponent init = R.createFactory (componentClass init) {}
