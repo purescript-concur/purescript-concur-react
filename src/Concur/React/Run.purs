@@ -13,7 +13,7 @@ import DOM.Node.Types (ElementId(..), documentToNonElementParentNode)
 import Data.Maybe (Maybe(..))
 import ReactDOM (render)
 
-runWidgetInDom :: forall a eff. String -> Widget HTML a -> Eff (dom :: DOM | eff) Unit
+runWidgetInDom :: forall a eff. String -> Widget HTML eff a -> Eff (dom :: DOM | eff) Unit
 runWidgetInDom elemId w = do
   win <- window
   doc <- document win

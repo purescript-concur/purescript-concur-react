@@ -6,10 +6,10 @@ import Concur.React (Widget, HTML)
 import Concur.React.DOM (text, div', p')
 import Concur.React.Widgets (textButton')
 
-marioWidget :: forall a. Widget HTML a
+marioWidget :: forall a eff. Widget HTML eff a
 marioWidget = counter 0
 
-counter :: forall a. Int -> Widget HTML a
+counter :: forall a eff. Int -> Widget HTML eff a
 counter count = do
   n <- div'
         [ p' [text ("State: " <> show count)]
