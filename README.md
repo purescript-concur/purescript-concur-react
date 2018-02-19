@@ -6,7 +6,12 @@ The API needs a little bit more work, but it does work.
 
 ## Examples
 
-1. Two counter widgets side by side. [Source](https://github.com/ajnsit/purescript-concur/blob/master/src/Test/Main.purs), [Demo](https://ajnsit.github.io/purescript-concur/)
+[Demo](https://ajnsit.github.io/purescript-concur/) and [Source](https://github.com/ajnsit/purescript-concur/blob/master/src/Test/Main.purs) for composing all the examples in one page.
+
+Individual example sources -
+
+1. Hello World! Shows simple effectful widgets. [Source](https://github.com/ajnsit/purescript-concur/blob/master/src/Test/Hello.purs).
+2. Two counter widgets side by side. [Source](https://github.com/ajnsit/purescript-concur/blob/master/src/Test/Counter.purs).
 
 ## Building the example from source
 

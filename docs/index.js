@@ -928,7 +928,7 @@ function factory(ReactComponent, isValidElement, ReactNoopUpdateQueue) {
 module.exports = factory;
 
 }).call(this,require('_process'))
-},{"_process":358,"fbjs/lib/emptyObject":11,"fbjs/lib/invariant":18,"fbjs/lib/warning":25,"object-assign":26}],2:[function(require,module,exports){
+},{"_process":357,"fbjs/lib/emptyObject":11,"fbjs/lib/invariant":18,"fbjs/lib/warning":25,"object-assign":26}],2:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -1035,7 +1035,7 @@ var EventListener = {
 
 module.exports = EventListener;
 }).call(this,require('_process'))
-},{"./emptyFunction":10,"_process":358}],4:[function(require,module,exports){
+},{"./emptyFunction":10,"_process":357}],4:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -1302,7 +1302,7 @@ function createArrayFromMixed(obj) {
 
 module.exports = createArrayFromMixed;
 }).call(this,require('_process'))
-},{"./invariant":18,"_process":358}],9:[function(require,module,exports){
+},{"./invariant":18,"_process":357}],9:[function(require,module,exports){
 (function (process){
 'use strict';
 
@@ -1386,7 +1386,7 @@ function createNodesFromMarkup(markup, handleScript) {
 
 module.exports = createNodesFromMarkup;
 }).call(this,require('_process'))
-},{"./ExecutionEnvironment":4,"./createArrayFromMixed":8,"./getMarkupWrap":14,"./invariant":18,"_process":358}],10:[function(require,module,exports){
+},{"./ExecutionEnvironment":4,"./createArrayFromMixed":8,"./getMarkupWrap":14,"./invariant":18,"_process":357}],10:[function(require,module,exports){
 "use strict";
 
 /**
@@ -1443,7 +1443,7 @@ if (process.env.NODE_ENV !== 'production') {
 
 module.exports = emptyObject;
 }).call(this,require('_process'))
-},{"_process":358}],12:[function(require,module,exports){
+},{"_process":357}],12:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -1600,7 +1600,7 @@ function getMarkupWrap(nodeName) {
 
 module.exports = getMarkupWrap;
 }).call(this,require('_process'))
-},{"./ExecutionEnvironment":4,"./invariant":18,"_process":358}],15:[function(require,module,exports){
+},{"./ExecutionEnvironment":4,"./invariant":18,"_process":357}],15:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -1761,7 +1761,7 @@ function invariant(condition, format, a, b, c, d, e, f) {
 
 module.exports = invariant;
 }).call(this,require('_process'))
-},{"_process":358}],19:[function(require,module,exports){
+},{"_process":357}],19:[function(require,module,exports){
 'use strict';
 
 /**
@@ -2019,7 +2019,7 @@ if (process.env.NODE_ENV !== 'production') {
 
 module.exports = warning;
 }).call(this,require('_process'))
-},{"./emptyFunction":10,"_process":358}],26:[function(require,module,exports){
+},{"./emptyFunction":10,"_process":357}],26:[function(require,module,exports){
 /*
 object-assign
 (c) Sindre Sorhus
@@ -2174,7 +2174,7 @@ function checkPropTypes(typeSpecs, values, location, componentName, getStack) {
 module.exports = checkPropTypes;
 
 }).call(this,require('_process'))
-},{"./lib/ReactPropTypesSecret":30,"_process":358,"fbjs/lib/invariant":18,"fbjs/lib/warning":25}],28:[function(require,module,exports){
+},{"./lib/ReactPropTypesSecret":30,"_process":357,"fbjs/lib/invariant":18,"fbjs/lib/warning":25}],28:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -2741,7 +2741,7 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
 };
 
 }).call(this,require('_process'))
-},{"./checkPropTypes":27,"./lib/ReactPropTypesSecret":30,"_process":358,"fbjs/lib/emptyFunction":10,"fbjs/lib/invariant":18,"fbjs/lib/warning":25,"object-assign":26}],30:[function(require,module,exports){
+},{"./checkPropTypes":27,"./lib/ReactPropTypesSecret":30,"_process":357,"fbjs/lib/emptyFunction":10,"fbjs/lib/invariant":18,"fbjs/lib/warning":25,"object-assign":26}],30:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -3604,7 +3604,7 @@ var CSSPropertyOperations = {
 
 module.exports = CSSPropertyOperations;
 }).call(this,require('_process'))
-},{"./CSSProperty":35,"./ReactInstrumentation":94,"./dangerousStyleValue":135,"_process":358,"fbjs/lib/ExecutionEnvironment":4,"fbjs/lib/camelizeStyleName":6,"fbjs/lib/hyphenateStyleName":17,"fbjs/lib/memoizeStringOnly":21,"fbjs/lib/warning":25}],37:[function(require,module,exports){
+},{"./CSSProperty":35,"./ReactInstrumentation":94,"./dangerousStyleValue":135,"_process":357,"fbjs/lib/ExecutionEnvironment":4,"fbjs/lib/camelizeStyleName":6,"fbjs/lib/hyphenateStyleName":17,"fbjs/lib/memoizeStringOnly":21,"fbjs/lib/warning":25}],37:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -3723,7 +3723,7 @@ var CallbackQueue = function () {
 
 module.exports = PooledClass.addPoolingTo(CallbackQueue);
 }).call(this,require('_process'))
-},{"./PooledClass":55,"./reactProdInvariant":154,"_process":358,"fbjs/lib/invariant":18}],38:[function(require,module,exports){
+},{"./PooledClass":55,"./reactProdInvariant":154,"_process":357,"fbjs/lib/invariant":18}],38:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -4259,7 +4259,7 @@ var DOMChildrenOperations = {
 
 module.exports = DOMChildrenOperations;
 }).call(this,require('_process'))
-},{"./DOMLazyTree":40,"./Danger":44,"./ReactDOMComponentTree":64,"./ReactInstrumentation":94,"./createMicrosoftUnsafeLocalFunction":134,"./setInnerHTML":156,"./setTextContent":157,"_process":358}],40:[function(require,module,exports){
+},{"./DOMLazyTree":40,"./Danger":44,"./ReactDOMComponentTree":64,"./ReactInstrumentation":94,"./createMicrosoftUnsafeLocalFunction":134,"./setInnerHTML":156,"./setTextContent":157,"_process":357}],40:[function(require,module,exports){
 /**
  * Copyright (c) 2015-present, Facebook, Inc.
  *
@@ -4602,7 +4602,7 @@ var DOMProperty = {
 
 module.exports = DOMProperty;
 }).call(this,require('_process'))
-},{"./reactProdInvariant":154,"_process":358,"fbjs/lib/invariant":18}],43:[function(require,module,exports){
+},{"./reactProdInvariant":154,"_process":357,"fbjs/lib/invariant":18}],43:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -4837,7 +4837,7 @@ var DOMPropertyOperations = {
 
 module.exports = DOMPropertyOperations;
 }).call(this,require('_process'))
-},{"./DOMProperty":42,"./ReactDOMComponentTree":64,"./ReactInstrumentation":94,"./quoteAttributeValueForBrowser":153,"_process":358,"fbjs/lib/warning":25}],44:[function(require,module,exports){
+},{"./DOMProperty":42,"./ReactDOMComponentTree":64,"./ReactInstrumentation":94,"./quoteAttributeValueForBrowser":153,"_process":357,"fbjs/lib/warning":25}],44:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -4883,7 +4883,7 @@ var Danger = {
 
 module.exports = Danger;
 }).call(this,require('_process'))
-},{"./DOMLazyTree":40,"./reactProdInvariant":154,"_process":358,"fbjs/lib/ExecutionEnvironment":4,"fbjs/lib/createNodesFromMarkup":9,"fbjs/lib/emptyFunction":10,"fbjs/lib/invariant":18}],45:[function(require,module,exports){
+},{"./DOMLazyTree":40,"./reactProdInvariant":154,"_process":357,"fbjs/lib/ExecutionEnvironment":4,"fbjs/lib/createNodesFromMarkup":9,"fbjs/lib/emptyFunction":10,"fbjs/lib/invariant":18}],45:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -5277,7 +5277,7 @@ var EventPluginHub = {
 
 module.exports = EventPluginHub;
 }).call(this,require('_process'))
-},{"./EventPluginRegistry":48,"./EventPluginUtils":49,"./ReactErrorUtils":85,"./accumulateInto":131,"./forEachAccumulated":139,"./reactProdInvariant":154,"_process":358,"fbjs/lib/invariant":18}],48:[function(require,module,exports){
+},{"./EventPluginRegistry":48,"./EventPluginUtils":49,"./ReactErrorUtils":85,"./accumulateInto":131,"./forEachAccumulated":139,"./reactProdInvariant":154,"_process":357,"fbjs/lib/invariant":18}],48:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -5530,7 +5530,7 @@ var EventPluginRegistry = {
 
 module.exports = EventPluginRegistry;
 }).call(this,require('_process'))
-},{"./reactProdInvariant":154,"_process":358,"fbjs/lib/invariant":18}],49:[function(require,module,exports){
+},{"./reactProdInvariant":154,"_process":357,"fbjs/lib/invariant":18}],49:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -5756,7 +5756,7 @@ var EventPluginUtils = {
 
 module.exports = EventPluginUtils;
 }).call(this,require('_process'))
-},{"./ReactErrorUtils":85,"./reactProdInvariant":154,"_process":358,"fbjs/lib/invariant":18,"fbjs/lib/warning":25}],50:[function(require,module,exports){
+},{"./ReactErrorUtils":85,"./reactProdInvariant":154,"_process":357,"fbjs/lib/invariant":18,"fbjs/lib/warning":25}],50:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -5890,7 +5890,7 @@ var EventPropagators = {
 
 module.exports = EventPropagators;
 }).call(this,require('_process'))
-},{"./EventPluginHub":47,"./EventPluginUtils":49,"./accumulateInto":131,"./forEachAccumulated":139,"_process":358,"fbjs/lib/warning":25}],51:[function(require,module,exports){
+},{"./EventPluginHub":47,"./EventPluginUtils":49,"./accumulateInto":131,"./forEachAccumulated":139,"_process":357,"fbjs/lib/warning":25}],51:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -6413,7 +6413,7 @@ var LinkedValueUtils = {
 
 module.exports = LinkedValueUtils;
 }).call(this,require('_process'))
-},{"./ReactPropTypesSecret":102,"./reactProdInvariant":154,"_process":358,"fbjs/lib/invariant":18,"fbjs/lib/warning":25,"prop-types/factory":28,"react/lib/React":164}],55:[function(require,module,exports){
+},{"./ReactPropTypesSecret":102,"./reactProdInvariant":154,"_process":357,"fbjs/lib/invariant":18,"fbjs/lib/warning":25,"prop-types/factory":28,"react/lib/React":164}],55:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -6525,7 +6525,7 @@ var PooledClass = {
 
 module.exports = PooledClass;
 }).call(this,require('_process'))
-},{"./reactProdInvariant":154,"_process":358,"fbjs/lib/invariant":18}],56:[function(require,module,exports){
+},{"./reactProdInvariant":154,"_process":357,"fbjs/lib/invariant":18}],56:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -7000,7 +7000,7 @@ var ReactChildReconciler = {
 
 module.exports = ReactChildReconciler;
 }).call(this,require('_process'))
-},{"./KeyEscapeUtils":53,"./ReactReconciler":104,"./instantiateReactComponent":150,"./shouldUpdateReactComponent":158,"./traverseAllChildren":159,"_process":358,"fbjs/lib/warning":25,"react/lib/ReactComponentTreeHook":167}],58:[function(require,module,exports){
+},{"./KeyEscapeUtils":53,"./ReactReconciler":104,"./instantiateReactComponent":150,"./shouldUpdateReactComponent":158,"./traverseAllChildren":159,"_process":357,"fbjs/lib/warning":25,"react/lib/ReactComponentTreeHook":167}],58:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -7070,7 +7070,7 @@ var ReactComponentEnvironment = {
 
 module.exports = ReactComponentEnvironment;
 }).call(this,require('_process'))
-},{"./reactProdInvariant":154,"_process":358,"fbjs/lib/invariant":18}],60:[function(require,module,exports){
+},{"./reactProdInvariant":154,"_process":357,"fbjs/lib/invariant":18}],60:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -7970,7 +7970,7 @@ var ReactCompositeComponent = {
 
 module.exports = ReactCompositeComponent;
 }).call(this,require('_process'))
-},{"./ReactComponentEnvironment":59,"./ReactErrorUtils":85,"./ReactInstanceMap":93,"./ReactInstrumentation":94,"./ReactNodeTypes":99,"./ReactReconciler":104,"./checkReactTypeSpec":133,"./reactProdInvariant":154,"./shouldUpdateReactComponent":158,"_process":358,"fbjs/lib/emptyObject":11,"fbjs/lib/invariant":18,"fbjs/lib/shallowEqual":24,"fbjs/lib/warning":25,"object-assign":26,"react/lib/React":164,"react/lib/ReactCurrentOwner":168}],61:[function(require,module,exports){
+},{"./ReactComponentEnvironment":59,"./ReactErrorUtils":85,"./ReactInstanceMap":93,"./ReactInstrumentation":94,"./ReactNodeTypes":99,"./ReactReconciler":104,"./checkReactTypeSpec":133,"./reactProdInvariant":154,"./shouldUpdateReactComponent":158,"_process":357,"fbjs/lib/emptyObject":11,"fbjs/lib/invariant":18,"fbjs/lib/shallowEqual":24,"fbjs/lib/warning":25,"object-assign":26,"react/lib/React":164,"react/lib/ReactCurrentOwner":168}],61:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -8081,7 +8081,7 @@ if (process.env.NODE_ENV !== 'production') {
 
 module.exports = ReactDOM;
 }).call(this,require('_process'))
-},{"./ReactDOMComponentTree":64,"./ReactDOMInvalidARIAHook":70,"./ReactDOMNullInputValuePropHook":71,"./ReactDOMUnknownPropertyHook":79,"./ReactDefaultInjection":82,"./ReactInstrumentation":94,"./ReactMount":97,"./ReactReconciler":104,"./ReactUpdates":111,"./ReactVersion":112,"./findDOMNode":137,"./getHostComponentFromComposite":144,"./renderSubtreeIntoContainer":155,"_process":358,"fbjs/lib/ExecutionEnvironment":4,"fbjs/lib/warning":25}],62:[function(require,module,exports){
+},{"./ReactDOMComponentTree":64,"./ReactDOMInvalidARIAHook":70,"./ReactDOMNullInputValuePropHook":71,"./ReactDOMUnknownPropertyHook":79,"./ReactDefaultInjection":82,"./ReactInstrumentation":94,"./ReactMount":97,"./ReactReconciler":104,"./ReactUpdates":111,"./ReactVersion":112,"./findDOMNode":137,"./getHostComponentFromComposite":144,"./renderSubtreeIntoContainer":155,"_process":357,"fbjs/lib/ExecutionEnvironment":4,"fbjs/lib/warning":25}],62:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -9095,7 +9095,7 @@ _assign(ReactDOMComponent.prototype, ReactDOMComponent.Mixin, ReactMultiChild.Mi
 
 module.exports = ReactDOMComponent;
 }).call(this,require('_process'))
-},{"./AutoFocusUtils":33,"./CSSPropertyOperations":36,"./DOMLazyTree":40,"./DOMNamespaces":41,"./DOMProperty":42,"./DOMPropertyOperations":43,"./EventPluginHub":47,"./EventPluginRegistry":48,"./ReactBrowserEventEmitter":56,"./ReactDOMComponentFlags":63,"./ReactDOMComponentTree":64,"./ReactDOMInput":69,"./ReactDOMOption":72,"./ReactDOMSelect":73,"./ReactDOMTextarea":77,"./ReactInstrumentation":94,"./ReactMultiChild":98,"./ReactServerRenderingTransaction":108,"./escapeTextContentForBrowser":136,"./inputValueTracking":149,"./isEventSupported":151,"./reactProdInvariant":154,"./validateDOMNesting":160,"_process":358,"fbjs/lib/emptyFunction":10,"fbjs/lib/invariant":18,"fbjs/lib/shallowEqual":24,"fbjs/lib/warning":25,"object-assign":26}],63:[function(require,module,exports){
+},{"./AutoFocusUtils":33,"./CSSPropertyOperations":36,"./DOMLazyTree":40,"./DOMNamespaces":41,"./DOMProperty":42,"./DOMPropertyOperations":43,"./EventPluginHub":47,"./EventPluginRegistry":48,"./ReactBrowserEventEmitter":56,"./ReactDOMComponentFlags":63,"./ReactDOMComponentTree":64,"./ReactDOMInput":69,"./ReactDOMOption":72,"./ReactDOMSelect":73,"./ReactDOMTextarea":77,"./ReactInstrumentation":94,"./ReactMultiChild":98,"./ReactServerRenderingTransaction":108,"./escapeTextContentForBrowser":136,"./inputValueTracking":149,"./isEventSupported":151,"./reactProdInvariant":154,"./validateDOMNesting":160,"_process":357,"fbjs/lib/emptyFunction":10,"fbjs/lib/invariant":18,"fbjs/lib/shallowEqual":24,"fbjs/lib/warning":25,"object-assign":26}],63:[function(require,module,exports){
 /**
  * Copyright (c) 2015-present, Facebook, Inc.
  *
@@ -9306,7 +9306,7 @@ var ReactDOMComponentTree = {
 
 module.exports = ReactDOMComponentTree;
 }).call(this,require('_process'))
-},{"./DOMProperty":42,"./ReactDOMComponentFlags":63,"./reactProdInvariant":154,"_process":358,"fbjs/lib/invariant":18}],65:[function(require,module,exports){
+},{"./DOMProperty":42,"./ReactDOMComponentFlags":63,"./reactProdInvariant":154,"_process":357,"fbjs/lib/invariant":18}],65:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -9339,7 +9339,7 @@ function ReactDOMContainerInfo(topLevelWrapper, node) {
 
 module.exports = ReactDOMContainerInfo;
 }).call(this,require('_process'))
-},{"./validateDOMNesting":160,"_process":358}],66:[function(require,module,exports){
+},{"./validateDOMNesting":160,"_process":357}],66:[function(require,module,exports){
 /**
  * Copyright (c) 2014-present, Facebook, Inc.
  *
@@ -9732,7 +9732,7 @@ function _handleChange(event) {
 
 module.exports = ReactDOMInput;
 }).call(this,require('_process'))
-},{"./DOMPropertyOperations":43,"./LinkedValueUtils":54,"./ReactDOMComponentTree":64,"./ReactUpdates":111,"./reactProdInvariant":154,"_process":358,"fbjs/lib/invariant":18,"fbjs/lib/warning":25,"object-assign":26}],70:[function(require,module,exports){
+},{"./DOMPropertyOperations":43,"./LinkedValueUtils":54,"./ReactDOMComponentTree":64,"./ReactUpdates":111,"./reactProdInvariant":154,"_process":357,"fbjs/lib/invariant":18,"fbjs/lib/warning":25,"object-assign":26}],70:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -9825,7 +9825,7 @@ var ReactDOMInvalidARIAHook = {
 
 module.exports = ReactDOMInvalidARIAHook;
 }).call(this,require('_process'))
-},{"./DOMProperty":42,"_process":358,"fbjs/lib/warning":25,"react/lib/ReactComponentTreeHook":167}],71:[function(require,module,exports){
+},{"./DOMProperty":42,"_process":357,"fbjs/lib/warning":25,"react/lib/ReactComponentTreeHook":167}],71:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -9868,7 +9868,7 @@ var ReactDOMNullInputValuePropHook = {
 
 module.exports = ReactDOMNullInputValuePropHook;
 }).call(this,require('_process'))
-},{"_process":358,"fbjs/lib/warning":25,"react/lib/ReactComponentTreeHook":167}],72:[function(require,module,exports){
+},{"_process":357,"fbjs/lib/warning":25,"react/lib/ReactComponentTreeHook":167}],72:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -9990,7 +9990,7 @@ var ReactDOMOption = {
 
 module.exports = ReactDOMOption;
 }).call(this,require('_process'))
-},{"./ReactDOMComponentTree":64,"./ReactDOMSelect":73,"_process":358,"fbjs/lib/warning":25,"object-assign":26,"react/lib/React":164}],73:[function(require,module,exports){
+},{"./ReactDOMComponentTree":64,"./ReactDOMSelect":73,"_process":357,"fbjs/lib/warning":25,"object-assign":26,"react/lib/React":164}],73:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -10190,7 +10190,7 @@ function _handleChange(event) {
 
 module.exports = ReactDOMSelect;
 }).call(this,require('_process'))
-},{"./LinkedValueUtils":54,"./ReactDOMComponentTree":64,"./ReactUpdates":111,"_process":358,"fbjs/lib/warning":25,"object-assign":26}],74:[function(require,module,exports){
+},{"./LinkedValueUtils":54,"./ReactDOMComponentTree":64,"./ReactUpdates":111,"_process":357,"fbjs/lib/warning":25,"object-assign":26}],74:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -10586,7 +10586,7 @@ _assign(ReactDOMTextComponent.prototype, {
 
 module.exports = ReactDOMTextComponent;
 }).call(this,require('_process'))
-},{"./DOMChildrenOperations":39,"./DOMLazyTree":40,"./ReactDOMComponentTree":64,"./escapeTextContentForBrowser":136,"./reactProdInvariant":154,"./validateDOMNesting":160,"_process":358,"fbjs/lib/invariant":18,"object-assign":26}],77:[function(require,module,exports){
+},{"./DOMChildrenOperations":39,"./DOMLazyTree":40,"./ReactDOMComponentTree":64,"./escapeTextContentForBrowser":136,"./reactProdInvariant":154,"./validateDOMNesting":160,"_process":357,"fbjs/lib/invariant":18,"object-assign":26}],77:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -10746,7 +10746,7 @@ function _handleChange(event) {
 
 module.exports = ReactDOMTextarea;
 }).call(this,require('_process'))
-},{"./LinkedValueUtils":54,"./ReactDOMComponentTree":64,"./ReactUpdates":111,"./reactProdInvariant":154,"_process":358,"fbjs/lib/invariant":18,"fbjs/lib/warning":25,"object-assign":26}],78:[function(require,module,exports){
+},{"./LinkedValueUtils":54,"./ReactDOMComponentTree":64,"./ReactUpdates":111,"./reactProdInvariant":154,"_process":357,"fbjs/lib/invariant":18,"fbjs/lib/warning":25,"object-assign":26}],78:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2015-present, Facebook, Inc.
@@ -10882,7 +10882,7 @@ module.exports = {
   traverseEnterLeave: traverseEnterLeave
 };
 }).call(this,require('_process'))
-},{"./reactProdInvariant":154,"_process":358,"fbjs/lib/invariant":18}],79:[function(require,module,exports){
+},{"./reactProdInvariant":154,"_process":357,"fbjs/lib/invariant":18}],79:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -10994,7 +10994,7 @@ var ReactDOMUnknownPropertyHook = {
 
 module.exports = ReactDOMUnknownPropertyHook;
 }).call(this,require('_process'))
-},{"./DOMProperty":42,"./EventPluginRegistry":48,"_process":358,"fbjs/lib/warning":25,"react/lib/ReactComponentTreeHook":167}],80:[function(require,module,exports){
+},{"./DOMProperty":42,"./EventPluginRegistry":48,"_process":357,"fbjs/lib/warning":25,"react/lib/ReactComponentTreeHook":167}],80:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2016-present, Facebook, Inc.
@@ -11355,7 +11355,7 @@ if (/[?&]react_perf\b/.test(url)) {
 
 module.exports = ReactDebugTool;
 }).call(this,require('_process'))
-},{"./ReactHostOperationHistoryHook":90,"./ReactInvalidSetStateWarningHook":95,"_process":358,"fbjs/lib/ExecutionEnvironment":4,"fbjs/lib/performanceNow":23,"fbjs/lib/warning":25,"react/lib/ReactComponentTreeHook":167}],81:[function(require,module,exports){
+},{"./ReactHostOperationHistoryHook":90,"./ReactInvalidSetStateWarningHook":95,"_process":357,"fbjs/lib/ExecutionEnvironment":4,"fbjs/lib/performanceNow":23,"fbjs/lib/warning":25,"react/lib/ReactComponentTreeHook":167}],81:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -11629,7 +11629,7 @@ if (process.env.NODE_ENV !== 'production') {
 
 module.exports = ReactErrorUtils;
 }).call(this,require('_process'))
-},{"_process":358}],86:[function(require,module,exports){
+},{"_process":357}],86:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -11900,7 +11900,7 @@ var ReactHostComponent = {
 
 module.exports = ReactHostComponent;
 }).call(this,require('_process'))
-},{"./reactProdInvariant":154,"_process":358,"fbjs/lib/invariant":18}],90:[function(require,module,exports){
+},{"./reactProdInvariant":154,"_process":357,"fbjs/lib/invariant":18}],90:[function(require,module,exports){
 /**
  * Copyright (c) 2016-present, Facebook, Inc.
  *
@@ -12153,7 +12153,7 @@ if (process.env.NODE_ENV !== 'production') {
 
 module.exports = { debugTool: debugTool };
 }).call(this,require('_process'))
-},{"./ReactDebugTool":80,"_process":358}],95:[function(require,module,exports){
+},{"./ReactDebugTool":80,"_process":357}],95:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2016-present, Facebook, Inc.
@@ -12190,7 +12190,7 @@ var ReactInvalidSetStateWarningHook = {
 
 module.exports = ReactInvalidSetStateWarningHook;
 }).call(this,require('_process'))
-},{"_process":358,"fbjs/lib/warning":25}],96:[function(require,module,exports){
+},{"_process":357,"fbjs/lib/warning":25}],96:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -12776,7 +12776,7 @@ var ReactMount = {
 
 module.exports = ReactMount;
 }).call(this,require('_process'))
-},{"./DOMLazyTree":40,"./DOMProperty":42,"./ReactBrowserEventEmitter":56,"./ReactDOMComponentTree":64,"./ReactDOMContainerInfo":65,"./ReactDOMFeatureFlags":67,"./ReactFeatureFlags":88,"./ReactInstanceMap":93,"./ReactInstrumentation":94,"./ReactMarkupChecksum":96,"./ReactReconciler":104,"./ReactUpdateQueue":110,"./ReactUpdates":111,"./instantiateReactComponent":150,"./reactProdInvariant":154,"./setInnerHTML":156,"./shouldUpdateReactComponent":158,"_process":358,"fbjs/lib/emptyObject":11,"fbjs/lib/invariant":18,"fbjs/lib/warning":25,"react/lib/React":164,"react/lib/ReactCurrentOwner":168}],98:[function(require,module,exports){
+},{"./DOMLazyTree":40,"./DOMProperty":42,"./ReactBrowserEventEmitter":56,"./ReactDOMComponentTree":64,"./ReactDOMContainerInfo":65,"./ReactDOMFeatureFlags":67,"./ReactFeatureFlags":88,"./ReactInstanceMap":93,"./ReactInstrumentation":94,"./ReactMarkupChecksum":96,"./ReactReconciler":104,"./ReactUpdateQueue":110,"./ReactUpdates":111,"./instantiateReactComponent":150,"./reactProdInvariant":154,"./setInnerHTML":156,"./shouldUpdateReactComponent":158,"_process":357,"fbjs/lib/emptyObject":11,"fbjs/lib/invariant":18,"fbjs/lib/warning":25,"react/lib/React":164,"react/lib/ReactCurrentOwner":168}],98:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -13222,7 +13222,7 @@ var ReactMultiChild = {
 
 module.exports = ReactMultiChild;
 }).call(this,require('_process'))
-},{"./ReactChildReconciler":57,"./ReactComponentEnvironment":59,"./ReactInstanceMap":93,"./ReactInstrumentation":94,"./ReactReconciler":104,"./flattenChildren":138,"./reactProdInvariant":154,"_process":358,"fbjs/lib/emptyFunction":10,"fbjs/lib/invariant":18,"react/lib/ReactCurrentOwner":168}],99:[function(require,module,exports){
+},{"./ReactChildReconciler":57,"./ReactComponentEnvironment":59,"./ReactInstanceMap":93,"./ReactInstrumentation":94,"./ReactReconciler":104,"./flattenChildren":138,"./reactProdInvariant":154,"_process":357,"fbjs/lib/emptyFunction":10,"fbjs/lib/invariant":18,"react/lib/ReactCurrentOwner":168}],99:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -13262,7 +13262,7 @@ var ReactNodeTypes = {
 
 module.exports = ReactNodeTypes;
 }).call(this,require('_process'))
-},{"./reactProdInvariant":154,"_process":358,"fbjs/lib/invariant":18,"react/lib/React":164}],100:[function(require,module,exports){
+},{"./reactProdInvariant":154,"_process":357,"fbjs/lib/invariant":18,"react/lib/React":164}],100:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -13355,7 +13355,7 @@ var ReactOwner = {
 
 module.exports = ReactOwner;
 }).call(this,require('_process'))
-},{"./reactProdInvariant":154,"_process":358,"fbjs/lib/invariant":18}],101:[function(require,module,exports){
+},{"./reactProdInvariant":154,"_process":357,"fbjs/lib/invariant":18}],101:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -13380,7 +13380,7 @@ if (process.env.NODE_ENV !== 'production') {
 
 module.exports = ReactPropTypeLocationNames;
 }).call(this,require('_process'))
-},{"_process":358}],102:[function(require,module,exports){
+},{"_process":357}],102:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -13573,7 +13573,7 @@ PooledClass.addPoolingTo(ReactReconcileTransaction);
 
 module.exports = ReactReconcileTransaction;
 }).call(this,require('_process'))
-},{"./CallbackQueue":37,"./PooledClass":55,"./ReactBrowserEventEmitter":56,"./ReactInputSelection":92,"./ReactInstrumentation":94,"./ReactUpdateQueue":110,"./Transaction":129,"_process":358,"object-assign":26}],104:[function(require,module,exports){
+},{"./CallbackQueue":37,"./PooledClass":55,"./ReactBrowserEventEmitter":56,"./ReactInputSelection":92,"./ReactInstrumentation":94,"./ReactUpdateQueue":110,"./Transaction":129,"_process":357,"object-assign":26}],104:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -13739,7 +13739,7 @@ var ReactReconciler = {
 
 module.exports = ReactReconciler;
 }).call(this,require('_process'))
-},{"./ReactInstrumentation":94,"./ReactRef":105,"_process":358,"fbjs/lib/warning":25}],105:[function(require,module,exports){
+},{"./ReactInstrumentation":94,"./ReactRef":105,"_process":357,"fbjs/lib/warning":25}],105:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -13936,7 +13936,7 @@ module.exports = {
   renderToStaticMarkup: renderToStaticMarkup
 };
 }).call(this,require('_process'))
-},{"./ReactDOMContainerInfo":65,"./ReactDefaultBatchingStrategy":81,"./ReactInstrumentation":94,"./ReactMarkupChecksum":96,"./ReactReconciler":104,"./ReactServerBatchingStrategy":106,"./ReactServerRenderingTransaction":108,"./ReactUpdates":111,"./instantiateReactComponent":150,"./reactProdInvariant":154,"_process":358,"fbjs/lib/emptyObject":11,"fbjs/lib/invariant":18,"react/lib/React":164}],108:[function(require,module,exports){
+},{"./ReactDOMContainerInfo":65,"./ReactDefaultBatchingStrategy":81,"./ReactInstrumentation":94,"./ReactMarkupChecksum":96,"./ReactReconciler":104,"./ReactServerBatchingStrategy":106,"./ReactServerRenderingTransaction":108,"./ReactUpdates":111,"./instantiateReactComponent":150,"./reactProdInvariant":154,"_process":357,"fbjs/lib/emptyObject":11,"fbjs/lib/invariant":18,"react/lib/React":164}],108:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2014-present, Facebook, Inc.
@@ -14026,7 +14026,7 @@ PooledClass.addPoolingTo(ReactServerRenderingTransaction);
 
 module.exports = ReactServerRenderingTransaction;
 }).call(this,require('_process'))
-},{"./PooledClass":55,"./ReactInstrumentation":94,"./ReactServerUpdateQueue":109,"./Transaction":129,"_process":358,"object-assign":26}],109:[function(require,module,exports){
+},{"./PooledClass":55,"./ReactInstrumentation":94,"./ReactServerUpdateQueue":109,"./Transaction":129,"_process":357,"object-assign":26}],109:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2015-present, Facebook, Inc.
@@ -14165,7 +14165,7 @@ var ReactServerUpdateQueue = function () {
 
 module.exports = ReactServerUpdateQueue;
 }).call(this,require('_process'))
-},{"./ReactUpdateQueue":110,"_process":358,"fbjs/lib/warning":25}],110:[function(require,module,exports){
+},{"./ReactUpdateQueue":110,"_process":357,"fbjs/lib/warning":25}],110:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2015-present, Facebook, Inc.
@@ -14399,7 +14399,7 @@ var ReactUpdateQueue = {
 
 module.exports = ReactUpdateQueue;
 }).call(this,require('_process'))
-},{"./ReactInstanceMap":93,"./ReactInstrumentation":94,"./ReactUpdates":111,"./reactProdInvariant":154,"_process":358,"fbjs/lib/invariant":18,"fbjs/lib/warning":25,"react/lib/ReactCurrentOwner":168}],111:[function(require,module,exports){
+},{"./ReactInstanceMap":93,"./ReactInstrumentation":94,"./ReactUpdates":111,"./reactProdInvariant":154,"_process":357,"fbjs/lib/invariant":18,"fbjs/lib/warning":25,"react/lib/ReactCurrentOwner":168}],111:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -14650,7 +14650,7 @@ var ReactUpdates = {
 
 module.exports = ReactUpdates;
 }).call(this,require('_process'))
-},{"./CallbackQueue":37,"./PooledClass":55,"./ReactFeatureFlags":88,"./ReactReconciler":104,"./Transaction":129,"./reactProdInvariant":154,"_process":358,"fbjs/lib/invariant":18,"object-assign":26}],112:[function(require,module,exports){
+},{"./CallbackQueue":37,"./PooledClass":55,"./ReactFeatureFlags":88,"./ReactReconciler":104,"./Transaction":129,"./reactProdInvariant":154,"_process":357,"fbjs/lib/invariant":18,"object-assign":26}],112:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -15374,7 +15374,7 @@ var SimpleEventPlugin = {
 
 module.exports = SimpleEventPlugin;
 }).call(this,require('_process'))
-},{"./EventPropagators":50,"./ReactDOMComponentTree":64,"./SyntheticAnimationEvent":116,"./SyntheticClipboardEvent":117,"./SyntheticDragEvent":119,"./SyntheticEvent":120,"./SyntheticFocusEvent":121,"./SyntheticKeyboardEvent":123,"./SyntheticMouseEvent":124,"./SyntheticTouchEvent":125,"./SyntheticTransitionEvent":126,"./SyntheticUIEvent":127,"./SyntheticWheelEvent":128,"./getEventCharCode":140,"./reactProdInvariant":154,"_process":358,"fbjs/lib/EventListener":3,"fbjs/lib/emptyFunction":10,"fbjs/lib/invariant":18}],116:[function(require,module,exports){
+},{"./EventPropagators":50,"./ReactDOMComponentTree":64,"./SyntheticAnimationEvent":116,"./SyntheticClipboardEvent":117,"./SyntheticDragEvent":119,"./SyntheticEvent":120,"./SyntheticFocusEvent":121,"./SyntheticKeyboardEvent":123,"./SyntheticMouseEvent":124,"./SyntheticTouchEvent":125,"./SyntheticTransitionEvent":126,"./SyntheticUIEvent":127,"./SyntheticWheelEvent":128,"./getEventCharCode":140,"./reactProdInvariant":154,"_process":357,"fbjs/lib/EventListener":3,"fbjs/lib/emptyFunction":10,"fbjs/lib/invariant":18}],116:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -15786,7 +15786,7 @@ function getPooledWarningPropertyDefinition(propName, getVal) {
   }
 }
 }).call(this,require('_process'))
-},{"./PooledClass":55,"_process":358,"fbjs/lib/emptyFunction":10,"fbjs/lib/warning":25,"object-assign":26}],121:[function(require,module,exports){
+},{"./PooledClass":55,"_process":357,"fbjs/lib/emptyFunction":10,"fbjs/lib/warning":25,"object-assign":26}],121:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -16421,7 +16421,7 @@ var TransactionImpl = {
 
 module.exports = TransactionImpl;
 }).call(this,require('_process'))
-},{"./reactProdInvariant":154,"_process":358,"fbjs/lib/invariant":18}],130:[function(require,module,exports){
+},{"./reactProdInvariant":154,"_process":357,"fbjs/lib/invariant":18}],130:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -16502,7 +16502,7 @@ function accumulateInto(current, next) {
 
 module.exports = accumulateInto;
 }).call(this,require('_process'))
-},{"./reactProdInvariant":154,"_process":358,"fbjs/lib/invariant":18}],132:[function(require,module,exports){
+},{"./reactProdInvariant":154,"_process":357,"fbjs/lib/invariant":18}],132:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -16631,7 +16631,7 @@ function checkReactTypeSpec(typeSpecs, values, location, componentName, element,
 
 module.exports = checkReactTypeSpec;
 }).call(this,require('_process'))
-},{"./ReactPropTypeLocationNames":101,"./ReactPropTypesSecret":102,"./reactProdInvariant":154,"_process":358,"fbjs/lib/invariant":18,"fbjs/lib/warning":25,"react/lib/ReactComponentTreeHook":167}],134:[function(require,module,exports){
+},{"./ReactPropTypeLocationNames":101,"./ReactPropTypesSecret":102,"./reactProdInvariant":154,"_process":357,"fbjs/lib/invariant":18,"fbjs/lib/warning":25,"react/lib/ReactComponentTreeHook":167}],134:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -16740,7 +16740,7 @@ function dangerousStyleValue(name, value, component, isCustomProperty) {
 
 module.exports = dangerousStyleValue;
 }).call(this,require('_process'))
-},{"./CSSProperty":35,"_process":358,"fbjs/lib/warning":25}],136:[function(require,module,exports){
+},{"./CSSProperty":35,"_process":357,"fbjs/lib/warning":25}],136:[function(require,module,exports){
 /**
  * Copyright (c) 2016-present, Facebook, Inc.
  *
@@ -16920,7 +16920,7 @@ function findDOMNode(componentOrElement) {
 
 module.exports = findDOMNode;
 }).call(this,require('_process'))
-},{"./ReactDOMComponentTree":64,"./ReactInstanceMap":93,"./getHostComponentFromComposite":144,"./reactProdInvariant":154,"_process":358,"fbjs/lib/invariant":18,"fbjs/lib/warning":25,"react/lib/ReactCurrentOwner":168}],138:[function(require,module,exports){
+},{"./ReactDOMComponentTree":64,"./ReactInstanceMap":93,"./getHostComponentFromComposite":144,"./reactProdInvariant":154,"_process":357,"fbjs/lib/invariant":18,"fbjs/lib/warning":25,"react/lib/ReactCurrentOwner":168}],138:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -16996,7 +16996,7 @@ function flattenChildren(children, selfDebugID) {
 
 module.exports = flattenChildren;
 }).call(this,require('_process'))
-},{"./KeyEscapeUtils":53,"./traverseAllChildren":159,"_process":358,"fbjs/lib/warning":25,"react/lib/ReactComponentTreeHook":167}],139:[function(require,module,exports){
+},{"./KeyEscapeUtils":53,"./traverseAllChildren":159,"_process":357,"fbjs/lib/warning":25,"react/lib/ReactComponentTreeHook":167}],139:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -17776,7 +17776,7 @@ _assign(ReactCompositeComponentWrapper.prototype, ReactCompositeComponent, {
 
 module.exports = instantiateReactComponent;
 }).call(this,require('_process'))
-},{"./ReactCompositeComponent":60,"./ReactEmptyComponent":84,"./ReactHostComponent":89,"./reactProdInvariant":154,"_process":358,"fbjs/lib/invariant":18,"fbjs/lib/warning":25,"object-assign":26,"react/lib/getNextDebugID":182}],151:[function(require,module,exports){
+},{"./ReactCompositeComponent":60,"./ReactEmptyComponent":84,"./ReactHostComponent":89,"./reactProdInvariant":154,"_process":357,"fbjs/lib/invariant":18,"fbjs/lib/warning":25,"object-assign":26,"react/lib/getNextDebugID":182}],151:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -18320,7 +18320,7 @@ function traverseAllChildren(children, callback, traverseContext) {
 
 module.exports = traverseAllChildren;
 }).call(this,require('_process'))
-},{"./KeyEscapeUtils":53,"./ReactElementSymbol":83,"./getIteratorFn":145,"./reactProdInvariant":154,"_process":358,"fbjs/lib/invariant":18,"fbjs/lib/warning":25,"react/lib/ReactCurrentOwner":168}],160:[function(require,module,exports){
+},{"./KeyEscapeUtils":53,"./ReactElementSymbol":83,"./getIteratorFn":145,"./reactProdInvariant":154,"_process":357,"fbjs/lib/invariant":18,"fbjs/lib/warning":25,"react/lib/ReactCurrentOwner":168}],160:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2015-present, Facebook, Inc.
@@ -18691,7 +18691,7 @@ if (process.env.NODE_ENV !== 'production') {
 
 module.exports = validateDOMNesting;
 }).call(this,require('_process'))
-},{"_process":358,"fbjs/lib/emptyFunction":10,"fbjs/lib/warning":25,"object-assign":26}],161:[function(require,module,exports){
+},{"_process":357,"fbjs/lib/emptyFunction":10,"fbjs/lib/warning":25,"object-assign":26}],161:[function(require,module,exports){
 'use strict';
 
 module.exports = require('./lib/ReactDOMServer');
@@ -18700,7 +18700,7 @@ module.exports = require('./lib/ReactDOMServer');
 arguments[4][53][0].apply(exports,arguments)
 },{"dup":53}],163:[function(require,module,exports){
 arguments[4][55][0].apply(exports,arguments)
-},{"./reactProdInvariant":185,"_process":358,"dup":55,"fbjs/lib/invariant":18}],164:[function(require,module,exports){
+},{"./reactProdInvariant":185,"_process":357,"dup":55,"fbjs/lib/invariant":18}],164:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -18832,7 +18832,7 @@ if (process.env.NODE_ENV !== 'production') {
 
 module.exports = React;
 }).call(this,require('_process'))
-},{"./ReactBaseClasses":165,"./ReactChildren":166,"./ReactDOMFactories":169,"./ReactElement":170,"./ReactElementValidator":172,"./ReactPropTypes":175,"./ReactVersion":177,"./canDefineProperty":178,"./createClass":180,"./lowPriorityWarning":183,"./onlyChild":184,"_process":358,"object-assign":26}],165:[function(require,module,exports){
+},{"./ReactBaseClasses":165,"./ReactChildren":166,"./ReactDOMFactories":169,"./ReactElement":170,"./ReactElementValidator":172,"./ReactPropTypes":175,"./ReactVersion":177,"./canDefineProperty":178,"./createClass":180,"./lowPriorityWarning":183,"./onlyChild":184,"_process":357,"object-assign":26}],165:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -18975,7 +18975,7 @@ module.exports = {
   PureComponent: ReactPureComponent
 };
 }).call(this,require('_process'))
-},{"./ReactNoopUpdateQueue":173,"./canDefineProperty":178,"./lowPriorityWarning":183,"./reactProdInvariant":185,"_process":358,"fbjs/lib/emptyObject":11,"fbjs/lib/invariant":18,"object-assign":26}],166:[function(require,module,exports){
+},{"./ReactNoopUpdateQueue":173,"./canDefineProperty":178,"./lowPriorityWarning":183,"./reactProdInvariant":185,"_process":357,"fbjs/lib/emptyObject":11,"fbjs/lib/invariant":18,"object-assign":26}],166:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -19543,7 +19543,7 @@ var ReactComponentTreeHook = {
 
 module.exports = ReactComponentTreeHook;
 }).call(this,require('_process'))
-},{"./ReactCurrentOwner":168,"./reactProdInvariant":185,"_process":358,"fbjs/lib/invariant":18,"fbjs/lib/warning":25}],168:[function(require,module,exports){
+},{"./ReactCurrentOwner":168,"./reactProdInvariant":185,"_process":357,"fbjs/lib/invariant":18,"fbjs/lib/warning":25}],168:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -19739,7 +19739,7 @@ var ReactDOMFactories = {
 
 module.exports = ReactDOMFactories;
 }).call(this,require('_process'))
-},{"./ReactElement":170,"./ReactElementValidator":172,"_process":358}],170:[function(require,module,exports){
+},{"./ReactElement":170,"./ReactElementValidator":172,"_process":357}],170:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2014-present, Facebook, Inc.
@@ -20080,7 +20080,7 @@ ReactElement.isValidElement = function (object) {
 
 module.exports = ReactElement;
 }).call(this,require('_process'))
-},{"./ReactCurrentOwner":168,"./ReactElementSymbol":171,"./canDefineProperty":178,"_process":358,"fbjs/lib/warning":25,"object-assign":26}],171:[function(require,module,exports){
+},{"./ReactCurrentOwner":168,"./ReactElementSymbol":171,"./canDefineProperty":178,"_process":357,"fbjs/lib/warning":25,"object-assign":26}],171:[function(require,module,exports){
 arguments[4][83][0].apply(exports,arguments)
 },{"dup":83}],172:[function(require,module,exports){
 (function (process){
@@ -20337,7 +20337,7 @@ var ReactElementValidator = {
 
 module.exports = ReactElementValidator;
 }).call(this,require('_process'))
-},{"./ReactComponentTreeHook":167,"./ReactCurrentOwner":168,"./ReactElement":170,"./canDefineProperty":178,"./checkReactTypeSpec":179,"./getIteratorFn":181,"./lowPriorityWarning":183,"_process":358,"fbjs/lib/warning":25}],173:[function(require,module,exports){
+},{"./ReactComponentTreeHook":167,"./ReactCurrentOwner":168,"./ReactElement":170,"./canDefineProperty":178,"./checkReactTypeSpec":179,"./getIteratorFn":181,"./lowPriorityWarning":183,"_process":357,"fbjs/lib/warning":25}],173:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2015-present, Facebook, Inc.
@@ -20432,9 +20432,9 @@ var ReactNoopUpdateQueue = {
 
 module.exports = ReactNoopUpdateQueue;
 }).call(this,require('_process'))
-},{"_process":358,"fbjs/lib/warning":25}],174:[function(require,module,exports){
+},{"_process":357,"fbjs/lib/warning":25}],174:[function(require,module,exports){
 arguments[4][101][0].apply(exports,arguments)
-},{"_process":358,"dup":101}],175:[function(require,module,exports){
+},{"_process":357,"dup":101}],175:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -20481,7 +20481,7 @@ if (process.env.NODE_ENV !== 'production') {
 
 module.exports = canDefineProperty;
 }).call(this,require('_process'))
-},{"_process":358}],179:[function(require,module,exports){
+},{"_process":357}],179:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -20568,7 +20568,7 @@ function checkReactTypeSpec(typeSpecs, values, location, componentName, element,
 
 module.exports = checkReactTypeSpec;
 }).call(this,require('_process'))
-},{"./ReactComponentTreeHook":167,"./ReactPropTypeLocationNames":174,"./ReactPropTypesSecret":176,"./reactProdInvariant":185,"_process":358,"fbjs/lib/invariant":18,"fbjs/lib/warning":25}],180:[function(require,module,exports){
+},{"./ReactComponentTreeHook":167,"./ReactPropTypeLocationNames":174,"./ReactPropTypesSecret":176,"./reactProdInvariant":185,"_process":357,"fbjs/lib/invariant":18,"fbjs/lib/warning":25}],180:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -20675,7 +20675,7 @@ if (process.env.NODE_ENV !== 'production') {
 
 module.exports = lowPriorityWarning;
 }).call(this,require('_process'))
-},{"_process":358}],184:[function(require,module,exports){
+},{"_process":357}],184:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -20713,7 +20713,7 @@ function onlyChild(children) {
 
 module.exports = onlyChild;
 }).call(this,require('_process'))
-},{"./ReactElement":170,"./reactProdInvariant":185,"_process":358,"fbjs/lib/invariant":18}],185:[function(require,module,exports){
+},{"./ReactElement":170,"./reactProdInvariant":185,"_process":357,"fbjs/lib/invariant":18}],185:[function(require,module,exports){
 arguments[4][154][0].apply(exports,arguments)
 },{"dup":154}],186:[function(require,module,exports){
 (function (process){
@@ -20891,12 +20891,864 @@ function traverseAllChildren(children, callback, traverseContext) {
 
 module.exports = traverseAllChildren;
 }).call(this,require('_process'))
-},{"./KeyEscapeUtils":162,"./ReactCurrentOwner":168,"./ReactElementSymbol":171,"./getIteratorFn":181,"./reactProdInvariant":185,"_process":358,"fbjs/lib/invariant":18,"fbjs/lib/warning":25}],187:[function(require,module,exports){
+},{"./KeyEscapeUtils":162,"./ReactCurrentOwner":168,"./ReactElementSymbol":171,"./getIteratorFn":181,"./reactProdInvariant":185,"_process":357,"fbjs/lib/invariant":18,"fbjs/lib/warning":25}],187:[function(require,module,exports){
 'use strict';
 
 module.exports = require('./lib/React');
 
 },{"./lib/React":164}],188:[function(require,module,exports){
+"use strict";
+var Concur_React = require("../Concur.React");
+var Control_Applicative = require("../Control.Applicative");
+var Control_Semigroupoid = require("../Control.Semigroupoid");
+var Prelude = require("../Prelude");
+var React_DOM = require("../React.DOM");
+var React_DOM_Props = require("../React.DOM.Props");
+var wbr = function ($0) {
+    return Concur_React["el'"](React_DOM.body($0));
+};
+var wbr$prime = wbr([  ]);
+var video = function ($1) {
+    return Concur_React["el'"](React_DOM.video($1));
+};
+var video$prime = video([  ]);
+var $$var = function ($2) {
+    return Concur_React["el'"](React_DOM["var"]($2));
+};
+var var$prime = $$var([  ]);
+var ul = function ($3) {
+    return Concur_React["el'"](React_DOM.ul($3));
+};
+var ul$prime = ul([  ]);
+var u = function ($4) {
+    return Concur_React["el'"](React_DOM.u($4));
+};
+var u$prime = u([  ]);
+var track = function ($5) {
+    return Concur_React["el'"](React_DOM.track($5));
+};
+var track$prime = track([  ]);
+var tr = function ($6) {
+    return Concur_React["el'"](React_DOM.tr($6));
+};
+var tr$prime = tr([  ]);
+var title = function ($7) {
+    return Concur_React["el'"](React_DOM.title($7));
+};
+var title$prime = title([  ]);
+var time = function ($8) {
+    return Concur_React["el'"](React_DOM.time($8));
+};
+var time$prime = time([  ]);
+var thead = function ($9) {
+    return Concur_React["el'"](React_DOM.thead($9));
+};
+var thead$prime = thead([  ]);
+var th = function ($10) {
+    return Concur_React["el'"](React_DOM.th($10));
+};
+var th$prime = th([  ]);
+var tfoot = function ($11) {
+    return Concur_React["el'"](React_DOM.tfoot($11));
+};
+var tfoot$prime = tfoot([  ]);
+var textarea = function ($12) {
+    return Concur_React["el'"](React_DOM.textarea($12));
+};
+var textarea$prime = textarea([  ]);
+
+// Wrappers for all DOM elements from purescript-react
+
+// TODO: Generate these mechanically somehow
+var text = function ($13) {
+    return Concur_React.display(Control_Applicative.pure(Control_Applicative.applicativeArray)(React_DOM.text($13)));
+};
+var td = function ($14) {
+    return Concur_React["el'"](React_DOM.td($14));
+};
+var td$prime = td([  ]);
+var tbody = function ($15) {
+    return Concur_React["el'"](React_DOM.tbody($15));
+};
+var tbody$prime = tbody([  ]);
+var table = function ($16) {
+    return Concur_React["el'"](React_DOM.table($16));
+};
+var table$prime = table([  ]);
+var sup = function ($17) {
+    return Concur_React["el'"](React_DOM.sup($17));
+};
+var sup$prime = sup([  ]);
+var summary = function ($18) {
+    return Concur_React["el'"](React_DOM.summary($18));
+};
+var summary$prime = summary([  ]);
+var sub = function ($19) {
+    return Concur_React["el'"](React_DOM.sub($19));
+};
+var sub$prime = sub([  ]);
+var style = function ($20) {
+    return Concur_React["el'"](React_DOM.style($20));
+};
+var style$prime = style([  ]);
+var strong = function ($21) {
+    return Concur_React["el'"](React_DOM.strong($21));
+};
+var strong$prime = strong([  ]);
+var span = function ($22) {
+    return Concur_React["el'"](React_DOM.span($22));
+};
+var span$prime = span([  ]);
+var source = function ($23) {
+    return Concur_React["el'"](React_DOM.source($23));
+};
+var source$prime = source([  ]);
+var small = function ($24) {
+    return Concur_React["el'"](React_DOM.small($24));
+};
+var small$prime = small([  ]);
+var select = function ($25) {
+    return Concur_React["el'"](React_DOM.select($25));
+};
+var select$prime = select([  ]);
+var section = function ($26) {
+    return Concur_React["el'"](React_DOM.section($26));
+};
+var section$prime = section([  ]);
+var script = function ($27) {
+    return Concur_React["el'"](React_DOM.script($27));
+};
+var script$prime = script([  ]);
+var samp = function ($28) {
+    return Concur_React["el'"](React_DOM.samp($28));
+};
+var samp$prime = samp([  ]);
+var s = function ($29) {
+    return Concur_React["el'"](React_DOM.s($29));
+};
+var s$prime = s([  ]);
+var ruby = function ($30) {
+    return Concur_React["el'"](React_DOM.ruby($30));
+};
+var ruby$prime = ruby([  ]);
+var rt = function ($31) {
+    return Concur_React["el'"](React_DOM.rt($31));
+};
+var rt$prime = rt([  ]);
+var rp = function ($32) {
+    return Concur_React["el'"](React_DOM.rp($32));
+};
+var rp$prime = rp([  ]);
+var q = function ($33) {
+    return Concur_React["el'"](React_DOM.q($33));
+};
+var q$prime = q([  ]);
+var progress = function ($34) {
+    return Concur_React["el'"](React_DOM.progress($34));
+};
+var progress$prime = progress([  ]);
+var pre = function ($35) {
+    return Concur_React["el'"](React_DOM.pre($35));
+};
+var pre$prime = pre([  ]);
+var picture = function ($36) {
+    return Concur_React["el'"](React_DOM.picture($36));
+};
+var picture$prime = picture([  ]);
+var param = function ($37) {
+    return Concur_React["el'"](React_DOM.param($37));
+};
+var param$prime = param([  ]);
+var p = function ($38) {
+    return Concur_React["el'"](React_DOM.p($38));
+};
+var p$prime = p([  ]);
+var output = function ($39) {
+    return Concur_React["el'"](React_DOM.output($39));
+};
+var output$prime = output([  ]);
+var option = function ($40) {
+    return Concur_React["el'"](React_DOM.option($40));
+};
+var option$prime = option([  ]);
+var optgroup = function ($41) {
+    return Concur_React["el'"](React_DOM.optgroup($41));
+};
+var optgroup$prime = optgroup([  ]);
+var ol = function ($42) {
+    return Concur_React["el'"](React_DOM.ol($42));
+};
+var ol$prime = ol([  ]);
+var object = function ($43) {
+    return Concur_React["el'"](React_DOM.object($43));
+};
+var object$prime = object([  ]);
+var noscript = function ($44) {
+    return Concur_React["el'"](React_DOM.noscript($44));
+};
+var noscript$prime = noscript([  ]);
+var nav = function ($45) {
+    return Concur_React["el'"](React_DOM.nav($45));
+};
+var nav$prime = nav([  ]);
+var meter = function ($46) {
+    return Concur_React["el'"](React_DOM.meter($46));
+};
+var meter$prime = meter([  ]);
+var meta = function ($47) {
+    return Concur_React["el'"](React_DOM.meta($47));
+};
+var meta$prime = meta([  ]);
+var menuitem = function ($48) {
+    return Concur_React["el'"](React_DOM.menuitem($48));
+};
+var menuitem$prime = menuitem([  ]);
+var menu = function ($49) {
+    return Concur_React["el'"](React_DOM.menu($49));
+};
+var menu$prime = menu([  ]);
+var mark = function ($50) {
+    return Concur_React["el'"](React_DOM.mark($50));
+};
+var mark$prime = mark([  ]);
+var map = function ($51) {
+    return Concur_React["el'"](React_DOM.map($51));
+};
+var map$prime = map([  ]);
+var main = function ($52) {
+    return Concur_React["el'"](React_DOM.main($52));
+};
+var main$prime = main([  ]);
+var link = function ($53) {
+    return Concur_React["el'"](React_DOM.link($53));
+};
+var li = function ($54) {
+    return Concur_React["el'"](React_DOM.li($54));
+};
+var li$prime = li([  ]);
+var legend = function ($55) {
+    return Concur_React["el'"](React_DOM.legend($55));
+};
+var legend$prime = legend([  ]);
+var label = function ($56) {
+    return Concur_React["el'"](React_DOM.label($56));
+};
+var label$prime = label([  ]);
+var keygen = function ($57) {
+    return Concur_React["el'"](React_DOM.keygen($57));
+};
+var keygen$prime = keygen([  ]);
+var kbd = function ($58) {
+    return Concur_React["el'"](React_DOM.kbd($58));
+};
+var kbd$prime = kbd([  ]);
+var ins = function ($59) {
+    return Concur_React["el'"](React_DOM.ins($59));
+};
+var ins$prime = ins([  ]);
+var input = function ($60) {
+    return Concur_React["el'"](React_DOM.input($60));
+};
+var input$prime = input([  ]);
+var img = function ($61) {
+    return Concur_React["el'"](React_DOM.img($61));
+};
+var img$prime = img([  ]);
+var iframe = function ($62) {
+    return Concur_React["el'"](React_DOM.iframe($62));
+};
+var iframe$prime = iframe([  ]);
+var i = function ($63) {
+    return Concur_React["el'"](React_DOM.i($63));
+};
+var i$prime = i([  ]);
+var html = function ($64) {
+    return Concur_React["el'"](React_DOM.html($64));
+};
+var html$prime = html([  ]);
+var hr = function ($65) {
+    return Concur_React["el'"](React_DOM.hr($65));
+};
+var hr$prime = hr([  ]);
+var header = function ($66) {
+    return Concur_React["el'"](React_DOM.header($66));
+};
+var header$prime = header([  ]);
+var head = function ($67) {
+    return Concur_React["el'"](React_DOM.head($67));
+};
+var head$prime = head([  ]);
+var h6 = function ($68) {
+    return Concur_React["el'"](React_DOM.h6($68));
+};
+var h6$prime = h6([  ]);
+var h5 = function ($69) {
+    return Concur_React["el'"](React_DOM.h5($69));
+};
+var h5$prime = h5([  ]);
+var h4 = function ($70) {
+    return Concur_React["el'"](React_DOM.h4($70));
+};
+var h4$prime = h4([  ]);
+var h3 = function ($71) {
+    return Concur_React["el'"](React_DOM.h3($71));
+};
+var h3$prime = h3([  ]);
+var h2 = function ($72) {
+    return Concur_React["el'"](React_DOM.h2($72));
+};
+var h2$prime = h2([  ]);
+var h1 = function ($73) {
+    return Concur_React["el'"](React_DOM.h1($73));
+};
+var h1$prime = h1([  ]);
+var form = function ($74) {
+    return Concur_React["el'"](React_DOM.form($74));
+};
+var form$prime = form([  ]);
+var footer = function ($75) {
+    return Concur_React["el'"](React_DOM.footer($75));
+};
+var footer$prime = footer([  ]);
+var figure = function ($76) {
+    return Concur_React["el'"](React_DOM.figure($76));
+};
+var figure$prime = figure([  ]);
+var figcaption = function ($77) {
+    return Concur_React["el'"](React_DOM.figcaption($77));
+};
+var figcaption$prime = figcaption([  ]);
+var fieldset = function ($78) {
+    return Concur_React["el'"](React_DOM.fieldset($78));
+};
+var fieldset$prime = fieldset([  ]);
+var embed = function ($79) {
+    return Concur_React["el'"](React_DOM.embed($79));
+};
+var embed$prime = embed([  ]);
+var em = function ($80) {
+    return Concur_React["el'"](React_DOM.em($80));
+};
+var em$prime = em([  ]);
+var dt = function ($81) {
+    return Concur_React["el'"](React_DOM.dt($81));
+};
+var dt$prime = dt([  ]);
+var dl = function ($82) {
+    return Concur_React["el'"](React_DOM.dl($82));
+};
+var dl$prime = dl([  ]);
+var div = function ($83) {
+    return Concur_React["el'"](React_DOM.div($83));
+};
+var div$prime = div([  ]);
+var dialog = function ($84) {
+    return Concur_React["el'"](React_DOM.dialog($84));
+};
+var dialog$prime = dialog([  ]);
+var dfn = function ($85) {
+    return Concur_React["el'"](React_DOM.dfn($85));
+};
+var dfn$prime = dfn([  ]);
+var details = function ($86) {
+    return Concur_React["el'"](React_DOM.details($86));
+};
+var details$prime = details([  ]);
+var del = function ($87) {
+    return Concur_React["el'"](React_DOM.del($87));
+};
+var del$prime = del([  ]);
+var dd = function ($88) {
+    return Concur_React["el'"](React_DOM.dd($88));
+};
+var dd$prime = dd([  ]);
+var datalist = function ($89) {
+    return Concur_React["el'"](React_DOM.datalist($89));
+};
+var datalist$prime = datalist([  ]);
+var colgroup = function ($90) {
+    return Concur_React["el'"](React_DOM.colgroup($90));
+};
+var colgroup$prime = colgroup([  ]);
+var col = function ($91) {
+    return Concur_React["el'"](React_DOM.col($91));
+};
+var col$prime = col([  ]);
+var code = function ($92) {
+    return Concur_React["el'"](React_DOM.code($92));
+};
+var code$prime = code([  ]);
+var cite = function ($93) {
+    return Concur_React["el'"](React_DOM.cite($93));
+};
+var cite$prime = cite([  ]);
+var caption = function ($94) {
+    return Concur_React["el'"](React_DOM.caption($94));
+};
+var caption$prime = caption([  ]);
+var canvas = function ($95) {
+    return Concur_React["el'"](React_DOM.canvas($95));
+};
+var canvas$prime = canvas([  ]);
+var button = function ($96) {
+    return Concur_React["el'"](React_DOM.button($96));
+};
+var button$prime = button([  ]);
+var br = function ($97) {
+    return Concur_React["el'"](React_DOM.br($97));
+};
+var br$prime = br([  ]);
+var body = function ($98) {
+    return Concur_React["el'"](React_DOM.body($98));
+};
+var body$prime = body([  ]);
+var link$prime = body([  ]);
+var blockquote = function ($99) {
+    return Concur_React["el'"](React_DOM.blockquote($99));
+};
+var blockquote$prime = blockquote([  ]);
+var big = function ($100) {
+    return Concur_React["el'"](React_DOM.big($100));
+};
+var big$prime = big([  ]);
+var bdo = function ($101) {
+    return Concur_React["el'"](React_DOM.bdo($101));
+};
+var bdo$prime = bdo([  ]);
+var bdi = function ($102) {
+    return Concur_React["el'"](React_DOM.bdi($102));
+};
+var bdi$prime = bdi([  ]);
+var base = function ($103) {
+    return Concur_React["el'"](React_DOM.base($103));
+};
+var base$prime = base([  ]);
+var b = function ($104) {
+    return Concur_React["el'"](React_DOM.b($104));
+};
+var b$prime = b([  ]);
+var audio = function ($105) {
+    return Concur_React["el'"](React_DOM.audio($105));
+};
+var audio$prime = audio([  ]);
+var aside = function ($106) {
+    return Concur_React["el'"](React_DOM.aside($106));
+};
+var aside$prime = aside([  ]);
+var article = function ($107) {
+    return Concur_React["el'"](React_DOM.article($107));
+};
+var article$prime = article([  ]);
+var area = function ($108) {
+    return Concur_React["el'"](React_DOM.area($108));
+};
+var area$prime = area([  ]);
+var address = function ($109) {
+    return Concur_React["el'"](React_DOM.address($109));
+};
+var address$prime = address([  ]);
+var abbr = function ($110) {
+    return Concur_React["el'"](React_DOM.abbr($110));
+};
+var abbr$prime = abbr([  ]);
+var a = function ($111) {
+    return Concur_React["el'"](React_DOM.a($111));
+};
+var a$prime = a([  ]);
+var _data = function ($112) {
+    return Concur_React["el'"](React_DOM._data($112));
+};
+var _data$prime = _data([  ]);
+module.exports = {
+    _data: _data, 
+    "_data'": _data$prime, 
+    a: a, 
+    "a'": a$prime, 
+    abbr: abbr, 
+    "abbr'": abbr$prime, 
+    address: address, 
+    "address'": address$prime, 
+    area: area, 
+    "area'": area$prime, 
+    article: article, 
+    "article'": article$prime, 
+    aside: aside, 
+    "aside'": aside$prime, 
+    audio: audio, 
+    "audio'": audio$prime, 
+    b: b, 
+    "b'": b$prime, 
+    base: base, 
+    "base'": base$prime, 
+    bdi: bdi, 
+    "bdi'": bdi$prime, 
+    bdo: bdo, 
+    "bdo'": bdo$prime, 
+    big: big, 
+    "big'": big$prime, 
+    blockquote: blockquote, 
+    "blockquote'": blockquote$prime, 
+    body: body, 
+    "body'": body$prime, 
+    br: br, 
+    "br'": br$prime, 
+    button: button, 
+    "button'": button$prime, 
+    canvas: canvas, 
+    "canvas'": canvas$prime, 
+    caption: caption, 
+    "caption'": caption$prime, 
+    cite: cite, 
+    "cite'": cite$prime, 
+    code: code, 
+    "code'": code$prime, 
+    col: col, 
+    "col'": col$prime, 
+    colgroup: colgroup, 
+    "colgroup'": colgroup$prime, 
+    datalist: datalist, 
+    "datalist'": datalist$prime, 
+    dd: dd, 
+    "dd'": dd$prime, 
+    del: del, 
+    "del'": del$prime, 
+    details: details, 
+    "details'": details$prime, 
+    dfn: dfn, 
+    "dfn'": dfn$prime, 
+    dialog: dialog, 
+    "dialog'": dialog$prime, 
+    div: div, 
+    "div'": div$prime, 
+    dl: dl, 
+    "dl'": dl$prime, 
+    dt: dt, 
+    "dt'": dt$prime, 
+    em: em, 
+    "em'": em$prime, 
+    embed: embed, 
+    "embed'": embed$prime, 
+    fieldset: fieldset, 
+    "fieldset'": fieldset$prime, 
+    figcaption: figcaption, 
+    "figcaption'": figcaption$prime, 
+    figure: figure, 
+    "figure'": figure$prime, 
+    footer: footer, 
+    "footer'": footer$prime, 
+    form: form, 
+    "form'": form$prime, 
+    h1: h1, 
+    "h1'": h1$prime, 
+    h2: h2, 
+    "h2'": h2$prime, 
+    h3: h3, 
+    "h3'": h3$prime, 
+    h4: h4, 
+    "h4'": h4$prime, 
+    h5: h5, 
+    "h5'": h5$prime, 
+    h6: h6, 
+    "h6'": h6$prime, 
+    head: head, 
+    "head'": head$prime, 
+    header: header, 
+    "header'": header$prime, 
+    hr: hr, 
+    "hr'": hr$prime, 
+    html: html, 
+    "html'": html$prime, 
+    i: i, 
+    "i'": i$prime, 
+    iframe: iframe, 
+    "iframe'": iframe$prime, 
+    img: img, 
+    "img'": img$prime, 
+    input: input, 
+    "input'": input$prime, 
+    ins: ins, 
+    "ins'": ins$prime, 
+    kbd: kbd, 
+    "kbd'": kbd$prime, 
+    keygen: keygen, 
+    "keygen'": keygen$prime, 
+    label: label, 
+    "label'": label$prime, 
+    legend: legend, 
+    "legend'": legend$prime, 
+    li: li, 
+    "li'": li$prime, 
+    link: link, 
+    "link'": link$prime, 
+    main: main, 
+    "main'": main$prime, 
+    map: map, 
+    "map'": map$prime, 
+    mark: mark, 
+    "mark'": mark$prime, 
+    menu: menu, 
+    "menu'": menu$prime, 
+    menuitem: menuitem, 
+    "menuitem'": menuitem$prime, 
+    meta: meta, 
+    "meta'": meta$prime, 
+    meter: meter, 
+    "meter'": meter$prime, 
+    nav: nav, 
+    "nav'": nav$prime, 
+    noscript: noscript, 
+    "noscript'": noscript$prime, 
+    object: object, 
+    "object'": object$prime, 
+    ol: ol, 
+    "ol'": ol$prime, 
+    optgroup: optgroup, 
+    "optgroup'": optgroup$prime, 
+    option: option, 
+    "option'": option$prime, 
+    output: output, 
+    "output'": output$prime, 
+    p: p, 
+    "p'": p$prime, 
+    param: param, 
+    "param'": param$prime, 
+    picture: picture, 
+    "picture'": picture$prime, 
+    pre: pre, 
+    "pre'": pre$prime, 
+    progress: progress, 
+    "progress'": progress$prime, 
+    q: q, 
+    "q'": q$prime, 
+    rp: rp, 
+    "rp'": rp$prime, 
+    rt: rt, 
+    "rt'": rt$prime, 
+    ruby: ruby, 
+    "ruby'": ruby$prime, 
+    s: s, 
+    "s'": s$prime, 
+    samp: samp, 
+    "samp'": samp$prime, 
+    script: script, 
+    "script'": script$prime, 
+    section: section, 
+    "section'": section$prime, 
+    select: select, 
+    "select'": select$prime, 
+    small: small, 
+    "small'": small$prime, 
+    source: source, 
+    "source'": source$prime, 
+    span: span, 
+    "span'": span$prime, 
+    strong: strong, 
+    "strong'": strong$prime, 
+    style: style, 
+    "style'": style$prime, 
+    sub: sub, 
+    "sub'": sub$prime, 
+    summary: summary, 
+    "summary'": summary$prime, 
+    sup: sup, 
+    "sup'": sup$prime, 
+    table: table, 
+    "table'": table$prime, 
+    tbody: tbody, 
+    "tbody'": tbody$prime, 
+    td: td, 
+    "td'": td$prime, 
+    text: text, 
+    textarea: textarea, 
+    "textarea'": textarea$prime, 
+    tfoot: tfoot, 
+    "tfoot'": tfoot$prime, 
+    th: th, 
+    "th'": th$prime, 
+    thead: thead, 
+    "thead'": thead$prime, 
+    time: time, 
+    "time'": time$prime, 
+    title: title, 
+    "title'": title$prime, 
+    tr: tr, 
+    "tr'": tr$prime, 
+    track: track, 
+    "track'": track$prime, 
+    u: u, 
+    "u'": u$prime, 
+    ul: ul, 
+    "ul'": ul$prime, 
+    "var": $$var, 
+    "var'": var$prime, 
+    video: video, 
+    "video'": video$prime, 
+    wbr: wbr, 
+    "wbr'": wbr$prime
+};
+
+},{"../Concur.React":191,"../Control.Applicative":194,"../Control.Semigroupoid":228,"../Prelude":342,"../React.DOM":345,"../React.DOM.Props":344}],189:[function(require,module,exports){
+"use strict";
+var Concur_React = require("../Concur.React");
+var Control_Applicative = require("../Control.Applicative");
+var Control_Bind = require("../Control.Bind");
+var Control_Monad_Eff = require("../Control.Monad.Eff");
+var DOM = require("../DOM");
+var DOM_HTML = require("../DOM.HTML");
+var DOM_HTML_Types = require("../DOM.HTML.Types");
+var DOM_HTML_Window = require("../DOM.HTML.Window");
+var DOM_Node_NonElementParentNode = require("../DOM.Node.NonElementParentNode");
+var DOM_Node_Types = require("../DOM.Node.Types");
+var Data_Functor = require("../Data.Functor");
+var Data_Maybe = require("../Data.Maybe");
+var Data_Unit = require("../Data.Unit");
+var Prelude = require("../Prelude");
+var ReactDOM = require("../ReactDOM");
+var runWidgetInDom = function (elemId) {
+    return function (w) {
+        return function __do() {
+            var v = DOM_HTML.window();
+            var v1 = DOM_HTML_Window.document(v)();
+            var v2 = DOM_Node_NonElementParentNode.getElementById(elemId)(DOM_Node_Types.documentToNonElementParentNode(DOM_HTML_Types.htmlDocumentToDocument(v1)))();
+            if (v2 instanceof Data_Maybe.Nothing) {
+                return Data_Unit.unit;
+            };
+            if (v2 instanceof Data_Maybe.Just) {
+                return Data_Functor["void"](Control_Monad_Eff.functorEff)(ReactDOM.render(Concur_React.renderComponent(w))(v2.value0))();
+            };
+            throw new Error("Failed pattern match at Concur.React.Run line 21, column 3 - line 23, column 55: " + [ v2.constructor.name ]);
+        };
+    };
+};
+module.exports = {
+    runWidgetInDom: runWidgetInDom
+};
+
+},{"../Concur.React":191,"../Control.Applicative":194,"../Control.Bind":200,"../Control.Monad.Eff":213,"../DOM":243,"../DOM.HTML":236,"../DOM.HTML.Types":232,"../DOM.HTML.Window":234,"../DOM.Node.NonElementParentNode":238,"../DOM.Node.Types":239,"../Data.Functor":279,"../Data.Maybe":292,"../Data.Unit":332,"../Prelude":342,"../ReactDOM":349}],190:[function(require,module,exports){
+"use strict";
+var Concur_React = require("../Concur.React");
+var Concur_React_DOM = require("../Concur.React.DOM");
+var Control_Applicative = require("../Control.Applicative");
+var Control_Bind = require("../Control.Bind");
+var Control_Category = require("../Control.Category");
+var Control_Monad_Eff = require("../Control.Monad.Eff");
+var Control_Semigroupoid = require("../Control.Semigroupoid");
+var Data_Either = require("../Data.Either");
+var Data_Function = require("../Data.Function");
+var Data_Functor = require("../Data.Functor");
+var Data_Semigroup = require("../Data.Semigroup");
+var Data_Unit = require("../Data.Unit");
+var Prelude = require("../Prelude");
+var React = require("../React");
+var React_DOM = require("../React.DOM");
+var React_DOM_Props = require("../React.DOM.Props");
+
+// Wrap an element with multiple arbitrary eventHandlers over a widget
+var elEventMany = function (evts) {
+    return function (e) {
+        return function (props) {
+            return function (v) {
+                if (v instanceof Concur_React.RenderEnd) {
+                    return new Concur_React.RenderEnd(new Data_Either.Right(v.value0));
+                };
+                if (v instanceof Concur_React.Widget) {
+                    return Concur_React.Widget.create(function __do() {
+                        var v1 = v.value0();
+                        return function (send) {
+                            return [ e(Data_Semigroup.append(Data_Semigroup.semigroupArray)(props)(Data_Functor.map(Data_Functor.functorArray)(function (evt) {
+                                return evt(function ($10) {
+                                    return send(Control_Applicative.pure(Concur_React.renderApplicative)(Data_Either.Left.create($10)));
+                                });
+                            })(evts)))(v1(function ($11) {
+                                return send(Data_Functor.map(Concur_React.renderFunctor)(Data_Either.Right.create)($11));
+                            })) ];
+                        };
+                    });
+                };
+                throw new Error("Failed pattern match at Concur.React.Widgets line 45, column 1 - line 45, column 162: " + [ evts.constructor.name, e.constructor.name, props.constructor.name, v.constructor.name ]);
+            };
+        };
+    };
+};
+
+// Wrap an element with an arbitrary eventHandler over a widget
+var elEvent = function (evt) {
+    return elEventMany([ evt ]);
+};
+
+// Combinator Widgets, at a more higher level than those in Concur.React.DOM
+
+// Wrap a button around a widget
+
+// Returns a `Left unit on click events.
+
+// Or a `Right a` when the inner `Widget HTML eff a` ends.
+var wrapButton = function (props) {
+    return function (w) {
+        return elEvent(function ($12) {
+            return React_DOM_Props.onClick((function (v) {
+                return function ($13) {
+                    return v(Data_Function["const"](Data_Unit.unit)($13));
+                };
+            })($12));
+        })(React_DOM.button)(props)(w);
+    };
+};
+
+// Like a wrapButton, but takes no props
+var wrapButton$prime = wrapButton([  ]);
+
+// Wrap a div with key handlers around a widget
+
+// Returns a `Left unit on key events.
+
+// Or a `Right a` when the inner `Widget HTML eff a` ends.
+var wrapKeyHandler = function (props) {
+    return function (w) {
+        return elEvent(React_DOM_Props.onKeyDown)(React_DOM.div)(props)(w);
+    };
+};
+
+// Specialised key handler widget with only static children
+var displayKeyHandler = function (props) {
+    return function (w) {
+        return Data_Functor.map(Concur_React.renderFunctor)(Data_Either.either(Control_Category.id(Control_Category.categoryFn))(Control_Category.id(Control_Category.categoryFn)))(wrapKeyHandler(props)(w));
+    };
+};
+
+// Specialised button with only static children
+var displayButton = function (props) {
+    return function (d) {
+        return Data_Functor.map(Concur_React.renderFunctor)(Data_Either.either(Control_Category.id(Control_Category.categoryFn))(Control_Category.id(Control_Category.categoryFn)))(wrapButton(props)(d));
+    };
+};
+
+// Like a displayButton, but takes no props
+var displayButton$prime = displayButton([  ]);
+
+// Specialised text only button
+var textButton = function (props) {
+    return function (label) {
+        return displayButton(props)(Concur_React_DOM.text(label));
+    };
+};
+
+// Like a textButton, but takes no props
+var textButton$prime = textButton([  ]);
+module.exports = {
+    displayButton: displayButton, 
+    "displayButton'": displayButton$prime, 
+    displayKeyHandler: displayKeyHandler, 
+    elEvent: elEvent, 
+    elEventMany: elEventMany, 
+    textButton: textButton, 
+    "textButton'": textButton$prime, 
+    wrapButton: wrapButton, 
+    "wrapButton'": wrapButton$prime, 
+    wrapKeyHandler: wrapKeyHandler
+};
+
+},{"../Concur.React":191,"../Concur.React.DOM":188,"../Control.Applicative":194,"../Control.Bind":200,"../Control.Category":201,"../Control.Monad.Eff":213,"../Control.Semigroupoid":228,"../Data.Either":264,"../Data.Function":276,"../Data.Functor":279,"../Data.Semigroup":315,"../Data.Unit":332,"../Prelude":342,"../React":347,"../React.DOM":345,"../React.DOM.Props":344}],191:[function(require,module,exports){
 "use strict";
 var Control_Alt = require("../Control.Alt");
 var Control_Alternative = require("../Control.Alternative");
@@ -20911,10 +21763,12 @@ var Data_Array = require("../Data.Array");
 var Data_Foldable = require("../Data.Foldable");
 var Data_Function = require("../Data.Function");
 var Data_Functor = require("../Data.Functor");
+var Data_Monoid = require("../Data.Monoid");
 var Data_Semigroup = require("../Data.Semigroup");
 var Prelude = require("../Prelude");
 var React = require("../React");
 var React_DOM = require("../React.DOM");
+var React_DOM_Props = require("../React.DOM.Props");
 var RenderEnd = (function () {
     function RenderEnd(value0) {
         this.value0 = value0;
@@ -20924,33 +21778,33 @@ var RenderEnd = (function () {
     };
     return RenderEnd;
 })();
-var Render = (function () {
-    function Render(value0) {
+var Widget = (function () {
+    function Widget(value0) {
         this.value0 = value0;
     };
-    Render.create = function (value0) {
-        return new Render(value0);
+    Widget.create = function (value0) {
+        return new Widget(value0);
     };
-    return Render;
+    return Widget;
 })();
 var renderFunctor = new Data_Functor.Functor(function (f) {
     return function (v) {
         if (v instanceof RenderEnd) {
             return new RenderEnd(f(v.value0));
         };
-        if (v instanceof Render) {
-            return Render.create(function (h) {
-                return v.value0(function ($36) {
-                    return h(Data_Functor.map(renderFunctor)(f)($36));
-                });
+        if (v instanceof Widget) {
+            return Widget.create(function __do() {
+                var v1 = v.value0();
+                return function (h) {
+                    return v1(function ($53) {
+                        return h(Data_Functor.map(renderFunctor)(f)($53));
+                    });
+                };
             });
         };
-        throw new Error("Failed pattern match at Concur.React line 24, column 1 - line 24, column 41: " + [ f.constructor.name, v.constructor.name ]);
+        throw new Error("Failed pattern match at Concur.React line 26, column 1 - line 26, column 49: " + [ f.constructor.name, v.constructor.name ]);
     };
 });
-var renderFunc = function (f) {
-    return new Render(f);
-};
 var renderMonad = new Control_Monad.Monad(function () {
     return renderApplicative;
 }, function () {
@@ -20963,14 +21817,17 @@ var renderBind = new Control_Bind.Bind(function () {
         if (v instanceof RenderEnd) {
             return k(v.value0);
         };
-        if (v instanceof Render) {
-            return Render.create(function (h) {
-                return v.value0(function ($37) {
-                    return h(Data_Function.flip(Control_Bind.bind(renderBind))(k)($37));
-                });
+        if (v instanceof Widget) {
+            return Widget.create(function __do() {
+                var v1 = v.value0();
+                return function (h) {
+                    return v1(function ($54) {
+                        return h(Data_Function.flip(Control_Bind.bind(renderBind))(k)($54));
+                    });
+                };
             });
         };
-        throw new Error("Failed pattern match at Concur.React line 28, column 1 - line 28, column 35: " + [ v.constructor.name, k.constructor.name ]);
+        throw new Error("Failed pattern match at Concur.React line 32, column 1 - line 32, column 43: " + [ v.constructor.name, k.constructor.name ]);
     };
 });
 var renderApply = new Control_Apply.Apply(function () {
@@ -20979,41 +21836,54 @@ var renderApply = new Control_Apply.Apply(function () {
 var renderApplicative = new Control_Applicative.Applicative(function () {
     return renderApply;
 }, RenderEnd.create);
-var renderAlt = new Control_Alt.Alt(function () {
-    return renderFunctor;
-}, function (v) {
-    return function (v1) {
-        if (v instanceof RenderEnd) {
-            return new RenderEnd(v.value0);
-        };
-        if (v1 instanceof RenderEnd) {
-            return new RenderEnd(v1.value0);
-        };
-        if (v instanceof Render && v1 instanceof Render) {
-            return Render.create(function (h) {
-                var hg = function (v2) {
-                    if (v2 instanceof RenderEnd) {
-                        return h(new RenderEnd(v2.value0));
+
+// TODO: Make Widget TailRecursive
+
+// instance renderMonadRec :: MonadRec (Widget v eff) where
+var renderAlt = function (dictSemigroup) {
+    return new Control_Alt.Alt(function () {
+        return renderFunctor;
+    }, function (v) {
+        return function (v1) {
+            if (v instanceof RenderEnd) {
+                return new RenderEnd(v.value0);
+            };
+            if (v1 instanceof RenderEnd) {
+                return new RenderEnd(v1.value0);
+            };
+            if (v instanceof Widget && v1 instanceof Widget) {
+                return Widget.create(function __do() {
+                    var v2 = v.value0();
+                    var v3 = v1.value0();
+                    return function (h) {
+                        var hg = function (v4) {
+                            if (v4 instanceof RenderEnd) {
+                                return h(new RenderEnd(v4.value0));
+                            };
+                            return h(Control_Alt.alt(renderAlt(dictSemigroup))(new Widget(Control_Applicative.pure(Control_Monad_Eff.applicativeEff)(v2)))(v4));
+                        };
+                        var hf = function (v4) {
+                            if (v4 instanceof RenderEnd) {
+                                return h(new RenderEnd(v4.value0));
+                            };
+                            return h(Control_Alt.alt(renderAlt(dictSemigroup))(v4)(new Widget(Control_Applicative.pure(Control_Monad_Eff.applicativeEff)(v3))));
+                        };
+                        return Data_Semigroup.append(dictSemigroup)(v2(hf))(v3(hg));
                     };
-                    return h(Control_Alt.alt(renderAlt)(new Render(v.value0))(v2));
-                };
-                var hf = function (v2) {
-                    if (v2 instanceof RenderEnd) {
-                        return h(new RenderEnd(v2.value0));
-                    };
-                    return h(Control_Alt.alt(renderAlt)(v2)(new Render(v1.value0)));
-                };
-                return Data_Semigroup.append(Data_Semigroup.semigroupArray)(v.value0(hf))(v1.value0(hg));
-            });
+                });
+            };
+            throw new Error("Failed pattern match at Concur.React line 49, column 1 - line 49, column 56: " + [ v.constructor.name, v1.constructor.name ]);
         };
-        throw new Error("Failed pattern match at Concur.React line 40, column 1 - line 40, column 33: " + [ v.constructor.name, v1.constructor.name ]);
-    };
-});
+    });
+};
 var mapView = function (v) {
     return function (v1) {
-        if (v1 instanceof Render) {
-            return Render.create(function ($38) {
-                return v(v1.value0($38));
+        if (v1 instanceof Widget) {
+            return Widget.create(function __do() {
+                var v2 = v1.value0();
+                return function ($55) {
+                    return v(v2($55));
+                };
             });
         };
         return v1;
@@ -21024,24 +21894,32 @@ var el = function (n) {
         return [ n(v) ];
     });
 };
-var display = function ($39) {
-    return renderFunc(Data_Function["const"]($39));
+var display = function ($56) {
+    return Widget.create(Control_Applicative.pure(Control_Monad_Eff.applicativeEff)(Data_Function["const"]($56)));
 };
-var renderPlus = new Control_Plus.Plus(function () {
-    return renderAlt;
-}, display([  ]));
-var never = Control_Plus.empty(renderPlus);
-var orr = Data_Foldable.foldl(Data_Foldable.foldableArray)(Control_Alt.alt(renderAlt))(never);
+var renderPlus = function (dictMonoid) {
+    return new Control_Plus.Plus(function () {
+        return renderAlt(dictMonoid.Semigroup0());
+    }, display(Data_Monoid.mempty(dictMonoid)));
+};
+var never = function (dictMonoid) {
+    return Control_Plus.empty(renderPlus(dictMonoid));
+};
+var orr = function (dictMonoid) {
+    return Data_Foldable.foldl(Data_Foldable.foldableArray)(Control_Alt.alt(renderAlt(dictMonoid.Semigroup0())))(never(dictMonoid));
+};
 var el$prime = function (n) {
-    return function ($40) {
-        return el(n)(orr($40));
+    return function ($57) {
+        return el(n)(orr(Data_Monoid.monoidArray)($57));
     };
 };
-var renderAlternative = new Control_Alternative.Alternative(function () {
-    return renderApplicative;
-}, function () {
-    return renderPlus;
-});
+var renderAlternative = function (dictMonoid) {
+    return new Control_Alternative.Alternative(function () {
+        return renderApplicative;
+    }, function () {
+        return renderPlus(dictMonoid);
+    });
+};
 var componentClass = function (init) {
     var renderInner = function ($$this) {
         return function __do() {
@@ -21049,13 +21927,14 @@ var componentClass = function (init) {
             if (v instanceof RenderEnd) {
                 return [  ];
             };
-            if (v instanceof Render) {
+            if (v instanceof Widget) {
                 var handler = function (r$prime) {
                     return Data_Functor["void"](Control_Monad_Eff.functorEff)(React.writeState($$this)(r$prime));
                 };
-                return v.value0(handler);
+                var v1 = v.value0();
+                return v1(handler);
             };
-            throw new Error("Failed pattern match at Concur.React line 94, column 7 - line 98, column 36: " + [ v.constructor.name ]);
+            throw new Error("Failed pattern match at Concur.React line 106, column 7 - line 111, column 27: " + [ v.constructor.name ]);
         };
     };
     var render = function ($$this) {
@@ -21064,14 +21943,14 @@ var componentClass = function (init) {
             return React_DOM["div'"](v);
         };
     };
-    return React.createClass(React.spec(React.reactElementReactRender)(init)(render));
+    return React.createClass(React.spec(init)(render));
 };
 var renderComponent = function (init) {
     return React.createFactory(componentClass(init))({});
 };
 module.exports = {
     RenderEnd: RenderEnd, 
-    Render: Render, 
+    Widget: Widget, 
     componentClass: componentClass, 
     display: display, 
     el: el, 
@@ -21080,7 +21959,6 @@ module.exports = {
     never: never, 
     orr: orr, 
     renderComponent: renderComponent, 
-    renderFunc: renderFunc, 
     renderFunctor: renderFunctor, 
     renderBind: renderBind, 
     renderApplicative: renderApplicative, 
@@ -21091,7 +21969,7 @@ module.exports = {
     renderAlternative: renderAlternative
 };
 
-},{"../Control.Alt":189,"../Control.Alternative":190,"../Control.Applicative":191,"../Control.Apply":193,"../Control.Bind":197,"../Control.Monad":223,"../Control.Monad.Eff":212,"../Control.Plus":226,"../Control.Semigroupoid":227,"../Data.Array":247,"../Data.Foldable":270,"../Data.Function":276,"../Data.Functor":279,"../Data.Semigroup":317,"../Prelude":345,"../React":350,"../React.DOM":348}],189:[function(require,module,exports){
+},{"../Control.Alt":192,"../Control.Alternative":193,"../Control.Applicative":194,"../Control.Apply":196,"../Control.Bind":200,"../Control.Monad":224,"../Control.Monad.Eff":213,"../Control.Plus":227,"../Control.Semigroupoid":228,"../Data.Array":248,"../Data.Foldable":271,"../Data.Function":276,"../Data.Functor":279,"../Data.Monoid":299,"../Data.Semigroup":315,"../Prelude":342,"../React":347,"../React.DOM":345,"../React.DOM.Props":344}],192:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Data_Functor = require("../Data.Functor");
@@ -21112,7 +21990,7 @@ module.exports = {
     altArray: altArray
 };
 
-},{"../Data.Functor":279,"../Data.Semigroup":317}],190:[function(require,module,exports){
+},{"../Data.Functor":279,"../Data.Semigroup":315}],193:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Alt = require("../Control.Alt");
@@ -21134,7 +22012,7 @@ module.exports = {
     alternativeArray: alternativeArray
 };
 
-},{"../Control.Alt":189,"../Control.Applicative":191,"../Control.Apply":193,"../Control.Plus":226,"../Data.Functor":279}],191:[function(require,module,exports){
+},{"../Control.Alt":192,"../Control.Applicative":194,"../Control.Apply":196,"../Control.Plus":227,"../Data.Functor":279}],194:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Apply = require("../Control.Apply");
@@ -21202,7 +22080,7 @@ module.exports = {
     applicativeArray: applicativeArray
 };
 
-},{"../Control.Apply":193,"../Data.Functor":279,"../Data.Unit":335}],192:[function(require,module,exports){
+},{"../Control.Apply":196,"../Data.Functor":279,"../Data.Unit":332}],195:[function(require,module,exports){
 "use strict";
 
 exports.arrayApply = function (fs) {
@@ -21221,7 +22099,7 @@ exports.arrayApply = function (fs) {
   };
 };
 
-},{}],193:[function(require,module,exports){
+},{}],196:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -21322,7 +22200,7 @@ module.exports = {
     applyArray: applyArray
 };
 
-},{"../Control.Category":198,"../Data.Function":276,"../Data.Functor":279,"./foreign":192}],194:[function(require,module,exports){
+},{"../Control.Category":201,"../Data.Function":276,"../Data.Functor":279,"./foreign":195}],197:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Biapply = require("../Control.Biapply");
@@ -21338,7 +22216,7 @@ module.exports = {
     bipure: bipure
 };
 
-},{"../Control.Biapply":195}],195:[function(require,module,exports){
+},{"../Control.Biapply":198}],198:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Category = require("../Control.Category");
@@ -21398,7 +22276,7 @@ module.exports = {
     bilift3: bilift3
 };
 
-},{"../Control.Category":198,"../Data.Bifunctor":254,"../Data.Function":276}],196:[function(require,module,exports){
+},{"../Control.Category":201,"../Data.Bifunctor":255,"../Data.Function":276}],199:[function(require,module,exports){
 "use strict";
 
 exports.arrayBind = function (arr) {
@@ -21411,7 +22289,7 @@ exports.arrayBind = function (arr) {
   };
 };
 
-},{}],197:[function(require,module,exports){
+},{}],200:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -21504,7 +22382,7 @@ module.exports = {
     discardUnit: discardUnit
 };
 
-},{"../Control.Applicative":191,"../Control.Apply":193,"../Control.Category":198,"../Data.Function":276,"../Data.Functor":279,"../Data.Unit":335,"./foreign":196}],198:[function(require,module,exports){
+},{"../Control.Applicative":194,"../Control.Apply":196,"../Control.Category":201,"../Data.Function":276,"../Data.Functor":279,"../Data.Unit":332,"./foreign":199}],201:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Semigroupoid = require("../Control.Semigroupoid");
@@ -21526,7 +22404,7 @@ module.exports = {
     categoryFn: categoryFn
 };
 
-},{"../Control.Semigroupoid":227}],199:[function(require,module,exports){
+},{"../Control.Semigroupoid":228}],202:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Extend = require("../Control.Extend");
@@ -21543,7 +22421,7 @@ module.exports = {
     extract: extract
 };
 
-},{"../Control.Extend":201,"../Data.Functor":279}],200:[function(require,module,exports){
+},{"../Control.Extend":204,"../Data.Functor":279}],203:[function(require,module,exports){
 "use strict";
 
 exports.arrayExtend = function(f) {
@@ -21554,7 +22432,7 @@ exports.arrayExtend = function(f) {
   };
 };
 
-},{}],201:[function(require,module,exports){
+},{}],204:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -21623,7 +22501,7 @@ module.exports = {
     extendArray: extendArray
 };
 
-},{"../Control.Category":198,"../Data.Functor":279,"../Data.Semigroup":317,"./foreign":200}],202:[function(require,module,exports){
+},{"../Control.Category":201,"../Data.Functor":279,"../Data.Semigroup":315,"./foreign":203}],205:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Data_Unit = require("../Data.Unit");
@@ -21656,7 +22534,7 @@ module.exports = {
     lazyUnit: lazyUnit
 };
 
-},{"../Data.Unit":335}],203:[function(require,module,exports){
+},{"../Data.Unit":332}],206:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Prelude = require("../Prelude");
@@ -21672,7 +22550,7 @@ module.exports = {
     callCC: callCC
 };
 
-},{"../Prelude":345}],204:[function(require,module,exports){
+},{"../Prelude":342}],207:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Category = require("../Control.Category");
@@ -21694,90 +22572,7 @@ module.exports = {
     monadEffEff: monadEffEff
 };
 
-},{"../Control.Category":198,"../Control.Monad":223,"../Control.Monad.Eff":212}],205:[function(require,module,exports){
-"use strict";
-
-exports.showErrorImpl = function (err) {
-  return err.stack || err.toString();
-};
-
-exports.error = function (msg) {
-  return new Error(msg);
-};
-
-exports.message = function (e) {
-  return e.message;
-};
-
-exports.name = function (e) {
-  return e.name || "Error";
-};
-
-exports.stackImpl = function (just) {
-  return function (nothing) {
-    return function (e) {
-      return e.stack ? just(e.stack) : nothing;
-    };
-  };
-};
-
-exports.throwException = function (e) {
-  return function () {
-    throw e;
-  };
-};
-
-exports.catchException = function (c) {
-  return function (t) {
-    return function () {
-      try {
-        return t();
-      } catch (e) {
-        if (e instanceof Error || Object.prototype.toString.call(e) === "[object Error]") {
-          return c(e)();
-        } else {
-          return c(new Error(e.toString()))();
-        }
-      }
-    };
-  };
-};
-
-},{}],206:[function(require,module,exports){
-// Generated by purs version 0.11.6
-"use strict";
-var $foreign = require("./foreign");
-var Control_Applicative = require("../Control.Applicative");
-var Control_Monad_Eff = require("../Control.Monad.Eff");
-var Control_Semigroupoid = require("../Control.Semigroupoid");
-var Data_Either = require("../Data.Either");
-var Data_Functor = require("../Data.Functor");
-var Data_Maybe = require("../Data.Maybe");
-var Data_Show = require("../Data.Show");
-var Prelude = require("../Prelude");
-var $$try = function (action) {
-    return $foreign.catchException(function ($0) {
-        return Control_Applicative.pure(Control_Monad_Eff.applicativeEff)(Data_Either.Left.create($0));
-    })(Data_Functor.map(Control_Monad_Eff.functorEff)(Data_Either.Right.create)(action));
-};
-var $$throw = function ($1) {
-    return $foreign.throwException($foreign.error($1));
-};
-var stack = $foreign.stackImpl(Data_Maybe.Just.create)(Data_Maybe.Nothing.value);
-var showError = new Data_Show.Show($foreign.showErrorImpl);
-module.exports = {
-    stack: stack, 
-    "throw": $$throw, 
-    "try": $$try, 
-    showError: showError, 
-    catchException: $foreign.catchException, 
-    error: $foreign.error, 
-    message: $foreign.message, 
-    name: $foreign.name, 
-    throwException: $foreign.throwException
-};
-
-},{"../Control.Applicative":191,"../Control.Monad.Eff":212,"../Control.Semigroupoid":227,"../Data.Either":263,"../Data.Functor":279,"../Data.Maybe":294,"../Data.Show":321,"../Prelude":345,"./foreign":205}],207:[function(require,module,exports){
+},{"../Control.Category":201,"../Control.Monad":224,"../Control.Monad.Eff":213}],208:[function(require,module,exports){
 "use strict";
 
 exports.mkEffFn1 = function mkEffFn1(fn) {
@@ -22010,7 +22805,7 @@ exports.runEffFn10 = function runEffFn10(fn) {
   };
 };
 
-},{}],208:[function(require,module,exports){
+},{}],209:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -22038,14 +22833,14 @@ module.exports = {
     runEffFn9: $foreign.runEffFn9
 };
 
-},{"../Control.Monad.Eff":212,"./foreign":207}],209:[function(require,module,exports){
+},{"../Control.Monad.Eff":213,"./foreign":208}],210:[function(require,module,exports){
 "use strict";
 
 exports.unsafeCoerceEff = function (f) {
   return f;
 };
 
-},{}],210:[function(require,module,exports){
+},{}],211:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -22059,7 +22854,7 @@ module.exports = {
     unsafeCoerceEff: $foreign.unsafeCoerceEff
 };
 
-},{"../Control.Monad.Eff":212,"../Control.Semigroupoid":227,"./foreign":209}],211:[function(require,module,exports){
+},{"../Control.Monad.Eff":213,"../Control.Semigroupoid":228,"./foreign":210}],212:[function(require,module,exports){
 "use strict";
 
 exports.pureE = function (a) {
@@ -22120,7 +22915,7 @@ exports.foreachE = function (as) {
   };
 };
 
-},{}],212:[function(require,module,exports){
+},{}],213:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -22158,7 +22953,7 @@ module.exports = {
     whileE: $foreign.whileE
 };
 
-},{"../Control.Applicative":191,"../Control.Apply":193,"../Control.Bind":197,"../Control.Monad":223,"../Data.Functor":279,"../Data.Unit":335,"./foreign":211}],213:[function(require,module,exports){
+},{"../Control.Applicative":194,"../Control.Apply":196,"../Control.Bind":200,"../Control.Monad":224,"../Data.Functor":279,"../Data.Unit":332,"./foreign":212}],214:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Applicative = require("../Control.Applicative");
@@ -22271,7 +23066,7 @@ module.exports = {
     monadErrorMaybe: monadErrorMaybe
 };
 
-},{"../Control.Applicative":191,"../Control.Bind":197,"../Control.Semigroupoid":227,"../Data.Either":263,"../Data.Function":276,"../Data.Functor":279,"../Data.Maybe":294,"../Data.Unit":335,"../Prelude":345}],214:[function(require,module,exports){
+},{"../Control.Applicative":194,"../Control.Bind":200,"../Control.Semigroupoid":228,"../Data.Either":264,"../Data.Function":276,"../Data.Functor":279,"../Data.Maybe":292,"../Data.Unit":332,"../Prelude":342}],215:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Alt = require("../Control.Alt");
@@ -22588,7 +23383,7 @@ module.exports = {
     monadWriterExceptT: monadWriterExceptT
 };
 
-},{"../Control.Alt":189,"../Control.Alternative":190,"../Control.Applicative":191,"../Control.Apply":193,"../Control.Bind":197,"../Control.Category":198,"../Control.Monad":223,"../Control.Monad.Cont.Class":203,"../Control.Monad.Eff.Class":204,"../Control.Monad.Error.Class":213,"../Control.Monad.Reader.Class":216,"../Control.Monad.Rec.Class":217,"../Control.Monad.State.Class":220,"../Control.Monad.Trans.Class":221,"../Control.Monad.Writer.Class":222,"../Control.MonadPlus":224,"../Control.MonadZero":225,"../Control.Plus":226,"../Control.Semigroupoid":227,"../Data.Either":263,"../Data.Function":276,"../Data.Functor":279,"../Data.Monoid":301,"../Data.Newtype":303,"../Data.Semigroup":317,"../Data.Tuple":331,"../Prelude":345}],215:[function(require,module,exports){
+},{"../Control.Alt":192,"../Control.Alternative":193,"../Control.Applicative":194,"../Control.Apply":196,"../Control.Bind":200,"../Control.Category":201,"../Control.Monad":224,"../Control.Monad.Cont.Class":206,"../Control.Monad.Eff.Class":207,"../Control.Monad.Error.Class":214,"../Control.Monad.Reader.Class":217,"../Control.Monad.Rec.Class":218,"../Control.Monad.State.Class":221,"../Control.Monad.Trans.Class":222,"../Control.Monad.Writer.Class":223,"../Control.MonadPlus":225,"../Control.MonadZero":226,"../Control.Plus":227,"../Control.Semigroupoid":228,"../Data.Either":264,"../Data.Function":276,"../Data.Functor":279,"../Data.Monoid":299,"../Data.Newtype":301,"../Data.Semigroup":315,"../Data.Tuple":328,"../Prelude":342}],216:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Monad_Error_Class = require("../Control.Monad.Error.Class");
@@ -22613,7 +23408,7 @@ module.exports = {
     withExcept: withExcept
 };
 
-},{"../Control.Monad.Error.Class":213,"../Control.Monad.Except.Trans":214,"../Control.Semigroupoid":227,"../Data.Either":263,"../Data.Identity":284,"../Data.Newtype":303,"../Prelude":345}],216:[function(require,module,exports){
+},{"../Control.Monad.Error.Class":214,"../Control.Monad.Except.Trans":215,"../Control.Semigroupoid":228,"../Data.Either":264,"../Data.Identity":282,"../Data.Newtype":301,"../Prelude":342}],217:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Category = require("../Control.Category");
@@ -22656,7 +23451,7 @@ module.exports = {
     monadReaderFun: monadReaderFun
 };
 
-},{"../Control.Category":198,"../Control.Monad":223,"../Control.Semigroupoid":227,"../Data.Functor":279,"../Prelude":345}],217:[function(require,module,exports){
+},{"../Control.Category":201,"../Control.Monad":224,"../Control.Semigroupoid":228,"../Data.Functor":279,"../Prelude":342}],218:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Applicative = require("../Control.Applicative");
@@ -22908,7 +23703,7 @@ module.exports = {
     monadRecMaybe: monadRecMaybe
 };
 
-},{"../Control.Applicative":191,"../Control.Bind":197,"../Control.Monad":223,"../Control.Monad.Eff":212,"../Control.Monad.Eff.Unsafe":210,"../Control.Monad.ST":219,"../Control.Semigroupoid":227,"../Data.Bifunctor":254,"../Data.Either":263,"../Data.Functor":279,"../Data.Identity":284,"../Data.Maybe":294,"../Data.Unit":335,"../Partial.Unsafe":342,"../Prelude":345}],218:[function(require,module,exports){
+},{"../Control.Applicative":194,"../Control.Bind":200,"../Control.Monad":224,"../Control.Monad.Eff":213,"../Control.Monad.Eff.Unsafe":211,"../Control.Monad.ST":220,"../Control.Semigroupoid":228,"../Data.Bifunctor":255,"../Data.Either":264,"../Data.Functor":279,"../Data.Identity":282,"../Data.Maybe":292,"../Data.Unit":332,"../Partial.Unsafe":339,"../Prelude":342}],219:[function(require,module,exports){
 "use strict";
 
 exports.newSTRef = function (val) {
@@ -22943,7 +23738,7 @@ exports.runST = function (f) {
   return f;
 };
 
-},{}],219:[function(require,module,exports){
+},{}],220:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -22960,7 +23755,7 @@ module.exports = {
     writeSTRef: $foreign.writeSTRef
 };
 
-},{"../Control.Monad.Eff":212,"./foreign":218}],220:[function(require,module,exports){
+},{"../Control.Monad.Eff":213,"./foreign":219}],221:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Data_Tuple = require("../Data.Tuple");
@@ -23008,7 +23803,7 @@ module.exports = {
     state: state
 };
 
-},{"../Data.Tuple":331,"../Data.Unit":335,"../Prelude":345}],221:[function(require,module,exports){
+},{"../Data.Tuple":328,"../Data.Unit":332,"../Prelude":342}],222:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Prelude = require("../Prelude");
@@ -23023,7 +23818,7 @@ module.exports = {
     lift: lift
 };
 
-},{"../Prelude":345}],222:[function(require,module,exports){
+},{"../Prelude":342}],223:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Applicative = require("../Control.Applicative");
@@ -23077,7 +23872,7 @@ module.exports = {
     tell: tell
 };
 
-},{"../Control.Applicative":191,"../Control.Bind":197,"../Data.Function":276,"../Data.Tuple":331,"../Prelude":345}],223:[function(require,module,exports){
+},{"../Control.Applicative":194,"../Control.Bind":200,"../Data.Function":276,"../Data.Tuple":328,"../Prelude":342}],224:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Applicative = require("../Control.Applicative");
@@ -23147,7 +23942,7 @@ module.exports = {
     monadArray: monadArray
 };
 
-},{"../Control.Applicative":191,"../Control.Apply":193,"../Control.Bind":197,"../Data.Functor":279,"../Data.Unit":335}],224:[function(require,module,exports){
+},{"../Control.Applicative":194,"../Control.Apply":196,"../Control.Bind":200,"../Data.Functor":279,"../Data.Unit":332}],225:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Alt = require("../Control.Alt");
@@ -23170,7 +23965,7 @@ module.exports = {
     monadPlusArray: monadPlusArray
 };
 
-},{"../Control.Alt":189,"../Control.Alternative":190,"../Control.Applicative":191,"../Control.Apply":193,"../Control.Bind":197,"../Control.Monad":223,"../Control.MonadZero":225,"../Control.Plus":226,"../Data.Functor":279}],225:[function(require,module,exports){
+},{"../Control.Alt":192,"../Control.Alternative":193,"../Control.Applicative":194,"../Control.Apply":196,"../Control.Bind":200,"../Control.Monad":224,"../Control.MonadZero":226,"../Control.Plus":227,"../Data.Functor":279}],226:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Alt = require("../Control.Alt");
@@ -23208,7 +24003,7 @@ module.exports = {
     monadZeroArray: monadZeroArray
 };
 
-},{"../Control.Alt":189,"../Control.Alternative":190,"../Control.Applicative":191,"../Control.Apply":193,"../Control.Bind":197,"../Control.Monad":223,"../Control.Plus":226,"../Data.Functor":279,"../Data.Unit":335}],226:[function(require,module,exports){
+},{"../Control.Alt":192,"../Control.Alternative":193,"../Control.Applicative":194,"../Control.Apply":196,"../Control.Bind":200,"../Control.Monad":224,"../Control.Plus":227,"../Data.Functor":279,"../Data.Unit":332}],227:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Alt = require("../Control.Alt");
@@ -23229,7 +24024,7 @@ module.exports = {
     plusArray: plusArray
 };
 
-},{"../Control.Alt":189,"../Data.Functor":279}],227:[function(require,module,exports){
+},{"../Control.Alt":192,"../Data.Functor":279}],228:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Semigroupoid = function (compose) {
@@ -23259,7 +24054,7 @@ module.exports = {
     semigroupoidFn: semigroupoidFn
 };
 
-},{}],228:[function(require,module,exports){
+},{}],229:[function(require,module,exports){
 /* global EventTarget */
 "use strict";
 
@@ -23271,7 +24066,7 @@ exports._readEventTarget = function (left) {
   };
 };
 
-},{}],229:[function(require,module,exports){
+},{}],230:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -23357,7 +24152,7 @@ module.exports = {
     ordEventType: ordEventType
 };
 
-},{"../Control.Applicative":191,"../Control.Monad.Except.Trans":214,"../Control.Semigroupoid":227,"../Data.Bifunctor":254,"../Data.Either":263,"../Data.Eq":265,"../Data.Foreign":273,"../Data.Identity":284,"../Data.List.Types":290,"../Data.Newtype":303,"../Data.Ord":310,"../Prelude":345,"../Unsafe.Coerce":356,"./foreign":228}],230:[function(require,module,exports){
+},{"../Control.Applicative":194,"../Control.Monad.Except.Trans":215,"../Control.Semigroupoid":228,"../Data.Bifunctor":255,"../Data.Either":264,"../Data.Eq":266,"../Data.Foreign":273,"../Data.Identity":282,"../Data.List.Types":288,"../Data.Newtype":301,"../Data.Ord":308,"../Prelude":342,"../Unsafe.Coerce":355,"./foreign":229}],231:[function(require,module,exports){
 "use strict";
 
 exports._readHTMLElement = function (failure) {
@@ -23373,7 +24168,7 @@ exports._readHTMLElement = function (failure) {
   };
 };
 
-},{}],231:[function(require,module,exports){
+},{}],232:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -23670,7 +24465,7 @@ module.exports = {
     windowToEventTarget: windowToEventTarget
 };
 
-},{"../Control.Applicative":191,"../Control.Monad.Eff":212,"../Control.Monad.Except.Trans":214,"../Control.Semigroupoid":227,"../DOM.Event.Types":229,"../DOM.Node.Types":238,"../Data.Either":263,"../Data.Foreign":273,"../Data.Identity":284,"../Data.List.Types":290,"../Prelude":345,"../Unsafe.Coerce":356,"./foreign":230}],232:[function(require,module,exports){
+},{"../Control.Applicative":194,"../Control.Monad.Eff":213,"../Control.Monad.Except.Trans":215,"../Control.Semigroupoid":228,"../DOM.Event.Types":230,"../DOM.Node.Types":239,"../Data.Either":264,"../Data.Foreign":273,"../Data.Identity":282,"../Data.List.Types":288,"../Prelude":342,"../Unsafe.Coerce":355,"./foreign":231}],233:[function(require,module,exports){
 "use strict";
 
 exports.document = function (window) {
@@ -23909,7 +24704,7 @@ exports._cancelIdleCallback = function(id) {
   };
 };
 
-},{}],233:[function(require,module,exports){
+},{}],234:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -24040,7 +24835,7 @@ module.exports = {
     url: $foreign.url
 };
 
-},{"../Control.Monad.Eff":212,"../Control.Semigroupoid":227,"../DOM":242,"../DOM.HTML.Types":231,"../DOM.WebStorage.Types":241,"../Data.Eq":265,"../Data.Functor":279,"../Data.Maybe":294,"../Data.Newtype":303,"../Data.Nullable":306,"../Data.Ord":310,"../Prelude":345,"./foreign":232}],234:[function(require,module,exports){
+},{"../Control.Monad.Eff":213,"../Control.Semigroupoid":228,"../DOM":243,"../DOM.HTML.Types":232,"../DOM.WebStorage.Types":242,"../Data.Eq":266,"../Data.Functor":279,"../Data.Maybe":292,"../Data.Newtype":301,"../Data.Nullable":304,"../Data.Ord":308,"../Prelude":342,"./foreign":233}],235:[function(require,module,exports){
 /* global window */
 "use strict";
 
@@ -24048,7 +24843,7 @@ exports.window = function () {
   return window;
 };
 
-},{}],235:[function(require,module,exports){
+},{}],236:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -24059,7 +24854,7 @@ module.exports = {
     window: $foreign.window
 };
 
-},{"../Control.Monad.Eff":212,"../DOM":242,"../DOM.HTML.Types":231,"./foreign":234}],236:[function(require,module,exports){
+},{"../Control.Monad.Eff":213,"../DOM":243,"../DOM.HTML.Types":232,"./foreign":235}],237:[function(require,module,exports){
 "use strict";
 
 exports._getElementById = function (id) {
@@ -24070,7 +24865,7 @@ exports._getElementById = function (id) {
   };
 };
 
-},{}],237:[function(require,module,exports){
+},{}],238:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -24091,7 +24886,7 @@ module.exports = {
     getElementById: getElementById
 };
 
-},{"../Control.Monad.Eff":212,"../Control.Semigroupoid":227,"../DOM":242,"../DOM.Node.Types":238,"../Data.Functor":279,"../Data.Maybe":294,"../Data.Nullable":306,"../Prelude":345,"./foreign":236}],238:[function(require,module,exports){
+},{"../Control.Monad.Eff":213,"../Control.Semigroupoid":228,"../DOM":243,"../DOM.Node.Types":239,"../Data.Functor":279,"../Data.Maybe":292,"../Data.Nullable":304,"../Prelude":342,"./foreign":237}],239:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var DOM_Event_Types = require("../DOM.Event.Types");
@@ -24155,7 +24950,7 @@ module.exports = {
     oOrdElementId: oOrdElementId
 };
 
-},{"../DOM.Event.Types":229,"../DOM.Util.FFI":240,"../Data.Eq":265,"../Data.Foreign":273,"../Data.Newtype":303,"../Data.Ord":310,"../Prelude":345,"../Unsafe.Coerce":356}],239:[function(require,module,exports){
+},{"../DOM.Event.Types":230,"../DOM.Util.FFI":241,"../Data.Eq":266,"../Data.Foreign":273,"../Data.Newtype":301,"../Data.Ord":308,"../Prelude":342,"../Unsafe.Coerce":355}],240:[function(require,module,exports){
 "use strict";
 
 exports._unsafeReadProtoTagged = function (name) {
@@ -24179,7 +24974,7 @@ exports._unsafeReadProtoTagged = function (name) {
   };
 };
 
-},{}],240:[function(require,module,exports){
+},{}],241:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -24203,7 +24998,7 @@ module.exports = {
     unsafeReadProtoTagged: unsafeReadProtoTagged
 };
 
-},{"../Control.Applicative":191,"../Control.Monad.Except":215,"../Control.Monad.Except.Trans":214,"../Control.Semigroupoid":227,"../Data.Either":263,"../Data.Foreign":273,"../Data.Identity":284,"../Data.List.Types":290,"../Prelude":345,"./foreign":239}],241:[function(require,module,exports){
+},{"../Control.Applicative":194,"../Control.Monad.Except":216,"../Control.Monad.Except.Trans":215,"../Control.Semigroupoid":228,"../Data.Either":264,"../Data.Foreign":273,"../Data.Identity":282,"../Data.List.Types":288,"../Prelude":342,"./foreign":240}],242:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Data_Foreign = require("../Data.Foreign");
@@ -24212,13 +25007,13 @@ module.exports = {
     readStorage: readStorage
 };
 
-},{"../Data.Foreign":273}],242:[function(require,module,exports){
+},{"../Data.Foreign":273}],243:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Monad_Eff = require("../Control.Monad.Eff");
 module.exports = {};
 
-},{"../Control.Monad.Eff":212}],243:[function(require,module,exports){
+},{"../Control.Monad.Eff":213}],244:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Applicative = require("../Control.Applicative");
@@ -24317,7 +25112,7 @@ module.exports = {
     pushWhile: pushWhile
 };
 
-},{"../Control.Applicative":191,"../Control.Bind":197,"../Control.Monad.Eff":212,"../Control.Monad.ST":219,"../Control.Semigroupoid":227,"../Data.Array.ST":245,"../Data.Function":276,"../Data.Functor":279,"../Data.HeytingAlgebra":283,"../Data.Maybe":294,"../Data.Semiring":319,"../Prelude":345}],244:[function(require,module,exports){
+},{"../Control.Applicative":194,"../Control.Bind":200,"../Control.Monad.Eff":213,"../Control.Monad.ST":220,"../Control.Semigroupoid":228,"../Data.Array.ST":246,"../Data.Function":276,"../Data.Functor":279,"../Data.HeytingAlgebra":281,"../Data.Maybe":292,"../Data.Semiring":317,"../Prelude":342}],245:[function(require,module,exports){
 "use strict";
 
 exports.runSTArray = function (f) {
@@ -24387,7 +25182,7 @@ exports.toAssocArray = function (xs) {
   };
 };
 
-},{}],245:[function(require,module,exports){
+},{}],246:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -24451,7 +25246,7 @@ module.exports = {
     toAssocArray: $foreign.toAssocArray
 };
 
-},{"../Control.Applicative":191,"../Control.Bind":197,"../Control.Monad.Eff":212,"../Control.Monad.ST":219,"../Control.Semigroupoid":227,"../Data.Maybe":294,"../Prelude":345,"../Unsafe.Coerce":356,"./foreign":244}],246:[function(require,module,exports){
+},{"../Control.Applicative":194,"../Control.Bind":200,"../Control.Monad.Eff":213,"../Control.Monad.ST":220,"../Control.Semigroupoid":228,"../Data.Maybe":292,"../Prelude":342,"../Unsafe.Coerce":355,"./foreign":245}],247:[function(require,module,exports){
 "use strict";
 
 //------------------------------------------------------------------------------
@@ -24761,7 +25556,7 @@ exports.unsafeIndexImpl = function (xs) {
   };
 };
 
-},{}],247:[function(require,module,exports){
+},{}],248:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -24866,7 +25661,7 @@ var sortBy = function (comp) {
                 if (v instanceof Data_Ordering.LT) {
                     return -1 | 0;
                 };
-                throw new Error("Failed pattern match at Data.Array line 698, column 15 - line 703, column 1: " + [ v.constructor.name ]);
+                throw new Error("Failed pattern match at Data.Array line 477, column 15 - line 482, column 1: " + [ v.constructor.name ]);
             };
         };
         return $foreign.sortImpl(comp$prime)(xs);
@@ -24899,7 +25694,7 @@ var nubBy = function (eq) {
         if (v instanceof Data_Maybe.Nothing) {
             return [  ];
         };
-        throw new Error("Failed pattern match at Data.Array line 888, column 3 - line 890, column 18: " + [ v.constructor.name ]);
+        throw new Error("Failed pattern match at Data.Array line 594, column 3 - line 596, column 18: " + [ v.constructor.name ]);
     };
 };
 var nub = function (dictEq) {
@@ -24947,7 +25742,7 @@ var init = function (xs) {
     if (Data_Boolean.otherwise) {
         return new Data_Maybe.Just($foreign.slice(0)($foreign.length(xs) - 1 | 0)(xs));
     };
-    throw new Error("Failed pattern match at Data.Array line 319, column 1 - line 319, column 45: " + [ xs.constructor.name ]);
+    throw new Error("Failed pattern match at Data.Array line 251, column 1 - line 251, column 45: " + [ xs.constructor.name ]);
 };
 var index = $foreign.indexImpl(Data_Maybe.Just.create)(Data_Maybe.Nothing.value);
 var last = function (xs) {
@@ -24993,7 +25788,7 @@ var span = function (p) {
                     $tco_done = true;
                     return Data_Maybe.Nothing.value;
                 };
-                throw new Error("Failed pattern match at Data.Array line 830, column 5 - line 832, column 25: " + [ v.constructor.name ]);
+                throw new Error("Failed pattern match at Data.Array line 552, column 5 - line 554, column 25: " + [ v.constructor.name ]);
             };
             while (!$tco_done) {
                 $tco_result = $tco_loop($copy_i);
@@ -25019,7 +25814,7 @@ var span = function (p) {
                 rest: [  ]
             };
         };
-        throw new Error("Failed pattern match at Data.Array line 817, column 3 - line 823, column 30: " + [ breakIndex.constructor.name ]);
+        throw new Error("Failed pattern match at Data.Array line 539, column 3 - line 545, column 30: " + [ breakIndex.constructor.name ]);
     };
 };
 var takeWhile = function (p) {
@@ -25097,7 +25892,7 @@ var foldRecM = function (dictMonadRec) {
                                 }));
                             });
                         };
-                        throw new Error("Failed pattern match at Data.Array line 1057, column 3 - line 1061, column 42: " + [ res.constructor.name, i.constructor.name ]);
+                        throw new Error("Failed pattern match at Data.Array line 704, column 3 - line 708, column 42: " + [ res.constructor.name, i.constructor.name ]);
                     };
                 };
                 return Control_Monad_Rec_Class.tailRecM2(dictMonadRec)(go)(a)(0);
@@ -25234,7 +26029,7 @@ var alterAt = function (i) {
                 if (v instanceof Data_Maybe.Just) {
                     return updateAt(i)(v.value0)(xs);
                 };
-                throw new Error("Failed pattern match at Data.Array line 540, column 10 - line 542, column 32: " + [ v.constructor.name ]);
+                throw new Error("Failed pattern match at Data.Array line 392, column 10 - line 394, column 32: " + [ v.constructor.name ]);
             };
             return Data_Maybe.maybe(Data_Maybe.Nothing.value)(go)(index(xs)(i));
         };
@@ -25313,7 +26108,7 @@ module.exports = {
     zipWith: $foreign.zipWith
 };
 
-},{"../Control.Alt":189,"../Control.Alternative":190,"../Control.Applicative":191,"../Control.Apply":193,"../Control.Bind":197,"../Control.Category":198,"../Control.Lazy":202,"../Control.Monad.Eff":212,"../Control.Monad.Rec.Class":217,"../Control.Monad.ST":219,"../Control.Semigroupoid":227,"../Data.Array.ST":245,"../Data.Array.ST.Iterator":243,"../Data.Boolean":256,"../Data.Eq":265,"../Data.Foldable":270,"../Data.Function":276,"../Data.Functor":279,"../Data.HeytingAlgebra":283,"../Data.Maybe":294,"../Data.NonEmpty":304,"../Data.Ord":310,"../Data.Ordering":311,"../Data.Ring":313,"../Data.Semigroup":317,"../Data.Semiring":319,"../Data.Traversable":329,"../Data.Tuple":331,"../Data.Unfoldable":333,"../Partial.Unsafe":342,"../Prelude":345,"./foreign":246}],248:[function(require,module,exports){
+},{"../Control.Alt":192,"../Control.Alternative":193,"../Control.Applicative":194,"../Control.Apply":196,"../Control.Bind":200,"../Control.Category":201,"../Control.Lazy":205,"../Control.Monad.Eff":213,"../Control.Monad.Rec.Class":218,"../Control.Monad.ST":220,"../Control.Semigroupoid":228,"../Data.Array.ST":246,"../Data.Array.ST.Iterator":244,"../Data.Boolean":257,"../Data.Eq":266,"../Data.Foldable":271,"../Data.Function":276,"../Data.Functor":279,"../Data.HeytingAlgebra":281,"../Data.Maybe":292,"../Data.NonEmpty":302,"../Data.Ord":308,"../Data.Ordering":309,"../Data.Ring":311,"../Data.Semigroup":315,"../Data.Semiring":317,"../Data.Traversable":327,"../Data.Tuple":328,"../Data.Unfoldable":330,"../Partial.Unsafe":339,"../Prelude":342,"./foreign":247}],249:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Applicative = require("../Control.Applicative");
@@ -25633,7 +26428,7 @@ module.exports = {
     bifoldableWrap: bifoldableWrap
 };
 
-},{"../Control.Applicative":191,"../Control.Apply":193,"../Control.Category":198,"../Control.Semigroupoid":227,"../Data.Bifunctor.Clown":249,"../Data.Bifunctor.Flip":250,"../Data.Bifunctor.Joker":251,"../Data.Bifunctor.Product":252,"../Data.Bifunctor.Wrap":253,"../Data.Foldable":270,"../Data.Function":276,"../Data.Monoid":301,"../Data.Monoid.Conj":296,"../Data.Monoid.Disj":297,"../Data.Monoid.Dual":298,"../Data.Monoid.Endo":299,"../Data.Newtype":303,"../Data.Semigroup":317,"../Data.Unit":335,"../Prelude":345}],249:[function(require,module,exports){
+},{"../Control.Applicative":194,"../Control.Apply":196,"../Control.Category":201,"../Control.Semigroupoid":228,"../Data.Bifunctor.Clown":250,"../Data.Bifunctor.Flip":251,"../Data.Bifunctor.Joker":252,"../Data.Bifunctor.Product":253,"../Data.Bifunctor.Wrap":254,"../Data.Foldable":271,"../Data.Function":276,"../Data.Monoid":299,"../Data.Monoid.Conj":294,"../Data.Monoid.Disj":295,"../Data.Monoid.Dual":296,"../Data.Monoid.Endo":297,"../Data.Newtype":301,"../Data.Semigroup":315,"../Data.Unit":332,"../Prelude":342}],250:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Applicative = require("../Control.Applicative");
@@ -25709,7 +26504,7 @@ module.exports = {
     biapplicativeClown: biapplicativeClown
 };
 
-},{"../Control.Applicative":191,"../Control.Apply":193,"../Control.Biapplicative":194,"../Control.Biapply":195,"../Data.Bifunctor":254,"../Data.Eq":265,"../Data.Functor":279,"../Data.Newtype":303,"../Data.Ord":310,"../Data.Semigroup":317,"../Data.Show":321,"../Prelude":345}],250:[function(require,module,exports){
+},{"../Control.Applicative":194,"../Control.Apply":196,"../Control.Biapplicative":197,"../Control.Biapply":198,"../Data.Bifunctor":255,"../Data.Eq":266,"../Data.Functor":279,"../Data.Newtype":301,"../Data.Ord":308,"../Data.Semigroup":315,"../Data.Show":319,"../Prelude":342}],251:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Biapplicative = require("../Control.Biapplicative");
@@ -25785,7 +26580,7 @@ module.exports = {
     biapplicativeFlip: biapplicativeFlip
 };
 
-},{"../Control.Biapplicative":194,"../Control.Biapply":195,"../Data.Bifunctor":254,"../Data.Eq":265,"../Data.Functor":279,"../Data.Newtype":303,"../Data.Ord":310,"../Data.Semigroup":317,"../Data.Show":321,"../Prelude":345}],251:[function(require,module,exports){
+},{"../Control.Biapplicative":197,"../Control.Biapply":198,"../Data.Bifunctor":255,"../Data.Eq":266,"../Data.Functor":279,"../Data.Newtype":301,"../Data.Ord":308,"../Data.Semigroup":315,"../Data.Show":319,"../Prelude":342}],252:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Applicative = require("../Control.Applicative");
@@ -25863,7 +26658,7 @@ module.exports = {
     biapplicativeJoker: biapplicativeJoker
 };
 
-},{"../Control.Applicative":191,"../Control.Apply":193,"../Control.Biapplicative":194,"../Control.Biapply":195,"../Data.Bifunctor":254,"../Data.Eq":265,"../Data.Functor":279,"../Data.Newtype":303,"../Data.Ord":310,"../Data.Semigroup":317,"../Data.Show":321,"../Prelude":345}],252:[function(require,module,exports){
+},{"../Control.Applicative":194,"../Control.Apply":196,"../Control.Biapplicative":197,"../Control.Biapply":198,"../Data.Bifunctor":255,"../Data.Eq":266,"../Data.Functor":279,"../Data.Newtype":301,"../Data.Ord":308,"../Data.Semigroup":315,"../Data.Show":319,"../Prelude":342}],253:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Biapplicative = require("../Control.Biapplicative");
@@ -25965,7 +26760,7 @@ module.exports = {
     biapplicativeProduct: biapplicativeProduct
 };
 
-},{"../Control.Biapplicative":194,"../Control.Biapply":195,"../Data.Bifunctor":254,"../Data.Eq":265,"../Data.HeytingAlgebra":283,"../Data.Ord":310,"../Data.Ordering":311,"../Data.Semigroup":317,"../Data.Show":321,"../Prelude":345}],253:[function(require,module,exports){
+},{"../Control.Biapplicative":197,"../Control.Biapply":198,"../Data.Bifunctor":255,"../Data.Eq":266,"../Data.HeytingAlgebra":281,"../Data.Ord":308,"../Data.Ordering":309,"../Data.Semigroup":315,"../Data.Show":319,"../Prelude":342}],254:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Biapplicative = require("../Control.Biapplicative");
@@ -26041,7 +26836,7 @@ module.exports = {
     biapplicativeWrap: biapplicativeWrap
 };
 
-},{"../Control.Biapplicative":194,"../Control.Biapply":195,"../Data.Bifunctor":254,"../Data.Eq":265,"../Data.Functor":279,"../Data.Newtype":303,"../Data.Ord":310,"../Data.Semigroup":317,"../Data.Show":321,"../Prelude":345}],254:[function(require,module,exports){
+},{"../Control.Biapplicative":197,"../Control.Biapply":198,"../Data.Bifunctor":255,"../Data.Eq":266,"../Data.Functor":279,"../Data.Newtype":301,"../Data.Ord":308,"../Data.Semigroup":315,"../Data.Show":319,"../Prelude":342}],255:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Category = require("../Control.Category");
@@ -26066,7 +26861,7 @@ module.exports = {
     rmap: rmap
 };
 
-},{"../Control.Category":198}],255:[function(require,module,exports){
+},{"../Control.Category":201}],256:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Applicative = require("../Control.Applicative");
@@ -26266,7 +27061,7 @@ module.exports = {
     bitraversableWrap: bitraversableWrap
 };
 
-},{"../Control.Applicative":191,"../Control.Apply":193,"../Control.Category":198,"../Data.Bifoldable":248,"../Data.Bifunctor":254,"../Data.Bifunctor.Clown":249,"../Data.Bifunctor.Flip":250,"../Data.Bifunctor.Joker":251,"../Data.Bifunctor.Product":252,"../Data.Bifunctor.Wrap":253,"../Data.Functor":279,"../Data.Traversable":329,"../Prelude":345}],256:[function(require,module,exports){
+},{"../Control.Applicative":194,"../Control.Apply":196,"../Control.Category":201,"../Data.Bifoldable":249,"../Data.Bifunctor":255,"../Data.Bifunctor.Clown":250,"../Data.Bifunctor.Flip":251,"../Data.Bifunctor.Joker":252,"../Data.Bifunctor.Product":253,"../Data.Bifunctor.Wrap":254,"../Data.Functor":279,"../Data.Traversable":327,"../Prelude":342}],257:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var otherwise = true;
@@ -26274,7 +27069,7 @@ module.exports = {
     otherwise: otherwise
 };
 
-},{}],257:[function(require,module,exports){
+},{}],258:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Data_HeytingAlgebra = require("../Data.HeytingAlgebra");
@@ -26300,7 +27095,7 @@ module.exports = {
     booleanAlgebraFn: booleanAlgebraFn
 };
 
-},{"../Data.HeytingAlgebra":283,"../Data.Unit":335}],258:[function(require,module,exports){
+},{"../Data.HeytingAlgebra":281,"../Data.Unit":332}],259:[function(require,module,exports){
 "use strict";
 
 exports.topInt = 2147483647;
@@ -26309,7 +27104,7 @@ exports.bottomInt = -2147483648;
 exports.topChar = String.fromCharCode(65535);
 exports.bottomChar = String.fromCharCode(0);
 
-},{}],259:[function(require,module,exports){
+},{}],260:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -26353,7 +27148,7 @@ module.exports = {
     boundedUnit: boundedUnit
 };
 
-},{"../Data.Ord":310,"../Data.Ordering":311,"../Data.Unit":335,"./foreign":258}],260:[function(require,module,exports){
+},{"../Data.Ord":308,"../Data.Ordering":309,"../Data.Unit":332,"./foreign":259}],261:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Data_Ring = require("../Data.Ring");
@@ -26384,7 +27179,7 @@ module.exports = {
     commutativeRingFn: commutativeRingFn
 };
 
-},{"../Data.Ring":313,"../Data.Semiring":319,"../Data.Unit":335}],261:[function(require,module,exports){
+},{"../Data.Ring":311,"../Data.Semiring":317,"../Data.Unit":332}],262:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Category = require("../Control.Category");
@@ -26471,7 +27266,7 @@ module.exports = {
     distributiveFunction: distributiveFunction
 };
 
-},{"../Control.Category":198,"../Control.Semigroupoid":227,"../Data.Function":276,"../Data.Functor":279,"../Data.Identity":284,"../Data.Newtype":303,"../Prelude":345}],262:[function(require,module,exports){
+},{"../Control.Category":201,"../Control.Semigroupoid":228,"../Data.Function":276,"../Data.Functor":279,"../Data.Identity":282,"../Data.Newtype":301,"../Prelude":342}],263:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Data_EuclideanRing = require("../Data.EuclideanRing");
@@ -26511,7 +27306,7 @@ module.exports = {
     divisionringNumber: divisionringNumber
 };
 
-},{"../Data.EuclideanRing":267,"../Data.Ring":313,"../Data.Semiring":319}],263:[function(require,module,exports){
+},{"../Data.EuclideanRing":268,"../Data.Ring":311,"../Data.Semiring":317}],264:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Alt = require("../Control.Alt");
@@ -26947,7 +27742,7 @@ module.exports = {
     semigroupEither: semigroupEither
 };
 
-},{"../Control.Alt":189,"../Control.Applicative":191,"../Control.Apply":193,"../Control.Bind":197,"../Control.Extend":201,"../Control.Monad":223,"../Data.Bifoldable":248,"../Data.Bifunctor":254,"../Data.Bitraversable":255,"../Data.Bounded":259,"../Data.Eq":265,"../Data.Foldable":270,"../Data.Function":276,"../Data.Functor":279,"../Data.Functor.Invariant":277,"../Data.Maybe":294,"../Data.Monoid":301,"../Data.Ord":310,"../Data.Ordering":311,"../Data.Semigroup":317,"../Data.Semiring":319,"../Data.Show":321,"../Data.Traversable":329,"../Prelude":345}],264:[function(require,module,exports){
+},{"../Control.Alt":192,"../Control.Applicative":194,"../Control.Apply":196,"../Control.Bind":200,"../Control.Extend":204,"../Control.Monad":224,"../Data.Bifoldable":249,"../Data.Bifunctor":255,"../Data.Bitraversable":256,"../Data.Bounded":260,"../Data.Eq":266,"../Data.Foldable":271,"../Data.Function":276,"../Data.Functor":279,"../Data.Functor.Invariant":277,"../Data.Maybe":292,"../Data.Monoid":299,"../Data.Ord":308,"../Data.Ordering":309,"../Data.Semigroup":315,"../Data.Semiring":317,"../Data.Show":319,"../Data.Traversable":327,"../Prelude":342}],265:[function(require,module,exports){
 "use strict";
 
 exports.refEq = function (r1) {
@@ -26968,7 +27763,7 @@ exports.eqArrayImpl = function (f) {
   };
 };
 
-},{}],265:[function(require,module,exports){
+},{}],266:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -27041,7 +27836,7 @@ module.exports = {
     eq1Array: eq1Array
 };
 
-},{"../Data.Unit":335,"../Data.Void":336,"./foreign":264}],266:[function(require,module,exports){
+},{"../Data.Unit":332,"../Data.Void":333,"./foreign":265}],267:[function(require,module,exports){
 "use strict";
 
 exports.intDegree = function (x) {
@@ -27067,7 +27862,7 @@ exports.numDiv = function (n1) {
   };
 };
 
-},{}],267:[function(require,module,exports){
+},{}],268:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -27157,7 +27952,7 @@ module.exports = {
     euclideanRingNumber: euclideanRingNumber
 };
 
-},{"../Data.BooleanAlgebra":257,"../Data.CommutativeRing":260,"../Data.Eq":265,"../Data.HeytingAlgebra":283,"../Data.Ring":313,"../Data.Semiring":319,"./foreign":266}],268:[function(require,module,exports){
+},{"../Data.BooleanAlgebra":258,"../Data.CommutativeRing":261,"../Data.Eq":266,"../Data.HeytingAlgebra":281,"../Data.Ring":311,"../Data.Semiring":317,"./foreign":267}],269:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Data_CommutativeRing = require("../Data.CommutativeRing");
@@ -27176,7 +27971,7 @@ module.exports = {
     fieldNumber: fieldNumber
 };
 
-},{"../Data.CommutativeRing":260,"../Data.DivisionRing":262,"../Data.EuclideanRing":267,"../Data.Ring":313,"../Data.Semiring":319}],269:[function(require,module,exports){
+},{"../Data.CommutativeRing":261,"../Data.DivisionRing":263,"../Data.EuclideanRing":268,"../Data.Ring":311,"../Data.Semiring":317}],270:[function(require,module,exports){
 "use strict";
 
 exports.foldrArray = function (f) {
@@ -27205,7 +28000,7 @@ exports.foldlArray = function (f) {
   };
 };
 
-},{}],270:[function(require,module,exports){
+},{}],271:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -27245,36 +28040,6 @@ var Foldable = function (foldMap, foldl, foldr) {
 var foldr = function (dict) {
     return dict.foldr;
 };
-var indexr = function (dictFoldable) {
-    return function (idx) {
-        var go = function (a) {
-            return function (cursor) {
-                if (cursor.elem instanceof Data_Maybe.Just) {
-                    return cursor;
-                };
-                var $106 = cursor.pos === idx;
-                if ($106) {
-                    return {
-                        elem: new Data_Maybe.Just(a), 
-                        pos: cursor.pos
-                    };
-                };
-                return {
-                    pos: cursor.pos + 1 | 0, 
-                    elem: cursor.elem
-                };
-            };
-        };
-        return function ($193) {
-            return (function (v) {
-                return v.elem;
-            })(foldr(dictFoldable)(go)({
-                elem: Data_Maybe.Nothing.value, 
-                pos: 0
-            })($193));
-        };
-    };
-};
 var $$null = function (dictFoldable) {
     return foldr(dictFoldable)(function (v) {
         return function (v1) {
@@ -27290,8 +28055,8 @@ var oneOf = function (dictFoldable) {
 var oneOfMap = function (dictFoldable) {
     return function (dictPlus) {
         return function (f) {
-            return foldr(dictFoldable)(function ($194) {
-                return Control_Alt.alt(dictPlus.Alt0())(f($194));
+            return foldr(dictFoldable)(function ($183) {
+                return Control_Alt.alt(dictPlus.Alt0())(f($183));
             })(Control_Plus.empty(dictPlus));
         };
     };
@@ -27299,8 +28064,8 @@ var oneOfMap = function (dictFoldable) {
 var traverse_ = function (dictApplicative) {
     return function (dictFoldable) {
         return function (f) {
-            return foldr(dictFoldable)(function ($195) {
-                return Control_Apply.applySecond(dictApplicative.Apply0())(f($195));
+            return foldr(dictFoldable)(function ($184) {
+                return Control_Apply.applySecond(dictApplicative.Apply0())(f($184));
             })(Control_Applicative.pure(dictApplicative)(Data_Unit.unit));
         };
     };
@@ -27317,36 +28082,6 @@ var sequence_ = function (dictApplicative) {
 };
 var foldl = function (dict) {
     return dict.foldl;
-};
-var indexl = function (dictFoldable) {
-    return function (idx) {
-        var go = function (cursor) {
-            return function (a) {
-                if (cursor.elem instanceof Data_Maybe.Just) {
-                    return cursor;
-                };
-                var $109 = cursor.pos === idx;
-                if ($109) {
-                    return {
-                        elem: new Data_Maybe.Just(a), 
-                        pos: cursor.pos
-                    };
-                };
-                return {
-                    pos: cursor.pos + 1 | 0, 
-                    elem: cursor.elem
-                };
-            };
-        };
-        return function ($196) {
-            return (function (v) {
-                return v.elem;
-            })(foldl(dictFoldable)(go)({
-                elem: Data_Maybe.Nothing.value, 
-                pos: 0
-            })($196));
-        };
-    };
 };
 var intercalate = function (dictFoldable) {
     return function (dictMonoid) {
@@ -27392,14 +28127,14 @@ var maximumBy = function (dictFoldable) {
                 };
                 if (v instanceof Data_Maybe.Just) {
                     return new Data_Maybe.Just((function () {
-                        var $116 = Data_Eq.eq(Data_Ordering.eqOrdering)(cmp(v.value0)(v1))(Data_Ordering.GT.value);
-                        if ($116) {
+                        var $106 = Data_Eq.eq(Data_Ordering.eqOrdering)(cmp(v.value0)(v1))(Data_Ordering.GT.value);
+                        if ($106) {
                             return v.value0;
                         };
                         return v1;
                     })());
                 };
-                throw new Error("Failed pattern match at Data.Foldable line 378, column 3 - line 378, column 27: " + [ v.constructor.name, v1.constructor.name ]);
+                throw new Error("Failed pattern match at Data.Foldable line 352, column 3 - line 352, column 27: " + [ v.constructor.name, v1.constructor.name ]);
             };
         };
         return foldl(dictFoldable)(max$prime)(Data_Maybe.Nothing.value);
@@ -27419,14 +28154,14 @@ var minimumBy = function (dictFoldable) {
                 };
                 if (v instanceof Data_Maybe.Just) {
                     return new Data_Maybe.Just((function () {
-                        var $120 = Data_Eq.eq(Data_Ordering.eqOrdering)(cmp(v.value0)(v1))(Data_Ordering.LT.value);
-                        if ($120) {
+                        var $110 = Data_Eq.eq(Data_Ordering.eqOrdering)(cmp(v.value0)(v1))(Data_Ordering.LT.value);
+                        if ($110) {
                             return v.value0;
                         };
                         return v1;
                     })());
                 };
-                throw new Error("Failed pattern match at Data.Foldable line 391, column 3 - line 391, column 27: " + [ v.constructor.name, v1.constructor.name ]);
+                throw new Error("Failed pattern match at Data.Foldable line 365, column 3 - line 365, column 27: " + [ v.constructor.name, v1.constructor.name ]);
             };
         };
         return foldl(dictFoldable)(min$prime)(Data_Maybe.Nothing.value);
@@ -27475,7 +28210,7 @@ var foldableMaybe = new Foldable(function (dictMonoid) {
             if (v instanceof Data_Maybe.Just) {
                 return f(v.value0);
             };
-            throw new Error("Failed pattern match at Data.Foldable line 131, column 1 - line 131, column 41: " + [ f.constructor.name, v.constructor.name ]);
+            throw new Error("Failed pattern match at Data.Foldable line 129, column 1 - line 129, column 41: " + [ f.constructor.name, v.constructor.name ]);
         };
     };
 }, function (v) {
@@ -27487,7 +28222,7 @@ var foldableMaybe = new Foldable(function (dictMonoid) {
             if (v1 instanceof Data_Maybe.Just) {
                 return v(z)(v1.value0);
             };
-            throw new Error("Failed pattern match at Data.Foldable line 131, column 1 - line 131, column 41: " + [ v.constructor.name, z.constructor.name, v1.constructor.name ]);
+            throw new Error("Failed pattern match at Data.Foldable line 129, column 1 - line 129, column 41: " + [ v.constructor.name, z.constructor.name, v1.constructor.name ]);
         };
     };
 }, function (v) {
@@ -27499,7 +28234,7 @@ var foldableMaybe = new Foldable(function (dictMonoid) {
             if (v1 instanceof Data_Maybe.Just) {
                 return v(v1.value0)(z);
             };
-            throw new Error("Failed pattern match at Data.Foldable line 131, column 1 - line 131, column 41: " + [ v.constructor.name, z.constructor.name, v1.constructor.name ]);
+            throw new Error("Failed pattern match at Data.Foldable line 129, column 1 - line 129, column 41: " + [ v.constructor.name, z.constructor.name, v1.constructor.name ]);
         };
     };
 });
@@ -27649,8 +28384,8 @@ var foldlDefault = function (dictFoldable) {
     return function (c) {
         return function (u) {
             return function (xs) {
-                return Data_Newtype.unwrap(Data_Monoid_Endo.newtypeEndo)(Data_Newtype.unwrap(Data_Monoid_Dual.newtypeDual)(foldMap(dictFoldable)(Data_Monoid_Dual.monoidDual(Data_Monoid_Endo.monoidEndo))(function ($197) {
-                    return Data_Monoid_Dual.Dual(Data_Monoid_Endo.Endo(Data_Function.flip(c)($197)));
+                return Data_Newtype.unwrap(Data_Monoid_Endo.newtypeEndo)(Data_Newtype.unwrap(Data_Monoid_Dual.newtypeDual)(foldMap(dictFoldable)(Data_Monoid_Dual.monoidDual(Data_Monoid_Endo.monoidEndo))(function ($185) {
+                    return Data_Monoid_Dual.Dual(Data_Monoid_Endo.Endo(Data_Function.flip(c)($185)));
                 })(xs)))(u);
             };
         };
@@ -27660,8 +28395,8 @@ var foldrDefault = function (dictFoldable) {
     return function (c) {
         return function (u) {
             return function (xs) {
-                return Data_Newtype.unwrap(Data_Monoid_Endo.newtypeEndo)(foldMap(dictFoldable)(Data_Monoid_Endo.monoidEndo)(function ($198) {
-                    return Data_Monoid_Endo.Endo(c($198));
+                return Data_Newtype.unwrap(Data_Monoid_Endo.newtypeEndo)(foldMap(dictFoldable)(Data_Monoid_Endo.monoidEndo)(function ($186) {
+                    return Data_Monoid_Endo.Endo(c($186));
                 })(xs))(u);
             };
         };
@@ -27741,16 +28476,16 @@ var any = function (dictFoldable) {
 };
 var elem = function (dictFoldable) {
     return function (dictEq) {
-        return function ($199) {
-            return any(dictFoldable)(Data_HeytingAlgebra.heytingAlgebraBoolean)(Data_Eq.eq(dictEq)($199));
+        return function ($187) {
+            return any(dictFoldable)(Data_HeytingAlgebra.heytingAlgebraBoolean)(Data_Eq.eq(dictEq)($187));
         };
     };
 };
 var notElem = function (dictFoldable) {
     return function (dictEq) {
         return function (x) {
-            return function ($200) {
-                return !elem(dictFoldable)(dictEq)(x)($200);
+            return function ($188) {
+                return !elem(dictFoldable)(dictEq)(x)($188);
             };
         };
     };
@@ -27788,8 +28523,6 @@ module.exports = {
     foldr: foldr, 
     foldrDefault: foldrDefault, 
     for_: for_, 
-    indexl: indexl, 
-    indexr: indexr, 
     intercalate: intercalate, 
     length: length, 
     maximum: maximum, 
@@ -27818,340 +28551,7 @@ module.exports = {
     foldableMultiplicative: foldableMultiplicative
 };
 
-},{"../Control.Alt":189,"../Control.Applicative":191,"../Control.Apply":193,"../Control.Bind":197,"../Control.Category":198,"../Control.Plus":226,"../Control.Semigroupoid":227,"../Data.Eq":265,"../Data.Function":276,"../Data.Functor":279,"../Data.HeytingAlgebra":283,"../Data.Maybe":294,"../Data.Maybe.First":292,"../Data.Maybe.Last":293,"../Data.Monoid":301,"../Data.Monoid.Additive":295,"../Data.Monoid.Conj":296,"../Data.Monoid.Disj":297,"../Data.Monoid.Dual":298,"../Data.Monoid.Endo":299,"../Data.Monoid.Multiplicative":300,"../Data.Newtype":303,"../Data.Ord":310,"../Data.Ordering":311,"../Data.Semigroup":317,"../Data.Semiring":319,"../Data.Unit":335,"../Prelude":345,"./foreign":269}],271:[function(require,module,exports){
-// Generated by purs version 0.11.6
-"use strict";
-var Control_Applicative = require("../Control.Applicative");
-var Control_Apply = require("../Control.Apply");
-var Control_Bind = require("../Control.Bind");
-var Control_Semigroupoid = require("../Control.Semigroupoid");
-var Data_Foldable = require("../Data.Foldable");
-var Data_Function = require("../Data.Function");
-var Data_FunctorWithIndex = require("../Data.FunctorWithIndex");
-var Data_Maybe = require("../Data.Maybe");
-var Data_Maybe_First = require("../Data.Maybe.First");
-var Data_Maybe_Last = require("../Data.Maybe.Last");
-var Data_Monoid = require("../Data.Monoid");
-var Data_Monoid_Additive = require("../Data.Monoid.Additive");
-var Data_Monoid_Conj = require("../Data.Monoid.Conj");
-var Data_Monoid_Disj = require("../Data.Monoid.Disj");
-var Data_Monoid_Dual = require("../Data.Monoid.Dual");
-var Data_Monoid_Endo = require("../Data.Monoid.Endo");
-var Data_Monoid_Multiplicative = require("../Data.Monoid.Multiplicative");
-var Data_Newtype = require("../Data.Newtype");
-var Data_Semigroup = require("../Data.Semigroup");
-var Data_Unit = require("../Data.Unit");
-var Prelude = require("../Prelude");
-var Tuple = (function () {
-    function Tuple(value0, value1) {
-        this.value0 = value0;
-        this.value1 = value1;
-    };
-    Tuple.create = function (value0) {
-        return function (value1) {
-            return new Tuple(value0, value1);
-        };
-    };
-    return Tuple;
-})();
-var FoldableWithIndex = function (Foldable0, foldMapWithIndex, foldlWithIndex, foldrWithIndex) {
-    this.Foldable0 = Foldable0;
-    this.foldMapWithIndex = foldMapWithIndex;
-    this.foldlWithIndex = foldlWithIndex;
-    this.foldrWithIndex = foldrWithIndex;
-};
-var foldrWithIndex = function (dict) {
-    return dict.foldrWithIndex;
-};
-var traverseWithIndex_ = function (dictApplicative) {
-    return function (dictFoldableWithIndex) {
-        return function (f) {
-            return foldrWithIndex(dictFoldableWithIndex)(function (i) {
-                return function ($41) {
-                    return Control_Apply.applySecond(dictApplicative.Apply0())(f(i)($41));
-                };
-            })(Control_Applicative.pure(dictApplicative)(Data_Unit.unit));
-        };
-    };
-};
-var forWithIndex_ = function (dictApplicative) {
-    return function (dictFoldableWithIndex) {
-        return Data_Function.flip(traverseWithIndex_(dictApplicative)(dictFoldableWithIndex));
-    };
-};
-var foldlWithIndex = function (dict) {
-    return dict.foldlWithIndex;
-};
-var foldableWithIndexMultiplicative = new FoldableWithIndex(function () {
-    return Data_Foldable.foldableMultiplicative;
-}, function (dictMonoid) {
-    return function (f) {
-        return Data_Foldable.foldMap(Data_Foldable.foldableMultiplicative)(dictMonoid)(f(Data_Unit.unit));
-    };
-}, function (f) {
-    return Data_Foldable.foldl(Data_Foldable.foldableMultiplicative)(f(Data_Unit.unit));
-}, function (f) {
-    return Data_Foldable.foldr(Data_Foldable.foldableMultiplicative)(f(Data_Unit.unit));
-});
-var foldableWithIndexMaybe = new FoldableWithIndex(function () {
-    return Data_Foldable.foldableMaybe;
-}, function (dictMonoid) {
-    return function (f) {
-        return Data_Foldable.foldMap(Data_Foldable.foldableMaybe)(dictMonoid)(f(Data_Unit.unit));
-    };
-}, function (f) {
-    return Data_Foldable.foldl(Data_Foldable.foldableMaybe)(f(Data_Unit.unit));
-}, function (f) {
-    return Data_Foldable.foldr(Data_Foldable.foldableMaybe)(f(Data_Unit.unit));
-});
-var foldableWithIndexLast = new FoldableWithIndex(function () {
-    return Data_Foldable.foldableLast;
-}, function (dictMonoid) {
-    return function (f) {
-        return Data_Foldable.foldMap(Data_Foldable.foldableLast)(dictMonoid)(f(Data_Unit.unit));
-    };
-}, function (f) {
-    return Data_Foldable.foldl(Data_Foldable.foldableLast)(f(Data_Unit.unit));
-}, function (f) {
-    return Data_Foldable.foldr(Data_Foldable.foldableLast)(f(Data_Unit.unit));
-});
-var foldableWithIndexFirst = new FoldableWithIndex(function () {
-    return Data_Foldable.foldableFirst;
-}, function (dictMonoid) {
-    return function (f) {
-        return Data_Foldable.foldMap(Data_Foldable.foldableFirst)(dictMonoid)(f(Data_Unit.unit));
-    };
-}, function (f) {
-    return Data_Foldable.foldl(Data_Foldable.foldableFirst)(f(Data_Unit.unit));
-}, function (f) {
-    return Data_Foldable.foldr(Data_Foldable.foldableFirst)(f(Data_Unit.unit));
-});
-var foldableWithIndexDual = new FoldableWithIndex(function () {
-    return Data_Foldable.foldableDual;
-}, function (dictMonoid) {
-    return function (f) {
-        return Data_Foldable.foldMap(Data_Foldable.foldableDual)(dictMonoid)(f(Data_Unit.unit));
-    };
-}, function (f) {
-    return Data_Foldable.foldl(Data_Foldable.foldableDual)(f(Data_Unit.unit));
-}, function (f) {
-    return Data_Foldable.foldr(Data_Foldable.foldableDual)(f(Data_Unit.unit));
-});
-var foldableWithIndexDisj = new FoldableWithIndex(function () {
-    return Data_Foldable.foldableDisj;
-}, function (dictMonoid) {
-    return function (f) {
-        return Data_Foldable.foldMap(Data_Foldable.foldableDisj)(dictMonoid)(f(Data_Unit.unit));
-    };
-}, function (f) {
-    return Data_Foldable.foldl(Data_Foldable.foldableDisj)(f(Data_Unit.unit));
-}, function (f) {
-    return Data_Foldable.foldr(Data_Foldable.foldableDisj)(f(Data_Unit.unit));
-});
-var foldableWithIndexConj = new FoldableWithIndex(function () {
-    return Data_Foldable.foldableConj;
-}, function (dictMonoid) {
-    return function (f) {
-        return Data_Foldable.foldMap(Data_Foldable.foldableConj)(dictMonoid)(f(Data_Unit.unit));
-    };
-}, function (f) {
-    return Data_Foldable.foldl(Data_Foldable.foldableConj)(f(Data_Unit.unit));
-}, function (f) {
-    return Data_Foldable.foldr(Data_Foldable.foldableConj)(f(Data_Unit.unit));
-});
-var foldableWithIndexAdditive = new FoldableWithIndex(function () {
-    return Data_Foldable.foldableAdditive;
-}, function (dictMonoid) {
-    return function (f) {
-        return Data_Foldable.foldMap(Data_Foldable.foldableAdditive)(dictMonoid)(f(Data_Unit.unit));
-    };
-}, function (f) {
-    return Data_Foldable.foldl(Data_Foldable.foldableAdditive)(f(Data_Unit.unit));
-}, function (f) {
-    return Data_Foldable.foldr(Data_Foldable.foldableAdditive)(f(Data_Unit.unit));
-});
-var foldWithIndexM = function (dictFoldableWithIndex) {
-    return function (dictMonad) {
-        return function (f) {
-            return function (a0) {
-                return foldlWithIndex(dictFoldableWithIndex)(function (i) {
-                    return function (ma) {
-                        return function (b) {
-                            return Control_Bind.bind(dictMonad.Bind1())(ma)(Data_Function.flip(f(i))(b));
-                        };
-                    };
-                })(Control_Applicative.pure(dictMonad.Applicative0())(a0));
-            };
-        };
-    };
-};
-var foldMapWithIndexDefaultR = function (dictFoldableWithIndex) {
-    return function (dictMonoid) {
-        return function (f) {
-            return foldrWithIndex(dictFoldableWithIndex)(function (i) {
-                return function (x) {
-                    return function (acc) {
-                        return Data_Semigroup.append(dictMonoid.Semigroup0())(f(i)(x))(acc);
-                    };
-                };
-            })(Data_Monoid.mempty(dictMonoid));
-        };
-    };
-};
-var foldableWithIndexArray = new FoldableWithIndex(function () {
-    return Data_Foldable.foldableArray;
-}, function (dictMonoid) {
-    return foldMapWithIndexDefaultR(foldableWithIndexArray)(dictMonoid);
-}, function (f) {
-    return function (z) {
-        return function ($42) {
-            return Data_Foldable.foldl(Data_Foldable.foldableArray)(function (y) {
-                return function (v) {
-                    return f(v.value0)(y)(v.value1);
-                };
-            })(z)(Data_FunctorWithIndex.mapWithIndex(Data_FunctorWithIndex.functorWithIndexArray)(Tuple.create)($42));
-        };
-    };
-}, function (f) {
-    return function (z) {
-        return function ($43) {
-            return Data_Foldable.foldr(Data_Foldable.foldableArray)(function (v) {
-                return function (y) {
-                    return f(v.value0)(v.value1)(y);
-                };
-            })(z)(Data_FunctorWithIndex.mapWithIndex(Data_FunctorWithIndex.functorWithIndexArray)(Tuple.create)($43));
-        };
-    };
-});
-var foldMapWithIndexDefaultL = function (dictFoldableWithIndex) {
-    return function (dictMonoid) {
-        return function (f) {
-            return foldlWithIndex(dictFoldableWithIndex)(function (i) {
-                return function (acc) {
-                    return function (x) {
-                        return Data_Semigroup.append(dictMonoid.Semigroup0())(acc)(f(i)(x));
-                    };
-                };
-            })(Data_Monoid.mempty(dictMonoid));
-        };
-    };
-};
-var foldMapWithIndex = function (dict) {
-    return dict.foldMapWithIndex;
-};
-var foldlWithIndexDefault = function (dictFoldableWithIndex) {
-    return function (c) {
-        return function (u) {
-            return function (xs) {
-                return Data_Newtype.unwrap(Data_Monoid_Endo.newtypeEndo)(Data_Newtype.unwrap(Data_Monoid_Dual.newtypeDual)(foldMapWithIndex(dictFoldableWithIndex)(Data_Monoid_Dual.monoidDual(Data_Monoid_Endo.monoidEndo))(function (i) {
-                    return function ($44) {
-                        return Data_Monoid_Dual.Dual(Data_Monoid_Endo.Endo(Data_Function.flip(c(i))($44)));
-                    };
-                })(xs)))(u);
-            };
-        };
-    };
-};
-var foldrWithIndexDefault = function (dictFoldableWithIndex) {
-    return function (c) {
-        return function (u) {
-            return function (xs) {
-                return Data_Newtype.unwrap(Data_Monoid_Endo.newtypeEndo)(foldMapWithIndex(dictFoldableWithIndex)(Data_Monoid_Endo.monoidEndo)(function (i) {
-                    return function ($45) {
-                        return Data_Monoid_Endo.Endo(c(i)($45));
-                    };
-                })(xs))(u);
-            };
-        };
-    };
-};
-var surroundMapWithIndex = function (dictFoldableWithIndex) {
-    return function (dictSemigroup) {
-        return function (d) {
-            return function (t) {
-                return function (f) {
-                    var joined = function (i) {
-                        return function (a) {
-                            return function (m) {
-                                return Data_Semigroup.append(dictSemigroup)(d)(Data_Semigroup.append(dictSemigroup)(t(i)(a))(m));
-                            };
-                        };
-                    };
-                    return Data_Newtype.unwrap(Data_Monoid_Endo.newtypeEndo)(foldMapWithIndex(dictFoldableWithIndex)(Data_Monoid_Endo.monoidEndo)(joined)(f))(d);
-                };
-            };
-        };
-    };
-};
-var findWithIndex = function (dictFoldableWithIndex) {
-    return function (p) {
-        var go = function (i) {
-            return function (v) {
-                return function (v1) {
-                    if (v instanceof Data_Maybe.Nothing && p(i)(v1)) {
-                        return new Data_Maybe.Just(v1);
-                    };
-                    return v;
-                };
-            };
-        };
-        return foldlWithIndex(dictFoldableWithIndex)(go)(Data_Maybe.Nothing.value);
-    };
-};
-var anyWithIndex = function (dictFoldableWithIndex) {
-    return function (dictHeytingAlgebra) {
-        return function (t) {
-            return function ($46) {
-                return Data_Newtype.unwrap(Data_Monoid_Disj.newtypeDisj)(foldMapWithIndex(dictFoldableWithIndex)(Data_Monoid_Disj.monoidDisj(dictHeytingAlgebra))(function (i) {
-                    return function ($47) {
-                        return Data_Monoid_Disj.Disj(t(i)($47));
-                    };
-                })($46));
-            };
-        };
-    };
-};
-var allWithIndex = function (dictFoldableWithIndex) {
-    return function (dictHeytingAlgebra) {
-        return function (t) {
-            return function ($48) {
-                return Data_Newtype.unwrap(Data_Monoid_Conj.newtypeConj)(foldMapWithIndex(dictFoldableWithIndex)(Data_Monoid_Conj.monoidConj(dictHeytingAlgebra))(function (i) {
-                    return function ($49) {
-                        return Data_Monoid_Conj.Conj(t(i)($49));
-                    };
-                })($48));
-            };
-        };
-    };
-};
-module.exports = {
-    FoldableWithIndex: FoldableWithIndex, 
-    allWithIndex: allWithIndex, 
-    anyWithIndex: anyWithIndex, 
-    findWithIndex: findWithIndex, 
-    foldMapWithIndex: foldMapWithIndex, 
-    foldMapWithIndexDefaultL: foldMapWithIndexDefaultL, 
-    foldMapWithIndexDefaultR: foldMapWithIndexDefaultR, 
-    foldWithIndexM: foldWithIndexM, 
-    foldlWithIndex: foldlWithIndex, 
-    foldlWithIndexDefault: foldlWithIndexDefault, 
-    foldrWithIndex: foldrWithIndex, 
-    foldrWithIndexDefault: foldrWithIndexDefault, 
-    forWithIndex_: forWithIndex_, 
-    surroundMapWithIndex: surroundMapWithIndex, 
-    traverseWithIndex_: traverseWithIndex_, 
-    foldableWithIndexArray: foldableWithIndexArray, 
-    foldableWithIndexMaybe: foldableWithIndexMaybe, 
-    foldableWithIndexFirst: foldableWithIndexFirst, 
-    foldableWithIndexLast: foldableWithIndexLast, 
-    foldableWithIndexAdditive: foldableWithIndexAdditive, 
-    foldableWithIndexDual: foldableWithIndexDual, 
-    foldableWithIndexDisj: foldableWithIndexDisj, 
-    foldableWithIndexConj: foldableWithIndexConj, 
-    foldableWithIndexMultiplicative: foldableWithIndexMultiplicative
-};
-
-},{"../Control.Applicative":191,"../Control.Apply":193,"../Control.Bind":197,"../Control.Semigroupoid":227,"../Data.Foldable":270,"../Data.Function":276,"../Data.FunctorWithIndex":281,"../Data.Maybe":294,"../Data.Maybe.First":292,"../Data.Maybe.Last":293,"../Data.Monoid":301,"../Data.Monoid.Additive":295,"../Data.Monoid.Conj":296,"../Data.Monoid.Disj":297,"../Data.Monoid.Dual":298,"../Data.Monoid.Endo":299,"../Data.Monoid.Multiplicative":300,"../Data.Newtype":303,"../Data.Semigroup":317,"../Data.Unit":335,"../Prelude":345}],272:[function(require,module,exports){
+},{"../Control.Alt":192,"../Control.Applicative":194,"../Control.Apply":196,"../Control.Bind":200,"../Control.Category":201,"../Control.Plus":227,"../Control.Semigroupoid":228,"../Data.Eq":266,"../Data.Function":276,"../Data.Functor":279,"../Data.HeytingAlgebra":281,"../Data.Maybe":292,"../Data.Maybe.First":290,"../Data.Maybe.Last":291,"../Data.Monoid":299,"../Data.Monoid.Additive":293,"../Data.Monoid.Conj":294,"../Data.Monoid.Disj":295,"../Data.Monoid.Dual":296,"../Data.Monoid.Endo":297,"../Data.Monoid.Multiplicative":298,"../Data.Newtype":301,"../Data.Ord":308,"../Data.Ordering":309,"../Data.Semigroup":315,"../Data.Semiring":317,"../Data.Unit":332,"../Prelude":342,"./foreign":270}],272:[function(require,module,exports){
 "use strict";
 
 exports.toForeign = function (value) {
@@ -28480,7 +28880,7 @@ module.exports = {
     unsafeFromForeign: $foreign.unsafeFromForeign
 };
 
-},{"../Control.Applicative":191,"../Control.Monad.Error.Class":213,"../Control.Monad.Except":215,"../Control.Monad.Except.Trans":214,"../Control.Semigroupoid":227,"../Data.Boolean":256,"../Data.Either":263,"../Data.Eq":265,"../Data.Function":276,"../Data.HeytingAlgebra":283,"../Data.Identity":284,"../Data.Int":288,"../Data.List.NonEmpty":289,"../Data.Maybe":294,"../Data.Ord":310,"../Data.Ordering":311,"../Data.Semigroup":317,"../Data.Show":321,"../Data.String":325,"../Prelude":345,"./foreign":272}],274:[function(require,module,exports){
+},{"../Control.Applicative":194,"../Control.Monad.Error.Class":214,"../Control.Monad.Except":216,"../Control.Monad.Except.Trans":215,"../Control.Semigroupoid":228,"../Data.Boolean":257,"../Data.Either":264,"../Data.Eq":266,"../Data.Function":276,"../Data.HeytingAlgebra":281,"../Data.Identity":282,"../Data.Int":286,"../Data.List.NonEmpty":287,"../Data.Maybe":292,"../Data.Ord":308,"../Data.Ordering":309,"../Data.Semigroup":315,"../Data.Show":319,"../Data.String":323,"../Prelude":342,"./foreign":272}],274:[function(require,module,exports){
 "use strict";
 
 // module Data.Function.Uncurried
@@ -28738,7 +29138,7 @@ module.exports = {
     runFn9: $foreign.runFn9
 };
 
-},{"../Data.Unit":335,"./foreign":274}],276:[function(require,module,exports){
+},{"../Data.Unit":332,"./foreign":274}],276:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Category = require("../Control.Category");
@@ -28781,7 +29181,7 @@ module.exports = {
     on: on
 };
 
-},{"../Control.Category":198}],277:[function(require,module,exports){
+},{"../Control.Category":201}],277:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Data_Functor = require("../Data.Functor");
@@ -28880,101 +29280,7 @@ module.exports = {
     functorArray: functorArray
 };
 
-},{"../Control.Semigroupoid":227,"../Data.Function":276,"../Data.Unit":335,"./foreign":278}],280:[function(require,module,exports){
-"use strict";
-
-exports.mapWithIndexArray = function (f) {
-  return function (xs) {
-    var l = xs.length;
-    var result = Array(l);
-    for (var i = 0; i < l; i++) {
-      result[i] = f(i)(xs[i]);
-    }
-    return result;
-  };
-};
-
-},{}],281:[function(require,module,exports){
-// Generated by purs version 0.11.6
-"use strict";
-var $foreign = require("./foreign");
-var Data_Function = require("../Data.Function");
-var Data_Functor = require("../Data.Functor");
-var Data_Maybe = require("../Data.Maybe");
-var Data_Maybe_First = require("../Data.Maybe.First");
-var Data_Maybe_Last = require("../Data.Maybe.Last");
-var Data_Monoid_Additive = require("../Data.Monoid.Additive");
-var Data_Monoid_Conj = require("../Data.Monoid.Conj");
-var Data_Monoid_Disj = require("../Data.Monoid.Disj");
-var Data_Monoid_Dual = require("../Data.Monoid.Dual");
-var Data_Monoid_Multiplicative = require("../Data.Monoid.Multiplicative");
-var Data_Unit = require("../Data.Unit");
-var Prelude = require("../Prelude");
-var FunctorWithIndex = function (Functor0, mapWithIndex) {
-    this.Functor0 = Functor0;
-    this.mapWithIndex = mapWithIndex;
-};
-var mapWithIndex = function (dict) {
-    return dict.mapWithIndex;
-};
-var functorWithIndexMultiplicative = new FunctorWithIndex(function () {
-    return Data_Monoid_Multiplicative.functorMultiplicative;
-}, function (f) {
-    return Data_Functor.map(Data_Monoid_Multiplicative.functorMultiplicative)(f(Data_Unit.unit));
-});
-var functorWithIndexMaybe = new FunctorWithIndex(function () {
-    return Data_Maybe.functorMaybe;
-}, function (f) {
-    return Data_Functor.map(Data_Maybe.functorMaybe)(f(Data_Unit.unit));
-});
-var functorWithIndexLast = new FunctorWithIndex(function () {
-    return Data_Maybe_Last.functorLast;
-}, function (f) {
-    return Data_Functor.map(Data_Maybe_Last.functorLast)(f(Data_Unit.unit));
-});
-var functorWithIndexFirst = new FunctorWithIndex(function () {
-    return Data_Maybe_First.functorFirst;
-}, function (f) {
-    return Data_Functor.map(Data_Maybe_First.functorFirst)(f(Data_Unit.unit));
-});
-var functorWithIndexDual = new FunctorWithIndex(function () {
-    return Data_Monoid_Dual.functorDual;
-}, function (f) {
-    return Data_Functor.map(Data_Monoid_Dual.functorDual)(f(Data_Unit.unit));
-});
-var functorWithIndexDisj = new FunctorWithIndex(function () {
-    return Data_Monoid_Disj.functorDisj;
-}, function (f) {
-    return Data_Functor.map(Data_Monoid_Disj.functorDisj)(f(Data_Unit.unit));
-});
-var functorWithIndexConj = new FunctorWithIndex(function () {
-    return Data_Monoid_Conj.functorConj;
-}, function (f) {
-    return Data_Functor.map(Data_Monoid_Conj.functorConj)(f(Data_Unit.unit));
-});
-var functorWithIndexArray = new FunctorWithIndex(function () {
-    return Data_Functor.functorArray;
-}, $foreign.mapWithIndexArray);
-var functorWithIndexAdditive = new FunctorWithIndex(function () {
-    return Data_Monoid_Additive.functorAdditive;
-}, function (f) {
-    return Data_Functor.map(Data_Monoid_Additive.functorAdditive)(f(Data_Unit.unit));
-});
-module.exports = {
-    FunctorWithIndex: FunctorWithIndex, 
-    mapWithIndex: mapWithIndex, 
-    functorWithIndexArray: functorWithIndexArray, 
-    functorWithIndexMaybe: functorWithIndexMaybe, 
-    functorWithIndexFirst: functorWithIndexFirst, 
-    functorWithIndexLast: functorWithIndexLast, 
-    functorWithIndexAdditive: functorWithIndexAdditive, 
-    functorWithIndexDual: functorWithIndexDual, 
-    functorWithIndexConj: functorWithIndexConj, 
-    functorWithIndexDisj: functorWithIndexDisj, 
-    functorWithIndexMultiplicative: functorWithIndexMultiplicative
-};
-
-},{"../Data.Function":276,"../Data.Functor":279,"../Data.Maybe":294,"../Data.Maybe.First":292,"../Data.Maybe.Last":293,"../Data.Monoid.Additive":295,"../Data.Monoid.Conj":296,"../Data.Monoid.Disj":297,"../Data.Monoid.Dual":298,"../Data.Monoid.Multiplicative":300,"../Data.Unit":335,"../Prelude":345,"./foreign":280}],282:[function(require,module,exports){
+},{"../Control.Semigroupoid":228,"../Data.Function":276,"../Data.Unit":332,"./foreign":278}],280:[function(require,module,exports){
 "use strict";
 
 exports.boolConj = function (b1) {
@@ -28993,7 +29299,7 @@ exports.boolNot = function (b) {
   return !b;
 };
 
-},{}],283:[function(require,module,exports){
+},{}],281:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -29086,7 +29392,7 @@ module.exports = {
     heytingAlgebraFunction: heytingAlgebraFunction
 };
 
-},{"../Data.Unit":335,"./foreign":282}],284:[function(require,module,exports){
+},{"../Data.Unit":332,"./foreign":280}],282:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Alt = require("../Control.Alt");
@@ -29287,7 +29593,7 @@ module.exports = {
     traversableIdentity: traversableIdentity
 };
 
-},{"../Control.Alt":189,"../Control.Applicative":191,"../Control.Apply":193,"../Control.Bind":197,"../Control.Comonad":199,"../Control.Extend":201,"../Control.Lazy":202,"../Control.Monad":223,"../Data.BooleanAlgebra":257,"../Data.Bounded":259,"../Data.CommutativeRing":260,"../Data.Eq":265,"../Data.EuclideanRing":267,"../Data.Field":268,"../Data.Foldable":270,"../Data.Functor":279,"../Data.Functor.Invariant":277,"../Data.HeytingAlgebra":283,"../Data.Monoid":301,"../Data.Newtype":303,"../Data.Ord":310,"../Data.Ring":313,"../Data.Semigroup":317,"../Data.Semiring":319,"../Data.Show":321,"../Data.Traversable":329,"../Prelude":345}],285:[function(require,module,exports){
+},{"../Control.Alt":192,"../Control.Applicative":194,"../Control.Apply":196,"../Control.Bind":200,"../Control.Comonad":202,"../Control.Extend":204,"../Control.Lazy":205,"../Control.Monad":224,"../Data.BooleanAlgebra":258,"../Data.Bounded":260,"../Data.CommutativeRing":261,"../Data.Eq":266,"../Data.EuclideanRing":268,"../Data.Field":269,"../Data.Foldable":271,"../Data.Functor":279,"../Data.Functor.Invariant":277,"../Data.HeytingAlgebra":281,"../Data.Monoid":299,"../Data.Newtype":301,"../Data.Ord":308,"../Data.Ring":311,"../Data.Semigroup":315,"../Data.Semiring":317,"../Data.Show":319,"../Data.Traversable":327,"../Prelude":342}],283:[function(require,module,exports){
 "use strict";
 
 // module Data.Int.Bits
@@ -29339,7 +29645,7 @@ exports.complement = function (n) {
   return ~n;
 };
 
-},{}],286:[function(require,module,exports){
+},{}],284:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -29353,7 +29659,7 @@ module.exports = {
     zshr: $foreign.zshr
 };
 
-},{"./foreign":285}],287:[function(require,module,exports){
+},{"./foreign":283}],285:[function(require,module,exports){
 "use strict";
 
 // module Data.Int
@@ -29410,26 +29716,20 @@ exports.pow = function (x) {
   };
 };
 
-},{}],288:[function(require,module,exports){
+},{}],286:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
-var Control_Category = require("../Control.Category");
 var Control_Semigroupoid = require("../Control.Semigroupoid");
 var Data_Boolean = require("../Data.Boolean");
 var Data_Bounded = require("../Data.Bounded");
-var Data_CommutativeRing = require("../Data.CommutativeRing");
-var Data_DivisionRing = require("../Data.DivisionRing");
 var Data_Eq = require("../Data.Eq");
-var Data_EuclideanRing = require("../Data.EuclideanRing");
-var Data_Field = require("../Data.Field");
 var Data_HeytingAlgebra = require("../Data.HeytingAlgebra");
 var Data_Int_Bits = require("../Data.Int.Bits");
 var Data_Maybe = require("../Data.Maybe");
 var Data_Ord = require("../Data.Ord");
 var Data_Ordering = require("../Data.Ordering");
 var Data_Ring = require("../Data.Ring");
-var Data_Semiring = require("../Data.Semiring");
 var Data_Show = require("../Data.Show");
 var Global = require("../Global");
 var $$Math = require("../Math");
@@ -29458,7 +29758,7 @@ var showParity = new Data_Show.Show(function (v) {
     if (v instanceof Odd) {
         return "Odd";
     };
-    throw new Error("Failed pattern match at Data.Int line 110, column 1 - line 110, column 35: " + [ v.constructor.name ]);
+    throw new Error("Failed pattern match at Data.Int line 88, column 1 - line 88, column 35: " + [ v.constructor.name ]);
 });
 var radix = function (n) {
     if (n >= 2 && n <= 36) {
@@ -29467,7 +29767,7 @@ var radix = function (n) {
     if (Data_Boolean.otherwise) {
         return Data_Maybe.Nothing.value;
     };
-    throw new Error("Failed pattern match at Data.Int line 193, column 1 - line 193, column 28: " + [ n.constructor.name ]);
+    throw new Error("Failed pattern match at Data.Int line 148, column 1 - line 148, column 28: " + [ n.constructor.name ]);
 };
 var odd = function (x) {
     return (x & 1) !== 0;
@@ -29495,18 +29795,18 @@ var unsafeClamp = function (x) {
     };
     throw new Error("Failed pattern match at Data.Int line 64, column 1 - line 64, column 29: " + [ x.constructor.name ]);
 };
-var round = function ($23) {
-    return unsafeClamp($$Math.round($23));
+var round = function ($13) {
+    return unsafeClamp($$Math.round($13));
 };
-var floor = function ($24) {
-    return unsafeClamp($$Math.floor($24));
+var floor = function ($14) {
+    return unsafeClamp($$Math.floor($14));
 };
 var even = function (x) {
     return (x & 1) === 0;
 };
 var parity = function (n) {
-    var $14 = even(n);
-    if ($14) {
+    var $8 = even(n);
+    if ($8) {
         return Even.value;
     };
     return Odd.value;
@@ -29538,59 +29838,12 @@ var ordParity = new Data_Ord.Ord(function () {
         if (x instanceof Odd && y instanceof Odd) {
             return Data_Ordering.EQ.value;
         };
-        throw new Error("Failed pattern match at Data.Int line 108, column 8 - line 108, column 40: " + [ x.constructor.name, y.constructor.name ]);
+        throw new Error("Failed pattern match at Data.Int line 86, column 8 - line 86, column 40: " + [ x.constructor.name, y.constructor.name ]);
     };
 });
-var semiringParity = new Data_Semiring.Semiring(function (x) {
-    return function (y) {
-        var $19 = Data_Eq.eq(eqParity)(x)(y);
-        if ($19) {
-            return Even.value;
-        };
-        return Odd.value;
-    };
-}, function (v) {
-    return function (v1) {
-        if (v instanceof Odd && v1 instanceof Odd) {
-            return Odd.value;
-        };
-        return Even.value;
-    };
-}, Odd.value, Even.value);
-var ringParity = new Data_Ring.Ring(function () {
-    return semiringParity;
-}, Data_Semiring.add(semiringParity));
-var divisionRingParity = new Data_DivisionRing.DivisionRing(function () {
-    return ringParity;
-}, Control_Category.id(Control_Category.categoryFn));
 var decimal = 10;
-var commutativeRingParity = new Data_CommutativeRing.CommutativeRing(function () {
-    return ringParity;
-});
-var euclideanRingParity = new Data_EuclideanRing.EuclideanRing(function () {
-    return commutativeRingParity;
-}, function (v) {
-    if (v instanceof Even) {
-        return 0;
-    };
-    if (v instanceof Odd) {
-        return 1;
-    };
-    throw new Error("Failed pattern match at Data.Int line 130, column 1 - line 130, column 53: " + [ v.constructor.name ]);
-}, function (x) {
-    return function (v) {
-        return x;
-    };
-}, function (v) {
-    return function (v1) {
-        return Even.value;
-    };
-});
-var fieldParity = new Data_Field.Field(function () {
-    return euclideanRingParity;
-});
-var ceil = function ($25) {
-    return unsafeClamp($$Math.ceil($25));
+var ceil = function ($15) {
+    return unsafeClamp($$Math.ceil($15));
 };
 var boundedParity = new Data_Bounded.Bounded(function () {
     return ordParity;
@@ -29619,18 +29872,12 @@ module.exports = {
     ordParity: ordParity, 
     showParity: showParity, 
     boundedParity: boundedParity, 
-    semiringParity: semiringParity, 
-    ringParity: ringParity, 
-    commutativeRingParity: commutativeRingParity, 
-    euclideanRingParity: euclideanRingParity, 
-    divisionRingParity: divisionRingParity, 
-    fieldParity: fieldParity, 
     pow: $foreign.pow, 
     toNumber: $foreign.toNumber, 
     toStringAs: $foreign.toStringAs
 };
 
-},{"../Control.Category":198,"../Control.Semigroupoid":227,"../Data.Boolean":256,"../Data.Bounded":259,"../Data.CommutativeRing":260,"../Data.DivisionRing":262,"../Data.Eq":265,"../Data.EuclideanRing":267,"../Data.Field":268,"../Data.HeytingAlgebra":283,"../Data.Int.Bits":286,"../Data.Maybe":294,"../Data.Ord":310,"../Data.Ordering":311,"../Data.Ring":313,"../Data.Semiring":319,"../Data.Show":321,"../Global":338,"../Math":340,"../Prelude":345,"./foreign":287}],289:[function(require,module,exports){
+},{"../Control.Semigroupoid":228,"../Data.Boolean":257,"../Data.Bounded":260,"../Data.Eq":266,"../Data.HeytingAlgebra":281,"../Data.Int.Bits":284,"../Data.Maybe":292,"../Data.Ord":308,"../Data.Ordering":309,"../Data.Ring":311,"../Data.Show":319,"../Global":335,"../Math":337,"../Prelude":342,"./foreign":285}],287:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Bind = require("../Control.Bind");
@@ -30042,7 +30289,7 @@ module.exports = {
     zipWithA: zipWithA
 };
 
-},{"../Control.Bind":197,"../Control.Category":198,"../Control.Semigroupoid":227,"../Data.Boolean":256,"../Data.Eq":265,"../Data.Foldable":270,"../Data.Function":276,"../Data.Functor":279,"../Data.List":291,"../Data.List.Types":290,"../Data.Maybe":294,"../Data.NonEmpty":304,"../Data.Ord":310,"../Data.Ring":313,"../Data.Semigroup":317,"../Data.Semigroup.Foldable":314,"../Data.Semigroup.Traversable":315,"../Data.Semiring":319,"../Data.Traversable":329,"../Data.Tuple":331,"../Data.Unfoldable":333,"../Partial.Unsafe":342,"../Prelude":345}],290:[function(require,module,exports){
+},{"../Control.Bind":200,"../Control.Category":201,"../Control.Semigroupoid":228,"../Data.Boolean":257,"../Data.Eq":266,"../Data.Foldable":271,"../Data.Function":276,"../Data.Functor":279,"../Data.List":289,"../Data.List.Types":288,"../Data.Maybe":292,"../Data.NonEmpty":302,"../Data.Ord":308,"../Data.Ring":311,"../Data.Semigroup":315,"../Data.Semigroup.Foldable":312,"../Data.Semigroup.Traversable":313,"../Data.Semiring":317,"../Data.Traversable":327,"../Data.Tuple":328,"../Data.Unfoldable":330,"../Partial.Unsafe":339,"../Prelude":342}],288:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Alt = require("../Control.Alt");
@@ -30060,10 +30307,8 @@ var Control_Plus = require("../Control.Plus");
 var Control_Semigroupoid = require("../Control.Semigroupoid");
 var Data_Eq = require("../Data.Eq");
 var Data_Foldable = require("../Data.Foldable");
-var Data_FoldableWithIndex = require("../Data.FoldableWithIndex");
 var Data_Function = require("../Data.Function");
 var Data_Functor = require("../Data.Functor");
-var Data_FunctorWithIndex = require("../Data.FunctorWithIndex");
 var Data_HeytingAlgebra = require("../Data.HeytingAlgebra");
 var Data_Maybe = require("../Data.Maybe");
 var Data_Monoid = require("../Data.Monoid");
@@ -30071,14 +30316,11 @@ var Data_Newtype = require("../Data.Newtype");
 var Data_NonEmpty = require("../Data.NonEmpty");
 var Data_Ord = require("../Data.Ord");
 var Data_Ordering = require("../Data.Ordering");
-var Data_Ring = require("../Data.Ring");
 var Data_Semigroup = require("../Data.Semigroup");
 var Data_Semigroup_Foldable = require("../Data.Semigroup.Foldable");
 var Data_Semigroup_Traversable = require("../Data.Semigroup.Traversable");
-var Data_Semiring = require("../Data.Semiring");
 var Data_Show = require("../Data.Show");
 var Data_Traversable = require("../Data.Traversable");
-var Data_TraversableWithIndex = require("../Data.TraversableWithIndex");
 var Data_Tuple = require("../Data.Tuple");
 var Data_Unfoldable = require("../Data.Unfoldable");
 var Prelude = require("../Prelude");
@@ -30118,8 +30360,8 @@ var nelCons = function (a) {
 var foldableList = new Data_Foldable.Foldable(function (dictMonoid) {
     return function (f) {
         return Data_Foldable.foldl(foldableList)(function (acc) {
-            return function ($158) {
-                return Data_Semigroup.append(dictMonoid.Semigroup0())(acc)(f($158));
+            return function ($143) {
+                return Data_Semigroup.append(dictMonoid.Semigroup0())(acc)(f($143));
             };
         })(Data_Monoid.mempty(dictMonoid));
     };
@@ -30139,7 +30381,7 @@ var foldableList = new Data_Foldable.Foldable(function (dictMonoid) {
                     $copy_v = v.value1;
                     return;
                 };
-                throw new Error("Failed pattern match at Data.List.Types line 81, column 12 - line 83, column 30: " + [ v.constructor.name ]);
+                throw new Error("Failed pattern match at Data.List.Types line 78, column 12 - line 80, column 30: " + [ v.constructor.name ]);
             };
             while (!$tco_done) {
                 $tco_result = $tco_loop($tco_var_b, $copy_v);
@@ -30150,54 +30392,35 @@ var foldableList = new Data_Foldable.Foldable(function (dictMonoid) {
     return go;
 }, function (f) {
     return function (b) {
-        var rev = Data_Foldable.foldl(foldableList)(Data_Function.flip(Cons.create))(Nil.value);
-        return function ($159) {
-            return Data_Foldable.foldl(foldableList)(Data_Function.flip(f))(b)(rev($159));
+        var rev = function ($copy_acc) {
+            return function ($copy_v) {
+                var $tco_var_acc = $copy_acc;
+                var $tco_done = false;
+                var $tco_result;
+                function $tco_loop(acc, v) {
+                    if (v instanceof Nil) {
+                        $tco_done = true;
+                        return acc;
+                    };
+                    if (v instanceof Cons) {
+                        $tco_var_acc = new Cons(v.value0, acc);
+                        $copy_v = v.value1;
+                        return;
+                    };
+                    throw new Error("Failed pattern match at Data.List.Types line 73, column 15 - line 75, column 33: " + [ v.constructor.name ]);
+                };
+                while (!$tco_done) {
+                    $tco_result = $tco_loop($tco_var_acc, $copy_v);
+                };
+                return $tco_result;
+            };
+        };
+        return function ($144) {
+            return Data_Foldable.foldl(foldableList)(Data_Function.flip(f))(b)(rev(Nil.value)($144));
         };
     };
 });
 var foldableNonEmptyList = Data_NonEmpty.foldableNonEmpty(foldableList);
-var foldableWithIndexList = new Data_FoldableWithIndex.FoldableWithIndex(function () {
-    return foldableList;
-}, function (dictMonoid) {
-    return function (f) {
-        return Data_FoldableWithIndex.foldlWithIndex(foldableWithIndexList)(function (i) {
-            return function (acc) {
-                return function ($160) {
-                    return Data_Semigroup.append(dictMonoid.Semigroup0())(acc)(f(i)($160));
-                };
-            };
-        })(Data_Monoid.mempty(dictMonoid));
-    };
-}, function (f) {
-    return function (acc) {
-        return function ($161) {
-            return Data_Tuple.snd(Data_Foldable.foldl(foldableList)(function (v) {
-                return function (a) {
-                    return new Data_Tuple.Tuple(v.value0 + 1 | 0, f(v.value0)(v.value1)(a));
-                };
-            })(new Data_Tuple.Tuple(0, acc))($161));
-        };
-    };
-}, function (f) {
-    return function (b) {
-        return function (xs) {
-            var v = (function () {
-                var rev = Data_Foldable.foldl(foldableList)(function (v1) {
-                    return function (a) {
-                        return new Data_Tuple.Tuple(v1.value0 + 1 | 0, new Cons(a, v1.value1));
-                    };
-                });
-                return rev(new Data_Tuple.Tuple(0, Nil.value))(xs);
-            })();
-            return Data_Tuple.snd(Data_Foldable.foldl(foldableList)(function (v1) {
-                return function (a) {
-                    return new Data_Tuple.Tuple(v1.value0 - 1 | 0, f(v1.value0 - 1 | 0)(a)(v1.value1));
-                };
-            })(new Data_Tuple.Tuple(v.value0, b))(v.value1));
-        };
-    };
-});
 var functorList = new Data_Functor.Functor(function (f) {
     return Data_Foldable.foldr(foldableList)(function (x) {
         return function (acc) {
@@ -30206,17 +30429,6 @@ var functorList = new Data_Functor.Functor(function (f) {
     })(Nil.value);
 });
 var functorNonEmptyList = Data_NonEmpty.functorNonEmpty(functorList);
-var functorWithIndexList = new Data_FunctorWithIndex.FunctorWithIndex(function () {
-    return functorList;
-}, function (f) {
-    return Data_FoldableWithIndex.foldrWithIndex(foldableWithIndexList)(function (i) {
-        return function (x) {
-            return function (acc) {
-                return new Cons(f(i)(x), acc);
-            };
-        };
-    })(Nil.value);
-});
 var semigroupList = new Data_Semigroup.Semigroup(function (xs) {
     return function (ys) {
         return Data_Foldable.foldr(foldableList)(Cons.create)(ys)(xs);
@@ -30251,36 +30463,16 @@ var traversableList = new Data_Traversable.Traversable(function () {
     return Data_Traversable.traverse(traversableList)(dictApplicative)(Control_Category.id(Control_Category.categoryFn));
 }, function (dictApplicative) {
     return function (f) {
-        return function ($162) {
+        return function ($145) {
             return Data_Functor.map((dictApplicative.Apply0()).Functor0())(Data_Foldable.foldl(foldableList)(Data_Function.flip(Cons.create))(Nil.value))(Data_Foldable.foldl(foldableList)(function (acc) {
-                return function ($163) {
-                    return Control_Apply.lift2(dictApplicative.Apply0())(Data_Function.flip(Cons.create))(acc)(f($163));
+                return function ($146) {
+                    return Control_Apply.lift2(dictApplicative.Apply0())(Data_Function.flip(Cons.create))(acc)(f($146));
                 };
-            })(Control_Applicative.pure(dictApplicative)(Nil.value))($162));
+            })(Control_Applicative.pure(dictApplicative)(Nil.value))($145));
         };
     };
 });
 var traversableNonEmptyList = Data_NonEmpty.traversableNonEmpty(traversableList);
-var traversableWithIndexList = new Data_TraversableWithIndex.TraversableWithIndex(function () {
-    return foldableWithIndexList;
-}, function () {
-    return functorWithIndexList;
-}, function () {
-    return traversableList;
-}, function (dictApplicative) {
-    return function (f) {
-        var rev = Data_Foldable.foldl(foldableList)(Data_Function.flip(Cons.create))(Nil.value);
-        return function ($164) {
-            return Data_Functor.map((dictApplicative.Apply0()).Functor0())(rev)(Data_FoldableWithIndex.foldlWithIndex(foldableWithIndexList)(function (i) {
-                return function (acc) {
-                    return function ($165) {
-                        return Control_Apply.lift2(dictApplicative.Apply0())(Data_Function.flip(Cons.create))(acc)(f(i)($165));
-                    };
-                };
-            })(Control_Applicative.pure(dictApplicative)(Nil.value))($164));
-        };
-    };
-});
 var unfoldableList = new Data_Unfoldable.Unfoldable(function (f) {
     return function (b) {
         var go = function ($copy_source) {
@@ -30299,7 +30491,7 @@ var unfoldableList = new Data_Unfoldable.Unfoldable(function (f) {
                         $copy_memo = new Cons(v.value0.value0, memo);
                         return;
                     };
-                    throw new Error("Failed pattern match at Data.List.Types line 105, column 22 - line 107, column 52: " + [ v.constructor.name ]);
+                    throw new Error("Failed pattern match at Data.List.Types line 86, column 22 - line 88, column 52: " + [ v.constructor.name ]);
                 };
                 while (!$tco_done) {
                     $tco_result = $tco_loop($tco_var_source, $copy_memo);
@@ -30320,8 +30512,8 @@ var foldable1NonEmptyList = new Data_Semigroup_Foldable.Foldable1(function () {
     return function (f) {
         return function (v) {
             return Data_Foldable.foldl(foldableList)(function (acc) {
-                return function ($166) {
-                    return Data_Semigroup.append(dictSemigroup)(acc)(f($166));
+                return function ($147) {
+                    return Data_Semigroup.append(dictSemigroup)(acc)(f($147));
                 };
             })(f(v.value0))(v.value1);
         };
@@ -30367,7 +30559,7 @@ var extendList = new Control_Extend.Extend(function () {
                 acc: Nil.value
             })(v.value1)).val);
         };
-        throw new Error("Failed pattern match at Data.List.Types line 145, column 1 - line 145, column 35: " + [ f.constructor.name, v.constructor.name ]);
+        throw new Error("Failed pattern match at Data.List.Types line 119, column 1 - line 119, column 35: " + [ f.constructor.name, v.constructor.name ]);
     };
 });
 var eq1List = new Data_Eq.Eq1(function (dictEq) {
@@ -30448,7 +30640,7 @@ var ord1List = new Data_Ord.Ord1(function () {
                             $tco_done = true;
                             return v2;
                         };
-                        throw new Error("Failed pattern match at Data.List.Types line 55, column 5 - line 55, column 20: " + [ v.constructor.name, v1.constructor.name ]);
+                        throw new Error("Failed pattern match at Data.List.Types line 53, column 5 - line 53, column 20: " + [ v.constructor.name, v1.constructor.name ]);
                     };
                     while (!$tco_done) {
                         $tco_result = $tco_loop($tco_var_v, $copy_v1);
@@ -30483,7 +30675,7 @@ var applyList = new Control_Apply.Apply(function () {
         if (v instanceof Cons) {
             return Data_Semigroup.append(semigroupList)(Data_Functor.map(functorList)(v.value0)(v1))(Control_Apply.apply(applyList)(v.value1)(v1));
         };
-        throw new Error("Failed pattern match at Data.List.Types line 120, column 1 - line 120, column 33: " + [ v.constructor.name, v1.constructor.name ]);
+        throw new Error("Failed pattern match at Data.List.Types line 94, column 1 - line 94, column 33: " + [ v.constructor.name, v1.constructor.name ]);
     };
 });
 var applyNonEmptyList = new Control_Apply.Apply(function () {
@@ -30503,7 +30695,7 @@ var bindList = new Control_Bind.Bind(function () {
         if (v instanceof Cons) {
             return Data_Semigroup.append(semigroupList)(v1(v.value0))(Control_Bind.bind(bindList)(v.value1)(v1));
         };
-        throw new Error("Failed pattern match at Data.List.Types line 127, column 1 - line 127, column 31: " + [ v.constructor.name, v1.constructor.name ]);
+        throw new Error("Failed pattern match at Data.List.Types line 101, column 1 - line 101, column 31: " + [ v.constructor.name, v1.constructor.name ]);
     };
 });
 var bindNonEmptyList = new Control_Bind.Bind(function () {
@@ -30511,8 +30703,8 @@ var bindNonEmptyList = new Control_Bind.Bind(function () {
 }, function (v) {
     return function (f) {
         var v1 = f(v.value0);
-        return new Data_NonEmpty.NonEmpty(v1.value0, Data_Semigroup.append(semigroupList)(v1.value1)(Control_Bind.bind(bindList)(v.value1)(function ($167) {
-            return toList(f($167));
+        return new Data_NonEmpty.NonEmpty(v1.value0, Data_Semigroup.append(semigroupList)(v1.value1)(Control_Bind.bind(bindList)(v.value1)(function ($148) {
+            return toList(f($148));
         })));
     };
 });
@@ -30550,8 +30742,8 @@ var monadPlusList = new Control_MonadPlus.MonadPlus(function () {
 });
 var applicativeNonEmptyList = new Control_Applicative.Applicative(function () {
     return applyNonEmptyList;
-}, function ($168) {
-    return NonEmptyList(Data_NonEmpty.singleton(plusList)($168));
+}, function ($149) {
+    return NonEmptyList(Data_NonEmpty.singleton(plusList)($149));
 });
 var monadNonEmptyList = new Control_Monad.Monad(function () {
     return applicativeNonEmptyList;
@@ -30568,8 +30760,8 @@ var traversable1NonEmptyList = new Data_Semigroup_Traversable.Traversable1(funct
     return function (f) {
         return function (v) {
             return Data_Functor.mapFlipped(dictApply.Functor0())(Data_Foldable.foldl(foldableList)(function (acc) {
-                return function ($169) {
-                    return Control_Apply.lift2(dictApply)(Data_Function.flip(nelCons))(acc)(f($169));
+                return function ($150) {
+                    return Control_Apply.lift2(dictApply)(Data_Function.flip(nelCons))(acc)(f($150));
                 };
             })(Data_Functor.map(dictApply.Functor0())(Control_Applicative.pure(applicativeNonEmptyList))(f(v.value0)))(v.value1))(function (v1) {
                 return Data_Foldable.foldl(foldableList)(Data_Function.flip(nelCons))(Control_Applicative.pure(applicativeNonEmptyList)(v1.value0))(v1.value1);
@@ -30591,12 +30783,9 @@ module.exports = {
     semigroupList: semigroupList, 
     monoidList: monoidList, 
     functorList: functorList, 
-    functorWithIndexList: functorWithIndexList, 
     foldableList: foldableList, 
-    foldableWithIndexList: foldableWithIndexList, 
     unfoldableList: unfoldableList, 
     traversableList: traversableList, 
-    traversableWithIndexList: traversableWithIndexList, 
     applyList: applyList, 
     applicativeList: applicativeList, 
     bindList: bindList, 
@@ -30626,7 +30815,7 @@ module.exports = {
     traversable1NonEmptyList: traversable1NonEmptyList
 };
 
-},{"../Control.Alt":189,"../Control.Alternative":190,"../Control.Applicative":191,"../Control.Apply":193,"../Control.Bind":197,"../Control.Category":198,"../Control.Comonad":199,"../Control.Extend":201,"../Control.Monad":223,"../Control.MonadPlus":224,"../Control.MonadZero":225,"../Control.Plus":226,"../Control.Semigroupoid":227,"../Data.Eq":265,"../Data.Foldable":270,"../Data.FoldableWithIndex":271,"../Data.Function":276,"../Data.Functor":279,"../Data.FunctorWithIndex":281,"../Data.HeytingAlgebra":283,"../Data.Maybe":294,"../Data.Monoid":301,"../Data.Newtype":303,"../Data.NonEmpty":304,"../Data.Ord":310,"../Data.Ordering":311,"../Data.Ring":313,"../Data.Semigroup":317,"../Data.Semigroup.Foldable":314,"../Data.Semigroup.Traversable":315,"../Data.Semiring":319,"../Data.Show":321,"../Data.Traversable":329,"../Data.TraversableWithIndex":330,"../Data.Tuple":331,"../Data.Unfoldable":333,"../Prelude":345}],291:[function(require,module,exports){
+},{"../Control.Alt":192,"../Control.Alternative":193,"../Control.Applicative":194,"../Control.Apply":196,"../Control.Bind":200,"../Control.Category":201,"../Control.Comonad":202,"../Control.Extend":204,"../Control.Monad":224,"../Control.MonadPlus":225,"../Control.MonadZero":226,"../Control.Plus":227,"../Control.Semigroupoid":228,"../Data.Eq":266,"../Data.Foldable":271,"../Data.Function":276,"../Data.Functor":279,"../Data.HeytingAlgebra":281,"../Data.Maybe":292,"../Data.Monoid":299,"../Data.Newtype":301,"../Data.NonEmpty":302,"../Data.Ord":308,"../Data.Ordering":309,"../Data.Semigroup":315,"../Data.Semigroup.Foldable":312,"../Data.Semigroup.Traversable":313,"../Data.Show":319,"../Data.Traversable":327,"../Data.Tuple":328,"../Data.Unfoldable":330,"../Prelude":342}],289:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Alt = require("../Control.Alt");
@@ -30644,7 +30833,6 @@ var Data_Eq = require("../Data.Eq");
 var Data_Foldable = require("../Data.Foldable");
 var Data_Function = require("../Data.Function");
 var Data_Functor = require("../Data.Functor");
-var Data_FunctorWithIndex = require("../Data.FunctorWithIndex");
 var Data_HeytingAlgebra = require("../Data.HeytingAlgebra");
 var Data_List_Types = require("../Data.List.Types");
 var Data_Maybe = require("../Data.Maybe");
@@ -30694,7 +30882,7 @@ var uncons = function (v) {
             tail: v.value1
         });
     };
-    throw new Error("Failed pattern match at Data.List line 259, column 1 - line 259, column 66: " + [ v.constructor.name ]);
+    throw new Error("Failed pattern match at Data.List line 258, column 1 - line 258, column 66: " + [ v.constructor.name ]);
 };
 var toUnfoldable = function (dictUnfoldable) {
     return Data_Unfoldable.unfoldr(dictUnfoldable)(function (xs) {
@@ -30710,7 +30898,7 @@ var tail = function (v) {
     if (v instanceof Data_List_Types.Cons) {
         return new Data_Maybe.Just(v.value1);
     };
-    throw new Error("Failed pattern match at Data.List line 245, column 1 - line 245, column 43: " + [ v.constructor.name ]);
+    throw new Error("Failed pattern match at Data.List line 244, column 1 - line 244, column 43: " + [ v.constructor.name ]);
 };
 var stripPrefix = function (dictEq) {
     return function (v) {
@@ -30861,8 +31049,8 @@ var sortBy = function (cmp) {
             };
         };
     };
-    return function ($333) {
-        return mergeAll(sequences($333));
+    return function ($340) {
+        return mergeAll(sequences($340));
     };
 };
 var sort = function (dictOrd) {
@@ -30891,7 +31079,7 @@ var reverse = (function () {
                     $copy_v = v.value1;
                     return;
                 };
-                throw new Error("Failed pattern match at Data.List line 368, column 3 - line 368, column 19: " + [ acc.constructor.name, v.constructor.name ]);
+                throw new Error("Failed pattern match at Data.List line 367, column 3 - line 367, column 19: " + [ acc.constructor.name, v.constructor.name ]);
             };
             while (!$tco_done) {
                 $tco_result = $tco_loop($tco_var_acc, $copy_v);
@@ -30981,7 +31169,7 @@ var unsnoc = function (lst) {
                     $copy_acc = new Data_List_Types.Cons(v.value0, acc);
                     return;
                 };
-                throw new Error("Failed pattern match at Data.List line 270, column 3 - line 270, column 23: " + [ v.constructor.name, acc.constructor.name ]);
+                throw new Error("Failed pattern match at Data.List line 269, column 3 - line 269, column 23: " + [ v.constructor.name, acc.constructor.name ]);
             };
             while (!$tco_done) {
                 $tco_result = $tco_loop($tco_var_v, $copy_acc);
@@ -31071,7 +31259,7 @@ var range = function (start) {
                                     $copy_rest = new Data_List_Types.Cons(s, rest);
                                     return;
                                 };
-                                throw new Error("Failed pattern match at Data.List line 148, column 3 - line 149, column 65: " + [ s.constructor.name, e.constructor.name, step.constructor.name, rest.constructor.name ]);
+                                throw new Error("Failed pattern match at Data.List line 147, column 3 - line 148, column 65: " + [ s.constructor.name, e.constructor.name, step.constructor.name, rest.constructor.name ]);
                             };
                             while (!$tco_done) {
                                 $tco_result = $tco_loop($tco_var_s, $tco_var_e, $tco_var_step, $copy_rest);
@@ -31082,22 +31270,22 @@ var range = function (start) {
                 };
             };
             return go(end)(start)((function () {
-                var $219 = start > end;
-                if ($219) {
+                var $221 = start > end;
+                if ($221) {
                     return 1;
                 };
                 return -1 | 0;
             })())(Data_List_Types.Nil.value);
         };
-        throw new Error("Failed pattern match at Data.List line 144, column 1 - line 144, column 32: " + [ start.constructor.name, end.constructor.name ]);
+        throw new Error("Failed pattern match at Data.List line 143, column 1 - line 143, column 32: " + [ start.constructor.name, end.constructor.name ]);
     };
 };
 var partition = function (p) {
     return function (xs) {
         var select = function (x) {
             return function (v) {
-                var $222 = p(x);
-                if ($222) {
+                var $224 = p(x);
+                if ($224) {
                     return {
                         no: v.no, 
                         yes: new Data_List_Types.Cons(x, v.yes)
@@ -31124,7 +31312,38 @@ var $$null = function (v) {
 var newtypePattern = new Data_Newtype.Newtype(function (n) {
     return n;
 }, Pattern);
-var mapWithIndex = Data_FunctorWithIndex.mapWithIndex(Data_List_Types.functorWithIndexList);
+var mapWithIndex = function (f) {
+    return function (lst) {
+        var go = function ($copy_v) {
+            return function ($copy_v1) {
+                return function ($copy_acc) {
+                    var $tco_var_v = $copy_v;
+                    var $tco_var_v1 = $copy_v1;
+                    var $tco_done = false;
+                    var $tco_result;
+                    function $tco_loop(v, v1, acc) {
+                        if (v1 instanceof Data_List_Types.Nil) {
+                            $tco_done = true;
+                            return acc;
+                        };
+                        if (v1 instanceof Data_List_Types.Cons) {
+                            $tco_var_v = v + 1 | 0;
+                            $tco_var_v1 = v1.value1;
+                            $copy_acc = new Data_List_Types.Cons(f(v)(v1.value0), acc);
+                            return;
+                        };
+                        throw new Error("Failed pattern match at Data.List line 432, column 3 - line 432, column 21: " + [ v.constructor.name, v1.constructor.name, acc.constructor.name ]);
+                    };
+                    while (!$tco_done) {
+                        $tco_result = $tco_loop($tco_var_v, $tco_var_v1, $copy_acc);
+                    };
+                    return $tco_result;
+                };
+            };
+        };
+        return reverse(go(0)(lst)(Data_List_Types.Nil.value));
+    };
+};
 var mapMaybe = function (f) {
     var go = function ($copy_acc) {
         return function ($copy_v) {
@@ -31148,9 +31367,9 @@ var mapMaybe = function (f) {
                         $copy_v = v.value1;
                         return;
                     };
-                    throw new Error("Failed pattern match at Data.List line 419, column 5 - line 421, column 32: " + [ v1.constructor.name ]);
+                    throw new Error("Failed pattern match at Data.List line 418, column 5 - line 420, column 32: " + [ v1.constructor.name ]);
                 };
-                throw new Error("Failed pattern match at Data.List line 417, column 3 - line 417, column 27: " + [ acc.constructor.name, v.constructor.name ]);
+                throw new Error("Failed pattern match at Data.List line 416, column 3 - line 416, column 27: " + [ acc.constructor.name, v.constructor.name ]);
             };
             while (!$tco_done) {
                 $tco_result = $tco_loop($tco_var_acc, $copy_v);
@@ -31237,7 +31456,7 @@ var insertBy = function (v) {
                 };
                 return new Data_List_Types.Cons(x, v1);
             };
-            throw new Error("Failed pattern match at Data.List line 216, column 1 - line 216, column 68: " + [ v.constructor.name, x.constructor.name, v1.constructor.name ]);
+            throw new Error("Failed pattern match at Data.List line 215, column 1 - line 215, column 68: " + [ v.constructor.name, x.constructor.name, v1.constructor.name ]);
         };
     };
 };
@@ -31283,7 +31502,7 @@ var index = function ($copy_v) {
                 $copy_v1 = v1 - 1 | 0;
                 return;
             };
-            throw new Error("Failed pattern match at Data.List line 281, column 1 - line 281, column 44: " + [ v.constructor.name, v1.constructor.name ]);
+            throw new Error("Failed pattern match at Data.List line 280, column 1 - line 280, column 44: " + [ v.constructor.name, v1.constructor.name ]);
         };
         while (!$tco_done) {
             $tco_result = $tco_loop($tco_var_v, $copy_v1);
@@ -31298,7 +31517,7 @@ var head = function (v) {
     if (v instanceof Data_List_Types.Cons) {
         return new Data_Maybe.Just(v.value0);
     };
-    throw new Error("Failed pattern match at Data.List line 230, column 1 - line 230, column 22: " + [ v.constructor.name ]);
+    throw new Error("Failed pattern match at Data.List line 229, column 1 - line 229, column 22: " + [ v.constructor.name ]);
 };
 var transpose = function (v) {
     if (v instanceof Data_List_Types.Nil) {
@@ -31328,8 +31547,8 @@ var group = function (dictEq) {
     return groupBy(Data_Eq.eq(dictEq));
 };
 var group$prime = function (dictOrd) {
-    return function ($334) {
-        return group(dictOrd.Eq0())(sort(dictOrd)($334));
+    return function ($341) {
+        return group(dictOrd.Eq0())(sort(dictOrd)($341));
     };
 };
 var fromFoldable = function (dictFoldable) {
@@ -31374,7 +31593,7 @@ var findIndex = function (fn) {
                     $tco_done = true;
                     return Data_Maybe.Nothing.value;
                 };
-                throw new Error("Failed pattern match at Data.List line 301, column 3 - line 301, column 35: " + [ v.constructor.name, v1.constructor.name ]);
+                throw new Error("Failed pattern match at Data.List line 300, column 3 - line 300, column 35: " + [ v.constructor.name, v1.constructor.name ]);
             };
             while (!$tco_done) {
                 $tco_result = $tco_loop($tco_var_v, $copy_v1);
@@ -31409,7 +31628,7 @@ var filterM = function (dictMonad) {
                     });
                 });
             };
-            throw new Error("Failed pattern match at Data.List line 403, column 1 - line 403, column 75: " + [ v.constructor.name, v1.constructor.name ]);
+            throw new Error("Failed pattern match at Data.List line 402, column 1 - line 402, column 75: " + [ v.constructor.name, v1.constructor.name ]);
         };
     };
 };
@@ -31436,7 +31655,7 @@ var filter = function (p) {
                         return;
                     };
                 };
-                throw new Error("Failed pattern match at Data.List line 390, column 3 - line 390, column 27: " + [ acc.constructor.name, v.constructor.name ]);
+                throw new Error("Failed pattern match at Data.List line 389, column 3 - line 389, column 27: " + [ acc.constructor.name, v.constructor.name ]);
             };
             while (!$tco_done) {
                 $tco_result = $tco_loop($tco_var_acc, $copy_v);
@@ -31635,7 +31854,7 @@ var alterAt = function (v) {
                     if (v3 instanceof Data_Maybe.Just) {
                         return new Data_List_Types.Cons(v3.value0, v2.value1);
                     };
-                    throw new Error("Failed pattern match at Data.List line 352, column 3 - line 354, column 23: " + [ v3.constructor.name ]);
+                    throw new Error("Failed pattern match at Data.List line 351, column 3 - line 353, column 23: " + [ v3.constructor.name ]);
                 })());
             };
             if (v2 instanceof Data_List_Types.Cons) {
@@ -31649,8 +31868,8 @@ var alterAt = function (v) {
 };
 var modifyAt = function (n) {
     return function (f) {
-        return alterAt(n)(function ($335) {
-            return Data_Maybe.Just.create(f($335));
+        return alterAt(n)(function ($342) {
+            return Data_Maybe.Just.create(f($342));
         });
     };
 };
@@ -31729,7 +31948,7 @@ module.exports = {
     showPattern: showPattern
 };
 
-},{"../Control.Alt":189,"../Control.Alternative":190,"../Control.Applicative":191,"../Control.Apply":193,"../Control.Bind":197,"../Control.Category":198,"../Control.Lazy":202,"../Control.Monad.Rec.Class":217,"../Control.Semigroupoid":227,"../Data.Bifunctor":254,"../Data.Boolean":256,"../Data.Eq":265,"../Data.Foldable":270,"../Data.Function":276,"../Data.Functor":279,"../Data.FunctorWithIndex":281,"../Data.HeytingAlgebra":283,"../Data.List.Types":290,"../Data.Maybe":294,"../Data.Newtype":303,"../Data.NonEmpty":304,"../Data.Ord":310,"../Data.Ordering":311,"../Data.Ring":313,"../Data.Semigroup":317,"../Data.Semiring":319,"../Data.Show":321,"../Data.Traversable":329,"../Data.Tuple":331,"../Data.Unfoldable":333,"../Data.Unit":335,"../Prelude":345}],292:[function(require,module,exports){
+},{"../Control.Alt":192,"../Control.Alternative":193,"../Control.Applicative":194,"../Control.Apply":196,"../Control.Bind":200,"../Control.Category":201,"../Control.Lazy":205,"../Control.Monad.Rec.Class":218,"../Control.Semigroupoid":228,"../Data.Bifunctor":255,"../Data.Boolean":257,"../Data.Eq":266,"../Data.Foldable":271,"../Data.Function":276,"../Data.Functor":279,"../Data.HeytingAlgebra":281,"../Data.List.Types":288,"../Data.Maybe":292,"../Data.Newtype":301,"../Data.NonEmpty":302,"../Data.Ord":308,"../Data.Ordering":309,"../Data.Ring":311,"../Data.Semigroup":315,"../Data.Semiring":317,"../Data.Show":319,"../Data.Traversable":327,"../Data.Tuple":328,"../Data.Unfoldable":330,"../Data.Unit":332,"../Prelude":342}],290:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Applicative = require("../Control.Applicative");
@@ -31808,7 +32027,7 @@ module.exports = {
     monoidFirst: monoidFirst
 };
 
-},{"../Control.Applicative":191,"../Control.Apply":193,"../Control.Bind":197,"../Control.Extend":201,"../Control.Monad":223,"../Data.Bounded":259,"../Data.Eq":265,"../Data.Functor":279,"../Data.Functor.Invariant":277,"../Data.Maybe":294,"../Data.Monoid":301,"../Data.Newtype":303,"../Data.Ord":310,"../Data.Semigroup":317,"../Data.Show":321,"../Prelude":345}],293:[function(require,module,exports){
+},{"../Control.Applicative":194,"../Control.Apply":196,"../Control.Bind":200,"../Control.Extend":204,"../Control.Monad":224,"../Data.Bounded":260,"../Data.Eq":266,"../Data.Functor":279,"../Data.Functor.Invariant":277,"../Data.Maybe":292,"../Data.Monoid":299,"../Data.Newtype":301,"../Data.Ord":308,"../Data.Semigroup":315,"../Data.Show":319,"../Prelude":342}],291:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Applicative = require("../Control.Applicative");
@@ -31890,7 +32109,7 @@ module.exports = {
     monoidLast: monoidLast
 };
 
-},{"../Control.Applicative":191,"../Control.Apply":193,"../Control.Bind":197,"../Control.Extend":201,"../Control.Monad":223,"../Data.Bounded":259,"../Data.Eq":265,"../Data.Functor":279,"../Data.Functor.Invariant":277,"../Data.Maybe":294,"../Data.Monoid":301,"../Data.Newtype":303,"../Data.Ord":310,"../Data.Semigroup":317,"../Data.Show":321,"../Prelude":345}],294:[function(require,module,exports){
+},{"../Control.Applicative":194,"../Control.Apply":196,"../Control.Bind":200,"../Control.Extend":204,"../Control.Monad":224,"../Data.Bounded":260,"../Data.Eq":266,"../Data.Functor":279,"../Data.Functor.Invariant":277,"../Data.Maybe":292,"../Data.Monoid":299,"../Data.Newtype":301,"../Data.Ord":308,"../Data.Semigroup":315,"../Data.Show":319,"../Prelude":342}],292:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Alt = require("../Control.Alt");
@@ -32166,7 +32385,7 @@ module.exports = {
     showMaybe: showMaybe
 };
 
-},{"../Control.Alt":189,"../Control.Alternative":190,"../Control.Applicative":191,"../Control.Apply":193,"../Control.Bind":197,"../Control.Category":198,"../Control.Extend":201,"../Control.Monad":223,"../Control.MonadZero":225,"../Control.Plus":226,"../Data.Bounded":259,"../Data.Eq":265,"../Data.Function":276,"../Data.Functor":279,"../Data.Functor.Invariant":277,"../Data.Monoid":301,"../Data.Ord":310,"../Data.Ordering":311,"../Data.Semigroup":317,"../Data.Show":321,"../Data.Unit":335,"../Prelude":345}],295:[function(require,module,exports){
+},{"../Control.Alt":192,"../Control.Alternative":193,"../Control.Applicative":194,"../Control.Apply":196,"../Control.Bind":200,"../Control.Category":201,"../Control.Extend":204,"../Control.Monad":224,"../Control.MonadZero":226,"../Control.Plus":227,"../Data.Bounded":260,"../Data.Eq":266,"../Data.Function":276,"../Data.Functor":279,"../Data.Functor.Invariant":277,"../Data.Monoid":299,"../Data.Ord":308,"../Data.Ordering":309,"../Data.Semigroup":315,"../Data.Show":319,"../Data.Unit":332,"../Prelude":342}],293:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Applicative = require("../Control.Applicative");
@@ -32281,7 +32500,7 @@ module.exports = {
     monoidAdditive: monoidAdditive
 };
 
-},{"../Control.Applicative":191,"../Control.Apply":193,"../Control.Bind":197,"../Control.Comonad":199,"../Control.Extend":201,"../Control.Monad":223,"../Data.Bounded":259,"../Data.Eq":265,"../Data.Functor":279,"../Data.Functor.Invariant":277,"../Data.Monoid":301,"../Data.Newtype":303,"../Data.Ord":310,"../Data.Semigroup":317,"../Data.Semiring":319,"../Data.Show":321,"../Prelude":345}],296:[function(require,module,exports){
+},{"../Control.Applicative":194,"../Control.Apply":196,"../Control.Bind":200,"../Control.Comonad":202,"../Control.Extend":204,"../Control.Monad":224,"../Data.Bounded":260,"../Data.Eq":266,"../Data.Functor":279,"../Data.Functor.Invariant":277,"../Data.Monoid":299,"../Data.Newtype":301,"../Data.Ord":308,"../Data.Semigroup":315,"../Data.Semiring":317,"../Data.Show":319,"../Prelude":342}],294:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Applicative = require("../Control.Applicative");
@@ -32409,7 +32628,7 @@ module.exports = {
     semiringConj: semiringConj
 };
 
-},{"../Control.Applicative":191,"../Control.Apply":193,"../Control.Bind":197,"../Control.Comonad":199,"../Control.Extend":201,"../Control.Monad":223,"../Data.Bounded":259,"../Data.Eq":265,"../Data.Functor":279,"../Data.Functor.Invariant":277,"../Data.HeytingAlgebra":283,"../Data.Monoid":301,"../Data.Newtype":303,"../Data.Ord":310,"../Data.Semigroup":317,"../Data.Semiring":319,"../Data.Show":321,"../Prelude":345}],297:[function(require,module,exports){
+},{"../Control.Applicative":194,"../Control.Apply":196,"../Control.Bind":200,"../Control.Comonad":202,"../Control.Extend":204,"../Control.Monad":224,"../Data.Bounded":260,"../Data.Eq":266,"../Data.Functor":279,"../Data.Functor.Invariant":277,"../Data.HeytingAlgebra":281,"../Data.Monoid":299,"../Data.Newtype":301,"../Data.Ord":308,"../Data.Semigroup":315,"../Data.Semiring":317,"../Data.Show":319,"../Prelude":342}],295:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Applicative = require("../Control.Applicative");
@@ -32537,7 +32756,7 @@ module.exports = {
     semiringDisj: semiringDisj
 };
 
-},{"../Control.Applicative":191,"../Control.Apply":193,"../Control.Bind":197,"../Control.Comonad":199,"../Control.Extend":201,"../Control.Monad":223,"../Data.Bounded":259,"../Data.Eq":265,"../Data.Functor":279,"../Data.Functor.Invariant":277,"../Data.HeytingAlgebra":283,"../Data.Monoid":301,"../Data.Newtype":303,"../Data.Ord":310,"../Data.Semigroup":317,"../Data.Semiring":319,"../Data.Show":321,"../Prelude":345}],298:[function(require,module,exports){
+},{"../Control.Applicative":194,"../Control.Apply":196,"../Control.Bind":200,"../Control.Comonad":202,"../Control.Extend":204,"../Control.Monad":224,"../Data.Bounded":260,"../Data.Eq":266,"../Data.Functor":279,"../Data.Functor.Invariant":277,"../Data.HeytingAlgebra":281,"../Data.Monoid":299,"../Data.Newtype":301,"../Data.Ord":308,"../Data.Semigroup":315,"../Data.Semiring":317,"../Data.Show":319,"../Prelude":342}],296:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Applicative = require("../Control.Applicative");
@@ -32651,7 +32870,7 @@ module.exports = {
     monoidDual: monoidDual
 };
 
-},{"../Control.Applicative":191,"../Control.Apply":193,"../Control.Bind":197,"../Control.Comonad":199,"../Control.Extend":201,"../Control.Monad":223,"../Data.Bounded":259,"../Data.Eq":265,"../Data.Functor":279,"../Data.Functor.Invariant":277,"../Data.Monoid":301,"../Data.Newtype":303,"../Data.Ord":310,"../Data.Semigroup":317,"../Data.Show":321,"../Prelude":345}],299:[function(require,module,exports){
+},{"../Control.Applicative":194,"../Control.Apply":196,"../Control.Bind":200,"../Control.Comonad":202,"../Control.Extend":204,"../Control.Monad":224,"../Data.Bounded":260,"../Data.Eq":266,"../Data.Functor":279,"../Data.Functor.Invariant":277,"../Data.Monoid":299,"../Data.Newtype":301,"../Data.Ord":308,"../Data.Semigroup":315,"../Data.Show":319,"../Prelude":342}],297:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Category = require("../Control.Category");
@@ -32694,7 +32913,7 @@ module.exports = {
     monoidEndo: monoidEndo
 };
 
-},{"../Control.Category":198,"../Control.Semigroupoid":227,"../Data.Functor.Invariant":277,"../Data.Monoid":301,"../Data.Newtype":303,"../Data.Semigroup":317,"../Prelude":345}],300:[function(require,module,exports){
+},{"../Control.Category":201,"../Control.Semigroupoid":228,"../Data.Functor.Invariant":277,"../Data.Monoid":299,"../Data.Newtype":301,"../Data.Semigroup":315,"../Prelude":342}],298:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Applicative = require("../Control.Applicative");
@@ -32809,7 +33028,7 @@ module.exports = {
     monoidMultiplicative: monoidMultiplicative
 };
 
-},{"../Control.Applicative":191,"../Control.Apply":193,"../Control.Bind":197,"../Control.Comonad":199,"../Control.Extend":201,"../Control.Monad":223,"../Data.Bounded":259,"../Data.Eq":265,"../Data.Functor":279,"../Data.Functor.Invariant":277,"../Data.Monoid":301,"../Data.Newtype":303,"../Data.Ord":310,"../Data.Semigroup":317,"../Data.Semiring":319,"../Data.Show":321,"../Prelude":345}],301:[function(require,module,exports){
+},{"../Control.Applicative":194,"../Control.Apply":196,"../Control.Bind":200,"../Control.Comonad":202,"../Control.Extend":204,"../Control.Monad":224,"../Data.Bounded":260,"../Data.Eq":266,"../Data.Functor":279,"../Data.Functor.Invariant":277,"../Data.Monoid":299,"../Data.Newtype":301,"../Data.Ord":308,"../Data.Semigroup":315,"../Data.Semiring":317,"../Data.Show":319,"../Prelude":342}],299:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Data_Boolean = require("../Data.Boolean");
@@ -32892,12 +33111,12 @@ module.exports = {
     monoidArray: monoidArray
 };
 
-},{"../Data.Boolean":256,"../Data.Eq":265,"../Data.EuclideanRing":267,"../Data.Function":276,"../Data.Ord":310,"../Data.Ordering":311,"../Data.Semigroup":317,"../Data.Unit":335,"../Prelude":345}],302:[function(require,module,exports){
+},{"../Data.Boolean":257,"../Data.Eq":266,"../Data.EuclideanRing":268,"../Data.Function":276,"../Data.Ord":308,"../Data.Ordering":309,"../Data.Semigroup":315,"../Data.Unit":332,"../Prelude":342}],300:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 module.exports = {};
 
-},{}],303:[function(require,module,exports){
+},{}],301:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Semigroupoid = require("../Control.Semigroupoid");
@@ -33102,7 +33321,7 @@ module.exports = {
     wrap: wrap
 };
 
-},{"../Control.Semigroupoid":227,"../Data.Function":276,"../Data.Functor":279,"../Prelude":345}],304:[function(require,module,exports){
+},{"../Control.Semigroupoid":228,"../Data.Function":276,"../Data.Functor":279,"../Prelude":342}],302:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Alt = require("../Control.Alt");
@@ -33111,20 +33330,15 @@ var Control_Applicative = require("../Control.Applicative");
 var Control_Apply = require("../Control.Apply");
 var Control_Category = require("../Control.Category");
 var Control_Plus = require("../Control.Plus");
-var Control_Semigroupoid = require("../Control.Semigroupoid");
 var Data_Eq = require("../Data.Eq");
 var Data_Foldable = require("../Data.Foldable");
-var Data_FoldableWithIndex = require("../Data.FoldableWithIndex");
 var Data_Functor = require("../Data.Functor");
-var Data_FunctorWithIndex = require("../Data.FunctorWithIndex");
 var Data_HeytingAlgebra = require("../Data.HeytingAlgebra");
-var Data_Maybe = require("../Data.Maybe");
 var Data_Ord = require("../Data.Ord");
 var Data_Ordering = require("../Data.Ordering");
 var Data_Semigroup = require("../Data.Semigroup");
 var Data_Show = require("../Data.Show");
 var Data_Traversable = require("../Data.Traversable");
-var Data_TraversableWithIndex = require("../Data.TraversableWithIndex");
 var Prelude = require("../Prelude");
 var NonEmpty = (function () {
     function NonEmpty(value0, value1) {
@@ -33168,17 +33382,6 @@ var functorNonEmpty = function (dictFunctor) {
         };
     });
 };
-var functorWithIndex = function (dictFunctorWithIndex) {
-    return new Data_FunctorWithIndex.FunctorWithIndex(function () {
-        return functorNonEmpty(dictFunctorWithIndex.Functor0());
-    }, function (f) {
-        return function (v) {
-            return new NonEmpty(f(Data_Maybe.Nothing.value)(v.value0), Data_FunctorWithIndex.mapWithIndex(dictFunctorWithIndex)(function ($136) {
-                return f(Data_Maybe.Just.create($136));
-            })(v.value1));
-        };
-    });
-};
 var fromNonEmpty = function (f) {
     return function (v) {
         return f(v.value0)(v.value1);
@@ -33212,35 +33415,6 @@ var foldableNonEmpty = function (dictFoldable) {
         };
     });
 };
-var foldableWithIndexNonEmpty = function (dictFoldableWithIndex) {
-    return new Data_FoldableWithIndex.FoldableWithIndex(function () {
-        return foldableNonEmpty(dictFoldableWithIndex.Foldable0());
-    }, function (dictMonoid) {
-        return function (f) {
-            return function (v) {
-                return Data_Semigroup.append(dictMonoid.Semigroup0())(f(Data_Maybe.Nothing.value)(v.value0))(Data_FoldableWithIndex.foldMapWithIndex(dictFoldableWithIndex)(dictMonoid)(function ($137) {
-                    return f(Data_Maybe.Just.create($137));
-                })(v.value1));
-            };
-        };
-    }, function (f) {
-        return function (b) {
-            return function (v) {
-                return Data_FoldableWithIndex.foldlWithIndex(dictFoldableWithIndex)(function ($138) {
-                    return f(Data_Maybe.Just.create($138));
-                })(f(Data_Maybe.Nothing.value)(b)(v.value0))(v.value1);
-            };
-        };
-    }, function (f) {
-        return function (b) {
-            return function (v) {
-                return f(Data_Maybe.Nothing.value)(v.value0)(Data_FoldableWithIndex.foldrWithIndex(dictFoldableWithIndex)(function ($139) {
-                    return f(Data_Maybe.Just.create($139));
-                })(b)(v.value1));
-            };
-        };
-    });
-};
 var traversableNonEmpty = function (dictTraversable) {
     return new Data_Traversable.Traversable(function () {
         return foldableNonEmpty(dictTraversable.Foldable1());
@@ -33254,23 +33428,6 @@ var traversableNonEmpty = function (dictTraversable) {
         return function (f) {
             return function (v) {
                 return Control_Apply.apply(dictApplicative.Apply0())(Data_Functor.map((dictApplicative.Apply0()).Functor0())(NonEmpty.create)(f(v.value0)))(Data_Traversable.traverse(dictTraversable)(dictApplicative)(f)(v.value1));
-            };
-        };
-    });
-};
-var traversableWithIndexNonEmpty = function (dictTraversableWithIndex) {
-    return new Data_TraversableWithIndex.TraversableWithIndex(function () {
-        return foldableWithIndexNonEmpty(dictTraversableWithIndex.FoldableWithIndex1());
-    }, function () {
-        return functorWithIndex(dictTraversableWithIndex.FunctorWithIndex0());
-    }, function () {
-        return traversableNonEmpty(dictTraversableWithIndex.Traversable2());
-    }, function (dictApplicative) {
-        return function (f) {
-            return function (v) {
-                return Control_Apply.apply(dictApplicative.Apply0())(Data_Functor.map((dictApplicative.Apply0()).Functor0())(NonEmpty.create)(f(Data_Maybe.Nothing.value)(v.value0)))(Data_TraversableWithIndex.traverseWithIndex(dictTraversableWithIndex)(dictApplicative)(function ($140) {
-                    return f(Data_Maybe.Just.create($140));
-                })(v.value1));
             };
         };
     });
@@ -33345,14 +33502,11 @@ module.exports = {
     ordNonEmpty: ordNonEmpty, 
     ord1NonEmpty: ord1NonEmpty, 
     functorNonEmpty: functorNonEmpty, 
-    functorWithIndex: functorWithIndex, 
     foldableNonEmpty: foldableNonEmpty, 
-    foldableWithIndexNonEmpty: foldableWithIndexNonEmpty, 
-    traversableNonEmpty: traversableNonEmpty, 
-    traversableWithIndexNonEmpty: traversableWithIndexNonEmpty
+    traversableNonEmpty: traversableNonEmpty
 };
 
-},{"../Control.Alt":189,"../Control.Alternative":190,"../Control.Applicative":191,"../Control.Apply":193,"../Control.Category":198,"../Control.Plus":226,"../Control.Semigroupoid":227,"../Data.Eq":265,"../Data.Foldable":270,"../Data.FoldableWithIndex":271,"../Data.Functor":279,"../Data.FunctorWithIndex":281,"../Data.HeytingAlgebra":283,"../Data.Maybe":294,"../Data.Ord":310,"../Data.Ordering":311,"../Data.Semigroup":317,"../Data.Show":321,"../Data.Traversable":329,"../Data.TraversableWithIndex":330,"../Prelude":345}],305:[function(require,module,exports){
+},{"../Control.Alt":192,"../Control.Alternative":193,"../Control.Applicative":194,"../Control.Apply":196,"../Control.Category":201,"../Control.Plus":227,"../Data.Eq":266,"../Data.Foldable":271,"../Data.Functor":279,"../Data.HeytingAlgebra":281,"../Data.Ord":308,"../Data.Ordering":309,"../Data.Semigroup":315,"../Data.Show":319,"../Data.Traversable":327,"../Prelude":342}],303:[function(require,module,exports){
 "use strict";
 
 exports["null"] = null;
@@ -33365,7 +33519,7 @@ exports.notNull = function (x) {
   return x;
 };
 
-},{}],306:[function(require,module,exports){
+},{}],304:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -33412,7 +33566,7 @@ module.exports = {
     ord1Nullable: ord1Nullable
 };
 
-},{"../Control.Semigroupoid":227,"../Data.Eq":265,"../Data.Function":276,"../Data.Function.Uncurried":275,"../Data.Maybe":294,"../Data.Ord":310,"../Data.Show":321,"../Prelude":345,"./foreign":305}],307:[function(require,module,exports){
+},{"../Control.Semigroupoid":228,"../Data.Eq":266,"../Data.Function":276,"../Data.Function.Uncurried":275,"../Data.Maybe":292,"../Data.Ord":308,"../Data.Show":319,"../Prelude":342,"./foreign":303}],305:[function(require,module,exports){
 "use strict";
 
 exports.unsafeCompareImpl = function (lt) {
@@ -33427,7 +33581,7 @@ exports.unsafeCompareImpl = function (lt) {
   };
 };
 
-},{}],308:[function(require,module,exports){
+},{}],306:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -33437,7 +33591,7 @@ module.exports = {
     unsafeCompare: unsafeCompare
 };
 
-},{"../Data.Ordering":311,"./foreign":307}],309:[function(require,module,exports){
+},{"../Data.Ordering":309,"./foreign":305}],307:[function(require,module,exports){
 "use strict";
 
 exports.ordArrayImpl = function (f) {
@@ -33466,7 +33620,7 @@ exports.ordArrayImpl = function (f) {
   };
 };
 
-},{}],310:[function(require,module,exports){
+},{}],308:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -33737,7 +33891,7 @@ module.exports = {
     ord1Array: ord1Array
 };
 
-},{"../Data.Eq":265,"../Data.Function":276,"../Data.Ord.Unsafe":308,"../Data.Ordering":311,"../Data.Ring":313,"../Data.Semiring":319,"../Data.Unit":335,"../Data.Void":336,"./foreign":309}],311:[function(require,module,exports){
+},{"../Data.Eq":266,"../Data.Function":276,"../Data.Ord.Unsafe":306,"../Data.Ordering":309,"../Data.Ring":311,"../Data.Semiring":317,"../Data.Unit":332,"../Data.Void":333,"./foreign":307}],309:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Data_Eq = require("../Data.Eq");
@@ -33826,7 +33980,7 @@ module.exports = {
     showOrdering: showOrdering
 };
 
-},{"../Data.Eq":265,"../Data.Semigroup":317,"../Data.Show":321}],312:[function(require,module,exports){
+},{"../Data.Eq":266,"../Data.Semigroup":315,"../Data.Show":319}],310:[function(require,module,exports){
 "use strict";
 
 exports.intSub = function (x) {
@@ -33842,7 +33996,7 @@ exports.numSub = function (n1) {
   };
 };
 
-},{}],313:[function(require,module,exports){
+},{}],311:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -33894,7 +34048,7 @@ module.exports = {
     ringFn: ringFn
 };
 
-},{"../Data.Semiring":319,"../Data.Unit":335,"./foreign":312}],314:[function(require,module,exports){
+},{"../Data.Semiring":317,"../Data.Unit":332,"./foreign":310}],312:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Apply = require("../Control.Apply");
@@ -34004,7 +34158,7 @@ module.exports = {
     foldableMultiplicative: foldableMultiplicative
 };
 
-},{"../Control.Apply":193,"../Control.Category":198,"../Control.Semigroupoid":227,"../Data.Foldable":270,"../Data.Function":276,"../Data.Functor":279,"../Data.Monoid.Dual":298,"../Data.Monoid.Multiplicative":300,"../Data.Semigroup":317,"../Data.Unit":335,"../Prelude":345}],315:[function(require,module,exports){
+},{"../Control.Apply":196,"../Control.Category":201,"../Control.Semigroupoid":228,"../Data.Foldable":271,"../Data.Function":276,"../Data.Functor":279,"../Data.Monoid.Dual":296,"../Data.Monoid.Multiplicative":298,"../Data.Semigroup":315,"../Data.Unit":332,"../Prelude":342}],313:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Category = require("../Control.Category");
@@ -34046,7 +34200,7 @@ module.exports = {
     traverse1Default: traverse1Default
 };
 
-},{"../Control.Category":198,"../Data.Functor":279,"../Data.Semigroup.Foldable":314,"../Data.Traversable":329,"../Prelude":345}],316:[function(require,module,exports){
+},{"../Control.Category":201,"../Data.Functor":279,"../Data.Semigroup.Foldable":312,"../Data.Traversable":327,"../Prelude":342}],314:[function(require,module,exports){
 "use strict";
 
 exports.concatString = function (s1) {
@@ -34063,7 +34217,7 @@ exports.concatArray = function (xs) {
   };
 };
 
-},{}],317:[function(require,module,exports){
+},{}],315:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -34104,7 +34258,7 @@ module.exports = {
     semigroupArray: semigroupArray
 };
 
-},{"../Data.Unit":335,"../Data.Void":336,"./foreign":316}],318:[function(require,module,exports){
+},{"../Data.Unit":332,"../Data.Void":333,"./foreign":314}],316:[function(require,module,exports){
 "use strict";
 
 exports.intAdd = function (x) {
@@ -34133,7 +34287,7 @@ exports.numMul = function (n1) {
   };
 };
 
-},{}],319:[function(require,module,exports){
+},{}],317:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -34198,7 +34352,7 @@ module.exports = {
     semiringUnit: semiringUnit
 };
 
-},{"../Data.Unit":335,"./foreign":318}],320:[function(require,module,exports){
+},{"../Data.Unit":332,"./foreign":316}],318:[function(require,module,exports){
 "use strict";
 
 exports.showIntImpl = function (n) {
@@ -34261,7 +34415,7 @@ exports.showArrayImpl = function (f) {
   };
 };
 
-},{}],321:[function(require,module,exports){
+},{}],319:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -34298,7 +34452,7 @@ module.exports = {
     showArray: showArray
 };
 
-},{"./foreign":320}],322:[function(require,module,exports){
+},{"./foreign":318}],320:[function(require,module,exports){
 "use strict";
 
 exports.charCodeAt = function (i) {
@@ -34320,7 +34474,7 @@ exports.char = function (s) {
   throw new Error("Data.String.Unsafe.char: Expected string of length 1.");
 };
 
-},{}],323:[function(require,module,exports){
+},{}],321:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -34330,7 +34484,7 @@ module.exports = {
     charCodeAt: $foreign.charCodeAt
 };
 
-},{"./foreign":322}],324:[function(require,module,exports){
+},{"./foreign":320}],322:[function(require,module,exports){
 "use strict";
 
 exports._charAt = function (just) {
@@ -34512,7 +34666,7 @@ exports.joinWith = function (s) {
   };
 };
 
-},{}],325:[function(require,module,exports){
+},{}],323:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -34548,11 +34702,6 @@ var toChar = $foreign._toChar(Data_Maybe.Just.create)(Data_Maybe.Nothing.value);
 var takeWhile = function (p) {
     return function (s) {
         return $foreign.take($foreign.count(p)(s))(s);
-    };
-};
-var takeRight = function (i) {
-    return function (s) {
-        return $foreign.drop($foreign.length(s) - i | 0)(s);
     };
 };
 var splitAt = $foreign._splitAt(Data_Maybe.Just.create)(Data_Maybe.Nothing.value);
@@ -34623,11 +34772,6 @@ var dropWhile = function (p) {
         return $foreign.drop($foreign.count(p)(s))(s);
     };
 };
-var dropRight = function (i) {
-    return function (s) {
-        return $foreign.take($foreign.length(s) - i | 0)(s);
-    };
-};
 var contains = function (pat) {
     return function ($48) {
         return Data_Maybe.isJust(indexOf(pat)($48));
@@ -34641,7 +34785,6 @@ module.exports = {
     charAt: charAt, 
     charCodeAt: charCodeAt, 
     contains: contains, 
-    dropRight: dropRight, 
     dropWhile: dropWhile, 
     indexOf: indexOf, 
     "indexOf'": indexOf$prime, 
@@ -34652,7 +34795,6 @@ module.exports = {
     splitAt: splitAt, 
     stripPrefix: stripPrefix, 
     stripSuffix: stripSuffix, 
-    takeRight: takeRight, 
     takeWhile: takeWhile, 
     toChar: toChar, 
     uncons: uncons, 
@@ -34680,7 +34822,7 @@ module.exports = {
     trim: $foreign.trim
 };
 
-},{"../Control.Semigroupoid":227,"../Data.Eq":265,"../Data.Function":276,"../Data.Maybe":294,"../Data.Newtype":303,"../Data.Ord":310,"../Data.Ordering":311,"../Data.Ring":313,"../Data.Semigroup":317,"../Data.Semiring":319,"../Data.Show":321,"../Data.String.Unsafe":323,"../Prelude":345,"./foreign":324}],326:[function(require,module,exports){
+},{"../Control.Semigroupoid":228,"../Data.Eq":266,"../Data.Function":276,"../Data.Maybe":292,"../Data.Newtype":301,"../Data.Ord":308,"../Data.Ordering":309,"../Data.Ring":311,"../Data.Semigroup":315,"../Data.Semiring":317,"../Data.Show":319,"../Data.String.Unsafe":321,"../Prelude":342,"./foreign":322}],324:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Applicative = require("../Control.Applicative");
@@ -34783,9 +34925,9 @@ module.exports = {
     applicativeStateR: applicativeStateR
 };
 
-},{"../Control.Applicative":191,"../Control.Apply":193,"../Data.Functor":279,"../Data.Traversable.Accum":327,"../Prelude":345}],327:[function(require,module,exports){
-arguments[4][302][0].apply(exports,arguments)
-},{"dup":302}],328:[function(require,module,exports){
+},{"../Control.Applicative":194,"../Control.Apply":196,"../Data.Functor":279,"../Data.Traversable.Accum":325,"../Prelude":342}],325:[function(require,module,exports){
+arguments[4][300][0].apply(exports,arguments)
+},{"dup":300}],326:[function(require,module,exports){
 "use strict";
 
 // jshint maxparams: 3
@@ -34851,7 +34993,7 @@ exports.traverseArrayImpl = function () {
   };
 }();
 
-},{}],329:[function(require,module,exports){
+},{}],327:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -35129,235 +35271,7 @@ module.exports = {
     traversableMultiplicative: traversableMultiplicative
 };
 
-},{"../Control.Applicative":191,"../Control.Apply":193,"../Control.Category":198,"../Data.Foldable":270,"../Data.Functor":279,"../Data.Maybe":294,"../Data.Maybe.First":292,"../Data.Maybe.Last":293,"../Data.Monoid.Additive":295,"../Data.Monoid.Conj":296,"../Data.Monoid.Disj":297,"../Data.Monoid.Dual":298,"../Data.Monoid.Multiplicative":300,"../Data.Traversable.Accum":327,"../Data.Traversable.Accum.Internal":326,"../Prelude":345,"./foreign":328}],330:[function(require,module,exports){
-// Generated by purs version 0.11.6
-"use strict";
-var Control_Semigroupoid = require("../Control.Semigroupoid");
-var Data_FoldableWithIndex = require("../Data.FoldableWithIndex");
-var Data_Function = require("../Data.Function");
-var Data_FunctorWithIndex = require("../Data.FunctorWithIndex");
-var Data_Maybe = require("../Data.Maybe");
-var Data_Maybe_First = require("../Data.Maybe.First");
-var Data_Maybe_Last = require("../Data.Maybe.Last");
-var Data_Monoid_Additive = require("../Data.Monoid.Additive");
-var Data_Monoid_Conj = require("../Data.Monoid.Conj");
-var Data_Monoid_Disj = require("../Data.Monoid.Disj");
-var Data_Monoid_Dual = require("../Data.Monoid.Dual");
-var Data_Monoid_Multiplicative = require("../Data.Monoid.Multiplicative");
-var Data_Traversable = require("../Data.Traversable");
-var Data_Traversable_Accum = require("../Data.Traversable.Accum");
-var Data_Traversable_Accum_Internal = require("../Data.Traversable.Accum.Internal");
-var Data_Unit = require("../Data.Unit");
-var Prelude = require("../Prelude");
-var TraversableWithIndex = function (FoldableWithIndex1, FunctorWithIndex0, Traversable2, traverseWithIndex) {
-    this.FoldableWithIndex1 = FoldableWithIndex1;
-    this.FunctorWithIndex0 = FunctorWithIndex0;
-    this.Traversable2 = Traversable2;
-    this.traverseWithIndex = traverseWithIndex;
-};
-var traverseWithIndexDefault = function (dictTraversableWithIndex) {
-    return function (dictApplicative) {
-        return function (f) {
-            return function ($17) {
-                return Data_Traversable.sequence(dictTraversableWithIndex.Traversable2())(dictApplicative)(Data_FunctorWithIndex.mapWithIndex(dictTraversableWithIndex.FunctorWithIndex0())(f)($17));
-            };
-        };
-    };
-};
-var traverseWithIndex = function (dict) {
-    return dict.traverseWithIndex;
-};
-var traversableWithIndexMultiplicative = new TraversableWithIndex(function () {
-    return Data_FoldableWithIndex.foldableWithIndexMultiplicative;
-}, function () {
-    return Data_FunctorWithIndex.functorWithIndexMultiplicative;
-}, function () {
-    return Data_Traversable.traversableMultiplicative;
-}, function (dictApplicative) {
-    return function (f) {
-        return Data_Traversable.traverse(Data_Traversable.traversableMultiplicative)(dictApplicative)(f(Data_Unit.unit));
-    };
-});
-var traversableWithIndexMaybe = new TraversableWithIndex(function () {
-    return Data_FoldableWithIndex.foldableWithIndexMaybe;
-}, function () {
-    return Data_FunctorWithIndex.functorWithIndexMaybe;
-}, function () {
-    return Data_Traversable.traversableMaybe;
-}, function (dictApplicative) {
-    return function (f) {
-        return Data_Traversable.traverse(Data_Traversable.traversableMaybe)(dictApplicative)(f(Data_Unit.unit));
-    };
-});
-var traversableWithIndexLast = new TraversableWithIndex(function () {
-    return Data_FoldableWithIndex.foldableWithIndexLast;
-}, function () {
-    return Data_FunctorWithIndex.functorWithIndexLast;
-}, function () {
-    return Data_Traversable.traversableLast;
-}, function (dictApplicative) {
-    return function (f) {
-        return Data_Traversable.traverse(Data_Traversable.traversableLast)(dictApplicative)(f(Data_Unit.unit));
-    };
-});
-var traversableWithIndexFirst = new TraversableWithIndex(function () {
-    return Data_FoldableWithIndex.foldableWithIndexFirst;
-}, function () {
-    return Data_FunctorWithIndex.functorWithIndexFirst;
-}, function () {
-    return Data_Traversable.traversableFirst;
-}, function (dictApplicative) {
-    return function (f) {
-        return Data_Traversable.traverse(Data_Traversable.traversableFirst)(dictApplicative)(f(Data_Unit.unit));
-    };
-});
-var traversableWithIndexDual = new TraversableWithIndex(function () {
-    return Data_FoldableWithIndex.foldableWithIndexDual;
-}, function () {
-    return Data_FunctorWithIndex.functorWithIndexDual;
-}, function () {
-    return Data_Traversable.traversableDual;
-}, function (dictApplicative) {
-    return function (f) {
-        return Data_Traversable.traverse(Data_Traversable.traversableDual)(dictApplicative)(f(Data_Unit.unit));
-    };
-});
-var traversableWithIndexDisj = new TraversableWithIndex(function () {
-    return Data_FoldableWithIndex.foldableWithIndexDisj;
-}, function () {
-    return Data_FunctorWithIndex.functorWithIndexDisj;
-}, function () {
-    return Data_Traversable.traversableDisj;
-}, function (dictApplicative) {
-    return function (f) {
-        return Data_Traversable.traverse(Data_Traversable.traversableDisj)(dictApplicative)(f(Data_Unit.unit));
-    };
-});
-var traversableWithIndexConj = new TraversableWithIndex(function () {
-    return Data_FoldableWithIndex.foldableWithIndexConj;
-}, function () {
-    return Data_FunctorWithIndex.functorWithIndexConj;
-}, function () {
-    return Data_Traversable.traversableConj;
-}, function (dictApplicative) {
-    return function (f) {
-        return Data_Traversable.traverse(Data_Traversable.traversableConj)(dictApplicative)(f(Data_Unit.unit));
-    };
-});
-var traversableWithIndexArray = new TraversableWithIndex(function () {
-    return Data_FoldableWithIndex.foldableWithIndexArray;
-}, function () {
-    return Data_FunctorWithIndex.functorWithIndexArray;
-}, function () {
-    return Data_Traversable.traversableArray;
-}, function (dictApplicative) {
-    return traverseWithIndexDefault(traversableWithIndexArray)(dictApplicative);
-});
-var traversableWithIndexAdditive = new TraversableWithIndex(function () {
-    return Data_FoldableWithIndex.foldableWithIndexAdditive;
-}, function () {
-    return Data_FunctorWithIndex.functorWithIndexAdditive;
-}, function () {
-    return Data_Traversable.traversableAdditive;
-}, function (dictApplicative) {
-    return function (f) {
-        return Data_Traversable.traverse(Data_Traversable.traversableAdditive)(dictApplicative)(f(Data_Unit.unit));
-    };
-});
-var mapAccumRWithIndex = function (dictTraversableWithIndex) {
-    return function (f) {
-        return function (s0) {
-            return function (xs) {
-                return Data_Traversable_Accum_Internal.stateR(traverseWithIndex(dictTraversableWithIndex)(Data_Traversable_Accum_Internal.applicativeStateR)(function (i) {
-                    return function (a) {
-                        return function (s) {
-                            return f(i)(s)(a);
-                        };
-                    };
-                })(xs))(s0);
-            };
-        };
-    };
-};
-var scanrWithIndex = function (dictTraversableWithIndex) {
-    return function (f) {
-        return function (b0) {
-            return function (xs) {
-                return (mapAccumRWithIndex(dictTraversableWithIndex)(function (i) {
-                    return function (b) {
-                        return function (a) {
-                            var b$prime = f(i)(a)(b);
-                            return {
-                                accum: b$prime, 
-                                value: b$prime
-                            };
-                        };
-                    };
-                })(b0)(xs)).value;
-            };
-        };
-    };
-};
-var mapAccumLWithIndex = function (dictTraversableWithIndex) {
-    return function (f) {
-        return function (s0) {
-            return function (xs) {
-                return Data_Traversable_Accum_Internal.stateL(traverseWithIndex(dictTraversableWithIndex)(Data_Traversable_Accum_Internal.applicativeStateL)(function (i) {
-                    return function (a) {
-                        return function (s) {
-                            return f(i)(s)(a);
-                        };
-                    };
-                })(xs))(s0);
-            };
-        };
-    };
-};
-var scanlWithIndex = function (dictTraversableWithIndex) {
-    return function (f) {
-        return function (b0) {
-            return function (xs) {
-                return (mapAccumLWithIndex(dictTraversableWithIndex)(function (i) {
-                    return function (b) {
-                        return function (a) {
-                            var b$prime = f(i)(b)(a);
-                            return {
-                                accum: b$prime, 
-                                value: b$prime
-                            };
-                        };
-                    };
-                })(b0)(xs)).value;
-            };
-        };
-    };
-};
-var forWithIndex = function (dictApplicative) {
-    return function (dictTraversableWithIndex) {
-        return Data_Function.flip(traverseWithIndex(dictTraversableWithIndex)(dictApplicative));
-    };
-};
-module.exports = {
-    TraversableWithIndex: TraversableWithIndex, 
-    forWithIndex: forWithIndex, 
-    mapAccumLWithIndex: mapAccumLWithIndex, 
-    mapAccumRWithIndex: mapAccumRWithIndex, 
-    scanlWithIndex: scanlWithIndex, 
-    scanrWithIndex: scanrWithIndex, 
-    traverseWithIndex: traverseWithIndex, 
-    traverseWithIndexDefault: traverseWithIndexDefault, 
-    traversableWithIndexArray: traversableWithIndexArray, 
-    traversableWithIndexMaybe: traversableWithIndexMaybe, 
-    traversableWithIndexFirst: traversableWithIndexFirst, 
-    traversableWithIndexLast: traversableWithIndexLast, 
-    traversableWithIndexAdditive: traversableWithIndexAdditive, 
-    traversableWithIndexDual: traversableWithIndexDual, 
-    traversableWithIndexConj: traversableWithIndexConj, 
-    traversableWithIndexDisj: traversableWithIndexDisj, 
-    traversableWithIndexMultiplicative: traversableWithIndexMultiplicative
-};
-
-},{"../Control.Semigroupoid":227,"../Data.FoldableWithIndex":271,"../Data.Function":276,"../Data.FunctorWithIndex":281,"../Data.Maybe":294,"../Data.Maybe.First":292,"../Data.Maybe.Last":293,"../Data.Monoid.Additive":295,"../Data.Monoid.Conj":296,"../Data.Monoid.Disj":297,"../Data.Monoid.Dual":298,"../Data.Monoid.Multiplicative":300,"../Data.Traversable":329,"../Data.Traversable.Accum":327,"../Data.Traversable.Accum.Internal":326,"../Data.Unit":335,"../Prelude":345}],331:[function(require,module,exports){
+},{"../Control.Applicative":194,"../Control.Apply":196,"../Control.Category":201,"../Data.Foldable":271,"../Data.Functor":279,"../Data.Maybe":292,"../Data.Maybe.First":290,"../Data.Maybe.Last":291,"../Data.Monoid.Additive":293,"../Data.Monoid.Conj":294,"../Data.Monoid.Disj":295,"../Data.Monoid.Dual":296,"../Data.Monoid.Multiplicative":298,"../Data.Traversable.Accum":325,"../Data.Traversable.Accum.Internal":324,"../Prelude":342,"./foreign":326}],328:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Applicative = require("../Control.Applicative");
@@ -35779,7 +35693,7 @@ module.exports = {
     distributiveTuple: distributiveTuple
 };
 
-},{"../Control.Applicative":191,"../Control.Apply":193,"../Control.Biapplicative":194,"../Control.Biapply":195,"../Control.Bind":197,"../Control.Comonad":199,"../Control.Extend":201,"../Control.Lazy":202,"../Control.Monad":223,"../Control.Semigroupoid":227,"../Data.Bifoldable":248,"../Data.Bifunctor":254,"../Data.Bitraversable":255,"../Data.BooleanAlgebra":257,"../Data.Bounded":259,"../Data.CommutativeRing":260,"../Data.Distributive":261,"../Data.Eq":265,"../Data.Foldable":270,"../Data.Function":276,"../Data.Functor":279,"../Data.Functor.Invariant":277,"../Data.HeytingAlgebra":283,"../Data.Maybe":294,"../Data.Maybe.First":292,"../Data.Monoid":301,"../Data.Newtype":303,"../Data.Ord":310,"../Data.Ordering":311,"../Data.Ring":313,"../Data.Semigroup":317,"../Data.Semiring":319,"../Data.Show":321,"../Data.Traversable":329,"../Data.Unit":335,"../Prelude":345,"../Type.Equality":354}],332:[function(require,module,exports){
+},{"../Control.Applicative":194,"../Control.Apply":196,"../Control.Biapplicative":197,"../Control.Biapply":198,"../Control.Bind":200,"../Control.Comonad":202,"../Control.Extend":204,"../Control.Lazy":205,"../Control.Monad":224,"../Control.Semigroupoid":228,"../Data.Bifoldable":249,"../Data.Bifunctor":255,"../Data.Bitraversable":256,"../Data.BooleanAlgebra":258,"../Data.Bounded":260,"../Data.CommutativeRing":261,"../Data.Distributive":262,"../Data.Eq":266,"../Data.Foldable":271,"../Data.Function":276,"../Data.Functor":279,"../Data.Functor.Invariant":277,"../Data.HeytingAlgebra":281,"../Data.Maybe":292,"../Data.Maybe.First":290,"../Data.Monoid":299,"../Data.Newtype":301,"../Data.Ord":308,"../Data.Ordering":309,"../Data.Ring":311,"../Data.Semigroup":315,"../Data.Semiring":317,"../Data.Show":319,"../Data.Traversable":327,"../Data.Unit":332,"../Prelude":342,"../Type.Equality":353}],329:[function(require,module,exports){
 "use strict";
 
 exports.unfoldrArrayImpl = function (isNothing) {
@@ -35804,7 +35718,7 @@ exports.unfoldrArrayImpl = function (isNothing) {
   };
 };
 
-},{}],333:[function(require,module,exports){
+},{}],330:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -35813,7 +35727,6 @@ var Data_Functor = require("../Data.Functor");
 var Data_Maybe = require("../Data.Maybe");
 var Data_Ord = require("../Data.Ord");
 var Data_Ring = require("../Data.Ring");
-var Data_Semiring = require("../Data.Semiring");
 var Data_Traversable = require("../Data.Traversable");
 var Data_Tuple = require("../Data.Tuple");
 var Data_Unit = require("../Data.Unit");
@@ -35830,8 +35743,8 @@ var replicate = function (dictUnfoldable) {
     return function (n) {
         return function (v) {
             var step = function (i) {
-                var $9 = i <= 0;
-                if ($9) {
+                var $8 = i <= 0;
+                if ($8) {
                     return Data_Maybe.Nothing.value;
                 };
                 return new Data_Maybe.Just(new Data_Tuple.Tuple(v, i - 1 | 0));
@@ -35854,19 +35767,6 @@ var replicateA = function (dictApplicative) {
 var singleton = function (dictUnfoldable) {
     return replicate(dictUnfoldable)(1);
 };
-var range = function (dictUnfoldable) {
-    return function (start) {
-        return function (end) {
-            return unfoldr(dictUnfoldable)(function (i) {
-                var $10 = i <= end;
-                if ($10) {
-                    return new Data_Maybe.Just(Data_Tuple.Tuple.create(i)(i + 1 | 0));
-                };
-                return Data_Maybe.Nothing.value;
-            })(start);
-        };
-    };
-};
 var none = function (dictUnfoldable) {
     return unfoldr(dictUnfoldable)(Data_Function["const"](Data_Maybe.Nothing.value))(Data_Unit.unit);
 };
@@ -35879,7 +35779,6 @@ module.exports = {
     Unfoldable: Unfoldable, 
     fromMaybe: fromMaybe, 
     none: none, 
-    range: range, 
     replicate: replicate, 
     replicateA: replicateA, 
     singleton: singleton, 
@@ -35887,12 +35786,12 @@ module.exports = {
     unfoldableArray: unfoldableArray
 };
 
-},{"../Data.Function":276,"../Data.Functor":279,"../Data.Maybe":294,"../Data.Ord":310,"../Data.Ring":313,"../Data.Semiring":319,"../Data.Traversable":329,"../Data.Tuple":331,"../Data.Unit":335,"../Partial.Unsafe":342,"../Prelude":345,"./foreign":332}],334:[function(require,module,exports){
+},{"../Data.Function":276,"../Data.Functor":279,"../Data.Maybe":292,"../Data.Ord":308,"../Data.Ring":311,"../Data.Traversable":327,"../Data.Tuple":328,"../Data.Unit":332,"../Partial.Unsafe":339,"../Prelude":342,"./foreign":329}],331:[function(require,module,exports){
 "use strict";
 
 exports.unit = {};
 
-},{}],335:[function(require,module,exports){
+},{}],332:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -35905,7 +35804,7 @@ module.exports = {
     unit: $foreign.unit
 };
 
-},{"../Data.Show":321,"./foreign":334}],336:[function(require,module,exports){
+},{"../Data.Show":319,"./foreign":331}],333:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Data_Show = require("../Data.Show");
@@ -35932,7 +35831,7 @@ module.exports = {
     showVoid: showVoid
 };
 
-},{"../Data.Show":321}],337:[function(require,module,exports){
+},{"../Data.Show":319}],334:[function(require,module,exports){
 /* globals exports */
 "use strict";
 
@@ -35959,7 +35858,7 @@ exports.encodeURI = encodeURI;
 exports.decodeURIComponent = decodeURIComponent;
 exports.encodeURIComponent = encodeURIComponent;
 
-},{}],338:[function(require,module,exports){
+},{}],335:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -35976,7 +35875,7 @@ module.exports = {
     readInt: $foreign.readInt
 };
 
-},{"./foreign":337}],339:[function(require,module,exports){
+},{"./foreign":334}],336:[function(require,module,exports){
 "use strict";
 
 // module Math
@@ -36059,7 +35958,7 @@ exports.sqrt1_2 = Math.SQRT1_2;
 
 exports.sqrt2 = Math.SQRT2;
 
-},{}],340:[function(require,module,exports){
+},{}],337:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -36094,7 +35993,7 @@ module.exports = {
     trunc: $foreign.trunc
 };
 
-},{"./foreign":339}],341:[function(require,module,exports){
+},{"./foreign":336}],338:[function(require,module,exports){
 "use strict";
 
 // module Partial.Unsafe
@@ -36103,7 +36002,7 @@ exports.unsafePartial = function (f) {
   return f();
 };
 
-},{}],342:[function(require,module,exports){
+},{}],339:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -36126,7 +36025,7 @@ module.exports = {
     unsafePartial: $foreign.unsafePartial
 };
 
-},{"../Partial":344,"./foreign":341}],343:[function(require,module,exports){
+},{"../Partial":341,"./foreign":338}],340:[function(require,module,exports){
 "use strict";
 
 // module Partial
@@ -36137,7 +36036,7 @@ exports.crashWith = function () {
   };
 };
 
-},{}],344:[function(require,module,exports){
+},{}],341:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -36149,7 +36048,7 @@ module.exports = {
     crashWith: $foreign.crashWith
 };
 
-},{"./foreign":343}],345:[function(require,module,exports){
+},{"./foreign":340}],342:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Applicative = require("../Control.Applicative");
@@ -36180,7 +36079,7 @@ var Data_Unit = require("../Data.Unit");
 var Data_Void = require("../Data.Void");
 module.exports = {};
 
-},{"../Control.Applicative":191,"../Control.Apply":193,"../Control.Bind":197,"../Control.Category":198,"../Control.Monad":223,"../Control.Semigroupoid":227,"../Data.Boolean":256,"../Data.BooleanAlgebra":257,"../Data.Bounded":259,"../Data.CommutativeRing":260,"../Data.DivisionRing":262,"../Data.Eq":265,"../Data.EuclideanRing":267,"../Data.Field":268,"../Data.Function":276,"../Data.Functor":279,"../Data.HeytingAlgebra":283,"../Data.NaturalTransformation":302,"../Data.Ord":310,"../Data.Ordering":311,"../Data.Ring":313,"../Data.Semigroup":317,"../Data.Semiring":319,"../Data.Show":321,"../Data.Unit":335,"../Data.Void":336}],346:[function(require,module,exports){
+},{"../Control.Applicative":194,"../Control.Apply":196,"../Control.Bind":200,"../Control.Category":201,"../Control.Monad":224,"../Control.Semigroupoid":228,"../Data.Boolean":257,"../Data.BooleanAlgebra":258,"../Data.Bounded":260,"../Data.CommutativeRing":261,"../Data.DivisionRing":263,"../Data.Eq":266,"../Data.EuclideanRing":268,"../Data.Field":269,"../Data.Function":276,"../Data.Functor":279,"../Data.HeytingAlgebra":281,"../Data.NaturalTransformation":300,"../Data.Ord":308,"../Data.Ordering":309,"../Data.Ring":311,"../Data.Semigroup":315,"../Data.Semiring":317,"../Data.Show":319,"../Data.Unit":332,"../Data.Void":333}],343:[function(require,module,exports){
 /* global exports */
 "use strict";
 
@@ -36244,7 +36143,7 @@ function unsafeFromPropsArray(props) {
 };
 exports.unsafeFromPropsArray = unsafeFromPropsArray;
 
-},{"react":187}],347:[function(require,module,exports){
+},{"react":187}],344:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -36266,7 +36165,6 @@ var withRef = function (cb) {
 var width = $foreign.unsafeMkProps("width");
 var vocab = $foreign.unsafeMkProps("vocab");
 var viewBox = $foreign.unsafeMkProps("viewBox");
-var valueArray = $foreign.unsafeMkProps("value");
 var value = $foreign.unsafeMkProps("value");
 var useMap = $foreign.unsafeMkProps("useMap");
 var unselectable = $foreign.unsafeMkProps("unselectable");
@@ -36740,7 +36638,6 @@ module.exports = {
     unselectable: unselectable, 
     useMap: useMap, 
     value: value, 
-    valueArray: valueArray, 
     viewBox: viewBox, 
     vocab: vocab, 
     width: width, 
@@ -36755,7 +36652,7 @@ module.exports = {
     unsafeUnfoldProps: $foreign.unsafeUnfoldProps
 };
 
-},{"../Control.Monad.Eff":212,"../Control.Monad.Eff.Unsafe":210,"../Control.Semigroupoid":227,"../Data.Nullable":306,"../Prelude":345,"../React":350,"./foreign":346}],348:[function(require,module,exports){
+},{"../Control.Monad.Eff":213,"../Control.Monad.Eff.Unsafe":211,"../Control.Semigroupoid":228,"../Data.Nullable":304,"../Prelude":342,"../React":347,"./foreign":343}],345:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var React = require("../React");
@@ -36765,7 +36662,6 @@ var IsDynamic = function (x) {
     return x;
 };
 var text = Unsafe_Coerce.unsafeCoerce;
-var number = Unsafe_Coerce.unsafeCoerce;
 var mkDOM = function (dynamic) {
     return function (tag) {
         return function (props) {
@@ -36897,7 +36793,6 @@ var keygen = mkDOM(false)("keygen");
 var keygen$prime = keygen([  ]);
 var kbd = mkDOM(false)("kbd");
 var kbd$prime = kbd([  ]);
-var $$int = Unsafe_Coerce.unsafeCoerce;
 var ins = mkDOM(false)("ins");
 var ins$prime = ins([  ]);
 var input = mkDOM(false)("input");
@@ -37117,7 +37012,6 @@ module.exports = {
     "input'": input$prime, 
     ins: ins, 
     "ins'": ins$prime, 
-    "int": $$int, 
     kbd: kbd, 
     "kbd'": kbd$prime, 
     keygen: keygen, 
@@ -37149,7 +37043,6 @@ module.exports = {
     "nav'": nav$prime, 
     noscript: noscript, 
     "noscript'": noscript$prime, 
-    number: number, 
     object: object, 
     "object'": object$prime, 
     ol: ol, 
@@ -37239,7 +37132,7 @@ module.exports = {
     "wbr'": wbr$prime
 };
 
-},{"../React":350,"../React.DOM.Props":347,"../Unsafe.Coerce":356}],349:[function(require,module,exports){
+},{"../React":347,"../React.DOM.Props":344,"../Unsafe.Coerce":355}],346:[function(require,module,exports){
 /* global exports */
 "use strict";
 
@@ -37285,7 +37178,8 @@ exports.getChildren = getChildren;
 function readRefImpl (this_) {
   return function(name) {
     return function() {
-      return this_[name];
+      var refs = this_.refs || {};
+      return refs[name];
     }
   }
 }
@@ -37295,7 +37189,9 @@ function writeRef(this_) {
   return function(name) {
     return function(node) {
       return function() {
-        this_[name] = node;
+        var refs = this_.refs || {};
+        refs[name] = node;
+        this_.refs = refs;
         return {};
       }
     }
@@ -37347,9 +37243,7 @@ function transformState(this_){
 }
 exports.transformState = transformState;
 
-function createClass(toNullable, spec) {
-  var didCatch = toNullable(spec.componentDidCatch)
-
+function createClass(spec) {
   var result = {
     displayName: spec.displayName,
     render: function(){
@@ -37366,9 +37260,6 @@ function createClass(toNullable, spec) {
     componentDidMount: function(){
       return spec.componentDidMount(this)();
     },
-    componentDidCatch: didCatch
-      ? function(error, info) {return didCatch(this)(error)(info)(); }
-      : undefined,
     componentWillReceiveProps: function(nextProps){
       return spec.componentWillReceiveProps(this)(nextProps)();
     },
@@ -37388,22 +37279,7 @@ function createClass(toNullable, spec) {
 
   return createReactClass(result);
 }
-exports["createClass'"] = createClass;
-
-function capitalize(s) {
-  if (!s)
-    return s;
-  return s.charAt(0).toUpperCase() + s.slice(1);
-};
-
-function createClassStateless(dict) {
-  return function (f) {
-    if (!f.displayName)
-      f.displayName = capitalize(f.name);
-    return f;
-  };
-};
-exports.createClassStateless = createClassStateless;
+exports.createClass = createClass;
 
 function forceUpdateCbImpl(this_, cb) {
   this_.forceUpdate(function() {
@@ -37446,98 +37322,82 @@ function createFactory(class_) {
 exports.createFactory = createFactory;
 
 function preventDefault(event) {
-  return function() {
-    event.preventDefault();
-  };
+  return function() { return event.preventDefault();}
 };
 exports.preventDefault = preventDefault;
 
 function stopPropagation(event) {
-  return function() {
-    event.stopPropagation();
-  };
+  return function() { return event.stopPropagation();}
 };
 exports.stopPropagation = stopPropagation;
 
-},{"create-react-class":2,"react":187}],350:[function(require,module,exports){
+},{"create-react-class":2,"react":187}],347:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
 var Control_Applicative = require("../Control.Applicative");
 var Control_Monad_Eff = require("../Control.Monad.Eff");
-var Control_Monad_Eff_Exception = require("../Control.Monad.Eff.Exception");
 var Control_Monad_Eff_Uncurried = require("../Control.Monad.Eff.Uncurried");
-var Data_Function_Uncurried = require("../Data.Function.Uncurried");
 var Data_Functor = require("../Data.Functor");
 var Data_Maybe = require("../Data.Maybe");
 var Data_Nullable = require("../Data.Nullable");
 var Data_Unit = require("../Data.Unit");
 var Prelude = require("../Prelude");
 var Unsafe_Coerce = require("../Unsafe.Coerce");
-var ReactRender = {};
-var stringReactRender = ReactRender;
-var spec$prime = function (dictReactRender) {
-    return function (getInitialState) {
-        return function (renderFn) {
-            return {
-                render: renderFn, 
-                displayName: "", 
-                getInitialState: getInitialState, 
-                componentWillMount: function (v) {
+var spec$prime = function (getInitialState) {
+    return function (renderFn) {
+        return {
+            render: renderFn, 
+            displayName: "", 
+            getInitialState: getInitialState, 
+            componentWillMount: function (v) {
+                return Control_Applicative.pure(Control_Monad_Eff.applicativeEff)(Data_Unit.unit);
+            }, 
+            componentDidMount: function (v) {
+                return Control_Applicative.pure(Control_Monad_Eff.applicativeEff)(Data_Unit.unit);
+            }, 
+            componentWillReceiveProps: function (v) {
+                return function (v1) {
                     return Control_Applicative.pure(Control_Monad_Eff.applicativeEff)(Data_Unit.unit);
-                }, 
-                componentDidMount: function (v) {
-                    return Control_Applicative.pure(Control_Monad_Eff.applicativeEff)(Data_Unit.unit);
-                }, 
-                componentDidCatch: Data_Maybe.Nothing.value, 
-                componentWillReceiveProps: function (v) {
-                    return function (v1) {
+                };
+            }, 
+            shouldComponentUpdate: function (v) {
+                return function (v1) {
+                    return function (v2) {
+                        return Control_Applicative.pure(Control_Monad_Eff.applicativeEff)(true);
+                    };
+                };
+            }, 
+            componentWillUpdate: function (v) {
+                return function (v1) {
+                    return function (v2) {
                         return Control_Applicative.pure(Control_Monad_Eff.applicativeEff)(Data_Unit.unit);
                     };
-                }, 
-                shouldComponentUpdate: function (v) {
-                    return function (v1) {
-                        return function (v2) {
-                            return Control_Applicative.pure(Control_Monad_Eff.applicativeEff)(true);
-                        };
+                };
+            }, 
+            componentDidUpdate: function (v) {
+                return function (v1) {
+                    return function (v2) {
+                        return Control_Applicative.pure(Control_Monad_Eff.applicativeEff)(Data_Unit.unit);
                     };
-                }, 
-                componentWillUpdate: function (v) {
-                    return function (v1) {
-                        return function (v2) {
-                            return Control_Applicative.pure(Control_Monad_Eff.applicativeEff)(Data_Unit.unit);
-                        };
-                    };
-                }, 
-                componentDidUpdate: function (v) {
-                    return function (v1) {
-                        return function (v2) {
-                            return Control_Applicative.pure(Control_Monad_Eff.applicativeEff)(Data_Unit.unit);
-                        };
-                    };
-                }, 
-                componentWillUnmount: function (v) {
-                    return Control_Applicative.pure(Control_Monad_Eff.applicativeEff)(Data_Unit.unit);
-                }
-            };
+                };
+            }, 
+            componentWillUnmount: function (v) {
+                return Control_Applicative.pure(Control_Monad_Eff.applicativeEff)(Data_Unit.unit);
+            }
         };
     };
 };
-var spec = function (dictReactRender) {
-    return function (state) {
-        return spec$prime(dictReactRender)(function (v) {
-            return Control_Applicative.pure(Control_Monad_Eff.applicativeEff)(state);
-        });
-    };
+var spec = function (state) {
+    return spec$prime(function (v) {
+        return Control_Applicative.pure(Control_Monad_Eff.applicativeEff)(state);
+    });
 };
 var readRef = function ($$this) {
     return function (name) {
         return Data_Functor.map(Control_Monad_Eff.functorEff)(Data_Nullable.toMaybe)($foreign.readRefImpl($$this)(name));
     };
 };
-var reactElementReactRender = ReactRender;
-var numberReactRender = ReactRender;
-var intReactRender = ReactRender;
 var forceUpdateCb = function ($$this) {
     return function (m) {
         return Control_Monad_Eff_Uncurried.runEffFn2($foreign.forceUpdateCbImpl)($$this)(m);
@@ -37546,33 +37406,22 @@ var forceUpdateCb = function ($$this) {
 var forceUpdate = function ($$this) {
     return forceUpdateCb($$this)(Control_Applicative.pure(Control_Monad_Eff.applicativeEff)(Data_Unit.unit));
 };
-var createClassStateless$prime = function (dictReactRender) {
-    return function (k) {
-        return $foreign.createClassStateless(dictReactRender)(function (props) {
-            return k(props)($foreign.childrenToArray((Unsafe_Coerce.unsafeCoerce(props)).children));
-        });
-    };
+var createClassStateless = Unsafe_Coerce.unsafeCoerce;
+var createClassStateless$prime = function (k) {
+    return createClassStateless(function (props) {
+        return k(props)($foreign.childrenToArray((Unsafe_Coerce.unsafeCoerce(props)).children));
+    });
 };
-var createClass = function (spc) {
-    return $foreign["createClass'"](Data_Nullable.toNullable, spc);
-};
-var arrayReactRender = ReactRender;
 module.exports = {
-    ReactRender: ReactRender, 
-    createClass: createClass, 
+    createClassStateless: createClassStateless, 
     "createClassStateless'": createClassStateless$prime, 
     forceUpdate: forceUpdate, 
     forceUpdateCb: forceUpdateCb, 
     readRef: readRef, 
     spec: spec, 
     "spec'": spec$prime, 
-    arrayReactRender: arrayReactRender, 
-    reactElementReactRender: reactElementReactRender, 
-    stringReactRender: stringReactRender, 
-    intReactRender: intReactRender, 
-    numberReactRender: numberReactRender, 
     childrenToArray: $foreign.childrenToArray, 
-    createClassStateless: $foreign.createClassStateless, 
+    createClass: $foreign.createClass, 
     createElement: $foreign.createElement, 
     createElementDynamic: $foreign.createElementDynamic, 
     createElementTagName: $foreign.createElementTagName, 
@@ -37591,7 +37440,7 @@ module.exports = {
     writeStateWithCallback: $foreign.writeStateWithCallback
 };
 
-},{"../Control.Applicative":191,"../Control.Monad.Eff":212,"../Control.Monad.Eff.Exception":206,"../Control.Monad.Eff.Uncurried":208,"../Data.Function.Uncurried":275,"../Data.Functor":279,"../Data.Maybe":294,"../Data.Nullable":306,"../Data.Unit":335,"../Prelude":345,"../Unsafe.Coerce":356,"./foreign":349}],351:[function(require,module,exports){
+},{"../Control.Applicative":194,"../Control.Monad.Eff":213,"../Control.Monad.Eff.Uncurried":209,"../Data.Functor":279,"../Data.Maybe":292,"../Data.Nullable":304,"../Data.Unit":332,"../Prelude":342,"../Unsafe.Coerce":355,"./foreign":346}],348:[function(require,module,exports){
 /* global exports */
 "use strict";
 
@@ -37609,7 +37458,7 @@ exports.findDOMNodeImpl = ReactDOM.findDOMNode;
 exports.renderToStringImpl = ReactDOMServer.renderToString;
 exports.renderToStaticMarkupImpl = ReactDOMServer.renderToStaticMarkup;
 
-},{"react-dom":31,"react-dom/server":161}],352:[function(require,module,exports){
+},{"react-dom":31,"react-dom/server":161}],349:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -37639,68 +37488,64 @@ module.exports = {
     unmountComponentAtNode: unmountComponentAtNode
 };
 
-},{"../Control.Monad.Eff":212,"../Control.Monad.Eff.Uncurried":208,"../DOM":242,"../DOM.Node.Types":238,"../Data.Function.Uncurried":275,"../Data.Maybe":294,"../Data.Nullable":306,"../React":350,"../Unsafe.Coerce":356,"./foreign":351}],353:[function(require,module,exports){
+},{"../Control.Monad.Eff":213,"../Control.Monad.Eff.Uncurried":209,"../DOM":243,"../DOM.Node.Types":239,"../Data.Function.Uncurried":275,"../Data.Maybe":292,"../Data.Nullable":304,"../React":347,"../Unsafe.Coerce":355,"./foreign":348}],350:[function(require,module,exports){
 "use strict";
 var Concur_React = require("../Concur.React");
-var Control_Alt = require("../Control.Alt");
-var Control_Applicative = require("../Control.Applicative");
-var Control_Apply = require("../Control.Apply");
+var Concur_React_DOM = require("../Concur.React.DOM");
+var Concur_React_Widgets = require("../Concur.React.Widgets");
 var Control_Bind = require("../Control.Bind");
-var Control_Monad_Eff = require("../Control.Monad.Eff");
-var DOM = require("../DOM");
-var DOM_HTML = require("../DOM.HTML");
-var DOM_HTML_Types = require("../DOM.HTML.Types");
-var DOM_HTML_Window = require("../DOM.HTML.Window");
-var DOM_Node_NonElementParentNode = require("../DOM.Node.NonElementParentNode");
-var DOM_Node_Types = require("../DOM.Node.Types");
-var Data_Function = require("../Data.Function");
 var Data_Functor = require("../Data.Functor");
-var Data_Maybe = require("../Data.Maybe");
 var Data_Ring = require("../Data.Ring");
 var Data_Semigroup = require("../Data.Semigroup");
 var Data_Semiring = require("../Data.Semiring");
 var Data_Show = require("../Data.Show");
-var Data_Unit = require("../Data.Unit");
-var Partial_Unsafe = require("../Partial.Unsafe");
 var Prelude = require("../Prelude");
-var React_DOM = require("../React.DOM");
-var React_DOM_Props = require("../React.DOM.Props");
-var ReactDOM = require("../ReactDOM");
-var text = function (label) {
-    return Concur_React.renderFunc(function (v) {
-        return [ React_DOM.text(label) ];
+var counterWidget = function (count) {
+    return Control_Bind.bind(Concur_React.renderBind)(Concur_React_DOM["div'"]([ Concur_React_DOM["p'"]([ Concur_React_DOM.text("State: " + Data_Show.show(Data_Show.showInt)(count)) ]), Data_Functor.voidLeft(Concur_React.renderFunctor)(Concur_React_Widgets["textButton'"]("Increment"))(count + 1 | 0), Data_Functor.voidLeft(Concur_React.renderFunctor)(Concur_React_Widgets["textButton'"]("Decrement"))(count - 1 | 0) ]))(function (v) {
+        return counterWidget(v);
     });
 };
-var getRoot = function __do() {
-    var v = DOM_HTML.window();
-    var v1 = DOM_HTML_Window.document(v)();
-    var v2 = DOM_Node_NonElementParentNode.getElementById("app")(DOM_Node_Types.documentToNonElementParentNode(DOM_HTML_Types.htmlDocumentToDocument(v1)))();
-    return Data_Maybe.fromJust()(v2);
-};
-var click = function (label) {
-    return Concur_React.renderFunc(function (send) {
-        return [ React_DOM.button([ React_DOM_Props.onClick(function (v) {
-            return send(Control_Applicative.pure(Concur_React.renderApplicative)(Data_Unit.unit));
-        }) ])([ React_DOM.text(label) ]) ];
-    });
-};
-var counter = function (count) {
-    return Control_Bind.bind(Concur_React.renderBind)(Concur_React["el'"](React_DOM["div'"])([ Concur_React.el(React_DOM["p'"])(text("State: " + Data_Show.show(Data_Show.showInt)(count))), Control_Apply.applyFirst(Concur_React.renderApply)(Control_Applicative.pure(Concur_React.renderApplicative)(count + 1 | 0))(click("Increment")), Control_Apply.applyFirst(Concur_React.renderApply)(Control_Applicative.pure(Concur_React.renderApplicative)(count - 1 | 0))(click("Decrement")) ]))(function (v) {
-        return counter(v);
-    });
-};
-var exampleComponent = Control_Alt.alt(Concur_React.renderAlt)(counter(0))(counter(100));
-var main = Data_Functor["void"](Control_Monad_Eff.functorEff)(Control_Bind.bind(Control_Monad_Eff.bindEff)(getRoot)(ReactDOM.render(Concur_React.renderComponent(exampleComponent))));
 module.exports = {
-    click: click, 
-    counter: counter, 
-    exampleComponent: exampleComponent, 
-    getRoot: getRoot, 
-    main: main, 
-    text: text
+    counterWidget: counterWidget
 };
 
-},{"../Concur.React":188,"../Control.Alt":189,"../Control.Applicative":191,"../Control.Apply":193,"../Control.Bind":197,"../Control.Monad.Eff":212,"../DOM":242,"../DOM.HTML":235,"../DOM.HTML.Types":231,"../DOM.HTML.Window":233,"../DOM.Node.NonElementParentNode":237,"../DOM.Node.Types":238,"../Data.Function":276,"../Data.Functor":279,"../Data.Maybe":294,"../Data.Ring":313,"../Data.Semigroup":317,"../Data.Semiring":319,"../Data.Show":321,"../Data.Unit":335,"../Partial.Unsafe":342,"../Prelude":345,"../React.DOM":348,"../React.DOM.Props":347,"../ReactDOM":352}],354:[function(require,module,exports){
+},{"../Concur.React":191,"../Concur.React.DOM":188,"../Concur.React.Widgets":190,"../Control.Bind":200,"../Data.Functor":279,"../Data.Ring":311,"../Data.Semigroup":315,"../Data.Semiring":317,"../Data.Show":319,"../Prelude":342}],351:[function(require,module,exports){
+"use strict";
+var Concur_React = require("../Concur.React");
+var Concur_React_Widgets = require("../Concur.React.Widgets");
+var Control_Bind = require("../Control.Bind");
+var Prelude = require("../Prelude");
+var helloWidget = Control_Bind.discard(Control_Bind.discardUnit)(Concur_React.renderBind)(Concur_React_Widgets["textButton'"]("Click to Say Hello"))(function () {
+    return Control_Bind.discard(Control_Bind.discardUnit)(Concur_React.renderBind)(Concur_React_Widgets["textButton'"]("Hello Sailor!"))(function () {
+        return helloWidget;
+    });
+});
+module.exports = {
+    helloWidget: helloWidget
+};
+
+},{"../Concur.React":191,"../Concur.React.Widgets":190,"../Control.Bind":200,"../Prelude":342}],352:[function(require,module,exports){
+// Generated by purs version 0.11.6
+"use strict";
+var Concur_React = require("../Concur.React");
+var Concur_React_Run = require("../Concur.React.Run");
+var Control_Alt = require("../Control.Alt");
+var Control_Bind = require("../Control.Bind");
+var Control_Monad_Eff = require("../Control.Monad.Eff");
+var DOM = require("../DOM");
+var Data_Semigroup = require("../Data.Semigroup");
+var Prelude = require("../Prelude");
+var Test_Counter = require("../Test.Counter");
+var Test_Hello = require("../Test.Hello");
+var main = function __do() {
+    Concur_React_Run.runWidgetInDom("hello")(Test_Hello.helloWidget)();
+    return Concur_React_Run.runWidgetInDom("counter")(Control_Alt.alt(Concur_React.renderAlt(Data_Semigroup.semigroupArray))(Test_Counter.counterWidget(0))(Test_Counter.counterWidget(100)))();
+};
+module.exports = {
+    main: main
+};
+
+},{"../Concur.React":191,"../Concur.React.Run":189,"../Control.Alt":192,"../Control.Bind":200,"../Control.Monad.Eff":213,"../DOM":243,"../Data.Semigroup":315,"../Prelude":342,"../Test.Counter":350,"../Test.Hello":351}],353:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var TypeEquals = function (from, to) {
@@ -37725,7 +37570,7 @@ module.exports = {
     refl: refl
 };
 
-},{}],355:[function(require,module,exports){
+},{}],354:[function(require,module,exports){
 "use strict";
 
 // module Unsafe.Coerce
@@ -37734,7 +37579,7 @@ exports.unsafeCoerce = function (x) {
   return x;
 };
 
-},{}],356:[function(require,module,exports){
+},{}],355:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -37742,10 +37587,10 @@ module.exports = {
     unsafeCoerce: $foreign.unsafeCoerce
 };
 
-},{"./foreign":355}],357:[function(require,module,exports){
+},{"./foreign":354}],356:[function(require,module,exports){
 require('Test.Main').main();
 
-},{"Test.Main":353}],358:[function(require,module,exports){
+},{"Test.Main":352}],357:[function(require,module,exports){
 // shim for using process in browser
 var process = module.exports = {};
 
@@ -37931,4 +37776,4 @@ process.chdir = function (dir) {
 };
 process.umask = function() { return 0; };
 
-},{}]},{},[357]);
+},{}]},{},[356]);
