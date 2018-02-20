@@ -1,6 +1,6 @@
 # purescript-concur-react
 
-Concur implementation for Purescript. React Backend.
+[Concur UI Lib](https://github.com/ajnsit/concur) implementation for Purescript. React Backend.
 
 The API needs a little bit more work, but it does work.
 
