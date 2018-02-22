@@ -34,7 +34,7 @@ textButton :: forall eff. Array P.Props -> String -> Widget HTML eff Unit
 textButton props label = displayButton props (CD.text label)
 
 -- Like a textButton, but takes no props
-textButton' :: forall f eff. String -> Widget HTML eff Unit
+textButton' :: forall eff. String -> Widget HTML eff Unit
 textButton' = textButton []
 
 -- Wrap an element with an arbitrary eventHandler over a widget
