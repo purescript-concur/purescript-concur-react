@@ -23,7 +23,7 @@ type ReactEff state refs eff =
 type HTML = Array R.ReactElement
 
 type RenderFunc v eff a = (Widget v eff a -> EventHandler eff Unit) -> v
-data Widget v eff a = RenderEnd a | Widget (RenderFunc v eff a) | WidgetEff (Eff (ReactEff R.ReadOnly () eff) (Widget v eff a))
+data Widget v eff a = RenderEnd a | Widget (RenderFunc v eff a) | WidgetEff (EventHandler eff (Widget v eff a))
 
 instance renderFunctor :: Functor (Widget v eff) where
   map f (RenderEnd a) = RenderEnd (f a)
@@ -86,7 +86,7 @@ el' n = el n <<< orr
 display :: forall a v eff. v -> Widget v eff a
 display = Widget <<< const
 
-liftRenderEff :: forall v eff a. RenderHandler eff a -> Widget v eff a
+liftRenderEff :: forall v eff a. EventHandler eff a -> Widget v eff a
 liftRenderEff eff = WidgetEff (pure <$> eff)
 
 instance renderMonadEff :: MonadEff eff (Widget v eff) where
@@ -112,11 +112,15 @@ componentClass init = R.createClass (R.spec init render)
     renderComponentInner :: This props HTML eff a -> Widget HTML eff a -> RenderHandler eff HTML
     renderComponentInner this (RenderEnd a) = pure []
     renderComponentInner this (Widget r) = do
-      let handler r' = void (R.writeState this r')
+      let
+        handler w = case w of
+          -- TODO: POTENTIALLY INFINITE RECURSION WILL BLOW THE STACK.
+          -- Something like this will trigger it - `forever (liftEff someAction)`
+          (WidgetEff s) -> s >>= handler
+          w' -> void (R.writeState this w')
       pure (r handler)
-    renderComponentInner this (WidgetEff eff) = do
-      w' <- eff
-      renderComponentInner this w'
+    -- TODO: AN EFFECTFUL WIDGET SHOULD NEVER BE PASSED TO RENDER. BREAK OUT WidgetNoEff.
+    renderComponentInner this (WidgetEff eff) = pure []
 
 renderComponent :: forall a eff. Widget HTML eff a -> R.ReactElement
 renderComponent init = R.createFactory (componentClass init) {}
