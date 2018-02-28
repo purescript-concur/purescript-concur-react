@@ -45,8 +45,15 @@ instance renderApply :: Apply (Widget v eff) where
 
 instance renderMonad :: Monad (Widget v eff)
 
--- TODO: Make Widget TailRecursive
--- instance renderMonadRec :: MonadRec (Widget v eff) where
+-- NOTE: Widgets are already tail recursion safe, thanks to setState effectively being an effectful trampoline.
+-- However, we still need a MonadRec instance to allow monad transformers like StateT on top.
+-- See this discussion on github - https://github.com/ajnsit/purescript-concur/issues/1
+instance renderMonadRec :: MonadRec (Widget v eff) where
+  tailRecM :: forall v eff a b. (a -> Widget v eff (Step a b)) -> a -> Widget v eff b
+  tailRecM f a = go =<< f a
+    where
+      go (Loop a') = tailRecM f a'
+      go (Done b) = pure b
 
 instance renderAlt :: Semigroup v => Alt (Widget v eff) where
   alt (RenderEnd a) _ = RenderEnd a
