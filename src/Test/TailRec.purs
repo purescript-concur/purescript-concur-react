@@ -14,9 +14,10 @@ tailRecDemo :: forall a eff. Widget HTML eff a
 tailRecDemo = do
   div'[ p' [text ("Clicking this button will perform " <> show maxIterations <> " iterations via tail recursion ")]
       , p' [text "Once done, you can restart the iterations as many times you want."]
-      , textButton' "Start Tail Recursion Demo"
+      , do
+          textButton' "Start Tail Recursion Demo"
+          tailRecWidget 0 2
       ]
-  tailRecWidget 0 2
 
 tailRecWidget :: forall a eff. Int -> Int -> Widget HTML eff a
 tailRecWidget count times = do

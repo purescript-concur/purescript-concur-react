@@ -928,7 +928,7 @@ function factory(ReactComponent, isValidElement, ReactNoopUpdateQueue) {
 module.exports = factory;
 
 }).call(this,require('_process'))
-},{"_process":357,"fbjs/lib/emptyObject":11,"fbjs/lib/invariant":18,"fbjs/lib/warning":25,"object-assign":26}],2:[function(require,module,exports){
+},{"_process":360,"fbjs/lib/emptyObject":11,"fbjs/lib/invariant":18,"fbjs/lib/warning":25,"object-assign":26}],2:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -1035,7 +1035,7 @@ var EventListener = {
 
 module.exports = EventListener;
 }).call(this,require('_process'))
-},{"./emptyFunction":10,"_process":357}],4:[function(require,module,exports){
+},{"./emptyFunction":10,"_process":360}],4:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -1302,7 +1302,7 @@ function createArrayFromMixed(obj) {
 
 module.exports = createArrayFromMixed;
 }).call(this,require('_process'))
-},{"./invariant":18,"_process":357}],9:[function(require,module,exports){
+},{"./invariant":18,"_process":360}],9:[function(require,module,exports){
 (function (process){
 'use strict';
 
@@ -1386,7 +1386,7 @@ function createNodesFromMarkup(markup, handleScript) {
 
 module.exports = createNodesFromMarkup;
 }).call(this,require('_process'))
-},{"./ExecutionEnvironment":4,"./createArrayFromMixed":8,"./getMarkupWrap":14,"./invariant":18,"_process":357}],10:[function(require,module,exports){
+},{"./ExecutionEnvironment":4,"./createArrayFromMixed":8,"./getMarkupWrap":14,"./invariant":18,"_process":360}],10:[function(require,module,exports){
 "use strict";
 
 /**
@@ -1443,7 +1443,7 @@ if (process.env.NODE_ENV !== 'production') {
 
 module.exports = emptyObject;
 }).call(this,require('_process'))
-},{"_process":357}],12:[function(require,module,exports){
+},{"_process":360}],12:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -1600,7 +1600,7 @@ function getMarkupWrap(nodeName) {
 
 module.exports = getMarkupWrap;
 }).call(this,require('_process'))
-},{"./ExecutionEnvironment":4,"./invariant":18,"_process":357}],15:[function(require,module,exports){
+},{"./ExecutionEnvironment":4,"./invariant":18,"_process":360}],15:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -1761,7 +1761,7 @@ function invariant(condition, format, a, b, c, d, e, f) {
 
 module.exports = invariant;
 }).call(this,require('_process'))
-},{"_process":357}],19:[function(require,module,exports){
+},{"_process":360}],19:[function(require,module,exports){
 'use strict';
 
 /**
@@ -2019,7 +2019,7 @@ if (process.env.NODE_ENV !== 'production') {
 
 module.exports = warning;
 }).call(this,require('_process'))
-},{"./emptyFunction":10,"_process":357}],26:[function(require,module,exports){
+},{"./emptyFunction":10,"_process":360}],26:[function(require,module,exports){
 /*
 object-assign
 (c) Sindre Sorhus
@@ -2174,7 +2174,7 @@ function checkPropTypes(typeSpecs, values, location, componentName, getStack) {
 module.exports = checkPropTypes;
 
 }).call(this,require('_process'))
-},{"./lib/ReactPropTypesSecret":30,"_process":357,"fbjs/lib/invariant":18,"fbjs/lib/warning":25}],28:[function(require,module,exports){
+},{"./lib/ReactPropTypesSecret":30,"_process":360,"fbjs/lib/invariant":18,"fbjs/lib/warning":25}],28:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -2741,7 +2741,7 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
 };
 
 }).call(this,require('_process'))
-},{"./checkPropTypes":27,"./lib/ReactPropTypesSecret":30,"_process":357,"fbjs/lib/emptyFunction":10,"fbjs/lib/invariant":18,"fbjs/lib/warning":25,"object-assign":26}],30:[function(require,module,exports){
+},{"./checkPropTypes":27,"./lib/ReactPropTypesSecret":30,"_process":360,"fbjs/lib/emptyFunction":10,"fbjs/lib/invariant":18,"fbjs/lib/warning":25,"object-assign":26}],30:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -3604,7 +3604,7 @@ var CSSPropertyOperations = {
 
 module.exports = CSSPropertyOperations;
 }).call(this,require('_process'))
-},{"./CSSProperty":35,"./ReactInstrumentation":94,"./dangerousStyleValue":135,"_process":357,"fbjs/lib/ExecutionEnvironment":4,"fbjs/lib/camelizeStyleName":6,"fbjs/lib/hyphenateStyleName":17,"fbjs/lib/memoizeStringOnly":21,"fbjs/lib/warning":25}],37:[function(require,module,exports){
+},{"./CSSProperty":35,"./ReactInstrumentation":94,"./dangerousStyleValue":135,"_process":360,"fbjs/lib/ExecutionEnvironment":4,"fbjs/lib/camelizeStyleName":6,"fbjs/lib/hyphenateStyleName":17,"fbjs/lib/memoizeStringOnly":21,"fbjs/lib/warning":25}],37:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -3723,7 +3723,7 @@ var CallbackQueue = function () {
 
 module.exports = PooledClass.addPoolingTo(CallbackQueue);
 }).call(this,require('_process'))
-},{"./PooledClass":55,"./reactProdInvariant":154,"_process":357,"fbjs/lib/invariant":18}],38:[function(require,module,exports){
+},{"./PooledClass":55,"./reactProdInvariant":154,"_process":360,"fbjs/lib/invariant":18}],38:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -4259,7 +4259,7 @@ var DOMChildrenOperations = {
 
 module.exports = DOMChildrenOperations;
 }).call(this,require('_process'))
-},{"./DOMLazyTree":40,"./Danger":44,"./ReactDOMComponentTree":64,"./ReactInstrumentation":94,"./createMicrosoftUnsafeLocalFunction":134,"./setInnerHTML":156,"./setTextContent":157,"_process":357}],40:[function(require,module,exports){
+},{"./DOMLazyTree":40,"./Danger":44,"./ReactDOMComponentTree":64,"./ReactInstrumentation":94,"./createMicrosoftUnsafeLocalFunction":134,"./setInnerHTML":156,"./setTextContent":157,"_process":360}],40:[function(require,module,exports){
 /**
  * Copyright (c) 2015-present, Facebook, Inc.
  *
@@ -4602,7 +4602,7 @@ var DOMProperty = {
 
 module.exports = DOMProperty;
 }).call(this,require('_process'))
-},{"./reactProdInvariant":154,"_process":357,"fbjs/lib/invariant":18}],43:[function(require,module,exports){
+},{"./reactProdInvariant":154,"_process":360,"fbjs/lib/invariant":18}],43:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -4837,7 +4837,7 @@ var DOMPropertyOperations = {
 
 module.exports = DOMPropertyOperations;
 }).call(this,require('_process'))
-},{"./DOMProperty":42,"./ReactDOMComponentTree":64,"./ReactInstrumentation":94,"./quoteAttributeValueForBrowser":153,"_process":357,"fbjs/lib/warning":25}],44:[function(require,module,exports){
+},{"./DOMProperty":42,"./ReactDOMComponentTree":64,"./ReactInstrumentation":94,"./quoteAttributeValueForBrowser":153,"_process":360,"fbjs/lib/warning":25}],44:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -4883,7 +4883,7 @@ var Danger = {
 
 module.exports = Danger;
 }).call(this,require('_process'))
-},{"./DOMLazyTree":40,"./reactProdInvariant":154,"_process":357,"fbjs/lib/ExecutionEnvironment":4,"fbjs/lib/createNodesFromMarkup":9,"fbjs/lib/emptyFunction":10,"fbjs/lib/invariant":18}],45:[function(require,module,exports){
+},{"./DOMLazyTree":40,"./reactProdInvariant":154,"_process":360,"fbjs/lib/ExecutionEnvironment":4,"fbjs/lib/createNodesFromMarkup":9,"fbjs/lib/emptyFunction":10,"fbjs/lib/invariant":18}],45:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -5277,7 +5277,7 @@ var EventPluginHub = {
 
 module.exports = EventPluginHub;
 }).call(this,require('_process'))
-},{"./EventPluginRegistry":48,"./EventPluginUtils":49,"./ReactErrorUtils":85,"./accumulateInto":131,"./forEachAccumulated":139,"./reactProdInvariant":154,"_process":357,"fbjs/lib/invariant":18}],48:[function(require,module,exports){
+},{"./EventPluginRegistry":48,"./EventPluginUtils":49,"./ReactErrorUtils":85,"./accumulateInto":131,"./forEachAccumulated":139,"./reactProdInvariant":154,"_process":360,"fbjs/lib/invariant":18}],48:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -5530,7 +5530,7 @@ var EventPluginRegistry = {
 
 module.exports = EventPluginRegistry;
 }).call(this,require('_process'))
-},{"./reactProdInvariant":154,"_process":357,"fbjs/lib/invariant":18}],49:[function(require,module,exports){
+},{"./reactProdInvariant":154,"_process":360,"fbjs/lib/invariant":18}],49:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -5756,7 +5756,7 @@ var EventPluginUtils = {
 
 module.exports = EventPluginUtils;
 }).call(this,require('_process'))
-},{"./ReactErrorUtils":85,"./reactProdInvariant":154,"_process":357,"fbjs/lib/invariant":18,"fbjs/lib/warning":25}],50:[function(require,module,exports){
+},{"./ReactErrorUtils":85,"./reactProdInvariant":154,"_process":360,"fbjs/lib/invariant":18,"fbjs/lib/warning":25}],50:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -5890,7 +5890,7 @@ var EventPropagators = {
 
 module.exports = EventPropagators;
 }).call(this,require('_process'))
-},{"./EventPluginHub":47,"./EventPluginUtils":49,"./accumulateInto":131,"./forEachAccumulated":139,"_process":357,"fbjs/lib/warning":25}],51:[function(require,module,exports){
+},{"./EventPluginHub":47,"./EventPluginUtils":49,"./accumulateInto":131,"./forEachAccumulated":139,"_process":360,"fbjs/lib/warning":25}],51:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -6413,7 +6413,7 @@ var LinkedValueUtils = {
 
 module.exports = LinkedValueUtils;
 }).call(this,require('_process'))
-},{"./ReactPropTypesSecret":102,"./reactProdInvariant":154,"_process":357,"fbjs/lib/invariant":18,"fbjs/lib/warning":25,"prop-types/factory":28,"react/lib/React":164}],55:[function(require,module,exports){
+},{"./ReactPropTypesSecret":102,"./reactProdInvariant":154,"_process":360,"fbjs/lib/invariant":18,"fbjs/lib/warning":25,"prop-types/factory":28,"react/lib/React":164}],55:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -6525,7 +6525,7 @@ var PooledClass = {
 
 module.exports = PooledClass;
 }).call(this,require('_process'))
-},{"./reactProdInvariant":154,"_process":357,"fbjs/lib/invariant":18}],56:[function(require,module,exports){
+},{"./reactProdInvariant":154,"_process":360,"fbjs/lib/invariant":18}],56:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -7000,7 +7000,7 @@ var ReactChildReconciler = {
 
 module.exports = ReactChildReconciler;
 }).call(this,require('_process'))
-},{"./KeyEscapeUtils":53,"./ReactReconciler":104,"./instantiateReactComponent":150,"./shouldUpdateReactComponent":158,"./traverseAllChildren":159,"_process":357,"fbjs/lib/warning":25,"react/lib/ReactComponentTreeHook":167}],58:[function(require,module,exports){
+},{"./KeyEscapeUtils":53,"./ReactReconciler":104,"./instantiateReactComponent":150,"./shouldUpdateReactComponent":158,"./traverseAllChildren":159,"_process":360,"fbjs/lib/warning":25,"react/lib/ReactComponentTreeHook":167}],58:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -7070,7 +7070,7 @@ var ReactComponentEnvironment = {
 
 module.exports = ReactComponentEnvironment;
 }).call(this,require('_process'))
-},{"./reactProdInvariant":154,"_process":357,"fbjs/lib/invariant":18}],60:[function(require,module,exports){
+},{"./reactProdInvariant":154,"_process":360,"fbjs/lib/invariant":18}],60:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -7970,7 +7970,7 @@ var ReactCompositeComponent = {
 
 module.exports = ReactCompositeComponent;
 }).call(this,require('_process'))
-},{"./ReactComponentEnvironment":59,"./ReactErrorUtils":85,"./ReactInstanceMap":93,"./ReactInstrumentation":94,"./ReactNodeTypes":99,"./ReactReconciler":104,"./checkReactTypeSpec":133,"./reactProdInvariant":154,"./shouldUpdateReactComponent":158,"_process":357,"fbjs/lib/emptyObject":11,"fbjs/lib/invariant":18,"fbjs/lib/shallowEqual":24,"fbjs/lib/warning":25,"object-assign":26,"react/lib/React":164,"react/lib/ReactCurrentOwner":168}],61:[function(require,module,exports){
+},{"./ReactComponentEnvironment":59,"./ReactErrorUtils":85,"./ReactInstanceMap":93,"./ReactInstrumentation":94,"./ReactNodeTypes":99,"./ReactReconciler":104,"./checkReactTypeSpec":133,"./reactProdInvariant":154,"./shouldUpdateReactComponent":158,"_process":360,"fbjs/lib/emptyObject":11,"fbjs/lib/invariant":18,"fbjs/lib/shallowEqual":24,"fbjs/lib/warning":25,"object-assign":26,"react/lib/React":164,"react/lib/ReactCurrentOwner":168}],61:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -8081,7 +8081,7 @@ if (process.env.NODE_ENV !== 'production') {
 
 module.exports = ReactDOM;
 }).call(this,require('_process'))
-},{"./ReactDOMComponentTree":64,"./ReactDOMInvalidARIAHook":70,"./ReactDOMNullInputValuePropHook":71,"./ReactDOMUnknownPropertyHook":79,"./ReactDefaultInjection":82,"./ReactInstrumentation":94,"./ReactMount":97,"./ReactReconciler":104,"./ReactUpdates":111,"./ReactVersion":112,"./findDOMNode":137,"./getHostComponentFromComposite":144,"./renderSubtreeIntoContainer":155,"_process":357,"fbjs/lib/ExecutionEnvironment":4,"fbjs/lib/warning":25}],62:[function(require,module,exports){
+},{"./ReactDOMComponentTree":64,"./ReactDOMInvalidARIAHook":70,"./ReactDOMNullInputValuePropHook":71,"./ReactDOMUnknownPropertyHook":79,"./ReactDefaultInjection":82,"./ReactInstrumentation":94,"./ReactMount":97,"./ReactReconciler":104,"./ReactUpdates":111,"./ReactVersion":112,"./findDOMNode":137,"./getHostComponentFromComposite":144,"./renderSubtreeIntoContainer":155,"_process":360,"fbjs/lib/ExecutionEnvironment":4,"fbjs/lib/warning":25}],62:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -9095,7 +9095,7 @@ _assign(ReactDOMComponent.prototype, ReactDOMComponent.Mixin, ReactMultiChild.Mi
 
 module.exports = ReactDOMComponent;
 }).call(this,require('_process'))
-},{"./AutoFocusUtils":33,"./CSSPropertyOperations":36,"./DOMLazyTree":40,"./DOMNamespaces":41,"./DOMProperty":42,"./DOMPropertyOperations":43,"./EventPluginHub":47,"./EventPluginRegistry":48,"./ReactBrowserEventEmitter":56,"./ReactDOMComponentFlags":63,"./ReactDOMComponentTree":64,"./ReactDOMInput":69,"./ReactDOMOption":72,"./ReactDOMSelect":73,"./ReactDOMTextarea":77,"./ReactInstrumentation":94,"./ReactMultiChild":98,"./ReactServerRenderingTransaction":108,"./escapeTextContentForBrowser":136,"./inputValueTracking":149,"./isEventSupported":151,"./reactProdInvariant":154,"./validateDOMNesting":160,"_process":357,"fbjs/lib/emptyFunction":10,"fbjs/lib/invariant":18,"fbjs/lib/shallowEqual":24,"fbjs/lib/warning":25,"object-assign":26}],63:[function(require,module,exports){
+},{"./AutoFocusUtils":33,"./CSSPropertyOperations":36,"./DOMLazyTree":40,"./DOMNamespaces":41,"./DOMProperty":42,"./DOMPropertyOperations":43,"./EventPluginHub":47,"./EventPluginRegistry":48,"./ReactBrowserEventEmitter":56,"./ReactDOMComponentFlags":63,"./ReactDOMComponentTree":64,"./ReactDOMInput":69,"./ReactDOMOption":72,"./ReactDOMSelect":73,"./ReactDOMTextarea":77,"./ReactInstrumentation":94,"./ReactMultiChild":98,"./ReactServerRenderingTransaction":108,"./escapeTextContentForBrowser":136,"./inputValueTracking":149,"./isEventSupported":151,"./reactProdInvariant":154,"./validateDOMNesting":160,"_process":360,"fbjs/lib/emptyFunction":10,"fbjs/lib/invariant":18,"fbjs/lib/shallowEqual":24,"fbjs/lib/warning":25,"object-assign":26}],63:[function(require,module,exports){
 /**
  * Copyright (c) 2015-present, Facebook, Inc.
  *
@@ -9306,7 +9306,7 @@ var ReactDOMComponentTree = {
 
 module.exports = ReactDOMComponentTree;
 }).call(this,require('_process'))
-},{"./DOMProperty":42,"./ReactDOMComponentFlags":63,"./reactProdInvariant":154,"_process":357,"fbjs/lib/invariant":18}],65:[function(require,module,exports){
+},{"./DOMProperty":42,"./ReactDOMComponentFlags":63,"./reactProdInvariant":154,"_process":360,"fbjs/lib/invariant":18}],65:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -9339,7 +9339,7 @@ function ReactDOMContainerInfo(topLevelWrapper, node) {
 
 module.exports = ReactDOMContainerInfo;
 }).call(this,require('_process'))
-},{"./validateDOMNesting":160,"_process":357}],66:[function(require,module,exports){
+},{"./validateDOMNesting":160,"_process":360}],66:[function(require,module,exports){
 /**
  * Copyright (c) 2014-present, Facebook, Inc.
  *
@@ -9732,7 +9732,7 @@ function _handleChange(event) {
 
 module.exports = ReactDOMInput;
 }).call(this,require('_process'))
-},{"./DOMPropertyOperations":43,"./LinkedValueUtils":54,"./ReactDOMComponentTree":64,"./ReactUpdates":111,"./reactProdInvariant":154,"_process":357,"fbjs/lib/invariant":18,"fbjs/lib/warning":25,"object-assign":26}],70:[function(require,module,exports){
+},{"./DOMPropertyOperations":43,"./LinkedValueUtils":54,"./ReactDOMComponentTree":64,"./ReactUpdates":111,"./reactProdInvariant":154,"_process":360,"fbjs/lib/invariant":18,"fbjs/lib/warning":25,"object-assign":26}],70:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -9825,7 +9825,7 @@ var ReactDOMInvalidARIAHook = {
 
 module.exports = ReactDOMInvalidARIAHook;
 }).call(this,require('_process'))
-},{"./DOMProperty":42,"_process":357,"fbjs/lib/warning":25,"react/lib/ReactComponentTreeHook":167}],71:[function(require,module,exports){
+},{"./DOMProperty":42,"_process":360,"fbjs/lib/warning":25,"react/lib/ReactComponentTreeHook":167}],71:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -9868,7 +9868,7 @@ var ReactDOMNullInputValuePropHook = {
 
 module.exports = ReactDOMNullInputValuePropHook;
 }).call(this,require('_process'))
-},{"_process":357,"fbjs/lib/warning":25,"react/lib/ReactComponentTreeHook":167}],72:[function(require,module,exports){
+},{"_process":360,"fbjs/lib/warning":25,"react/lib/ReactComponentTreeHook":167}],72:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -9990,7 +9990,7 @@ var ReactDOMOption = {
 
 module.exports = ReactDOMOption;
 }).call(this,require('_process'))
-},{"./ReactDOMComponentTree":64,"./ReactDOMSelect":73,"_process":357,"fbjs/lib/warning":25,"object-assign":26,"react/lib/React":164}],73:[function(require,module,exports){
+},{"./ReactDOMComponentTree":64,"./ReactDOMSelect":73,"_process":360,"fbjs/lib/warning":25,"object-assign":26,"react/lib/React":164}],73:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -10190,7 +10190,7 @@ function _handleChange(event) {
 
 module.exports = ReactDOMSelect;
 }).call(this,require('_process'))
-},{"./LinkedValueUtils":54,"./ReactDOMComponentTree":64,"./ReactUpdates":111,"_process":357,"fbjs/lib/warning":25,"object-assign":26}],74:[function(require,module,exports){
+},{"./LinkedValueUtils":54,"./ReactDOMComponentTree":64,"./ReactUpdates":111,"_process":360,"fbjs/lib/warning":25,"object-assign":26}],74:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -10586,7 +10586,7 @@ _assign(ReactDOMTextComponent.prototype, {
 
 module.exports = ReactDOMTextComponent;
 }).call(this,require('_process'))
-},{"./DOMChildrenOperations":39,"./DOMLazyTree":40,"./ReactDOMComponentTree":64,"./escapeTextContentForBrowser":136,"./reactProdInvariant":154,"./validateDOMNesting":160,"_process":357,"fbjs/lib/invariant":18,"object-assign":26}],77:[function(require,module,exports){
+},{"./DOMChildrenOperations":39,"./DOMLazyTree":40,"./ReactDOMComponentTree":64,"./escapeTextContentForBrowser":136,"./reactProdInvariant":154,"./validateDOMNesting":160,"_process":360,"fbjs/lib/invariant":18,"object-assign":26}],77:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -10746,7 +10746,7 @@ function _handleChange(event) {
 
 module.exports = ReactDOMTextarea;
 }).call(this,require('_process'))
-},{"./LinkedValueUtils":54,"./ReactDOMComponentTree":64,"./ReactUpdates":111,"./reactProdInvariant":154,"_process":357,"fbjs/lib/invariant":18,"fbjs/lib/warning":25,"object-assign":26}],78:[function(require,module,exports){
+},{"./LinkedValueUtils":54,"./ReactDOMComponentTree":64,"./ReactUpdates":111,"./reactProdInvariant":154,"_process":360,"fbjs/lib/invariant":18,"fbjs/lib/warning":25,"object-assign":26}],78:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2015-present, Facebook, Inc.
@@ -10882,7 +10882,7 @@ module.exports = {
   traverseEnterLeave: traverseEnterLeave
 };
 }).call(this,require('_process'))
-},{"./reactProdInvariant":154,"_process":357,"fbjs/lib/invariant":18}],79:[function(require,module,exports){
+},{"./reactProdInvariant":154,"_process":360,"fbjs/lib/invariant":18}],79:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -10994,7 +10994,7 @@ var ReactDOMUnknownPropertyHook = {
 
 module.exports = ReactDOMUnknownPropertyHook;
 }).call(this,require('_process'))
-},{"./DOMProperty":42,"./EventPluginRegistry":48,"_process":357,"fbjs/lib/warning":25,"react/lib/ReactComponentTreeHook":167}],80:[function(require,module,exports){
+},{"./DOMProperty":42,"./EventPluginRegistry":48,"_process":360,"fbjs/lib/warning":25,"react/lib/ReactComponentTreeHook":167}],80:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2016-present, Facebook, Inc.
@@ -11355,7 +11355,7 @@ if (/[?&]react_perf\b/.test(url)) {
 
 module.exports = ReactDebugTool;
 }).call(this,require('_process'))
-},{"./ReactHostOperationHistoryHook":90,"./ReactInvalidSetStateWarningHook":95,"_process":357,"fbjs/lib/ExecutionEnvironment":4,"fbjs/lib/performanceNow":23,"fbjs/lib/warning":25,"react/lib/ReactComponentTreeHook":167}],81:[function(require,module,exports){
+},{"./ReactHostOperationHistoryHook":90,"./ReactInvalidSetStateWarningHook":95,"_process":360,"fbjs/lib/ExecutionEnvironment":4,"fbjs/lib/performanceNow":23,"fbjs/lib/warning":25,"react/lib/ReactComponentTreeHook":167}],81:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -11629,7 +11629,7 @@ if (process.env.NODE_ENV !== 'production') {
 
 module.exports = ReactErrorUtils;
 }).call(this,require('_process'))
-},{"_process":357}],86:[function(require,module,exports){
+},{"_process":360}],86:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -11900,7 +11900,7 @@ var ReactHostComponent = {
 
 module.exports = ReactHostComponent;
 }).call(this,require('_process'))
-},{"./reactProdInvariant":154,"_process":357,"fbjs/lib/invariant":18}],90:[function(require,module,exports){
+},{"./reactProdInvariant":154,"_process":360,"fbjs/lib/invariant":18}],90:[function(require,module,exports){
 /**
  * Copyright (c) 2016-present, Facebook, Inc.
  *
@@ -12153,7 +12153,7 @@ if (process.env.NODE_ENV !== 'production') {
 
 module.exports = { debugTool: debugTool };
 }).call(this,require('_process'))
-},{"./ReactDebugTool":80,"_process":357}],95:[function(require,module,exports){
+},{"./ReactDebugTool":80,"_process":360}],95:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2016-present, Facebook, Inc.
@@ -12190,7 +12190,7 @@ var ReactInvalidSetStateWarningHook = {
 
 module.exports = ReactInvalidSetStateWarningHook;
 }).call(this,require('_process'))
-},{"_process":357,"fbjs/lib/warning":25}],96:[function(require,module,exports){
+},{"_process":360,"fbjs/lib/warning":25}],96:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -12776,7 +12776,7 @@ var ReactMount = {
 
 module.exports = ReactMount;
 }).call(this,require('_process'))
-},{"./DOMLazyTree":40,"./DOMProperty":42,"./ReactBrowserEventEmitter":56,"./ReactDOMComponentTree":64,"./ReactDOMContainerInfo":65,"./ReactDOMFeatureFlags":67,"./ReactFeatureFlags":88,"./ReactInstanceMap":93,"./ReactInstrumentation":94,"./ReactMarkupChecksum":96,"./ReactReconciler":104,"./ReactUpdateQueue":110,"./ReactUpdates":111,"./instantiateReactComponent":150,"./reactProdInvariant":154,"./setInnerHTML":156,"./shouldUpdateReactComponent":158,"_process":357,"fbjs/lib/emptyObject":11,"fbjs/lib/invariant":18,"fbjs/lib/warning":25,"react/lib/React":164,"react/lib/ReactCurrentOwner":168}],98:[function(require,module,exports){
+},{"./DOMLazyTree":40,"./DOMProperty":42,"./ReactBrowserEventEmitter":56,"./ReactDOMComponentTree":64,"./ReactDOMContainerInfo":65,"./ReactDOMFeatureFlags":67,"./ReactFeatureFlags":88,"./ReactInstanceMap":93,"./ReactInstrumentation":94,"./ReactMarkupChecksum":96,"./ReactReconciler":104,"./ReactUpdateQueue":110,"./ReactUpdates":111,"./instantiateReactComponent":150,"./reactProdInvariant":154,"./setInnerHTML":156,"./shouldUpdateReactComponent":158,"_process":360,"fbjs/lib/emptyObject":11,"fbjs/lib/invariant":18,"fbjs/lib/warning":25,"react/lib/React":164,"react/lib/ReactCurrentOwner":168}],98:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -13222,7 +13222,7 @@ var ReactMultiChild = {
 
 module.exports = ReactMultiChild;
 }).call(this,require('_process'))
-},{"./ReactChildReconciler":57,"./ReactComponentEnvironment":59,"./ReactInstanceMap":93,"./ReactInstrumentation":94,"./ReactReconciler":104,"./flattenChildren":138,"./reactProdInvariant":154,"_process":357,"fbjs/lib/emptyFunction":10,"fbjs/lib/invariant":18,"react/lib/ReactCurrentOwner":168}],99:[function(require,module,exports){
+},{"./ReactChildReconciler":57,"./ReactComponentEnvironment":59,"./ReactInstanceMap":93,"./ReactInstrumentation":94,"./ReactReconciler":104,"./flattenChildren":138,"./reactProdInvariant":154,"_process":360,"fbjs/lib/emptyFunction":10,"fbjs/lib/invariant":18,"react/lib/ReactCurrentOwner":168}],99:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -13262,7 +13262,7 @@ var ReactNodeTypes = {
 
 module.exports = ReactNodeTypes;
 }).call(this,require('_process'))
-},{"./reactProdInvariant":154,"_process":357,"fbjs/lib/invariant":18,"react/lib/React":164}],100:[function(require,module,exports){
+},{"./reactProdInvariant":154,"_process":360,"fbjs/lib/invariant":18,"react/lib/React":164}],100:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -13355,7 +13355,7 @@ var ReactOwner = {
 
 module.exports = ReactOwner;
 }).call(this,require('_process'))
-},{"./reactProdInvariant":154,"_process":357,"fbjs/lib/invariant":18}],101:[function(require,module,exports){
+},{"./reactProdInvariant":154,"_process":360,"fbjs/lib/invariant":18}],101:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -13380,7 +13380,7 @@ if (process.env.NODE_ENV !== 'production') {
 
 module.exports = ReactPropTypeLocationNames;
 }).call(this,require('_process'))
-},{"_process":357}],102:[function(require,module,exports){
+},{"_process":360}],102:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -13573,7 +13573,7 @@ PooledClass.addPoolingTo(ReactReconcileTransaction);
 
 module.exports = ReactReconcileTransaction;
 }).call(this,require('_process'))
-},{"./CallbackQueue":37,"./PooledClass":55,"./ReactBrowserEventEmitter":56,"./ReactInputSelection":92,"./ReactInstrumentation":94,"./ReactUpdateQueue":110,"./Transaction":129,"_process":357,"object-assign":26}],104:[function(require,module,exports){
+},{"./CallbackQueue":37,"./PooledClass":55,"./ReactBrowserEventEmitter":56,"./ReactInputSelection":92,"./ReactInstrumentation":94,"./ReactUpdateQueue":110,"./Transaction":129,"_process":360,"object-assign":26}],104:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -13739,7 +13739,7 @@ var ReactReconciler = {
 
 module.exports = ReactReconciler;
 }).call(this,require('_process'))
-},{"./ReactInstrumentation":94,"./ReactRef":105,"_process":357,"fbjs/lib/warning":25}],105:[function(require,module,exports){
+},{"./ReactInstrumentation":94,"./ReactRef":105,"_process":360,"fbjs/lib/warning":25}],105:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -13936,7 +13936,7 @@ module.exports = {
   renderToStaticMarkup: renderToStaticMarkup
 };
 }).call(this,require('_process'))
-},{"./ReactDOMContainerInfo":65,"./ReactDefaultBatchingStrategy":81,"./ReactInstrumentation":94,"./ReactMarkupChecksum":96,"./ReactReconciler":104,"./ReactServerBatchingStrategy":106,"./ReactServerRenderingTransaction":108,"./ReactUpdates":111,"./instantiateReactComponent":150,"./reactProdInvariant":154,"_process":357,"fbjs/lib/emptyObject":11,"fbjs/lib/invariant":18,"react/lib/React":164}],108:[function(require,module,exports){
+},{"./ReactDOMContainerInfo":65,"./ReactDefaultBatchingStrategy":81,"./ReactInstrumentation":94,"./ReactMarkupChecksum":96,"./ReactReconciler":104,"./ReactServerBatchingStrategy":106,"./ReactServerRenderingTransaction":108,"./ReactUpdates":111,"./instantiateReactComponent":150,"./reactProdInvariant":154,"_process":360,"fbjs/lib/emptyObject":11,"fbjs/lib/invariant":18,"react/lib/React":164}],108:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2014-present, Facebook, Inc.
@@ -14026,7 +14026,7 @@ PooledClass.addPoolingTo(ReactServerRenderingTransaction);
 
 module.exports = ReactServerRenderingTransaction;
 }).call(this,require('_process'))
-},{"./PooledClass":55,"./ReactInstrumentation":94,"./ReactServerUpdateQueue":109,"./Transaction":129,"_process":357,"object-assign":26}],109:[function(require,module,exports){
+},{"./PooledClass":55,"./ReactInstrumentation":94,"./ReactServerUpdateQueue":109,"./Transaction":129,"_process":360,"object-assign":26}],109:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2015-present, Facebook, Inc.
@@ -14165,7 +14165,7 @@ var ReactServerUpdateQueue = function () {
 
 module.exports = ReactServerUpdateQueue;
 }).call(this,require('_process'))
-},{"./ReactUpdateQueue":110,"_process":357,"fbjs/lib/warning":25}],110:[function(require,module,exports){
+},{"./ReactUpdateQueue":110,"_process":360,"fbjs/lib/warning":25}],110:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2015-present, Facebook, Inc.
@@ -14399,7 +14399,7 @@ var ReactUpdateQueue = {
 
 module.exports = ReactUpdateQueue;
 }).call(this,require('_process'))
-},{"./ReactInstanceMap":93,"./ReactInstrumentation":94,"./ReactUpdates":111,"./reactProdInvariant":154,"_process":357,"fbjs/lib/invariant":18,"fbjs/lib/warning":25,"react/lib/ReactCurrentOwner":168}],111:[function(require,module,exports){
+},{"./ReactInstanceMap":93,"./ReactInstrumentation":94,"./ReactUpdates":111,"./reactProdInvariant":154,"_process":360,"fbjs/lib/invariant":18,"fbjs/lib/warning":25,"react/lib/ReactCurrentOwner":168}],111:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -14650,7 +14650,7 @@ var ReactUpdates = {
 
 module.exports = ReactUpdates;
 }).call(this,require('_process'))
-},{"./CallbackQueue":37,"./PooledClass":55,"./ReactFeatureFlags":88,"./ReactReconciler":104,"./Transaction":129,"./reactProdInvariant":154,"_process":357,"fbjs/lib/invariant":18,"object-assign":26}],112:[function(require,module,exports){
+},{"./CallbackQueue":37,"./PooledClass":55,"./ReactFeatureFlags":88,"./ReactReconciler":104,"./Transaction":129,"./reactProdInvariant":154,"_process":360,"fbjs/lib/invariant":18,"object-assign":26}],112:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -15374,7 +15374,7 @@ var SimpleEventPlugin = {
 
 module.exports = SimpleEventPlugin;
 }).call(this,require('_process'))
-},{"./EventPropagators":50,"./ReactDOMComponentTree":64,"./SyntheticAnimationEvent":116,"./SyntheticClipboardEvent":117,"./SyntheticDragEvent":119,"./SyntheticEvent":120,"./SyntheticFocusEvent":121,"./SyntheticKeyboardEvent":123,"./SyntheticMouseEvent":124,"./SyntheticTouchEvent":125,"./SyntheticTransitionEvent":126,"./SyntheticUIEvent":127,"./SyntheticWheelEvent":128,"./getEventCharCode":140,"./reactProdInvariant":154,"_process":357,"fbjs/lib/EventListener":3,"fbjs/lib/emptyFunction":10,"fbjs/lib/invariant":18}],116:[function(require,module,exports){
+},{"./EventPropagators":50,"./ReactDOMComponentTree":64,"./SyntheticAnimationEvent":116,"./SyntheticClipboardEvent":117,"./SyntheticDragEvent":119,"./SyntheticEvent":120,"./SyntheticFocusEvent":121,"./SyntheticKeyboardEvent":123,"./SyntheticMouseEvent":124,"./SyntheticTouchEvent":125,"./SyntheticTransitionEvent":126,"./SyntheticUIEvent":127,"./SyntheticWheelEvent":128,"./getEventCharCode":140,"./reactProdInvariant":154,"_process":360,"fbjs/lib/EventListener":3,"fbjs/lib/emptyFunction":10,"fbjs/lib/invariant":18}],116:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -15786,7 +15786,7 @@ function getPooledWarningPropertyDefinition(propName, getVal) {
   }
 }
 }).call(this,require('_process'))
-},{"./PooledClass":55,"_process":357,"fbjs/lib/emptyFunction":10,"fbjs/lib/warning":25,"object-assign":26}],121:[function(require,module,exports){
+},{"./PooledClass":55,"_process":360,"fbjs/lib/emptyFunction":10,"fbjs/lib/warning":25,"object-assign":26}],121:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -16421,7 +16421,7 @@ var TransactionImpl = {
 
 module.exports = TransactionImpl;
 }).call(this,require('_process'))
-},{"./reactProdInvariant":154,"_process":357,"fbjs/lib/invariant":18}],130:[function(require,module,exports){
+},{"./reactProdInvariant":154,"_process":360,"fbjs/lib/invariant":18}],130:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -16502,7 +16502,7 @@ function accumulateInto(current, next) {
 
 module.exports = accumulateInto;
 }).call(this,require('_process'))
-},{"./reactProdInvariant":154,"_process":357,"fbjs/lib/invariant":18}],132:[function(require,module,exports){
+},{"./reactProdInvariant":154,"_process":360,"fbjs/lib/invariant":18}],132:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -16631,7 +16631,7 @@ function checkReactTypeSpec(typeSpecs, values, location, componentName, element,
 
 module.exports = checkReactTypeSpec;
 }).call(this,require('_process'))
-},{"./ReactPropTypeLocationNames":101,"./ReactPropTypesSecret":102,"./reactProdInvariant":154,"_process":357,"fbjs/lib/invariant":18,"fbjs/lib/warning":25,"react/lib/ReactComponentTreeHook":167}],134:[function(require,module,exports){
+},{"./ReactPropTypeLocationNames":101,"./ReactPropTypesSecret":102,"./reactProdInvariant":154,"_process":360,"fbjs/lib/invariant":18,"fbjs/lib/warning":25,"react/lib/ReactComponentTreeHook":167}],134:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -16740,7 +16740,7 @@ function dangerousStyleValue(name, value, component, isCustomProperty) {
 
 module.exports = dangerousStyleValue;
 }).call(this,require('_process'))
-},{"./CSSProperty":35,"_process":357,"fbjs/lib/warning":25}],136:[function(require,module,exports){
+},{"./CSSProperty":35,"_process":360,"fbjs/lib/warning":25}],136:[function(require,module,exports){
 /**
  * Copyright (c) 2016-present, Facebook, Inc.
  *
@@ -16920,7 +16920,7 @@ function findDOMNode(componentOrElement) {
 
 module.exports = findDOMNode;
 }).call(this,require('_process'))
-},{"./ReactDOMComponentTree":64,"./ReactInstanceMap":93,"./getHostComponentFromComposite":144,"./reactProdInvariant":154,"_process":357,"fbjs/lib/invariant":18,"fbjs/lib/warning":25,"react/lib/ReactCurrentOwner":168}],138:[function(require,module,exports){
+},{"./ReactDOMComponentTree":64,"./ReactInstanceMap":93,"./getHostComponentFromComposite":144,"./reactProdInvariant":154,"_process":360,"fbjs/lib/invariant":18,"fbjs/lib/warning":25,"react/lib/ReactCurrentOwner":168}],138:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -16996,7 +16996,7 @@ function flattenChildren(children, selfDebugID) {
 
 module.exports = flattenChildren;
 }).call(this,require('_process'))
-},{"./KeyEscapeUtils":53,"./traverseAllChildren":159,"_process":357,"fbjs/lib/warning":25,"react/lib/ReactComponentTreeHook":167}],139:[function(require,module,exports){
+},{"./KeyEscapeUtils":53,"./traverseAllChildren":159,"_process":360,"fbjs/lib/warning":25,"react/lib/ReactComponentTreeHook":167}],139:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -17776,7 +17776,7 @@ _assign(ReactCompositeComponentWrapper.prototype, ReactCompositeComponent, {
 
 module.exports = instantiateReactComponent;
 }).call(this,require('_process'))
-},{"./ReactCompositeComponent":60,"./ReactEmptyComponent":84,"./ReactHostComponent":89,"./reactProdInvariant":154,"_process":357,"fbjs/lib/invariant":18,"fbjs/lib/warning":25,"object-assign":26,"react/lib/getNextDebugID":182}],151:[function(require,module,exports){
+},{"./ReactCompositeComponent":60,"./ReactEmptyComponent":84,"./ReactHostComponent":89,"./reactProdInvariant":154,"_process":360,"fbjs/lib/invariant":18,"fbjs/lib/warning":25,"object-assign":26,"react/lib/getNextDebugID":182}],151:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -18320,7 +18320,7 @@ function traverseAllChildren(children, callback, traverseContext) {
 
 module.exports = traverseAllChildren;
 }).call(this,require('_process'))
-},{"./KeyEscapeUtils":53,"./ReactElementSymbol":83,"./getIteratorFn":145,"./reactProdInvariant":154,"_process":357,"fbjs/lib/invariant":18,"fbjs/lib/warning":25,"react/lib/ReactCurrentOwner":168}],160:[function(require,module,exports){
+},{"./KeyEscapeUtils":53,"./ReactElementSymbol":83,"./getIteratorFn":145,"./reactProdInvariant":154,"_process":360,"fbjs/lib/invariant":18,"fbjs/lib/warning":25,"react/lib/ReactCurrentOwner":168}],160:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2015-present, Facebook, Inc.
@@ -18691,7 +18691,7 @@ if (process.env.NODE_ENV !== 'production') {
 
 module.exports = validateDOMNesting;
 }).call(this,require('_process'))
-},{"_process":357,"fbjs/lib/emptyFunction":10,"fbjs/lib/warning":25,"object-assign":26}],161:[function(require,module,exports){
+},{"_process":360,"fbjs/lib/emptyFunction":10,"fbjs/lib/warning":25,"object-assign":26}],161:[function(require,module,exports){
 'use strict';
 
 module.exports = require('./lib/ReactDOMServer');
@@ -18700,7 +18700,7 @@ module.exports = require('./lib/ReactDOMServer');
 arguments[4][53][0].apply(exports,arguments)
 },{"dup":53}],163:[function(require,module,exports){
 arguments[4][55][0].apply(exports,arguments)
-},{"./reactProdInvariant":185,"_process":357,"dup":55,"fbjs/lib/invariant":18}],164:[function(require,module,exports){
+},{"./reactProdInvariant":185,"_process":360,"dup":55,"fbjs/lib/invariant":18}],164:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -18832,7 +18832,7 @@ if (process.env.NODE_ENV !== 'production') {
 
 module.exports = React;
 }).call(this,require('_process'))
-},{"./ReactBaseClasses":165,"./ReactChildren":166,"./ReactDOMFactories":169,"./ReactElement":170,"./ReactElementValidator":172,"./ReactPropTypes":175,"./ReactVersion":177,"./canDefineProperty":178,"./createClass":180,"./lowPriorityWarning":183,"./onlyChild":184,"_process":357,"object-assign":26}],165:[function(require,module,exports){
+},{"./ReactBaseClasses":165,"./ReactChildren":166,"./ReactDOMFactories":169,"./ReactElement":170,"./ReactElementValidator":172,"./ReactPropTypes":175,"./ReactVersion":177,"./canDefineProperty":178,"./createClass":180,"./lowPriorityWarning":183,"./onlyChild":184,"_process":360,"object-assign":26}],165:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -18975,7 +18975,7 @@ module.exports = {
   PureComponent: ReactPureComponent
 };
 }).call(this,require('_process'))
-},{"./ReactNoopUpdateQueue":173,"./canDefineProperty":178,"./lowPriorityWarning":183,"./reactProdInvariant":185,"_process":357,"fbjs/lib/emptyObject":11,"fbjs/lib/invariant":18,"object-assign":26}],166:[function(require,module,exports){
+},{"./ReactNoopUpdateQueue":173,"./canDefineProperty":178,"./lowPriorityWarning":183,"./reactProdInvariant":185,"_process":360,"fbjs/lib/emptyObject":11,"fbjs/lib/invariant":18,"object-assign":26}],166:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -19543,7 +19543,7 @@ var ReactComponentTreeHook = {
 
 module.exports = ReactComponentTreeHook;
 }).call(this,require('_process'))
-},{"./ReactCurrentOwner":168,"./reactProdInvariant":185,"_process":357,"fbjs/lib/invariant":18,"fbjs/lib/warning":25}],168:[function(require,module,exports){
+},{"./ReactCurrentOwner":168,"./reactProdInvariant":185,"_process":360,"fbjs/lib/invariant":18,"fbjs/lib/warning":25}],168:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -19739,7 +19739,7 @@ var ReactDOMFactories = {
 
 module.exports = ReactDOMFactories;
 }).call(this,require('_process'))
-},{"./ReactElement":170,"./ReactElementValidator":172,"_process":357}],170:[function(require,module,exports){
+},{"./ReactElement":170,"./ReactElementValidator":172,"_process":360}],170:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2014-present, Facebook, Inc.
@@ -20080,7 +20080,7 @@ ReactElement.isValidElement = function (object) {
 
 module.exports = ReactElement;
 }).call(this,require('_process'))
-},{"./ReactCurrentOwner":168,"./ReactElementSymbol":171,"./canDefineProperty":178,"_process":357,"fbjs/lib/warning":25,"object-assign":26}],171:[function(require,module,exports){
+},{"./ReactCurrentOwner":168,"./ReactElementSymbol":171,"./canDefineProperty":178,"_process":360,"fbjs/lib/warning":25,"object-assign":26}],171:[function(require,module,exports){
 arguments[4][83][0].apply(exports,arguments)
 },{"dup":83}],172:[function(require,module,exports){
 (function (process){
@@ -20337,7 +20337,7 @@ var ReactElementValidator = {
 
 module.exports = ReactElementValidator;
 }).call(this,require('_process'))
-},{"./ReactComponentTreeHook":167,"./ReactCurrentOwner":168,"./ReactElement":170,"./canDefineProperty":178,"./checkReactTypeSpec":179,"./getIteratorFn":181,"./lowPriorityWarning":183,"_process":357,"fbjs/lib/warning":25}],173:[function(require,module,exports){
+},{"./ReactComponentTreeHook":167,"./ReactCurrentOwner":168,"./ReactElement":170,"./canDefineProperty":178,"./checkReactTypeSpec":179,"./getIteratorFn":181,"./lowPriorityWarning":183,"_process":360,"fbjs/lib/warning":25}],173:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2015-present, Facebook, Inc.
@@ -20432,9 +20432,9 @@ var ReactNoopUpdateQueue = {
 
 module.exports = ReactNoopUpdateQueue;
 }).call(this,require('_process'))
-},{"_process":357,"fbjs/lib/warning":25}],174:[function(require,module,exports){
+},{"_process":360,"fbjs/lib/warning":25}],174:[function(require,module,exports){
 arguments[4][101][0].apply(exports,arguments)
-},{"_process":357,"dup":101}],175:[function(require,module,exports){
+},{"_process":360,"dup":101}],175:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -20481,7 +20481,7 @@ if (process.env.NODE_ENV !== 'production') {
 
 module.exports = canDefineProperty;
 }).call(this,require('_process'))
-},{"_process":357}],179:[function(require,module,exports){
+},{"_process":360}],179:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -20568,7 +20568,7 @@ function checkReactTypeSpec(typeSpecs, values, location, componentName, element,
 
 module.exports = checkReactTypeSpec;
 }).call(this,require('_process'))
-},{"./ReactComponentTreeHook":167,"./ReactPropTypeLocationNames":174,"./ReactPropTypesSecret":176,"./reactProdInvariant":185,"_process":357,"fbjs/lib/invariant":18,"fbjs/lib/warning":25}],180:[function(require,module,exports){
+},{"./ReactComponentTreeHook":167,"./ReactPropTypeLocationNames":174,"./ReactPropTypesSecret":176,"./reactProdInvariant":185,"_process":360,"fbjs/lib/invariant":18,"fbjs/lib/warning":25}],180:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -20675,7 +20675,7 @@ if (process.env.NODE_ENV !== 'production') {
 
 module.exports = lowPriorityWarning;
 }).call(this,require('_process'))
-},{"_process":357}],184:[function(require,module,exports){
+},{"_process":360}],184:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -20713,7 +20713,7 @@ function onlyChild(children) {
 
 module.exports = onlyChild;
 }).call(this,require('_process'))
-},{"./ReactElement":170,"./reactProdInvariant":185,"_process":357,"fbjs/lib/invariant":18}],185:[function(require,module,exports){
+},{"./ReactElement":170,"./reactProdInvariant":185,"_process":360,"fbjs/lib/invariant":18}],185:[function(require,module,exports){
 arguments[4][154][0].apply(exports,arguments)
 },{"dup":154}],186:[function(require,module,exports){
 (function (process){
@@ -20891,12 +20891,13 @@ function traverseAllChildren(children, callback, traverseContext) {
 
 module.exports = traverseAllChildren;
 }).call(this,require('_process'))
-},{"./KeyEscapeUtils":162,"./ReactCurrentOwner":168,"./ReactElementSymbol":171,"./getIteratorFn":181,"./reactProdInvariant":185,"_process":357,"fbjs/lib/invariant":18,"fbjs/lib/warning":25}],187:[function(require,module,exports){
+},{"./KeyEscapeUtils":162,"./ReactCurrentOwner":168,"./ReactElementSymbol":171,"./getIteratorFn":181,"./reactProdInvariant":185,"_process":360,"fbjs/lib/invariant":18,"fbjs/lib/warning":25}],187:[function(require,module,exports){
 'use strict';
 
 module.exports = require('./lib/React');
 
 },{"./lib/React":164}],188:[function(require,module,exports){
+// Generated by purs version 0.11.6
 "use strict";
 var Concur_React = require("../Concur.React");
 var Control_Applicative = require("../Control.Applicative");
@@ -20956,10 +20957,6 @@ var textarea = function ($12) {
     return Concur_React["el'"](React_DOM.textarea($12));
 };
 var textarea$prime = textarea([  ]);
-
-// Wrappers for all DOM elements from purescript-react
-
-// TODO: Generate these mechanically somehow
 var text = function ($13) {
     return Concur_React.display(Control_Applicative.pure(Control_Applicative.applicativeArray)(React_DOM.text($13)));
 };
@@ -21587,7 +21584,8 @@ module.exports = {
     "wbr'": wbr$prime
 };
 
-},{"../Concur.React":191,"../Control.Applicative":194,"../Control.Semigroupoid":228,"../Prelude":342,"../React.DOM":345,"../React.DOM.Props":344}],189:[function(require,module,exports){
+},{"../Concur.React":191,"../Control.Applicative":194,"../Control.Semigroupoid":230,"../Prelude":344,"../React.DOM":347,"../React.DOM.Props":346}],189:[function(require,module,exports){
+// Generated by purs version 0.11.6
 "use strict";
 var Concur_React = require("../Concur.React");
 var Control_Applicative = require("../Control.Applicative");
@@ -21624,12 +21622,12 @@ module.exports = {
     runWidgetInDom: runWidgetInDom
 };
 
-},{"../Concur.React":191,"../Control.Applicative":194,"../Control.Bind":200,"../Control.Monad.Eff":213,"../DOM":243,"../DOM.HTML":236,"../DOM.HTML.Types":232,"../DOM.HTML.Window":234,"../DOM.Node.NonElementParentNode":238,"../DOM.Node.Types":239,"../Data.Functor":279,"../Data.Maybe":292,"../Data.Unit":332,"../Prelude":342,"../ReactDOM":349}],190:[function(require,module,exports){
+},{"../Concur.React":191,"../Control.Applicative":194,"../Control.Bind":200,"../Control.Monad.Eff":215,"../DOM":245,"../DOM.HTML":238,"../DOM.HTML.Types":234,"../DOM.HTML.Window":236,"../DOM.Node.NonElementParentNode":240,"../DOM.Node.Types":241,"../Data.Functor":281,"../Data.Maybe":294,"../Data.Unit":334,"../Prelude":344,"../ReactDOM":351}],190:[function(require,module,exports){
+// Generated by purs version 0.11.6
 "use strict";
 var Concur_React = require("../Concur.React");
 var Concur_React_DOM = require("../Concur.React.DOM");
 var Control_Applicative = require("../Control.Applicative");
-var Control_Bind = require("../Control.Bind");
 var Control_Category = require("../Control.Category");
 var Control_Monad_Eff = require("../Control.Monad.Eff");
 var Control_Semigroupoid = require("../Control.Semigroupoid");
@@ -21642,8 +21640,6 @@ var Prelude = require("../Prelude");
 var React = require("../React");
 var React_DOM = require("../React.DOM");
 var React_DOM_Props = require("../React.DOM.Props");
-
-// Wrap an element with multiple arbitrary eventHandlers over a widget
 var elEventMany = function (evts) {
     return function (e) {
         return function (props) {
@@ -21652,88 +21648,60 @@ var elEventMany = function (evts) {
                     return new Concur_React.RenderEnd(new Data_Either.Right(v.value0));
                 };
                 if (v instanceof Concur_React.Widget) {
-                    return Concur_React.Widget.create(function __do() {
-                        var v1 = v.value0();
-                        return function (send) {
-                            return [ e(Data_Semigroup.append(Data_Semigroup.semigroupArray)(props)(Data_Functor.map(Data_Functor.functorArray)(function (evt) {
-                                return evt(function ($10) {
-                                    return send(Control_Applicative.pure(Concur_React.renderApplicative)(Data_Either.Left.create($10)));
-                                });
-                            })(evts)))(v1(function ($11) {
-                                return send(Data_Functor.map(Concur_React.renderFunctor)(Data_Either.Right.create)($11));
-                            })) ];
-                        };
+                    return Concur_React.Widget.create(function (send) {
+                        return [ e(Data_Semigroup.append(Data_Semigroup.semigroupArray)(props)(Data_Functor.map(Data_Functor.functorArray)(function (evt) {
+                            return evt(function ($9) {
+                                return send(Control_Applicative.pure(Concur_React.renderApplicative)(Data_Either.Left.create($9)));
+                            });
+                        })(evts)))(v.value0(function ($10) {
+                            return send(Data_Functor.map(Concur_React.renderFunctor)(Data_Either.Right.create)($10));
+                        })) ];
                     });
+                };
+                if (v instanceof Concur_React.WidgetEff) {
+                    return new Concur_React.WidgetEff(Data_Functor.map(Control_Monad_Eff.functorEff)(elEventMany(evts)(e)(props))(v.value0));
                 };
                 throw new Error("Failed pattern match at Concur.React.Widgets line 45, column 1 - line 45, column 162: " + [ evts.constructor.name, e.constructor.name, props.constructor.name, v.constructor.name ]);
             };
         };
     };
 };
-
-// Wrap an element with an arbitrary eventHandler over a widget
 var elEvent = function (evt) {
     return elEventMany([ evt ]);
 };
-
-// Combinator Widgets, at a more higher level than those in Concur.React.DOM
-
-// Wrap a button around a widget
-
-// Returns a `Left unit on click events.
-
-// Or a `Right a` when the inner `Widget HTML eff a` ends.
 var wrapButton = function (props) {
     return function (w) {
-        return elEvent(function ($12) {
+        return elEvent(function ($11) {
             return React_DOM_Props.onClick((function (v) {
-                return function ($13) {
-                    return v(Data_Function["const"](Data_Unit.unit)($13));
+                return function ($12) {
+                    return v(Data_Function["const"](Data_Unit.unit)($12));
                 };
-            })($12));
+            })($11));
         })(React_DOM.button)(props)(w);
     };
 };
-
-// Like a wrapButton, but takes no props
 var wrapButton$prime = wrapButton([  ]);
-
-// Wrap a div with key handlers around a widget
-
-// Returns a `Left unit on key events.
-
-// Or a `Right a` when the inner `Widget HTML eff a` ends.
 var wrapKeyHandler = function (props) {
     return function (w) {
         return elEvent(React_DOM_Props.onKeyDown)(React_DOM.div)(props)(w);
     };
 };
-
-// Specialised key handler widget with only static children
 var displayKeyHandler = function (props) {
     return function (w) {
         return Data_Functor.map(Concur_React.renderFunctor)(Data_Either.either(Control_Category.id(Control_Category.categoryFn))(Control_Category.id(Control_Category.categoryFn)))(wrapKeyHandler(props)(w));
     };
 };
-
-// Specialised button with only static children
 var displayButton = function (props) {
     return function (d) {
         return Data_Functor.map(Concur_React.renderFunctor)(Data_Either.either(Control_Category.id(Control_Category.categoryFn))(Control_Category.id(Control_Category.categoryFn)))(wrapButton(props)(d));
     };
 };
-
-// Like a displayButton, but takes no props
 var displayButton$prime = displayButton([  ]);
-
-// Specialised text only button
 var textButton = function (props) {
     return function (label) {
         return displayButton(props)(Concur_React_DOM.text(label));
     };
 };
-
-// Like a textButton, but takes no props
 var textButton$prime = textButton([  ]);
 module.exports = {
     displayButton: displayButton, 
@@ -21748,7 +21716,7 @@ module.exports = {
     wrapKeyHandler: wrapKeyHandler
 };
 
-},{"../Concur.React":191,"../Concur.React.DOM":188,"../Control.Applicative":194,"../Control.Bind":200,"../Control.Category":201,"../Control.Monad.Eff":213,"../Control.Semigroupoid":228,"../Data.Either":264,"../Data.Function":276,"../Data.Functor":279,"../Data.Semigroup":315,"../Data.Unit":332,"../Prelude":342,"../React":347,"../React.DOM":345,"../React.DOM.Props":344}],191:[function(require,module,exports){
+},{"../Concur.React":191,"../Concur.React.DOM":188,"../Control.Applicative":194,"../Control.Category":201,"../Control.Monad.Eff":215,"../Control.Semigroupoid":230,"../Data.Either":266,"../Data.Function":278,"../Data.Functor":281,"../Data.Semigroup":317,"../Data.Unit":334,"../Prelude":344,"../React":349,"../React.DOM":347,"../React.DOM.Props":346}],191:[function(require,module,exports){
 "use strict";
 var Control_Alt = require("../Control.Alt");
 var Control_Alternative = require("../Control.Alternative");
@@ -21757,14 +21725,19 @@ var Control_Apply = require("../Control.Apply");
 var Control_Bind = require("../Control.Bind");
 var Control_Monad = require("../Control.Monad");
 var Control_Monad_Eff = require("../Control.Monad.Eff");
+var Control_Monad_Eff_Class = require("../Control.Monad.Eff.Class");
+var Control_Monad_Eff_Unsafe = require("../Control.Monad.Eff.Unsafe");
+var Control_Monad_Rec_Class = require("../Control.Monad.Rec.Class");
 var Control_Plus = require("../Control.Plus");
 var Control_Semigroupoid = require("../Control.Semigroupoid");
 var Data_Array = require("../Data.Array");
+var Data_Either = require("../Data.Either");
 var Data_Foldable = require("../Data.Foldable");
 var Data_Function = require("../Data.Function");
 var Data_Functor = require("../Data.Functor");
 var Data_Monoid = require("../Data.Monoid");
 var Data_Semigroup = require("../Data.Semigroup");
+var Data_Unit = require("../Data.Unit");
 var Prelude = require("../Prelude");
 var React = require("../React");
 var React_DOM = require("../React.DOM");
@@ -21787,22 +21760,31 @@ var Widget = (function () {
     };
     return Widget;
 })();
+var WidgetEff = (function () {
+    function WidgetEff(value0) {
+        this.value0 = value0;
+    };
+    WidgetEff.create = function (value0) {
+        return new WidgetEff(value0);
+    };
+    return WidgetEff;
+})();
 var renderFunctor = new Data_Functor.Functor(function (f) {
     return function (v) {
         if (v instanceof RenderEnd) {
             return new RenderEnd(f(v.value0));
         };
         if (v instanceof Widget) {
-            return Widget.create(function __do() {
-                var v1 = v.value0();
-                return function (h) {
-                    return v1(function ($53) {
-                        return h(Data_Functor.map(renderFunctor)(f)($53));
-                    });
-                };
+            return Widget.create(function (h) {
+                return v.value0(function ($62) {
+                    return h(Data_Functor.map(renderFunctor)(f)($62));
+                });
             });
         };
-        throw new Error("Failed pattern match at Concur.React line 26, column 1 - line 26, column 49: " + [ f.constructor.name, v.constructor.name ]);
+        if (v instanceof WidgetEff) {
+            return new WidgetEff(Data_Functor.map(Control_Monad_Eff.functorEff)(Data_Functor.map(renderFunctor)(f))(v.value0));
+        };
+        throw new Error("Failed pattern match at Concur.React line 30, column 1 - line 30, column 49: " + [ f.constructor.name, v.constructor.name ]);
     };
 });
 var renderMonad = new Control_Monad.Monad(function () {
@@ -21818,16 +21800,16 @@ var renderBind = new Control_Bind.Bind(function () {
             return k(v.value0);
         };
         if (v instanceof Widget) {
-            return Widget.create(function __do() {
-                var v1 = v.value0();
-                return function (h) {
-                    return v1(function ($54) {
-                        return h(Data_Function.flip(Control_Bind.bind(renderBind))(k)($54));
-                    });
-                };
+            return Widget.create(function (h) {
+                return v.value0(function ($63) {
+                    return h(Data_Function.flip(Control_Bind.bind(renderBind))(k)($63));
+                });
             });
         };
-        throw new Error("Failed pattern match at Concur.React line 32, column 1 - line 32, column 43: " + [ v.constructor.name, k.constructor.name ]);
+        if (v instanceof WidgetEff) {
+            return new WidgetEff(Data_Functor.map(Control_Monad_Eff.functorEff)(Data_Function.flip(Control_Bind.bind(renderBind))(k))(v.value0));
+        };
+        throw new Error("Failed pattern match at Concur.React line 35, column 1 - line 35, column 43: " + [ v.constructor.name, k.constructor.name ]);
     };
 });
 var renderApply = new Control_Apply.Apply(function () {
@@ -21837,9 +21819,27 @@ var renderApplicative = new Control_Applicative.Applicative(function () {
     return renderApply;
 }, RenderEnd.create);
 
-// TODO: Make Widget TailRecursive
+// NOTE: Widgets are already tail recursion safe, thanks to setState effectively being an effectful trampoline.
 
-// instance renderMonadRec :: MonadRec (Widget v eff) where
+// However, we still need a MonadRec instance to allow monad transformers like StateT on top.
+
+// See this discussion on github - https://github.com/ajnsit/purescript-concur/issues/1
+var renderMonadRec = new Control_Monad_Rec_Class.MonadRec(function () {
+    return renderMonad;
+}, function (f) {
+    return function (a) {
+        var go = function (v) {
+            if (v instanceof Control_Monad_Rec_Class.Loop) {
+                return Control_Monad_Rec_Class.tailRecM(renderMonadRec)(f)(v.value0);
+            };
+            if (v instanceof Control_Monad_Rec_Class.Done) {
+                return Control_Applicative.pure(renderApplicative)(v.value0);
+            };
+            throw new Error("Failed pattern match at Concur.React line 55, column 7 - line 55, column 35: " + [ v.constructor.name ]);
+        };
+        return Control_Bind.bindFlipped(renderBind)(go)(f(a));
+    };
+});
 var renderAlt = function (dictSemigroup) {
     return new Control_Alt.Alt(function () {
         return renderFunctor;
@@ -21851,51 +21851,72 @@ var renderAlt = function (dictSemigroup) {
             if (v1 instanceof RenderEnd) {
                 return new RenderEnd(v1.value0);
             };
+            if (v instanceof WidgetEff) {
+                return new WidgetEff(Data_Functor.map(Control_Monad_Eff.functorEff)(Data_Function.flip(Control_Alt.alt(renderAlt(dictSemigroup)))(v1))(v.value0));
+            };
+            if (v1 instanceof WidgetEff) {
+                return new WidgetEff(Data_Functor.map(Control_Monad_Eff.functorEff)(Control_Alt.alt(renderAlt(dictSemigroup))(v))(v1.value0));
+            };
             if (v instanceof Widget && v1 instanceof Widget) {
-                return Widget.create(function __do() {
-                    var v2 = v.value0();
-                    var v3 = v1.value0();
-                    return function (h) {
-                        var hg = function (v4) {
-                            if (v4 instanceof RenderEnd) {
-                                return h(new RenderEnd(v4.value0));
-                            };
-                            return h(Control_Alt.alt(renderAlt(dictSemigroup))(new Widget(Control_Applicative.pure(Control_Monad_Eff.applicativeEff)(v2)))(v4));
+                return Widget.create(function (h) {
+                    var hg = function (v2) {
+                        if (v2 instanceof RenderEnd) {
+                            return h(new RenderEnd(v2.value0));
                         };
-                        var hf = function (v4) {
-                            if (v4 instanceof RenderEnd) {
-                                return h(new RenderEnd(v4.value0));
-                            };
-                            return h(Control_Alt.alt(renderAlt(dictSemigroup))(v4)(new Widget(Control_Applicative.pure(Control_Monad_Eff.applicativeEff)(v3))));
-                        };
-                        return Data_Semigroup.append(dictSemigroup)(v2(hf))(v3(hg));
+                        return h(Control_Alt.alt(renderAlt(dictSemigroup))(new Widget(v.value0))(v2));
                     };
+                    var hf = function (v2) {
+                        if (v2 instanceof RenderEnd) {
+                            return h(new RenderEnd(v2.value0));
+                        };
+                        return h(Control_Alt.alt(renderAlt(dictSemigroup))(v2)(new Widget(v1.value0)));
+                    };
+                    return Data_Semigroup.append(dictSemigroup)(v.value0(hf))(v1.value0(hg));
                 });
             };
-            throw new Error("Failed pattern match at Concur.React line 49, column 1 - line 49, column 56: " + [ v.constructor.name, v1.constructor.name ]);
+            throw new Error("Failed pattern match at Concur.React line 58, column 1 - line 58, column 56: " + [ v.constructor.name, v1.constructor.name ]);
         };
     });
 };
 var mapView = function (v) {
     return function (v1) {
         if (v1 instanceof Widget) {
-            return Widget.create(function __do() {
-                var v2 = v1.value0();
-                return function ($55) {
-                    return v(v2($55));
-                };
+            return Widget.create(function ($64) {
+                return v(v1.value0($64));
             });
+        };
+        if (v1 instanceof WidgetEff) {
+            return new WidgetEff(Data_Functor.map(Control_Monad_Eff.functorEff)(mapView(v))(v1.value0));
         };
         return v1;
     };
 };
+var liftRenderEff = function (eff) {
+    return new WidgetEff(Data_Functor.map(Control_Monad_Eff.functorEff)(Control_Applicative.pure(renderApplicative))(eff));
+};
+var renderMonadEff = new Control_Monad_Eff_Class.MonadEff(function () {
+    return renderMonad;
+}, function ($65) {
+    return liftRenderEff(Control_Monad_Eff_Unsafe.unsafeCoerceEff($65));
+});
+
+// Pause for a negligible amount of time. Forces continuations to pass through the trampoline.
+
+// Avoids stack overflows in (ridiculous) cases where a widget calls itself without any intervening widgets or effects.
+
+// E.g. -
+
+//   BAD  `counter n = if n < 10000 then counter (n+1) else pure n`
+
+//   GOOD `counter n = if n < 10000 then (pulse >>= const (counter (n+1))) else pure n`
+var pulse = Control_Monad_Eff_Class.liftEff(renderMonadEff)(Control_Applicative.pure(Control_Monad_Eff.applicativeEff)(Data_Unit.unit));
 var el = function (n) {
     return mapView(function (v) {
         return [ n(v) ];
     });
 };
-var display = function ($56) {
-    return Widget.create(Control_Applicative.pure(Control_Monad_Eff.applicativeEff)(Data_Function["const"]($56)));
+var display = function ($66) {
+    return Widget.create(Data_Function["const"]($66));
 };
 var renderPlus = function (dictMonoid) {
     return new Control_Plus.Plus(function () {
@@ -21909,8 +21930,8 @@ var orr = function (dictMonoid) {
     return Data_Foldable.foldl(Data_Foldable.foldableArray)(Control_Alt.alt(renderAlt(dictMonoid.Semigroup0())))(never(dictMonoid));
 };
 var el$prime = function (n) {
-    return function ($57) {
-        return el(n)(orr(Data_Monoid.monoidArray)($57));
+    return function ($67) {
+        return el(n)(orr(Data_Monoid.monoidArray)($67));
     };
 };
 var renderAlternative = function (dictMonoid) {
@@ -21921,20 +21942,55 @@ var renderAlternative = function (dictMonoid) {
     });
 };
 var componentClass = function (init) {
+    var renderStepEff = function (eff$prime) {
+        return function __do() {
+            var v = eff$prime();
+            if (v instanceof WidgetEff) {
+                return new Control_Monad_Rec_Class.Loop(v.value0);
+            };
+            if (v instanceof RenderEnd) {
+                return new Control_Monad_Rec_Class.Done(new Data_Either.Right(v.value0));
+            };
+            if (v instanceof Widget) {
+                return new Control_Monad_Rec_Class.Done(new Data_Either.Left(v.value0));
+            };
+            throw new Error("Failed pattern match at Concur.React line 146, column 14 - line 149, column 34: " + [ v.constructor.name ]);
+        };
+    };
+    var renderComponentInner$prime = function ($$this) {
+        return function (eff) {
+            return function __do() {
+                var v = Control_Monad_Rec_Class.tailRecM(Control_Monad_Rec_Class.monadRecEff)(renderStepEff)(eff)();
+                if (v instanceof Data_Either.Left) {
+                    var handler = function (w) {
+                        return function __do() {
+                            var v1 = (function () {
+                                if (w instanceof WidgetEff) {
+                                    return Control_Monad_Eff_Unsafe.unsafeCoerceEff(w.value0);
+                                };
+                                return Control_Applicative.pure(Control_Monad_Eff.applicativeEff)(w);
+                            })()();
+                            return Data_Functor["void"](Control_Monad_Eff.functorEff)(React.writeState($$this)(v1))();
+                        };
+                    };
+                    return v.value0(handler);
+                };
+                if (v instanceof Data_Either.Right) {
+                    return [  ];
+                };
+                throw new Error("Failed pattern match at Concur.React line 134, column 7 - line 143, column 27: " + [ v.constructor.name ]);
+            };
+        };
+    };
+    var renderComponentInner = function ($$this) {
+        return function (w) {
+            return renderComponentInner$prime($$this)(Control_Applicative.pure(Control_Monad_Eff.applicativeEff)(w));
+        };
+    };
     var renderInner = function ($$this) {
         return function __do() {
             var v = React.readState($$this)();
-            if (v instanceof RenderEnd) {
-                return [  ];
-            };
-            if (v instanceof Widget) {
-                var handler = function (r$prime) {
-                    return Data_Functor["void"](Control_Monad_Eff.functorEff)(React.writeState($$this)(r$prime));
-                };
-                var v1 = v.value0();
-                return v1(handler);
-            };
-            throw new Error("Failed pattern match at Concur.React line 106, column 7 - line 111, column 27: " + [ v.constructor.name ]);
+            return renderComponentInner($$this)(v)();
         };
     };
     var render = function ($$this) {
@@ -21951,25 +22007,30 @@ var renderComponent = function (init) {
 module.exports = {
     RenderEnd: RenderEnd, 
     Widget: Widget, 
+    WidgetEff: WidgetEff, 
     componentClass: componentClass, 
     display: display, 
     el: el, 
     "el'": el$prime, 
+    liftRenderEff: liftRenderEff, 
     mapView: mapView, 
     never: never, 
     orr: orr, 
+    pulse: pulse, 
     renderComponent: renderComponent, 
     renderFunctor: renderFunctor, 
     renderBind: renderBind, 
     renderApplicative: renderApplicative, 
     renderApply: renderApply, 
     renderMonad: renderMonad, 
+    renderMonadRec: renderMonadRec, 
     renderAlt: renderAlt, 
     renderPlus: renderPlus, 
-    renderAlternative: renderAlternative
+    renderAlternative: renderAlternative, 
+    renderMonadEff: renderMonadEff
 };
 
-},{"../Control.Alt":192,"../Control.Alternative":193,"../Control.Applicative":194,"../Control.Apply":196,"../Control.Bind":200,"../Control.Monad":224,"../Control.Monad.Eff":213,"../Control.Plus":227,"../Control.Semigroupoid":228,"../Data.Array":248,"../Data.Foldable":271,"../Data.Function":276,"../Data.Functor":279,"../Data.Monoid":299,"../Data.Semigroup":315,"../Prelude":342,"../React":347,"../React.DOM":345,"../React.DOM.Props":344}],192:[function(require,module,exports){
+},{"../Control.Alt":192,"../Control.Alternative":193,"../Control.Applicative":194,"../Control.Apply":196,"../Control.Bind":200,"../Control.Monad":226,"../Control.Monad.Eff":215,"../Control.Monad.Eff.Class":207,"../Control.Monad.Eff.Unsafe":213,"../Control.Monad.Rec.Class":220,"../Control.Plus":229,"../Control.Semigroupoid":230,"../Data.Array":250,"../Data.Either":266,"../Data.Foldable":273,"../Data.Function":278,"../Data.Functor":281,"../Data.Monoid":301,"../Data.Semigroup":317,"../Data.Unit":334,"../Prelude":344,"../React":349,"../React.DOM":347,"../React.DOM.Props":346}],192:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Data_Functor = require("../Data.Functor");
@@ -21990,7 +22051,7 @@ module.exports = {
     altArray: altArray
 };
 
-},{"../Data.Functor":279,"../Data.Semigroup":315}],193:[function(require,module,exports){
+},{"../Data.Functor":281,"../Data.Semigroup":317}],193:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Alt = require("../Control.Alt");
@@ -22012,7 +22073,7 @@ module.exports = {
     alternativeArray: alternativeArray
 };
 
-},{"../Control.Alt":192,"../Control.Applicative":194,"../Control.Apply":196,"../Control.Plus":227,"../Data.Functor":279}],194:[function(require,module,exports){
+},{"../Control.Alt":192,"../Control.Applicative":194,"../Control.Apply":196,"../Control.Plus":229,"../Data.Functor":281}],194:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Apply = require("../Control.Apply");
@@ -22080,7 +22141,7 @@ module.exports = {
     applicativeArray: applicativeArray
 };
 
-},{"../Control.Apply":196,"../Data.Functor":279,"../Data.Unit":332}],195:[function(require,module,exports){
+},{"../Control.Apply":196,"../Data.Functor":281,"../Data.Unit":334}],195:[function(require,module,exports){
 "use strict";
 
 exports.arrayApply = function (fs) {
@@ -22200,7 +22261,7 @@ module.exports = {
     applyArray: applyArray
 };
 
-},{"../Control.Category":201,"../Data.Function":276,"../Data.Functor":279,"./foreign":195}],197:[function(require,module,exports){
+},{"../Control.Category":201,"../Data.Function":278,"../Data.Functor":281,"./foreign":195}],197:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Biapply = require("../Control.Biapply");
@@ -22276,7 +22337,7 @@ module.exports = {
     bilift3: bilift3
 };
 
-},{"../Control.Category":201,"../Data.Bifunctor":255,"../Data.Function":276}],199:[function(require,module,exports){
+},{"../Control.Category":201,"../Data.Bifunctor":257,"../Data.Function":278}],199:[function(require,module,exports){
 "use strict";
 
 exports.arrayBind = function (arr) {
@@ -22382,7 +22443,7 @@ module.exports = {
     discardUnit: discardUnit
 };
 
-},{"../Control.Applicative":194,"../Control.Apply":196,"../Control.Category":201,"../Data.Function":276,"../Data.Functor":279,"../Data.Unit":332,"./foreign":199}],201:[function(require,module,exports){
+},{"../Control.Applicative":194,"../Control.Apply":196,"../Control.Category":201,"../Data.Function":278,"../Data.Functor":281,"../Data.Unit":334,"./foreign":199}],201:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Semigroupoid = require("../Control.Semigroupoid");
@@ -22404,7 +22465,7 @@ module.exports = {
     categoryFn: categoryFn
 };
 
-},{"../Control.Semigroupoid":228}],202:[function(require,module,exports){
+},{"../Control.Semigroupoid":230}],202:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Extend = require("../Control.Extend");
@@ -22421,7 +22482,7 @@ module.exports = {
     extract: extract
 };
 
-},{"../Control.Extend":204,"../Data.Functor":279}],203:[function(require,module,exports){
+},{"../Control.Extend":204,"../Data.Functor":281}],203:[function(require,module,exports){
 "use strict";
 
 exports.arrayExtend = function(f) {
@@ -22501,7 +22562,7 @@ module.exports = {
     extendArray: extendArray
 };
 
-},{"../Control.Category":201,"../Data.Functor":279,"../Data.Semigroup":315,"./foreign":203}],205:[function(require,module,exports){
+},{"../Control.Category":201,"../Data.Functor":281,"../Data.Semigroup":317,"./foreign":203}],205:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Data_Unit = require("../Data.Unit");
@@ -22534,7 +22595,7 @@ module.exports = {
     lazyUnit: lazyUnit
 };
 
-},{"../Data.Unit":332}],206:[function(require,module,exports){
+},{"../Data.Unit":334}],206:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Prelude = require("../Prelude");
@@ -22550,7 +22611,7 @@ module.exports = {
     callCC: callCC
 };
 
-},{"../Prelude":342}],207:[function(require,module,exports){
+},{"../Prelude":344}],207:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Category = require("../Control.Category");
@@ -22572,7 +22633,76 @@ module.exports = {
     monadEffEff: monadEffEff
 };
 
-},{"../Control.Category":201,"../Control.Monad":224,"../Control.Monad.Eff":213}],208:[function(require,module,exports){
+},{"../Control.Category":201,"../Control.Monad":226,"../Control.Monad.Eff":215}],208:[function(require,module,exports){
+"use strict";
+
+exports.log = function (s) {
+  return function () {
+    console.log(s);
+    return {};
+  };
+};
+
+exports.warn = function (s) {
+  return function () {
+    console.warn(s);
+    return {};
+  };
+};
+
+exports.error = function (s) {
+  return function () {
+    console.error(s);
+    return {};
+  };
+};
+
+exports.info = function (s) {
+  return function () {
+    console.info(s);
+    return {};
+  };
+};
+
+},{}],209:[function(require,module,exports){
+// Generated by purs version 0.11.6
+"use strict";
+var $foreign = require("./foreign");
+var Control_Monad_Eff = require("../Control.Monad.Eff");
+var Data_Show = require("../Data.Show");
+var Data_Unit = require("../Data.Unit");
+var warnShow = function (dictShow) {
+    return function (a) {
+        return $foreign.warn(Data_Show.show(dictShow)(a));
+    };
+};
+var logShow = function (dictShow) {
+    return function (a) {
+        return $foreign.log(Data_Show.show(dictShow)(a));
+    };
+};
+var infoShow = function (dictShow) {
+    return function (a) {
+        return $foreign.info(Data_Show.show(dictShow)(a));
+    };
+};
+var errorShow = function (dictShow) {
+    return function (a) {
+        return $foreign.error(Data_Show.show(dictShow)(a));
+    };
+};
+module.exports = {
+    errorShow: errorShow, 
+    infoShow: infoShow, 
+    logShow: logShow, 
+    warnShow: warnShow, 
+    error: $foreign.error, 
+    info: $foreign.info, 
+    log: $foreign.log, 
+    warn: $foreign.warn
+};
+
+},{"../Control.Monad.Eff":215,"../Data.Show":321,"../Data.Unit":334,"./foreign":208}],210:[function(require,module,exports){
 "use strict";
 
 exports.mkEffFn1 = function mkEffFn1(fn) {
@@ -22805,7 +22935,7 @@ exports.runEffFn10 = function runEffFn10(fn) {
   };
 };
 
-},{}],209:[function(require,module,exports){
+},{}],211:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -22833,14 +22963,14 @@ module.exports = {
     runEffFn9: $foreign.runEffFn9
 };
 
-},{"../Control.Monad.Eff":213,"./foreign":208}],210:[function(require,module,exports){
+},{"../Control.Monad.Eff":215,"./foreign":210}],212:[function(require,module,exports){
 "use strict";
 
 exports.unsafeCoerceEff = function (f) {
   return f;
 };
 
-},{}],211:[function(require,module,exports){
+},{}],213:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -22854,7 +22984,7 @@ module.exports = {
     unsafeCoerceEff: $foreign.unsafeCoerceEff
 };
 
-},{"../Control.Monad.Eff":213,"../Control.Semigroupoid":228,"./foreign":210}],212:[function(require,module,exports){
+},{"../Control.Monad.Eff":215,"../Control.Semigroupoid":230,"./foreign":212}],214:[function(require,module,exports){
 "use strict";
 
 exports.pureE = function (a) {
@@ -22915,7 +23045,7 @@ exports.foreachE = function (as) {
   };
 };
 
-},{}],213:[function(require,module,exports){
+},{}],215:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -22953,7 +23083,7 @@ module.exports = {
     whileE: $foreign.whileE
 };
 
-},{"../Control.Applicative":194,"../Control.Apply":196,"../Control.Bind":200,"../Control.Monad":224,"../Data.Functor":279,"../Data.Unit":332,"./foreign":212}],214:[function(require,module,exports){
+},{"../Control.Applicative":194,"../Control.Apply":196,"../Control.Bind":200,"../Control.Monad":226,"../Data.Functor":281,"../Data.Unit":334,"./foreign":214}],216:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Applicative = require("../Control.Applicative");
@@ -23066,7 +23196,7 @@ module.exports = {
     monadErrorMaybe: monadErrorMaybe
 };
 
-},{"../Control.Applicative":194,"../Control.Bind":200,"../Control.Semigroupoid":228,"../Data.Either":264,"../Data.Function":276,"../Data.Functor":279,"../Data.Maybe":292,"../Data.Unit":332,"../Prelude":342}],215:[function(require,module,exports){
+},{"../Control.Applicative":194,"../Control.Bind":200,"../Control.Semigroupoid":230,"../Data.Either":266,"../Data.Function":278,"../Data.Functor":281,"../Data.Maybe":294,"../Data.Unit":334,"../Prelude":344}],217:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Alt = require("../Control.Alt");
@@ -23383,7 +23513,7 @@ module.exports = {
     monadWriterExceptT: monadWriterExceptT
 };
 
-},{"../Control.Alt":192,"../Control.Alternative":193,"../Control.Applicative":194,"../Control.Apply":196,"../Control.Bind":200,"../Control.Category":201,"../Control.Monad":224,"../Control.Monad.Cont.Class":206,"../Control.Monad.Eff.Class":207,"../Control.Monad.Error.Class":214,"../Control.Monad.Reader.Class":217,"../Control.Monad.Rec.Class":218,"../Control.Monad.State.Class":221,"../Control.Monad.Trans.Class":222,"../Control.Monad.Writer.Class":223,"../Control.MonadPlus":225,"../Control.MonadZero":226,"../Control.Plus":227,"../Control.Semigroupoid":228,"../Data.Either":264,"../Data.Function":276,"../Data.Functor":279,"../Data.Monoid":299,"../Data.Newtype":301,"../Data.Semigroup":315,"../Data.Tuple":328,"../Prelude":342}],216:[function(require,module,exports){
+},{"../Control.Alt":192,"../Control.Alternative":193,"../Control.Applicative":194,"../Control.Apply":196,"../Control.Bind":200,"../Control.Category":201,"../Control.Monad":226,"../Control.Monad.Cont.Class":206,"../Control.Monad.Eff.Class":207,"../Control.Monad.Error.Class":216,"../Control.Monad.Reader.Class":219,"../Control.Monad.Rec.Class":220,"../Control.Monad.State.Class":223,"../Control.Monad.Trans.Class":224,"../Control.Monad.Writer.Class":225,"../Control.MonadPlus":227,"../Control.MonadZero":228,"../Control.Plus":229,"../Control.Semigroupoid":230,"../Data.Either":266,"../Data.Function":278,"../Data.Functor":281,"../Data.Monoid":301,"../Data.Newtype":303,"../Data.Semigroup":317,"../Data.Tuple":330,"../Prelude":344}],218:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Monad_Error_Class = require("../Control.Monad.Error.Class");
@@ -23408,7 +23538,7 @@ module.exports = {
     withExcept: withExcept
 };
 
-},{"../Control.Monad.Error.Class":214,"../Control.Monad.Except.Trans":215,"../Control.Semigroupoid":228,"../Data.Either":264,"../Data.Identity":282,"../Data.Newtype":301,"../Prelude":342}],217:[function(require,module,exports){
+},{"../Control.Monad.Error.Class":216,"../Control.Monad.Except.Trans":217,"../Control.Semigroupoid":230,"../Data.Either":266,"../Data.Identity":284,"../Data.Newtype":303,"../Prelude":344}],219:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Category = require("../Control.Category");
@@ -23451,7 +23581,7 @@ module.exports = {
     monadReaderFun: monadReaderFun
 };
 
-},{"../Control.Category":201,"../Control.Monad":224,"../Control.Semigroupoid":228,"../Data.Functor":279,"../Prelude":342}],218:[function(require,module,exports){
+},{"../Control.Category":201,"../Control.Monad":226,"../Control.Semigroupoid":230,"../Data.Functor":281,"../Prelude":344}],220:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Applicative = require("../Control.Applicative");
@@ -23703,7 +23833,7 @@ module.exports = {
     monadRecMaybe: monadRecMaybe
 };
 
-},{"../Control.Applicative":194,"../Control.Bind":200,"../Control.Monad":224,"../Control.Monad.Eff":213,"../Control.Monad.Eff.Unsafe":211,"../Control.Monad.ST":220,"../Control.Semigroupoid":228,"../Data.Bifunctor":255,"../Data.Either":264,"../Data.Functor":279,"../Data.Identity":282,"../Data.Maybe":292,"../Data.Unit":332,"../Partial.Unsafe":339,"../Prelude":342}],219:[function(require,module,exports){
+},{"../Control.Applicative":194,"../Control.Bind":200,"../Control.Monad":226,"../Control.Monad.Eff":215,"../Control.Monad.Eff.Unsafe":213,"../Control.Monad.ST":222,"../Control.Semigroupoid":230,"../Data.Bifunctor":257,"../Data.Either":266,"../Data.Functor":281,"../Data.Identity":284,"../Data.Maybe":294,"../Data.Unit":334,"../Partial.Unsafe":341,"../Prelude":344}],221:[function(require,module,exports){
 "use strict";
 
 exports.newSTRef = function (val) {
@@ -23738,7 +23868,7 @@ exports.runST = function (f) {
   return f;
 };
 
-},{}],220:[function(require,module,exports){
+},{}],222:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -23755,7 +23885,7 @@ module.exports = {
     writeSTRef: $foreign.writeSTRef
 };
 
-},{"../Control.Monad.Eff":213,"./foreign":219}],221:[function(require,module,exports){
+},{"../Control.Monad.Eff":215,"./foreign":221}],223:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Data_Tuple = require("../Data.Tuple");
@@ -23803,7 +23933,7 @@ module.exports = {
     state: state
 };
 
-},{"../Data.Tuple":328,"../Data.Unit":332,"../Prelude":342}],222:[function(require,module,exports){
+},{"../Data.Tuple":330,"../Data.Unit":334,"../Prelude":344}],224:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Prelude = require("../Prelude");
@@ -23818,7 +23948,7 @@ module.exports = {
     lift: lift
 };
 
-},{"../Prelude":342}],223:[function(require,module,exports){
+},{"../Prelude":344}],225:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Applicative = require("../Control.Applicative");
@@ -23872,7 +24002,7 @@ module.exports = {
     tell: tell
 };
 
-},{"../Control.Applicative":194,"../Control.Bind":200,"../Data.Function":276,"../Data.Tuple":328,"../Prelude":342}],224:[function(require,module,exports){
+},{"../Control.Applicative":194,"../Control.Bind":200,"../Data.Function":278,"../Data.Tuple":330,"../Prelude":344}],226:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Applicative = require("../Control.Applicative");
@@ -23942,7 +24072,7 @@ module.exports = {
     monadArray: monadArray
 };
 
-},{"../Control.Applicative":194,"../Control.Apply":196,"../Control.Bind":200,"../Data.Functor":279,"../Data.Unit":332}],225:[function(require,module,exports){
+},{"../Control.Applicative":194,"../Control.Apply":196,"../Control.Bind":200,"../Data.Functor":281,"../Data.Unit":334}],227:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Alt = require("../Control.Alt");
@@ -23965,7 +24095,7 @@ module.exports = {
     monadPlusArray: monadPlusArray
 };
 
-},{"../Control.Alt":192,"../Control.Alternative":193,"../Control.Applicative":194,"../Control.Apply":196,"../Control.Bind":200,"../Control.Monad":224,"../Control.MonadZero":226,"../Control.Plus":227,"../Data.Functor":279}],226:[function(require,module,exports){
+},{"../Control.Alt":192,"../Control.Alternative":193,"../Control.Applicative":194,"../Control.Apply":196,"../Control.Bind":200,"../Control.Monad":226,"../Control.MonadZero":228,"../Control.Plus":229,"../Data.Functor":281}],228:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Alt = require("../Control.Alt");
@@ -24003,7 +24133,7 @@ module.exports = {
     monadZeroArray: monadZeroArray
 };
 
-},{"../Control.Alt":192,"../Control.Alternative":193,"../Control.Applicative":194,"../Control.Apply":196,"../Control.Bind":200,"../Control.Monad":224,"../Control.Plus":227,"../Data.Functor":279,"../Data.Unit":332}],227:[function(require,module,exports){
+},{"../Control.Alt":192,"../Control.Alternative":193,"../Control.Applicative":194,"../Control.Apply":196,"../Control.Bind":200,"../Control.Monad":226,"../Control.Plus":229,"../Data.Functor":281,"../Data.Unit":334}],229:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Alt = require("../Control.Alt");
@@ -24024,7 +24154,7 @@ module.exports = {
     plusArray: plusArray
 };
 
-},{"../Control.Alt":192,"../Data.Functor":279}],228:[function(require,module,exports){
+},{"../Control.Alt":192,"../Data.Functor":281}],230:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Semigroupoid = function (compose) {
@@ -24054,7 +24184,7 @@ module.exports = {
     semigroupoidFn: semigroupoidFn
 };
 
-},{}],229:[function(require,module,exports){
+},{}],231:[function(require,module,exports){
 /* global EventTarget */
 "use strict";
 
@@ -24066,7 +24196,7 @@ exports._readEventTarget = function (left) {
   };
 };
 
-},{}],230:[function(require,module,exports){
+},{}],232:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -24152,7 +24282,7 @@ module.exports = {
     ordEventType: ordEventType
 };
 
-},{"../Control.Applicative":194,"../Control.Monad.Except.Trans":215,"../Control.Semigroupoid":228,"../Data.Bifunctor":255,"../Data.Either":264,"../Data.Eq":266,"../Data.Foreign":273,"../Data.Identity":282,"../Data.List.Types":288,"../Data.Newtype":301,"../Data.Ord":308,"../Prelude":342,"../Unsafe.Coerce":355,"./foreign":229}],231:[function(require,module,exports){
+},{"../Control.Applicative":194,"../Control.Monad.Except.Trans":217,"../Control.Semigroupoid":230,"../Data.Bifunctor":257,"../Data.Either":266,"../Data.Eq":268,"../Data.Foreign":275,"../Data.Identity":284,"../Data.List.Types":290,"../Data.Newtype":303,"../Data.Ord":310,"../Prelude":344,"../Unsafe.Coerce":358,"./foreign":231}],233:[function(require,module,exports){
 "use strict";
 
 exports._readHTMLElement = function (failure) {
@@ -24168,7 +24298,7 @@ exports._readHTMLElement = function (failure) {
   };
 };
 
-},{}],232:[function(require,module,exports){
+},{}],234:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -24465,7 +24595,7 @@ module.exports = {
     windowToEventTarget: windowToEventTarget
 };
 
-},{"../Control.Applicative":194,"../Control.Monad.Eff":213,"../Control.Monad.Except.Trans":215,"../Control.Semigroupoid":228,"../DOM.Event.Types":230,"../DOM.Node.Types":239,"../Data.Either":264,"../Data.Foreign":273,"../Data.Identity":282,"../Data.List.Types":288,"../Prelude":342,"../Unsafe.Coerce":355,"./foreign":231}],233:[function(require,module,exports){
+},{"../Control.Applicative":194,"../Control.Monad.Eff":215,"../Control.Monad.Except.Trans":217,"../Control.Semigroupoid":230,"../DOM.Event.Types":232,"../DOM.Node.Types":241,"../Data.Either":266,"../Data.Foreign":275,"../Data.Identity":284,"../Data.List.Types":290,"../Prelude":344,"../Unsafe.Coerce":358,"./foreign":233}],235:[function(require,module,exports){
 "use strict";
 
 exports.document = function (window) {
@@ -24704,7 +24834,7 @@ exports._cancelIdleCallback = function(id) {
   };
 };
 
-},{}],234:[function(require,module,exports){
+},{}],236:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -24835,7 +24965,7 @@ module.exports = {
     url: $foreign.url
 };
 
-},{"../Control.Monad.Eff":213,"../Control.Semigroupoid":228,"../DOM":243,"../DOM.HTML.Types":232,"../DOM.WebStorage.Types":242,"../Data.Eq":266,"../Data.Functor":279,"../Data.Maybe":292,"../Data.Newtype":301,"../Data.Nullable":304,"../Data.Ord":308,"../Prelude":342,"./foreign":233}],235:[function(require,module,exports){
+},{"../Control.Monad.Eff":215,"../Control.Semigroupoid":230,"../DOM":245,"../DOM.HTML.Types":234,"../DOM.WebStorage.Types":244,"../Data.Eq":268,"../Data.Functor":281,"../Data.Maybe":294,"../Data.Newtype":303,"../Data.Nullable":306,"../Data.Ord":310,"../Prelude":344,"./foreign":235}],237:[function(require,module,exports){
 /* global window */
 "use strict";
 
@@ -24843,7 +24973,7 @@ exports.window = function () {
   return window;
 };
 
-},{}],236:[function(require,module,exports){
+},{}],238:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -24854,7 +24984,7 @@ module.exports = {
     window: $foreign.window
 };
 
-},{"../Control.Monad.Eff":213,"../DOM":243,"../DOM.HTML.Types":232,"./foreign":235}],237:[function(require,module,exports){
+},{"../Control.Monad.Eff":215,"../DOM":245,"../DOM.HTML.Types":234,"./foreign":237}],239:[function(require,module,exports){
 "use strict";
 
 exports._getElementById = function (id) {
@@ -24865,7 +24995,7 @@ exports._getElementById = function (id) {
   };
 };
 
-},{}],238:[function(require,module,exports){
+},{}],240:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -24886,7 +25016,7 @@ module.exports = {
     getElementById: getElementById
 };
 
-},{"../Control.Monad.Eff":213,"../Control.Semigroupoid":228,"../DOM":243,"../DOM.Node.Types":239,"../Data.Functor":279,"../Data.Maybe":292,"../Data.Nullable":304,"../Prelude":342,"./foreign":237}],239:[function(require,module,exports){
+},{"../Control.Monad.Eff":215,"../Control.Semigroupoid":230,"../DOM":245,"../DOM.Node.Types":241,"../Data.Functor":281,"../Data.Maybe":294,"../Data.Nullable":306,"../Prelude":344,"./foreign":239}],241:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var DOM_Event_Types = require("../DOM.Event.Types");
@@ -24950,7 +25080,7 @@ module.exports = {
     oOrdElementId: oOrdElementId
 };
 
-},{"../DOM.Event.Types":230,"../DOM.Util.FFI":241,"../Data.Eq":266,"../Data.Foreign":273,"../Data.Newtype":301,"../Data.Ord":308,"../Prelude":342,"../Unsafe.Coerce":355}],240:[function(require,module,exports){
+},{"../DOM.Event.Types":232,"../DOM.Util.FFI":243,"../Data.Eq":268,"../Data.Foreign":275,"../Data.Newtype":303,"../Data.Ord":310,"../Prelude":344,"../Unsafe.Coerce":358}],242:[function(require,module,exports){
 "use strict";
 
 exports._unsafeReadProtoTagged = function (name) {
@@ -24974,7 +25104,7 @@ exports._unsafeReadProtoTagged = function (name) {
   };
 };
 
-},{}],241:[function(require,module,exports){
+},{}],243:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -24998,7 +25128,7 @@ module.exports = {
     unsafeReadProtoTagged: unsafeReadProtoTagged
 };
 
-},{"../Control.Applicative":194,"../Control.Monad.Except":216,"../Control.Monad.Except.Trans":215,"../Control.Semigroupoid":228,"../Data.Either":264,"../Data.Foreign":273,"../Data.Identity":282,"../Data.List.Types":288,"../Prelude":342,"./foreign":240}],242:[function(require,module,exports){
+},{"../Control.Applicative":194,"../Control.Monad.Except":218,"../Control.Monad.Except.Trans":217,"../Control.Semigroupoid":230,"../Data.Either":266,"../Data.Foreign":275,"../Data.Identity":284,"../Data.List.Types":290,"../Prelude":344,"./foreign":242}],244:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Data_Foreign = require("../Data.Foreign");
@@ -25007,13 +25137,13 @@ module.exports = {
     readStorage: readStorage
 };
 
-},{"../Data.Foreign":273}],243:[function(require,module,exports){
+},{"../Data.Foreign":275}],245:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Monad_Eff = require("../Control.Monad.Eff");
 module.exports = {};
 
-},{"../Control.Monad.Eff":213}],244:[function(require,module,exports){
+},{"../Control.Monad.Eff":215}],246:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Applicative = require("../Control.Applicative");
@@ -25112,7 +25242,7 @@ module.exports = {
     pushWhile: pushWhile
 };
 
-},{"../Control.Applicative":194,"../Control.Bind":200,"../Control.Monad.Eff":213,"../Control.Monad.ST":220,"../Control.Semigroupoid":228,"../Data.Array.ST":246,"../Data.Function":276,"../Data.Functor":279,"../Data.HeytingAlgebra":281,"../Data.Maybe":292,"../Data.Semiring":317,"../Prelude":342}],245:[function(require,module,exports){
+},{"../Control.Applicative":194,"../Control.Bind":200,"../Control.Monad.Eff":215,"../Control.Monad.ST":222,"../Control.Semigroupoid":230,"../Data.Array.ST":248,"../Data.Function":278,"../Data.Functor":281,"../Data.HeytingAlgebra":283,"../Data.Maybe":294,"../Data.Semiring":319,"../Prelude":344}],247:[function(require,module,exports){
 "use strict";
 
 exports.runSTArray = function (f) {
@@ -25182,7 +25312,7 @@ exports.toAssocArray = function (xs) {
   };
 };
 
-},{}],246:[function(require,module,exports){
+},{}],248:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -25246,7 +25376,7 @@ module.exports = {
     toAssocArray: $foreign.toAssocArray
 };
 
-},{"../Control.Applicative":194,"../Control.Bind":200,"../Control.Monad.Eff":213,"../Control.Monad.ST":220,"../Control.Semigroupoid":228,"../Data.Maybe":292,"../Prelude":342,"../Unsafe.Coerce":355,"./foreign":245}],247:[function(require,module,exports){
+},{"../Control.Applicative":194,"../Control.Bind":200,"../Control.Monad.Eff":215,"../Control.Monad.ST":222,"../Control.Semigroupoid":230,"../Data.Maybe":294,"../Prelude":344,"../Unsafe.Coerce":358,"./foreign":247}],249:[function(require,module,exports){
 "use strict";
 
 //------------------------------------------------------------------------------
@@ -25556,7 +25686,7 @@ exports.unsafeIndexImpl = function (xs) {
   };
 };
 
-},{}],248:[function(require,module,exports){
+},{}],250:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -26108,7 +26238,7 @@ module.exports = {
     zipWith: $foreign.zipWith
 };
 
-},{"../Control.Alt":192,"../Control.Alternative":193,"../Control.Applicative":194,"../Control.Apply":196,"../Control.Bind":200,"../Control.Category":201,"../Control.Lazy":205,"../Control.Monad.Eff":213,"../Control.Monad.Rec.Class":218,"../Control.Monad.ST":220,"../Control.Semigroupoid":228,"../Data.Array.ST":246,"../Data.Array.ST.Iterator":244,"../Data.Boolean":257,"../Data.Eq":266,"../Data.Foldable":271,"../Data.Function":276,"../Data.Functor":279,"../Data.HeytingAlgebra":281,"../Data.Maybe":292,"../Data.NonEmpty":302,"../Data.Ord":308,"../Data.Ordering":309,"../Data.Ring":311,"../Data.Semigroup":315,"../Data.Semiring":317,"../Data.Traversable":327,"../Data.Tuple":328,"../Data.Unfoldable":330,"../Partial.Unsafe":339,"../Prelude":342,"./foreign":247}],249:[function(require,module,exports){
+},{"../Control.Alt":192,"../Control.Alternative":193,"../Control.Applicative":194,"../Control.Apply":196,"../Control.Bind":200,"../Control.Category":201,"../Control.Lazy":205,"../Control.Monad.Eff":215,"../Control.Monad.Rec.Class":220,"../Control.Monad.ST":222,"../Control.Semigroupoid":230,"../Data.Array.ST":248,"../Data.Array.ST.Iterator":246,"../Data.Boolean":259,"../Data.Eq":268,"../Data.Foldable":273,"../Data.Function":278,"../Data.Functor":281,"../Data.HeytingAlgebra":283,"../Data.Maybe":294,"../Data.NonEmpty":304,"../Data.Ord":310,"../Data.Ordering":311,"../Data.Ring":313,"../Data.Semigroup":317,"../Data.Semiring":319,"../Data.Traversable":329,"../Data.Tuple":330,"../Data.Unfoldable":332,"../Partial.Unsafe":341,"../Prelude":344,"./foreign":249}],251:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Applicative = require("../Control.Applicative");
@@ -26428,7 +26558,7 @@ module.exports = {
     bifoldableWrap: bifoldableWrap
 };
 
-},{"../Control.Applicative":194,"../Control.Apply":196,"../Control.Category":201,"../Control.Semigroupoid":228,"../Data.Bifunctor.Clown":250,"../Data.Bifunctor.Flip":251,"../Data.Bifunctor.Joker":252,"../Data.Bifunctor.Product":253,"../Data.Bifunctor.Wrap":254,"../Data.Foldable":271,"../Data.Function":276,"../Data.Monoid":299,"../Data.Monoid.Conj":294,"../Data.Monoid.Disj":295,"../Data.Monoid.Dual":296,"../Data.Monoid.Endo":297,"../Data.Newtype":301,"../Data.Semigroup":315,"../Data.Unit":332,"../Prelude":342}],250:[function(require,module,exports){
+},{"../Control.Applicative":194,"../Control.Apply":196,"../Control.Category":201,"../Control.Semigroupoid":230,"../Data.Bifunctor.Clown":252,"../Data.Bifunctor.Flip":253,"../Data.Bifunctor.Joker":254,"../Data.Bifunctor.Product":255,"../Data.Bifunctor.Wrap":256,"../Data.Foldable":273,"../Data.Function":278,"../Data.Monoid":301,"../Data.Monoid.Conj":296,"../Data.Monoid.Disj":297,"../Data.Monoid.Dual":298,"../Data.Monoid.Endo":299,"../Data.Newtype":303,"../Data.Semigroup":317,"../Data.Unit":334,"../Prelude":344}],252:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Applicative = require("../Control.Applicative");
@@ -26504,7 +26634,7 @@ module.exports = {
     biapplicativeClown: biapplicativeClown
 };
 
-},{"../Control.Applicative":194,"../Control.Apply":196,"../Control.Biapplicative":197,"../Control.Biapply":198,"../Data.Bifunctor":255,"../Data.Eq":266,"../Data.Functor":279,"../Data.Newtype":301,"../Data.Ord":308,"../Data.Semigroup":315,"../Data.Show":319,"../Prelude":342}],251:[function(require,module,exports){
+},{"../Control.Applicative":194,"../Control.Apply":196,"../Control.Biapplicative":197,"../Control.Biapply":198,"../Data.Bifunctor":257,"../Data.Eq":268,"../Data.Functor":281,"../Data.Newtype":303,"../Data.Ord":310,"../Data.Semigroup":317,"../Data.Show":321,"../Prelude":344}],253:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Biapplicative = require("../Control.Biapplicative");
@@ -26580,7 +26710,7 @@ module.exports = {
     biapplicativeFlip: biapplicativeFlip
 };
 
-},{"../Control.Biapplicative":197,"../Control.Biapply":198,"../Data.Bifunctor":255,"../Data.Eq":266,"../Data.Functor":279,"../Data.Newtype":301,"../Data.Ord":308,"../Data.Semigroup":315,"../Data.Show":319,"../Prelude":342}],252:[function(require,module,exports){
+},{"../Control.Biapplicative":197,"../Control.Biapply":198,"../Data.Bifunctor":257,"../Data.Eq":268,"../Data.Functor":281,"../Data.Newtype":303,"../Data.Ord":310,"../Data.Semigroup":317,"../Data.Show":321,"../Prelude":344}],254:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Applicative = require("../Control.Applicative");
@@ -26658,7 +26788,7 @@ module.exports = {
     biapplicativeJoker: biapplicativeJoker
 };
 
-},{"../Control.Applicative":194,"../Control.Apply":196,"../Control.Biapplicative":197,"../Control.Biapply":198,"../Data.Bifunctor":255,"../Data.Eq":266,"../Data.Functor":279,"../Data.Newtype":301,"../Data.Ord":308,"../Data.Semigroup":315,"../Data.Show":319,"../Prelude":342}],253:[function(require,module,exports){
+},{"../Control.Applicative":194,"../Control.Apply":196,"../Control.Biapplicative":197,"../Control.Biapply":198,"../Data.Bifunctor":257,"../Data.Eq":268,"../Data.Functor":281,"../Data.Newtype":303,"../Data.Ord":310,"../Data.Semigroup":317,"../Data.Show":321,"../Prelude":344}],255:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Biapplicative = require("../Control.Biapplicative");
@@ -26760,7 +26890,7 @@ module.exports = {
     biapplicativeProduct: biapplicativeProduct
 };
 
-},{"../Control.Biapplicative":197,"../Control.Biapply":198,"../Data.Bifunctor":255,"../Data.Eq":266,"../Data.HeytingAlgebra":281,"../Data.Ord":308,"../Data.Ordering":309,"../Data.Semigroup":315,"../Data.Show":319,"../Prelude":342}],254:[function(require,module,exports){
+},{"../Control.Biapplicative":197,"../Control.Biapply":198,"../Data.Bifunctor":257,"../Data.Eq":268,"../Data.HeytingAlgebra":283,"../Data.Ord":310,"../Data.Ordering":311,"../Data.Semigroup":317,"../Data.Show":321,"../Prelude":344}],256:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Biapplicative = require("../Control.Biapplicative");
@@ -26836,7 +26966,7 @@ module.exports = {
     biapplicativeWrap: biapplicativeWrap
 };
 
-},{"../Control.Biapplicative":197,"../Control.Biapply":198,"../Data.Bifunctor":255,"../Data.Eq":266,"../Data.Functor":279,"../Data.Newtype":301,"../Data.Ord":308,"../Data.Semigroup":315,"../Data.Show":319,"../Prelude":342}],255:[function(require,module,exports){
+},{"../Control.Biapplicative":197,"../Control.Biapply":198,"../Data.Bifunctor":257,"../Data.Eq":268,"../Data.Functor":281,"../Data.Newtype":303,"../Data.Ord":310,"../Data.Semigroup":317,"../Data.Show":321,"../Prelude":344}],257:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Category = require("../Control.Category");
@@ -26861,7 +26991,7 @@ module.exports = {
     rmap: rmap
 };
 
-},{"../Control.Category":201}],256:[function(require,module,exports){
+},{"../Control.Category":201}],258:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Applicative = require("../Control.Applicative");
@@ -27061,7 +27191,7 @@ module.exports = {
     bitraversableWrap: bitraversableWrap
 };
 
-},{"../Control.Applicative":194,"../Control.Apply":196,"../Control.Category":201,"../Data.Bifoldable":249,"../Data.Bifunctor":255,"../Data.Bifunctor.Clown":250,"../Data.Bifunctor.Flip":251,"../Data.Bifunctor.Joker":252,"../Data.Bifunctor.Product":253,"../Data.Bifunctor.Wrap":254,"../Data.Functor":279,"../Data.Traversable":327,"../Prelude":342}],257:[function(require,module,exports){
+},{"../Control.Applicative":194,"../Control.Apply":196,"../Control.Category":201,"../Data.Bifoldable":251,"../Data.Bifunctor":257,"../Data.Bifunctor.Clown":252,"../Data.Bifunctor.Flip":253,"../Data.Bifunctor.Joker":254,"../Data.Bifunctor.Product":255,"../Data.Bifunctor.Wrap":256,"../Data.Functor":281,"../Data.Traversable":329,"../Prelude":344}],259:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var otherwise = true;
@@ -27069,7 +27199,7 @@ module.exports = {
     otherwise: otherwise
 };
 
-},{}],258:[function(require,module,exports){
+},{}],260:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Data_HeytingAlgebra = require("../Data.HeytingAlgebra");
@@ -27095,7 +27225,7 @@ module.exports = {
     booleanAlgebraFn: booleanAlgebraFn
 };
 
-},{"../Data.HeytingAlgebra":281,"../Data.Unit":332}],259:[function(require,module,exports){
+},{"../Data.HeytingAlgebra":283,"../Data.Unit":334}],261:[function(require,module,exports){
 "use strict";
 
 exports.topInt = 2147483647;
@@ -27104,7 +27234,7 @@ exports.bottomInt = -2147483648;
 exports.topChar = String.fromCharCode(65535);
 exports.bottomChar = String.fromCharCode(0);
 
-},{}],260:[function(require,module,exports){
+},{}],262:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -27148,7 +27278,7 @@ module.exports = {
     boundedUnit: boundedUnit
 };
 
-},{"../Data.Ord":308,"../Data.Ordering":309,"../Data.Unit":332,"./foreign":259}],261:[function(require,module,exports){
+},{"../Data.Ord":310,"../Data.Ordering":311,"../Data.Unit":334,"./foreign":261}],263:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Data_Ring = require("../Data.Ring");
@@ -27179,7 +27309,7 @@ module.exports = {
     commutativeRingFn: commutativeRingFn
 };
 
-},{"../Data.Ring":311,"../Data.Semiring":317,"../Data.Unit":332}],262:[function(require,module,exports){
+},{"../Data.Ring":313,"../Data.Semiring":319,"../Data.Unit":334}],264:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Category = require("../Control.Category");
@@ -27266,7 +27396,7 @@ module.exports = {
     distributiveFunction: distributiveFunction
 };
 
-},{"../Control.Category":201,"../Control.Semigroupoid":228,"../Data.Function":276,"../Data.Functor":279,"../Data.Identity":282,"../Data.Newtype":301,"../Prelude":342}],263:[function(require,module,exports){
+},{"../Control.Category":201,"../Control.Semigroupoid":230,"../Data.Function":278,"../Data.Functor":281,"../Data.Identity":284,"../Data.Newtype":303,"../Prelude":344}],265:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Data_EuclideanRing = require("../Data.EuclideanRing");
@@ -27306,7 +27436,7 @@ module.exports = {
     divisionringNumber: divisionringNumber
 };
 
-},{"../Data.EuclideanRing":268,"../Data.Ring":311,"../Data.Semiring":317}],264:[function(require,module,exports){
+},{"../Data.EuclideanRing":270,"../Data.Ring":313,"../Data.Semiring":319}],266:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Alt = require("../Control.Alt");
@@ -27742,7 +27872,7 @@ module.exports = {
     semigroupEither: semigroupEither
 };
 
-},{"../Control.Alt":192,"../Control.Applicative":194,"../Control.Apply":196,"../Control.Bind":200,"../Control.Extend":204,"../Control.Monad":224,"../Data.Bifoldable":249,"../Data.Bifunctor":255,"../Data.Bitraversable":256,"../Data.Bounded":260,"../Data.Eq":266,"../Data.Foldable":271,"../Data.Function":276,"../Data.Functor":279,"../Data.Functor.Invariant":277,"../Data.Maybe":292,"../Data.Monoid":299,"../Data.Ord":308,"../Data.Ordering":309,"../Data.Semigroup":315,"../Data.Semiring":317,"../Data.Show":319,"../Data.Traversable":327,"../Prelude":342}],265:[function(require,module,exports){
+},{"../Control.Alt":192,"../Control.Applicative":194,"../Control.Apply":196,"../Control.Bind":200,"../Control.Extend":204,"../Control.Monad":226,"../Data.Bifoldable":251,"../Data.Bifunctor":257,"../Data.Bitraversable":258,"../Data.Bounded":262,"../Data.Eq":268,"../Data.Foldable":273,"../Data.Function":278,"../Data.Functor":281,"../Data.Functor.Invariant":279,"../Data.Maybe":294,"../Data.Monoid":301,"../Data.Ord":310,"../Data.Ordering":311,"../Data.Semigroup":317,"../Data.Semiring":319,"../Data.Show":321,"../Data.Traversable":329,"../Prelude":344}],267:[function(require,module,exports){
 "use strict";
 
 exports.refEq = function (r1) {
@@ -27763,7 +27893,7 @@ exports.eqArrayImpl = function (f) {
   };
 };
 
-},{}],266:[function(require,module,exports){
+},{}],268:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -27836,7 +27966,7 @@ module.exports = {
     eq1Array: eq1Array
 };
 
-},{"../Data.Unit":332,"../Data.Void":333,"./foreign":265}],267:[function(require,module,exports){
+},{"../Data.Unit":334,"../Data.Void":335,"./foreign":267}],269:[function(require,module,exports){
 "use strict";
 
 exports.intDegree = function (x) {
@@ -27862,7 +27992,7 @@ exports.numDiv = function (n1) {
   };
 };
 
-},{}],268:[function(require,module,exports){
+},{}],270:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -27952,7 +28082,7 @@ module.exports = {
     euclideanRingNumber: euclideanRingNumber
 };
 
-},{"../Data.BooleanAlgebra":258,"../Data.CommutativeRing":261,"../Data.Eq":266,"../Data.HeytingAlgebra":281,"../Data.Ring":311,"../Data.Semiring":317,"./foreign":267}],269:[function(require,module,exports){
+},{"../Data.BooleanAlgebra":260,"../Data.CommutativeRing":263,"../Data.Eq":268,"../Data.HeytingAlgebra":283,"../Data.Ring":313,"../Data.Semiring":319,"./foreign":269}],271:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Data_CommutativeRing = require("../Data.CommutativeRing");
@@ -27971,7 +28101,7 @@ module.exports = {
     fieldNumber: fieldNumber
 };
 
-},{"../Data.CommutativeRing":261,"../Data.DivisionRing":263,"../Data.EuclideanRing":268,"../Data.Ring":311,"../Data.Semiring":317}],270:[function(require,module,exports){
+},{"../Data.CommutativeRing":263,"../Data.DivisionRing":265,"../Data.EuclideanRing":270,"../Data.Ring":313,"../Data.Semiring":319}],272:[function(require,module,exports){
 "use strict";
 
 exports.foldrArray = function (f) {
@@ -28000,7 +28130,7 @@ exports.foldlArray = function (f) {
   };
 };
 
-},{}],271:[function(require,module,exports){
+},{}],273:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -28551,7 +28681,7 @@ module.exports = {
     foldableMultiplicative: foldableMultiplicative
 };
 
-},{"../Control.Alt":192,"../Control.Applicative":194,"../Control.Apply":196,"../Control.Bind":200,"../Control.Category":201,"../Control.Plus":227,"../Control.Semigroupoid":228,"../Data.Eq":266,"../Data.Function":276,"../Data.Functor":279,"../Data.HeytingAlgebra":281,"../Data.Maybe":292,"../Data.Maybe.First":290,"../Data.Maybe.Last":291,"../Data.Monoid":299,"../Data.Monoid.Additive":293,"../Data.Monoid.Conj":294,"../Data.Monoid.Disj":295,"../Data.Monoid.Dual":296,"../Data.Monoid.Endo":297,"../Data.Monoid.Multiplicative":298,"../Data.Newtype":301,"../Data.Ord":308,"../Data.Ordering":309,"../Data.Semigroup":315,"../Data.Semiring":317,"../Data.Unit":332,"../Prelude":342,"./foreign":270}],272:[function(require,module,exports){
+},{"../Control.Alt":192,"../Control.Applicative":194,"../Control.Apply":196,"../Control.Bind":200,"../Control.Category":201,"../Control.Plus":229,"../Control.Semigroupoid":230,"../Data.Eq":268,"../Data.Function":278,"../Data.Functor":281,"../Data.HeytingAlgebra":283,"../Data.Maybe":294,"../Data.Maybe.First":292,"../Data.Maybe.Last":293,"../Data.Monoid":301,"../Data.Monoid.Additive":295,"../Data.Monoid.Conj":296,"../Data.Monoid.Disj":297,"../Data.Monoid.Dual":298,"../Data.Monoid.Endo":299,"../Data.Monoid.Multiplicative":300,"../Data.Newtype":303,"../Data.Ord":310,"../Data.Ordering":311,"../Data.Semigroup":317,"../Data.Semiring":319,"../Data.Unit":334,"../Prelude":344,"./foreign":272}],274:[function(require,module,exports){
 "use strict";
 
 exports.toForeign = function (value) {
@@ -28582,7 +28712,7 @@ exports.isArray = Array.isArray || function (value) {
   return Object.prototype.toString.call(value) === "[object Array]";
 };
 
-},{}],273:[function(require,module,exports){
+},{}],275:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -28880,7 +29010,7 @@ module.exports = {
     unsafeFromForeign: $foreign.unsafeFromForeign
 };
 
-},{"../Control.Applicative":194,"../Control.Monad.Error.Class":214,"../Control.Monad.Except":216,"../Control.Monad.Except.Trans":215,"../Control.Semigroupoid":228,"../Data.Boolean":257,"../Data.Either":264,"../Data.Eq":266,"../Data.Function":276,"../Data.HeytingAlgebra":281,"../Data.Identity":282,"../Data.Int":286,"../Data.List.NonEmpty":287,"../Data.Maybe":292,"../Data.Ord":308,"../Data.Ordering":309,"../Data.Semigroup":315,"../Data.Show":319,"../Data.String":323,"../Prelude":342,"./foreign":272}],274:[function(require,module,exports){
+},{"../Control.Applicative":194,"../Control.Monad.Error.Class":216,"../Control.Monad.Except":218,"../Control.Monad.Except.Trans":217,"../Control.Semigroupoid":230,"../Data.Boolean":259,"../Data.Either":266,"../Data.Eq":268,"../Data.Function":278,"../Data.HeytingAlgebra":283,"../Data.Identity":284,"../Data.Int":288,"../Data.List.NonEmpty":289,"../Data.Maybe":294,"../Data.Ord":310,"../Data.Ordering":311,"../Data.Semigroup":317,"../Data.Show":321,"../Data.String":325,"../Prelude":344,"./foreign":274}],276:[function(require,module,exports){
 "use strict";
 
 // module Data.Function.Uncurried
@@ -29102,7 +29232,7 @@ exports.runFn10 = function (fn) {
   };
 };
 
-},{}],275:[function(require,module,exports){
+},{}],277:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -29138,7 +29268,7 @@ module.exports = {
     runFn9: $foreign.runFn9
 };
 
-},{"../Data.Unit":332,"./foreign":274}],276:[function(require,module,exports){
+},{"../Data.Unit":334,"./foreign":276}],278:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Category = require("../Control.Category");
@@ -29181,7 +29311,7 @@ module.exports = {
     on: on
 };
 
-},{"../Control.Category":201}],277:[function(require,module,exports){
+},{"../Control.Category":201}],279:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Data_Functor = require("../Data.Functor");
@@ -29208,7 +29338,7 @@ module.exports = {
     invariantArray: invariantArray
 };
 
-},{"../Data.Functor":279}],278:[function(require,module,exports){
+},{"../Data.Functor":281}],280:[function(require,module,exports){
 "use strict";
 
 exports.arrayMap = function (f) {
@@ -29222,7 +29352,7 @@ exports.arrayMap = function (f) {
   };
 };
 
-},{}],279:[function(require,module,exports){
+},{}],281:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -29280,7 +29410,7 @@ module.exports = {
     functorArray: functorArray
 };
 
-},{"../Control.Semigroupoid":228,"../Data.Function":276,"../Data.Unit":332,"./foreign":278}],280:[function(require,module,exports){
+},{"../Control.Semigroupoid":230,"../Data.Function":278,"../Data.Unit":334,"./foreign":280}],282:[function(require,module,exports){
 "use strict";
 
 exports.boolConj = function (b1) {
@@ -29299,7 +29429,7 @@ exports.boolNot = function (b) {
   return !b;
 };
 
-},{}],281:[function(require,module,exports){
+},{}],283:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -29392,7 +29522,7 @@ module.exports = {
     heytingAlgebraFunction: heytingAlgebraFunction
 };
 
-},{"../Data.Unit":332,"./foreign":280}],282:[function(require,module,exports){
+},{"../Data.Unit":334,"./foreign":282}],284:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Alt = require("../Control.Alt");
@@ -29593,7 +29723,7 @@ module.exports = {
     traversableIdentity: traversableIdentity
 };
 
-},{"../Control.Alt":192,"../Control.Applicative":194,"../Control.Apply":196,"../Control.Bind":200,"../Control.Comonad":202,"../Control.Extend":204,"../Control.Lazy":205,"../Control.Monad":224,"../Data.BooleanAlgebra":258,"../Data.Bounded":260,"../Data.CommutativeRing":261,"../Data.Eq":266,"../Data.EuclideanRing":268,"../Data.Field":269,"../Data.Foldable":271,"../Data.Functor":279,"../Data.Functor.Invariant":277,"../Data.HeytingAlgebra":281,"../Data.Monoid":299,"../Data.Newtype":301,"../Data.Ord":308,"../Data.Ring":311,"../Data.Semigroup":315,"../Data.Semiring":317,"../Data.Show":319,"../Data.Traversable":327,"../Prelude":342}],283:[function(require,module,exports){
+},{"../Control.Alt":192,"../Control.Applicative":194,"../Control.Apply":196,"../Control.Bind":200,"../Control.Comonad":202,"../Control.Extend":204,"../Control.Lazy":205,"../Control.Monad":226,"../Data.BooleanAlgebra":260,"../Data.Bounded":262,"../Data.CommutativeRing":263,"../Data.Eq":268,"../Data.EuclideanRing":270,"../Data.Field":271,"../Data.Foldable":273,"../Data.Functor":281,"../Data.Functor.Invariant":279,"../Data.HeytingAlgebra":283,"../Data.Monoid":301,"../Data.Newtype":303,"../Data.Ord":310,"../Data.Ring":313,"../Data.Semigroup":317,"../Data.Semiring":319,"../Data.Show":321,"../Data.Traversable":329,"../Prelude":344}],285:[function(require,module,exports){
 "use strict";
 
 // module Data.Int.Bits
@@ -29645,7 +29775,7 @@ exports.complement = function (n) {
   return ~n;
 };
 
-},{}],284:[function(require,module,exports){
+},{}],286:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -29659,7 +29789,7 @@ module.exports = {
     zshr: $foreign.zshr
 };
 
-},{"./foreign":283}],285:[function(require,module,exports){
+},{"./foreign":285}],287:[function(require,module,exports){
 "use strict";
 
 // module Data.Int
@@ -29716,7 +29846,7 @@ exports.pow = function (x) {
   };
 };
 
-},{}],286:[function(require,module,exports){
+},{}],288:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -29877,7 +30007,7 @@ module.exports = {
     toStringAs: $foreign.toStringAs
 };
 
-},{"../Control.Semigroupoid":228,"../Data.Boolean":257,"../Data.Bounded":260,"../Data.Eq":266,"../Data.HeytingAlgebra":281,"../Data.Int.Bits":284,"../Data.Maybe":292,"../Data.Ord":308,"../Data.Ordering":309,"../Data.Ring":311,"../Data.Show":319,"../Global":335,"../Math":337,"../Prelude":342,"./foreign":285}],287:[function(require,module,exports){
+},{"../Control.Semigroupoid":230,"../Data.Boolean":259,"../Data.Bounded":262,"../Data.Eq":268,"../Data.HeytingAlgebra":283,"../Data.Int.Bits":286,"../Data.Maybe":294,"../Data.Ord":310,"../Data.Ordering":311,"../Data.Ring":313,"../Data.Show":321,"../Global":337,"../Math":339,"../Prelude":344,"./foreign":287}],289:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Bind = require("../Control.Bind");
@@ -30289,7 +30419,7 @@ module.exports = {
     zipWithA: zipWithA
 };
 
-},{"../Control.Bind":200,"../Control.Category":201,"../Control.Semigroupoid":228,"../Data.Boolean":257,"../Data.Eq":266,"../Data.Foldable":271,"../Data.Function":276,"../Data.Functor":279,"../Data.List":289,"../Data.List.Types":288,"../Data.Maybe":292,"../Data.NonEmpty":302,"../Data.Ord":308,"../Data.Ring":311,"../Data.Semigroup":315,"../Data.Semigroup.Foldable":312,"../Data.Semigroup.Traversable":313,"../Data.Semiring":317,"../Data.Traversable":327,"../Data.Tuple":328,"../Data.Unfoldable":330,"../Partial.Unsafe":339,"../Prelude":342}],288:[function(require,module,exports){
+},{"../Control.Bind":200,"../Control.Category":201,"../Control.Semigroupoid":230,"../Data.Boolean":259,"../Data.Eq":268,"../Data.Foldable":273,"../Data.Function":278,"../Data.Functor":281,"../Data.List":291,"../Data.List.Types":290,"../Data.Maybe":294,"../Data.NonEmpty":304,"../Data.Ord":310,"../Data.Ring":313,"../Data.Semigroup":317,"../Data.Semigroup.Foldable":314,"../Data.Semigroup.Traversable":315,"../Data.Semiring":319,"../Data.Traversable":329,"../Data.Tuple":330,"../Data.Unfoldable":332,"../Partial.Unsafe":341,"../Prelude":344}],290:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Alt = require("../Control.Alt");
@@ -30815,7 +30945,7 @@ module.exports = {
     traversable1NonEmptyList: traversable1NonEmptyList
 };
 
-},{"../Control.Alt":192,"../Control.Alternative":193,"../Control.Applicative":194,"../Control.Apply":196,"../Control.Bind":200,"../Control.Category":201,"../Control.Comonad":202,"../Control.Extend":204,"../Control.Monad":224,"../Control.MonadPlus":225,"../Control.MonadZero":226,"../Control.Plus":227,"../Control.Semigroupoid":228,"../Data.Eq":266,"../Data.Foldable":271,"../Data.Function":276,"../Data.Functor":279,"../Data.HeytingAlgebra":281,"../Data.Maybe":292,"../Data.Monoid":299,"../Data.Newtype":301,"../Data.NonEmpty":302,"../Data.Ord":308,"../Data.Ordering":309,"../Data.Semigroup":315,"../Data.Semigroup.Foldable":312,"../Data.Semigroup.Traversable":313,"../Data.Show":319,"../Data.Traversable":327,"../Data.Tuple":328,"../Data.Unfoldable":330,"../Prelude":342}],289:[function(require,module,exports){
+},{"../Control.Alt":192,"../Control.Alternative":193,"../Control.Applicative":194,"../Control.Apply":196,"../Control.Bind":200,"../Control.Category":201,"../Control.Comonad":202,"../Control.Extend":204,"../Control.Monad":226,"../Control.MonadPlus":227,"../Control.MonadZero":228,"../Control.Plus":229,"../Control.Semigroupoid":230,"../Data.Eq":268,"../Data.Foldable":273,"../Data.Function":278,"../Data.Functor":281,"../Data.HeytingAlgebra":283,"../Data.Maybe":294,"../Data.Monoid":301,"../Data.Newtype":303,"../Data.NonEmpty":304,"../Data.Ord":310,"../Data.Ordering":311,"../Data.Semigroup":317,"../Data.Semigroup.Foldable":314,"../Data.Semigroup.Traversable":315,"../Data.Show":321,"../Data.Traversable":329,"../Data.Tuple":330,"../Data.Unfoldable":332,"../Prelude":344}],291:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Alt = require("../Control.Alt");
@@ -31948,7 +32078,7 @@ module.exports = {
     showPattern: showPattern
 };
 
-},{"../Control.Alt":192,"../Control.Alternative":193,"../Control.Applicative":194,"../Control.Apply":196,"../Control.Bind":200,"../Control.Category":201,"../Control.Lazy":205,"../Control.Monad.Rec.Class":218,"../Control.Semigroupoid":228,"../Data.Bifunctor":255,"../Data.Boolean":257,"../Data.Eq":266,"../Data.Foldable":271,"../Data.Function":276,"../Data.Functor":279,"../Data.HeytingAlgebra":281,"../Data.List.Types":288,"../Data.Maybe":292,"../Data.Newtype":301,"../Data.NonEmpty":302,"../Data.Ord":308,"../Data.Ordering":309,"../Data.Ring":311,"../Data.Semigroup":315,"../Data.Semiring":317,"../Data.Show":319,"../Data.Traversable":327,"../Data.Tuple":328,"../Data.Unfoldable":330,"../Data.Unit":332,"../Prelude":342}],290:[function(require,module,exports){
+},{"../Control.Alt":192,"../Control.Alternative":193,"../Control.Applicative":194,"../Control.Apply":196,"../Control.Bind":200,"../Control.Category":201,"../Control.Lazy":205,"../Control.Monad.Rec.Class":220,"../Control.Semigroupoid":230,"../Data.Bifunctor":257,"../Data.Boolean":259,"../Data.Eq":268,"../Data.Foldable":273,"../Data.Function":278,"../Data.Functor":281,"../Data.HeytingAlgebra":283,"../Data.List.Types":290,"../Data.Maybe":294,"../Data.Newtype":303,"../Data.NonEmpty":304,"../Data.Ord":310,"../Data.Ordering":311,"../Data.Ring":313,"../Data.Semigroup":317,"../Data.Semiring":319,"../Data.Show":321,"../Data.Traversable":329,"../Data.Tuple":330,"../Data.Unfoldable":332,"../Data.Unit":334,"../Prelude":344}],292:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Applicative = require("../Control.Applicative");
@@ -32027,7 +32157,7 @@ module.exports = {
     monoidFirst: monoidFirst
 };
 
-},{"../Control.Applicative":194,"../Control.Apply":196,"../Control.Bind":200,"../Control.Extend":204,"../Control.Monad":224,"../Data.Bounded":260,"../Data.Eq":266,"../Data.Functor":279,"../Data.Functor.Invariant":277,"../Data.Maybe":292,"../Data.Monoid":299,"../Data.Newtype":301,"../Data.Ord":308,"../Data.Semigroup":315,"../Data.Show":319,"../Prelude":342}],291:[function(require,module,exports){
+},{"../Control.Applicative":194,"../Control.Apply":196,"../Control.Bind":200,"../Control.Extend":204,"../Control.Monad":226,"../Data.Bounded":262,"../Data.Eq":268,"../Data.Functor":281,"../Data.Functor.Invariant":279,"../Data.Maybe":294,"../Data.Monoid":301,"../Data.Newtype":303,"../Data.Ord":310,"../Data.Semigroup":317,"../Data.Show":321,"../Prelude":344}],293:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Applicative = require("../Control.Applicative");
@@ -32109,7 +32239,7 @@ module.exports = {
     monoidLast: monoidLast
 };
 
-},{"../Control.Applicative":194,"../Control.Apply":196,"../Control.Bind":200,"../Control.Extend":204,"../Control.Monad":224,"../Data.Bounded":260,"../Data.Eq":266,"../Data.Functor":279,"../Data.Functor.Invariant":277,"../Data.Maybe":292,"../Data.Monoid":299,"../Data.Newtype":301,"../Data.Ord":308,"../Data.Semigroup":315,"../Data.Show":319,"../Prelude":342}],292:[function(require,module,exports){
+},{"../Control.Applicative":194,"../Control.Apply":196,"../Control.Bind":200,"../Control.Extend":204,"../Control.Monad":226,"../Data.Bounded":262,"../Data.Eq":268,"../Data.Functor":281,"../Data.Functor.Invariant":279,"../Data.Maybe":294,"../Data.Monoid":301,"../Data.Newtype":303,"../Data.Ord":310,"../Data.Semigroup":317,"../Data.Show":321,"../Prelude":344}],294:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Alt = require("../Control.Alt");
@@ -32385,7 +32515,7 @@ module.exports = {
     showMaybe: showMaybe
 };
 
-},{"../Control.Alt":192,"../Control.Alternative":193,"../Control.Applicative":194,"../Control.Apply":196,"../Control.Bind":200,"../Control.Category":201,"../Control.Extend":204,"../Control.Monad":224,"../Control.MonadZero":226,"../Control.Plus":227,"../Data.Bounded":260,"../Data.Eq":266,"../Data.Function":276,"../Data.Functor":279,"../Data.Functor.Invariant":277,"../Data.Monoid":299,"../Data.Ord":308,"../Data.Ordering":309,"../Data.Semigroup":315,"../Data.Show":319,"../Data.Unit":332,"../Prelude":342}],293:[function(require,module,exports){
+},{"../Control.Alt":192,"../Control.Alternative":193,"../Control.Applicative":194,"../Control.Apply":196,"../Control.Bind":200,"../Control.Category":201,"../Control.Extend":204,"../Control.Monad":226,"../Control.MonadZero":228,"../Control.Plus":229,"../Data.Bounded":262,"../Data.Eq":268,"../Data.Function":278,"../Data.Functor":281,"../Data.Functor.Invariant":279,"../Data.Monoid":301,"../Data.Ord":310,"../Data.Ordering":311,"../Data.Semigroup":317,"../Data.Show":321,"../Data.Unit":334,"../Prelude":344}],295:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Applicative = require("../Control.Applicative");
@@ -32500,7 +32630,7 @@ module.exports = {
     monoidAdditive: monoidAdditive
 };
 
-},{"../Control.Applicative":194,"../Control.Apply":196,"../Control.Bind":200,"../Control.Comonad":202,"../Control.Extend":204,"../Control.Monad":224,"../Data.Bounded":260,"../Data.Eq":266,"../Data.Functor":279,"../Data.Functor.Invariant":277,"../Data.Monoid":299,"../Data.Newtype":301,"../Data.Ord":308,"../Data.Semigroup":315,"../Data.Semiring":317,"../Data.Show":319,"../Prelude":342}],294:[function(require,module,exports){
+},{"../Control.Applicative":194,"../Control.Apply":196,"../Control.Bind":200,"../Control.Comonad":202,"../Control.Extend":204,"../Control.Monad":226,"../Data.Bounded":262,"../Data.Eq":268,"../Data.Functor":281,"../Data.Functor.Invariant":279,"../Data.Monoid":301,"../Data.Newtype":303,"../Data.Ord":310,"../Data.Semigroup":317,"../Data.Semiring":319,"../Data.Show":321,"../Prelude":344}],296:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Applicative = require("../Control.Applicative");
@@ -32628,7 +32758,7 @@ module.exports = {
     semiringConj: semiringConj
 };
 
-},{"../Control.Applicative":194,"../Control.Apply":196,"../Control.Bind":200,"../Control.Comonad":202,"../Control.Extend":204,"../Control.Monad":224,"../Data.Bounded":260,"../Data.Eq":266,"../Data.Functor":279,"../Data.Functor.Invariant":277,"../Data.HeytingAlgebra":281,"../Data.Monoid":299,"../Data.Newtype":301,"../Data.Ord":308,"../Data.Semigroup":315,"../Data.Semiring":317,"../Data.Show":319,"../Prelude":342}],295:[function(require,module,exports){
+},{"../Control.Applicative":194,"../Control.Apply":196,"../Control.Bind":200,"../Control.Comonad":202,"../Control.Extend":204,"../Control.Monad":226,"../Data.Bounded":262,"../Data.Eq":268,"../Data.Functor":281,"../Data.Functor.Invariant":279,"../Data.HeytingAlgebra":283,"../Data.Monoid":301,"../Data.Newtype":303,"../Data.Ord":310,"../Data.Semigroup":317,"../Data.Semiring":319,"../Data.Show":321,"../Prelude":344}],297:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Applicative = require("../Control.Applicative");
@@ -32756,7 +32886,7 @@ module.exports = {
     semiringDisj: semiringDisj
 };
 
-},{"../Control.Applicative":194,"../Control.Apply":196,"../Control.Bind":200,"../Control.Comonad":202,"../Control.Extend":204,"../Control.Monad":224,"../Data.Bounded":260,"../Data.Eq":266,"../Data.Functor":279,"../Data.Functor.Invariant":277,"../Data.HeytingAlgebra":281,"../Data.Monoid":299,"../Data.Newtype":301,"../Data.Ord":308,"../Data.Semigroup":315,"../Data.Semiring":317,"../Data.Show":319,"../Prelude":342}],296:[function(require,module,exports){
+},{"../Control.Applicative":194,"../Control.Apply":196,"../Control.Bind":200,"../Control.Comonad":202,"../Control.Extend":204,"../Control.Monad":226,"../Data.Bounded":262,"../Data.Eq":268,"../Data.Functor":281,"../Data.Functor.Invariant":279,"../Data.HeytingAlgebra":283,"../Data.Monoid":301,"../Data.Newtype":303,"../Data.Ord":310,"../Data.Semigroup":317,"../Data.Semiring":319,"../Data.Show":321,"../Prelude":344}],298:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Applicative = require("../Control.Applicative");
@@ -32870,7 +33000,7 @@ module.exports = {
     monoidDual: monoidDual
 };
 
-},{"../Control.Applicative":194,"../Control.Apply":196,"../Control.Bind":200,"../Control.Comonad":202,"../Control.Extend":204,"../Control.Monad":224,"../Data.Bounded":260,"../Data.Eq":266,"../Data.Functor":279,"../Data.Functor.Invariant":277,"../Data.Monoid":299,"../Data.Newtype":301,"../Data.Ord":308,"../Data.Semigroup":315,"../Data.Show":319,"../Prelude":342}],297:[function(require,module,exports){
+},{"../Control.Applicative":194,"../Control.Apply":196,"../Control.Bind":200,"../Control.Comonad":202,"../Control.Extend":204,"../Control.Monad":226,"../Data.Bounded":262,"../Data.Eq":268,"../Data.Functor":281,"../Data.Functor.Invariant":279,"../Data.Monoid":301,"../Data.Newtype":303,"../Data.Ord":310,"../Data.Semigroup":317,"../Data.Show":321,"../Prelude":344}],299:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Category = require("../Control.Category");
@@ -32913,7 +33043,7 @@ module.exports = {
     monoidEndo: monoidEndo
 };
 
-},{"../Control.Category":201,"../Control.Semigroupoid":228,"../Data.Functor.Invariant":277,"../Data.Monoid":299,"../Data.Newtype":301,"../Data.Semigroup":315,"../Prelude":342}],298:[function(require,module,exports){
+},{"../Control.Category":201,"../Control.Semigroupoid":230,"../Data.Functor.Invariant":279,"../Data.Monoid":301,"../Data.Newtype":303,"../Data.Semigroup":317,"../Prelude":344}],300:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Applicative = require("../Control.Applicative");
@@ -33028,7 +33158,7 @@ module.exports = {
     monoidMultiplicative: monoidMultiplicative
 };
 
-},{"../Control.Applicative":194,"../Control.Apply":196,"../Control.Bind":200,"../Control.Comonad":202,"../Control.Extend":204,"../Control.Monad":224,"../Data.Bounded":260,"../Data.Eq":266,"../Data.Functor":279,"../Data.Functor.Invariant":277,"../Data.Monoid":299,"../Data.Newtype":301,"../Data.Ord":308,"../Data.Semigroup":315,"../Data.Semiring":317,"../Data.Show":319,"../Prelude":342}],299:[function(require,module,exports){
+},{"../Control.Applicative":194,"../Control.Apply":196,"../Control.Bind":200,"../Control.Comonad":202,"../Control.Extend":204,"../Control.Monad":226,"../Data.Bounded":262,"../Data.Eq":268,"../Data.Functor":281,"../Data.Functor.Invariant":279,"../Data.Monoid":301,"../Data.Newtype":303,"../Data.Ord":310,"../Data.Semigroup":317,"../Data.Semiring":319,"../Data.Show":321,"../Prelude":344}],301:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Data_Boolean = require("../Data.Boolean");
@@ -33111,12 +33241,12 @@ module.exports = {
     monoidArray: monoidArray
 };
 
-},{"../Data.Boolean":257,"../Data.Eq":266,"../Data.EuclideanRing":268,"../Data.Function":276,"../Data.Ord":308,"../Data.Ordering":309,"../Data.Semigroup":315,"../Data.Unit":332,"../Prelude":342}],300:[function(require,module,exports){
+},{"../Data.Boolean":259,"../Data.Eq":268,"../Data.EuclideanRing":270,"../Data.Function":278,"../Data.Ord":310,"../Data.Ordering":311,"../Data.Semigroup":317,"../Data.Unit":334,"../Prelude":344}],302:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 module.exports = {};
 
-},{}],301:[function(require,module,exports){
+},{}],303:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Semigroupoid = require("../Control.Semigroupoid");
@@ -33321,7 +33451,7 @@ module.exports = {
     wrap: wrap
 };
 
-},{"../Control.Semigroupoid":228,"../Data.Function":276,"../Data.Functor":279,"../Prelude":342}],302:[function(require,module,exports){
+},{"../Control.Semigroupoid":230,"../Data.Function":278,"../Data.Functor":281,"../Prelude":344}],304:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Alt = require("../Control.Alt");
@@ -33506,7 +33636,7 @@ module.exports = {
     traversableNonEmpty: traversableNonEmpty
 };
 
-},{"../Control.Alt":192,"../Control.Alternative":193,"../Control.Applicative":194,"../Control.Apply":196,"../Control.Category":201,"../Control.Plus":227,"../Data.Eq":266,"../Data.Foldable":271,"../Data.Functor":279,"../Data.HeytingAlgebra":281,"../Data.Ord":308,"../Data.Ordering":309,"../Data.Semigroup":315,"../Data.Show":319,"../Data.Traversable":327,"../Prelude":342}],303:[function(require,module,exports){
+},{"../Control.Alt":192,"../Control.Alternative":193,"../Control.Applicative":194,"../Control.Apply":196,"../Control.Category":201,"../Control.Plus":229,"../Data.Eq":268,"../Data.Foldable":273,"../Data.Functor":281,"../Data.HeytingAlgebra":283,"../Data.Ord":310,"../Data.Ordering":311,"../Data.Semigroup":317,"../Data.Show":321,"../Data.Traversable":329,"../Prelude":344}],305:[function(require,module,exports){
 "use strict";
 
 exports["null"] = null;
@@ -33519,7 +33649,7 @@ exports.notNull = function (x) {
   return x;
 };
 
-},{}],304:[function(require,module,exports){
+},{}],306:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -33566,7 +33696,7 @@ module.exports = {
     ord1Nullable: ord1Nullable
 };
 
-},{"../Control.Semigroupoid":228,"../Data.Eq":266,"../Data.Function":276,"../Data.Function.Uncurried":275,"../Data.Maybe":292,"../Data.Ord":308,"../Data.Show":319,"../Prelude":342,"./foreign":303}],305:[function(require,module,exports){
+},{"../Control.Semigroupoid":230,"../Data.Eq":268,"../Data.Function":278,"../Data.Function.Uncurried":277,"../Data.Maybe":294,"../Data.Ord":310,"../Data.Show":321,"../Prelude":344,"./foreign":305}],307:[function(require,module,exports){
 "use strict";
 
 exports.unsafeCompareImpl = function (lt) {
@@ -33581,7 +33711,7 @@ exports.unsafeCompareImpl = function (lt) {
   };
 };
 
-},{}],306:[function(require,module,exports){
+},{}],308:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -33591,7 +33721,7 @@ module.exports = {
     unsafeCompare: unsafeCompare
 };
 
-},{"../Data.Ordering":309,"./foreign":305}],307:[function(require,module,exports){
+},{"../Data.Ordering":311,"./foreign":307}],309:[function(require,module,exports){
 "use strict";
 
 exports.ordArrayImpl = function (f) {
@@ -33620,7 +33750,7 @@ exports.ordArrayImpl = function (f) {
   };
 };
 
-},{}],308:[function(require,module,exports){
+},{}],310:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -33891,7 +34021,7 @@ module.exports = {
     ord1Array: ord1Array
 };
 
-},{"../Data.Eq":266,"../Data.Function":276,"../Data.Ord.Unsafe":306,"../Data.Ordering":309,"../Data.Ring":311,"../Data.Semiring":317,"../Data.Unit":332,"../Data.Void":333,"./foreign":307}],309:[function(require,module,exports){
+},{"../Data.Eq":268,"../Data.Function":278,"../Data.Ord.Unsafe":308,"../Data.Ordering":311,"../Data.Ring":313,"../Data.Semiring":319,"../Data.Unit":334,"../Data.Void":335,"./foreign":309}],311:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Data_Eq = require("../Data.Eq");
@@ -33980,7 +34110,7 @@ module.exports = {
     showOrdering: showOrdering
 };
 
-},{"../Data.Eq":266,"../Data.Semigroup":315,"../Data.Show":319}],310:[function(require,module,exports){
+},{"../Data.Eq":268,"../Data.Semigroup":317,"../Data.Show":321}],312:[function(require,module,exports){
 "use strict";
 
 exports.intSub = function (x) {
@@ -33996,7 +34126,7 @@ exports.numSub = function (n1) {
   };
 };
 
-},{}],311:[function(require,module,exports){
+},{}],313:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -34048,7 +34178,7 @@ module.exports = {
     ringFn: ringFn
 };
 
-},{"../Data.Semiring":317,"../Data.Unit":332,"./foreign":310}],312:[function(require,module,exports){
+},{"../Data.Semiring":319,"../Data.Unit":334,"./foreign":312}],314:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Apply = require("../Control.Apply");
@@ -34158,7 +34288,7 @@ module.exports = {
     foldableMultiplicative: foldableMultiplicative
 };
 
-},{"../Control.Apply":196,"../Control.Category":201,"../Control.Semigroupoid":228,"../Data.Foldable":271,"../Data.Function":276,"../Data.Functor":279,"../Data.Monoid.Dual":296,"../Data.Monoid.Multiplicative":298,"../Data.Semigroup":315,"../Data.Unit":332,"../Prelude":342}],313:[function(require,module,exports){
+},{"../Control.Apply":196,"../Control.Category":201,"../Control.Semigroupoid":230,"../Data.Foldable":273,"../Data.Function":278,"../Data.Functor":281,"../Data.Monoid.Dual":298,"../Data.Monoid.Multiplicative":300,"../Data.Semigroup":317,"../Data.Unit":334,"../Prelude":344}],315:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Category = require("../Control.Category");
@@ -34200,7 +34330,7 @@ module.exports = {
     traverse1Default: traverse1Default
 };
 
-},{"../Control.Category":201,"../Data.Functor":279,"../Data.Semigroup.Foldable":312,"../Data.Traversable":327,"../Prelude":342}],314:[function(require,module,exports){
+},{"../Control.Category":201,"../Data.Functor":281,"../Data.Semigroup.Foldable":314,"../Data.Traversable":329,"../Prelude":344}],316:[function(require,module,exports){
 "use strict";
 
 exports.concatString = function (s1) {
@@ -34217,7 +34347,7 @@ exports.concatArray = function (xs) {
   };
 };
 
-},{}],315:[function(require,module,exports){
+},{}],317:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -34258,7 +34388,7 @@ module.exports = {
     semigroupArray: semigroupArray
 };
 
-},{"../Data.Unit":332,"../Data.Void":333,"./foreign":314}],316:[function(require,module,exports){
+},{"../Data.Unit":334,"../Data.Void":335,"./foreign":316}],318:[function(require,module,exports){
 "use strict";
 
 exports.intAdd = function (x) {
@@ -34287,7 +34417,7 @@ exports.numMul = function (n1) {
   };
 };
 
-},{}],317:[function(require,module,exports){
+},{}],319:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -34352,7 +34482,7 @@ module.exports = {
     semiringUnit: semiringUnit
 };
 
-},{"../Data.Unit":332,"./foreign":316}],318:[function(require,module,exports){
+},{"../Data.Unit":334,"./foreign":318}],320:[function(require,module,exports){
 "use strict";
 
 exports.showIntImpl = function (n) {
@@ -34415,7 +34545,7 @@ exports.showArrayImpl = function (f) {
   };
 };
 
-},{}],319:[function(require,module,exports){
+},{}],321:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -34452,7 +34582,7 @@ module.exports = {
     showArray: showArray
 };
 
-},{"./foreign":318}],320:[function(require,module,exports){
+},{"./foreign":320}],322:[function(require,module,exports){
 "use strict";
 
 exports.charCodeAt = function (i) {
@@ -34474,7 +34604,7 @@ exports.char = function (s) {
   throw new Error("Data.String.Unsafe.char: Expected string of length 1.");
 };
 
-},{}],321:[function(require,module,exports){
+},{}],323:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -34484,7 +34614,7 @@ module.exports = {
     charCodeAt: $foreign.charCodeAt
 };
 
-},{"./foreign":320}],322:[function(require,module,exports){
+},{"./foreign":322}],324:[function(require,module,exports){
 "use strict";
 
 exports._charAt = function (just) {
@@ -34666,7 +34796,7 @@ exports.joinWith = function (s) {
   };
 };
 
-},{}],323:[function(require,module,exports){
+},{}],325:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -34822,7 +34952,7 @@ module.exports = {
     trim: $foreign.trim
 };
 
-},{"../Control.Semigroupoid":228,"../Data.Eq":266,"../Data.Function":276,"../Data.Maybe":292,"../Data.Newtype":301,"../Data.Ord":308,"../Data.Ordering":309,"../Data.Ring":311,"../Data.Semigroup":315,"../Data.Semiring":317,"../Data.Show":319,"../Data.String.Unsafe":321,"../Prelude":342,"./foreign":322}],324:[function(require,module,exports){
+},{"../Control.Semigroupoid":230,"../Data.Eq":268,"../Data.Function":278,"../Data.Maybe":294,"../Data.Newtype":303,"../Data.Ord":310,"../Data.Ordering":311,"../Data.Ring":313,"../Data.Semigroup":317,"../Data.Semiring":319,"../Data.Show":321,"../Data.String.Unsafe":323,"../Prelude":344,"./foreign":324}],326:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Applicative = require("../Control.Applicative");
@@ -34925,9 +35055,9 @@ module.exports = {
     applicativeStateR: applicativeStateR
 };
 
-},{"../Control.Applicative":194,"../Control.Apply":196,"../Data.Functor":279,"../Data.Traversable.Accum":325,"../Prelude":342}],325:[function(require,module,exports){
-arguments[4][300][0].apply(exports,arguments)
-},{"dup":300}],326:[function(require,module,exports){
+},{"../Control.Applicative":194,"../Control.Apply":196,"../Data.Functor":281,"../Data.Traversable.Accum":327,"../Prelude":344}],327:[function(require,module,exports){
+arguments[4][302][0].apply(exports,arguments)
+},{"dup":302}],328:[function(require,module,exports){
 "use strict";
 
 // jshint maxparams: 3
@@ -34993,7 +35123,7 @@ exports.traverseArrayImpl = function () {
   };
 }();
 
-},{}],327:[function(require,module,exports){
+},{}],329:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -35271,7 +35401,7 @@ module.exports = {
     traversableMultiplicative: traversableMultiplicative
 };
 
-},{"../Control.Applicative":194,"../Control.Apply":196,"../Control.Category":201,"../Data.Foldable":271,"../Data.Functor":279,"../Data.Maybe":292,"../Data.Maybe.First":290,"../Data.Maybe.Last":291,"../Data.Monoid.Additive":293,"../Data.Monoid.Conj":294,"../Data.Monoid.Disj":295,"../Data.Monoid.Dual":296,"../Data.Monoid.Multiplicative":298,"../Data.Traversable.Accum":325,"../Data.Traversable.Accum.Internal":324,"../Prelude":342,"./foreign":326}],328:[function(require,module,exports){
+},{"../Control.Applicative":194,"../Control.Apply":196,"../Control.Category":201,"../Data.Foldable":273,"../Data.Functor":281,"../Data.Maybe":294,"../Data.Maybe.First":292,"../Data.Maybe.Last":293,"../Data.Monoid.Additive":295,"../Data.Monoid.Conj":296,"../Data.Monoid.Disj":297,"../Data.Monoid.Dual":298,"../Data.Monoid.Multiplicative":300,"../Data.Traversable.Accum":327,"../Data.Traversable.Accum.Internal":326,"../Prelude":344,"./foreign":328}],330:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Applicative = require("../Control.Applicative");
@@ -35693,7 +35823,7 @@ module.exports = {
     distributiveTuple: distributiveTuple
 };
 
-},{"../Control.Applicative":194,"../Control.Apply":196,"../Control.Biapplicative":197,"../Control.Biapply":198,"../Control.Bind":200,"../Control.Comonad":202,"../Control.Extend":204,"../Control.Lazy":205,"../Control.Monad":224,"../Control.Semigroupoid":228,"../Data.Bifoldable":249,"../Data.Bifunctor":255,"../Data.Bitraversable":256,"../Data.BooleanAlgebra":258,"../Data.Bounded":260,"../Data.CommutativeRing":261,"../Data.Distributive":262,"../Data.Eq":266,"../Data.Foldable":271,"../Data.Function":276,"../Data.Functor":279,"../Data.Functor.Invariant":277,"../Data.HeytingAlgebra":281,"../Data.Maybe":292,"../Data.Maybe.First":290,"../Data.Monoid":299,"../Data.Newtype":301,"../Data.Ord":308,"../Data.Ordering":309,"../Data.Ring":311,"../Data.Semigroup":315,"../Data.Semiring":317,"../Data.Show":319,"../Data.Traversable":327,"../Data.Unit":332,"../Prelude":342,"../Type.Equality":353}],329:[function(require,module,exports){
+},{"../Control.Applicative":194,"../Control.Apply":196,"../Control.Biapplicative":197,"../Control.Biapply":198,"../Control.Bind":200,"../Control.Comonad":202,"../Control.Extend":204,"../Control.Lazy":205,"../Control.Monad":226,"../Control.Semigroupoid":230,"../Data.Bifoldable":251,"../Data.Bifunctor":257,"../Data.Bitraversable":258,"../Data.BooleanAlgebra":260,"../Data.Bounded":262,"../Data.CommutativeRing":263,"../Data.Distributive":264,"../Data.Eq":268,"../Data.Foldable":273,"../Data.Function":278,"../Data.Functor":281,"../Data.Functor.Invariant":279,"../Data.HeytingAlgebra":283,"../Data.Maybe":294,"../Data.Maybe.First":292,"../Data.Monoid":301,"../Data.Newtype":303,"../Data.Ord":310,"../Data.Ordering":311,"../Data.Ring":313,"../Data.Semigroup":317,"../Data.Semiring":319,"../Data.Show":321,"../Data.Traversable":329,"../Data.Unit":334,"../Prelude":344,"../Type.Equality":356}],331:[function(require,module,exports){
 "use strict";
 
 exports.unfoldrArrayImpl = function (isNothing) {
@@ -35718,7 +35848,7 @@ exports.unfoldrArrayImpl = function (isNothing) {
   };
 };
 
-},{}],330:[function(require,module,exports){
+},{}],332:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -35786,12 +35916,12 @@ module.exports = {
     unfoldableArray: unfoldableArray
 };
 
-},{"../Data.Function":276,"../Data.Functor":279,"../Data.Maybe":292,"../Data.Ord":308,"../Data.Ring":311,"../Data.Traversable":327,"../Data.Tuple":328,"../Data.Unit":332,"../Partial.Unsafe":339,"../Prelude":342,"./foreign":329}],331:[function(require,module,exports){
+},{"../Data.Function":278,"../Data.Functor":281,"../Data.Maybe":294,"../Data.Ord":310,"../Data.Ring":313,"../Data.Traversable":329,"../Data.Tuple":330,"../Data.Unit":334,"../Partial.Unsafe":341,"../Prelude":344,"./foreign":331}],333:[function(require,module,exports){
 "use strict";
 
 exports.unit = {};
 
-},{}],332:[function(require,module,exports){
+},{}],334:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -35804,7 +35934,7 @@ module.exports = {
     unit: $foreign.unit
 };
 
-},{"../Data.Show":319,"./foreign":331}],333:[function(require,module,exports){
+},{"../Data.Show":321,"./foreign":333}],335:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Data_Show = require("../Data.Show");
@@ -35831,7 +35961,7 @@ module.exports = {
     showVoid: showVoid
 };
 
-},{"../Data.Show":319}],334:[function(require,module,exports){
+},{"../Data.Show":321}],336:[function(require,module,exports){
 /* globals exports */
 "use strict";
 
@@ -35858,7 +35988,7 @@ exports.encodeURI = encodeURI;
 exports.decodeURIComponent = decodeURIComponent;
 exports.encodeURIComponent = encodeURIComponent;
 
-},{}],335:[function(require,module,exports){
+},{}],337:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -35875,7 +36005,7 @@ module.exports = {
     readInt: $foreign.readInt
 };
 
-},{"./foreign":334}],336:[function(require,module,exports){
+},{"./foreign":336}],338:[function(require,module,exports){
 "use strict";
 
 // module Math
@@ -35958,7 +36088,7 @@ exports.sqrt1_2 = Math.SQRT1_2;
 
 exports.sqrt2 = Math.SQRT2;
 
-},{}],337:[function(require,module,exports){
+},{}],339:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -35993,7 +36123,7 @@ module.exports = {
     trunc: $foreign.trunc
 };
 
-},{"./foreign":336}],338:[function(require,module,exports){
+},{"./foreign":338}],340:[function(require,module,exports){
 "use strict";
 
 // module Partial.Unsafe
@@ -36002,7 +36132,7 @@ exports.unsafePartial = function (f) {
   return f();
 };
 
-},{}],339:[function(require,module,exports){
+},{}],341:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -36025,7 +36155,7 @@ module.exports = {
     unsafePartial: $foreign.unsafePartial
 };
 
-},{"../Partial":341,"./foreign":338}],340:[function(require,module,exports){
+},{"../Partial":343,"./foreign":340}],342:[function(require,module,exports){
 "use strict";
 
 // module Partial
@@ -36036,7 +36166,7 @@ exports.crashWith = function () {
   };
 };
 
-},{}],341:[function(require,module,exports){
+},{}],343:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -36048,7 +36178,7 @@ module.exports = {
     crashWith: $foreign.crashWith
 };
 
-},{"./foreign":340}],342:[function(require,module,exports){
+},{"./foreign":342}],344:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Applicative = require("../Control.Applicative");
@@ -36079,7 +36209,7 @@ var Data_Unit = require("../Data.Unit");
 var Data_Void = require("../Data.Void");
 module.exports = {};
 
-},{"../Control.Applicative":194,"../Control.Apply":196,"../Control.Bind":200,"../Control.Category":201,"../Control.Monad":224,"../Control.Semigroupoid":228,"../Data.Boolean":257,"../Data.BooleanAlgebra":258,"../Data.Bounded":260,"../Data.CommutativeRing":261,"../Data.DivisionRing":263,"../Data.Eq":266,"../Data.EuclideanRing":268,"../Data.Field":269,"../Data.Function":276,"../Data.Functor":279,"../Data.HeytingAlgebra":281,"../Data.NaturalTransformation":300,"../Data.Ord":308,"../Data.Ordering":309,"../Data.Ring":311,"../Data.Semigroup":315,"../Data.Semiring":317,"../Data.Show":319,"../Data.Unit":332,"../Data.Void":333}],343:[function(require,module,exports){
+},{"../Control.Applicative":194,"../Control.Apply":196,"../Control.Bind":200,"../Control.Category":201,"../Control.Monad":226,"../Control.Semigroupoid":230,"../Data.Boolean":259,"../Data.BooleanAlgebra":260,"../Data.Bounded":262,"../Data.CommutativeRing":263,"../Data.DivisionRing":265,"../Data.Eq":268,"../Data.EuclideanRing":270,"../Data.Field":271,"../Data.Function":278,"../Data.Functor":281,"../Data.HeytingAlgebra":283,"../Data.NaturalTransformation":302,"../Data.Ord":310,"../Data.Ordering":311,"../Data.Ring":313,"../Data.Semigroup":317,"../Data.Semiring":319,"../Data.Show":321,"../Data.Unit":334,"../Data.Void":335}],345:[function(require,module,exports){
 /* global exports */
 "use strict";
 
@@ -36143,7 +36273,7 @@ function unsafeFromPropsArray(props) {
 };
 exports.unsafeFromPropsArray = unsafeFromPropsArray;
 
-},{"react":187}],344:[function(require,module,exports){
+},{"react":187}],346:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -36652,7 +36782,7 @@ module.exports = {
     unsafeUnfoldProps: $foreign.unsafeUnfoldProps
 };
 
-},{"../Control.Monad.Eff":213,"../Control.Monad.Eff.Unsafe":211,"../Control.Semigroupoid":228,"../Data.Nullable":304,"../Prelude":342,"../React":347,"./foreign":343}],345:[function(require,module,exports){
+},{"../Control.Monad.Eff":215,"../Control.Monad.Eff.Unsafe":213,"../Control.Semigroupoid":230,"../Data.Nullable":306,"../Prelude":344,"../React":349,"./foreign":345}],347:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var React = require("../React");
@@ -37132,7 +37262,7 @@ module.exports = {
     "wbr'": wbr$prime
 };
 
-},{"../React":347,"../React.DOM.Props":344,"../Unsafe.Coerce":355}],346:[function(require,module,exports){
+},{"../React":349,"../React.DOM.Props":346,"../Unsafe.Coerce":358}],348:[function(require,module,exports){
 /* global exports */
 "use strict";
 
@@ -37331,7 +37461,7 @@ function stopPropagation(event) {
 };
 exports.stopPropagation = stopPropagation;
 
-},{"create-react-class":2,"react":187}],347:[function(require,module,exports){
+},{"create-react-class":2,"react":187}],349:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -37440,7 +37570,7 @@ module.exports = {
     writeStateWithCallback: $foreign.writeStateWithCallback
 };
 
-},{"../Control.Applicative":194,"../Control.Monad.Eff":213,"../Control.Monad.Eff.Uncurried":209,"../Data.Functor":279,"../Data.Maybe":292,"../Data.Nullable":304,"../Data.Unit":332,"../Prelude":342,"../Unsafe.Coerce":355,"./foreign":346}],348:[function(require,module,exports){
+},{"../Control.Applicative":194,"../Control.Monad.Eff":215,"../Control.Monad.Eff.Uncurried":211,"../Data.Functor":281,"../Data.Maybe":294,"../Data.Nullable":306,"../Data.Unit":334,"../Prelude":344,"../Unsafe.Coerce":358,"./foreign":348}],350:[function(require,module,exports){
 /* global exports */
 "use strict";
 
@@ -37458,7 +37588,7 @@ exports.findDOMNodeImpl = ReactDOM.findDOMNode;
 exports.renderToStringImpl = ReactDOMServer.renderToString;
 exports.renderToStaticMarkupImpl = ReactDOMServer.renderToStaticMarkup;
 
-},{"react-dom":31,"react-dom/server":161}],349:[function(require,module,exports){
+},{"react-dom":31,"react-dom/server":161}],351:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -37488,12 +37618,15 @@ module.exports = {
     unmountComponentAtNode: unmountComponentAtNode
 };
 
-},{"../Control.Monad.Eff":213,"../Control.Monad.Eff.Uncurried":209,"../DOM":243,"../DOM.Node.Types":239,"../Data.Function.Uncurried":275,"../Data.Maybe":292,"../Data.Nullable":304,"../React":347,"../Unsafe.Coerce":355,"./foreign":348}],350:[function(require,module,exports){
+},{"../Control.Monad.Eff":215,"../Control.Monad.Eff.Uncurried":211,"../DOM":245,"../DOM.Node.Types":241,"../Data.Function.Uncurried":277,"../Data.Maybe":294,"../Data.Nullable":306,"../React":349,"../Unsafe.Coerce":358,"./foreign":350}],352:[function(require,module,exports){
+// Generated by purs version 0.11.6
 "use strict";
 var Concur_React = require("../Concur.React");
 var Concur_React_DOM = require("../Concur.React.DOM");
 var Concur_React_Widgets = require("../Concur.React.Widgets");
 var Control_Bind = require("../Control.Bind");
+var Control_Monad_Eff_Class = require("../Control.Monad.Eff.Class");
+var Control_Monad_Eff_Console = require("../Control.Monad.Eff.Console");
 var Data_Functor = require("../Data.Functor");
 var Data_Ring = require("../Data.Ring");
 var Data_Semigroup = require("../Data.Semigroup");
@@ -37502,29 +37635,36 @@ var Data_Show = require("../Data.Show");
 var Prelude = require("../Prelude");
 var counterWidget = function (count) {
     return Control_Bind.bind(Concur_React.renderBind)(Concur_React_DOM["div'"]([ Concur_React_DOM["p'"]([ Concur_React_DOM.text("State: " + Data_Show.show(Data_Show.showInt)(count)) ]), Data_Functor.voidLeft(Concur_React.renderFunctor)(Concur_React_Widgets["textButton'"]("Increment"))(count + 1 | 0), Data_Functor.voidLeft(Concur_React.renderFunctor)(Concur_React_Widgets["textButton'"]("Decrement"))(count - 1 | 0) ]))(function (v) {
-        return counterWidget(v);
+        return Control_Bind.discard(Control_Bind.discardUnit)(Concur_React.renderBind)(Control_Monad_Eff_Class.liftEff(Concur_React.renderMonadEff)(Control_Monad_Eff_Console.log("COUNT IS NOW: " + Data_Show.show(Data_Show.showInt)(v))))(function () {
+            return counterWidget(v);
+        });
     });
 };
 module.exports = {
     counterWidget: counterWidget
 };
 
-},{"../Concur.React":191,"../Concur.React.DOM":188,"../Concur.React.Widgets":190,"../Control.Bind":200,"../Data.Functor":279,"../Data.Ring":311,"../Data.Semigroup":315,"../Data.Semiring":317,"../Data.Show":319,"../Prelude":342}],351:[function(require,module,exports){
+},{"../Concur.React":191,"../Concur.React.DOM":188,"../Concur.React.Widgets":190,"../Control.Bind":200,"../Control.Monad.Eff.Class":207,"../Control.Monad.Eff.Console":209,"../Data.Functor":281,"../Data.Ring":313,"../Data.Semigroup":317,"../Data.Semiring":319,"../Data.Show":321,"../Prelude":344}],353:[function(require,module,exports){
+// Generated by purs version 0.11.6
 "use strict";
 var Concur_React = require("../Concur.React");
 var Concur_React_Widgets = require("../Concur.React.Widgets");
 var Control_Bind = require("../Control.Bind");
+var Control_Monad_Eff_Class = require("../Control.Monad.Eff.Class");
+var Control_Monad_Eff_Console = require("../Control.Monad.Eff.Console");
 var Prelude = require("../Prelude");
 var helloWidget = Control_Bind.discard(Control_Bind.discardUnit)(Concur_React.renderBind)(Concur_React_Widgets["textButton'"]("Click to Say Hello"))(function () {
-    return Control_Bind.discard(Control_Bind.discardUnit)(Concur_React.renderBind)(Concur_React_Widgets["textButton'"]("Hello Sailor!"))(function () {
-        return helloWidget;
+    return Control_Bind.discard(Control_Bind.discardUnit)(Concur_React.renderBind)(Control_Monad_Eff_Class.liftEff(Concur_React.renderMonadEff)(Control_Monad_Eff_Console.log("You said Hello!")))(function () {
+        return Control_Bind.discard(Control_Bind.discardUnit)(Concur_React.renderBind)(Concur_React_Widgets["textButton'"]("Hello Sailor!"))(function () {
+            return helloWidget;
+        });
     });
 });
 module.exports = {
     helloWidget: helloWidget
 };
 
-},{"../Concur.React":191,"../Concur.React.Widgets":190,"../Control.Bind":200,"../Prelude":342}],352:[function(require,module,exports){
+},{"../Concur.React":191,"../Concur.React.Widgets":190,"../Control.Bind":200,"../Control.Monad.Eff.Class":207,"../Control.Monad.Eff.Console":209,"../Prelude":344}],354:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Concur_React = require("../Concur.React");
@@ -37532,20 +37672,59 @@ var Concur_React_Run = require("../Concur.React.Run");
 var Control_Alt = require("../Control.Alt");
 var Control_Bind = require("../Control.Bind");
 var Control_Monad_Eff = require("../Control.Monad.Eff");
+var Control_Monad_Eff_Console = require("../Control.Monad.Eff.Console");
 var DOM = require("../DOM");
 var Data_Semigroup = require("../Data.Semigroup");
 var Prelude = require("../Prelude");
 var Test_Counter = require("../Test.Counter");
 var Test_Hello = require("../Test.Hello");
+var Test_TailRec = require("../Test.TailRec");
 var main = function __do() {
     Concur_React_Run.runWidgetInDom("hello")(Test_Hello.helloWidget)();
-    return Concur_React_Run.runWidgetInDom("counter")(Control_Alt.alt(Concur_React.renderAlt(Data_Semigroup.semigroupArray))(Test_Counter.counterWidget(0))(Test_Counter.counterWidget(100)))();
+    Concur_React_Run.runWidgetInDom("counter")(Control_Alt.alt(Concur_React.renderAlt(Data_Semigroup.semigroupArray))(Test_Counter.counterWidget(0))(Test_Counter.counterWidget(100)))();
+    return Concur_React_Run.runWidgetInDom("tailRec")(Test_TailRec.tailRecDemo)();
 };
 module.exports = {
     main: main
 };
 
-},{"../Concur.React":191,"../Concur.React.Run":189,"../Control.Alt":192,"../Control.Bind":200,"../Control.Monad.Eff":213,"../DOM":243,"../Data.Semigroup":315,"../Prelude":342,"../Test.Counter":350,"../Test.Hello":351}],353:[function(require,module,exports){
+},{"../Concur.React":191,"../Concur.React.Run":189,"../Control.Alt":192,"../Control.Bind":200,"../Control.Monad.Eff":215,"../Control.Monad.Eff.Console":209,"../DOM":245,"../Data.Semigroup":317,"../Prelude":344,"../Test.Counter":352,"../Test.Hello":353,"../Test.TailRec":355}],355:[function(require,module,exports){
+// Generated by purs version 0.11.6
+"use strict";
+var Concur_React = require("../Concur.React");
+var Concur_React_DOM = require("../Concur.React.DOM");
+var Concur_React_Widgets = require("../Concur.React.Widgets");
+var Control_Bind = require("../Control.Bind");
+var Data_Ord = require("../Data.Ord");
+var Data_Semigroup = require("../Data.Semigroup");
+var Data_Semiring = require("../Data.Semiring");
+var Data_Show = require("../Data.Show");
+var Prelude = require("../Prelude");
+var maxIterations = 1000000;
+var tailRecWidget = function (count) {
+    return function (times) {
+        var newCount = count + 1 | 0;
+        var $0 = newCount > maxIterations;
+        if ($0) {
+            return Control_Bind.discard(Control_Bind.discardUnit)(Concur_React.renderBind)(Concur_React_Widgets["textButton'"]("Ran " + (Data_Show.show(Data_Show.showInt)(count) + (" iterations. Restart? (n = " + (Data_Show.show(Data_Show.showInt)(times) + ")")))))(function () {
+                return tailRecWidget(0)(times + 1 | 0);
+            });
+        };
+        return Control_Bind.discard(Control_Bind.discardUnit)(Concur_React.renderBind)(Concur_React.pulse)(function () {
+            return tailRecWidget(newCount)(times);
+        });
+    };
+};
+var tailRecDemo = Concur_React_DOM["div'"]([ Concur_React_DOM["p'"]([ Concur_React_DOM.text("Clicking this button will perform " + (Data_Show.show(Data_Show.showInt)(maxIterations) + " iterations via tail recursion ")) ]), Concur_React_DOM["p'"]([ Concur_React_DOM.text("Once done, you can restart the iterations as many times you want.") ]), Control_Bind.discard(Control_Bind.discardUnit)(Concur_React.renderBind)(Concur_React_Widgets["textButton'"]("Start Tail Recursion Demo"))(function () {
+    return tailRecWidget(0)(2);
+}) ]);
+module.exports = {
+    maxIterations: maxIterations, 
+    tailRecDemo: tailRecDemo, 
+    tailRecWidget: tailRecWidget
+};
+
+},{"../Concur.React":191,"../Concur.React.DOM":188,"../Concur.React.Widgets":190,"../Control.Bind":200,"../Data.Ord":310,"../Data.Semigroup":317,"../Data.Semiring":319,"../Data.Show":321,"../Prelude":344}],356:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var TypeEquals = function (from, to) {
@@ -37570,7 +37749,7 @@ module.exports = {
     refl: refl
 };
 
-},{}],354:[function(require,module,exports){
+},{}],357:[function(require,module,exports){
 "use strict";
 
 // module Unsafe.Coerce
@@ -37579,7 +37758,7 @@ exports.unsafeCoerce = function (x) {
   return x;
 };
 
-},{}],355:[function(require,module,exports){
+},{}],358:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -37587,10 +37766,10 @@ module.exports = {
     unsafeCoerce: $foreign.unsafeCoerce
 };
 
-},{"./foreign":354}],356:[function(require,module,exports){
+},{"./foreign":357}],359:[function(require,module,exports){
 require('Test.Main').main();
 
-},{"Test.Main":352}],357:[function(require,module,exports){
+},{"Test.Main":354}],360:[function(require,module,exports){
 // shim for using process in browser
 var process = module.exports = {};
 
@@ -37776,4 +37955,4 @@ process.chdir = function (dir) {
 };
 process.umask = function() { return 0; };
 
-},{}]},{},[356]);
+},{}]},{},[359]);
