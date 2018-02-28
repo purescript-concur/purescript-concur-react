@@ -11,7 +11,8 @@ The API needs a little bit more work, but it does work.
 Individual example sources -
 
 1. Hello World! Shows simple effectful widgets. [Source](https://github.com/ajnsit/purescript-concur/blob/master/src/Test/Hello.purs).
-2. Two counter widgets side by side. [Source](https://github.com/ajnsit/purescript-concur/blob/master/src/Test/Counter.purs).
+2. A simple counter widget. [Source](https://github.com/ajnsit/purescript-concur/blob/master/src/Test/Counter.purs).
+2. Tail Recursion demo. [Source](https://github.com/ajnsit/purescript-concur/blob/master/src/Test/TailRec.purs). Shows how Widgets written using tail recursion are stack safe, even though Purescript is strict.
 
 ## Building the example from source
 
