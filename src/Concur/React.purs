@@ -4,10 +4,12 @@ import Prelude
 
 import Control.Alternative (class Alternative, (<|>))
 import Control.Monad.Eff (Eff)
-import Control.Monad.Eff.Class (class MonadEff)
+import Control.Monad.Eff.Class (class MonadEff, liftEff)
 import Control.Monad.Eff.Unsafe (unsafeCoerceEff)
+import Control.Monad.Rec.Class (class MonadRec, Step(..), tailRecM)
 import Control.Plus (class Alt, alt, class Plus, empty)
 import Data.Array (foldl)
+import Data.Either (Either(..))
 import Data.Monoid (class Monoid, mempty)
 import React as R
 import React.DOM as D
@@ -23,7 +25,7 @@ type ReactEff state refs eff =
 type HTML = Array R.ReactElement
 
 type RenderFunc v eff a = (Widget v eff a -> EventHandler eff Unit) -> v
-data Widget v eff a = RenderEnd a | Widget (RenderFunc v eff a) | WidgetEff (EventHandler eff (Widget v eff a))
+data Widget v eff a = RenderEnd a | Widget (RenderFunc v eff a) | WidgetEff (RenderHandler eff (Widget v eff a))
 
 instance renderFunctor :: Functor (Widget v eff) where
   map f (RenderEnd a) = RenderEnd (f a)
@@ -74,6 +76,14 @@ type NodeTag = Array P.Props -> Array R.ReactElement -> R.ReactElement
 never :: forall a v eff. Monoid v => Widget v eff a
 never = empty
 
+-- Pause for a negligible amount of time. Forces continuations to pass through the trampoline.
+-- Avoids stack overflows in (ridiculous) cases where a widget calls itself without any intervening widgets or effects.
+-- E.g. -
+--   BAD  `counter n = if n < 10000 then counter (n+1) else pure n`
+--   GOOD `counter n = if n < 10000 then (pulse >>= const (counter (n+1))) else pure n`
+pulse :: forall v eff. Widget v eff Unit
+pulse = liftEff (pure unit)
+
 orr :: forall a v eff. Monoid v => Array (Widget v eff a) -> Widget v eff a
 orr = foldl (<|>) never
 
@@ -86,11 +96,12 @@ el' n = el n <<< orr
 display :: forall a v eff. v -> Widget v eff a
 display = Widget <<< const
 
-liftRenderEff :: forall v eff a. EventHandler eff a -> Widget v eff a
+liftRenderEff :: forall v eff a. RenderHandler eff a -> Widget v eff a
 liftRenderEff eff = WidgetEff (pure <$> eff)
 
 instance renderMonadEff :: MonadEff eff (Widget v eff) where
   liftEff :: forall v eff a. Eff eff a -> Widget v eff a
+  -- Silly unsafeCoerceEff
   liftEff = liftRenderEff <<< unsafeCoerceEff
 
 type EventHandler eff a = Eff (ReactEff R.ReadWrite R.ReadOnly eff) a
@@ -110,17 +121,25 @@ componentClass init = R.createClass (R.spec init render)
       ren <- R.readState this
       renderComponentInner this ren
     renderComponentInner :: This props HTML eff a -> Widget HTML eff a -> RenderHandler eff HTML
-    renderComponentInner this (RenderEnd a) = pure []
-    renderComponentInner this (Widget r) = do
-      let
-        handler w = case w of
-          -- TODO: POTENTIALLY INFINITE RECURSION WILL BLOW THE STACK.
-          -- Something like this will trigger it - `forever (liftEff someAction)`
-          (WidgetEff s) -> s >>= handler
-          w' -> void (R.writeState this w')
-      pure (r handler)
-    -- TODO: AN EFFECTFUL WIDGET SHOULD NEVER BE PASSED TO RENDER. BREAK OUT WidgetNoEff.
-    renderComponentInner this (WidgetEff eff) = pure []
+    renderComponentInner this w = renderComponentInner' this (pure w)
+    renderComponentInner' this eff = do
+      estep <- tailRecM renderStepEff eff
+      case estep of
+        Left r -> do
+          let handler w = do
+                w' <- case w of
+                  -- Silly unsafeCoerceEff
+                  (WidgetEff s) -> unsafeCoerceEff s
+                  _ -> pure w
+                void (R.writeState this w')
+          pure (r handler)
+        Right _ -> pure []
+    renderStepEff eff' = do
+      w' <- eff'
+      pure $ case w' of
+        WidgetEff eff'' -> Loop eff''
+        RenderEnd a -> Done (Right a)
+        Widget r -> Done (Left r)
 
 renderComponent :: forall a eff. Widget HTML eff a -> R.ReactElement
 renderComponent init = R.createFactory (componentClass init) {}
