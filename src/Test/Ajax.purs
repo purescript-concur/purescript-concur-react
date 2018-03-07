@@ -52,7 +52,7 @@ fetchReddit sub = div'
     showPosts = textButton' "Fetch posts" >>= \_ -> fetchPosts
     fetchPosts = do
       liftEff (log ("Fetching posts from subreddit - " <> sub))
-      resp <- (liftAff (get ("http://www.reddit.com/r/" <> sub <> ".json"))) <|> (text "Loading...")
+      resp <- (liftAff (get ("https://www.reddit.com/r/" <> sub <> ".json"))) <|> (text "Loading...")
       let postsResp = do
             o <- decodeJson resp.response
             d1 <- o .? "data"

@@ -54533,7 +54533,7 @@ var decodePostArray = function (json) {
 };
 var fetchReddit = function (sub) {
     var fetchPosts = Control_Bind.discard(Control_Bind.discardUnit)(Concur_React.widgetBind)(Control_Monad_Eff_Class.liftEff(Concur_React.widgetMonadEff(Data_Monoid.monoidArray))(Control_Monad_Eff_Console.log("Fetching posts from subreddit - " + sub)))(function () {
-        return Control_Bind.bind(Concur_React.widgetBind)(Control_Alt.alt(Concur_React.widgetAlt(Data_Semigroup.semigroupArray))(Control_Monad_Aff_Class.liftAff(Concur_React.widgetMonadAff(Data_Monoid.monoidArray))(Network_HTTP_Affjax.get(Network_HTTP_Affjax_Response.responsableJson)("http://www.reddit.com/r/" + (sub + ".json"))))(Concur_React_DOM.text("Loading...")))(function (v) {
+        return Control_Bind.bind(Concur_React.widgetBind)(Control_Alt.alt(Concur_React.widgetAlt(Data_Semigroup.semigroupArray))(Control_Monad_Aff_Class.liftAff(Concur_React.widgetMonadAff(Data_Monoid.monoidArray))(Network_HTTP_Affjax.get(Network_HTTP_Affjax_Response.responsableJson)("https://www.reddit.com/r/" + (sub + ".json"))))(Concur_React_DOM.text("Loading...")))(function (v) {
             var postsResp = Control_Bind.bind(Data_Either.bindEither)(Data_Argonaut_Decode_Class.decodeJson(Data_Argonaut_Decode_Class.decodeStrMap(Data_Argonaut_Decode_Class.decodeJsonJson))(v.response))(function (v1) {
                 return Control_Bind.bind(Data_Either.bindEither)(Data_Argonaut_Decode_Combinators.getField(Data_Argonaut_Decode_Class.decodeStrMap(Data_Argonaut_Decode_Class.decodeJsonJson))(v1)("data"))(function (v2) {
                     return Control_Bind.bind(Data_Either.bindEither)(Data_Argonaut_Decode_Combinators.getField(Data_Argonaut_Decode_Class.decodeJsonJson)(v2)("children"))(function (v3) {
