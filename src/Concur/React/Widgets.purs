@@ -2,7 +2,7 @@ module Concur.React.Widgets where
 
 import Prelude
 
-import Concur.React (HTML, NodeTag, Widget(..), EventHandler)
+import Concur.React (EventHandler, HTML, NodeTag, Widget(..), forViewStep)
 import Concur.React.DOM as CD
 import Data.Either (Either(..), either)
 import React as R
@@ -45,8 +45,8 @@ elEvent evt = elEventMany [evt]
 elEventMany :: forall a b eff. (Array ((a -> EventHandler eff Unit) -> P.Props)) -> NodeTag -> Array P.Props -> Widget HTML eff b -> Widget HTML eff (Either a b)
 elEventMany evts e props (RenderEnd a) = RenderEnd (Right a)
 elEventMany evts e props (Widget w) = Widget $ \send ->
-  [e (props <> ((\evt -> evt (send <<< pure <<< Left)) <$> evts)) (w (send <<< map Right))]
-elEventMany evts e props (WidgetEff eff) = WidgetEff (elEventMany evts e props <$> eff)
+  forViewStep (w (send <<< map Right)) (\v -> [e (props <> ((\evt -> evt (send <<< pure <<< Left)) <$> evts)) v])
+-- elEventMany evts e props (WidgetEff eff) = WidgetEff (elEventMany evts e props <$> eff)
 
 -- Wrap a div with key handlers around a widget
 -- Returns a `Left unit on key events.

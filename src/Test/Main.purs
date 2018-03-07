@@ -7,14 +7,18 @@ import Control.Alt ((<|>))
 import Control.Monad.Eff (Eff)
 import DOM (DOM)
 import Control.Monad.Eff.Console (CONSOLE)
+import Network.HTTP.Affjax (AJAX)
 
 -- Import all examples
 import Test.Hello (helloWidget)
 import Test.Counter (counterWidget)
-import Test.TailRec (tailRecDemo)
+import Test.Ajax (ajaxWidget)
+-- import Test.TailRec (tailRecDemo)
 
-main :: forall eff. Eff (dom :: DOM, console :: CONSOLE | eff) Unit
+main :: forall eff. Eff (dom :: DOM, console :: CONSOLE, ajax :: AJAX | eff) Unit
 main = do
   runWidgetInDom "hello" helloWidget
   runWidgetInDom "counter" (counterWidget 0 <|> counterWidget 100)
-  runWidgetInDom "tailRec" tailRecDemo
+  runWidgetInDom "ajax" ajaxWidget
+  -- TODO: This is currently buggy
+  -- runWidgetInDom "tailRec" tailRecDemo

@@ -2,11 +2,11 @@ module Test.Counter where
 
 import Prelude
 
-import Concur.React (Widget, HTML)
+import Concur.React (HTML, Widget)
 import Concur.React.DOM (text, div', p')
 import Concur.React.Widgets (textButton')
-import Control.Monad.Eff.Console (CONSOLE, log)
 import Control.Monad.Eff.Class (liftEff)
+import Control.Monad.Eff.Console (CONSOLE, log)
 
 counterWidget :: forall a eff. Int -> Widget HTML (console :: CONSOLE | eff) a
 counterWidget count = do
