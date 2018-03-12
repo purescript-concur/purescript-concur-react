@@ -2,7 +2,7 @@ module Concur.React.Widgets where
 
 import Prelude
 
-import Concur.React (EventHandler, HTML, NodeTag, Widget(..), forViewStep)
+import Concur.React (EventHandler, HTML, NodeTag, Widget(..), forViewStep, viewStep)
 import Concur.React.DOM as CD
 import Data.Either (Either(..), either)
 import React as R
@@ -37,6 +37,20 @@ textButton props label = displayButton props (CD.text label)
 textButton' :: forall eff. String -> Widget HTML eff Unit
 textButton' = textButton []
 
+textArea :: forall eff. Array P.Props -> String -> Widget HTML eff String
+textArea props contents = Widget $ \send ->
+  viewStep [D.textarea (props <> [P.value contents, P.onChange (send <<< pure <<< getEventTargetValueString)]) []]
+
+textArea' :: forall eff. String -> Widget HTML eff String
+textArea' = textArea []
+
+textInput :: forall eff. Array P.Props -> String -> Widget HTML eff String
+textInput props contents = Widget $ \send ->
+  viewStep [D.input (props <> [P._type "text", P.value contents, P.onChange (send <<< pure <<< getEventTargetValueString)]) []]
+
+textInput' :: forall eff. String -> Widget HTML eff String
+textInput' = textInput []
+
 -- Wrap an element with an arbitrary eventHandler over a widget
 elEvent :: forall a b eff. ((a -> EventHandler eff Unit) -> P.Props) -> NodeTag -> Array P.Props -> Widget HTML eff b -> Widget HTML eff (Either a b)
 elEvent evt = elEventMany [evt]
@@ -57,3 +71,7 @@ wrapKeyHandler props w = elEvent P.onKeyDown D.div props w
 -- Specialised key handler widget with only static children
 displayKeyHandler :: forall eff. Array P.Props -> (forall a. Widget HTML eff a) -> Widget HTML eff R.KeyboardEvent
 displayKeyHandler props w = either id id <$> wrapKeyHandler props w
+
+-- Generic function to get info out of events
+-- TODO: Move these to some other place
+foreign import getEventTargetValueString :: R.Event -> String
