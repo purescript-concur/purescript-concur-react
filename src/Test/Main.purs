@@ -12,7 +12,6 @@ import Test.Ajax (ajaxWidget)
 import Test.Color (colorWidget)
 import Test.Counter (counterWidget)
 import Test.Hello (helloWidget)
-import Test.TailRec (tailRecDemo)
 
 main :: forall eff. Eff (dom :: DOM, console :: CONSOLE, ajax :: AJAX | eff) Unit
 main = do
@@ -21,4 +20,4 @@ main = do
   runWidgetInDom "ajax" ajaxWidget
   runWidgetInDom "color" (colorWidget "")
   -- TODO: This is currently buggy
-  runWidgetInDom "tailRec" tailRecDemo
+  -- runWidgetInDom "tailRec" tailRecDemo
