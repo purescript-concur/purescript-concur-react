@@ -2,8 +2,13 @@ module Concur.React.Widgets where
 
 import Prelude
 
-import Concur.React (EventHandler, HTML, NodeTag, Widget(..), forViewStep, viewStep)
+import Concur.Core (Widget(..), WidgetStep(..), mapView, orr)
+import Concur.React (EventHandler, HTML, NodeTag, NodeName)
 import Concur.React.DOM as CD
+import Control.Monad.Eff.AVar (AVar, makeEmptyVar, takeVar, tryPutVar)
+import Control.Monad.Free (liftF)
+import Control.Plus (class Plus)
+import Control.ShiftMap (class ShiftMap, shiftMap)
 import Data.Either (Either(..), either)
 import React as R
 import React.DOM as D

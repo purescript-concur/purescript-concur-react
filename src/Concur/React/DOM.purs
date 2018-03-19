@@ -1,7 +1,8 @@
 module Concur.React.DOM where
 
 import Prelude (pure, (<<<))
-import Concur.React (el', display, Widget, HTML)
+import Concur.Core (display, Widget)
+import Concur.React (el', HTML)
 import React.DOM as D
 import React.DOM.Props as P
 

@@ -2,7 +2,8 @@ module Concur.React.Run where
 
 import Prelude
 
-import Concur.React (HTML, Widget, renderComponent)
+import Concur.Core (Widget)
+import Concur.React (HTML, renderComponent)
 import Control.Monad.Eff (Eff)
 import DOM (DOM)
 import DOM.HTML (window)
