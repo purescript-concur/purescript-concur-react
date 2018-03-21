@@ -2,7 +2,8 @@ module Test.TailRec where
 
 import Prelude
 
-import Concur.React (Widget, HTML, pulse)
+import Concur.Core (Widget)
+import Concur.React (HTML) -- , pulse)
 import Concur.React.DOM (div', p', text)
 import Concur.React.Widgets (textButton')
 
@@ -10,7 +11,7 @@ import Concur.React.Widgets (textButton')
 maxIterations :: Int
 maxIterations = 1000000
 
-tailRecDemo :: forall a eff. Widget HTML eff a
+tailRecDemo :: forall a. Widget HTML a
 tailRecDemo = do
   div'[ p' [text ("Clicking this button will perform " <> show maxIterations <> " iterations via tail recursion ")]
       , p' [text "Once done, you can restart the iterations as many times you want."]
@@ -19,7 +20,7 @@ tailRecDemo = do
           tailRecWidget 0 2
       ]
 
-tailRecWidget :: forall a eff. Int -> Int -> Widget HTML eff a
+tailRecWidget :: forall a. Int -> Int -> Widget HTML a
 tailRecWidget count times = do
   let newCount = count + 1
   if newCount > maxIterations
@@ -29,5 +30,5 @@ tailRecWidget count times = do
      else do
        -- For the first maxIterations times, tailRecWidget calls itself in a tight loop
        -- This would blow the stack, if it weren't for the pulse here.
-       pulse
+       -- pulse
        tailRecWidget newCount times

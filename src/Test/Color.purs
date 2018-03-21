@@ -2,7 +2,8 @@ module Test.Color where
 
 import Prelude
 
-import Concur.React (HTML, Widget)
+import Concur.Core (Widget)
+import Concur.React (HTML)
 import Concur.React.DOM as D
 import Concur.React.Widgets (textArea, textButton')
 import Data.Either (either)
@@ -12,7 +13,7 @@ import Data.String.Regex.Flags (global)
 import Data.Traversable (sequence)
 import React.DOM.Props as P
 
-colorWidget :: forall a eff. String -> Widget HTML eff a
+colorWidget :: forall a eff. String -> Widget HTML a
 colorWidget s =
     D.div' [ D.text "Insert some color codes, or "
            , textButton' "get an example" $> exampleText

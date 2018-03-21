@@ -2,18 +2,19 @@ module Test.Ajax where
 
 import Prelude
 
-import Concur.React (HTML, Widget)
+import Concur.Core (Widget)
+import Concur.React (HTML)
 import Concur.React.DOM (text, div', p', h4')
 import Concur.React.Widgets (textButton')
 import Control.Alt ((<|>))
 import Control.Monad.Aff.Class (liftAff)
 import Control.Monad.Eff.Class (liftEff)
-import Control.Monad.Eff.Console (CONSOLE, log)
+import Control.Monad.Eff.Console (log)
 import Data.Argonaut (class DecodeJson, Json, decodeJson, (.?))
 import Data.Array (take)
 import Data.Either (Either(..))
 import Data.Traversable (traverse)
-import Network.HTTP.Affjax (AJAX, get)
+import Network.HTTP.Affjax (get)
 
 -- Fetches posts from reddit json
 newtype Post = Post
@@ -37,13 +38,13 @@ instance decodeJsonPost :: DecodeJson Post where
 subreddits :: Array String
 subreddits = ["programming", "purescript", "haskell", "javascript"]
 
-ajaxWidget :: forall a eff. Widget HTML (console :: CONSOLE, ajax :: AJAX | eff) a
+ajaxWidget :: forall a eff. Widget HTML a
 ajaxWidget = div'
   [ p' [text "Click button to fetch posts from reddit"]
   , div' (map fetchReddit subreddits)
   ]
 
-fetchReddit :: forall a eff. String -> Widget HTML (console :: CONSOLE, ajax :: AJAX | eff) a
+fetchReddit :: forall a eff. String -> Widget HTML a
 fetchReddit sub = div'
   [ h4' [text ("/r/" <> sub)]
   , showPosts

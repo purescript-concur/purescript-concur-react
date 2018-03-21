@@ -2,13 +2,15 @@ module Concur.React.Widgets where
 
 import Prelude
 
-import Concur.Core (Widget(..), WidgetStep(..), mapView, orr)
-import Concur.React (EventHandler, HTML, NodeTag, NodeName)
+import Concur.Core (Widget(Widget), WidgetStep(WidgetStep))
+import Concur.React (HTML, NodeTag)
 import Concur.React.DOM as CD
-import Control.Monad.Eff.AVar (AVar, makeEmptyVar, takeVar, tryPutVar)
-import Control.Monad.Free (liftF)
-import Control.Plus (class Plus)
-import Control.ShiftMap (class ShiftMap, shiftMap)
+import Control.Monad.Aff.AVar (takeVar)
+import Control.Monad.Aff.Class (liftAff)
+import Control.Monad.Eff.AVar (makeEmptyVar, tryPutVar)
+import Control.Monad.Eff.Class (liftEff)
+import Control.Monad.Free (liftF, resume)
+import Control.Monad.IOSync (IOSync, runIOSync')
 import Data.Either (Either(..), either)
 import React as R
 import React.DOM as D
@@ -18,63 +20,73 @@ import React.DOM.Props as P
 
 -- Wrap a button around a widget
 -- Returns a `Left unit on click events.
--- Or a `Right a` when the inner `Widget HTML eff a` ends.
-wrapButton :: forall a eff. Array P.Props -> Widget HTML eff a -> Widget HTML eff (Either Unit a)
-wrapButton props w = elEvent (P.onClick <<< (_ <<< const unit)) D.button props w
+-- Or a `Right a` when the inner `Widget HTML a` ends.
+wrapButton :: forall a. Array P.Props -> Widget HTML a -> Widget HTML (Either Unit a)
+wrapButton props w = elEvent (\h -> P.onClick (const (runIOSync' (h unit)))) D.button props w
 
 -- Like a wrapButton, but takes no props
-wrapButton' :: forall a eff. Widget HTML eff a -> Widget HTML eff (Either Unit a)
+wrapButton' :: forall a. Widget HTML a -> Widget HTML (Either Unit a)
 wrapButton' = wrapButton []
 
 -- Specialised button with only static children
-displayButton :: forall eff. Array P.Props -> (forall a. Widget HTML eff a) -> Widget HTML eff Unit
+displayButton :: Array P.Props -> (forall a. Widget HTML a) -> Widget HTML Unit
 displayButton props d = either id id <$> wrapButton props d
 
 -- Like a displayButton, but takes no props
-displayButton' :: forall eff. (forall a. Widget HTML eff a) -> Widget HTML eff Unit
+displayButton' :: (forall a. Widget HTML a) -> Widget HTML Unit
 displayButton' = displayButton []
 
 -- Specialised text only button
-textButton :: forall eff. Array P.Props -> String -> Widget HTML eff Unit
+textButton :: Array P.Props -> String -> Widget HTML Unit
 textButton props label = displayButton props (CD.text label)
 
 -- Like a textButton, but takes no props
-textButton' :: forall eff. String -> Widget HTML eff Unit
+textButton' :: String -> Widget HTML Unit
 textButton' = textButton []
 
-textArea :: forall eff. Array P.Props -> String -> Widget HTML eff String
-textArea props contents = Widget $ \send ->
-  viewStep [D.textarea (props <> [P.value contents, P.onChange (send <<< pure <<< getEventTargetValueString)]) []]
+-- Helper
+withViewEvent :: forall a. ((a -> IOSync Unit) -> HTML) -> Widget HTML a
+withViewEvent mkView = Widget (liftF (WidgetStep (do
+     v <- liftEff makeEmptyVar
+     pure { view: mkView (\a -> void (liftEff (tryPutVar a v))), cont: liftAff (takeVar v) }
+  )))
 
-textArea' :: forall eff. String -> Widget HTML eff String
+textArea :: Array P.Props -> String -> Widget HTML String
+textArea props contents = withViewEvent (\h -> [D.textarea (props <> [P.value contents, P.onChange (runIOSync' <<< h <<< getEventTargetValueString)]) []])
+
+textArea' :: String -> Widget HTML String
 textArea' = textArea []
 
-textInput :: forall eff. Array P.Props -> String -> Widget HTML eff String
-textInput props contents = Widget $ \send ->
-  viewStep [D.input (props <> [P._type "text", P.value contents, P.onChange (send <<< pure <<< getEventTargetValueString)]) []]
+textInput :: Array P.Props -> String -> Widget HTML String
+textInput props contents = withViewEvent (\h -> [D.input (props <> [P._type "text", P.value contents, P.onChange (runIOSync' <<< h <<< getEventTargetValueString)]) []])
 
-textInput' :: forall eff. String -> Widget HTML eff String
+textInput' :: String -> Widget HTML String
 textInput' = textInput []
 
 -- Wrap an element with an arbitrary eventHandler over a widget
-elEvent :: forall a b eff. ((a -> EventHandler eff Unit) -> P.Props) -> NodeTag -> Array P.Props -> Widget HTML eff b -> Widget HTML eff (Either a b)
+elEvent :: forall a b. ((a -> IOSync Unit) -> P.Props) -> NodeTag -> Array P.Props -> Widget HTML b -> Widget HTML (Either a b)
 elEvent evt = elEventMany [evt]
 
 -- Wrap an element with multiple arbitrary eventHandlers over a widget
-elEventMany :: forall a b eff. (Array ((a -> EventHandler eff Unit) -> P.Props)) -> NodeTag -> Array P.Props -> Widget HTML eff b -> Widget HTML eff (Either a b)
-elEventMany evts e props (RenderEnd a) = RenderEnd (Right a)
-elEventMany evts e props (Widget w) = Widget $ \send ->
-  forViewStep (w (send <<< map Right)) (\v -> [e (props <> ((\evt -> evt (send <<< pure <<< Left)) <$> evts)) v])
--- elEventMany evts e props (WidgetEff eff) = WidgetEff (elEventMany evts e props <$> eff)
+elEventMany :: forall a b. (Array ((a -> IOSync Unit) -> P.Props)) -> NodeTag -> Array P.Props -> Widget HTML b -> Widget HTML (Either a b)
+elEventMany evts e props (Widget w) = Widget $
+  case resume w of
+    Right a -> pure (Right a)
+    Left (WidgetStep wsm) -> liftF (WidgetStep (do
+      ws <- wsm
+      v <- liftEff makeEmptyVar
+      -- TODO: Handle Right
+      pure { view: [e (props <> ((\evt -> evt (\a -> void (liftEff (tryPutVar a v)))) <$> evts)) ws.view], cont: map Left (liftAff (takeVar v)) }
+    ))
 
 -- Wrap a div with key handlers around a widget
 -- Returns a `Left unit on key events.
--- Or a `Right a` when the inner `Widget HTML eff a` ends.
-wrapKeyHandler :: forall a eff. Array P.Props -> Widget HTML eff a -> Widget HTML eff (Either R.KeyboardEvent a)
-wrapKeyHandler props w = elEvent P.onKeyDown D.div props w
+-- Or a `Right a` when the inner `Widget HTML a` ends.
+wrapKeyHandler :: forall a. Array P.Props -> Widget HTML a -> Widget HTML (Either R.KeyboardEvent a)
+wrapKeyHandler props w = elEvent (\h -> P.onKeyDown (runIOSync' <<< h)) D.div props w
 
 -- Specialised key handler widget with only static children
-displayKeyHandler :: forall eff. Array P.Props -> (forall a. Widget HTML eff a) -> Widget HTML eff R.KeyboardEvent
+displayKeyHandler :: Array P.Props -> (forall a. Widget HTML a) -> Widget HTML R.KeyboardEvent
 displayKeyHandler props w = either id id <$> wrapKeyHandler props w
 
 -- Generic function to get info out of events
