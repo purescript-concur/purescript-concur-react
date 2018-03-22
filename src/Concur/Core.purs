@@ -7,7 +7,7 @@ import Control.Monad.Aff (Aff, never)
 import Control.Monad.Aff.Class (class MonadAff, liftAff)
 import Control.Monad.Eff (Eff)
 import Control.Monad.Eff.Class (class MonadEff, liftEff)
-import Control.Monad.Free (Free, hoistFree, resume, liftF)
+import Control.Monad.Free (Free, hoistFree, resume, liftF, wrap)
 import Control.Monad.IO (IO)
 import Control.Monad.IOSync (IOSync)
 import Control.Parallel.Class (parallel, sequential)
@@ -66,12 +66,12 @@ instance widgetMonad :: Monad (Widget v)
 instance widgetSemigroup :: Semigroup v => Semigroup (Widget v a) where
   append (Widget w1) (Widget w2) = Widget (appendFree w1 w2)
     where
-      appendFree w1 w2 =
-        case resume w1 of
+      appendFree w1' w2' =
+        case resume w1' of
           Right a1 -> pure a1
-          Left ws1 -> case resume w2 of
+          Left ws1 -> case resume w2' of
             Right a2 -> pure a2
-            Left ws2 -> join (liftF (appendWidgetStep ws1 ws2))
+            Left ws2 -> wrap (appendWidgetStep ws1 ws2)
       appendWidgetStep (WidgetStep wsm1) (WidgetStep wsm2) = WidgetStep $ do
         ws1 <- wsm1
         ws2 <- wsm2
@@ -80,8 +80,8 @@ instance widgetSemigroup :: Semigroup v => Semigroup (Widget v a) where
                   e <- sequential (alt (parallel (map Left ws1.cont)) (parallel (map Right ws2.cont)))
                   pure $ case e of
                       -- Taking care to not run any of the effects again
-                      Left  e' -> appendFree e' (join (liftF (WidgetStep (pure ws2))))
-                      Right e' -> appendFree (join (liftF (WidgetStep (pure ws1)))) e'
+                      Left  e' -> appendFree e' (wrap (WidgetStep (pure ws2)))
+                      Right e' -> appendFree (wrap (WidgetStep (pure ws1))) e'
         pure { view: v, cont: c }
 
 instance widgetAlt :: Semigroup v => Alt (Widget v) where

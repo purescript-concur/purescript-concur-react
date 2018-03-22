@@ -9,7 +9,7 @@ import Control.Monad.Aff.AVar (takeVar)
 import Control.Monad.Aff.Class (liftAff)
 import Control.Monad.Eff.AVar (makeEmptyVar, tryPutVar)
 import Control.Monad.Eff.Class (liftEff)
-import Control.Monad.Free (liftF, resume)
+import Control.Monad.Free (liftF, resume, wrap)
 import Control.Monad.IOSync (IOSync, runIOSync')
 import Control.Parallel.Class (parallel, sequential)
 import Control.Plus (alt)
@@ -74,7 +74,7 @@ elEventMany :: forall a b. (Array ((a -> IOSync Unit) -> P.Props)) -> NodeTag ->
 elEventMany evts e props (Widget w) = Widget $
   case resume w of
     Right a -> pure (Right a)
-    Left (WidgetStep wsm) -> join $ liftF $ WidgetStep $ do
+    Left (WidgetStep wsm) -> wrap $ WidgetStep $ do
       ws <- wsm
       var <- liftEff makeEmptyVar
       let view' = [e (props <> ((\evt -> evt (\a -> void (liftEff (tryPutVar (pure (Left a)) var)))) <$> evts)) ws.view]

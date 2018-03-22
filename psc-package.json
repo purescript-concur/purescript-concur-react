@@ -1,6 +1,6 @@
 {
     "name": "purescript-concur",
-    "set": "psc-0.11.7-concur",
+    "set": "psc-0.11.7-concur-1",
     "source": "https://github.com/concurui/package-sets.git",
     "depends": [
         "io",
