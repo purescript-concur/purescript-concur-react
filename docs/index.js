@@ -928,7 +928,7 @@ function factory(ReactComponent, isValidElement, ReactNoopUpdateQueue) {
 module.exports = factory;
 
 }).call(this,require('_process'))
-},{"_process":468,"fbjs/lib/emptyObject":11,"fbjs/lib/invariant":18,"fbjs/lib/warning":25,"object-assign":26}],2:[function(require,module,exports){
+},{"_process":495,"fbjs/lib/emptyObject":11,"fbjs/lib/invariant":18,"fbjs/lib/warning":25,"object-assign":26}],2:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -1035,7 +1035,7 @@ var EventListener = {
 
 module.exports = EventListener;
 }).call(this,require('_process'))
-},{"./emptyFunction":10,"_process":468}],4:[function(require,module,exports){
+},{"./emptyFunction":10,"_process":495}],4:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -1302,7 +1302,7 @@ function createArrayFromMixed(obj) {
 
 module.exports = createArrayFromMixed;
 }).call(this,require('_process'))
-},{"./invariant":18,"_process":468}],9:[function(require,module,exports){
+},{"./invariant":18,"_process":495}],9:[function(require,module,exports){
 (function (process){
 'use strict';
 
@@ -1386,7 +1386,7 @@ function createNodesFromMarkup(markup, handleScript) {
 
 module.exports = createNodesFromMarkup;
 }).call(this,require('_process'))
-},{"./ExecutionEnvironment":4,"./createArrayFromMixed":8,"./getMarkupWrap":14,"./invariant":18,"_process":468}],10:[function(require,module,exports){
+},{"./ExecutionEnvironment":4,"./createArrayFromMixed":8,"./getMarkupWrap":14,"./invariant":18,"_process":495}],10:[function(require,module,exports){
 "use strict";
 
 /**
@@ -1443,7 +1443,7 @@ if (process.env.NODE_ENV !== 'production') {
 
 module.exports = emptyObject;
 }).call(this,require('_process'))
-},{"_process":468}],12:[function(require,module,exports){
+},{"_process":495}],12:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -1600,7 +1600,7 @@ function getMarkupWrap(nodeName) {
 
 module.exports = getMarkupWrap;
 }).call(this,require('_process'))
-},{"./ExecutionEnvironment":4,"./invariant":18,"_process":468}],15:[function(require,module,exports){
+},{"./ExecutionEnvironment":4,"./invariant":18,"_process":495}],15:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -1761,7 +1761,7 @@ function invariant(condition, format, a, b, c, d, e, f) {
 
 module.exports = invariant;
 }).call(this,require('_process'))
-},{"_process":468}],19:[function(require,module,exports){
+},{"_process":495}],19:[function(require,module,exports){
 'use strict';
 
 /**
@@ -2019,7 +2019,7 @@ if (process.env.NODE_ENV !== 'production') {
 
 module.exports = warning;
 }).call(this,require('_process'))
-},{"./emptyFunction":10,"_process":468}],26:[function(require,module,exports){
+},{"./emptyFunction":10,"_process":495}],26:[function(require,module,exports){
 /*
 object-assign
 (c) Sindre Sorhus
@@ -2174,7 +2174,7 @@ function checkPropTypes(typeSpecs, values, location, componentName, getStack) {
 module.exports = checkPropTypes;
 
 }).call(this,require('_process'))
-},{"./lib/ReactPropTypesSecret":30,"_process":468,"fbjs/lib/invariant":18,"fbjs/lib/warning":25}],28:[function(require,module,exports){
+},{"./lib/ReactPropTypesSecret":30,"_process":495,"fbjs/lib/invariant":18,"fbjs/lib/warning":25}],28:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -2741,7 +2741,7 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
 };
 
 }).call(this,require('_process'))
-},{"./checkPropTypes":27,"./lib/ReactPropTypesSecret":30,"_process":468,"fbjs/lib/emptyFunction":10,"fbjs/lib/invariant":18,"fbjs/lib/warning":25,"object-assign":26}],30:[function(require,module,exports){
+},{"./checkPropTypes":27,"./lib/ReactPropTypesSecret":30,"_process":495,"fbjs/lib/emptyFunction":10,"fbjs/lib/invariant":18,"fbjs/lib/warning":25,"object-assign":26}],30:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -3604,7 +3604,7 @@ var CSSPropertyOperations = {
 
 module.exports = CSSPropertyOperations;
 }).call(this,require('_process'))
-},{"./CSSProperty":35,"./ReactInstrumentation":94,"./dangerousStyleValue":135,"_process":468,"fbjs/lib/ExecutionEnvironment":4,"fbjs/lib/camelizeStyleName":6,"fbjs/lib/hyphenateStyleName":17,"fbjs/lib/memoizeStringOnly":21,"fbjs/lib/warning":25}],37:[function(require,module,exports){
+},{"./CSSProperty":35,"./ReactInstrumentation":94,"./dangerousStyleValue":135,"_process":495,"fbjs/lib/ExecutionEnvironment":4,"fbjs/lib/camelizeStyleName":6,"fbjs/lib/hyphenateStyleName":17,"fbjs/lib/memoizeStringOnly":21,"fbjs/lib/warning":25}],37:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -3723,7 +3723,7 @@ var CallbackQueue = function () {
 
 module.exports = PooledClass.addPoolingTo(CallbackQueue);
 }).call(this,require('_process'))
-},{"./PooledClass":55,"./reactProdInvariant":154,"_process":468,"fbjs/lib/invariant":18}],38:[function(require,module,exports){
+},{"./PooledClass":55,"./reactProdInvariant":154,"_process":495,"fbjs/lib/invariant":18}],38:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -4259,7 +4259,7 @@ var DOMChildrenOperations = {
 
 module.exports = DOMChildrenOperations;
 }).call(this,require('_process'))
-},{"./DOMLazyTree":40,"./Danger":44,"./ReactDOMComponentTree":64,"./ReactInstrumentation":94,"./createMicrosoftUnsafeLocalFunction":134,"./setInnerHTML":156,"./setTextContent":157,"_process":468}],40:[function(require,module,exports){
+},{"./DOMLazyTree":40,"./Danger":44,"./ReactDOMComponentTree":64,"./ReactInstrumentation":94,"./createMicrosoftUnsafeLocalFunction":134,"./setInnerHTML":156,"./setTextContent":157,"_process":495}],40:[function(require,module,exports){
 /**
  * Copyright (c) 2015-present, Facebook, Inc.
  *
@@ -4602,7 +4602,7 @@ var DOMProperty = {
 
 module.exports = DOMProperty;
 }).call(this,require('_process'))
-},{"./reactProdInvariant":154,"_process":468,"fbjs/lib/invariant":18}],43:[function(require,module,exports){
+},{"./reactProdInvariant":154,"_process":495,"fbjs/lib/invariant":18}],43:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -4837,7 +4837,7 @@ var DOMPropertyOperations = {
 
 module.exports = DOMPropertyOperations;
 }).call(this,require('_process'))
-},{"./DOMProperty":42,"./ReactDOMComponentTree":64,"./ReactInstrumentation":94,"./quoteAttributeValueForBrowser":153,"_process":468,"fbjs/lib/warning":25}],44:[function(require,module,exports){
+},{"./DOMProperty":42,"./ReactDOMComponentTree":64,"./ReactInstrumentation":94,"./quoteAttributeValueForBrowser":153,"_process":495,"fbjs/lib/warning":25}],44:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -4883,7 +4883,7 @@ var Danger = {
 
 module.exports = Danger;
 }).call(this,require('_process'))
-},{"./DOMLazyTree":40,"./reactProdInvariant":154,"_process":468,"fbjs/lib/ExecutionEnvironment":4,"fbjs/lib/createNodesFromMarkup":9,"fbjs/lib/emptyFunction":10,"fbjs/lib/invariant":18}],45:[function(require,module,exports){
+},{"./DOMLazyTree":40,"./reactProdInvariant":154,"_process":495,"fbjs/lib/ExecutionEnvironment":4,"fbjs/lib/createNodesFromMarkup":9,"fbjs/lib/emptyFunction":10,"fbjs/lib/invariant":18}],45:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -5277,7 +5277,7 @@ var EventPluginHub = {
 
 module.exports = EventPluginHub;
 }).call(this,require('_process'))
-},{"./EventPluginRegistry":48,"./EventPluginUtils":49,"./ReactErrorUtils":85,"./accumulateInto":131,"./forEachAccumulated":139,"./reactProdInvariant":154,"_process":468,"fbjs/lib/invariant":18}],48:[function(require,module,exports){
+},{"./EventPluginRegistry":48,"./EventPluginUtils":49,"./ReactErrorUtils":85,"./accumulateInto":131,"./forEachAccumulated":139,"./reactProdInvariant":154,"_process":495,"fbjs/lib/invariant":18}],48:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -5530,7 +5530,7 @@ var EventPluginRegistry = {
 
 module.exports = EventPluginRegistry;
 }).call(this,require('_process'))
-},{"./reactProdInvariant":154,"_process":468,"fbjs/lib/invariant":18}],49:[function(require,module,exports){
+},{"./reactProdInvariant":154,"_process":495,"fbjs/lib/invariant":18}],49:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -5756,7 +5756,7 @@ var EventPluginUtils = {
 
 module.exports = EventPluginUtils;
 }).call(this,require('_process'))
-},{"./ReactErrorUtils":85,"./reactProdInvariant":154,"_process":468,"fbjs/lib/invariant":18,"fbjs/lib/warning":25}],50:[function(require,module,exports){
+},{"./ReactErrorUtils":85,"./reactProdInvariant":154,"_process":495,"fbjs/lib/invariant":18,"fbjs/lib/warning":25}],50:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -5890,7 +5890,7 @@ var EventPropagators = {
 
 module.exports = EventPropagators;
 }).call(this,require('_process'))
-},{"./EventPluginHub":47,"./EventPluginUtils":49,"./accumulateInto":131,"./forEachAccumulated":139,"_process":468,"fbjs/lib/warning":25}],51:[function(require,module,exports){
+},{"./EventPluginHub":47,"./EventPluginUtils":49,"./accumulateInto":131,"./forEachAccumulated":139,"_process":495,"fbjs/lib/warning":25}],51:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -6413,7 +6413,7 @@ var LinkedValueUtils = {
 
 module.exports = LinkedValueUtils;
 }).call(this,require('_process'))
-},{"./ReactPropTypesSecret":102,"./reactProdInvariant":154,"_process":468,"fbjs/lib/invariant":18,"fbjs/lib/warning":25,"prop-types/factory":28,"react/lib/React":164}],55:[function(require,module,exports){
+},{"./ReactPropTypesSecret":102,"./reactProdInvariant":154,"_process":495,"fbjs/lib/invariant":18,"fbjs/lib/warning":25,"prop-types/factory":28,"react/lib/React":164}],55:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -6525,7 +6525,7 @@ var PooledClass = {
 
 module.exports = PooledClass;
 }).call(this,require('_process'))
-},{"./reactProdInvariant":154,"_process":468,"fbjs/lib/invariant":18}],56:[function(require,module,exports){
+},{"./reactProdInvariant":154,"_process":495,"fbjs/lib/invariant":18}],56:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -7000,7 +7000,7 @@ var ReactChildReconciler = {
 
 module.exports = ReactChildReconciler;
 }).call(this,require('_process'))
-},{"./KeyEscapeUtils":53,"./ReactReconciler":104,"./instantiateReactComponent":150,"./shouldUpdateReactComponent":158,"./traverseAllChildren":159,"_process":468,"fbjs/lib/warning":25,"react/lib/ReactComponentTreeHook":167}],58:[function(require,module,exports){
+},{"./KeyEscapeUtils":53,"./ReactReconciler":104,"./instantiateReactComponent":150,"./shouldUpdateReactComponent":158,"./traverseAllChildren":159,"_process":495,"fbjs/lib/warning":25,"react/lib/ReactComponentTreeHook":167}],58:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -7070,7 +7070,7 @@ var ReactComponentEnvironment = {
 
 module.exports = ReactComponentEnvironment;
 }).call(this,require('_process'))
-},{"./reactProdInvariant":154,"_process":468,"fbjs/lib/invariant":18}],60:[function(require,module,exports){
+},{"./reactProdInvariant":154,"_process":495,"fbjs/lib/invariant":18}],60:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -7970,7 +7970,7 @@ var ReactCompositeComponent = {
 
 module.exports = ReactCompositeComponent;
 }).call(this,require('_process'))
-},{"./ReactComponentEnvironment":59,"./ReactErrorUtils":85,"./ReactInstanceMap":93,"./ReactInstrumentation":94,"./ReactNodeTypes":99,"./ReactReconciler":104,"./checkReactTypeSpec":133,"./reactProdInvariant":154,"./shouldUpdateReactComponent":158,"_process":468,"fbjs/lib/emptyObject":11,"fbjs/lib/invariant":18,"fbjs/lib/shallowEqual":24,"fbjs/lib/warning":25,"object-assign":26,"react/lib/React":164,"react/lib/ReactCurrentOwner":168}],61:[function(require,module,exports){
+},{"./ReactComponentEnvironment":59,"./ReactErrorUtils":85,"./ReactInstanceMap":93,"./ReactInstrumentation":94,"./ReactNodeTypes":99,"./ReactReconciler":104,"./checkReactTypeSpec":133,"./reactProdInvariant":154,"./shouldUpdateReactComponent":158,"_process":495,"fbjs/lib/emptyObject":11,"fbjs/lib/invariant":18,"fbjs/lib/shallowEqual":24,"fbjs/lib/warning":25,"object-assign":26,"react/lib/React":164,"react/lib/ReactCurrentOwner":168}],61:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -8081,7 +8081,7 @@ if (process.env.NODE_ENV !== 'production') {
 
 module.exports = ReactDOM;
 }).call(this,require('_process'))
-},{"./ReactDOMComponentTree":64,"./ReactDOMInvalidARIAHook":70,"./ReactDOMNullInputValuePropHook":71,"./ReactDOMUnknownPropertyHook":79,"./ReactDefaultInjection":82,"./ReactInstrumentation":94,"./ReactMount":97,"./ReactReconciler":104,"./ReactUpdates":111,"./ReactVersion":112,"./findDOMNode":137,"./getHostComponentFromComposite":144,"./renderSubtreeIntoContainer":155,"_process":468,"fbjs/lib/ExecutionEnvironment":4,"fbjs/lib/warning":25}],62:[function(require,module,exports){
+},{"./ReactDOMComponentTree":64,"./ReactDOMInvalidARIAHook":70,"./ReactDOMNullInputValuePropHook":71,"./ReactDOMUnknownPropertyHook":79,"./ReactDefaultInjection":82,"./ReactInstrumentation":94,"./ReactMount":97,"./ReactReconciler":104,"./ReactUpdates":111,"./ReactVersion":112,"./findDOMNode":137,"./getHostComponentFromComposite":144,"./renderSubtreeIntoContainer":155,"_process":495,"fbjs/lib/ExecutionEnvironment":4,"fbjs/lib/warning":25}],62:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -9095,7 +9095,7 @@ _assign(ReactDOMComponent.prototype, ReactDOMComponent.Mixin, ReactMultiChild.Mi
 
 module.exports = ReactDOMComponent;
 }).call(this,require('_process'))
-},{"./AutoFocusUtils":33,"./CSSPropertyOperations":36,"./DOMLazyTree":40,"./DOMNamespaces":41,"./DOMProperty":42,"./DOMPropertyOperations":43,"./EventPluginHub":47,"./EventPluginRegistry":48,"./ReactBrowserEventEmitter":56,"./ReactDOMComponentFlags":63,"./ReactDOMComponentTree":64,"./ReactDOMInput":69,"./ReactDOMOption":72,"./ReactDOMSelect":73,"./ReactDOMTextarea":77,"./ReactInstrumentation":94,"./ReactMultiChild":98,"./ReactServerRenderingTransaction":108,"./escapeTextContentForBrowser":136,"./inputValueTracking":149,"./isEventSupported":151,"./reactProdInvariant":154,"./validateDOMNesting":160,"_process":468,"fbjs/lib/emptyFunction":10,"fbjs/lib/invariant":18,"fbjs/lib/shallowEqual":24,"fbjs/lib/warning":25,"object-assign":26}],63:[function(require,module,exports){
+},{"./AutoFocusUtils":33,"./CSSPropertyOperations":36,"./DOMLazyTree":40,"./DOMNamespaces":41,"./DOMProperty":42,"./DOMPropertyOperations":43,"./EventPluginHub":47,"./EventPluginRegistry":48,"./ReactBrowserEventEmitter":56,"./ReactDOMComponentFlags":63,"./ReactDOMComponentTree":64,"./ReactDOMInput":69,"./ReactDOMOption":72,"./ReactDOMSelect":73,"./ReactDOMTextarea":77,"./ReactInstrumentation":94,"./ReactMultiChild":98,"./ReactServerRenderingTransaction":108,"./escapeTextContentForBrowser":136,"./inputValueTracking":149,"./isEventSupported":151,"./reactProdInvariant":154,"./validateDOMNesting":160,"_process":495,"fbjs/lib/emptyFunction":10,"fbjs/lib/invariant":18,"fbjs/lib/shallowEqual":24,"fbjs/lib/warning":25,"object-assign":26}],63:[function(require,module,exports){
 /**
  * Copyright (c) 2015-present, Facebook, Inc.
  *
@@ -9306,7 +9306,7 @@ var ReactDOMComponentTree = {
 
 module.exports = ReactDOMComponentTree;
 }).call(this,require('_process'))
-},{"./DOMProperty":42,"./ReactDOMComponentFlags":63,"./reactProdInvariant":154,"_process":468,"fbjs/lib/invariant":18}],65:[function(require,module,exports){
+},{"./DOMProperty":42,"./ReactDOMComponentFlags":63,"./reactProdInvariant":154,"_process":495,"fbjs/lib/invariant":18}],65:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -9339,7 +9339,7 @@ function ReactDOMContainerInfo(topLevelWrapper, node) {
 
 module.exports = ReactDOMContainerInfo;
 }).call(this,require('_process'))
-},{"./validateDOMNesting":160,"_process":468}],66:[function(require,module,exports){
+},{"./validateDOMNesting":160,"_process":495}],66:[function(require,module,exports){
 /**
  * Copyright (c) 2014-present, Facebook, Inc.
  *
@@ -9732,7 +9732,7 @@ function _handleChange(event) {
 
 module.exports = ReactDOMInput;
 }).call(this,require('_process'))
-},{"./DOMPropertyOperations":43,"./LinkedValueUtils":54,"./ReactDOMComponentTree":64,"./ReactUpdates":111,"./reactProdInvariant":154,"_process":468,"fbjs/lib/invariant":18,"fbjs/lib/warning":25,"object-assign":26}],70:[function(require,module,exports){
+},{"./DOMPropertyOperations":43,"./LinkedValueUtils":54,"./ReactDOMComponentTree":64,"./ReactUpdates":111,"./reactProdInvariant":154,"_process":495,"fbjs/lib/invariant":18,"fbjs/lib/warning":25,"object-assign":26}],70:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -9825,7 +9825,7 @@ var ReactDOMInvalidARIAHook = {
 
 module.exports = ReactDOMInvalidARIAHook;
 }).call(this,require('_process'))
-},{"./DOMProperty":42,"_process":468,"fbjs/lib/warning":25,"react/lib/ReactComponentTreeHook":167}],71:[function(require,module,exports){
+},{"./DOMProperty":42,"_process":495,"fbjs/lib/warning":25,"react/lib/ReactComponentTreeHook":167}],71:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -9868,7 +9868,7 @@ var ReactDOMNullInputValuePropHook = {
 
 module.exports = ReactDOMNullInputValuePropHook;
 }).call(this,require('_process'))
-},{"_process":468,"fbjs/lib/warning":25,"react/lib/ReactComponentTreeHook":167}],72:[function(require,module,exports){
+},{"_process":495,"fbjs/lib/warning":25,"react/lib/ReactComponentTreeHook":167}],72:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -9990,7 +9990,7 @@ var ReactDOMOption = {
 
 module.exports = ReactDOMOption;
 }).call(this,require('_process'))
-},{"./ReactDOMComponentTree":64,"./ReactDOMSelect":73,"_process":468,"fbjs/lib/warning":25,"object-assign":26,"react/lib/React":164}],73:[function(require,module,exports){
+},{"./ReactDOMComponentTree":64,"./ReactDOMSelect":73,"_process":495,"fbjs/lib/warning":25,"object-assign":26,"react/lib/React":164}],73:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -10190,7 +10190,7 @@ function _handleChange(event) {
 
 module.exports = ReactDOMSelect;
 }).call(this,require('_process'))
-},{"./LinkedValueUtils":54,"./ReactDOMComponentTree":64,"./ReactUpdates":111,"_process":468,"fbjs/lib/warning":25,"object-assign":26}],74:[function(require,module,exports){
+},{"./LinkedValueUtils":54,"./ReactDOMComponentTree":64,"./ReactUpdates":111,"_process":495,"fbjs/lib/warning":25,"object-assign":26}],74:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -10586,7 +10586,7 @@ _assign(ReactDOMTextComponent.prototype, {
 
 module.exports = ReactDOMTextComponent;
 }).call(this,require('_process'))
-},{"./DOMChildrenOperations":39,"./DOMLazyTree":40,"./ReactDOMComponentTree":64,"./escapeTextContentForBrowser":136,"./reactProdInvariant":154,"./validateDOMNesting":160,"_process":468,"fbjs/lib/invariant":18,"object-assign":26}],77:[function(require,module,exports){
+},{"./DOMChildrenOperations":39,"./DOMLazyTree":40,"./ReactDOMComponentTree":64,"./escapeTextContentForBrowser":136,"./reactProdInvariant":154,"./validateDOMNesting":160,"_process":495,"fbjs/lib/invariant":18,"object-assign":26}],77:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -10746,7 +10746,7 @@ function _handleChange(event) {
 
 module.exports = ReactDOMTextarea;
 }).call(this,require('_process'))
-},{"./LinkedValueUtils":54,"./ReactDOMComponentTree":64,"./ReactUpdates":111,"./reactProdInvariant":154,"_process":468,"fbjs/lib/invariant":18,"fbjs/lib/warning":25,"object-assign":26}],78:[function(require,module,exports){
+},{"./LinkedValueUtils":54,"./ReactDOMComponentTree":64,"./ReactUpdates":111,"./reactProdInvariant":154,"_process":495,"fbjs/lib/invariant":18,"fbjs/lib/warning":25,"object-assign":26}],78:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2015-present, Facebook, Inc.
@@ -10882,7 +10882,7 @@ module.exports = {
   traverseEnterLeave: traverseEnterLeave
 };
 }).call(this,require('_process'))
-},{"./reactProdInvariant":154,"_process":468,"fbjs/lib/invariant":18}],79:[function(require,module,exports){
+},{"./reactProdInvariant":154,"_process":495,"fbjs/lib/invariant":18}],79:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -10994,7 +10994,7 @@ var ReactDOMUnknownPropertyHook = {
 
 module.exports = ReactDOMUnknownPropertyHook;
 }).call(this,require('_process'))
-},{"./DOMProperty":42,"./EventPluginRegistry":48,"_process":468,"fbjs/lib/warning":25,"react/lib/ReactComponentTreeHook":167}],80:[function(require,module,exports){
+},{"./DOMProperty":42,"./EventPluginRegistry":48,"_process":495,"fbjs/lib/warning":25,"react/lib/ReactComponentTreeHook":167}],80:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2016-present, Facebook, Inc.
@@ -11355,7 +11355,7 @@ if (/[?&]react_perf\b/.test(url)) {
 
 module.exports = ReactDebugTool;
 }).call(this,require('_process'))
-},{"./ReactHostOperationHistoryHook":90,"./ReactInvalidSetStateWarningHook":95,"_process":468,"fbjs/lib/ExecutionEnvironment":4,"fbjs/lib/performanceNow":23,"fbjs/lib/warning":25,"react/lib/ReactComponentTreeHook":167}],81:[function(require,module,exports){
+},{"./ReactHostOperationHistoryHook":90,"./ReactInvalidSetStateWarningHook":95,"_process":495,"fbjs/lib/ExecutionEnvironment":4,"fbjs/lib/performanceNow":23,"fbjs/lib/warning":25,"react/lib/ReactComponentTreeHook":167}],81:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -11629,7 +11629,7 @@ if (process.env.NODE_ENV !== 'production') {
 
 module.exports = ReactErrorUtils;
 }).call(this,require('_process'))
-},{"_process":468}],86:[function(require,module,exports){
+},{"_process":495}],86:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -11900,7 +11900,7 @@ var ReactHostComponent = {
 
 module.exports = ReactHostComponent;
 }).call(this,require('_process'))
-},{"./reactProdInvariant":154,"_process":468,"fbjs/lib/invariant":18}],90:[function(require,module,exports){
+},{"./reactProdInvariant":154,"_process":495,"fbjs/lib/invariant":18}],90:[function(require,module,exports){
 /**
  * Copyright (c) 2016-present, Facebook, Inc.
  *
@@ -12153,7 +12153,7 @@ if (process.env.NODE_ENV !== 'production') {
 
 module.exports = { debugTool: debugTool };
 }).call(this,require('_process'))
-},{"./ReactDebugTool":80,"_process":468}],95:[function(require,module,exports){
+},{"./ReactDebugTool":80,"_process":495}],95:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2016-present, Facebook, Inc.
@@ -12190,7 +12190,7 @@ var ReactInvalidSetStateWarningHook = {
 
 module.exports = ReactInvalidSetStateWarningHook;
 }).call(this,require('_process'))
-},{"_process":468,"fbjs/lib/warning":25}],96:[function(require,module,exports){
+},{"_process":495,"fbjs/lib/warning":25}],96:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -12776,7 +12776,7 @@ var ReactMount = {
 
 module.exports = ReactMount;
 }).call(this,require('_process'))
-},{"./DOMLazyTree":40,"./DOMProperty":42,"./ReactBrowserEventEmitter":56,"./ReactDOMComponentTree":64,"./ReactDOMContainerInfo":65,"./ReactDOMFeatureFlags":67,"./ReactFeatureFlags":88,"./ReactInstanceMap":93,"./ReactInstrumentation":94,"./ReactMarkupChecksum":96,"./ReactReconciler":104,"./ReactUpdateQueue":110,"./ReactUpdates":111,"./instantiateReactComponent":150,"./reactProdInvariant":154,"./setInnerHTML":156,"./shouldUpdateReactComponent":158,"_process":468,"fbjs/lib/emptyObject":11,"fbjs/lib/invariant":18,"fbjs/lib/warning":25,"react/lib/React":164,"react/lib/ReactCurrentOwner":168}],98:[function(require,module,exports){
+},{"./DOMLazyTree":40,"./DOMProperty":42,"./ReactBrowserEventEmitter":56,"./ReactDOMComponentTree":64,"./ReactDOMContainerInfo":65,"./ReactDOMFeatureFlags":67,"./ReactFeatureFlags":88,"./ReactInstanceMap":93,"./ReactInstrumentation":94,"./ReactMarkupChecksum":96,"./ReactReconciler":104,"./ReactUpdateQueue":110,"./ReactUpdates":111,"./instantiateReactComponent":150,"./reactProdInvariant":154,"./setInnerHTML":156,"./shouldUpdateReactComponent":158,"_process":495,"fbjs/lib/emptyObject":11,"fbjs/lib/invariant":18,"fbjs/lib/warning":25,"react/lib/React":164,"react/lib/ReactCurrentOwner":168}],98:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -13222,7 +13222,7 @@ var ReactMultiChild = {
 
 module.exports = ReactMultiChild;
 }).call(this,require('_process'))
-},{"./ReactChildReconciler":57,"./ReactComponentEnvironment":59,"./ReactInstanceMap":93,"./ReactInstrumentation":94,"./ReactReconciler":104,"./flattenChildren":138,"./reactProdInvariant":154,"_process":468,"fbjs/lib/emptyFunction":10,"fbjs/lib/invariant":18,"react/lib/ReactCurrentOwner":168}],99:[function(require,module,exports){
+},{"./ReactChildReconciler":57,"./ReactComponentEnvironment":59,"./ReactInstanceMap":93,"./ReactInstrumentation":94,"./ReactReconciler":104,"./flattenChildren":138,"./reactProdInvariant":154,"_process":495,"fbjs/lib/emptyFunction":10,"fbjs/lib/invariant":18,"react/lib/ReactCurrentOwner":168}],99:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -13262,7 +13262,7 @@ var ReactNodeTypes = {
 
 module.exports = ReactNodeTypes;
 }).call(this,require('_process'))
-},{"./reactProdInvariant":154,"_process":468,"fbjs/lib/invariant":18,"react/lib/React":164}],100:[function(require,module,exports){
+},{"./reactProdInvariant":154,"_process":495,"fbjs/lib/invariant":18,"react/lib/React":164}],100:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -13355,7 +13355,7 @@ var ReactOwner = {
 
 module.exports = ReactOwner;
 }).call(this,require('_process'))
-},{"./reactProdInvariant":154,"_process":468,"fbjs/lib/invariant":18}],101:[function(require,module,exports){
+},{"./reactProdInvariant":154,"_process":495,"fbjs/lib/invariant":18}],101:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -13380,7 +13380,7 @@ if (process.env.NODE_ENV !== 'production') {
 
 module.exports = ReactPropTypeLocationNames;
 }).call(this,require('_process'))
-},{"_process":468}],102:[function(require,module,exports){
+},{"_process":495}],102:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -13573,7 +13573,7 @@ PooledClass.addPoolingTo(ReactReconcileTransaction);
 
 module.exports = ReactReconcileTransaction;
 }).call(this,require('_process'))
-},{"./CallbackQueue":37,"./PooledClass":55,"./ReactBrowserEventEmitter":56,"./ReactInputSelection":92,"./ReactInstrumentation":94,"./ReactUpdateQueue":110,"./Transaction":129,"_process":468,"object-assign":26}],104:[function(require,module,exports){
+},{"./CallbackQueue":37,"./PooledClass":55,"./ReactBrowserEventEmitter":56,"./ReactInputSelection":92,"./ReactInstrumentation":94,"./ReactUpdateQueue":110,"./Transaction":129,"_process":495,"object-assign":26}],104:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -13739,7 +13739,7 @@ var ReactReconciler = {
 
 module.exports = ReactReconciler;
 }).call(this,require('_process'))
-},{"./ReactInstrumentation":94,"./ReactRef":105,"_process":468,"fbjs/lib/warning":25}],105:[function(require,module,exports){
+},{"./ReactInstrumentation":94,"./ReactRef":105,"_process":495,"fbjs/lib/warning":25}],105:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -13936,7 +13936,7 @@ module.exports = {
   renderToStaticMarkup: renderToStaticMarkup
 };
 }).call(this,require('_process'))
-},{"./ReactDOMContainerInfo":65,"./ReactDefaultBatchingStrategy":81,"./ReactInstrumentation":94,"./ReactMarkupChecksum":96,"./ReactReconciler":104,"./ReactServerBatchingStrategy":106,"./ReactServerRenderingTransaction":108,"./ReactUpdates":111,"./instantiateReactComponent":150,"./reactProdInvariant":154,"_process":468,"fbjs/lib/emptyObject":11,"fbjs/lib/invariant":18,"react/lib/React":164}],108:[function(require,module,exports){
+},{"./ReactDOMContainerInfo":65,"./ReactDefaultBatchingStrategy":81,"./ReactInstrumentation":94,"./ReactMarkupChecksum":96,"./ReactReconciler":104,"./ReactServerBatchingStrategy":106,"./ReactServerRenderingTransaction":108,"./ReactUpdates":111,"./instantiateReactComponent":150,"./reactProdInvariant":154,"_process":495,"fbjs/lib/emptyObject":11,"fbjs/lib/invariant":18,"react/lib/React":164}],108:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2014-present, Facebook, Inc.
@@ -14026,7 +14026,7 @@ PooledClass.addPoolingTo(ReactServerRenderingTransaction);
 
 module.exports = ReactServerRenderingTransaction;
 }).call(this,require('_process'))
-},{"./PooledClass":55,"./ReactInstrumentation":94,"./ReactServerUpdateQueue":109,"./Transaction":129,"_process":468,"object-assign":26}],109:[function(require,module,exports){
+},{"./PooledClass":55,"./ReactInstrumentation":94,"./ReactServerUpdateQueue":109,"./Transaction":129,"_process":495,"object-assign":26}],109:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2015-present, Facebook, Inc.
@@ -14165,7 +14165,7 @@ var ReactServerUpdateQueue = function () {
 
 module.exports = ReactServerUpdateQueue;
 }).call(this,require('_process'))
-},{"./ReactUpdateQueue":110,"_process":468,"fbjs/lib/warning":25}],110:[function(require,module,exports){
+},{"./ReactUpdateQueue":110,"_process":495,"fbjs/lib/warning":25}],110:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2015-present, Facebook, Inc.
@@ -14399,7 +14399,7 @@ var ReactUpdateQueue = {
 
 module.exports = ReactUpdateQueue;
 }).call(this,require('_process'))
-},{"./ReactInstanceMap":93,"./ReactInstrumentation":94,"./ReactUpdates":111,"./reactProdInvariant":154,"_process":468,"fbjs/lib/invariant":18,"fbjs/lib/warning":25,"react/lib/ReactCurrentOwner":168}],111:[function(require,module,exports){
+},{"./ReactInstanceMap":93,"./ReactInstrumentation":94,"./ReactUpdates":111,"./reactProdInvariant":154,"_process":495,"fbjs/lib/invariant":18,"fbjs/lib/warning":25,"react/lib/ReactCurrentOwner":168}],111:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -14650,7 +14650,7 @@ var ReactUpdates = {
 
 module.exports = ReactUpdates;
 }).call(this,require('_process'))
-},{"./CallbackQueue":37,"./PooledClass":55,"./ReactFeatureFlags":88,"./ReactReconciler":104,"./Transaction":129,"./reactProdInvariant":154,"_process":468,"fbjs/lib/invariant":18,"object-assign":26}],112:[function(require,module,exports){
+},{"./CallbackQueue":37,"./PooledClass":55,"./ReactFeatureFlags":88,"./ReactReconciler":104,"./Transaction":129,"./reactProdInvariant":154,"_process":495,"fbjs/lib/invariant":18,"object-assign":26}],112:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -15374,7 +15374,7 @@ var SimpleEventPlugin = {
 
 module.exports = SimpleEventPlugin;
 }).call(this,require('_process'))
-},{"./EventPropagators":50,"./ReactDOMComponentTree":64,"./SyntheticAnimationEvent":116,"./SyntheticClipboardEvent":117,"./SyntheticDragEvent":119,"./SyntheticEvent":120,"./SyntheticFocusEvent":121,"./SyntheticKeyboardEvent":123,"./SyntheticMouseEvent":124,"./SyntheticTouchEvent":125,"./SyntheticTransitionEvent":126,"./SyntheticUIEvent":127,"./SyntheticWheelEvent":128,"./getEventCharCode":140,"./reactProdInvariant":154,"_process":468,"fbjs/lib/EventListener":3,"fbjs/lib/emptyFunction":10,"fbjs/lib/invariant":18}],116:[function(require,module,exports){
+},{"./EventPropagators":50,"./ReactDOMComponentTree":64,"./SyntheticAnimationEvent":116,"./SyntheticClipboardEvent":117,"./SyntheticDragEvent":119,"./SyntheticEvent":120,"./SyntheticFocusEvent":121,"./SyntheticKeyboardEvent":123,"./SyntheticMouseEvent":124,"./SyntheticTouchEvent":125,"./SyntheticTransitionEvent":126,"./SyntheticUIEvent":127,"./SyntheticWheelEvent":128,"./getEventCharCode":140,"./reactProdInvariant":154,"_process":495,"fbjs/lib/EventListener":3,"fbjs/lib/emptyFunction":10,"fbjs/lib/invariant":18}],116:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -15786,7 +15786,7 @@ function getPooledWarningPropertyDefinition(propName, getVal) {
   }
 }
 }).call(this,require('_process'))
-},{"./PooledClass":55,"_process":468,"fbjs/lib/emptyFunction":10,"fbjs/lib/warning":25,"object-assign":26}],121:[function(require,module,exports){
+},{"./PooledClass":55,"_process":495,"fbjs/lib/emptyFunction":10,"fbjs/lib/warning":25,"object-assign":26}],121:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -16421,7 +16421,7 @@ var TransactionImpl = {
 
 module.exports = TransactionImpl;
 }).call(this,require('_process'))
-},{"./reactProdInvariant":154,"_process":468,"fbjs/lib/invariant":18}],130:[function(require,module,exports){
+},{"./reactProdInvariant":154,"_process":495,"fbjs/lib/invariant":18}],130:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -16502,7 +16502,7 @@ function accumulateInto(current, next) {
 
 module.exports = accumulateInto;
 }).call(this,require('_process'))
-},{"./reactProdInvariant":154,"_process":468,"fbjs/lib/invariant":18}],132:[function(require,module,exports){
+},{"./reactProdInvariant":154,"_process":495,"fbjs/lib/invariant":18}],132:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -16631,7 +16631,7 @@ function checkReactTypeSpec(typeSpecs, values, location, componentName, element,
 
 module.exports = checkReactTypeSpec;
 }).call(this,require('_process'))
-},{"./ReactPropTypeLocationNames":101,"./ReactPropTypesSecret":102,"./reactProdInvariant":154,"_process":468,"fbjs/lib/invariant":18,"fbjs/lib/warning":25,"react/lib/ReactComponentTreeHook":167}],134:[function(require,module,exports){
+},{"./ReactPropTypeLocationNames":101,"./ReactPropTypesSecret":102,"./reactProdInvariant":154,"_process":495,"fbjs/lib/invariant":18,"fbjs/lib/warning":25,"react/lib/ReactComponentTreeHook":167}],134:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -16740,7 +16740,7 @@ function dangerousStyleValue(name, value, component, isCustomProperty) {
 
 module.exports = dangerousStyleValue;
 }).call(this,require('_process'))
-},{"./CSSProperty":35,"_process":468,"fbjs/lib/warning":25}],136:[function(require,module,exports){
+},{"./CSSProperty":35,"_process":495,"fbjs/lib/warning":25}],136:[function(require,module,exports){
 /**
  * Copyright (c) 2016-present, Facebook, Inc.
  *
@@ -16920,7 +16920,7 @@ function findDOMNode(componentOrElement) {
 
 module.exports = findDOMNode;
 }).call(this,require('_process'))
-},{"./ReactDOMComponentTree":64,"./ReactInstanceMap":93,"./getHostComponentFromComposite":144,"./reactProdInvariant":154,"_process":468,"fbjs/lib/invariant":18,"fbjs/lib/warning":25,"react/lib/ReactCurrentOwner":168}],138:[function(require,module,exports){
+},{"./ReactDOMComponentTree":64,"./ReactInstanceMap":93,"./getHostComponentFromComposite":144,"./reactProdInvariant":154,"_process":495,"fbjs/lib/invariant":18,"fbjs/lib/warning":25,"react/lib/ReactCurrentOwner":168}],138:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -16996,7 +16996,7 @@ function flattenChildren(children, selfDebugID) {
 
 module.exports = flattenChildren;
 }).call(this,require('_process'))
-},{"./KeyEscapeUtils":53,"./traverseAllChildren":159,"_process":468,"fbjs/lib/warning":25,"react/lib/ReactComponentTreeHook":167}],139:[function(require,module,exports){
+},{"./KeyEscapeUtils":53,"./traverseAllChildren":159,"_process":495,"fbjs/lib/warning":25,"react/lib/ReactComponentTreeHook":167}],139:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -17776,7 +17776,7 @@ _assign(ReactCompositeComponentWrapper.prototype, ReactCompositeComponent, {
 
 module.exports = instantiateReactComponent;
 }).call(this,require('_process'))
-},{"./ReactCompositeComponent":60,"./ReactEmptyComponent":84,"./ReactHostComponent":89,"./reactProdInvariant":154,"_process":468,"fbjs/lib/invariant":18,"fbjs/lib/warning":25,"object-assign":26,"react/lib/getNextDebugID":182}],151:[function(require,module,exports){
+},{"./ReactCompositeComponent":60,"./ReactEmptyComponent":84,"./ReactHostComponent":89,"./reactProdInvariant":154,"_process":495,"fbjs/lib/invariant":18,"fbjs/lib/warning":25,"object-assign":26,"react/lib/getNextDebugID":182}],151:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -18320,7 +18320,7 @@ function traverseAllChildren(children, callback, traverseContext) {
 
 module.exports = traverseAllChildren;
 }).call(this,require('_process'))
-},{"./KeyEscapeUtils":53,"./ReactElementSymbol":83,"./getIteratorFn":145,"./reactProdInvariant":154,"_process":468,"fbjs/lib/invariant":18,"fbjs/lib/warning":25,"react/lib/ReactCurrentOwner":168}],160:[function(require,module,exports){
+},{"./KeyEscapeUtils":53,"./ReactElementSymbol":83,"./getIteratorFn":145,"./reactProdInvariant":154,"_process":495,"fbjs/lib/invariant":18,"fbjs/lib/warning":25,"react/lib/ReactCurrentOwner":168}],160:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2015-present, Facebook, Inc.
@@ -18691,7 +18691,7 @@ if (process.env.NODE_ENV !== 'production') {
 
 module.exports = validateDOMNesting;
 }).call(this,require('_process'))
-},{"_process":468,"fbjs/lib/emptyFunction":10,"fbjs/lib/warning":25,"object-assign":26}],161:[function(require,module,exports){
+},{"_process":495,"fbjs/lib/emptyFunction":10,"fbjs/lib/warning":25,"object-assign":26}],161:[function(require,module,exports){
 'use strict';
 
 module.exports = require('./lib/ReactDOMServer');
@@ -18700,7 +18700,7 @@ module.exports = require('./lib/ReactDOMServer');
 arguments[4][53][0].apply(exports,arguments)
 },{"dup":53}],163:[function(require,module,exports){
 arguments[4][55][0].apply(exports,arguments)
-},{"./reactProdInvariant":185,"_process":468,"dup":55,"fbjs/lib/invariant":18}],164:[function(require,module,exports){
+},{"./reactProdInvariant":185,"_process":495,"dup":55,"fbjs/lib/invariant":18}],164:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -18832,7 +18832,7 @@ if (process.env.NODE_ENV !== 'production') {
 
 module.exports = React;
 }).call(this,require('_process'))
-},{"./ReactBaseClasses":165,"./ReactChildren":166,"./ReactDOMFactories":169,"./ReactElement":170,"./ReactElementValidator":172,"./ReactPropTypes":175,"./ReactVersion":177,"./canDefineProperty":178,"./createClass":180,"./lowPriorityWarning":183,"./onlyChild":184,"_process":468,"object-assign":26}],165:[function(require,module,exports){
+},{"./ReactBaseClasses":165,"./ReactChildren":166,"./ReactDOMFactories":169,"./ReactElement":170,"./ReactElementValidator":172,"./ReactPropTypes":175,"./ReactVersion":177,"./canDefineProperty":178,"./createClass":180,"./lowPriorityWarning":183,"./onlyChild":184,"_process":495,"object-assign":26}],165:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -18975,7 +18975,7 @@ module.exports = {
   PureComponent: ReactPureComponent
 };
 }).call(this,require('_process'))
-},{"./ReactNoopUpdateQueue":173,"./canDefineProperty":178,"./lowPriorityWarning":183,"./reactProdInvariant":185,"_process":468,"fbjs/lib/emptyObject":11,"fbjs/lib/invariant":18,"object-assign":26}],166:[function(require,module,exports){
+},{"./ReactNoopUpdateQueue":173,"./canDefineProperty":178,"./lowPriorityWarning":183,"./reactProdInvariant":185,"_process":495,"fbjs/lib/emptyObject":11,"fbjs/lib/invariant":18,"object-assign":26}],166:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -19543,7 +19543,7 @@ var ReactComponentTreeHook = {
 
 module.exports = ReactComponentTreeHook;
 }).call(this,require('_process'))
-},{"./ReactCurrentOwner":168,"./reactProdInvariant":185,"_process":468,"fbjs/lib/invariant":18,"fbjs/lib/warning":25}],168:[function(require,module,exports){
+},{"./ReactCurrentOwner":168,"./reactProdInvariant":185,"_process":495,"fbjs/lib/invariant":18,"fbjs/lib/warning":25}],168:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -19739,7 +19739,7 @@ var ReactDOMFactories = {
 
 module.exports = ReactDOMFactories;
 }).call(this,require('_process'))
-},{"./ReactElement":170,"./ReactElementValidator":172,"_process":468}],170:[function(require,module,exports){
+},{"./ReactElement":170,"./ReactElementValidator":172,"_process":495}],170:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2014-present, Facebook, Inc.
@@ -20080,7 +20080,7 @@ ReactElement.isValidElement = function (object) {
 
 module.exports = ReactElement;
 }).call(this,require('_process'))
-},{"./ReactCurrentOwner":168,"./ReactElementSymbol":171,"./canDefineProperty":178,"_process":468,"fbjs/lib/warning":25,"object-assign":26}],171:[function(require,module,exports){
+},{"./ReactCurrentOwner":168,"./ReactElementSymbol":171,"./canDefineProperty":178,"_process":495,"fbjs/lib/warning":25,"object-assign":26}],171:[function(require,module,exports){
 arguments[4][83][0].apply(exports,arguments)
 },{"dup":83}],172:[function(require,module,exports){
 (function (process){
@@ -20337,7 +20337,7 @@ var ReactElementValidator = {
 
 module.exports = ReactElementValidator;
 }).call(this,require('_process'))
-},{"./ReactComponentTreeHook":167,"./ReactCurrentOwner":168,"./ReactElement":170,"./canDefineProperty":178,"./checkReactTypeSpec":179,"./getIteratorFn":181,"./lowPriorityWarning":183,"_process":468,"fbjs/lib/warning":25}],173:[function(require,module,exports){
+},{"./ReactComponentTreeHook":167,"./ReactCurrentOwner":168,"./ReactElement":170,"./canDefineProperty":178,"./checkReactTypeSpec":179,"./getIteratorFn":181,"./lowPriorityWarning":183,"_process":495,"fbjs/lib/warning":25}],173:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2015-present, Facebook, Inc.
@@ -20432,9 +20432,9 @@ var ReactNoopUpdateQueue = {
 
 module.exports = ReactNoopUpdateQueue;
 }).call(this,require('_process'))
-},{"_process":468,"fbjs/lib/warning":25}],174:[function(require,module,exports){
+},{"_process":495,"fbjs/lib/warning":25}],174:[function(require,module,exports){
 arguments[4][101][0].apply(exports,arguments)
-},{"_process":468,"dup":101}],175:[function(require,module,exports){
+},{"_process":495,"dup":101}],175:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -20481,7 +20481,7 @@ if (process.env.NODE_ENV !== 'production') {
 
 module.exports = canDefineProperty;
 }).call(this,require('_process'))
-},{"_process":468}],179:[function(require,module,exports){
+},{"_process":495}],179:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -20568,7 +20568,7 @@ function checkReactTypeSpec(typeSpecs, values, location, componentName, element,
 
 module.exports = checkReactTypeSpec;
 }).call(this,require('_process'))
-},{"./ReactComponentTreeHook":167,"./ReactPropTypeLocationNames":174,"./ReactPropTypesSecret":176,"./reactProdInvariant":185,"_process":468,"fbjs/lib/invariant":18,"fbjs/lib/warning":25}],180:[function(require,module,exports){
+},{"./ReactComponentTreeHook":167,"./ReactPropTypeLocationNames":174,"./ReactPropTypesSecret":176,"./reactProdInvariant":185,"_process":495,"fbjs/lib/invariant":18,"fbjs/lib/warning":25}],180:[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -20675,7 +20675,7 @@ if (process.env.NODE_ENV !== 'production') {
 
 module.exports = lowPriorityWarning;
 }).call(this,require('_process'))
-},{"_process":468}],184:[function(require,module,exports){
+},{"_process":495}],184:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -20713,7 +20713,7 @@ function onlyChild(children) {
 
 module.exports = onlyChild;
 }).call(this,require('_process'))
-},{"./ReactElement":170,"./reactProdInvariant":185,"_process":468,"fbjs/lib/invariant":18}],185:[function(require,module,exports){
+},{"./ReactElement":170,"./reactProdInvariant":185,"_process":495,"fbjs/lib/invariant":18}],185:[function(require,module,exports){
 arguments[4][154][0].apply(exports,arguments)
 },{"dup":154}],186:[function(require,module,exports){
 (function (process){
@@ -20891,14 +20891,327 @@ function traverseAllChildren(children, callback, traverseContext) {
 
 module.exports = traverseAllChildren;
 }).call(this,require('_process'))
-},{"./KeyEscapeUtils":162,"./ReactCurrentOwner":168,"./ReactElementSymbol":171,"./getIteratorFn":181,"./reactProdInvariant":185,"_process":468,"fbjs/lib/invariant":18,"fbjs/lib/warning":25}],187:[function(require,module,exports){
+},{"./KeyEscapeUtils":162,"./ReactCurrentOwner":168,"./ReactElementSymbol":171,"./getIteratorFn":181,"./reactProdInvariant":185,"_process":495,"fbjs/lib/invariant":18,"fbjs/lib/warning":25}],187:[function(require,module,exports){
 'use strict';
 
 module.exports = require('./lib/React');
 
 },{"./lib/React":164}],188:[function(require,module,exports){
+"use strict";
+var Control_Alt = require("../Control.Alt");
+var Control_Alternative = require("../Control.Alternative");
+var Control_Applicative = require("../Control.Applicative");
+var Control_Apply = require("../Control.Apply");
+var Control_Bind = require("../Control.Bind");
+var Control_Monad = require("../Control.Monad");
+var Control_Monad_Aff = require("../Control.Monad.Aff");
+var Control_Monad_Aff_AVar = require("../Control.Monad.Aff.AVar");
+var Control_Monad_Aff_Class = require("../Control.Monad.Aff.Class");
+var Control_Monad_Aff_Unsafe = require("../Control.Monad.Aff.Unsafe");
+var Control_Monad_Eff = require("../Control.Monad.Eff");
+var Control_Monad_Eff_AVar = require("../Control.Monad.Eff.AVar");
+var Control_Monad_Eff_Class = require("../Control.Monad.Eff.Class");
+var Control_Monad_Eff_Console = require("../Control.Monad.Eff.Console");
+var Control_Monad_Eff_Exception = require("../Control.Monad.Eff.Exception");
+var Control_Monad_Free = require("../Control.Monad.Free");
+var Control_Monad_IO = require("../Control.Monad.IO");
+var Control_Monad_IOSync = require("../Control.Monad.IOSync");
+var Control_Parallel_Class = require("../Control.Parallel.Class");
+var Control_Plus = require("../Control.Plus");
+var Control_Semigroupoid = require("../Control.Semigroupoid");
+var Data_Either = require("../Data.Either");
+var Data_Foldable = require("../Data.Foldable");
+var Data_Function = require("../Data.Function");
+var Data_Functor = require("../Data.Functor");
+var Data_Monoid = require("../Data.Monoid");
+var Data_Semigroup = require("../Data.Semigroup");
+var Data_Show = require("../Data.Show");
+var Prelude = require("../Prelude");
+var WidgetStep = function (x) {
+    return x;
+};
+var Widget = function (x) {
+    return x;
+};
+
+// Helpers for some very common use of unsafe blocking io
+
+// Construct a widget from a primitive view event
+var withViewEvent = function (mkView) {
+    return Control_Monad_Free.liftF(Control_Bind.bind(Control_Monad_IOSync.bindIOSync)(Control_Monad_Eff_Class.liftEff(Control_Monad_IOSync.monadEffIOSync)(Control_Monad_Eff_AVar.makeEmptyVar))(function (v) {
+        return Control_Applicative.pure(Control_Monad_IOSync.applicativeIOSync)({
+            view: mkView(function (a) {
+                return Data_Functor["void"](Control_Monad_IOSync.functorIOSync)(Control_Monad_Eff_Class.liftEff(Control_Monad_IOSync.monadEffIOSync)(Control_Monad_Eff_AVar.tryPutVar(a)(v)));
+            }), 
+            cont: Control_Monad_Aff_Class.liftAff(Control_Monad_IO.monadAffIO)(Control_Monad_Aff_AVar.takeVar(v))
+        });
+    }));
+};
+var widgetFunctor = new Data_Functor.Functor(function (k) {
+    return function (v) {
+        return Data_Functor.map(Control_Monad_Free.freeFunctor)(k)(v);
+    };
+});
+
+// Sync and blocking eff
+
+// WARNING: UNSAFE: This will block the UI rendering
+var unsafeBlockingEffAction = function (v) {
+    return function (eff) {
+        return Widget(Control_Monad_Free.liftF(WidgetStep(Control_Bind.bind(Control_Monad_IOSync.bindIOSync)(Control_Monad_Eff_Class.liftEff(Control_Monad_IOSync.monadEffIOSync)(eff))(function (a) {
+            return Control_Applicative.pure(Control_Monad_IOSync.applicativeIOSync)({
+                view: v, 
+                cont: Control_Applicative.pure(Control_Monad_IO.applicativeIO)(a)
+            });
+        }))));
+    };
+};
+var unWidgetStep = function (v) {
+    return v;
+};
+var unWidget = function (v) {
+    return v;
+};
+var widgetMonad = new Control_Monad.Monad(function () {
+    return widgetApplicative;
+}, function () {
+    return widgetBind;
+});
+var widgetBind = new Control_Bind.Bind(function () {
+    return widgetApply;
+}, function (v) {
+    return function (f) {
+        return Control_Bind.bind(Control_Monad_Free.freeBind)(v)(function ($84) {
+            return unWidget(f($84));
+        });
+    };
+});
+var widgetApply = new Control_Apply.Apply(function () {
+    return widgetFunctor;
+}, Control_Monad.ap(widgetMonad));
+var widgetApplicative = new Control_Applicative.Applicative(function () {
+    return widgetApply;
+}, function ($85) {
+    return Widget(Control_Applicative.pure(Control_Monad_Free.freeApplicative)($85));
+});
+var orr = function (dictPlus) {
+    return Data_Foldable.foldl(Data_Foldable.foldableArray)(Control_Alt.alt(dictPlus.Alt0()))(Control_Plus.empty(dictPlus));
+};
+var mapViewStep = function (f) {
+    return function (v) {
+        var mod = function (ws$prime) {
+            var $45 = {};
+            for (var $46 in ws$prime) {
+                if ({}.hasOwnProperty.call(ws$prime, $46)) {
+                    $45[$46] = ws$prime[$46];
+                };
+            };
+            $45.view = f(ws$prime.view);
+            return $45;
+        };
+        return Data_Functor.map(Control_Monad_IOSync.functorIOSync)(mod)(v);
+    };
+};
+var mapView = function (f) {
+    return function (v) {
+        return Control_Monad_Free.hoistFree(mapViewStep(f))(v);
+    };
+};
+var functorWidgetStep = new Data_Functor.Functor(function (f) {
+    return function (v) {
+        var mod = function (ws) {
+            var $52 = {};
+            for (var $53 in ws) {
+                if ({}.hasOwnProperty.call(ws, $53)) {
+                    $52[$53] = ws[$53];
+                };
+            };
+            $52.cont = Data_Functor.map(Control_Monad_IO.functorIO)(f)(ws.cont);
+            return $52;
+        };
+        return Data_Functor.map(Control_Monad_IOSync.functorIOSync)(mod)(v);
+    };
+});
+var widgetSemigroup = function (dictSemigroup) {
+    return new Data_Semigroup.Semigroup(function (v) {
+        return function (v1) {
+            var appendWidgetStep = function (v2) {
+                return function (v3) {
+                    return WidgetStep(Control_Bind.bind(Control_Monad_IOSync.bindIOSync)(v2)(function (v4) {
+                        return Control_Bind.bind(Control_Monad_IOSync.bindIOSync)(v3)(function (v5) {
+                            var v6 = Data_Semigroup.append(dictSemigroup)(v4.view)(v5.view);
+                            var c = Control_Bind.bind(Control_Monad_IO.bindIO)(Control_Parallel_Class.sequential(Control_Monad_IO.parallelParIO)(Control_Alt.alt(Control_Monad_IO.altParIO)(Control_Parallel_Class.parallel(Control_Monad_IO.parallelParIO)(Data_Functor.map(Control_Monad_IO.functorIO)(Data_Either.Left.create)(v4.cont)))(Control_Parallel_Class.parallel(Control_Monad_IO.parallelParIO)(Data_Functor.map(Control_Monad_IO.functorIO)(Data_Either.Right.create)(v5.cont)))))(function (v7) {
+                                return Control_Applicative.pure(Control_Monad_IO.applicativeIO)((function () {
+                                    if (v7 instanceof Data_Either.Left) {
+                                        return appendFree(v7.value0)(Control_Monad_Free.wrap(Control_Applicative.pure(Control_Monad_IOSync.applicativeIOSync)(v5)));
+                                    };
+                                    if (v7 instanceof Data_Either.Right) {
+                                        return appendFree(Control_Monad_Free.wrap(Control_Applicative.pure(Control_Monad_IOSync.applicativeIOSync)(v4)))(v7.value0);
+                                    };
+                                    throw new Error("Failed pattern match at Concur.Core line 72, column 26 - line 75, column 79: " + [ v7.constructor.name ]);
+                                })());
+                            });
+                            return Control_Applicative.pure(Control_Monad_IOSync.applicativeIOSync)({
+                                view: v6, 
+                                cont: c
+                            });
+                        });
+                    }));
+                };
+            };
+            var appendFree = function (w1$prime) {
+                return function (w2$prime) {
+                    var v2 = Control_Monad_Free.resume(functorWidgetStep)(w1$prime);
+                    if (v2 instanceof Data_Either.Right) {
+                        return Control_Applicative.pure(Control_Monad_Free.freeApplicative)(v2.value0);
+                    };
+                    if (v2 instanceof Data_Either.Left) {
+                        var v3 = Control_Monad_Free.resume(functorWidgetStep)(w2$prime);
+                        if (v3 instanceof Data_Either.Right) {
+                            return Control_Applicative.pure(Control_Monad_Free.freeApplicative)(v3.value0);
+                        };
+                        if (v3 instanceof Data_Either.Left) {
+                            return Control_Monad_Free.wrap(appendWidgetStep(v2.value0)(v3.value0));
+                        };
+                        throw new Error("Failed pattern match at Concur.Core line 63, column 23 - line 65, column 56: " + [ v3.constructor.name ]);
+                    };
+                    throw new Error("Failed pattern match at Concur.Core line 61, column 9 - line 65, column 56: " + [ v2.constructor.name ]);
+                };
+            };
+            return appendFree(v)(v1);
+        };
+    });
+};
+var widgetAlt = function (dictSemigroup) {
+    return new Control_Alt.Alt(function () {
+        return widgetFunctor;
+    }, Data_Semigroup.append(widgetSemigroup(dictSemigroup)));
+};
+
+// Construct a widget, by wrapping an existing widget in a view event
+
+// Returns Left on view event firing, Right on wrapped widget finishing
+var wrapViewEvent = function (mkView) {
+    return function (v) {
+        return Widget((function () {
+            var v1 = Control_Monad_Free.resume(functorWidgetStep)(v);
+            if (v1 instanceof Data_Either.Right) {
+                return Control_Applicative.pure(Control_Monad_Free.freeApplicative)(new Data_Either.Right(v1.value0));
+            };
+            if (v1 instanceof Data_Either.Left) {
+                return Control_Monad_Free.wrap(WidgetStep(Control_Bind.bind(Control_Monad_IOSync.bindIOSync)(v1.value0)(function (v2) {
+                    return Control_Bind.bind(Control_Monad_IOSync.bindIOSync)(Control_Monad_Eff_Class.liftEff(Control_Monad_IOSync.monadEffIOSync)(Control_Monad_Eff_AVar.makeEmptyVar))(function (v3) {
+                        var view$prime = mkView(v3)(v2.view);
+                        var cont$prime = Control_Parallel_Class.sequential(Control_Monad_IO.parallelParIO)(Control_Alt.alt(Control_Monad_IO.altParIO)(Control_Parallel_Class.parallel(Control_Monad_IO.parallelParIO)(Control_Monad_Aff_Class.liftAff(Control_Monad_IO.monadAffIO)(Control_Monad_Aff_AVar.takeVar(v3))))(Control_Parallel_Class.parallel(Control_Monad_IO.parallelParIO)(Data_Functor.map(Control_Monad_IO.functorIO)(Data_Functor.map(Control_Monad_Free.freeFunctor)(Data_Either.Right.create))(v2.cont))));
+                        return Control_Applicative.pure(Control_Monad_IOSync.applicativeIOSync)({
+                            view: view$prime, 
+                            cont: cont$prime
+                        });
+                    });
+                })));
+            };
+            throw new Error("Failed pattern match at Concur.Core line 140, column 3 - line 147, column 37: " + [ v1.constructor.name ]);
+        })());
+    };
+};
+var displayStep = function (v) {
+    return Control_Applicative.pure(Control_Monad_IOSync.applicativeIOSync)({
+        view: v, 
+        cont: Control_Monad_Aff_Class.liftAff(Control_Monad_IO.monadAffIO)(Control_Monad_Aff.never)
+    });
+};
+var display = function (v) {
+    return Control_Monad_Free.liftF(displayStep(v));
+};
+var widgetPlus = function (dictMonoid) {
+    return new Control_Plus.Plus(function () {
+        return widgetAlt(dictMonoid.Semigroup0());
+    }, display(Data_Monoid.mempty(dictMonoid)));
+};
+var widgetAlternative = function (dictMonoid) {
+    return new Control_Alternative.Alternative(function () {
+        return widgetApplicative;
+    }, function () {
+        return widgetPlus(dictMonoid);
+    });
+};
+
+// Async aff
+var affAction = function (v) {
+    return function (aff) {
+        var handler = function (v1) {
+            return function (v2) {
+                if (v2 instanceof Data_Either.Left) {
+                    return Control_Monad_Eff_Console.log("Aff failed - " + Data_Show.show(Control_Monad_Eff_Exception.showError)(v2.value0));
+                };
+                if (v2 instanceof Data_Either.Right) {
+                    return Data_Functor["void"](Control_Monad_Eff.functorEff)(Control_Monad_Eff_AVar.tryPutVar(v2.value0)(v1));
+                };
+                throw new Error("Failed pattern match at Concur.Core line 118, column 5 - line 118, column 59: " + [ v1.constructor.name, v2.constructor.name ]);
+            };
+        };
+        return Widget(Control_Monad_Free.liftF(WidgetStep(Control_Bind.bind(Control_Monad_IOSync.bindIOSync)(Control_Monad_Eff_Class.liftEff(Control_Monad_IOSync.monadEffIOSync)(function __do() {
+            var v1 = Control_Monad_Eff_AVar.makeEmptyVar();
+            Control_Monad_Aff.runAff_(handler(v1))(Control_Monad_Aff_Unsafe.unsafeCoerceAff(aff))();
+            return v1;
+        }))(function (v1) {
+            return Control_Applicative.pure(Control_Monad_IOSync.applicativeIOSync)({
+                view: v, 
+                cont: Control_Monad_Aff_Class.liftAff(Control_Monad_IO.monadAffIO)(Control_Monad_Aff_AVar.takeVar(v1))
+            });
+        }))));
+    };
+};
+
+// Sync but Non blocking eff
+var effAction = function (v) {
+    return function (eff) {
+        return affAction(v)(Control_Monad_Eff_Class.liftEff(Control_Monad_Aff.monadEffAff)(eff));
+    };
+};
+var widgetMonadEff = function (dictMonoid) {
+    return new Control_Monad_Eff_Class.MonadEff(function () {
+        return widgetMonad;
+    }, effAction(Data_Monoid.mempty(dictMonoid)));
+};
+var widgetMonadAff = function (dictMonoid) {
+    return new Control_Monad_Aff_Class.MonadAff(function () {
+        return widgetMonadEff(dictMonoid);
+    }, affAction(Data_Monoid.mempty(dictMonoid)));
+};
+module.exports = {
+    Widget: Widget, 
+    WidgetStep: WidgetStep, 
+    affAction: affAction, 
+    display: display, 
+    displayStep: displayStep, 
+    effAction: effAction, 
+    mapView: mapView, 
+    mapViewStep: mapViewStep, 
+    orr: orr, 
+    unWidget: unWidget, 
+    unWidgetStep: unWidgetStep, 
+    unsafeBlockingEffAction: unsafeBlockingEffAction, 
+    withViewEvent: withViewEvent, 
+    wrapViewEvent: wrapViewEvent, 
+    functorWidgetStep: functorWidgetStep, 
+    widgetFunctor: widgetFunctor, 
+    widgetBind: widgetBind, 
+    widgetApplicative: widgetApplicative, 
+    widgetApply: widgetApply, 
+    widgetMonad: widgetMonad, 
+    widgetSemigroup: widgetSemigroup, 
+    widgetAlt: widgetAlt, 
+    widgetPlus: widgetPlus, 
+    widgetAlternative: widgetAlternative, 
+    widgetMonadEff: widgetMonadEff, 
+    widgetMonadAff: widgetMonadAff
+};
+
+},{"../Control.Alt":194,"../Control.Alternative":195,"../Control.Applicative":196,"../Control.Apply":198,"../Control.Bind":202,"../Control.Monad":254,"../Control.Monad.Aff":213,"../Control.Monad.Aff.AVar":208,"../Control.Monad.Aff.Class":209,"../Control.Monad.Aff.Unsafe":211,"../Control.Monad.Eff":232,"../Control.Monad.Eff.AVar":217,"../Control.Monad.Eff.Class":218,"../Control.Monad.Eff.Console":220,"../Control.Monad.Eff.Exception":222,"../Control.Monad.Free":236,"../Control.Monad.IO":238,"../Control.Monad.IOSync":239,"../Control.Parallel.Class":257,"../Control.Plus":259,"../Control.Semigroupoid":260,"../Data.Either":326,"../Data.Foldable":334,"../Data.Function":341,"../Data.Functor":347,"../Data.Monoid":406,"../Data.Semigroup":430,"../Data.Show":434,"../Prelude":475}],189:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
+var Concur_Core = require("../Concur.Core");
 var Concur_React = require("../Concur.React");
 var Control_Applicative = require("../Control.Applicative");
 var Control_Semigroupoid = require("../Control.Semigroupoid");
@@ -20958,7 +21271,7 @@ var textarea = function ($12) {
 };
 var textarea$prime = textarea([  ]);
 var text = function ($13) {
-    return Concur_React.display(Control_Applicative.pure(Control_Applicative.applicativeArray)(React_DOM.text($13)));
+    return Concur_Core.display(Control_Applicative.pure(Control_Applicative.applicativeArray)(React_DOM.text($13)));
 };
 var td = function ($14) {
     return Concur_React["el'"](React_DOM.td($14));
@@ -21584,9 +21897,10 @@ module.exports = {
     "wbr'": wbr$prime
 };
 
-},{"../Concur.React":192,"../Control.Applicative":195,"../Control.Semigroupoid":250,"../Prelude":450,"../React.DOM":453,"../React.DOM.Props":452}],189:[function(require,module,exports){
+},{"../Concur.Core":188,"../Concur.React":193,"../Control.Applicative":196,"../Control.Semigroupoid":260,"../Prelude":475,"../React.DOM":478,"../React.DOM.Props":477}],190:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
+var Concur_Core = require("../Concur.Core");
 var Concur_React = require("../Concur.React");
 var Control_Applicative = require("../Control.Applicative");
 var Control_Bind = require("../Control.Bind");
@@ -21614,7 +21928,7 @@ var runWidgetInDom = function (elemId) {
             if (v2 instanceof Data_Maybe.Just) {
                 return Data_Functor["void"](Control_Monad_Eff.functorEff)(ReactDOM.render(Concur_React.renderComponent(w))(v2.value0))();
             };
-            throw new Error("Failed pattern match at Concur.React.Run line 21, column 3 - line 23, column 55: " + [ v2.constructor.name ]);
+            throw new Error("Failed pattern match at Concur.React.Run line 22, column 3 - line 24, column 55: " + [ v2.constructor.name ]);
         };
     };
 };
@@ -21622,20 +21936,26 @@ module.exports = {
     runWidgetInDom: runWidgetInDom
 };
 
-},{"../Concur.React":192,"../Control.Applicative":195,"../Control.Bind":201,"../Control.Monad.Eff":226,"../DOM":267,"../DOM.HTML":259,"../DOM.HTML.Types":255,"../DOM.HTML.Window":257,"../DOM.Node.NonElementParentNode":261,"../DOM.Node.Types":262,"../Data.Functor":324,"../Data.Maybe":374,"../Data.Unit":433,"../Prelude":450,"../ReactDOM":457}],190:[function(require,module,exports){
+},{"../Concur.Core":188,"../Concur.React":193,"../Control.Applicative":196,"../Control.Bind":202,"../Control.Monad.Eff":232,"../DOM":277,"../DOM.HTML":269,"../DOM.HTML.Types":265,"../DOM.HTML.Window":267,"../DOM.Node.NonElementParentNode":271,"../DOM.Node.Types":272,"../Data.Functor":347,"../Data.Maybe":397,"../Data.Unit":458,"../Prelude":475,"../ReactDOM":482}],191:[function(require,module,exports){
 "use strict";
 
 exports.getEventTargetValueString = function(event) {
     return event.target.value;
 };
 
-},{}],191:[function(require,module,exports){
+},{}],192:[function(require,module,exports){
+// Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
+var Concur_Core = require("../Concur.Core");
 var Concur_React = require("../Concur.React");
 var Concur_React_DOM = require("../Concur.React.DOM");
 var Control_Applicative = require("../Control.Applicative");
 var Control_Category = require("../Control.Category");
+var Control_Monad_Eff_AVar = require("../Control.Monad.Eff.AVar");
+var Control_Monad_Eff_Class = require("../Control.Monad.Eff.Class");
+var Control_Monad_Free = require("../Control.Monad.Free");
+var Control_Monad_IOSync = require("../Control.Monad.IOSync");
 var Control_Semigroupoid = require("../Control.Semigroupoid");
 var Data_Either = require("../Data.Either");
 var Data_Function = require("../Data.Function");
@@ -21648,117 +21968,78 @@ var React_DOM = require("../React.DOM");
 var React_DOM_Props = require("../React.DOM.Props");
 var textInput = function (props) {
     return function (contents) {
-        return Concur_React.Widget.create(function (send) {
-            return Concur_React.viewStep([ React_DOM.input(Data_Semigroup.append(Data_Semigroup.semigroupArray)(props)([ React_DOM_Props._type("text"), React_DOM_Props.value(contents), React_DOM_Props.onChange(function ($8) {
-                return send(Control_Applicative.pure(Concur_React.widgetApplicative)($foreign.getEventTargetValueString($8)));
-            }) ]))([  ]) ]);
+        return Concur_Core.withViewEvent(function (h) {
+            return [ React_DOM.input(Data_Semigroup.append(Data_Semigroup.semigroupArray)(props)([ React_DOM_Props._type("text"), React_DOM_Props.value(contents), React_DOM_Props.onChange(function ($0) {
+                return Control_Monad_IOSync["runIOSync'"](h($foreign.getEventTargetValueString($0)));
+            }) ]))([  ]) ];
         });
     };
 };
 var textInput$prime = textInput([  ]);
 var textArea = function (props) {
     return function (contents) {
-        return Concur_React.Widget.create(function (send) {
-            return Concur_React.viewStep([ React_DOM.textarea(Data_Semigroup.append(Data_Semigroup.semigroupArray)(props)([ React_DOM_Props.value(contents), React_DOM_Props.onChange(function ($9) {
-                return send(Control_Applicative.pure(Concur_React.widgetApplicative)($foreign.getEventTargetValueString($9)));
-            }) ]))([  ]) ]);
+        return Concur_Core.withViewEvent(function (h) {
+            return [ React_DOM.textarea(Data_Semigroup.append(Data_Semigroup.semigroupArray)(props)([ React_DOM_Props.value(contents), React_DOM_Props.onChange(function ($1) {
+                return Control_Monad_IOSync["runIOSync'"](h($foreign.getEventTargetValueString($1)));
+            }) ]))([  ]) ];
         });
     };
 };
 var textArea$prime = textArea([  ]);
-
-// Wrap an element with multiple arbitrary eventHandlers over a widget
 var elEventMany = function (evts) {
     return function (e) {
         return function (props) {
-            return function (v) {
-                if (v instanceof Concur_React.RenderEnd) {
-                    return new Concur_React.RenderEnd(new Data_Either.Right(v.value0));
+            return function (w) {
+                var mkView = function ($$var) {
+                    return function (view) {
+                        return [ e(Data_Semigroup.append(Data_Semigroup.semigroupArray)(props)(Data_Functor.map(Data_Functor.functorArray)(function (evt) {
+                            return evt(function (a) {
+                                return Data_Functor["void"](Control_Monad_IOSync.functorIOSync)(Control_Monad_Eff_Class.liftEff(Control_Monad_IOSync.monadEffIOSync)(Control_Monad_Eff_AVar.tryPutVar(Control_Applicative.pure(Control_Monad_Free.freeApplicative)(new Data_Either.Left(a)))($$var)));
+                            });
+                        })(evts)))(view) ];
+                    };
                 };
-                if (v instanceof Concur_React.Widget) {
-                    return Concur_React.Widget.create(function (send) {
-                        return Concur_React.forViewStep(v.value0(function ($10) {
-                            return send(Data_Functor.map(Concur_React.widgetFunctor)(Data_Either.Right.create)($10));
-                        }))(function (v1) {
-                            return [ e(Data_Semigroup.append(Data_Semigroup.semigroupArray)(props)(Data_Functor.map(Data_Functor.functorArray)(function (evt) {
-                                return evt(function ($11) {
-                                    return send(Control_Applicative.pure(Concur_React.widgetApplicative)(Data_Either.Left.create($11)));
-                                });
-                            })(evts)))(v1) ];
-                        });
-                    });
-                };
-                throw new Error("Failed pattern match at Concur.React.Widgets line 59, column 1 - line 59, column 162: " + [ evts.constructor.name, e.constructor.name, props.constructor.name, v.constructor.name ]);
+                return Concur_Core.wrapViewEvent(mkView)(w);
             };
         };
     };
 };
-
-// Wrap an element with an arbitrary eventHandler over a widget
 var elEvent = function (evt) {
     return elEventMany([ evt ]);
 };
-
-// Combinator Widgets, at a more higher level than those in Concur.React.DOM
-
-// Wrap a button around a widget
-
-// Returns a `Left unit on click events.
-
-// Or a `Right a` when the inner `Widget HTML eff a` ends.
 var wrapButton = function (props) {
     return function (w) {
-        return elEvent(function ($12) {
-            return React_DOM_Props.onClick((function (v) {
-                return function ($13) {
-                    return v(Data_Function["const"](Data_Unit.unit)($13));
-                };
-            })($12));
+        return elEvent(function (h) {
+            return React_DOM_Props.onClick(Data_Function["const"](Control_Monad_IOSync["runIOSync'"](h(Data_Unit.unit))));
         })(React_DOM.button)(props)(w);
     };
 };
-
-// Like a wrapButton, but takes no props
 var wrapButton$prime = wrapButton([  ]);
-
-// elEventMany evts e props (WidgetEff eff) = WidgetEff (elEventMany evts e props <$> eff)
-
-// Wrap a div with key handlers around a widget
-
-// Returns a `Left unit on key events.
-
-// Or a `Right a` when the inner `Widget HTML eff a` ends.
 var wrapKeyHandler = function (props) {
     return function (w) {
-        return elEvent(React_DOM_Props.onKeyDown)(React_DOM.div)(props)(w);
+        return elEvent(function (h) {
+            return React_DOM_Props.onKeyDown(function ($2) {
+                return Control_Monad_IOSync["runIOSync'"](h($2));
+            });
+        })(React_DOM.div)(props)(w);
     };
 };
-
-// Specialised key handler widget with only static children
 var displayKeyHandler = function (props) {
     return function (w) {
-        return Data_Functor.map(Concur_React.widgetFunctor)(Data_Either.either(Control_Category.id(Control_Category.categoryFn))(Control_Category.id(Control_Category.categoryFn)))(wrapKeyHandler(props)(w));
+        return Data_Functor.map(Concur_Core.widgetFunctor)(Data_Either.either(Control_Category.id(Control_Category.categoryFn))(Control_Category.id(Control_Category.categoryFn)))(wrapKeyHandler(props)(w));
     };
 };
-
-// Specialised button with only static children
 var displayButton = function (props) {
     return function (d) {
-        return Data_Functor.map(Concur_React.widgetFunctor)(Data_Either.either(Control_Category.id(Control_Category.categoryFn))(Control_Category.id(Control_Category.categoryFn)))(wrapButton(props)(d));
+        return Data_Functor.map(Concur_Core.widgetFunctor)(Data_Either.either(Control_Category.id(Control_Category.categoryFn))(Control_Category.id(Control_Category.categoryFn)))(wrapButton(props)(d));
     };
 };
-
-// Like a displayButton, but takes no props
 var displayButton$prime = displayButton([  ]);
-
-// Specialised text only button
 var textButton = function (props) {
     return function (label) {
         return displayButton(props)(Concur_React_DOM.text(label));
     };
 };
-
-// Like a textButton, but takes no props
 var textButton$prime = textButton([  ]);
 module.exports = {
     displayButton: displayButton, 
@@ -21778,433 +22059,96 @@ module.exports = {
     getEventTargetValueString: $foreign.getEventTargetValueString
 };
 
-},{"../Concur.React":192,"../Concur.React.DOM":188,"../Control.Applicative":195,"../Control.Category":202,"../Control.Semigroupoid":250,"../Data.Either":304,"../Data.Function":318,"../Data.Functor":324,"../Data.Semigroup":407,"../Data.Unit":433,"../Prelude":450,"../React":455,"../React.DOM":453,"../React.DOM.Props":452,"./foreign":190}],192:[function(require,module,exports){
+},{"../Concur.Core":188,"../Concur.React":193,"../Concur.React.DOM":189,"../Control.Applicative":196,"../Control.Category":203,"../Control.Monad.Eff.AVar":217,"../Control.Monad.Eff.Class":218,"../Control.Monad.Free":236,"../Control.Monad.IOSync":239,"../Control.Semigroupoid":260,"../Data.Either":326,"../Data.Function":341,"../Data.Functor":347,"../Data.Semigroup":430,"../Data.Unit":458,"../Prelude":475,"../React":480,"../React.DOM":478,"../React.DOM.Props":477,"./foreign":191}],193:[function(require,module,exports){
+// Generated by purs version 0.11.6
 "use strict";
-var Control_Alt = require("../Control.Alt");
-var Control_Alternative = require("../Control.Alternative");
+var Concur_Core = require("../Concur.Core");
 var Control_Applicative = require("../Control.Applicative");
-var Control_Apply = require("../Control.Apply");
 var Control_Bind = require("../Control.Bind");
-var Control_Monad = require("../Control.Monad");
 var Control_Monad_Aff = require("../Control.Monad.Aff");
-var Control_Monad_Aff_Class = require("../Control.Monad.Aff.Class");
-var Control_Monad_Aff_Unsafe = require("../Control.Monad.Aff.Unsafe");
 var Control_Monad_Eff = require("../Control.Monad.Eff");
 var Control_Monad_Eff_Class = require("../Control.Monad.Eff.Class");
+var Control_Monad_Eff_Console = require("../Control.Monad.Eff.Console");
+var Control_Monad_Eff_Exception = require("../Control.Monad.Eff.Exception");
 var Control_Monad_Eff_Unsafe = require("../Control.Monad.Eff.Unsafe");
-var Control_Monad_Rec_Class = require("../Control.Monad.Rec.Class");
-var Control_Plus = require("../Control.Plus");
+var Control_Monad_Free = require("../Control.Monad.Free");
+var Control_Monad_IO = require("../Control.Monad.IO");
+var Control_Monad_IOSync = require("../Control.Monad.IOSync");
 var Control_Semigroupoid = require("../Control.Semigroupoid");
-var Data_Array = require("../Data.Array");
-var Data_Foldable = require("../Data.Foldable");
+var Data_Either = require("../Data.Either");
 var Data_Function = require("../Data.Function");
 var Data_Functor = require("../Data.Functor");
-var Data_Maybe = require("../Data.Maybe");
 var Data_Monoid = require("../Data.Monoid");
 var Data_Semigroup = require("../Data.Semigroup");
+var Data_Show = require("../Data.Show");
 var Data_Unit = require("../Data.Unit");
 var Prelude = require("../Prelude");
 var React = require("../React");
 var React_DOM = require("../React.DOM");
 var React_DOM_Props = require("../React.DOM.Props");
-var End = (function () {
-    function End(value0) {
-        this.value0 = value0;
-    };
-    End.create = function (value0) {
-        return new End(value0);
-    };
-    return End;
-})();
-var Free = (function () {
-    function Free(value0) {
-        this.value0 = value0;
-    };
-    Free.create = function (value0) {
-        return new Free(value0);
-    };
-    return Free;
-})();
-var WidgetStep = function (x) {
-    return x;
-};
-var RenderEnd = (function () {
-    function RenderEnd(value0) {
-        this.value0 = value0;
-    };
-    RenderEnd.create = function (value0) {
-        return new RenderEnd(value0);
-    };
-    return RenderEnd;
-})();
-var Widget = (function () {
-    function Widget(value0) {
-        this.value0 = value0;
-    };
-    Widget.create = function (value0) {
-        return new Widget(value0);
-    };
-    return Widget;
-})();
-var widgetStepSemigroup = function (dictSemigroup) {
-    return new Data_Semigroup.Semigroup(function (v) {
-        return function (v1) {
-            var v$prime = Data_Semigroup.append(dictSemigroup)(v.view)(v1.view);
-            var r$prime = Data_Semigroup.append(Data_Maybe.semigroupMaybe(Control_Monad_Aff.semigroupAff(Data_Semigroup.semigroupUnit)))(v.cont)(v1.cont);
-            return {
-                view: v$prime, 
-                cont: r$prime
-            };
-        };
-    });
-};
-var widgetFunctor = new Data_Functor.Functor(function (f) {
-    return function (v) {
-        if (v instanceof RenderEnd) {
-            return new RenderEnd(f(v.value0));
-        };
-        if (v instanceof Widget) {
-            return new Widget(function (h) {
-                return v.value0(function ($86) {
-                    return h(Data_Functor.map(widgetFunctor)(f)($86));
-                });
-            });
-        };
-        throw new Error("Failed pattern match at Concur.React line 51, column 1 - line 51, column 49: " + [ f.constructor.name, v.constructor.name ]);
-    };
-});
-var widgetMonad = new Control_Monad.Monad(function () {
-    return widgetApplicative;
-}, function () {
-    return widgetBind;
-});
-var widgetBind = new Control_Bind.Bind(function () {
-    return widgetApply;
-}, function (v) {
-    return function (k) {
-        if (v instanceof RenderEnd) {
-            return k(v.value0);
-        };
-        if (v instanceof Widget) {
-            return new Widget(function (h) {
-                return v.value0(function (w) {
-                    return h(Control_Bind.bind(widgetBind)(w)(k));
-                });
-            });
-        };
-        throw new Error("Failed pattern match at Concur.React line 55, column 1 - line 55, column 43: " + [ v.constructor.name, k.constructor.name ]);
-    };
-});
-var widgetApply = new Control_Apply.Apply(function () {
-    return widgetFunctor;
-}, Control_Monad.ap(widgetMonad));
-var widgetApplicative = new Control_Applicative.Applicative(function () {
-    return widgetApply;
-}, RenderEnd.create);
-
-// NOTE: Widgets are already tail recursion safe, thanks to setState effectively being an effectful trampoline.
-
-// However, we still need a MonadRec instance to allow monad transformers like StateT on top.
-
-// See this discussion on github - https://github.com/ajnsit/purescript-concur/issues/1
-var widgetMonadRec = new Control_Monad_Rec_Class.MonadRec(function () {
-    return widgetMonad;
-}, function (f) {
-    return function (a) {
-        var go = function (v) {
-            if (v instanceof Control_Monad_Rec_Class.Loop) {
-                return Control_Monad_Rec_Class.tailRecM(widgetMonadRec)(f)(v.value0);
-            };
-            if (v instanceof Control_Monad_Rec_Class.Done) {
-                return Control_Applicative.pure(widgetApplicative)(v.value0);
-            };
-            throw new Error("Failed pattern match at Concur.React line 74, column 7 - line 74, column 35: " + [ v.constructor.name ]);
-        };
-        return Control_Bind.bindFlipped(widgetBind)(go)(f(a));
-    };
-});
-var widgetAlt = function (dictSemigroup) {
-    return new Control_Alt.Alt(function () {
-        return widgetFunctor;
-    }, function (v) {
-        return function (v1) {
-            if (v instanceof RenderEnd) {
-                return new RenderEnd(v.value0);
-            };
-            if (v1 instanceof RenderEnd) {
-                return new RenderEnd(v1.value0);
-            };
-            if (v instanceof Widget && v1 instanceof Widget) {
-                return Widget.create(function (h) {
-                    var hg = function (v2) {
-                        if (v2 instanceof RenderEnd) {
-                            return h(new RenderEnd(v2.value0));
-                        };
-                        return h(Control_Alt.alt(widgetAlt(dictSemigroup))(new Widget(v.value0))(v2));
-                    };
-                    var hf = function (v2) {
-                        if (v2 instanceof RenderEnd) {
-                            return h(new RenderEnd(v2.value0));
-                        };
-                        return h(Control_Alt.alt(widgetAlt(dictSemigroup))(v2)(new Widget(v1.value0)));
-                    };
-                    return Data_Semigroup.append(widgetStepSemigroup(dictSemigroup))(v.value0(hf))(v1.value0(hg));
-                });
-            };
-            throw new Error("Failed pattern match at Concur.React line 77, column 1 - line 77, column 56: " + [ v.constructor.name, v1.constructor.name ]);
-        };
-    });
-};
-var viewStep = function (v) {
-    return {
-        view: v, 
-        cont: Data_Maybe.Nothing.value
-    };
-};
-var widgetStepMonoid = function (dictMonoid) {
-    return new Data_Monoid.Monoid(function () {
-        return widgetStepSemigroup(dictMonoid.Semigroup0());
-    }, viewStep(Data_Monoid.mempty(dictMonoid)));
-};
-var renderToEventHandlerAff = Control_Monad_Aff_Unsafe.unsafeCoerceAff;
-
-// These are needed because Purescript row effects are not smart enough to figure out that -
-
-// RenderHandler is strictly a subset of EventHandler
-var renderToEventHandler = Control_Monad_Eff_Unsafe.unsafeCoerceEff;
-var mapViewStep = function (f) {
-    return function (v) {
-        var $61 = {};
-        for (var $62 in v) {
-            if ({}.hasOwnProperty.call(v, $62)) {
-                $61[$62] = v[$62];
-            };
-        };
-        $61.view = f(v.view);
-        return $61;
-    };
-};
-var mapView = function (v) {
-    return function (v1) {
-        if (v1 instanceof Widget) {
-            return new Widget(function ($87) {
-                return mapViewStep(v)(v1.value0($87));
-            });
-        };
-        return v1;
-    };
-};
-var liftRenderEff = function (dictMonoid) {
-    return function (eff) {
-        var eff$prime = function (h) {
-            return function __do() {
-                var v = renderToEventHandler(eff)();
-                return h(new RenderEnd(v))();
-            };
-        };
-        return new Widget(function (h) {
-            return {
-                view: Data_Monoid.mempty(dictMonoid), 
-                cont: new Data_Maybe.Just(Control_Monad_Eff_Class.liftEff(Control_Monad_Aff.monadEffAff)(eff$prime(h)))
-            };
-        });
-    };
-};
-
-// Pause for a negligible amount of time. Forces continuations to pass through the trampoline.
-
-// Avoids stack overflows in (ridiculous) cases where a widget calls itself without any intervening widgets or effects.
-
-// E.g. -
-
-//   BAD  `counter n = if n < 10000 then counter (n+1) else pure n`
-
-//   GOOD `counter n = if n < 10000 then (pulse >>= const (counter (n+1))) else pure n`
-var pulse = function (dictMonoid) {
-    return liftRenderEff(dictMonoid)(Control_Applicative.pure(Control_Monad_Eff.applicativeEff)(Data_Unit.unit));
-};
-var liftRenderAff = function (dictMonoid) {
-    return function (aff) {
-        var aff$prime = function (h) {
-            return Control_Bind.bind(Control_Monad_Aff.bindAff)(renderToEventHandlerAff(aff))(function (v) {
-                return Control_Monad_Eff_Class.liftEff(Control_Monad_Aff.monadEffAff)(h(new RenderEnd(v)));
-            });
-        };
-        return new Widget(function (h) {
-            return {
-                view: Data_Monoid.mempty(dictMonoid), 
-                cont: new Data_Maybe.Just(aff$prime(h))
-            };
-        });
-    };
-};
-var forViewStep = function (v) {
-    return function (f) {
-        var $71 = {};
-        for (var $72 in v) {
-            if ({}.hasOwnProperty.call(v, $72)) {
-                $71[$72] = v[$72];
-            };
-        };
-        $71.view = f(v.view);
-        return $71;
-    };
-};
 var el = function (n) {
-    return mapView(function (v) {
+    return Concur_Core.mapView(function (v) {
         return [ n(v) ];
     });
 };
-
-// Eff is strictly a subset of RenderHandler
-var effToRenderHandler = Control_Monad_Eff_Unsafe.unsafeCoerceEff;
-var widgetMonadEff = function (dictMonoid) {
-    return new Control_Monad_Eff_Class.MonadEff(function () {
-        return widgetMonad;
-    }, (function (dictMonoid1) {
-        return function ($88) {
-            return liftRenderEff(dictMonoid1)(effToRenderHandler($88));
-        };
-    })(dictMonoid));
-};
-
-// Eff is strictly a subset of EventHandler
-var effToEventHandler = Control_Monad_Eff_Unsafe.unsafeCoerceEff;
-var display = function (v) {
-    return new Widget(function (h) {
-        return {
-            view: v, 
-            cont: Data_Maybe.Nothing.value
-        };
-    });
-};
-var widgetPlus = function (dictMonoid) {
-    return new Control_Plus.Plus(function () {
-        return widgetAlt(dictMonoid.Semigroup0());
-    }, display(Data_Monoid.mempty(dictMonoid)));
-};
-var never = function (dictMonoid) {
-    return Control_Plus.empty(widgetPlus(dictMonoid));
-};
-var orr = function (dictMonoid) {
-    return Data_Foldable.foldl(Data_Foldable.foldableArray)(Control_Alt.alt(widgetAlt(dictMonoid.Semigroup0())))(never(dictMonoid));
-};
 var el$prime = function (n) {
-    return function ($89) {
-        return el(n)(orr(Data_Monoid.monoidArray)($89));
+    return function ($14) {
+        return el(n)(Concur_Core.orr(Concur_Core.widgetPlus(Data_Monoid.monoidArray))($14));
     };
 };
-var widgetAlternative = function (dictMonoid) {
-    return new Control_Alternative.Alternative(function () {
-        return widgetApplicative;
-    }, function () {
-        return widgetPlus(dictMonoid);
-    });
-};
-var componentClass = function (init) {
-    var mkHandler = function ($$this) {
-        var go = function (v) {
-            if (v instanceof RenderEnd) {
-                return Data_Functor["void"](Control_Monad_Eff.functorEff)(React.writeState($$this)(v));
-            };
-            if (v instanceof Widget) {
-                var v1 = v.value0(go);
+var componentClass = function (winit) {
+    var render = function ($$this) {
+        return Data_Functor.map(Control_Monad_Eff.functorEff)(React_DOM["div'"])(React.readState($$this));
+    };
+    var handler = function (v) {
+        return function (v1) {
+            if (v1 instanceof Data_Either.Right) {
                 return function __do() {
-                    Data_Functor["void"](Control_Monad_Eff.functorEff)(React.writeState($$this)(new Widget(Data_Function["const"](viewStep(v1.view)))))();
-                    if (v1.cont instanceof Data_Maybe.Nothing) {
-                        return Data_Unit.unit;
-                    };
-                    if (v1.cont instanceof Data_Maybe.Just) {
-                        return Data_Functor["void"](Control_Monad_Eff.functorEff)(Control_Monad_Aff.runAff(function (e) {
-                            return Control_Applicative.pure(Control_Monad_Eff.applicativeEff)(Data_Unit.unit);
-                        })(v1.cont.value0))();
-                    };
-                    throw new Error("Failed pattern match at Concur.React line 185, column 15 - line 190, column 54: " + [ v1.cont.constructor.name ]);
+                    var v2 = discharge(v1.value0)(v)();
+                    return Data_Functor["void"](Control_Monad_Eff.functorEff)(Control_Monad_Eff_Unsafe.unsafeCoerceEff(React.writeState(v)(v2)))();
                 };
             };
-            throw new Error("Failed pattern match at Concur.React line 178, column 9 - line 178, column 56: " + [ v.constructor.name ]);
-        };
-        return go;
-    };
-    var renderInner = function ($$this) {
-        return function __do() {
-            var v = React.readState($$this)();
-            if (v instanceof RenderEnd) {
-                return Data_Monoid.mempty(Data_Monoid.monoidArray);
+            if (v1 instanceof Data_Either.Left) {
+                return function __do() {
+                    Control_Monad_Eff_Console.log("FAILED! " + Data_Show.show(Control_Monad_Eff_Exception.showError)(v1.value0))();
+                    return Data_Unit.unit;
+                };
             };
-            if (v instanceof Widget) {
-                var v1 = v.value0(mkHandler($$this));
-                return v1.view;
+            throw new Error("Failed pattern match at Concur.React line 38, column 5 - line 40, column 51: " + [ v.constructor.name, v1.constructor.name ]);
+        };
+    };
+    var discharge = function (w) {
+        return function ($$this) {
+            var v = Control_Monad_Free.resume(Concur_Core.functorWidgetStep)(w);
+            if (v instanceof Data_Either.Right) {
+                return Control_Applicative.pure(Control_Monad_Eff.applicativeEff)([  ]);
             };
-            throw new Error("Failed pattern match at Concur.React line 199, column 7 - line 204, column 42: " + [ v.constructor.name ]);
+            if (v instanceof Data_Either.Left) {
+                return Control_Monad_IOSync["runIOSync'"](Control_Bind.bind(Control_Monad_IOSync.bindIOSync)(v.value0)(function (v1) {
+                    return Control_Bind.discard(Control_Bind.discardUnit)(Control_Monad_IOSync.bindIOSync)(Control_Monad_Eff_Class.liftEff(Control_Monad_IOSync.monadEffIOSync)(Control_Monad_Aff.runAff_(handler($$this))(Control_Monad_IO["runIO'"](v1.cont))))(function () {
+                        return Control_Applicative.pure(Control_Monad_IOSync.applicativeIOSync)(v1.view);
+                    });
+                }));
+            };
+            throw new Error("Failed pattern match at Concur.React line 32, column 24 - line 37, column 21: " + [ v.constructor.name ]);
         };
     };
-    
-    // launchAff_ aff
-var render = function ($$this) {
-        return function __do() {
-            var v = renderInner($$this)();
-            return React_DOM["div'"](v);
-        };
+    var init = function ($$this) {
+        return discharge(Concur_Core.unWidget(winit))($$this);
     };
-    return React.createClass(React.spec(init)(render));
+    return React.createClass(React["spec'"](init)(render));
 };
 var renderComponent = function (init) {
     return React.createFactory(componentClass(init))({});
 };
-var affToRenderHandlerAff = Control_Monad_Aff_Unsafe.unsafeCoerceAff;
-var widgetMonadAff = function (dictMonoid) {
-    return new Control_Monad_Aff_Class.MonadAff(function () {
-        return widgetMonadEff(dictMonoid);
-    }, (function (dictMonoid1) {
-        return function ($90) {
-            return liftRenderAff(dictMonoid1)(affToRenderHandlerAff($90));
-        };
-    })(dictMonoid));
-};
-var affToEventHandlerAff = Control_Monad_Aff_Unsafe.unsafeCoerceAff;
 module.exports = {
-    End: End, 
-    Free: Free, 
-    RenderEnd: RenderEnd, 
-    Widget: Widget, 
-    WidgetStep: WidgetStep, 
-    affToEventHandlerAff: affToEventHandlerAff, 
-    affToRenderHandlerAff: affToRenderHandlerAff, 
     componentClass: componentClass, 
-    display: display, 
-    effToEventHandler: effToEventHandler, 
-    effToRenderHandler: effToRenderHandler, 
     el: el, 
     "el'": el$prime, 
-    forViewStep: forViewStep, 
-    liftRenderAff: liftRenderAff, 
-    liftRenderEff: liftRenderEff, 
-    mapView: mapView, 
-    mapViewStep: mapViewStep, 
-    never: never, 
-    orr: orr, 
-    pulse: pulse, 
-    renderComponent: renderComponent, 
-    renderToEventHandler: renderToEventHandler, 
-    renderToEventHandlerAff: renderToEventHandlerAff, 
-    viewStep: viewStep, 
-    widgetStepSemigroup: widgetStepSemigroup, 
-    widgetStepMonoid: widgetStepMonoid, 
-    widgetFunctor: widgetFunctor, 
-    widgetBind: widgetBind, 
-    widgetApplicative: widgetApplicative, 
-    widgetApply: widgetApply, 
-    widgetMonad: widgetMonad, 
-    widgetMonadRec: widgetMonadRec, 
-    widgetAlt: widgetAlt, 
-    widgetPlus: widgetPlus, 
-    widgetAlternative: widgetAlternative, 
-    widgetMonadAff: widgetMonadAff, 
-    widgetMonadEff: widgetMonadEff
+    renderComponent: renderComponent
 };
 
-},{"../Control.Alt":193,"../Control.Alternative":194,"../Control.Applicative":195,"../Control.Apply":197,"../Control.Bind":201,"../Control.Monad":244,"../Control.Monad.Aff":211,"../Control.Monad.Aff.Class":207,"../Control.Monad.Aff.Unsafe":209,"../Control.Monad.Eff":226,"../Control.Monad.Eff.Class":214,"../Control.Monad.Eff.Unsafe":224,"../Control.Monad.Rec.Class":235,"../Control.Plus":249,"../Control.Semigroupoid":250,"../Data.Array":286,"../Data.Foldable":311,"../Data.Function":318,"../Data.Functor":324,"../Data.Maybe":374,"../Data.Monoid":383,"../Data.Semigroup":407,"../Data.Unit":433,"../Prelude":450,"../React":455,"../React.DOM":453,"../React.DOM.Props":452}],193:[function(require,module,exports){
+},{"../Concur.Core":188,"../Control.Applicative":196,"../Control.Bind":202,"../Control.Monad.Aff":213,"../Control.Monad.Eff":232,"../Control.Monad.Eff.Class":218,"../Control.Monad.Eff.Console":220,"../Control.Monad.Eff.Exception":222,"../Control.Monad.Eff.Unsafe":230,"../Control.Monad.Free":236,"../Control.Monad.IO":238,"../Control.Monad.IOSync":239,"../Control.Semigroupoid":260,"../Data.Either":326,"../Data.Function":341,"../Data.Functor":347,"../Data.Monoid":406,"../Data.Semigroup":430,"../Data.Show":434,"../Data.Unit":458,"../Prelude":475,"../React":480,"../React.DOM":478,"../React.DOM.Props":477}],194:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Data_Functor = require("../Data.Functor");
@@ -22225,7 +22169,7 @@ module.exports = {
     altArray: altArray
 };
 
-},{"../Data.Functor":324,"../Data.Semigroup":407}],194:[function(require,module,exports){
+},{"../Data.Functor":347,"../Data.Semigroup":430}],195:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Alt = require("../Control.Alt");
@@ -22247,7 +22191,7 @@ module.exports = {
     alternativeArray: alternativeArray
 };
 
-},{"../Control.Alt":193,"../Control.Applicative":195,"../Control.Apply":197,"../Control.Plus":249,"../Data.Functor":324}],195:[function(require,module,exports){
+},{"../Control.Alt":194,"../Control.Applicative":196,"../Control.Apply":198,"../Control.Plus":259,"../Data.Functor":347}],196:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Apply = require("../Control.Apply");
@@ -22315,7 +22259,7 @@ module.exports = {
     applicativeArray: applicativeArray
 };
 
-},{"../Control.Apply":197,"../Data.Functor":324,"../Data.Unit":433}],196:[function(require,module,exports){
+},{"../Control.Apply":198,"../Data.Functor":347,"../Data.Unit":458}],197:[function(require,module,exports){
 "use strict";
 
 exports.arrayApply = function (fs) {
@@ -22334,7 +22278,7 @@ exports.arrayApply = function (fs) {
   };
 };
 
-},{}],197:[function(require,module,exports){
+},{}],198:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -22435,7 +22379,7 @@ module.exports = {
     applyArray: applyArray
 };
 
-},{"../Control.Category":202,"../Data.Function":318,"../Data.Functor":324,"./foreign":196}],198:[function(require,module,exports){
+},{"../Control.Category":203,"../Data.Function":341,"../Data.Functor":347,"./foreign":197}],199:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Biapply = require("../Control.Biapply");
@@ -22451,7 +22395,7 @@ module.exports = {
     bipure: bipure
 };
 
-},{"../Control.Biapply":199}],199:[function(require,module,exports){
+},{"../Control.Biapply":200}],200:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Category = require("../Control.Category");
@@ -22511,7 +22455,7 @@ module.exports = {
     bilift3: bilift3
 };
 
-},{"../Control.Category":202,"../Data.Bifunctor":294,"../Data.Function":318}],200:[function(require,module,exports){
+},{"../Control.Category":203,"../Data.Bifunctor":304,"../Data.Function":341}],201:[function(require,module,exports){
 "use strict";
 
 exports.arrayBind = function (arr) {
@@ -22524,7 +22468,7 @@ exports.arrayBind = function (arr) {
   };
 };
 
-},{}],201:[function(require,module,exports){
+},{}],202:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -22617,7 +22561,7 @@ module.exports = {
     discardUnit: discardUnit
 };
 
-},{"../Control.Applicative":195,"../Control.Apply":197,"../Control.Category":202,"../Data.Function":318,"../Data.Functor":324,"../Data.Unit":433,"./foreign":200}],202:[function(require,module,exports){
+},{"../Control.Applicative":196,"../Control.Apply":198,"../Control.Category":203,"../Data.Function":341,"../Data.Functor":347,"../Data.Unit":458,"./foreign":201}],203:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Semigroupoid = require("../Control.Semigroupoid");
@@ -22639,7 +22583,7 @@ module.exports = {
     categoryFn: categoryFn
 };
 
-},{"../Control.Semigroupoid":250}],203:[function(require,module,exports){
+},{"../Control.Semigroupoid":260}],204:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Extend = require("../Control.Extend");
@@ -22656,7 +22600,7 @@ module.exports = {
     extract: extract
 };
 
-},{"../Control.Extend":205,"../Data.Functor":324}],204:[function(require,module,exports){
+},{"../Control.Extend":206,"../Data.Functor":347}],205:[function(require,module,exports){
 "use strict";
 
 exports.arrayExtend = function(f) {
@@ -22667,7 +22611,7 @@ exports.arrayExtend = function(f) {
   };
 };
 
-},{}],205:[function(require,module,exports){
+},{}],206:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -22736,7 +22680,7 @@ module.exports = {
     extendArray: extendArray
 };
 
-},{"../Control.Category":202,"../Data.Functor":324,"../Data.Semigroup":407,"./foreign":204}],206:[function(require,module,exports){
+},{"../Control.Category":203,"../Data.Functor":347,"../Data.Semigroup":430,"./foreign":205}],207:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Data_Unit = require("../Data.Unit");
@@ -22769,7 +22713,94 @@ module.exports = {
     lazyUnit: lazyUnit
 };
 
-},{"../Data.Unit":433}],207:[function(require,module,exports){
+},{"../Data.Unit":458}],208:[function(require,module,exports){
+// Generated by purs version 0.11.6
+"use strict";
+var Control_Applicative = require("../Control.Applicative");
+var Control_Bind = require("../Control.Bind");
+var Control_Monad_Aff = require("../Control.Monad.Aff");
+var Control_Monad_Eff = require("../Control.Monad.Eff");
+var Control_Monad_Eff_AVar = require("../Control.Monad.Eff.AVar");
+var Control_Monad_Eff_Class = require("../Control.Monad.Eff.Class");
+var Control_Monad_Eff_Exception = require("../Control.Monad.Eff.Exception");
+var Control_Semigroupoid = require("../Control.Semigroupoid");
+var Data_Maybe = require("../Data.Maybe");
+var Prelude = require("../Prelude");
+var tryTakeVar = function ($6) {
+    return Control_Monad_Eff_Class.liftEff(Control_Monad_Aff.monadEffAff)(Control_Monad_Eff_AVar.tryTakeVar($6));
+};
+var tryReadVar = function ($7) {
+    return Control_Monad_Eff_Class.liftEff(Control_Monad_Aff.monadEffAff)(Control_Monad_Eff_AVar.tryReadVar($7));
+};
+var tryPutVar = function (value) {
+    return function ($8) {
+        return Control_Monad_Eff_Class.liftEff(Control_Monad_Aff.monadEffAff)(Control_Monad_Eff_AVar.tryPutVar(value)($8));
+    };
+};
+var takeVar = function (avar) {
+    return Control_Monad_Aff.makeAff(function (k) {
+        return function __do() {
+            var v = Control_Monad_Eff_AVar.takeVar(avar)(k)();
+            return Control_Monad_Aff.effCanceler(v);
+        };
+    });
+};
+var status = function ($9) {
+    return Control_Monad_Eff_Class.liftEff(Control_Monad_Aff.monadEffAff)(Control_Monad_Eff_AVar.status($9));
+};
+var readVar = function (avar) {
+    return Control_Monad_Aff.makeAff(function (k) {
+        return function __do() {
+            var v = Control_Monad_Eff_AVar.readVar(avar)(k)();
+            return Control_Monad_Aff.effCanceler(v);
+        };
+    });
+};
+var putVar = function (value) {
+    return function (avar) {
+        return Control_Monad_Aff.makeAff(function (k) {
+            return function __do() {
+                var v = Control_Monad_Eff_AVar.putVar(value)(avar)(k)();
+                return Control_Monad_Aff.effCanceler(v);
+            };
+        });
+    };
+};
+var makeVar = function ($10) {
+    return Control_Monad_Eff_Class.liftEff(Control_Monad_Aff.monadEffAff)(Control_Monad_Eff_AVar.makeVar($10));
+};
+var makeEmptyVar = Control_Monad_Eff_Class.liftEff(Control_Monad_Aff.monadEffAff)(Control_Monad_Eff_AVar.makeEmptyVar);
+var killVar = function (error) {
+    return function ($11) {
+        return Control_Monad_Eff_Class.liftEff(Control_Monad_Aff.monadEffAff)(Control_Monad_Eff_AVar.killVar(error)($11));
+    };
+};
+var isKilledVar = function ($12) {
+    return Control_Monad_Eff_Class.liftEff(Control_Monad_Aff.monadEffAff)(Control_Monad_Eff_AVar.isKilledVar($12));
+};
+var isFilledVar = function ($13) {
+    return Control_Monad_Eff_Class.liftEff(Control_Monad_Aff.monadEffAff)(Control_Monad_Eff_AVar.isFilledVar($13));
+};
+var isEmptyVar = function ($14) {
+    return Control_Monad_Eff_Class.liftEff(Control_Monad_Aff.monadEffAff)(Control_Monad_Eff_AVar.isEmptyVar($14));
+};
+module.exports = {
+    isEmptyVar: isEmptyVar, 
+    isFilledVar: isFilledVar, 
+    isKilledVar: isKilledVar, 
+    killVar: killVar, 
+    makeEmptyVar: makeEmptyVar, 
+    makeVar: makeVar, 
+    putVar: putVar, 
+    readVar: readVar, 
+    status: status, 
+    takeVar: takeVar, 
+    tryPutVar: tryPutVar, 
+    tryReadVar: tryReadVar, 
+    tryTakeVar: tryTakeVar
+};
+
+},{"../Control.Applicative":196,"../Control.Bind":202,"../Control.Monad.Aff":213,"../Control.Monad.Eff":232,"../Control.Monad.Eff.AVar":217,"../Control.Monad.Eff.Class":218,"../Control.Monad.Eff.Exception":222,"../Control.Semigroupoid":260,"../Data.Maybe":397,"../Prelude":475}],209:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Category = require("../Control.Category");
@@ -22871,7 +22902,7 @@ module.exports = {
     monadAffWriter: monadAffWriter
 };
 
-},{"../Control.Category":202,"../Control.Monad.Aff":211,"../Control.Monad.Cont.Trans":213,"../Control.Monad.Eff.Class":214,"../Control.Monad.Except.Trans":228,"../Control.Monad.List.Trans":230,"../Control.Monad.Maybe.Trans":231,"../Control.Monad.RWS.Trans":232,"../Control.Monad.Reader.Trans":234,"../Control.Monad.State.Trans":239,"../Control.Monad.Trans.Class":241,"../Control.Monad.Writer.Trans":243,"../Control.Semigroupoid":250,"../Data.Monoid":383,"../Prelude":450}],208:[function(require,module,exports){
+},{"../Control.Category":203,"../Control.Monad.Aff":213,"../Control.Monad.Cont.Trans":215,"../Control.Monad.Eff.Class":218,"../Control.Monad.Except.Trans":234,"../Control.Monad.List.Trans":240,"../Control.Monad.Maybe.Trans":241,"../Control.Monad.RWS.Trans":242,"../Control.Monad.Reader.Trans":244,"../Control.Monad.State.Trans":249,"../Control.Monad.Trans.Class":251,"../Control.Monad.Writer.Trans":253,"../Control.Semigroupoid":260,"../Data.Monoid":406,"../Prelude":475}],210:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Applicative = require("../Control.Applicative");
@@ -22919,7 +22950,7 @@ module.exports = {
     fromEffFnAff: fromEffFnAff
 };
 
-},{"../Control.Applicative":195,"../Control.Bind":201,"../Control.Monad.Aff":211,"../Control.Monad.Eff":226,"../Control.Monad.Eff.Exception":218,"../Control.Monad.Eff.Uncurried":222,"../Control.Semigroupoid":250,"../Data.Either":304,"../Data.Function":318,"../Prelude":450}],209:[function(require,module,exports){
+},{"../Control.Applicative":196,"../Control.Bind":202,"../Control.Monad.Aff":213,"../Control.Monad.Eff":232,"../Control.Monad.Eff.Exception":222,"../Control.Monad.Eff.Uncurried":228,"../Control.Semigroupoid":260,"../Data.Either":326,"../Data.Function":341,"../Prelude":475}],211:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Monad_Aff = require("../Control.Monad.Aff");
@@ -22929,7 +22960,7 @@ module.exports = {
     unsafeCoerceAff: unsafeCoerceAff
 };
 
-},{"../Control.Monad.Aff":211,"../Unsafe.Coerce":466}],210:[function(require,module,exports){
+},{"../Control.Monad.Aff":213,"../Unsafe.Coerce":493}],212:[function(require,module,exports){
 /* globals setImmediate, clearImmediate, setTimeout, clearTimeout */
 /* jshint -W083, -W098, -W003 */
 "use strict";
@@ -22951,7 +22982,7 @@ var Aff = function () {
     | Async ((Either Error a -> Eff eff Unit) -> Eff eff (Canceler eff))
     | forall b. Bind (Aff eff b) (b -> Aff eff a)
     | forall b. Bracket (Aff eff b) (BracketConditions eff b) (b -> Aff eff a)
-    | forall b. Fork Boolean (Aff eff b) ?(Thread eff b -> a)
+    | forall b. Fork Boolean (Aff eff b) ?(Fiber eff b -> a)
     | Sequential (ParAff aff a)
 
   */
@@ -23468,7 +23499,9 @@ var Aff = function () {
         joins[jid] = join;
 
         return function() {
-          delete joins[jid];
+          if (joins !== null) {
+            delete joins[jid];
+          }
         };
       };
     }
@@ -23692,26 +23725,33 @@ var Aff = function () {
         case APPLY:
           lhs = head._1._3;
           rhs = head._2._3;
-          // We can only proceed if both sides have resolved.
-          if (lhs === EMPTY || rhs === EMPTY) {
-            return;
-          }
-          // If either side resolve with an error, we should continue with
-          // the first error.
-          if (util.isLeft(lhs)) {
-            if (util.isLeft(rhs)) {
-              if (fail === lhs) {
-                fail = rhs;
-              }
-            } else {
-              fail = lhs;
+          // If we have a failure we should kill the other side because we
+          // can't possible yield a result anymore.
+          if (fail) {
+            head._3 = fail;
+            tmp     = true;
+            kid     = killId++;
+
+            kills[kid] = kill(early, fail === lhs ? head._2 : head._1, function (/* unused */) {
+              return function () {
+                delete kills[kid];
+                if (tmp) {
+                  tmp = false;
+                } else if (tail === null) {
+                  join(step, null, null);
+                } else {
+                  join(step, tail._1, tail._2);
+                }
+              };
+            });
+
+            if (tmp) {
+              tmp = false;
+              return;
             }
-            step    = null;
-            head._3 = fail;
-          } else if (util.isLeft(rhs)) {
-            step    = null;
-            fail    = rhs;
-            head._3 = fail;
+          } else if (lhs === EMPTY || rhs === EMPTY) {
+            // We can only proceed if both sides have resolved.
+            return;
           } else {
             step    = util.right(util.fromRight(lhs)(util.fromRight(rhs)));
             head._3 = step;
@@ -23869,14 +23909,20 @@ var Aff = function () {
     }
 
     // Cancels the entire tree. If there are already subtrees being canceled,
-    // we need to first cancel those joins. This is important so that errors
-    // don't accidentally get swallowed by irrelevant join callbacks.
+    // we need to first cancel those joins. We will then add fresh joins for
+    // all pending branches including those that were in the process of being
+    // canceled.
     function cancel(error, cb) {
       interrupt = util.left(error);
-
+      var innerKills;
       for (var kid in kills) {
         if (kills.hasOwnProperty(kid)) {
-          kills[kid]();
+          innerKills = kills[kid];
+          for (kid in innerKills) {
+            if (innerKills.hasOwnProperty(kid)) {
+              innerKills[kid]();
+            }
+          }
         }
       }
 
@@ -24054,7 +24100,7 @@ exports._delay = function () {
 
 exports._sequential = Aff.Seq;
 
-},{}],211:[function(require,module,exports){
+},{}],213:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -24436,7 +24482,7 @@ module.exports = {
     makeAff: $foreign.makeAff
 };
 
-},{"../Control.Alt":193,"../Control.Alternative":194,"../Control.Applicative":195,"../Control.Apply":197,"../Control.Bind":201,"../Control.Monad":244,"../Control.Monad.Eff":226,"../Control.Monad.Eff.Class":214,"../Control.Monad.Eff.Exception":218,"../Control.Monad.Eff.Unsafe":224,"../Control.Monad.Error.Class":227,"../Control.Monad.Rec.Class":235,"../Control.Parallel":248,"../Control.Parallel.Class":247,"../Control.Plus":249,"../Control.Semigroupoid":250,"../Data.Either":304,"../Data.Foldable":311,"../Data.Function":318,"../Data.Function.Uncurried":317,"../Data.Functor":324,"../Data.Monoid":383,"../Data.Newtype":385,"../Data.Semigroup":407,"../Data.Time.Duration":423,"../Data.Unit":433,"../Partial.Unsafe":447,"../Prelude":450,"../Unsafe.Coerce":466,"./foreign":210}],212:[function(require,module,exports){
+},{"../Control.Alt":194,"../Control.Alternative":195,"../Control.Applicative":196,"../Control.Apply":198,"../Control.Bind":202,"../Control.Monad":254,"../Control.Monad.Eff":232,"../Control.Monad.Eff.Class":218,"../Control.Monad.Eff.Exception":222,"../Control.Monad.Eff.Unsafe":230,"../Control.Monad.Error.Class":233,"../Control.Monad.Rec.Class":245,"../Control.Parallel":258,"../Control.Parallel.Class":257,"../Control.Plus":259,"../Control.Semigroupoid":260,"../Data.Either":326,"../Data.Foldable":334,"../Data.Function":341,"../Data.Function.Uncurried":340,"../Data.Functor":347,"../Data.Monoid":406,"../Data.Newtype":408,"../Data.Semigroup":430,"../Data.Time.Duration":447,"../Data.Unit":458,"../Partial.Unsafe":472,"../Prelude":475,"../Unsafe.Coerce":493,"./foreign":212}],214:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Prelude = require("../Prelude");
@@ -24452,7 +24498,7 @@ module.exports = {
     callCC: callCC
 };
 
-},{"../Prelude":450}],213:[function(require,module,exports){
+},{"../Prelude":475}],215:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Applicative = require("../Control.Applicative");
@@ -24624,7 +24670,454 @@ module.exports = {
     monadStateContT: monadStateContT
 };
 
-},{"../Control.Applicative":195,"../Control.Apply":197,"../Control.Bind":201,"../Control.Monad":244,"../Control.Monad.Cont.Class":212,"../Control.Monad.Eff.Class":214,"../Control.Monad.Reader.Class":233,"../Control.Monad.State.Class":238,"../Control.Monad.Trans.Class":241,"../Control.Semigroupoid":250,"../Data.Function":318,"../Data.Functor":324,"../Data.Newtype":385,"../Prelude":450}],214:[function(require,module,exports){
+},{"../Control.Applicative":196,"../Control.Apply":198,"../Control.Bind":202,"../Control.Monad":254,"../Control.Monad.Cont.Class":214,"../Control.Monad.Eff.Class":218,"../Control.Monad.Reader.Class":243,"../Control.Monad.State.Class":248,"../Control.Monad.Trans.Class":251,"../Control.Semigroupoid":260,"../Data.Function":341,"../Data.Functor":347,"../Data.Newtype":408,"../Prelude":475}],216:[function(require,module,exports){
+/* globals exports, setTimeout */
+/* jshint -W097 */
+
+"use strict";
+
+var AVar = function () {
+  function MutableQueue () {
+    this.head = null;
+    this.last = null;
+    this.size = 0;
+  }
+
+  function MutableCell (queue, value) {
+    this.queue = queue;
+    this.value = value;
+    this.next  = null;
+    this.prev  = null;
+  }
+
+  function AVar (value) {
+    this.draining = false;
+    this.error    = null;
+    this.value    = value;
+    this.takes    = new MutableQueue();
+    this.reads    = new MutableQueue();
+    this.puts     = new MutableQueue();
+  }
+
+  var EMPTY = {};
+
+  function putLast (queue, value) {
+    var cell = new MutableCell(queue, value);
+    switch (queue.size) {
+    case 0:
+      queue.head = cell;
+      break;
+    case 1:
+      cell.prev = queue.head;
+      queue.head.next = cell;
+      queue.last = cell;
+      break;
+    default:
+      cell.prev = queue.last;
+      queue.last.next = cell;
+      queue.last = cell;
+    }
+    queue.size++;
+    return cell;
+  }
+
+  function takeLast (queue) {
+    var cell;
+    switch (queue.size) {
+    case 0:
+      return null;
+    case 1:
+      cell = queue.head;
+      queue.head = null;
+      break;
+    case 2:
+      cell = queue.last;
+      queue.head.next = null;
+      queue.last = null;
+      break;
+    default:
+      cell = queue.last;
+      queue.last = cell.prev;
+      queue.last.next = null;
+    }
+    cell.prev = null;
+    cell.queue = null;
+    queue.size--;
+    return cell.value;
+  }
+
+  function takeHead (queue) {
+    var cell;
+    switch (queue.size) {
+    case 0:
+      return null;
+    case 1:
+      cell = queue.head;
+      queue.head = null;
+      break;
+    case 2:
+      cell = queue.head;
+      queue.last.prev = null;
+      queue.head = queue.last;
+      queue.last = null;
+      break;
+    default:
+      cell = queue.head;
+      queue.head = cell.next;
+      queue.head.prev = null;
+    }
+    cell.next = null;
+    cell.queue = null;
+    queue.size--;
+    return cell.value;
+  }
+
+  function deleteCell (cell) {
+    if (cell.queue === null) {
+      return;
+    }
+    if (cell.queue.last === cell) {
+      takeLast(cell.queue);
+      return;
+    }
+    if (cell.queue.head === cell) {
+      takeHead(cell.queue);
+      return;
+    }
+    if (cell.prev) {
+      cell.prev.next = cell.next;
+    }
+    if (cell.next) {
+      cell.next.prev = cell.prev;
+    }
+    cell.queue.size--;
+    cell.queue = null;
+    cell.value = null;
+    cell.next  = null;
+    cell.prev  = null;
+  }
+
+  function drainVar (util, avar) {
+    if (avar.draining) {
+      return;
+    }
+
+    var ps = avar.puts;
+    var ts = avar.takes;
+    var rs = avar.reads;
+    var p, r, t, value, rsize;
+
+    avar.draining = true;
+
+    /* jshint -W084 */
+    while (1) {
+      p = null;
+      r = null;
+      t = null;
+      value = avar.value;
+      rsize = rs.size;
+
+      if (avar.error !== null) {
+        value = util.left(avar.error);
+        while (p = takeHead(ps)) {
+          runEff(p.cb(value));
+        }
+        while (r = takeHead(rs)) {
+          runEff(r(value));
+        }
+        while (t = takeHead(ts)) {
+          runEff(t(value));
+        }
+        break;
+      }
+
+      // Process the next put. We do not immediately invoke the callback
+      // because we want to preserve ordering. If there are takes/reads
+      // we want to run those first.
+      if (value === EMPTY && (p = takeHead(ps))) {
+        avar.value = value = p.value;
+      }
+
+      if (value !== EMPTY) {
+        // We go ahead and queue up the next take for the same reasons as
+        // above. Invoking the read callbacks can affect the mutable queue.
+        t = takeHead(ts);
+        // We only want to process the reads queued up before running these
+        // callbacks so we guard on rsize.
+        while (rsize-- && (r = takeHead(rs))) {
+          runEff(r(util.right(value)));
+        }
+        if (t !== null) {
+          avar.value = EMPTY;
+          runEff(t(util.right(value)));
+        }
+      }
+
+      if (p !== null) {
+        runEff(p.cb(util.right(void 0)));
+      }
+
+      // Callbacks could have queued up more items so we need to guard on the
+      // actual mutable properties.
+      if (avar.value === EMPTY && ps.size === 0 || avar.value !== EMPTY && ts.size === 0) {
+        break;
+      }
+    }
+    /* jshint +W084 */
+
+    avar.draining = false;
+  }
+
+  function runEff(eff) {
+    try {
+      eff();
+    } catch (error) {
+      setTimeout(function () {
+        throw error;
+      }, 0);
+    }
+  }
+
+  AVar.EMPTY      = EMPTY;
+  AVar.putLast    = putLast;
+  AVar.takeLast   = takeLast;
+  AVar.takeHead   = takeHead;
+  AVar.deleteCell = deleteCell;
+  AVar.drainVar   = drainVar;
+
+  return AVar;
+}();
+
+exports.makeEmptyVar = function () {
+  return new AVar(AVar.EMPTY);
+};
+
+exports.makeVar = function (value) {
+  return function () {
+    return new AVar(value);
+  };
+};
+
+exports._killVar = function (util, error, avar) {
+  return function () {
+    if (avar.error === null) {
+      avar.error = error;
+      avar.value = AVar.EMPTY;
+      AVar.drainVar(util, avar);
+    }
+  };
+};
+
+exports._putVar = function (util, value, avar, cb) {
+  return function () {
+    var cell = AVar.putLast(avar.puts, { cb: cb, value: value });
+    AVar.drainVar(util, avar);
+    return function () {
+      AVar.deleteCell(cell);
+    };
+  };
+};
+
+exports._takeVar = function (util, avar, cb) {
+  return function () {
+    var cell = AVar.putLast(avar.takes, cb);
+    AVar.drainVar(util, avar);
+    return function () {
+      AVar.deleteCell(cell);
+    };
+  };
+};
+
+exports._readVar = function (util, avar, cb) {
+  return function () {
+    var cell = AVar.putLast(avar.reads, cb);
+    AVar.drainVar(util, avar);
+    return function () {
+      AVar.deleteCell(cell);
+    };
+  };
+};
+
+exports._tryPutVar = function (util, value, avar) {
+  return function () {
+    if (avar.value === AVar.EMPTY && avar.error === null) {
+      avar.value = value;
+      AVar.drainVar(util, avar);
+      return true;
+    } else {
+      return false;
+    }
+  };
+};
+
+exports._tryTakeVar = function (util, avar) {
+  return function () {
+    var value = avar.value;
+    if (value === AVar.EMPTY) {
+      return util.nothing;
+    } else {
+      avar.value = AVar.EMPTY;
+      AVar.drainVar(util, avar);
+      return util.just(value);
+    }
+  };
+};
+
+exports._tryReadVar = function (util, avar) {
+  return function () {
+    if (avar.value === AVar.EMPTY) {
+      return util.nothing;
+    } else {
+      return util.just(avar.value);
+    }
+  };
+};
+
+exports._status = function (util, avar) {
+  return function () {
+    if (avar.error) {
+      return util.killed(avar.error);
+    }
+    if (avar.value === AVar.EMPTY) {
+      return util.empty;
+    }
+    return util.filled(avar.value);
+  };
+};
+
+
+},{}],217:[function(require,module,exports){
+// Generated by purs version 0.11.6
+"use strict";
+var $foreign = require("./foreign");
+var Control_Monad_Eff = require("../Control.Monad.Eff");
+var Control_Monad_Eff_Exception = require("../Control.Monad.Eff.Exception");
+var Control_Semigroupoid = require("../Control.Semigroupoid");
+var Data_Either = require("../Data.Either");
+var Data_Function_Uncurried = require("../Data.Function.Uncurried");
+var Data_Functor = require("../Data.Functor");
+var Data_Maybe = require("../Data.Maybe");
+var Prelude = require("../Prelude");
+var Killed = (function () {
+    function Killed(value0) {
+        this.value0 = value0;
+    };
+    Killed.create = function (value0) {
+        return new Killed(value0);
+    };
+    return Killed;
+})();
+var Filled = (function () {
+    function Filled(value0) {
+        this.value0 = value0;
+    };
+    Filled.create = function (value0) {
+        return new Filled(value0);
+    };
+    return Filled;
+})();
+var Empty = (function () {
+    function Empty() {
+
+    };
+    Empty.value = new Empty();
+    return Empty;
+})();
+var isKilled = function (v) {
+    if (v instanceof Killed) {
+        return true;
+    };
+    return false;
+};
+var isFilled = function (v) {
+    if (v instanceof Filled) {
+        return true;
+    };
+    return false;
+};
+var isEmpty = function (v) {
+    if (v instanceof Empty) {
+        return true;
+    };
+    return false;
+};
+var ffiUtil = {
+    left: Data_Either.Left.create, 
+    right: Data_Either.Right.create, 
+    nothing: Data_Maybe.Nothing.value, 
+    just: Data_Maybe.Just.create, 
+    killed: Killed.create, 
+    filled: Filled.create, 
+    empty: Empty.value
+};
+var killVar = function (err) {
+    return function (avar) {
+        return $foreign._killVar(ffiUtil, err, avar);
+    };
+};
+var putVar = function (value) {
+    return function (avar) {
+        return function (cb) {
+            return $foreign._putVar(ffiUtil, value, avar, cb);
+        };
+    };
+};
+var readVar = function (avar) {
+    return function (cb) {
+        return $foreign._readVar(ffiUtil, avar, cb);
+    };
+};
+var status = function (avar) {
+    return $foreign._status(ffiUtil, avar);
+};
+var isEmptyVar = function ($8) {
+    return Data_Functor.map(Control_Monad_Eff.functorEff)(isEmpty)(status($8));
+};
+var isFilledVar = function ($9) {
+    return Data_Functor.map(Control_Monad_Eff.functorEff)(isFilled)(status($9));
+};
+var isKilledVar = function ($10) {
+    return Data_Functor.map(Control_Monad_Eff.functorEff)(isKilled)(status($10));
+};
+var takeVar = function (avar) {
+    return function (cb) {
+        return $foreign._takeVar(ffiUtil, avar, cb);
+    };
+};
+var tryPutVar = function (value) {
+    return function (avar) {
+        return $foreign._tryPutVar(ffiUtil, value, avar);
+    };
+};
+var tryReadVar = function (avar) {
+    return $foreign._tryReadVar(ffiUtil, avar);
+};
+var tryTakeVar = function (avar) {
+    return $foreign._tryTakeVar(ffiUtil, avar);
+};
+module.exports = {
+    Killed: Killed, 
+    Filled: Filled, 
+    Empty: Empty, 
+    isEmpty: isEmpty, 
+    isEmptyVar: isEmptyVar, 
+    isFilled: isFilled, 
+    isFilledVar: isFilledVar, 
+    isKilled: isKilled, 
+    isKilledVar: isKilledVar, 
+    killVar: killVar, 
+    putVar: putVar, 
+    readVar: readVar, 
+    status: status, 
+    takeVar: takeVar, 
+    tryPutVar: tryPutVar, 
+    tryReadVar: tryReadVar, 
+    tryTakeVar: tryTakeVar, 
+    makeEmptyVar: $foreign.makeEmptyVar, 
+    makeVar: $foreign.makeVar
+};
+
+},{"../Control.Monad.Eff":232,"../Control.Monad.Eff.Exception":222,"../Control.Semigroupoid":260,"../Data.Either":326,"../Data.Function.Uncurried":340,"../Data.Functor":347,"../Data.Maybe":397,"../Prelude":475,"./foreign":216}],218:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Category = require("../Control.Category");
@@ -24646,7 +25139,7 @@ module.exports = {
     monadEffEff: monadEffEff
 };
 
-},{"../Control.Category":202,"../Control.Monad":244,"../Control.Monad.Eff":226}],215:[function(require,module,exports){
+},{"../Control.Category":203,"../Control.Monad":254,"../Control.Monad.Eff":232}],219:[function(require,module,exports){
 "use strict";
 
 exports.log = function (s) {
@@ -24677,7 +25170,7 @@ exports.info = function (s) {
   };
 };
 
-},{}],216:[function(require,module,exports){
+},{}],220:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -24715,7 +25208,7 @@ module.exports = {
     warn: $foreign.warn
 };
 
-},{"../Control.Monad.Eff":226,"../Data.Show":411,"../Data.Unit":433,"./foreign":215}],217:[function(require,module,exports){
+},{"../Control.Monad.Eff":232,"../Data.Show":434,"../Data.Unit":458,"./foreign":219}],221:[function(require,module,exports){
 "use strict";
 
 exports.showErrorImpl = function (err) {
@@ -24764,7 +25257,7 @@ exports.catchException = function (c) {
   };
 };
 
-},{}],218:[function(require,module,exports){
+},{}],222:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -24798,7 +25291,49 @@ module.exports = {
     throwException: $foreign.throwException
 };
 
-},{"../Control.Applicative":195,"../Control.Monad.Eff":226,"../Control.Semigroupoid":250,"../Data.Either":304,"../Data.Functor":324,"../Data.Maybe":374,"../Data.Show":411,"../Prelude":450,"./foreign":217}],219:[function(require,module,exports){
+},{"../Control.Applicative":196,"../Control.Monad.Eff":232,"../Control.Semigroupoid":260,"../Data.Either":326,"../Data.Functor":347,"../Data.Maybe":397,"../Data.Show":434,"../Prelude":475,"./foreign":221}],223:[function(require,module,exports){
+"use strict";
+
+exports.now = function () {
+  return Date.now();
+};
+
+exports.nowOffset = function () {
+  var dt = new Date();
+  return dt.getTimezoneOffset();
+};
+
+},{}],224:[function(require,module,exports){
+// Generated by purs version 0.11.6
+"use strict";
+var $foreign = require("./foreign");
+var Control_Apply = require("../Control.Apply");
+var Control_Monad_Eff = require("../Control.Monad.Eff");
+var Control_Semigroupoid = require("../Control.Semigroupoid");
+var Data_DateTime = require("../Data.DateTime");
+var Data_DateTime_Instant = require("../Data.DateTime.Instant");
+var Data_DateTime_Locale = require("../Data.DateTime.Locale");
+var Data_Functor = require("../Data.Functor");
+var Data_Maybe = require("../Data.Maybe");
+var Data_Time_Duration = require("../Data.Time.Duration");
+var Prelude = require("../Prelude");
+var locale = Data_Functor.map(Control_Monad_Eff.functorEff)(Data_DateTime_Locale.Locale.create(Data_Maybe.Nothing.value))($foreign.nowOffset);
+var nowDate = Control_Apply.apply(Control_Monad_Eff.applyEff)(Data_Functor.map(Control_Monad_Eff.functorEff)(Data_DateTime_Locale.LocalValue.create)(locale))(Data_Functor.map(Control_Monad_Eff.functorEff)(function ($0) {
+    return Data_DateTime.date(Data_DateTime_Instant.toDateTime($0));
+})($foreign.now));
+var nowDateTime = Control_Apply.apply(Control_Monad_Eff.applyEff)(Data_Functor.map(Control_Monad_Eff.functorEff)(Data_DateTime_Locale.LocalValue.create)(locale))(Data_Functor.map(Control_Monad_Eff.functorEff)(Data_DateTime_Instant.toDateTime)($foreign.now));
+var nowTime = Control_Apply.apply(Control_Monad_Eff.applyEff)(Data_Functor.map(Control_Monad_Eff.functorEff)(Data_DateTime_Locale.LocalValue.create)(locale))(Data_Functor.map(Control_Monad_Eff.functorEff)(function ($1) {
+    return Data_DateTime.time(Data_DateTime_Instant.toDateTime($1));
+})($foreign.now));
+module.exports = {
+    locale: locale, 
+    nowDate: nowDate, 
+    nowDateTime: nowDateTime, 
+    nowTime: nowTime, 
+    now: $foreign.now
+};
+
+},{"../Control.Apply":198,"../Control.Monad.Eff":232,"../Control.Semigroupoid":260,"../Data.DateTime":323,"../Data.DateTime.Instant":320,"../Data.DateTime.Locale":321,"../Data.Functor":347,"../Data.Maybe":397,"../Data.Time.Duration":447,"../Prelude":475,"./foreign":223}],225:[function(require,module,exports){
 "use strict";
 
 exports.newRef = function (val) {
@@ -24832,7 +25367,7 @@ exports.writeRef = function (ref) {
   };
 };
 
-},{}],220:[function(require,module,exports){
+},{}],226:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -24857,7 +25392,7 @@ module.exports = {
     writeRef: $foreign.writeRef
 };
 
-},{"../Control.Monad.Eff":226,"../Data.Unit":433,"../Prelude":450,"./foreign":219}],221:[function(require,module,exports){
+},{"../Control.Monad.Eff":232,"../Data.Unit":458,"../Prelude":475,"./foreign":225}],227:[function(require,module,exports){
 "use strict";
 
 exports.mkEffFn1 = function mkEffFn1(fn) {
@@ -25090,7 +25625,7 @@ exports.runEffFn10 = function runEffFn10(fn) {
   };
 };
 
-},{}],222:[function(require,module,exports){
+},{}],228:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -25118,14 +25653,14 @@ module.exports = {
     runEffFn9: $foreign.runEffFn9
 };
 
-},{"../Control.Monad.Eff":226,"./foreign":221}],223:[function(require,module,exports){
+},{"../Control.Monad.Eff":232,"./foreign":227}],229:[function(require,module,exports){
 "use strict";
 
 exports.unsafeCoerceEff = function (f) {
   return f;
 };
 
-},{}],224:[function(require,module,exports){
+},{}],230:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -25139,7 +25674,7 @@ module.exports = {
     unsafeCoerceEff: $foreign.unsafeCoerceEff
 };
 
-},{"../Control.Monad.Eff":226,"../Control.Semigroupoid":250,"./foreign":223}],225:[function(require,module,exports){
+},{"../Control.Monad.Eff":232,"../Control.Semigroupoid":260,"./foreign":229}],231:[function(require,module,exports){
 "use strict";
 
 exports.pureE = function (a) {
@@ -25200,7 +25735,7 @@ exports.foreachE = function (as) {
   };
 };
 
-},{}],226:[function(require,module,exports){
+},{}],232:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -25209,6 +25744,8 @@ var Control_Apply = require("../Control.Apply");
 var Control_Bind = require("../Control.Bind");
 var Control_Monad = require("../Control.Monad");
 var Data_Functor = require("../Data.Functor");
+var Data_Monoid = require("../Data.Monoid");
+var Data_Semigroup = require("../Data.Semigroup");
 var Data_Unit = require("../Data.Unit");
 var monadEff = new Control_Monad.Monad(function () {
     return applicativeEff;
@@ -25225,7 +25762,17 @@ var applicativeEff = new Control_Applicative.Applicative(function () {
     return applyEff;
 }, $foreign.pureE);
 var functorEff = new Data_Functor.Functor(Control_Applicative.liftA1(applicativeEff));
+var semigroupEff = function (dictSemigroup) {
+    return new Data_Semigroup.Semigroup(Control_Apply.lift2(applyEff)(Data_Semigroup.append(dictSemigroup)));
+};
+var monoidEff = function (dictMonoid) {
+    return new Data_Monoid.Monoid(function () {
+        return semigroupEff(dictMonoid.Semigroup0());
+    }, Control_Applicative.pure(applicativeEff)(Data_Monoid.mempty(dictMonoid)));
+};
 module.exports = {
+    semigroupEff: semigroupEff, 
+    monoidEff: monoidEff, 
     functorEff: functorEff, 
     applyEff: applyEff, 
     applicativeEff: applicativeEff, 
@@ -25238,7 +25785,7 @@ module.exports = {
     whileE: $foreign.whileE
 };
 
-},{"../Control.Applicative":195,"../Control.Apply":197,"../Control.Bind":201,"../Control.Monad":244,"../Data.Functor":324,"../Data.Unit":433,"./foreign":225}],227:[function(require,module,exports){
+},{"../Control.Applicative":196,"../Control.Apply":198,"../Control.Bind":202,"../Control.Monad":254,"../Data.Functor":347,"../Data.Monoid":406,"../Data.Semigroup":430,"../Data.Unit":458,"./foreign":231}],233:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Applicative = require("../Control.Applicative");
@@ -25351,7 +25898,7 @@ module.exports = {
     monadErrorMaybe: monadErrorMaybe
 };
 
-},{"../Control.Applicative":195,"../Control.Bind":201,"../Control.Semigroupoid":250,"../Data.Either":304,"../Data.Function":318,"../Data.Functor":324,"../Data.Maybe":374,"../Data.Unit":433,"../Prelude":450}],228:[function(require,module,exports){
+},{"../Control.Applicative":196,"../Control.Bind":202,"../Control.Semigroupoid":260,"../Data.Either":326,"../Data.Function":341,"../Data.Functor":347,"../Data.Maybe":397,"../Data.Unit":458,"../Prelude":475}],234:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Alt = require("../Control.Alt");
@@ -25668,7 +26215,7 @@ module.exports = {
     monadWriterExceptT: monadWriterExceptT
 };
 
-},{"../Control.Alt":193,"../Control.Alternative":194,"../Control.Applicative":195,"../Control.Apply":197,"../Control.Bind":201,"../Control.Category":202,"../Control.Monad":244,"../Control.Monad.Cont.Class":212,"../Control.Monad.Eff.Class":214,"../Control.Monad.Error.Class":227,"../Control.Monad.Reader.Class":233,"../Control.Monad.Rec.Class":235,"../Control.Monad.State.Class":238,"../Control.Monad.Trans.Class":241,"../Control.Monad.Writer.Class":242,"../Control.MonadPlus":245,"../Control.MonadZero":246,"../Control.Plus":249,"../Control.Semigroupoid":250,"../Data.Either":304,"../Data.Function":318,"../Data.Functor":324,"../Data.Monoid":383,"../Data.Newtype":385,"../Data.Semigroup":407,"../Data.Tuple":429,"../Prelude":450}],229:[function(require,module,exports){
+},{"../Control.Alt":194,"../Control.Alternative":195,"../Control.Applicative":196,"../Control.Apply":198,"../Control.Bind":202,"../Control.Category":203,"../Control.Monad":254,"../Control.Monad.Cont.Class":214,"../Control.Monad.Eff.Class":218,"../Control.Monad.Error.Class":233,"../Control.Monad.Reader.Class":243,"../Control.Monad.Rec.Class":245,"../Control.Monad.State.Class":248,"../Control.Monad.Trans.Class":251,"../Control.Monad.Writer.Class":252,"../Control.MonadPlus":255,"../Control.MonadZero":256,"../Control.Plus":259,"../Control.Semigroupoid":260,"../Data.Either":326,"../Data.Function":341,"../Data.Functor":347,"../Data.Monoid":406,"../Data.Newtype":408,"../Data.Semigroup":430,"../Data.Tuple":454,"../Prelude":475}],235:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Monad_Error_Class = require("../Control.Monad.Error.Class");
@@ -25693,7 +26240,689 @@ module.exports = {
     withExcept: withExcept
 };
 
-},{"../Control.Monad.Error.Class":227,"../Control.Monad.Except.Trans":228,"../Control.Semigroupoid":250,"../Data.Either":304,"../Data.Identity":332,"../Data.Newtype":385,"../Prelude":450}],230:[function(require,module,exports){
+},{"../Control.Monad.Error.Class":233,"../Control.Monad.Except.Trans":234,"../Control.Semigroupoid":260,"../Data.Either":326,"../Data.Identity":355,"../Data.Newtype":408,"../Prelude":475}],236:[function(require,module,exports){
+// Generated by purs version 0.11.6
+"use strict";
+var Control_Applicative = require("../Control.Applicative");
+var Control_Apply = require("../Control.Apply");
+var Control_Bind = require("../Control.Bind");
+var Control_Category = require("../Control.Category");
+var Control_Monad = require("../Control.Monad");
+var Control_Monad_Rec_Class = require("../Control.Monad.Rec.Class");
+var Control_Monad_Trans_Class = require("../Control.Monad.Trans.Class");
+var Control_Semigroupoid = require("../Control.Semigroupoid");
+var Data_CatList = require("../Data.CatList");
+var Data_Either = require("../Data.Either");
+var Data_Eq = require("../Data.Eq");
+var Data_Foldable = require("../Data.Foldable");
+var Data_Function = require("../Data.Function");
+var Data_Functor = require("../Data.Functor");
+var Data_Maybe = require("../Data.Maybe");
+var Data_Ord = require("../Data.Ord");
+var Data_Ordering = require("../Data.Ordering");
+var Data_Semigroup = require("../Data.Semigroup");
+var Data_Traversable = require("../Data.Traversable");
+var Data_Tuple = require("../Data.Tuple");
+var Prelude = require("../Prelude");
+var Unsafe_Coerce = require("../Unsafe.Coerce");
+var ExpF = function (x) {
+    return x;
+};
+var Free = (function () {
+    function Free(value0, value1) {
+        this.value0 = value0;
+        this.value1 = value1;
+    };
+    Free.create = function (value0) {
+        return function (value1) {
+            return new Free(value0, value1);
+        };
+    };
+    return Free;
+})();
+var Return = (function () {
+    function Return(value0) {
+        this.value0 = value0;
+    };
+    Return.create = function (value0) {
+        return new Return(value0);
+    };
+    return Return;
+})();
+var Bind = (function () {
+    function Bind(value0, value1) {
+        this.value0 = value0;
+        this.value1 = value1;
+    };
+    Bind.create = function (value0) {
+        return function (value1) {
+            return new Bind(value0, value1);
+        };
+    };
+    return Bind;
+})();
+var toView = function ($copy_v) {
+    var $tco_done = false;
+    var $tco_result;
+    function $tco_loop(v) {
+        var runExpF = function (v2) {
+            return v2;
+        };
+        var concatF = function (v2) {
+            return function (r) {
+                return new Free(v2.value0, Data_Semigroup.append(Data_CatList.semigroupCatList)(v2.value1)(r));
+            };
+        };
+        if (v.value0 instanceof Return) {
+            var v2 = Data_CatList.uncons(v.value1);
+            if (v2 instanceof Data_Maybe.Nothing) {
+                $tco_done = true;
+                return new Return(Unsafe_Coerce.unsafeCoerce(v.value0.value0));
+            };
+            if (v2 instanceof Data_Maybe.Just) {
+                $copy_v = Unsafe_Coerce.unsafeCoerce(concatF(runExpF(v2.value0.value0)(v.value0.value0))(v2.value0.value1));
+                return;
+            };
+            throw new Error("Failed pattern match at Control.Monad.Free line 220, column 7 - line 224, column 64: " + [ v2.constructor.name ]);
+        };
+        if (v.value0 instanceof Bind) {
+            $tco_done = true;
+            return new Bind(v.value0.value0, function (a) {
+                return Unsafe_Coerce.unsafeCoerce(concatF(v.value0.value1(a))(v.value1));
+            });
+        };
+        throw new Error("Failed pattern match at Control.Monad.Free line 218, column 3 - line 226, column 56: " + [ v.value0.constructor.name ]);
+    };
+    while (!$tco_done) {
+        $tco_result = $tco_loop($copy_v);
+    };
+    return $tco_result;
+};
+var runFreeM = function (dictFunctor) {
+    return function (dictMonadRec) {
+        return function (k) {
+            var go = function (f) {
+                var v = toView(f);
+                if (v instanceof Return) {
+                    return Data_Functor.map((((dictMonadRec.Monad0()).Bind1()).Apply0()).Functor0())(Control_Monad_Rec_Class.Done.create)(Control_Applicative.pure((dictMonadRec.Monad0()).Applicative0())(v.value0));
+                };
+                if (v instanceof Bind) {
+                    return Data_Functor.map((((dictMonadRec.Monad0()).Bind1()).Apply0()).Functor0())(Control_Monad_Rec_Class.Loop.create)(k(Data_Functor.map(dictFunctor)(v.value1)(v.value0)));
+                };
+                throw new Error("Failed pattern match at Control.Monad.Free line 187, column 10 - line 189, column 37: " + [ v.constructor.name ]);
+            };
+            return Control_Monad_Rec_Class.tailRecM(dictMonadRec)(go);
+        };
+    };
+};
+var runFree = function (dictFunctor) {
+    return function (k) {
+        var go = function ($copy_f) {
+            var $tco_done = false;
+            var $tco_result;
+            function $tco_loop(f) {
+                var v = toView(f);
+                if (v instanceof Return) {
+                    $tco_done = true;
+                    return v.value0;
+                };
+                if (v instanceof Bind) {
+                    $copy_f = k(Data_Functor.map(dictFunctor)(v.value1)(v.value0));
+                    return;
+                };
+                throw new Error("Failed pattern match at Control.Monad.Free line 171, column 10 - line 173, column 33: " + [ v.constructor.name ]);
+            };
+            while (!$tco_done) {
+                $tco_result = $tco_loop($copy_f);
+            };
+            return $tco_result;
+        };
+        return go;
+    };
+};
+var resume$prime = function (k) {
+    return function (j) {
+        return function (f) {
+            var v = toView(f);
+            if (v instanceof Return) {
+                return j(v.value0);
+            };
+            if (v instanceof Bind) {
+                return k(v.value0)(v.value1);
+            };
+            throw new Error("Failed pattern match at Control.Monad.Free line 206, column 17 - line 208, column 20: " + [ v.constructor.name ]);
+        };
+    };
+};
+var resume = function (dictFunctor) {
+    return resume$prime(function (g) {
+        return function (i) {
+            return new Data_Either.Left(Data_Functor.map(dictFunctor)(i)(g));
+        };
+    })(Data_Either.Right.create);
+};
+var fromView = function (f) {
+    return new Free(Unsafe_Coerce.unsafeCoerce(f), Data_CatList.empty);
+};
+var wrap = function (f) {
+    return fromView(new Bind(Unsafe_Coerce.unsafeCoerce(f), Unsafe_Coerce.unsafeCoerce));
+};
+var suspendF = function (dictApplicative) {
+    return function (f) {
+        return wrap(Control_Applicative.pure(dictApplicative)(f));
+    };
+};
+var freeMonad = new Control_Monad.Monad(function () {
+    return freeApplicative;
+}, function () {
+    return freeBind;
+});
+var freeFunctor = new Data_Functor.Functor(function (k) {
+    return function (f) {
+        return Control_Bind.bindFlipped(freeBind)(function ($118) {
+            return Control_Applicative.pure(freeApplicative)(k($118));
+        })(f);
+    };
+});
+var freeBind = new Control_Bind.Bind(function () {
+    return freeApply;
+}, function (v) {
+    return function (k) {
+        return new Free(v.value0, Data_CatList.snoc(v.value1)(Unsafe_Coerce.unsafeCoerce(k)));
+    };
+});
+var freeApply = new Control_Apply.Apply(function () {
+    return freeFunctor;
+}, Control_Monad.ap(freeMonad));
+var freeApplicative = new Control_Applicative.Applicative(function () {
+    return freeApply;
+}, function ($119) {
+    return fromView(Return.create($119));
+});
+var freeMonadRec = new Control_Monad_Rec_Class.MonadRec(function () {
+    return freeMonad;
+}, function (k) {
+    return function (a) {
+        return Control_Bind.bind(freeBind)(k(a))(function (v) {
+            if (v instanceof Control_Monad_Rec_Class.Loop) {
+                return Control_Monad_Rec_Class.tailRecM(freeMonadRec)(k)(v.value0);
+            };
+            if (v instanceof Control_Monad_Rec_Class.Done) {
+                return Control_Applicative.pure(freeApplicative)(v.value0);
+            };
+            throw new Error("Failed pattern match at Control.Monad.Free line 85, column 26 - line 87, column 21: " + [ v.constructor.name ]);
+        });
+    };
+});
+var liftF = function (f) {
+    return fromView(new Bind(Unsafe_Coerce.unsafeCoerce(f), function ($120) {
+        return Control_Applicative.pure(freeApplicative)(Unsafe_Coerce.unsafeCoerce($120));
+    }));
+};
+var freeMonadTrans = new Control_Monad_Trans_Class.MonadTrans(function (dictMonad) {
+    return liftF;
+});
+var substFree = function (k) {
+    var go = function (f) {
+        var v = toView(f);
+        if (v instanceof Return) {
+            return Control_Applicative.pure(freeApplicative)(v.value0);
+        };
+        if (v instanceof Bind) {
+            return Control_Bind.bind(freeBind)(k(v.value0))(Data_Functor.map(Data_Functor.functorFn)(go)(v.value1));
+        };
+        throw new Error("Failed pattern match at Control.Monad.Free line 161, column 10 - line 163, column 33: " + [ v.constructor.name ]);
+    };
+    return go;
+};
+var hoistFree = function (k) {
+    return substFree(function ($121) {
+        return liftF(k($121));
+    });
+};
+var foldableFree = function (dictFunctor) {
+    return function (dictFoldable) {
+        return new Data_Foldable.Foldable(function (dictMonoid) {
+            return function (f) {
+                var go = function ($122) {
+                    return (function (v) {
+                        if (v instanceof Data_Either.Left) {
+                            return Data_Foldable.foldMap(dictFoldable)(dictMonoid)(go)(v.value0);
+                        };
+                        if (v instanceof Data_Either.Right) {
+                            return f(v.value0);
+                        };
+                        throw new Error("Failed pattern match at Control.Monad.Free line 92, column 21 - line 94, column 21: " + [ v.constructor.name ]);
+                    })(resume(dictFunctor)($122));
+                };
+                return go;
+            };
+        }, function (f) {
+            var go = function (r) {
+                return function ($123) {
+                    return (function (v) {
+                        if (v instanceof Data_Either.Left) {
+                            return Data_Foldable.foldl(dictFoldable)(go)(r)(v.value0);
+                        };
+                        if (v instanceof Data_Either.Right) {
+                            return f(r)(v.value0);
+                        };
+                        throw new Error("Failed pattern match at Control.Monad.Free line 97, column 23 - line 99, column 23: " + [ v.constructor.name ]);
+                    })(resume(dictFunctor)($123));
+                };
+            };
+            return go;
+        }, function (f) {
+            var go = function (r) {
+                return function ($124) {
+                    return (function (v) {
+                        if (v instanceof Data_Either.Left) {
+                            return Data_Foldable.foldr(dictFoldable)(Data_Function.flip(go))(r)(v.value0);
+                        };
+                        if (v instanceof Data_Either.Right) {
+                            return f(v.value0)(r);
+                        };
+                        throw new Error("Failed pattern match at Control.Monad.Free line 102, column 23 - line 104, column 23: " + [ v.constructor.name ]);
+                    })(resume(dictFunctor)($124));
+                };
+            };
+            return go;
+        });
+    };
+};
+var traversableFree = function (dictTraversable) {
+    return new Data_Traversable.Traversable(function () {
+        return foldableFree(dictTraversable.Functor0())(dictTraversable.Foldable1());
+    }, function () {
+        return freeFunctor;
+    }, function (dictApplicative) {
+        return function (tma) {
+            return Data_Traversable.traverse(traversableFree(dictTraversable))(dictApplicative)(Control_Category.id(Control_Category.categoryFn))(tma);
+        };
+    }, function (dictApplicative) {
+        return function (f) {
+            var go = function ($125) {
+                return (function (v) {
+                    if (v instanceof Data_Either.Left) {
+                        return Data_Functor.map((dictApplicative.Apply0()).Functor0())(function ($126) {
+                            return Control_Bind.join(freeBind)(liftF($126));
+                        })(Data_Traversable.traverse(dictTraversable)(dictApplicative)(go)(v.value0));
+                    };
+                    if (v instanceof Data_Either.Right) {
+                        return Data_Functor.map((dictApplicative.Apply0()).Functor0())(Control_Applicative.pure(freeApplicative))(f(v.value0));
+                    };
+                    throw new Error("Failed pattern match at Control.Monad.Free line 109, column 21 - line 111, column 30: " + [ v.constructor.name ]);
+                })(resume(dictTraversable.Functor0())($125));
+            };
+            return go;
+        };
+    });
+};
+var foldFree = function (dictMonadRec) {
+    return function (k) {
+        var go = function (f) {
+            var v = toView(f);
+            if (v instanceof Return) {
+                return Data_Functor.map((((dictMonadRec.Monad0()).Bind1()).Apply0()).Functor0())(Control_Monad_Rec_Class.Done.create)(Control_Applicative.pure((dictMonadRec.Monad0()).Applicative0())(v.value0));
+            };
+            if (v instanceof Bind) {
+                return Data_Functor.map((((dictMonadRec.Monad0()).Bind1()).Apply0()).Functor0())(function ($127) {
+                    return Control_Monad_Rec_Class.Loop.create(v.value1($127));
+                })(k(v.value0));
+            };
+            throw new Error("Failed pattern match at Control.Monad.Free line 151, column 10 - line 153, column 37: " + [ v.constructor.name ]);
+        };
+        return Control_Monad_Rec_Class.tailRecM(dictMonadRec)(go);
+    };
+};
+var eqFree = function (dictFunctor) {
+    return function (dictEq1) {
+        return function (dictEq) {
+            return new Data_Eq.Eq(function (x) {
+                return function (y) {
+                    var v = resume(dictFunctor)(y);
+                    var v1 = resume(dictFunctor)(x);
+                    if (v1 instanceof Data_Either.Left && v instanceof Data_Either.Left) {
+                        return Data_Eq.eq1(dictEq1)(eqFree(dictFunctor)(dictEq1)(dictEq))(v1.value0)(v.value0);
+                    };
+                    if (v1 instanceof Data_Either.Right && v instanceof Data_Either.Right) {
+                        return Data_Eq.eq(dictEq)(v1.value0)(v.value0);
+                    };
+                    return false;
+                };
+            });
+        };
+    };
+};
+var ordFree = function (dictFunctor) {
+    return function (dictOrd1) {
+        return function (dictOrd) {
+            return new Data_Ord.Ord(function () {
+                return eqFree(dictFunctor)(dictOrd1.Eq10())(dictOrd.Eq0());
+            }, function (x) {
+                return function (y) {
+                    var v = resume(dictFunctor)(y);
+                    var v1 = resume(dictFunctor)(x);
+                    if (v1 instanceof Data_Either.Left && v instanceof Data_Either.Left) {
+                        return Data_Ord.compare1(dictOrd1)(ordFree(dictFunctor)(dictOrd1)(dictOrd))(v1.value0)(v.value0);
+                    };
+                    if (v1 instanceof Data_Either.Left) {
+                        return Data_Ordering.LT.value;
+                    };
+                    if (v instanceof Data_Either.Left) {
+                        return Data_Ordering.GT.value;
+                    };
+                    if (v1 instanceof Data_Either.Right && v instanceof Data_Either.Right) {
+                        return Data_Ord.compare(dictOrd)(v1.value0)(v.value0);
+                    };
+                    throw new Error("Failed pattern match at Control.Monad.Free line 55, column 17 - line 59, column 36: " + [ v1.constructor.name, v.constructor.name ]);
+                };
+            });
+        };
+    };
+};
+var eq1Free = function (dictFunctor) {
+    return function (dictEq1) {
+        return new Data_Eq.Eq1(function (dictEq) {
+            return Data_Eq.eq(eqFree(dictFunctor)(dictEq1)(dictEq));
+        });
+    };
+};
+var ord1Free = function (dictFunctor) {
+    return function (dictOrd1) {
+        return function (dictOrd) {
+            return new Data_Ord.Ord1(function () {
+                return eq1Free(dictFunctor)(dictOrd1.Eq10());
+            }, function (dictOrd2) {
+                return Data_Ord.compare(ordFree(dictFunctor)(dictOrd1)(dictOrd2));
+            });
+        };
+    };
+};
+module.exports = {
+    foldFree: foldFree, 
+    hoistFree: hoistFree, 
+    liftF: liftF, 
+    resume: resume, 
+    "resume'": resume$prime, 
+    runFree: runFree, 
+    runFreeM: runFreeM, 
+    substFree: substFree, 
+    suspendF: suspendF, 
+    wrap: wrap, 
+    eqFree: eqFree, 
+    eq1Free: eq1Free, 
+    ordFree: ordFree, 
+    ord1Free: ord1Free, 
+    freeFunctor: freeFunctor, 
+    freeBind: freeBind, 
+    freeApplicative: freeApplicative, 
+    freeApply: freeApply, 
+    freeMonad: freeMonad, 
+    freeMonadTrans: freeMonadTrans, 
+    freeMonadRec: freeMonadRec, 
+    foldableFree: foldableFree, 
+    traversableFree: traversableFree
+};
+
+},{"../Control.Applicative":196,"../Control.Apply":198,"../Control.Bind":202,"../Control.Category":203,"../Control.Monad":254,"../Control.Monad.Rec.Class":245,"../Control.Monad.Trans.Class":251,"../Control.Semigroupoid":260,"../Data.CatList":310,"../Data.Either":326,"../Data.Eq":329,"../Data.Foldable":334,"../Data.Function":341,"../Data.Functor":347,"../Data.Maybe":397,"../Data.Ord":415,"../Data.Ordering":416,"../Data.Semigroup":430,"../Data.Traversable":452,"../Data.Tuple":454,"../Prelude":475,"../Unsafe.Coerce":493}],237:[function(require,module,exports){
+// Generated by purs version 0.11.6
+"use strict";
+var Control_Monad_Eff = require("../Control.Monad.Eff");
+module.exports = {};
+
+},{"../Control.Monad.Eff":232}],238:[function(require,module,exports){
+// Generated by purs version 0.11.6
+"use strict";
+var Control_Alt = require("../Control.Alt");
+var Control_Alternative = require("../Control.Alternative");
+var Control_Applicative = require("../Control.Applicative");
+var Control_Apply = require("../Control.Apply");
+var Control_Bind = require("../Control.Bind");
+var Control_Monad = require("../Control.Monad");
+var Control_Monad_Aff = require("../Control.Monad.Aff");
+var Control_Monad_Aff_Class = require("../Control.Monad.Aff.Class");
+var Control_Monad_Aff_Unsafe = require("../Control.Monad.Aff.Unsafe");
+var Control_Monad_Eff_Class = require("../Control.Monad.Eff.Class");
+var Control_Monad_Eff_Exception = require("../Control.Monad.Eff.Exception");
+var Control_Monad_Eff_Unsafe = require("../Control.Monad.Eff.Unsafe");
+var Control_Monad_Error_Class = require("../Control.Monad.Error.Class");
+var Control_Monad_IO_Effect = require("../Control.Monad.IO.Effect");
+var Control_Monad_IOSync = require("../Control.Monad.IOSync");
+var Control_Monad_Rec_Class = require("../Control.Monad.Rec.Class");
+var Control_MonadZero = require("../Control.MonadZero");
+var Control_Parallel = require("../Control.Parallel");
+var Control_Parallel_Class = require("../Control.Parallel.Class");
+var Control_Plus = require("../Control.Plus");
+var Control_Semigroupoid = require("../Control.Semigroupoid");
+var Data_Function = require("../Data.Function");
+var Data_Functor = require("../Data.Functor");
+var Data_Monoid = require("../Data.Monoid");
+var Data_Newtype = require("../Data.Newtype");
+var Data_Semigroup = require("../Data.Semigroup");
+var Prelude = require("../Prelude");
+var ParIO = function (x) {
+    return x;
+};
+var IO = function (x) {
+    return x;
+};
+var semigroupParIO = function (dictSemigroup) {
+    return Control_Monad_Aff.semigroupParAff(dictSemigroup);
+};
+var semigroupIO = function (dictSemigroup) {
+    return Control_Monad_Aff.semigroupAff(dictSemigroup);
+};
+var plusParIO = Control_Monad_Aff.plusParAff;
+var plusIO = Control_Monad_Aff.plusAff;
+var newtypeIO = new Data_Newtype.Newtype(function (n) {
+    return n;
+}, IO);
+var runIO = Data_Newtype.unwrap(newtypeIO);
+var runIO$prime = function ($9) {
+    return Control_Monad_Aff_Unsafe.unsafeCoerceAff(Data_Newtype.unwrap(newtypeIO)($9));
+};
+var monoidParIO = function (dictMonoid) {
+    return Control_Monad_Aff.monoidParAff(dictMonoid);
+};
+var monoidIO = function (dictMonoid) {
+    return Control_Monad_Aff.monoidAff(dictMonoid);
+};
+var monadThrowIO = Control_Monad_Aff.monadThrowAff;
+var monadRecIO = Control_Monad_Aff.monadRecAff;
+var monadIO = Control_Monad_Aff.monadAff;
+var monadErrorIO = Control_Monad_Aff.monadErrorAff;
+var monadEffIO = new Control_Monad_Eff_Class.MonadEff(function () {
+    return monadIO;
+}, function ($10) {
+    return Data_Newtype.wrap(newtypeIO)(Control_Monad_Eff_Class.liftEff(Control_Monad_Aff.monadEffAff)(Control_Monad_Eff_Unsafe.unsafeCoerceEff($10)));
+});
+var monadAffIO = new Control_Monad_Aff_Class.MonadAff(function () {
+    return monadEffIO;
+}, function ($11) {
+    return Data_Newtype.wrap(newtypeIO)(Control_Monad_Aff_Unsafe.unsafeCoerceAff($11));
+});
+var launchIO = function ($12) {
+    return Data_Functor["void"](Control_Monad_IOSync.functorIOSync)(Control_Monad_Eff_Class.liftEff(Control_Monad_IOSync.monadEffIOSync)(Control_Monad_Aff.launchAff(Data_Newtype.unwrap(newtypeIO)($12))));
+};
+var functorParIO = Control_Monad_Aff.functorParAff;
+var functorIO = Control_Monad_Aff.functorAff;
+var bindIO = Control_Monad_Aff.bindAff;
+var applyParIO = Control_Monad_Aff.applyParAff;
+var applyIO = Control_Monad_Aff.applyAff;
+var applicativeParIO = Control_Monad_Aff.applicativeParAff;
+var parallelParIO = new Control_Parallel_Class.Parallel(function () {
+    return applicativeParIO;
+}, function () {
+    return monadIO;
+}, function ($13) {
+    return ParIO(Control_Parallel_Class.parallel(Control_Monad_Aff.parallelAff)(runIO($13)));
+}, function (v) {
+    return IO(Control_Parallel_Class.sequential(Control_Monad_Aff.parallelAff)(v));
+});
+var applicativeIO = Control_Monad_Aff.applicativeAff;
+var alternativeParIO = Control_Monad_Aff.alternativeParAff;
+var alternativeIO = new Control_Alternative.Alternative(function () {
+    return applicativeIO;
+}, function () {
+    return plusIO;
+});
+var monadZeroIO = new Control_MonadZero.MonadZero(function () {
+    return alternativeIO;
+}, function () {
+    return monadIO;
+});
+var altParIO = Control_Monad_Aff.altParAff;
+var altIO = Control_Monad_Aff.altAff;
+module.exports = {
+    IO: IO, 
+    ParIO: ParIO, 
+    launchIO: launchIO, 
+    runIO: runIO, 
+    "runIO'": runIO$prime, 
+    newtypeIO: newtypeIO, 
+    functorIO: functorIO, 
+    applyIO: applyIO, 
+    applicativeIO: applicativeIO, 
+    bindIO: bindIO, 
+    monadIO: monadIO, 
+    monadRecIO: monadRecIO, 
+    semigroupIO: semigroupIO, 
+    monoidIO: monoidIO, 
+    functorParIO: functorParIO, 
+    applyParIO: applyParIO, 
+    applicativeParIO: applicativeParIO, 
+    semigroupParIO: semigroupParIO, 
+    monoidParIO: monoidParIO, 
+    altParIO: altParIO, 
+    plusParIO: plusParIO, 
+    alternativeParIO: alternativeParIO, 
+    monadAffIO: monadAffIO, 
+    parallelParIO: parallelParIO, 
+    monadEffIO: monadEffIO, 
+    monadThrowIO: monadThrowIO, 
+    monadErrorIO: monadErrorIO, 
+    altIO: altIO, 
+    plusIO: plusIO, 
+    alternativeIO: alternativeIO, 
+    monadZeroIO: monadZeroIO
+};
+
+},{"../Control.Alt":194,"../Control.Alternative":195,"../Control.Applicative":196,"../Control.Apply":198,"../Control.Bind":202,"../Control.Monad":254,"../Control.Monad.Aff":213,"../Control.Monad.Aff.Class":209,"../Control.Monad.Aff.Unsafe":211,"../Control.Monad.Eff.Class":218,"../Control.Monad.Eff.Exception":222,"../Control.Monad.Eff.Unsafe":230,"../Control.Monad.Error.Class":233,"../Control.Monad.IO.Effect":237,"../Control.Monad.IOSync":239,"../Control.Monad.Rec.Class":245,"../Control.MonadZero":256,"../Control.Parallel":258,"../Control.Parallel.Class":257,"../Control.Plus":259,"../Control.Semigroupoid":260,"../Data.Function":341,"../Data.Functor":347,"../Data.Monoid":406,"../Data.Newtype":408,"../Data.Semigroup":430,"../Prelude":475}],239:[function(require,module,exports){
+// Generated by purs version 0.11.6
+"use strict";
+var Control_Alt = require("../Control.Alt");
+var Control_Alternative = require("../Control.Alternative");
+var Control_Applicative = require("../Control.Applicative");
+var Control_Apply = require("../Control.Apply");
+var Control_Bind = require("../Control.Bind");
+var Control_Monad = require("../Control.Monad");
+var Control_Monad_Eff = require("../Control.Monad.Eff");
+var Control_Monad_Eff_Class = require("../Control.Monad.Eff.Class");
+var Control_Monad_Eff_Exception = require("../Control.Monad.Eff.Exception");
+var Control_Monad_Eff_Unsafe = require("../Control.Monad.Eff.Unsafe");
+var Control_Monad_Error_Class = require("../Control.Monad.Error.Class");
+var Control_Monad_IO_Effect = require("../Control.Monad.IO.Effect");
+var Control_Monad_Rec_Class = require("../Control.Monad.Rec.Class");
+var Control_MonadZero = require("../Control.MonadZero");
+var Control_Plus = require("../Control.Plus");
+var Control_Semigroupoid = require("../Control.Semigroupoid");
+var Data_Function = require("../Data.Function");
+var Data_Functor = require("../Data.Functor");
+var Data_Monoid = require("../Data.Monoid");
+var Data_Newtype = require("../Data.Newtype");
+var Data_Semigroup = require("../Data.Semigroup");
+var Prelude = require("../Prelude");
+var IOSync = function (x) {
+    return x;
+};
+var newtypeIOSync = new Data_Newtype.Newtype(function (n) {
+    return n;
+}, IOSync);
+var runIOSync = Data_Newtype.unwrap(newtypeIOSync);
+var runIOSync$prime = function ($5) {
+    return Control_Monad_Eff_Unsafe.unsafeCoerceEff(Data_Newtype.unwrap(newtypeIOSync)($5));
+};
+var monadRecIOSync = Control_Monad_Rec_Class.monadRecEff;
+var monadIOSync = Control_Monad_Eff.monadEff;
+var monadEffIOSync = new Control_Monad_Eff_Class.MonadEff(function () {
+    return monadIOSync;
+}, function ($6) {
+    return Data_Newtype.wrap(newtypeIOSync)(Control_Monad_Eff_Unsafe.unsafeCoerceEff($6));
+});
+var monadThrowIOSync = new Control_Monad_Error_Class.MonadThrow(function () {
+    return monadIOSync;
+}, function ($7) {
+    return Control_Monad_Eff_Class.liftEff(monadEffIOSync)(Control_Monad_Eff_Exception.throwException($7));
+});
+var monadErrorIOSync = new Control_Monad_Error_Class.MonadError(function () {
+    return monadThrowIOSync;
+}, function (a) {
+    return function (k) {
+        return Control_Monad_Eff_Class.liftEff(monadEffIOSync)(Control_Monad_Eff_Exception.catchException(function (e) {
+            return Data_Newtype.unwrap(newtypeIOSync)(k(e));
+        })(Control_Monad_Eff_Unsafe.unsafeCoerceEff(Data_Newtype.unwrap(newtypeIOSync)(a))));
+    };
+});
+var functorIOSync = Control_Monad_Eff.functorEff;
+var bindIOSync = Control_Monad_Eff.bindEff;
+var applyIOSync = Control_Monad_Eff.applyEff;
+var semigroupIOSync = function (dictSemigroup) {
+    return new Data_Semigroup.Semigroup(function (a) {
+        return function (b) {
+            return Control_Apply.apply(applyIOSync)(Data_Functor.map(functorIOSync)(Data_Semigroup.append(dictSemigroup))(a))(b);
+        };
+    });
+};
+var applicativeIOSync = Control_Monad_Eff.applicativeEff;
+var monoidIOSync = function (dictMonoid) {
+    return new Data_Monoid.Monoid(function () {
+        return semigroupIOSync(dictMonoid.Semigroup0());
+    }, Control_Applicative.pure(applicativeIOSync)(Data_Monoid.mempty(dictMonoid)));
+};
+var altIOSync = new Control_Alt.Alt(function () {
+    return functorIOSync;
+}, function (a) {
+    return function (b) {
+        return Control_Monad_Error_Class.catchError(monadErrorIOSync)(a)(Data_Function["const"](b));
+    };
+});
+var plusIOSync = new Control_Plus.Plus(function () {
+    return altIOSync;
+}, Control_Monad_Error_Class.throwError(monadThrowIOSync)(Control_Monad_Eff_Exception.error("plusIOSync.empty")));
+var alternativeIOSync = new Control_Alternative.Alternative(function () {
+    return applicativeIOSync;
+}, function () {
+    return plusIOSync;
+});
+var monadZeroIOSync = new Control_MonadZero.MonadZero(function () {
+    return alternativeIOSync;
+}, function () {
+    return monadIOSync;
+});
+module.exports = {
+    IOSync: IOSync, 
+    runIOSync: runIOSync, 
+    "runIOSync'": runIOSync$prime, 
+    newtypeIOSync: newtypeIOSync, 
+    functorIOSync: functorIOSync, 
+    applyIOSync: applyIOSync, 
+    applicativeIOSync: applicativeIOSync, 
+    bindIOSync: bindIOSync, 
+    monadIOSync: monadIOSync, 
+    monadRecIOSync: monadRecIOSync, 
+    semigroupIOSync: semigroupIOSync, 
+    monoidIOSync: monoidIOSync, 
+    monadEffIOSync: monadEffIOSync, 
+    monadErrorIOSync: monadErrorIOSync, 
+    monadThrowIOSync: monadThrowIOSync, 
+    altIOSync: altIOSync, 
+    plusIOSync: plusIOSync, 
+    alternativeIOSync: alternativeIOSync, 
+    monadZeroIOSync: monadZeroIOSync
+};
+
+},{"../Control.Alt":194,"../Control.Alternative":195,"../Control.Applicative":196,"../Control.Apply":198,"../Control.Bind":202,"../Control.Monad":254,"../Control.Monad.Eff":232,"../Control.Monad.Eff.Class":218,"../Control.Monad.Eff.Exception":222,"../Control.Monad.Eff.Unsafe":230,"../Control.Monad.Error.Class":233,"../Control.Monad.IO.Effect":237,"../Control.Monad.Rec.Class":245,"../Control.MonadZero":256,"../Control.Plus":259,"../Control.Semigroupoid":260,"../Data.Function":341,"../Data.Functor":347,"../Data.Monoid":406,"../Data.Newtype":408,"../Data.Semigroup":430,"../Prelude":475}],240:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Alt = require("../Control.Alt");
@@ -26362,7 +27591,7 @@ module.exports = {
     monadEffListT: monadEffListT
 };
 
-},{"../Control.Alt":193,"../Control.Alternative":194,"../Control.Applicative":195,"../Control.Apply":197,"../Control.Bind":201,"../Control.Category":202,"../Control.Monad":244,"../Control.Monad.Eff.Class":214,"../Control.Monad.Rec.Class":235,"../Control.Monad.Trans.Class":241,"../Control.MonadPlus":245,"../Control.MonadZero":246,"../Control.Plus":249,"../Control.Semigroupoid":250,"../Data.Function":318,"../Data.Functor":324,"../Data.Lazy":338,"../Data.Maybe":374,"../Data.Monoid":383,"../Data.Newtype":385,"../Data.Ring":403,"../Data.Semigroup":407,"../Data.Tuple":429,"../Data.Unfoldable":431,"../Data.Unit":433,"../Prelude":450}],231:[function(require,module,exports){
+},{"../Control.Alt":194,"../Control.Alternative":195,"../Control.Applicative":196,"../Control.Apply":198,"../Control.Bind":202,"../Control.Category":203,"../Control.Monad":254,"../Control.Monad.Eff.Class":218,"../Control.Monad.Rec.Class":245,"../Control.Monad.Trans.Class":251,"../Control.MonadPlus":255,"../Control.MonadZero":256,"../Control.Plus":259,"../Control.Semigroupoid":260,"../Data.Function":341,"../Data.Functor":347,"../Data.Lazy":361,"../Data.Maybe":397,"../Data.Monoid":406,"../Data.Newtype":408,"../Data.Ring":426,"../Data.Semigroup":430,"../Data.Tuple":454,"../Data.Unfoldable":456,"../Data.Unit":458,"../Prelude":475}],241:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Alt = require("../Control.Alt");
@@ -26633,7 +27862,7 @@ module.exports = {
     monadWriterMaybeT: monadWriterMaybeT
 };
 
-},{"../Control.Alt":193,"../Control.Alternative":194,"../Control.Applicative":195,"../Control.Apply":197,"../Control.Bind":201,"../Control.Category":202,"../Control.Monad":244,"../Control.Monad.Cont.Class":212,"../Control.Monad.Eff.Class":214,"../Control.Monad.Error.Class":227,"../Control.Monad.Reader.Class":233,"../Control.Monad.Rec.Class":235,"../Control.Monad.State.Class":238,"../Control.Monad.Trans.Class":241,"../Control.Monad.Writer.Class":242,"../Control.MonadPlus":245,"../Control.MonadZero":246,"../Control.Plus":249,"../Control.Semigroupoid":250,"../Data.Function":318,"../Data.Functor":324,"../Data.Maybe":374,"../Data.Newtype":385,"../Data.Tuple":429,"../Prelude":450}],232:[function(require,module,exports){
+},{"../Control.Alt":194,"../Control.Alternative":195,"../Control.Applicative":196,"../Control.Apply":198,"../Control.Bind":202,"../Control.Category":203,"../Control.Monad":254,"../Control.Monad.Cont.Class":214,"../Control.Monad.Eff.Class":218,"../Control.Monad.Error.Class":233,"../Control.Monad.Reader.Class":243,"../Control.Monad.Rec.Class":245,"../Control.Monad.State.Class":248,"../Control.Monad.Trans.Class":251,"../Control.Monad.Writer.Class":252,"../Control.MonadPlus":255,"../Control.MonadZero":256,"../Control.Plus":259,"../Control.Semigroupoid":260,"../Data.Function":341,"../Data.Functor":347,"../Data.Maybe":397,"../Data.Newtype":408,"../Data.Tuple":454,"../Prelude":475}],242:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Alt = require("../Control.Alt");
@@ -27025,7 +28254,7 @@ module.exports = {
     plusRWST: plusRWST
 };
 
-},{"../Control.Alt":193,"../Control.Alternative":194,"../Control.Applicative":195,"../Control.Apply":197,"../Control.Bind":201,"../Control.Lazy":206,"../Control.Monad":244,"../Control.Monad.Eff.Class":214,"../Control.Monad.Error.Class":227,"../Control.Monad.Reader.Class":233,"../Control.Monad.Rec.Class":235,"../Control.Monad.State.Class":238,"../Control.Monad.Trans.Class":241,"../Control.Monad.Writer.Class":242,"../Control.Plus":249,"../Control.Semigroupoid":250,"../Data.Function":318,"../Data.Functor":324,"../Data.Monoid":383,"../Data.Newtype":385,"../Data.Semigroup":407,"../Data.Tuple":429,"../Data.Unit":433,"../Prelude":450}],233:[function(require,module,exports){
+},{"../Control.Alt":194,"../Control.Alternative":195,"../Control.Applicative":196,"../Control.Apply":198,"../Control.Bind":202,"../Control.Lazy":207,"../Control.Monad":254,"../Control.Monad.Eff.Class":218,"../Control.Monad.Error.Class":233,"../Control.Monad.Reader.Class":243,"../Control.Monad.Rec.Class":245,"../Control.Monad.State.Class":248,"../Control.Monad.Trans.Class":251,"../Control.Monad.Writer.Class":252,"../Control.Plus":259,"../Control.Semigroupoid":260,"../Data.Function":341,"../Data.Functor":347,"../Data.Monoid":406,"../Data.Newtype":408,"../Data.Semigroup":430,"../Data.Tuple":454,"../Data.Unit":458,"../Prelude":475}],243:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Category = require("../Control.Category");
@@ -27068,7 +28297,7 @@ module.exports = {
     monadReaderFun: monadReaderFun
 };
 
-},{"../Control.Category":202,"../Control.Monad":244,"../Control.Semigroupoid":250,"../Data.Functor":324,"../Prelude":450}],234:[function(require,module,exports){
+},{"../Control.Category":203,"../Control.Monad":254,"../Control.Semigroupoid":260,"../Data.Functor":347,"../Prelude":475}],244:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Alt = require("../Control.Alt");
@@ -27354,7 +28583,7 @@ module.exports = {
     monadRecReaderT: monadRecReaderT
 };
 
-},{"../Control.Alt":193,"../Control.Alternative":194,"../Control.Applicative":195,"../Control.Apply":197,"../Control.Bind":201,"../Control.Monad":244,"../Control.Monad.Cont.Class":212,"../Control.Monad.Eff.Class":214,"../Control.Monad.Error.Class":227,"../Control.Monad.Reader.Class":233,"../Control.Monad.Rec.Class":235,"../Control.Monad.State.Class":238,"../Control.Monad.Trans.Class":241,"../Control.Monad.Writer.Class":242,"../Control.MonadPlus":245,"../Control.MonadZero":246,"../Control.Plus":249,"../Control.Semigroupoid":250,"../Data.Distributive":302,"../Data.Function":318,"../Data.Functor":324,"../Data.Monoid":383,"../Data.Newtype":385,"../Data.Semigroup":407,"../Prelude":450}],235:[function(require,module,exports){
+},{"../Control.Alt":194,"../Control.Alternative":195,"../Control.Applicative":196,"../Control.Apply":198,"../Control.Bind":202,"../Control.Monad":254,"../Control.Monad.Cont.Class":214,"../Control.Monad.Eff.Class":218,"../Control.Monad.Error.Class":233,"../Control.Monad.Reader.Class":243,"../Control.Monad.Rec.Class":245,"../Control.Monad.State.Class":248,"../Control.Monad.Trans.Class":251,"../Control.Monad.Writer.Class":252,"../Control.MonadPlus":255,"../Control.MonadZero":256,"../Control.Plus":259,"../Control.Semigroupoid":260,"../Data.Distributive":324,"../Data.Function":341,"../Data.Functor":347,"../Data.Monoid":406,"../Data.Newtype":408,"../Data.Semigroup":430,"../Prelude":475}],245:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Applicative = require("../Control.Applicative");
@@ -27606,7 +28835,7 @@ module.exports = {
     monadRecMaybe: monadRecMaybe
 };
 
-},{"../Control.Applicative":195,"../Control.Bind":201,"../Control.Monad":244,"../Control.Monad.Eff":226,"../Control.Monad.Eff.Unsafe":224,"../Control.Monad.ST":237,"../Control.Semigroupoid":250,"../Data.Bifunctor":294,"../Data.Either":304,"../Data.Functor":324,"../Data.Identity":332,"../Data.Maybe":374,"../Data.Unit":433,"../Partial.Unsafe":447,"../Prelude":450}],236:[function(require,module,exports){
+},{"../Control.Applicative":196,"../Control.Bind":202,"../Control.Monad":254,"../Control.Monad.Eff":232,"../Control.Monad.Eff.Unsafe":230,"../Control.Monad.ST":247,"../Control.Semigroupoid":260,"../Data.Bifunctor":304,"../Data.Either":326,"../Data.Functor":347,"../Data.Identity":355,"../Data.Maybe":397,"../Data.Unit":458,"../Partial.Unsafe":472,"../Prelude":475}],246:[function(require,module,exports){
 "use strict";
 
 exports.newSTRef = function (val) {
@@ -27641,7 +28870,7 @@ exports.runST = function (f) {
   return f;
 };
 
-},{}],237:[function(require,module,exports){
+},{}],247:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -27658,7 +28887,7 @@ module.exports = {
     writeSTRef: $foreign.writeSTRef
 };
 
-},{"../Control.Monad.Eff":226,"./foreign":236}],238:[function(require,module,exports){
+},{"../Control.Monad.Eff":232,"./foreign":246}],248:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Data_Tuple = require("../Data.Tuple");
@@ -27706,7 +28935,7 @@ module.exports = {
     state: state
 };
 
-},{"../Data.Tuple":429,"../Data.Unit":433,"../Prelude":450}],239:[function(require,module,exports){
+},{"../Data.Tuple":454,"../Data.Unit":458,"../Prelude":475}],249:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Alt = require("../Control.Alt");
@@ -28023,7 +29252,7 @@ module.exports = {
     monadWriterStateT: monadWriterStateT
 };
 
-},{"../Control.Alt":193,"../Control.Alternative":194,"../Control.Applicative":195,"../Control.Apply":197,"../Control.Bind":201,"../Control.Lazy":206,"../Control.Monad":244,"../Control.Monad.Cont.Class":212,"../Control.Monad.Eff.Class":214,"../Control.Monad.Error.Class":227,"../Control.Monad.Reader.Class":233,"../Control.Monad.Rec.Class":235,"../Control.Monad.State.Class":238,"../Control.Monad.Trans.Class":241,"../Control.Monad.Writer.Class":242,"../Control.MonadPlus":245,"../Control.MonadZero":246,"../Control.Plus":249,"../Control.Semigroupoid":250,"../Data.Function":318,"../Data.Functor":324,"../Data.Newtype":385,"../Data.Tuple":429,"../Data.Unit":433,"../Prelude":450}],240:[function(require,module,exports){
+},{"../Control.Alt":194,"../Control.Alternative":195,"../Control.Applicative":196,"../Control.Apply":198,"../Control.Bind":202,"../Control.Lazy":207,"../Control.Monad":254,"../Control.Monad.Cont.Class":214,"../Control.Monad.Eff.Class":218,"../Control.Monad.Error.Class":233,"../Control.Monad.Reader.Class":243,"../Control.Monad.Rec.Class":245,"../Control.Monad.State.Class":248,"../Control.Monad.Trans.Class":251,"../Control.Monad.Writer.Class":252,"../Control.MonadPlus":255,"../Control.MonadZero":256,"../Control.Plus":259,"../Control.Semigroupoid":260,"../Data.Function":341,"../Data.Functor":347,"../Data.Newtype":408,"../Data.Tuple":454,"../Data.Unit":458,"../Prelude":475}],250:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Monad_State_Class = require("../Control.Monad.State.Class");
@@ -28064,7 +29293,7 @@ module.exports = {
     withState: withState
 };
 
-},{"../Control.Monad.State.Class":238,"../Control.Monad.State.Trans":239,"../Control.Semigroupoid":250,"../Data.Identity":332,"../Data.Newtype":385,"../Data.Tuple":429,"../Prelude":450}],241:[function(require,module,exports){
+},{"../Control.Monad.State.Class":248,"../Control.Monad.State.Trans":249,"../Control.Semigroupoid":260,"../Data.Identity":355,"../Data.Newtype":408,"../Data.Tuple":454,"../Prelude":475}],251:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Prelude = require("../Prelude");
@@ -28079,7 +29308,7 @@ module.exports = {
     lift: lift
 };
 
-},{"../Prelude":450}],242:[function(require,module,exports){
+},{"../Prelude":475}],252:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Applicative = require("../Control.Applicative");
@@ -28133,7 +29362,7 @@ module.exports = {
     tell: tell
 };
 
-},{"../Control.Applicative":195,"../Control.Bind":201,"../Data.Function":318,"../Data.Tuple":429,"../Prelude":450}],243:[function(require,module,exports){
+},{"../Control.Applicative":196,"../Control.Bind":202,"../Data.Function":341,"../Data.Tuple":454,"../Prelude":475}],253:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Alt = require("../Control.Alt");
@@ -28437,7 +29666,7 @@ module.exports = {
     monadWriterWriterT: monadWriterWriterT
 };
 
-},{"../Control.Alt":193,"../Control.Alternative":194,"../Control.Applicative":195,"../Control.Apply":197,"../Control.Bind":201,"../Control.Monad":244,"../Control.Monad.Cont.Class":212,"../Control.Monad.Eff.Class":214,"../Control.Monad.Error.Class":227,"../Control.Monad.Reader.Class":233,"../Control.Monad.Rec.Class":235,"../Control.Monad.State.Class":238,"../Control.Monad.Trans.Class":241,"../Control.Monad.Writer.Class":242,"../Control.MonadPlus":245,"../Control.MonadZero":246,"../Control.Plus":249,"../Control.Semigroupoid":250,"../Data.Function":318,"../Data.Functor":324,"../Data.Monoid":383,"../Data.Newtype":385,"../Data.Semigroup":407,"../Data.Tuple":429,"../Data.Unit":433,"../Prelude":450}],244:[function(require,module,exports){
+},{"../Control.Alt":194,"../Control.Alternative":195,"../Control.Applicative":196,"../Control.Apply":198,"../Control.Bind":202,"../Control.Monad":254,"../Control.Monad.Cont.Class":214,"../Control.Monad.Eff.Class":218,"../Control.Monad.Error.Class":233,"../Control.Monad.Reader.Class":243,"../Control.Monad.Rec.Class":245,"../Control.Monad.State.Class":248,"../Control.Monad.Trans.Class":251,"../Control.Monad.Writer.Class":252,"../Control.MonadPlus":255,"../Control.MonadZero":256,"../Control.Plus":259,"../Control.Semigroupoid":260,"../Data.Function":341,"../Data.Functor":347,"../Data.Monoid":406,"../Data.Newtype":408,"../Data.Semigroup":430,"../Data.Tuple":454,"../Data.Unit":458,"../Prelude":475}],254:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Applicative = require("../Control.Applicative");
@@ -28507,7 +29736,7 @@ module.exports = {
     monadArray: monadArray
 };
 
-},{"../Control.Applicative":195,"../Control.Apply":197,"../Control.Bind":201,"../Data.Functor":324,"../Data.Unit":433}],245:[function(require,module,exports){
+},{"../Control.Applicative":196,"../Control.Apply":198,"../Control.Bind":202,"../Data.Functor":347,"../Data.Unit":458}],255:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Alt = require("../Control.Alt");
@@ -28530,7 +29759,7 @@ module.exports = {
     monadPlusArray: monadPlusArray
 };
 
-},{"../Control.Alt":193,"../Control.Alternative":194,"../Control.Applicative":195,"../Control.Apply":197,"../Control.Bind":201,"../Control.Monad":244,"../Control.MonadZero":246,"../Control.Plus":249,"../Data.Functor":324}],246:[function(require,module,exports){
+},{"../Control.Alt":194,"../Control.Alternative":195,"../Control.Applicative":196,"../Control.Apply":198,"../Control.Bind":202,"../Control.Monad":254,"../Control.MonadZero":256,"../Control.Plus":259,"../Data.Functor":347}],256:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Alt = require("../Control.Alt");
@@ -28568,7 +29797,7 @@ module.exports = {
     monadZeroArray: monadZeroArray
 };
 
-},{"../Control.Alt":193,"../Control.Alternative":194,"../Control.Applicative":195,"../Control.Apply":197,"../Control.Bind":201,"../Control.Monad":244,"../Control.Plus":249,"../Data.Functor":324,"../Data.Unit":433}],247:[function(require,module,exports){
+},{"../Control.Alt":194,"../Control.Alternative":195,"../Control.Applicative":196,"../Control.Apply":198,"../Control.Bind":202,"../Control.Monad":254,"../Control.Plus":259,"../Data.Functor":347,"../Data.Unit":458}],257:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Alt = require("../Control.Alt");
@@ -28779,7 +30008,7 @@ module.exports = {
     monadParParCont: monadParParCont
 };
 
-},{"../Control.Alt":193,"../Control.Alternative":194,"../Control.Applicative":195,"../Control.Apply":197,"../Control.Bind":201,"../Control.Monad.Cont.Trans":213,"../Control.Monad.Eff":226,"../Control.Monad.Eff.Class":214,"../Control.Monad.Eff.Ref":220,"../Control.Monad.Eff.Unsafe":224,"../Control.Monad.Except.Trans":228,"../Control.Monad.Maybe.Trans":231,"../Control.Monad.Reader.Trans":234,"../Control.Monad.Writer.Trans":243,"../Control.Plus":249,"../Control.Semigroupoid":250,"../Data.Either":304,"../Data.Function":318,"../Data.Functor":324,"../Data.Functor.Compose":320,"../Data.Maybe":374,"../Data.Monoid":383,"../Data.Newtype":385,"../Data.Unit":433,"../Prelude":450}],248:[function(require,module,exports){
+},{"../Control.Alt":194,"../Control.Alternative":195,"../Control.Applicative":196,"../Control.Apply":198,"../Control.Bind":202,"../Control.Monad.Cont.Trans":215,"../Control.Monad.Eff":232,"../Control.Monad.Eff.Class":218,"../Control.Monad.Eff.Ref":226,"../Control.Monad.Eff.Unsafe":230,"../Control.Monad.Except.Trans":234,"../Control.Monad.Maybe.Trans":241,"../Control.Monad.Reader.Trans":244,"../Control.Monad.Writer.Trans":253,"../Control.Plus":259,"../Control.Semigroupoid":260,"../Data.Either":326,"../Data.Function":341,"../Data.Functor":347,"../Data.Functor.Compose":343,"../Data.Maybe":397,"../Data.Monoid":406,"../Data.Newtype":408,"../Data.Unit":458,"../Prelude":475}],258:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Alternative = require("../Control.Alternative");
@@ -28865,7 +30094,7 @@ module.exports = {
     parTraverse_: parTraverse_
 };
 
-},{"../Control.Alternative":194,"../Control.Apply":197,"../Control.Category":202,"../Control.Parallel.Class":247,"../Control.Semigroupoid":250,"../Data.Foldable":311,"../Data.Traversable":427,"../Prelude":450}],249:[function(require,module,exports){
+},{"../Control.Alternative":195,"../Control.Apply":198,"../Control.Category":203,"../Control.Parallel.Class":257,"../Control.Semigroupoid":260,"../Data.Foldable":334,"../Data.Traversable":452,"../Prelude":475}],259:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Alt = require("../Control.Alt");
@@ -28886,7 +30115,7 @@ module.exports = {
     plusArray: plusArray
 };
 
-},{"../Control.Alt":193,"../Data.Functor":324}],250:[function(require,module,exports){
+},{"../Control.Alt":194,"../Data.Functor":347}],260:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Semigroupoid = function (compose) {
@@ -28916,7 +30145,7 @@ module.exports = {
     semigroupoidFn: semigroupoidFn
 };
 
-},{}],251:[function(require,module,exports){
+},{}],261:[function(require,module,exports){
 /* global EventTarget */
 "use strict";
 
@@ -28928,7 +30157,7 @@ exports._readEventTarget = function (left) {
   };
 };
 
-},{}],252:[function(require,module,exports){
+},{}],262:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -29014,7 +30243,7 @@ module.exports = {
     ordEventType: ordEventType
 };
 
-},{"../Control.Applicative":195,"../Control.Monad.Except.Trans":228,"../Control.Semigroupoid":250,"../Data.Bifunctor":294,"../Data.Either":304,"../Data.Eq":306,"../Data.Foreign":314,"../Data.Identity":332,"../Data.List.Types":369,"../Data.Newtype":385,"../Data.Ord":392,"../Prelude":450,"../Unsafe.Coerce":466,"./foreign":251}],253:[function(require,module,exports){
+},{"../Control.Applicative":196,"../Control.Monad.Except.Trans":234,"../Control.Semigroupoid":260,"../Data.Bifunctor":304,"../Data.Either":326,"../Data.Eq":329,"../Data.Foreign":337,"../Data.Identity":355,"../Data.List.Types":392,"../Data.Newtype":408,"../Data.Ord":415,"../Prelude":475,"../Unsafe.Coerce":493,"./foreign":261}],263:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var DOM_Event_Types = require("../DOM.Event.Types");
@@ -29029,7 +30258,7 @@ module.exports = {
     readFileList: readFileList
 };
 
-},{"../DOM.Event.Types":252,"../Data.Foreign":314,"../Unsafe.Coerce":466}],254:[function(require,module,exports){
+},{"../DOM.Event.Types":262,"../Data.Foreign":337,"../Unsafe.Coerce":493}],264:[function(require,module,exports){
 "use strict";
 
 exports._readHTMLElement = function (failure) {
@@ -29045,7 +30274,7 @@ exports._readHTMLElement = function (failure) {
   };
 };
 
-},{}],255:[function(require,module,exports){
+},{}],265:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -29342,7 +30571,7 @@ module.exports = {
     windowToEventTarget: windowToEventTarget
 };
 
-},{"../Control.Applicative":195,"../Control.Monad.Eff":226,"../Control.Monad.Except.Trans":228,"../Control.Semigroupoid":250,"../DOM.Event.Types":252,"../DOM.Node.Types":262,"../Data.Either":304,"../Data.Foreign":314,"../Data.Identity":332,"../Data.List.Types":369,"../Prelude":450,"../Unsafe.Coerce":466,"./foreign":254}],256:[function(require,module,exports){
+},{"../Control.Applicative":196,"../Control.Monad.Eff":232,"../Control.Monad.Except.Trans":234,"../Control.Semigroupoid":260,"../DOM.Event.Types":262,"../DOM.Node.Types":272,"../Data.Either":326,"../Data.Foreign":337,"../Data.Identity":355,"../Data.List.Types":392,"../Prelude":475,"../Unsafe.Coerce":493,"./foreign":264}],266:[function(require,module,exports){
 "use strict";
 
 exports.document = function (window) {
@@ -29581,7 +30810,7 @@ exports._cancelIdleCallback = function(id) {
   };
 };
 
-},{}],257:[function(require,module,exports){
+},{}],267:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -29712,7 +30941,7 @@ module.exports = {
     url: $foreign.url
 };
 
-},{"../Control.Monad.Eff":226,"../Control.Semigroupoid":250,"../DOM":267,"../DOM.HTML.Types":255,"../DOM.WebStorage.Types":265,"../Data.Eq":306,"../Data.Functor":324,"../Data.Maybe":374,"../Data.Newtype":385,"../Data.Nullable":388,"../Data.Ord":392,"../Prelude":450,"./foreign":256}],258:[function(require,module,exports){
+},{"../Control.Monad.Eff":232,"../Control.Semigroupoid":260,"../DOM":277,"../DOM.HTML.Types":265,"../DOM.WebStorage.Types":275,"../Data.Eq":329,"../Data.Functor":347,"../Data.Maybe":397,"../Data.Newtype":408,"../Data.Nullable":411,"../Data.Ord":415,"../Prelude":475,"./foreign":266}],268:[function(require,module,exports){
 /* global window */
 "use strict";
 
@@ -29720,7 +30949,7 @@ exports.window = function () {
   return window;
 };
 
-},{}],259:[function(require,module,exports){
+},{}],269:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -29731,7 +30960,7 @@ module.exports = {
     window: $foreign.window
 };
 
-},{"../Control.Monad.Eff":226,"../DOM":267,"../DOM.HTML.Types":255,"./foreign":258}],260:[function(require,module,exports){
+},{"../Control.Monad.Eff":232,"../DOM":277,"../DOM.HTML.Types":265,"./foreign":268}],270:[function(require,module,exports){
 "use strict";
 
 exports._getElementById = function (id) {
@@ -29742,7 +30971,7 @@ exports._getElementById = function (id) {
   };
 };
 
-},{}],261:[function(require,module,exports){
+},{}],271:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -29763,7 +30992,7 @@ module.exports = {
     getElementById: getElementById
 };
 
-},{"../Control.Monad.Eff":226,"../Control.Semigroupoid":250,"../DOM":267,"../DOM.Node.Types":262,"../Data.Functor":324,"../Data.Maybe":374,"../Data.Nullable":388,"../Prelude":450,"./foreign":260}],262:[function(require,module,exports){
+},{"../Control.Monad.Eff":232,"../Control.Semigroupoid":260,"../DOM":277,"../DOM.Node.Types":272,"../Data.Functor":347,"../Data.Maybe":397,"../Data.Nullable":411,"../Prelude":475,"./foreign":270}],272:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var DOM_Event_Types = require("../DOM.Event.Types");
@@ -29827,7 +31056,7 @@ module.exports = {
     oOrdElementId: oOrdElementId
 };
 
-},{"../DOM.Event.Types":252,"../DOM.Util.FFI":264,"../Data.Eq":306,"../Data.Foreign":314,"../Data.Newtype":385,"../Data.Ord":392,"../Prelude":450,"../Unsafe.Coerce":466}],263:[function(require,module,exports){
+},{"../DOM.Event.Types":262,"../DOM.Util.FFI":274,"../Data.Eq":329,"../Data.Foreign":337,"../Data.Newtype":408,"../Data.Ord":415,"../Prelude":475,"../Unsafe.Coerce":493}],273:[function(require,module,exports){
 "use strict";
 
 exports._unsafeReadProtoTagged = function (name) {
@@ -29851,7 +31080,7 @@ exports._unsafeReadProtoTagged = function (name) {
   };
 };
 
-},{}],264:[function(require,module,exports){
+},{}],274:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -29875,7 +31104,7 @@ module.exports = {
     unsafeReadProtoTagged: unsafeReadProtoTagged
 };
 
-},{"../Control.Applicative":195,"../Control.Monad.Except":229,"../Control.Monad.Except.Trans":228,"../Control.Semigroupoid":250,"../Data.Either":304,"../Data.Foreign":314,"../Data.Identity":332,"../Data.List.Types":369,"../Prelude":450,"./foreign":263}],265:[function(require,module,exports){
+},{"../Control.Applicative":196,"../Control.Monad.Except":235,"../Control.Monad.Except.Trans":234,"../Control.Semigroupoid":260,"../Data.Either":326,"../Data.Foreign":337,"../Data.Identity":355,"../Data.List.Types":392,"../Prelude":475,"./foreign":273}],275:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Data_Foreign = require("../Data.Foreign");
@@ -29884,18 +31113,14 @@ module.exports = {
     readStorage: readStorage
 };
 
-},{"../Data.Foreign":314}],266:[function(require,module,exports){
+},{"../Data.Foreign":337}],276:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 module.exports = {};
 
-},{}],267:[function(require,module,exports){
-// Generated by purs version 0.11.6
-"use strict";
-var Control_Monad_Eff = require("../Control.Monad.Eff");
-module.exports = {};
-
-},{"../Control.Monad.Eff":226}],268:[function(require,module,exports){
+},{}],277:[function(require,module,exports){
+arguments[4][237][0].apply(exports,arguments)
+},{"../Control.Monad.Eff":232,"dup":237}],278:[function(require,module,exports){
 "use strict";
 
 function id(x) {
@@ -30002,7 +31227,7 @@ exports._compare = function _compare (EQ, GT, LT, a, b) {
   }
 };
 
-},{}],269:[function(require,module,exports){
+},{}],279:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -30183,7 +31408,7 @@ module.exports = {
     stringify: $foreign.stringify
 };
 
-},{"../Data.Eq":306,"../Data.Function":318,"../Data.Function.Uncurried":317,"../Data.Maybe":374,"../Data.Ord":392,"../Data.Ordering":393,"../Data.Show":411,"../Data.StrMap":415,"../Data.Tuple":429,"../Prelude":450,"../Unsafe.Coerce":466,"./foreign":268}],270:[function(require,module,exports){
+},{"../Data.Eq":329,"../Data.Function":341,"../Data.Function.Uncurried":340,"../Data.Maybe":397,"../Data.Ord":415,"../Data.Ordering":416,"../Data.Show":434,"../Data.StrMap":438,"../Data.Tuple":454,"../Prelude":475,"../Unsafe.Coerce":493,"./foreign":278}],280:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Applicative = require("../Control.Applicative");
@@ -30332,7 +31557,7 @@ module.exports = {
     decodeVoid: decodeVoid
 };
 
-},{"../Control.Applicative":195,"../Control.Apply":197,"../Control.Bind":201,"../Control.Semigroupoid":250,"../Data.Argonaut.Core":269,"../Data.Bifunctor":294,"../Data.Boolean":296,"../Data.Either":304,"../Data.Foldable":311,"../Data.Function":318,"../Data.Functor":324,"../Data.Int":336,"../Data.List":370,"../Data.List.Types":369,"../Data.Map":371,"../Data.Maybe":374,"../Data.Semigroup":407,"../Data.Show":411,"../Data.StrMap":415,"../Data.String":422,"../Data.Traversable":427,"../Data.Tuple":429,"../Data.Unit":433,"../Prelude":450}],271:[function(require,module,exports){
+},{"../Control.Applicative":196,"../Control.Apply":198,"../Control.Bind":202,"../Control.Semigroupoid":260,"../Data.Argonaut.Core":279,"../Data.Bifunctor":304,"../Data.Boolean":306,"../Data.Either":326,"../Data.Foldable":334,"../Data.Function":341,"../Data.Functor":347,"../Data.Int":359,"../Data.List":393,"../Data.List.Types":392,"../Data.Map":394,"../Data.Maybe":397,"../Data.Semigroup":430,"../Data.Show":434,"../Data.StrMap":438,"../Data.String":445,"../Data.Traversable":452,"../Data.Tuple":454,"../Data.Unit":458,"../Prelude":475}],281:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Applicative = require("../Control.Applicative");
@@ -30374,14 +31599,14 @@ module.exports = {
     getFieldOptional: getFieldOptional
 };
 
-},{"../Control.Applicative":195,"../Data.Argonaut.Core":269,"../Data.Argonaut.Decode.Class":270,"../Data.Either":304,"../Data.Function":318,"../Data.Functor":324,"../Data.Maybe":374,"../Data.Semigroup":407,"../Data.Show":411,"../Data.StrMap":415,"../Prelude":450}],272:[function(require,module,exports){
+},{"../Control.Applicative":196,"../Data.Argonaut.Core":279,"../Data.Argonaut.Decode.Class":280,"../Data.Either":326,"../Data.Function":341,"../Data.Functor":347,"../Data.Maybe":397,"../Data.Semigroup":430,"../Data.Show":434,"../Data.StrMap":438,"../Prelude":475}],282:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Data_Argonaut_Decode_Class = require("../Data.Argonaut.Decode.Class");
 var Data_Argonaut_Decode_Combinators = require("../Data.Argonaut.Decode.Combinators");
 module.exports = {};
 
-},{"../Data.Argonaut.Decode.Class":270,"../Data.Argonaut.Decode.Combinators":271}],273:[function(require,module,exports){
+},{"../Data.Argonaut.Decode.Class":280,"../Data.Argonaut.Decode.Combinators":281}],283:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Category = require("../Control.Category");
@@ -30495,7 +31720,7 @@ module.exports = {
     encodeVoid: encodeVoid
 };
 
-},{"../Control.Category":202,"../Control.Semigroupoid":250,"../Data.Argonaut.Core":269,"../Data.Either":304,"../Data.Function":318,"../Data.Functor":324,"../Data.Int":336,"../Data.List":370,"../Data.List.Types":369,"../Data.Map":371,"../Data.Maybe":374,"../Data.StrMap":415,"../Data.String":422,"../Data.Tuple":429,"../Data.Unfoldable":431,"../Data.Void":434,"../Prelude":450}],274:[function(require,module,exports){
+},{"../Control.Category":203,"../Control.Semigroupoid":260,"../Data.Argonaut.Core":279,"../Data.Either":326,"../Data.Function":341,"../Data.Functor":347,"../Data.Int":359,"../Data.List":393,"../Data.List.Types":392,"../Data.Map":394,"../Data.Maybe":397,"../Data.StrMap":438,"../Data.String":445,"../Data.Tuple":454,"../Data.Unfoldable":456,"../Data.Void":459,"../Prelude":475}],284:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Semigroupoid = require("../Control.Semigroupoid");
@@ -30525,14 +31750,14 @@ module.exports = {
     extend: extend
 };
 
-},{"../Control.Semigroupoid":250,"../Data.Argonaut.Core":269,"../Data.Argonaut.Encode.Class":273,"../Data.StrMap":415,"../Data.Tuple":429,"../Prelude":450}],275:[function(require,module,exports){
+},{"../Control.Semigroupoid":260,"../Data.Argonaut.Core":279,"../Data.Argonaut.Encode.Class":283,"../Data.StrMap":438,"../Data.Tuple":454,"../Prelude":475}],285:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Data_Argonaut_Encode_Class = require("../Data.Argonaut.Encode.Class");
 var Data_Argonaut_Encode_Combinators = require("../Data.Argonaut.Encode.Combinators");
 module.exports = {};
 
-},{"../Data.Argonaut.Encode.Class":273,"../Data.Argonaut.Encode.Combinators":274}],276:[function(require,module,exports){
+},{"../Data.Argonaut.Encode.Class":283,"../Data.Argonaut.Encode.Combinators":284}],286:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Applicative = require("../Control.Applicative");
@@ -30996,7 +32221,7 @@ module.exports = {
     decodeJsonJCursor: decodeJsonJCursor
 };
 
-},{"../Control.Applicative":195,"../Control.Apply":197,"../Control.Bind":201,"../Control.Semigroupoid":250,"../Data.Argonaut.Core":269,"../Data.Argonaut.Decode":272,"../Data.Argonaut.Decode.Class":270,"../Data.Argonaut.Encode":275,"../Data.Argonaut.Encode.Class":273,"../Data.Array":286,"../Data.Either":304,"../Data.Eq":306,"../Data.Foldable":311,"../Data.Function":318,"../Data.Functor":324,"../Data.HeytingAlgebra":331,"../Data.Int":336,"../Data.List":370,"../Data.List.Types":369,"../Data.Maybe":374,"../Data.Monoid":383,"../Data.Ord":392,"../Data.Ordering":393,"../Data.Ring":403,"../Data.Semigroup":407,"../Data.Semiring":409,"../Data.Show":411,"../Data.StrMap":415,"../Data.Tuple":429,"../Data.Unfoldable":431,"../Prelude":450}],277:[function(require,module,exports){
+},{"../Control.Applicative":196,"../Control.Apply":198,"../Control.Bind":202,"../Control.Semigroupoid":260,"../Data.Argonaut.Core":279,"../Data.Argonaut.Decode":282,"../Data.Argonaut.Decode.Class":280,"../Data.Argonaut.Encode":285,"../Data.Argonaut.Encode.Class":283,"../Data.Array":296,"../Data.Either":326,"../Data.Eq":329,"../Data.Foldable":334,"../Data.Function":341,"../Data.Functor":347,"../Data.HeytingAlgebra":354,"../Data.Int":359,"../Data.List":393,"../Data.List.Types":392,"../Data.Maybe":397,"../Data.Monoid":406,"../Data.Ord":415,"../Data.Ordering":416,"../Data.Ring":426,"../Data.Semigroup":430,"../Data.Semiring":432,"../Data.Show":434,"../Data.StrMap":438,"../Data.Tuple":454,"../Data.Unfoldable":456,"../Prelude":475}],287:[function(require,module,exports){
 "use strict";
 
 exports._jsonParser = function (fail, succ, s) {
@@ -31008,7 +32233,7 @@ exports._jsonParser = function (fail, succ, s) {
   }
 };
 
-},{}],278:[function(require,module,exports){
+},{}],288:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -31022,7 +32247,7 @@ module.exports = {
     jsonParser: jsonParser
 };
 
-},{"../Data.Argonaut.Core":269,"../Data.Either":304,"../Data.Function.Uncurried":317,"./foreign":277}],279:[function(require,module,exports){
+},{"../Data.Argonaut.Core":279,"../Data.Either":326,"../Data.Function.Uncurried":340,"./foreign":287}],289:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Data_Argonaut_Core = require("../Data.Argonaut.Core");
@@ -31055,7 +32280,7 @@ module.exports = {
     _String: _String
 };
 
-},{"../Data.Argonaut.Core":269,"../Data.Lens":365,"../Data.Lens.Prism":361}],280:[function(require,module,exports){
+},{"../Data.Argonaut.Core":279,"../Data.Lens":388,"../Data.Lens.Prism":384}],290:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Category = require("../Control.Category");
@@ -31103,7 +32328,7 @@ module.exports = {
     _JsonString: _JsonString
 };
 
-},{"../Control.Category":202,"../Control.Semigroupoid":250,"../Data.Argonaut.Core":269,"../Data.Lens":365,"../Data.Lens.Fold":340,"../Prelude":450}],281:[function(require,module,exports){
+},{"../Control.Category":203,"../Control.Semigroupoid":260,"../Data.Argonaut.Core":279,"../Data.Lens":388,"../Data.Lens.Fold":363,"../Prelude":475}],291:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Data_Argonaut_Core = require("../Data.Argonaut.Core");
@@ -31115,7 +32340,7 @@ var Data_Argonaut_Prisms = require("../Data.Argonaut.Prisms");
 var Data_Argonaut_Traversals = require("../Data.Argonaut.Traversals");
 module.exports = {};
 
-},{"../Data.Argonaut.Core":269,"../Data.Argonaut.Decode":272,"../Data.Argonaut.Encode":275,"../Data.Argonaut.JCursor":276,"../Data.Argonaut.Parser":278,"../Data.Argonaut.Prisms":279,"../Data.Argonaut.Traversals":280}],282:[function(require,module,exports){
+},{"../Data.Argonaut.Core":279,"../Data.Argonaut.Decode":282,"../Data.Argonaut.Encode":285,"../Data.Argonaut.JCursor":286,"../Data.Argonaut.Parser":288,"../Data.Argonaut.Prisms":289,"../Data.Argonaut.Traversals":290}],292:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Applicative = require("../Control.Applicative");
@@ -31214,7 +32439,7 @@ module.exports = {
     pushWhile: pushWhile
 };
 
-},{"../Control.Applicative":195,"../Control.Bind":201,"../Control.Monad.Eff":226,"../Control.Monad.ST":237,"../Control.Semigroupoid":250,"../Data.Array.ST":284,"../Data.Function":318,"../Data.Functor":324,"../Data.HeytingAlgebra":331,"../Data.Maybe":374,"../Data.Semiring":409,"../Prelude":450}],283:[function(require,module,exports){
+},{"../Control.Applicative":196,"../Control.Bind":202,"../Control.Monad.Eff":232,"../Control.Monad.ST":247,"../Control.Semigroupoid":260,"../Data.Array.ST":294,"../Data.Function":341,"../Data.Functor":347,"../Data.HeytingAlgebra":354,"../Data.Maybe":397,"../Data.Semiring":432,"../Prelude":475}],293:[function(require,module,exports){
 "use strict";
 
 exports.runSTArray = function (f) {
@@ -31284,7 +32509,7 @@ exports.toAssocArray = function (xs) {
   };
 };
 
-},{}],284:[function(require,module,exports){
+},{}],294:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -31296,8 +32521,11 @@ var Control_Semigroupoid = require("../Control.Semigroupoid");
 var Data_Maybe = require("../Data.Maybe");
 var Prelude = require("../Prelude");
 var Unsafe_Coerce = require("../Unsafe.Coerce");
-var unsafeFreeze = function ($7) {
+var unsafeThaw = function ($7) {
     return Control_Applicative.pure(Control_Monad_Eff.applicativeEff)(Unsafe_Coerce.unsafeCoerce($7));
+};
+var unsafeFreeze = function ($8) {
+    return Control_Applicative.pure(Control_Monad_Eff.applicativeEff)(Unsafe_Coerce.unsafeCoerce($8));
 };
 var thaw = $foreign.copyImpl;
 var withArray = function (f) {
@@ -31326,7 +32554,7 @@ var modifySTArray = function (xs) {
                 if (v instanceof Data_Maybe.Nothing) {
                     return false;
                 };
-                throw new Error("Failed pattern match at Data.Array.ST line 120, column 3 - line 122, column 26: " + [ v.constructor.name ]);
+                throw new Error("Failed pattern match at Data.Array.ST line 127, column 3 - line 129, column 26: " + [ v.constructor.name ]);
             };
         };
     };
@@ -31339,6 +32567,7 @@ module.exports = {
     pushSTArray: pushSTArray, 
     thaw: thaw, 
     unsafeFreeze: unsafeFreeze, 
+    unsafeThaw: unsafeThaw, 
     withArray: withArray, 
     emptySTArray: $foreign.emptySTArray, 
     pokeSTArray: $foreign.pokeSTArray, 
@@ -31348,7 +32577,7 @@ module.exports = {
     toAssocArray: $foreign.toAssocArray
 };
 
-},{"../Control.Applicative":195,"../Control.Bind":201,"../Control.Monad.Eff":226,"../Control.Monad.ST":237,"../Control.Semigroupoid":250,"../Data.Maybe":374,"../Prelude":450,"../Unsafe.Coerce":466,"./foreign":283}],285:[function(require,module,exports){
+},{"../Control.Applicative":196,"../Control.Bind":202,"../Control.Monad.Eff":232,"../Control.Monad.ST":247,"../Control.Semigroupoid":260,"../Data.Maybe":397,"../Prelude":475,"../Unsafe.Coerce":493,"./foreign":293}],295:[function(require,module,exports){
 "use strict";
 
 //------------------------------------------------------------------------------
@@ -31396,7 +32625,6 @@ exports.replicate = typeof Array.prototype.fill === "function" ?
     replicatePolyfill;
 
 exports.fromFoldableImpl = (function () {
-  // jshint maxparams: 2
   function Cons(head, tail) {
     this.head = head;
     this.tail = tail;
@@ -31600,7 +32828,6 @@ exports.partition = function (f) {
 
 exports.sortImpl = function (f) {
   return function (l) {
-    // jshint maxparams: 2
     return l.slice().sort(function (x, y) {
       return f(x)(y);
     });
@@ -31658,7 +32885,7 @@ exports.unsafeIndexImpl = function (xs) {
   };
 };
 
-},{}],286:[function(require,module,exports){
+},{}],296:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -31763,7 +32990,7 @@ var sortBy = function (comp) {
                 if (v instanceof Data_Ordering.LT) {
                     return -1 | 0;
                 };
-                throw new Error("Failed pattern match at Data.Array line 477, column 15 - line 482, column 1: " + [ v.constructor.name ]);
+                throw new Error("Failed pattern match at Data.Array line 698, column 15 - line 703, column 1: " + [ v.constructor.name ]);
             };
         };
         return $foreign.sortImpl(comp$prime)(xs);
@@ -31796,7 +33023,7 @@ var nubBy = function (eq) {
         if (v instanceof Data_Maybe.Nothing) {
             return [  ];
         };
-        throw new Error("Failed pattern match at Data.Array line 594, column 3 - line 596, column 18: " + [ v.constructor.name ]);
+        throw new Error("Failed pattern match at Data.Array line 888, column 3 - line 890, column 18: " + [ v.constructor.name ]);
     };
 };
 var nub = function (dictEq) {
@@ -31844,7 +33071,7 @@ var init = function (xs) {
     if (Data_Boolean.otherwise) {
         return new Data_Maybe.Just($foreign.slice(0)($foreign.length(xs) - 1 | 0)(xs));
     };
-    throw new Error("Failed pattern match at Data.Array line 251, column 1 - line 251, column 45: " + [ xs.constructor.name ]);
+    throw new Error("Failed pattern match at Data.Array line 319, column 1 - line 319, column 45: " + [ xs.constructor.name ]);
 };
 var index = $foreign.indexImpl(Data_Maybe.Just.create)(Data_Maybe.Nothing.value);
 var last = function (xs) {
@@ -31890,7 +33117,7 @@ var span = function (p) {
                     $tco_done = true;
                     return Data_Maybe.Nothing.value;
                 };
-                throw new Error("Failed pattern match at Data.Array line 552, column 5 - line 554, column 25: " + [ v.constructor.name ]);
+                throw new Error("Failed pattern match at Data.Array line 830, column 5 - line 832, column 25: " + [ v.constructor.name ]);
             };
             while (!$tco_done) {
                 $tco_result = $tco_loop($copy_i);
@@ -31916,7 +33143,7 @@ var span = function (p) {
                 rest: [  ]
             };
         };
-        throw new Error("Failed pattern match at Data.Array line 539, column 3 - line 545, column 30: " + [ breakIndex.constructor.name ]);
+        throw new Error("Failed pattern match at Data.Array line 817, column 3 - line 823, column 30: " + [ breakIndex.constructor.name ]);
     };
 };
 var takeWhile = function (p) {
@@ -31994,7 +33221,7 @@ var foldRecM = function (dictMonadRec) {
                                 }));
                             });
                         };
-                        throw new Error("Failed pattern match at Data.Array line 704, column 3 - line 708, column 42: " + [ res.constructor.name, i.constructor.name ]);
+                        throw new Error("Failed pattern match at Data.Array line 1057, column 3 - line 1061, column 42: " + [ res.constructor.name, i.constructor.name ]);
                     };
                 };
                 return Control_Monad_Rec_Class.tailRecM2(dictMonadRec)(go)(a)(0);
@@ -32131,7 +33358,7 @@ var alterAt = function (i) {
                 if (v instanceof Data_Maybe.Just) {
                     return updateAt(i)(v.value0)(xs);
                 };
-                throw new Error("Failed pattern match at Data.Array line 392, column 10 - line 394, column 32: " + [ v.constructor.name ]);
+                throw new Error("Failed pattern match at Data.Array line 540, column 10 - line 542, column 32: " + [ v.constructor.name ]);
             };
             return Data_Maybe.maybe(Data_Maybe.Nothing.value)(go)(index(xs)(i));
         };
@@ -32210,9 +33437,9 @@ module.exports = {
     zipWith: $foreign.zipWith
 };
 
-},{"../Control.Alt":193,"../Control.Alternative":194,"../Control.Applicative":195,"../Control.Apply":197,"../Control.Bind":201,"../Control.Category":202,"../Control.Lazy":206,"../Control.Monad.Eff":226,"../Control.Monad.Rec.Class":235,"../Control.Monad.ST":237,"../Control.Semigroupoid":250,"../Data.Array.ST":284,"../Data.Array.ST.Iterator":282,"../Data.Boolean":296,"../Data.Eq":306,"../Data.Foldable":311,"../Data.Function":318,"../Data.Functor":324,"../Data.HeytingAlgebra":331,"../Data.Maybe":374,"../Data.NonEmpty":386,"../Data.Ord":392,"../Data.Ordering":393,"../Data.Ring":403,"../Data.Semigroup":407,"../Data.Semiring":409,"../Data.Traversable":427,"../Data.Tuple":429,"../Data.Unfoldable":431,"../Partial.Unsafe":447,"../Prelude":450,"./foreign":285}],287:[function(require,module,exports){
-arguments[4][266][0].apply(exports,arguments)
-},{"dup":266}],288:[function(require,module,exports){
+},{"../Control.Alt":194,"../Control.Alternative":195,"../Control.Applicative":196,"../Control.Apply":198,"../Control.Bind":202,"../Control.Category":203,"../Control.Lazy":207,"../Control.Monad.Eff":232,"../Control.Monad.Rec.Class":245,"../Control.Monad.ST":247,"../Control.Semigroupoid":260,"../Data.Array.ST":294,"../Data.Array.ST.Iterator":292,"../Data.Boolean":306,"../Data.Eq":329,"../Data.Foldable":334,"../Data.Function":341,"../Data.Functor":347,"../Data.HeytingAlgebra":354,"../Data.Maybe":397,"../Data.NonEmpty":409,"../Data.Ord":415,"../Data.Ordering":416,"../Data.Ring":426,"../Data.Semigroup":430,"../Data.Semiring":432,"../Data.Traversable":452,"../Data.Tuple":454,"../Data.Unfoldable":456,"../Partial.Unsafe":472,"../Prelude":475,"./foreign":295}],297:[function(require,module,exports){
+arguments[4][276][0].apply(exports,arguments)
+},{"dup":276}],298:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Applicative = require("../Control.Applicative");
@@ -32532,7 +33759,7 @@ module.exports = {
     bifoldableWrap: bifoldableWrap
 };
 
-},{"../Control.Applicative":195,"../Control.Apply":197,"../Control.Category":202,"../Control.Semigroupoid":250,"../Data.Bifunctor.Clown":289,"../Data.Bifunctor.Flip":290,"../Data.Bifunctor.Joker":291,"../Data.Bifunctor.Product":292,"../Data.Bifunctor.Wrap":293,"../Data.Foldable":311,"../Data.Function":318,"../Data.Monoid":383,"../Data.Monoid.Conj":378,"../Data.Monoid.Disj":379,"../Data.Monoid.Dual":380,"../Data.Monoid.Endo":381,"../Data.Newtype":385,"../Data.Semigroup":407,"../Data.Unit":433,"../Prelude":450}],289:[function(require,module,exports){
+},{"../Control.Applicative":196,"../Control.Apply":198,"../Control.Category":203,"../Control.Semigroupoid":260,"../Data.Bifunctor.Clown":299,"../Data.Bifunctor.Flip":300,"../Data.Bifunctor.Joker":301,"../Data.Bifunctor.Product":302,"../Data.Bifunctor.Wrap":303,"../Data.Foldable":334,"../Data.Function":341,"../Data.Monoid":406,"../Data.Monoid.Conj":401,"../Data.Monoid.Disj":402,"../Data.Monoid.Dual":403,"../Data.Monoid.Endo":404,"../Data.Newtype":408,"../Data.Semigroup":430,"../Data.Unit":458,"../Prelude":475}],299:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Applicative = require("../Control.Applicative");
@@ -32608,7 +33835,7 @@ module.exports = {
     biapplicativeClown: biapplicativeClown
 };
 
-},{"../Control.Applicative":195,"../Control.Apply":197,"../Control.Biapplicative":198,"../Control.Biapply":199,"../Data.Bifunctor":294,"../Data.Eq":306,"../Data.Functor":324,"../Data.Newtype":385,"../Data.Ord":392,"../Data.Semigroup":407,"../Data.Show":411,"../Prelude":450}],290:[function(require,module,exports){
+},{"../Control.Applicative":196,"../Control.Apply":198,"../Control.Biapplicative":199,"../Control.Biapply":200,"../Data.Bifunctor":304,"../Data.Eq":329,"../Data.Functor":347,"../Data.Newtype":408,"../Data.Ord":415,"../Data.Semigroup":430,"../Data.Show":434,"../Prelude":475}],300:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Biapplicative = require("../Control.Biapplicative");
@@ -32684,7 +33911,7 @@ module.exports = {
     biapplicativeFlip: biapplicativeFlip
 };
 
-},{"../Control.Biapplicative":198,"../Control.Biapply":199,"../Data.Bifunctor":294,"../Data.Eq":306,"../Data.Functor":324,"../Data.Newtype":385,"../Data.Ord":392,"../Data.Semigroup":407,"../Data.Show":411,"../Prelude":450}],291:[function(require,module,exports){
+},{"../Control.Biapplicative":199,"../Control.Biapply":200,"../Data.Bifunctor":304,"../Data.Eq":329,"../Data.Functor":347,"../Data.Newtype":408,"../Data.Ord":415,"../Data.Semigroup":430,"../Data.Show":434,"../Prelude":475}],301:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Applicative = require("../Control.Applicative");
@@ -32762,7 +33989,7 @@ module.exports = {
     biapplicativeJoker: biapplicativeJoker
 };
 
-},{"../Control.Applicative":195,"../Control.Apply":197,"../Control.Biapplicative":198,"../Control.Biapply":199,"../Data.Bifunctor":294,"../Data.Eq":306,"../Data.Functor":324,"../Data.Newtype":385,"../Data.Ord":392,"../Data.Semigroup":407,"../Data.Show":411,"../Prelude":450}],292:[function(require,module,exports){
+},{"../Control.Applicative":196,"../Control.Apply":198,"../Control.Biapplicative":199,"../Control.Biapply":200,"../Data.Bifunctor":304,"../Data.Eq":329,"../Data.Functor":347,"../Data.Newtype":408,"../Data.Ord":415,"../Data.Semigroup":430,"../Data.Show":434,"../Prelude":475}],302:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Biapplicative = require("../Control.Biapplicative");
@@ -32864,7 +34091,7 @@ module.exports = {
     biapplicativeProduct: biapplicativeProduct
 };
 
-},{"../Control.Biapplicative":198,"../Control.Biapply":199,"../Data.Bifunctor":294,"../Data.Eq":306,"../Data.HeytingAlgebra":331,"../Data.Ord":392,"../Data.Ordering":393,"../Data.Semigroup":407,"../Data.Show":411,"../Prelude":450}],293:[function(require,module,exports){
+},{"../Control.Biapplicative":199,"../Control.Biapply":200,"../Data.Bifunctor":304,"../Data.Eq":329,"../Data.HeytingAlgebra":354,"../Data.Ord":415,"../Data.Ordering":416,"../Data.Semigroup":430,"../Data.Show":434,"../Prelude":475}],303:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Biapplicative = require("../Control.Biapplicative");
@@ -32940,7 +34167,7 @@ module.exports = {
     biapplicativeWrap: biapplicativeWrap
 };
 
-},{"../Control.Biapplicative":198,"../Control.Biapply":199,"../Data.Bifunctor":294,"../Data.Eq":306,"../Data.Functor":324,"../Data.Newtype":385,"../Data.Ord":392,"../Data.Semigroup":407,"../Data.Show":411,"../Prelude":450}],294:[function(require,module,exports){
+},{"../Control.Biapplicative":199,"../Control.Biapply":200,"../Data.Bifunctor":304,"../Data.Eq":329,"../Data.Functor":347,"../Data.Newtype":408,"../Data.Ord":415,"../Data.Semigroup":430,"../Data.Show":434,"../Prelude":475}],304:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Category = require("../Control.Category");
@@ -32965,7 +34192,7 @@ module.exports = {
     rmap: rmap
 };
 
-},{"../Control.Category":202}],295:[function(require,module,exports){
+},{"../Control.Category":203}],305:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Applicative = require("../Control.Applicative");
@@ -33165,7 +34392,7 @@ module.exports = {
     bitraversableWrap: bitraversableWrap
 };
 
-},{"../Control.Applicative":195,"../Control.Apply":197,"../Control.Category":202,"../Data.Bifoldable":288,"../Data.Bifunctor":294,"../Data.Bifunctor.Clown":289,"../Data.Bifunctor.Flip":290,"../Data.Bifunctor.Joker":291,"../Data.Bifunctor.Product":292,"../Data.Bifunctor.Wrap":293,"../Data.Functor":324,"../Data.Traversable":427,"../Prelude":450}],296:[function(require,module,exports){
+},{"../Control.Applicative":196,"../Control.Apply":198,"../Control.Category":203,"../Data.Bifoldable":298,"../Data.Bifunctor":304,"../Data.Bifunctor.Clown":299,"../Data.Bifunctor.Flip":300,"../Data.Bifunctor.Joker":301,"../Data.Bifunctor.Product":302,"../Data.Bifunctor.Wrap":303,"../Data.Functor":347,"../Data.Traversable":452,"../Prelude":475}],306:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var otherwise = true;
@@ -33173,7 +34400,7 @@ module.exports = {
     otherwise: otherwise
 };
 
-},{}],297:[function(require,module,exports){
+},{}],307:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Data_HeytingAlgebra = require("../Data.HeytingAlgebra");
@@ -33199,7 +34426,7 @@ module.exports = {
     booleanAlgebraFn: booleanAlgebraFn
 };
 
-},{"../Data.HeytingAlgebra":331,"../Data.Unit":433}],298:[function(require,module,exports){
+},{"../Data.HeytingAlgebra":354,"../Data.Unit":458}],308:[function(require,module,exports){
 "use strict";
 
 exports.topInt = 2147483647;
@@ -33208,7 +34435,7 @@ exports.bottomInt = -2147483648;
 exports.topChar = String.fromCharCode(65535);
 exports.bottomChar = String.fromCharCode(0);
 
-},{}],299:[function(require,module,exports){
+},{}],309:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -33252,7 +34479,480 @@ module.exports = {
     boundedUnit: boundedUnit
 };
 
-},{"../Data.Ord":392,"../Data.Ordering":393,"../Data.Unit":433,"./foreign":298}],300:[function(require,module,exports){
+},{"../Data.Ord":415,"../Data.Ordering":416,"../Data.Unit":458,"./foreign":308}],310:[function(require,module,exports){
+// Generated by purs version 0.11.6
+"use strict";
+var Control_Alt = require("../Control.Alt");
+var Control_Alternative = require("../Control.Alternative");
+var Control_Applicative = require("../Control.Applicative");
+var Control_Apply = require("../Control.Apply");
+var Control_Bind = require("../Control.Bind");
+var Control_Monad = require("../Control.Monad");
+var Control_MonadPlus = require("../Control.MonadPlus");
+var Control_MonadZero = require("../Control.MonadZero");
+var Control_Plus = require("../Control.Plus");
+var Data_CatQueue = require("../Data.CatQueue");
+var Data_Foldable = require("../Data.Foldable");
+var Data_Function = require("../Data.Function");
+var Data_Functor = require("../Data.Functor");
+var Data_List = require("../Data.List");
+var Data_List_Types = require("../Data.List.Types");
+var Data_Maybe = require("../Data.Maybe");
+var Data_Monoid = require("../Data.Monoid");
+var Data_NaturalTransformation = require("../Data.NaturalTransformation");
+var Data_Semigroup = require("../Data.Semigroup");
+var Data_Show = require("../Data.Show");
+var Data_Traversable = require("../Data.Traversable");
+var Data_Tuple = require("../Data.Tuple");
+var Data_Unfoldable = require("../Data.Unfoldable");
+var CatNil = (function () {
+    function CatNil() {
+
+    };
+    CatNil.value = new CatNil();
+    return CatNil;
+})();
+var CatCons = (function () {
+    function CatCons(value0, value1) {
+        this.value0 = value0;
+        this.value1 = value1;
+    };
+    CatCons.create = function (value0) {
+        return function (value1) {
+            return new CatCons(value0, value1);
+        };
+    };
+    return CatCons;
+})();
+var showCatList = function (dictShow) {
+    return new Data_Show.Show(function (v) {
+        if (v instanceof CatNil) {
+            return "CatNil";
+        };
+        if (v instanceof CatCons) {
+            return "(CatList " + (Data_Show.show(dictShow)(v.value0) + (" " + (Data_Show.show(Data_CatQueue.showCatQueue(showCatList(dictShow)))(v.value1) + ")")));
+        };
+        throw new Error("Failed pattern match at Data.CatList line 153, column 1 - line 153, column 51: " + [ v.constructor.name ]);
+    });
+};
+var $$null = function (v) {
+    if (v instanceof CatNil) {
+        return true;
+    };
+    return false;
+};
+var link = function (v) {
+    return function (cat) {
+        if (v instanceof CatNil) {
+            return cat;
+        };
+        if (v instanceof CatCons) {
+            return new CatCons(v.value0, Data_CatQueue.snoc(v.value1)(cat));
+        };
+        throw new Error("Failed pattern match at Data.CatList line 110, column 1 - line 110, column 54: " + [ v.constructor.name, cat.constructor.name ]);
+    };
+};
+var foldr = function (k) {
+    return function (b) {
+        return function (q) {
+            var foldl = function ($copy_v) {
+                return function ($copy_c) {
+                    return function ($copy_v1) {
+                        var $tco_var_v = $copy_v;
+                        var $tco_var_c = $copy_c;
+                        var $tco_done = false;
+                        var $tco_result;
+                        function $tco_loop(v, c, v1) {
+                            if (v1 instanceof Data_List_Types.Nil) {
+                                $tco_done = true;
+                                return c;
+                            };
+                            if (v1 instanceof Data_List_Types.Cons) {
+                                $tco_var_v = v;
+                                $tco_var_c = v(c)(v1.value0);
+                                $copy_v1 = v1.value1;
+                                return;
+                            };
+                            throw new Error("Failed pattern match at Data.CatList line 125, column 3 - line 125, column 59: " + [ v.constructor.name, c.constructor.name, v1.constructor.name ]);
+                        };
+                        while (!$tco_done) {
+                            $tco_result = $tco_loop($tco_var_v, $tco_var_c, $copy_v1);
+                        };
+                        return $tco_result;
+                    };
+                };
+            };
+            var go = function ($copy_xs) {
+                return function ($copy_ys) {
+                    var $tco_var_xs = $copy_xs;
+                    var $tco_done = false;
+                    var $tco_result;
+                    function $tco_loop(xs, ys) {
+                        var v = Data_CatQueue.uncons(xs);
+                        if (v instanceof Data_Maybe.Nothing) {
+                            $tco_done = true;
+                            return foldl(function (x) {
+                                return function (i) {
+                                    return i(x);
+                                };
+                            })(b)(ys);
+                        };
+                        if (v instanceof Data_Maybe.Just) {
+                            $tco_var_xs = v.value0.value1;
+                            $copy_ys = new Data_List_Types.Cons(k(v.value0.value0), ys);
+                            return;
+                        };
+                        throw new Error("Failed pattern match at Data.CatList line 121, column 14 - line 123, column 67: " + [ v.constructor.name ]);
+                    };
+                    while (!$tco_done) {
+                        $tco_result = $tco_loop($tco_var_xs, $copy_ys);
+                    };
+                    return $tco_result;
+                };
+            };
+            return go(q)(Data_List_Types.Nil.value);
+        };
+    };
+};
+var uncons = function (v) {
+    if (v instanceof CatNil) {
+        return Data_Maybe.Nothing.value;
+    };
+    if (v instanceof CatCons) {
+        return new Data_Maybe.Just(new Data_Tuple.Tuple(v.value0, (function () {
+            var $41 = Data_CatQueue["null"](v.value1);
+            if ($41) {
+                return CatNil.value;
+            };
+            return foldr(link)(CatNil.value)(v.value1);
+        })()));
+    };
+    throw new Error("Failed pattern match at Data.CatList line 101, column 1 - line 101, column 61: " + [ v.constructor.name ]);
+};
+var foldMap = function (dictMonoid) {
+    return function (f) {
+        return function (v) {
+            if (v instanceof CatNil) {
+                return Data_Monoid.mempty(dictMonoid);
+            };
+            if (v instanceof CatCons) {
+                var d = (function () {
+                    var $46 = Data_CatQueue["null"](v.value1);
+                    if ($46) {
+                        return CatNil.value;
+                    };
+                    return foldr(link)(CatNil.value)(v.value1);
+                })();
+                return Data_Semigroup.append(dictMonoid.Semigroup0())(f(v.value0))(foldMap(dictMonoid)(f)(d));
+            };
+            throw new Error("Failed pattern match at Data.CatList line 141, column 1 - line 141, column 62: " + [ f.constructor.name, v.constructor.name ]);
+        };
+    };
+};
+var foldableCatList = new Data_Foldable.Foldable(function (dictMonoid) {
+    return function (f) {
+        return function (l) {
+            return foldMap(dictMonoid)(f)(l);
+        };
+    };
+}, function (f) {
+    return function (s) {
+        return function (l) {
+            return Data_Foldable.foldlDefault(foldableCatList)(f)(s)(l);
+        };
+    };
+}, function (f) {
+    return function (s) {
+        return function (l) {
+            return Data_Foldable.foldrDefault(foldableCatList)(f)(s)(l);
+        };
+    };
+});
+var empty = CatNil.value;
+var append = function (v) {
+    return function (v1) {
+        if (v1 instanceof CatNil) {
+            return v;
+        };
+        if (v instanceof CatNil) {
+            return v1;
+        };
+        return link(v)(v1);
+    };
+};
+var cons = function (a) {
+    return function (cat) {
+        return append(new CatCons(a, Data_CatQueue.empty))(cat);
+    };
+};
+var map = function (v) {
+    return function (v1) {
+        if (v1 instanceof CatNil) {
+            return CatNil.value;
+        };
+        if (v1 instanceof CatCons) {
+            var d = (function () {
+                var $53 = Data_CatQueue["null"](v1.value1);
+                if ($53) {
+                    return CatNil.value;
+                };
+                return foldr(link)(CatNil.value)(v1.value1);
+            })();
+            return cons(v(v1.value0))(map(v)(d));
+        };
+        throw new Error("Failed pattern match at Data.CatList line 135, column 1 - line 135, column 54: " + [ v.constructor.name, v1.constructor.name ]);
+    };
+};
+var functorCatList = new Data_Functor.Functor(map);
+var singleton = function (a) {
+    return cons(a)(CatNil.value);
+};
+var traversableCatList = new Data_Traversable.Traversable(function () {
+    return foldableCatList;
+}, function () {
+    return functorCatList;
+}, function (dictApplicative) {
+    return function (v) {
+        if (v instanceof CatNil) {
+            return Control_Applicative.pure(dictApplicative)(CatNil.value);
+        };
+        if (v instanceof CatCons) {
+            var d = (function () {
+                var $57 = Data_CatQueue["null"](v.value1);
+                if ($57) {
+                    return CatNil.value;
+                };
+                return foldr(link)(CatNil.value)(v.value1);
+            })();
+            return Control_Apply.apply(dictApplicative.Apply0())(Data_Functor.map((dictApplicative.Apply0()).Functor0())(cons)(v.value0))(Data_Traversable.sequence(traversableCatList)(dictApplicative)(d));
+        };
+        throw new Error("Failed pattern match at Data.CatList line 169, column 1 - line 169, column 51: " + [ v.constructor.name ]);
+    };
+}, function (dictApplicative) {
+    return function (v) {
+        return function (v1) {
+            if (v1 instanceof CatNil) {
+                return Control_Applicative.pure(dictApplicative)(CatNil.value);
+            };
+            if (v1 instanceof CatCons) {
+                var d = (function () {
+                    var $62 = Data_CatQueue["null"](v1.value1);
+                    if ($62) {
+                        return CatNil.value;
+                    };
+                    return foldr(link)(CatNil.value)(v1.value1);
+                })();
+                return Control_Apply.apply(dictApplicative.Apply0())(Data_Functor.map((dictApplicative.Apply0()).Functor0())(cons)(v(v1.value0)))(Data_Traversable.traverse(traversableCatList)(dictApplicative)(v)(d));
+            };
+            throw new Error("Failed pattern match at Data.CatList line 169, column 1 - line 169, column 51: " + [ v.constructor.name, v1.constructor.name ]);
+        };
+    };
+});
+var semigroupCatList = new Data_Semigroup.Semigroup(append);
+var monoidCatList = new Data_Monoid.Monoid(function () {
+    return semigroupCatList;
+}, CatNil.value);
+var monadCatList = new Control_Monad.Monad(function () {
+    return applicativeCatList;
+}, function () {
+    return bindCatList;
+});
+var bindCatList = new Control_Bind.Bind(function () {
+    return applyCatList;
+}, Data_Function.flip(foldMap(monoidCatList)));
+var applyCatList = new Control_Apply.Apply(function () {
+    return functorCatList;
+}, Control_Monad.ap(monadCatList));
+var applicativeCatList = new Control_Applicative.Applicative(function () {
+    return applyCatList;
+}, singleton);
+var fromFoldable = function (dictFoldable) {
+    return function (f) {
+        return Data_Foldable.foldMap(dictFoldable)(monoidCatList)(singleton)(f);
+    };
+};
+var snoc = function (cat) {
+    return function (a) {
+        return append(cat)(new CatCons(a, Data_CatQueue.empty));
+    };
+};
+var unfoldableCatList = new Data_Unfoldable.Unfoldable(function (f) {
+    return function (b) {
+        var go = function ($copy_source) {
+            return function ($copy_memo) {
+                var $tco_var_source = $copy_source;
+                var $tco_done = false;
+                var $tco_result;
+                function $tco_loop(source, memo) {
+                    var v = f(source);
+                    if (v instanceof Data_Maybe.Nothing) {
+                        $tco_done = true;
+                        return memo;
+                    };
+                    if (v instanceof Data_Maybe.Just) {
+                        $tco_var_source = v.value0.value1;
+                        $copy_memo = snoc(memo)(v.value0.value0);
+                        return;
+                    };
+                    throw new Error("Failed pattern match at Data.CatList line 165, column 24 - line 167, column 57: " + [ v.constructor.name ]);
+                };
+                while (!$tco_done) {
+                    $tco_result = $tco_loop($tco_var_source, $copy_memo);
+                };
+                return $tco_result;
+            };
+        };
+        return go(b)(CatNil.value);
+    };
+});
+var altCatList = new Control_Alt.Alt(function () {
+    return functorCatList;
+}, append);
+var plusCatList = new Control_Plus.Plus(function () {
+    return altCatList;
+}, empty);
+var alternativeCatList = new Control_Alternative.Alternative(function () {
+    return applicativeCatList;
+}, function () {
+    return plusCatList;
+});
+var monadZeroCatList = new Control_MonadZero.MonadZero(function () {
+    return alternativeCatList;
+}, function () {
+    return monadCatList;
+});
+var monadPlusCatList = new Control_MonadPlus.MonadPlus(function () {
+    return monadZeroCatList;
+});
+module.exports = {
+    CatNil: CatNil, 
+    CatCons: CatCons, 
+    append: append, 
+    cons: cons, 
+    empty: empty, 
+    fromFoldable: fromFoldable, 
+    "null": $$null, 
+    snoc: snoc, 
+    uncons: uncons, 
+    semigroupCatList: semigroupCatList, 
+    monoidCatList: monoidCatList, 
+    showCatList: showCatList, 
+    foldableCatList: foldableCatList, 
+    unfoldableCatList: unfoldableCatList, 
+    traversableCatList: traversableCatList, 
+    functorCatList: functorCatList, 
+    applyCatList: applyCatList, 
+    applicativeCatList: applicativeCatList, 
+    bindCatList: bindCatList, 
+    monadCatList: monadCatList, 
+    altCatList: altCatList, 
+    plusCatList: plusCatList, 
+    alternativeCatList: alternativeCatList, 
+    monadZeroCatList: monadZeroCatList, 
+    monadPlusCatList: monadPlusCatList
+};
+
+},{"../Control.Alt":194,"../Control.Alternative":195,"../Control.Applicative":196,"../Control.Apply":198,"../Control.Bind":202,"../Control.Monad":254,"../Control.MonadPlus":255,"../Control.MonadZero":256,"../Control.Plus":259,"../Data.CatQueue":311,"../Data.Foldable":334,"../Data.Function":341,"../Data.Functor":347,"../Data.List":393,"../Data.List.Types":392,"../Data.Maybe":397,"../Data.Monoid":406,"../Data.NaturalTransformation":407,"../Data.Semigroup":430,"../Data.Show":434,"../Data.Traversable":452,"../Data.Tuple":454,"../Data.Unfoldable":456}],311:[function(require,module,exports){
+// Generated by purs version 0.11.6
+"use strict";
+var Data_List = require("../Data.List");
+var Data_List_Types = require("../Data.List.Types");
+var Data_Maybe = require("../Data.Maybe");
+var Data_Semigroup = require("../Data.Semigroup");
+var Data_Show = require("../Data.Show");
+var Data_Tuple = require("../Data.Tuple");
+var CatQueue = (function () {
+    function CatQueue(value0, value1) {
+        this.value0 = value0;
+        this.value1 = value1;
+    };
+    CatQueue.create = function (value0) {
+        return function (value1) {
+            return new CatQueue(value0, value1);
+        };
+    };
+    return CatQueue;
+})();
+var uncons = function ($copy_v) {
+    var $tco_done = false;
+    var $tco_result;
+    function $tco_loop(v) {
+        if (v.value0 instanceof Data_List_Types.Nil && v.value1 instanceof Data_List_Types.Nil) {
+            $tco_done = true;
+            return Data_Maybe.Nothing.value;
+        };
+        if (v.value0 instanceof Data_List_Types.Nil) {
+            $copy_v = new CatQueue(Data_List.reverse(v.value1), Data_List_Types.Nil.value);
+            return;
+        };
+        if (v.value0 instanceof Data_List_Types.Cons) {
+            $tco_done = true;
+            return new Data_Maybe.Just(new Data_Tuple.Tuple(v.value0.value0, new CatQueue(v.value0.value1, v.value1)));
+        };
+        throw new Error("Failed pattern match at Data.CatQueue line 50, column 1 - line 50, column 63: " + [ v.constructor.name ]);
+    };
+    while (!$tco_done) {
+        $tco_result = $tco_loop($copy_v);
+    };
+    return $tco_result;
+};
+var snoc = function (v) {
+    return function (a) {
+        return new CatQueue(v.value0, new Data_List_Types.Cons(a, v.value1));
+    };
+};
+var showCatQueue = function (dictShow) {
+    return new Data_Show.Show(function (v) {
+        return "(CatQueue " + (Data_Show.show(Data_List_Types.showList(dictShow))(v.value0) + (" " + (Data_Show.show(Data_List_Types.showList(dictShow))(v.value1) + ")")));
+    });
+};
+var $$null = function (v) {
+    if (v.value0 instanceof Data_List_Types.Nil && v.value1 instanceof Data_List_Types.Nil) {
+        return true;
+    };
+    return false;
+};
+var empty = new CatQueue(Data_List_Types.Nil.value, Data_List_Types.Nil.value);
+module.exports = {
+    CatQueue: CatQueue, 
+    empty: empty, 
+    "null": $$null, 
+    snoc: snoc, 
+    uncons: uncons, 
+    showCatQueue: showCatQueue
+};
+
+},{"../Data.List":393,"../Data.List.Types":392,"../Data.Maybe":397,"../Data.Semigroup":430,"../Data.Show":434,"../Data.Tuple":454}],312:[function(require,module,exports){
+"use strict";
+
+exports.toCharCode = function (c) {
+  return c.charCodeAt(0);
+};
+
+exports.fromCharCode = function (c) {
+  return String.fromCharCode(c);
+};
+
+exports.toLower = function (c) {
+  return c.toLowerCase();
+};
+
+exports.toUpper = function (c) {
+  return c.toUpperCase();
+};
+
+},{}],313:[function(require,module,exports){
+// Generated by purs version 0.11.6
+"use strict";
+var $foreign = require("./foreign");
+module.exports = {
+    fromCharCode: $foreign.fromCharCode, 
+    toCharCode: $foreign.toCharCode, 
+    toLower: $foreign.toLower, 
+    toUpper: $foreign.toUpper
+};
+
+},{"./foreign":312}],314:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Data_Ring = require("../Data.Ring");
@@ -33283,7 +34983,7 @@ module.exports = {
     commutativeRingFn: commutativeRingFn
 };
 
-},{"../Data.Ring":403,"../Data.Semiring":409,"../Data.Unit":433}],301:[function(require,module,exports){
+},{"../Data.Ring":426,"../Data.Semiring":432,"../Data.Unit":458}],315:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Applicative = require("../Control.Applicative");
@@ -33473,7 +35173,1772 @@ module.exports = {
     traversableConst: traversableConst
 };
 
-},{"../Control.Applicative":195,"../Control.Apply":197,"../Control.Bind":201,"../Control.Semigroupoid":250,"../Data.BooleanAlgebra":297,"../Data.Bounded":299,"../Data.CommutativeRing":300,"../Data.Eq":306,"../Data.EuclideanRing":308,"../Data.Field":309,"../Data.Foldable":311,"../Data.Functor":324,"../Data.Functor.Contravariant":321,"../Data.Functor.Invariant":322,"../Data.HeytingAlgebra":331,"../Data.Monoid":383,"../Data.Newtype":385,"../Data.Ord":392,"../Data.Ring":403,"../Data.Semigroup":407,"../Data.Semiring":409,"../Data.Show":411,"../Data.Traversable":427,"../Prelude":450}],302:[function(require,module,exports){
+},{"../Control.Applicative":196,"../Control.Apply":198,"../Control.Bind":202,"../Control.Semigroupoid":260,"../Data.BooleanAlgebra":307,"../Data.Bounded":309,"../Data.CommutativeRing":314,"../Data.Eq":329,"../Data.EuclideanRing":331,"../Data.Field":332,"../Data.Foldable":334,"../Data.Functor":347,"../Data.Functor.Contravariant":344,"../Data.Functor.Invariant":345,"../Data.HeytingAlgebra":354,"../Data.Monoid":406,"../Data.Newtype":408,"../Data.Ord":415,"../Data.Ring":426,"../Data.Semigroup":430,"../Data.Semiring":432,"../Data.Show":434,"../Data.Traversable":452,"../Prelude":475}],316:[function(require,module,exports){
+// Generated by purs version 0.11.6
+"use strict";
+var Control_Apply = require("../Control.Apply");
+var Control_Semigroupoid = require("../Control.Semigroupoid");
+var Data_Boolean = require("../Data.Boolean");
+var Data_Bounded = require("../Data.Bounded");
+var Data_Enum = require("../Data.Enum");
+var Data_Eq = require("../Data.Eq");
+var Data_Generic = require("../Data.Generic");
+var Data_HeytingAlgebra = require("../Data.HeytingAlgebra");
+var Data_Maybe = require("../Data.Maybe");
+var Data_Ord = require("../Data.Ord");
+var Data_Ordering = require("../Data.Ordering");
+var Data_Ring = require("../Data.Ring");
+var Data_Semigroup = require("../Data.Semigroup");
+var Data_Semiring = require("../Data.Semiring");
+var Data_Show = require("../Data.Show");
+var Data_Unit = require("../Data.Unit");
+var Prelude = require("../Prelude");
+var Year = function (x) {
+    return x;
+};
+var Monday = (function () {
+    function Monday() {
+
+    };
+    Monday.value = new Monday();
+    return Monday;
+})();
+var Tuesday = (function () {
+    function Tuesday() {
+
+    };
+    Tuesday.value = new Tuesday();
+    return Tuesday;
+})();
+var Wednesday = (function () {
+    function Wednesday() {
+
+    };
+    Wednesday.value = new Wednesday();
+    return Wednesday;
+})();
+var Thursday = (function () {
+    function Thursday() {
+
+    };
+    Thursday.value = new Thursday();
+    return Thursday;
+})();
+var Friday = (function () {
+    function Friday() {
+
+    };
+    Friday.value = new Friday();
+    return Friday;
+})();
+var Saturday = (function () {
+    function Saturday() {
+
+    };
+    Saturday.value = new Saturday();
+    return Saturday;
+})();
+var Sunday = (function () {
+    function Sunday() {
+
+    };
+    Sunday.value = new Sunday();
+    return Sunday;
+})();
+var January = (function () {
+    function January() {
+
+    };
+    January.value = new January();
+    return January;
+})();
+var February = (function () {
+    function February() {
+
+    };
+    February.value = new February();
+    return February;
+})();
+var March = (function () {
+    function March() {
+
+    };
+    March.value = new March();
+    return March;
+})();
+var April = (function () {
+    function April() {
+
+    };
+    April.value = new April();
+    return April;
+})();
+var May = (function () {
+    function May() {
+
+    };
+    May.value = new May();
+    return May;
+})();
+var June = (function () {
+    function June() {
+
+    };
+    June.value = new June();
+    return June;
+})();
+var July = (function () {
+    function July() {
+
+    };
+    July.value = new July();
+    return July;
+})();
+var August = (function () {
+    function August() {
+
+    };
+    August.value = new August();
+    return August;
+})();
+var September = (function () {
+    function September() {
+
+    };
+    September.value = new September();
+    return September;
+})();
+var October = (function () {
+    function October() {
+
+    };
+    October.value = new October();
+    return October;
+})();
+var November = (function () {
+    function November() {
+
+    };
+    November.value = new November();
+    return November;
+})();
+var December = (function () {
+    function December() {
+
+    };
+    December.value = new December();
+    return December;
+})();
+var Day = function (x) {
+    return x;
+};
+var showYear = new Data_Show.Show(function (v) {
+    return "(Year " + (Data_Show.show(Data_Show.showInt)(v) + ")");
+});
+var showWeekday = new Data_Show.Show(function (v) {
+    if (v instanceof Monday) {
+        return "Monday";
+    };
+    if (v instanceof Tuesday) {
+        return "Tuesday";
+    };
+    if (v instanceof Wednesday) {
+        return "Wednesday";
+    };
+    if (v instanceof Thursday) {
+        return "Thursday";
+    };
+    if (v instanceof Friday) {
+        return "Friday";
+    };
+    if (v instanceof Saturday) {
+        return "Saturday";
+    };
+    if (v instanceof Sunday) {
+        return "Sunday";
+    };
+    throw new Error("Failed pattern match at Data.Date.Component line 189, column 1 - line 189, column 37: " + [ v.constructor.name ]);
+});
+var showMonth = new Data_Show.Show(function (v) {
+    if (v instanceof January) {
+        return "January";
+    };
+    if (v instanceof February) {
+        return "February";
+    };
+    if (v instanceof March) {
+        return "March";
+    };
+    if (v instanceof April) {
+        return "April";
+    };
+    if (v instanceof May) {
+        return "May";
+    };
+    if (v instanceof June) {
+        return "June";
+    };
+    if (v instanceof July) {
+        return "July";
+    };
+    if (v instanceof August) {
+        return "August";
+    };
+    if (v instanceof September) {
+        return "September";
+    };
+    if (v instanceof October) {
+        return "October";
+    };
+    if (v instanceof November) {
+        return "November";
+    };
+    if (v instanceof December) {
+        return "December";
+    };
+    throw new Error("Failed pattern match at Data.Date.Component line 104, column 1 - line 104, column 33: " + [ v.constructor.name ]);
+});
+var showDay = new Data_Show.Show(function (v) {
+    return "(Day " + (Data_Show.show(Data_Show.showInt)(v) + ")");
+});
+var ordYear = Data_Ord.ordInt;
+var ordDay = Data_Ord.ordInt;
+var genericYear = new Data_Generic.Generic(function (v) {
+    if (v instanceof Data_Generic.SProd && (v.value0 === "Data.Date.Component.Year" && v.value1.length === 1)) {
+        return Control_Apply.apply(Data_Maybe.applyMaybe)(new Data_Maybe.Just(Year))(Data_Generic.fromSpine(Data_Generic.genericInt)(v["value1"][0](Data_Unit.unit)));
+    };
+    return Data_Maybe.Nothing.value;
+}, function ($dollarq) {
+    return new Data_Generic.SigProd("Data.Date.Component.Year", [ {
+        sigConstructor: "Data.Date.Component.Year", 
+        sigValues: [ function ($dollarq1) {
+            return Data_Generic.toSignature(Data_Generic.genericInt)(Data_Generic.anyProxy);
+        } ]
+    } ]);
+}, function (v) {
+    return new Data_Generic.SProd("Data.Date.Component.Year", [ function ($dollarq) {
+        return Data_Generic.toSpine(Data_Generic.genericInt)(v);
+    } ]);
+});
+var genericWeekday = new Data_Generic.Generic(function (v) {
+    if (v instanceof Data_Generic.SProd && (v.value0 === "Data.Date.Component.Monday" && v.value1.length === 0)) {
+        return new Data_Maybe.Just(Monday.value);
+    };
+    if (v instanceof Data_Generic.SProd && (v.value0 === "Data.Date.Component.Tuesday" && v.value1.length === 0)) {
+        return new Data_Maybe.Just(Tuesday.value);
+    };
+    if (v instanceof Data_Generic.SProd && (v.value0 === "Data.Date.Component.Wednesday" && v.value1.length === 0)) {
+        return new Data_Maybe.Just(Wednesday.value);
+    };
+    if (v instanceof Data_Generic.SProd && (v.value0 === "Data.Date.Component.Thursday" && v.value1.length === 0)) {
+        return new Data_Maybe.Just(Thursday.value);
+    };
+    if (v instanceof Data_Generic.SProd && (v.value0 === "Data.Date.Component.Friday" && v.value1.length === 0)) {
+        return new Data_Maybe.Just(Friday.value);
+    };
+    if (v instanceof Data_Generic.SProd && (v.value0 === "Data.Date.Component.Saturday" && v.value1.length === 0)) {
+        return new Data_Maybe.Just(Saturday.value);
+    };
+    if (v instanceof Data_Generic.SProd && (v.value0 === "Data.Date.Component.Sunday" && v.value1.length === 0)) {
+        return new Data_Maybe.Just(Sunday.value);
+    };
+    return Data_Maybe.Nothing.value;
+}, function ($dollarq) {
+    return new Data_Generic.SigProd("Data.Date.Component.Weekday", [ {
+        sigConstructor: "Data.Date.Component.Monday", 
+        sigValues: [  ]
+    }, {
+        sigConstructor: "Data.Date.Component.Tuesday", 
+        sigValues: [  ]
+    }, {
+        sigConstructor: "Data.Date.Component.Wednesday", 
+        sigValues: [  ]
+    }, {
+        sigConstructor: "Data.Date.Component.Thursday", 
+        sigValues: [  ]
+    }, {
+        sigConstructor: "Data.Date.Component.Friday", 
+        sigValues: [  ]
+    }, {
+        sigConstructor: "Data.Date.Component.Saturday", 
+        sigValues: [  ]
+    }, {
+        sigConstructor: "Data.Date.Component.Sunday", 
+        sigValues: [  ]
+    } ]);
+}, function (v) {
+    if (v instanceof Monday) {
+        return new Data_Generic.SProd("Data.Date.Component.Monday", [  ]);
+    };
+    if (v instanceof Tuesday) {
+        return new Data_Generic.SProd("Data.Date.Component.Tuesday", [  ]);
+    };
+    if (v instanceof Wednesday) {
+        return new Data_Generic.SProd("Data.Date.Component.Wednesday", [  ]);
+    };
+    if (v instanceof Thursday) {
+        return new Data_Generic.SProd("Data.Date.Component.Thursday", [  ]);
+    };
+    if (v instanceof Friday) {
+        return new Data_Generic.SProd("Data.Date.Component.Friday", [  ]);
+    };
+    if (v instanceof Saturday) {
+        return new Data_Generic.SProd("Data.Date.Component.Saturday", [  ]);
+    };
+    if (v instanceof Sunday) {
+        return new Data_Generic.SProd("Data.Date.Component.Sunday", [  ]);
+    };
+    throw new Error("Failed pattern match at Data.Date.Component line 159, column 8 - line 159, column 50: " + [ v.constructor.name ]);
+});
+var genericMonth = new Data_Generic.Generic(function (v) {
+    if (v instanceof Data_Generic.SProd && (v.value0 === "Data.Date.Component.January" && v.value1.length === 0)) {
+        return new Data_Maybe.Just(January.value);
+    };
+    if (v instanceof Data_Generic.SProd && (v.value0 === "Data.Date.Component.February" && v.value1.length === 0)) {
+        return new Data_Maybe.Just(February.value);
+    };
+    if (v instanceof Data_Generic.SProd && (v.value0 === "Data.Date.Component.March" && v.value1.length === 0)) {
+        return new Data_Maybe.Just(March.value);
+    };
+    if (v instanceof Data_Generic.SProd && (v.value0 === "Data.Date.Component.April" && v.value1.length === 0)) {
+        return new Data_Maybe.Just(April.value);
+    };
+    if (v instanceof Data_Generic.SProd && (v.value0 === "Data.Date.Component.May" && v.value1.length === 0)) {
+        return new Data_Maybe.Just(May.value);
+    };
+    if (v instanceof Data_Generic.SProd && (v.value0 === "Data.Date.Component.June" && v.value1.length === 0)) {
+        return new Data_Maybe.Just(June.value);
+    };
+    if (v instanceof Data_Generic.SProd && (v.value0 === "Data.Date.Component.July" && v.value1.length === 0)) {
+        return new Data_Maybe.Just(July.value);
+    };
+    if (v instanceof Data_Generic.SProd && (v.value0 === "Data.Date.Component.August" && v.value1.length === 0)) {
+        return new Data_Maybe.Just(August.value);
+    };
+    if (v instanceof Data_Generic.SProd && (v.value0 === "Data.Date.Component.September" && v.value1.length === 0)) {
+        return new Data_Maybe.Just(September.value);
+    };
+    if (v instanceof Data_Generic.SProd && (v.value0 === "Data.Date.Component.October" && v.value1.length === 0)) {
+        return new Data_Maybe.Just(October.value);
+    };
+    if (v instanceof Data_Generic.SProd && (v.value0 === "Data.Date.Component.November" && v.value1.length === 0)) {
+        return new Data_Maybe.Just(November.value);
+    };
+    if (v instanceof Data_Generic.SProd && (v.value0 === "Data.Date.Component.December" && v.value1.length === 0)) {
+        return new Data_Maybe.Just(December.value);
+    };
+    return Data_Maybe.Nothing.value;
+}, function ($dollarq) {
+    return new Data_Generic.SigProd("Data.Date.Component.Month", [ {
+        sigConstructor: "Data.Date.Component.January", 
+        sigValues: [  ]
+    }, {
+        sigConstructor: "Data.Date.Component.February", 
+        sigValues: [  ]
+    }, {
+        sigConstructor: "Data.Date.Component.March", 
+        sigValues: [  ]
+    }, {
+        sigConstructor: "Data.Date.Component.April", 
+        sigValues: [  ]
+    }, {
+        sigConstructor: "Data.Date.Component.May", 
+        sigValues: [  ]
+    }, {
+        sigConstructor: "Data.Date.Component.June", 
+        sigValues: [  ]
+    }, {
+        sigConstructor: "Data.Date.Component.July", 
+        sigValues: [  ]
+    }, {
+        sigConstructor: "Data.Date.Component.August", 
+        sigValues: [  ]
+    }, {
+        sigConstructor: "Data.Date.Component.September", 
+        sigValues: [  ]
+    }, {
+        sigConstructor: "Data.Date.Component.October", 
+        sigValues: [  ]
+    }, {
+        sigConstructor: "Data.Date.Component.November", 
+        sigValues: [  ]
+    }, {
+        sigConstructor: "Data.Date.Component.December", 
+        sigValues: [  ]
+    } ]);
+}, function (v) {
+    if (v instanceof January) {
+        return new Data_Generic.SProd("Data.Date.Component.January", [  ]);
+    };
+    if (v instanceof February) {
+        return new Data_Generic.SProd("Data.Date.Component.February", [  ]);
+    };
+    if (v instanceof March) {
+        return new Data_Generic.SProd("Data.Date.Component.March", [  ]);
+    };
+    if (v instanceof April) {
+        return new Data_Generic.SProd("Data.Date.Component.April", [  ]);
+    };
+    if (v instanceof May) {
+        return new Data_Generic.SProd("Data.Date.Component.May", [  ]);
+    };
+    if (v instanceof June) {
+        return new Data_Generic.SProd("Data.Date.Component.June", [  ]);
+    };
+    if (v instanceof July) {
+        return new Data_Generic.SProd("Data.Date.Component.July", [  ]);
+    };
+    if (v instanceof August) {
+        return new Data_Generic.SProd("Data.Date.Component.August", [  ]);
+    };
+    if (v instanceof September) {
+        return new Data_Generic.SProd("Data.Date.Component.September", [  ]);
+    };
+    if (v instanceof October) {
+        return new Data_Generic.SProd("Data.Date.Component.October", [  ]);
+    };
+    if (v instanceof November) {
+        return new Data_Generic.SProd("Data.Date.Component.November", [  ]);
+    };
+    if (v instanceof December) {
+        return new Data_Generic.SProd("Data.Date.Component.December", [  ]);
+    };
+    throw new Error("Failed pattern match at Data.Date.Component line 64, column 8 - line 64, column 46: " + [ v.constructor.name ]);
+});
+var genericDay = new Data_Generic.Generic(function (v) {
+    if (v instanceof Data_Generic.SProd && (v.value0 === "Data.Date.Component.Day" && v.value1.length === 1)) {
+        return Control_Apply.apply(Data_Maybe.applyMaybe)(new Data_Maybe.Just(Day))(Data_Generic.fromSpine(Data_Generic.genericInt)(v["value1"][0](Data_Unit.unit)));
+    };
+    return Data_Maybe.Nothing.value;
+}, function ($dollarq) {
+    return new Data_Generic.SigProd("Data.Date.Component.Day", [ {
+        sigConstructor: "Data.Date.Component.Day", 
+        sigValues: [ function ($dollarq1) {
+            return Data_Generic.toSignature(Data_Generic.genericInt)(Data_Generic.anyProxy);
+        } ]
+    } ]);
+}, function (v) {
+    return new Data_Generic.SProd("Data.Date.Component.Day", [ function ($dollarq) {
+        return Data_Generic.toSpine(Data_Generic.genericInt)(v);
+    } ]);
+});
+var eqYear = Data_Eq.eqInt;
+var eqWeekday = new Data_Eq.Eq(function (x) {
+    return function (y) {
+        if (x instanceof Monday && y instanceof Monday) {
+            return true;
+        };
+        if (x instanceof Tuesday && y instanceof Tuesday) {
+            return true;
+        };
+        if (x instanceof Wednesday && y instanceof Wednesday) {
+            return true;
+        };
+        if (x instanceof Thursday && y instanceof Thursday) {
+            return true;
+        };
+        if (x instanceof Friday && y instanceof Friday) {
+            return true;
+        };
+        if (x instanceof Saturday && y instanceof Saturday) {
+            return true;
+        };
+        if (x instanceof Sunday && y instanceof Sunday) {
+            return true;
+        };
+        return false;
+    };
+});
+var ordWeekday = new Data_Ord.Ord(function () {
+    return eqWeekday;
+}, function (x) {
+    return function (y) {
+        if (x instanceof Monday && y instanceof Monday) {
+            return Data_Ordering.EQ.value;
+        };
+        if (x instanceof Monday) {
+            return Data_Ordering.LT.value;
+        };
+        if (y instanceof Monday) {
+            return Data_Ordering.GT.value;
+        };
+        if (x instanceof Tuesday && y instanceof Tuesday) {
+            return Data_Ordering.EQ.value;
+        };
+        if (x instanceof Tuesday) {
+            return Data_Ordering.LT.value;
+        };
+        if (y instanceof Tuesday) {
+            return Data_Ordering.GT.value;
+        };
+        if (x instanceof Wednesday && y instanceof Wednesday) {
+            return Data_Ordering.EQ.value;
+        };
+        if (x instanceof Wednesday) {
+            return Data_Ordering.LT.value;
+        };
+        if (y instanceof Wednesday) {
+            return Data_Ordering.GT.value;
+        };
+        if (x instanceof Thursday && y instanceof Thursday) {
+            return Data_Ordering.EQ.value;
+        };
+        if (x instanceof Thursday) {
+            return Data_Ordering.LT.value;
+        };
+        if (y instanceof Thursday) {
+            return Data_Ordering.GT.value;
+        };
+        if (x instanceof Friday && y instanceof Friday) {
+            return Data_Ordering.EQ.value;
+        };
+        if (x instanceof Friday) {
+            return Data_Ordering.LT.value;
+        };
+        if (y instanceof Friday) {
+            return Data_Ordering.GT.value;
+        };
+        if (x instanceof Saturday && y instanceof Saturday) {
+            return Data_Ordering.EQ.value;
+        };
+        if (x instanceof Saturday) {
+            return Data_Ordering.LT.value;
+        };
+        if (y instanceof Saturday) {
+            return Data_Ordering.GT.value;
+        };
+        if (x instanceof Sunday && y instanceof Sunday) {
+            return Data_Ordering.EQ.value;
+        };
+        throw new Error("Failed pattern match at Data.Date.Component line 158, column 8 - line 158, column 42: " + [ x.constructor.name, y.constructor.name ]);
+    };
+});
+var eqMonth = new Data_Eq.Eq(function (x) {
+    return function (y) {
+        if (x instanceof January && y instanceof January) {
+            return true;
+        };
+        if (x instanceof February && y instanceof February) {
+            return true;
+        };
+        if (x instanceof March && y instanceof March) {
+            return true;
+        };
+        if (x instanceof April && y instanceof April) {
+            return true;
+        };
+        if (x instanceof May && y instanceof May) {
+            return true;
+        };
+        if (x instanceof June && y instanceof June) {
+            return true;
+        };
+        if (x instanceof July && y instanceof July) {
+            return true;
+        };
+        if (x instanceof August && y instanceof August) {
+            return true;
+        };
+        if (x instanceof September && y instanceof September) {
+            return true;
+        };
+        if (x instanceof October && y instanceof October) {
+            return true;
+        };
+        if (x instanceof November && y instanceof November) {
+            return true;
+        };
+        if (x instanceof December && y instanceof December) {
+            return true;
+        };
+        return false;
+    };
+});
+var ordMonth = new Data_Ord.Ord(function () {
+    return eqMonth;
+}, function (x) {
+    return function (y) {
+        if (x instanceof January && y instanceof January) {
+            return Data_Ordering.EQ.value;
+        };
+        if (x instanceof January) {
+            return Data_Ordering.LT.value;
+        };
+        if (y instanceof January) {
+            return Data_Ordering.GT.value;
+        };
+        if (x instanceof February && y instanceof February) {
+            return Data_Ordering.EQ.value;
+        };
+        if (x instanceof February) {
+            return Data_Ordering.LT.value;
+        };
+        if (y instanceof February) {
+            return Data_Ordering.GT.value;
+        };
+        if (x instanceof March && y instanceof March) {
+            return Data_Ordering.EQ.value;
+        };
+        if (x instanceof March) {
+            return Data_Ordering.LT.value;
+        };
+        if (y instanceof March) {
+            return Data_Ordering.GT.value;
+        };
+        if (x instanceof April && y instanceof April) {
+            return Data_Ordering.EQ.value;
+        };
+        if (x instanceof April) {
+            return Data_Ordering.LT.value;
+        };
+        if (y instanceof April) {
+            return Data_Ordering.GT.value;
+        };
+        if (x instanceof May && y instanceof May) {
+            return Data_Ordering.EQ.value;
+        };
+        if (x instanceof May) {
+            return Data_Ordering.LT.value;
+        };
+        if (y instanceof May) {
+            return Data_Ordering.GT.value;
+        };
+        if (x instanceof June && y instanceof June) {
+            return Data_Ordering.EQ.value;
+        };
+        if (x instanceof June) {
+            return Data_Ordering.LT.value;
+        };
+        if (y instanceof June) {
+            return Data_Ordering.GT.value;
+        };
+        if (x instanceof July && y instanceof July) {
+            return Data_Ordering.EQ.value;
+        };
+        if (x instanceof July) {
+            return Data_Ordering.LT.value;
+        };
+        if (y instanceof July) {
+            return Data_Ordering.GT.value;
+        };
+        if (x instanceof August && y instanceof August) {
+            return Data_Ordering.EQ.value;
+        };
+        if (x instanceof August) {
+            return Data_Ordering.LT.value;
+        };
+        if (y instanceof August) {
+            return Data_Ordering.GT.value;
+        };
+        if (x instanceof September && y instanceof September) {
+            return Data_Ordering.EQ.value;
+        };
+        if (x instanceof September) {
+            return Data_Ordering.LT.value;
+        };
+        if (y instanceof September) {
+            return Data_Ordering.GT.value;
+        };
+        if (x instanceof October && y instanceof October) {
+            return Data_Ordering.EQ.value;
+        };
+        if (x instanceof October) {
+            return Data_Ordering.LT.value;
+        };
+        if (y instanceof October) {
+            return Data_Ordering.GT.value;
+        };
+        if (x instanceof November && y instanceof November) {
+            return Data_Ordering.EQ.value;
+        };
+        if (x instanceof November) {
+            return Data_Ordering.LT.value;
+        };
+        if (y instanceof November) {
+            return Data_Ordering.GT.value;
+        };
+        if (x instanceof December && y instanceof December) {
+            return Data_Ordering.EQ.value;
+        };
+        throw new Error("Failed pattern match at Data.Date.Component line 63, column 8 - line 63, column 38: " + [ x.constructor.name, y.constructor.name ]);
+    };
+});
+var eqDay = Data_Eq.eqInt;
+var boundedYear = new Data_Bounded.Bounded(function () {
+    return ordYear;
+}, -271820 | 0, 275759);
+var boundedWeekday = new Data_Bounded.Bounded(function () {
+    return ordWeekday;
+}, Monday.value, Sunday.value);
+var boundedMonth = new Data_Bounded.Bounded(function () {
+    return ordMonth;
+}, January.value, December.value);
+var boundedEnumYear = new Data_Enum.BoundedEnum(function () {
+    return boundedYear;
+}, function () {
+    return enumYear;
+}, 547580, function (v) {
+    return v;
+}, function (n) {
+    if (n >= (-271821 | 0) && n <= 275759) {
+        return new Data_Maybe.Just(n);
+    };
+    if (Data_Boolean.otherwise) {
+        return Data_Maybe.Nothing.value;
+    };
+    throw new Error("Failed pattern match at Data.Date.Component line 37, column 1 - line 37, column 45: " + [ n.constructor.name ]);
+});
+var enumYear = new Data_Enum.Enum(function () {
+    return ordYear;
+}, function ($110) {
+    return Data_Enum.toEnum(boundedEnumYear)((function (v) {
+        return v - 1 | 0;
+    })(Data_Enum.fromEnum(boundedEnumYear)($110)));
+}, function ($111) {
+    return Data_Enum.toEnum(boundedEnumYear)((function (v) {
+        return v + 1 | 0;
+    })(Data_Enum.fromEnum(boundedEnumYear)($111)));
+});
+var boundedEnumWeekday = new Data_Enum.BoundedEnum(function () {
+    return boundedWeekday;
+}, function () {
+    return enumWeekday;
+}, 7, function (v) {
+    if (v instanceof Monday) {
+        return 1;
+    };
+    if (v instanceof Tuesday) {
+        return 2;
+    };
+    if (v instanceof Wednesday) {
+        return 3;
+    };
+    if (v instanceof Thursday) {
+        return 4;
+    };
+    if (v instanceof Friday) {
+        return 5;
+    };
+    if (v instanceof Saturday) {
+        return 6;
+    };
+    if (v instanceof Sunday) {
+        return 7;
+    };
+    throw new Error("Failed pattern match at Data.Date.Component line 180, column 14 - line 189, column 1: " + [ v.constructor.name ]);
+}, function (v) {
+    if (v === 1) {
+        return new Data_Maybe.Just(Monday.value);
+    };
+    if (v === 2) {
+        return new Data_Maybe.Just(Tuesday.value);
+    };
+    if (v === 3) {
+        return new Data_Maybe.Just(Wednesday.value);
+    };
+    if (v === 4) {
+        return new Data_Maybe.Just(Thursday.value);
+    };
+    if (v === 5) {
+        return new Data_Maybe.Just(Friday.value);
+    };
+    if (v === 6) {
+        return new Data_Maybe.Just(Saturday.value);
+    };
+    if (v === 7) {
+        return new Data_Maybe.Just(Sunday.value);
+    };
+    return Data_Maybe.Nothing.value;
+});
+var enumWeekday = new Data_Enum.Enum(function () {
+    return ordWeekday;
+}, function ($112) {
+    return Data_Enum.toEnum(boundedEnumWeekday)((function (v) {
+        return v - 1 | 0;
+    })(Data_Enum.fromEnum(boundedEnumWeekday)($112)));
+}, function ($113) {
+    return Data_Enum.toEnum(boundedEnumWeekday)((function (v) {
+        return v + 1 | 0;
+    })(Data_Enum.fromEnum(boundedEnumWeekday)($113)));
+});
+var boundedEnumMonth = new Data_Enum.BoundedEnum(function () {
+    return boundedMonth;
+}, function () {
+    return enumMonth;
+}, 12, function (v) {
+    if (v instanceof January) {
+        return 1;
+    };
+    if (v instanceof February) {
+        return 2;
+    };
+    if (v instanceof March) {
+        return 3;
+    };
+    if (v instanceof April) {
+        return 4;
+    };
+    if (v instanceof May) {
+        return 5;
+    };
+    if (v instanceof June) {
+        return 6;
+    };
+    if (v instanceof July) {
+        return 7;
+    };
+    if (v instanceof August) {
+        return 8;
+    };
+    if (v instanceof September) {
+        return 9;
+    };
+    if (v instanceof October) {
+        return 10;
+    };
+    if (v instanceof November) {
+        return 11;
+    };
+    if (v instanceof December) {
+        return 12;
+    };
+    throw new Error("Failed pattern match at Data.Date.Component line 90, column 14 - line 104, column 1: " + [ v.constructor.name ]);
+}, function (v) {
+    if (v === 1) {
+        return new Data_Maybe.Just(January.value);
+    };
+    if (v === 2) {
+        return new Data_Maybe.Just(February.value);
+    };
+    if (v === 3) {
+        return new Data_Maybe.Just(March.value);
+    };
+    if (v === 4) {
+        return new Data_Maybe.Just(April.value);
+    };
+    if (v === 5) {
+        return new Data_Maybe.Just(May.value);
+    };
+    if (v === 6) {
+        return new Data_Maybe.Just(June.value);
+    };
+    if (v === 7) {
+        return new Data_Maybe.Just(July.value);
+    };
+    if (v === 8) {
+        return new Data_Maybe.Just(August.value);
+    };
+    if (v === 9) {
+        return new Data_Maybe.Just(September.value);
+    };
+    if (v === 10) {
+        return new Data_Maybe.Just(October.value);
+    };
+    if (v === 11) {
+        return new Data_Maybe.Just(November.value);
+    };
+    if (v === 12) {
+        return new Data_Maybe.Just(December.value);
+    };
+    return Data_Maybe.Nothing.value;
+});
+var enumMonth = new Data_Enum.Enum(function () {
+    return ordMonth;
+}, function ($114) {
+    return Data_Enum.toEnum(boundedEnumMonth)((function (v) {
+        return v - 1 | 0;
+    })(Data_Enum.fromEnum(boundedEnumMonth)($114)));
+}, function ($115) {
+    return Data_Enum.toEnum(boundedEnumMonth)((function (v) {
+        return v + 1 | 0;
+    })(Data_Enum.fromEnum(boundedEnumMonth)($115)));
+});
+var boundedDay = new Data_Bounded.Bounded(function () {
+    return ordDay;
+}, 1, 31);
+var boundedEnumDay = new Data_Enum.BoundedEnum(function () {
+    return boundedDay;
+}, function () {
+    return enumDay;
+}, 31, function (v) {
+    return v;
+}, function (n) {
+    if (n >= 1 && n <= 31) {
+        return new Data_Maybe.Just(n);
+    };
+    if (Data_Boolean.otherwise) {
+        return Data_Maybe.Nothing.value;
+    };
+    throw new Error("Failed pattern match at Data.Date.Component line 137, column 1 - line 137, column 43: " + [ n.constructor.name ]);
+});
+var enumDay = new Data_Enum.Enum(function () {
+    return ordDay;
+}, function ($116) {
+    return Data_Enum.toEnum(boundedEnumDay)((function (v) {
+        return v - 1 | 0;
+    })(Data_Enum.fromEnum(boundedEnumDay)($116)));
+}, function ($117) {
+    return Data_Enum.toEnum(boundedEnumDay)((function (v) {
+        return v + 1 | 0;
+    })(Data_Enum.fromEnum(boundedEnumDay)($117)));
+});
+module.exports = {
+    January: January, 
+    February: February, 
+    March: March, 
+    April: April, 
+    May: May, 
+    June: June, 
+    July: July, 
+    August: August, 
+    September: September, 
+    October: October, 
+    November: November, 
+    December: December, 
+    Monday: Monday, 
+    Tuesday: Tuesday, 
+    Wednesday: Wednesday, 
+    Thursday: Thursday, 
+    Friday: Friday, 
+    Saturday: Saturday, 
+    Sunday: Sunday, 
+    eqYear: eqYear, 
+    ordYear: ordYear, 
+    genericYear: genericYear, 
+    boundedYear: boundedYear, 
+    enumYear: enumYear, 
+    boundedEnumYear: boundedEnumYear, 
+    showYear: showYear, 
+    eqMonth: eqMonth, 
+    ordMonth: ordMonth, 
+    genericMonth: genericMonth, 
+    boundedMonth: boundedMonth, 
+    enumMonth: enumMonth, 
+    boundedEnumMonth: boundedEnumMonth, 
+    showMonth: showMonth, 
+    eqDay: eqDay, 
+    ordDay: ordDay, 
+    genericDay: genericDay, 
+    boundedDay: boundedDay, 
+    enumDay: enumDay, 
+    boundedEnumDay: boundedEnumDay, 
+    showDay: showDay, 
+    eqWeekday: eqWeekday, 
+    ordWeekday: ordWeekday, 
+    genericWeekday: genericWeekday, 
+    boundedWeekday: boundedWeekday, 
+    enumWeekday: enumWeekday, 
+    boundedEnumWeekday: boundedEnumWeekday, 
+    showWeekday: showWeekday
+};
+
+},{"../Control.Apply":198,"../Control.Semigroupoid":260,"../Data.Boolean":306,"../Data.Bounded":309,"../Data.Enum":327,"../Data.Eq":329,"../Data.Generic":351,"../Data.HeytingAlgebra":354,"../Data.Maybe":397,"../Data.Ord":415,"../Data.Ordering":416,"../Data.Ring":426,"../Data.Semigroup":430,"../Data.Semiring":432,"../Data.Show":434,"../Data.Unit":458,"../Prelude":475}],317:[function(require,module,exports){
+"use strict";
+
+var createDate = function (y, m, d) {
+  var date = new Date(Date.UTC(y, m, d));
+  if (y >= 0 && y < 100) {
+    date.setUTCFullYear(y);
+  }
+  return date;
+};
+
+exports.canonicalDateImpl = function (ctor, y, m, d) {
+  var date = createDate(y, m - 1, d);
+  return ctor(date.getUTCFullYear())(date.getUTCMonth() + 1)(date.getUTCDate());
+};
+
+exports.calcWeekday = function (y, m, d) {
+  return createDate(y, m - 1, d).getUTCDay();
+};
+
+exports.calcDiff = function (y1, m1, d1, y2, m2, d2) {
+  var dt1 = createDate(y1, m1 - 1, d1);
+  var dt2 = createDate(y2, m2 - 1, d2);
+  return dt1.getTime() - dt2.getTime();
+};
+
+},{}],318:[function(require,module,exports){
+// Generated by purs version 0.11.6
+"use strict";
+var $foreign = require("./foreign");
+var Control_Apply = require("../Control.Apply");
+var Control_Semigroupoid = require("../Control.Semigroupoid");
+var Data_Boolean = require("../Data.Boolean");
+var Data_Bounded = require("../Data.Bounded");
+var Data_Date_Component = require("../Data.Date.Component");
+var Data_Enum = require("../Data.Enum");
+var Data_Eq = require("../Data.Eq");
+var Data_EuclideanRing = require("../Data.EuclideanRing");
+var Data_Function = require("../Data.Function");
+var Data_Function_Uncurried = require("../Data.Function.Uncurried");
+var Data_Generic = require("../Data.Generic");
+var Data_HeytingAlgebra = require("../Data.HeytingAlgebra");
+var Data_Maybe = require("../Data.Maybe");
+var Data_Ord = require("../Data.Ord");
+var Data_Ordering = require("../Data.Ordering");
+var Data_Semigroup = require("../Data.Semigroup");
+var Data_Show = require("../Data.Show");
+var Data_Time_Duration = require("../Data.Time.Duration");
+var Data_Unit = require("../Data.Unit");
+var Partial_Unsafe = require("../Partial.Unsafe");
+var Prelude = require("../Prelude");
+var $$Date = (function () {
+    function $$Date(value0, value1, value2) {
+        this.value0 = value0;
+        this.value1 = value1;
+        this.value2 = value2;
+    };
+    $$Date.create = function (value0) {
+        return function (value1) {
+            return function (value2) {
+                return new $$Date(value0, value1, value2);
+            };
+        };
+    };
+    return $$Date;
+})();
+var year = function (v) {
+    return v.value0;
+};
+var weekday = function (v) {
+    var n = $foreign.calcWeekday(v.value0, Data_Enum.fromEnum(Data_Date_Component.boundedEnumMonth)(v.value1), v.value2);
+    var $44 = n === 0;
+    if ($44) {
+        return Data_Maybe.fromJust()(Data_Enum.toEnum(Data_Date_Component.boundedEnumWeekday)(7));
+    };
+    return Data_Maybe.fromJust()(Data_Enum.toEnum(Data_Date_Component.boundedEnumWeekday)(n));
+};
+var showDate = new Data_Show.Show(function (v) {
+    return "(Date " + (Data_Show.show(Data_Date_Component.showYear)(v.value0) + (" " + (Data_Show.show(Data_Date_Component.showMonth)(v.value1) + (" " + (Data_Show.show(Data_Date_Component.showDay)(v.value2) + ")")))));
+});
+var month = function (v) {
+    return v.value1;
+};
+var isLeapYear = function (y) {
+    var y$prime = Data_Enum.fromEnum(Data_Date_Component.boundedEnumYear)(y);
+    return y$prime % 4 === 0 && (y$prime % 400 === 0 || !(y$prime % 100 === 0));
+};
+var lastDayOfMonth = function (y) {
+    return function (m) {
+        var unsafeDay = function ($98) {
+            return Data_Maybe.fromJust()(Data_Enum.toEnum(Data_Date_Component.boundedEnumDay)($98));
+        };
+        if (m instanceof Data_Date_Component.January) {
+            return unsafeDay(31);
+        };
+        if (m instanceof Data_Date_Component.February) {
+            if (isLeapYear(y)) {
+                return unsafeDay(29);
+            };
+            if (Data_Boolean.otherwise) {
+                return unsafeDay(28);
+            };
+        };
+        if (m instanceof Data_Date_Component.March) {
+            return unsafeDay(31);
+        };
+        if (m instanceof Data_Date_Component.April) {
+            return unsafeDay(30);
+        };
+        if (m instanceof Data_Date_Component.May) {
+            return unsafeDay(31);
+        };
+        if (m instanceof Data_Date_Component.June) {
+            return unsafeDay(30);
+        };
+        if (m instanceof Data_Date_Component.July) {
+            return unsafeDay(31);
+        };
+        if (m instanceof Data_Date_Component.August) {
+            return unsafeDay(31);
+        };
+        if (m instanceof Data_Date_Component.September) {
+            return unsafeDay(30);
+        };
+        if (m instanceof Data_Date_Component.October) {
+            return unsafeDay(31);
+        };
+        if (m instanceof Data_Date_Component.November) {
+            return unsafeDay(30);
+        };
+        if (m instanceof Data_Date_Component.December) {
+            return unsafeDay(31);
+        };
+        throw new Error("Failed pattern match at Data.Date line 89, column 22 - line 104, column 3: " + [ m.constructor.name ]);
+    };
+};
+var genericDate = new Data_Generic.Generic(function (v) {
+    if (v instanceof Data_Generic.SProd && (v.value0 === "Data.Date.Date" && v.value1.length === 3)) {
+        return Control_Apply.apply(Data_Maybe.applyMaybe)(Control_Apply.apply(Data_Maybe.applyMaybe)(Control_Apply.apply(Data_Maybe.applyMaybe)(new Data_Maybe.Just($$Date.create))(Data_Generic.fromSpine(Data_Date_Component.genericYear)(v["value1"][0](Data_Unit.unit))))(Data_Generic.fromSpine(Data_Date_Component.genericMonth)(v["value1"][1](Data_Unit.unit))))(Data_Generic.fromSpine(Data_Date_Component.genericDay)(v["value1"][2](Data_Unit.unit)));
+    };
+    return Data_Maybe.Nothing.value;
+}, function ($dollarq) {
+    return new Data_Generic.SigProd("Data.Date.Date", [ {
+        sigConstructor: "Data.Date.Date", 
+        sigValues: [ function ($dollarq1) {
+            return Data_Generic.toSignature(Data_Date_Component.genericYear)(Data_Generic.anyProxy);
+        }, function ($dollarq1) {
+            return Data_Generic.toSignature(Data_Date_Component.genericMonth)(Data_Generic.anyProxy);
+        }, function ($dollarq1) {
+            return Data_Generic.toSignature(Data_Date_Component.genericDay)(Data_Generic.anyProxy);
+        } ]
+    } ]);
+}, function (v) {
+    return new Data_Generic.SProd("Data.Date.Date", [ function ($dollarq) {
+        return Data_Generic.toSpine(Data_Date_Component.genericYear)(v.value0);
+    }, function ($dollarq) {
+        return Data_Generic.toSpine(Data_Date_Component.genericMonth)(v.value1);
+    }, function ($dollarq) {
+        return Data_Generic.toSpine(Data_Date_Component.genericDay)(v.value2);
+    } ]);
+});
+var eqDate = new Data_Eq.Eq(function (x) {
+    return function (y) {
+        return Data_Eq.eq(Data_Date_Component.eqYear)(x.value0)(y.value0) && Data_Eq.eq(Data_Date_Component.eqMonth)(x.value1)(y.value1) && Data_Eq.eq(Data_Date_Component.eqDay)(x.value2)(y.value2);
+    };
+});
+var ordDate = new Data_Ord.Ord(function () {
+    return eqDate;
+}, function (x) {
+    return function (y) {
+        var v = Data_Ord.compare(Data_Date_Component.ordYear)(x.value0)(y.value0);
+        if (v instanceof Data_Ordering.LT) {
+            return Data_Ordering.LT.value;
+        };
+        if (v instanceof Data_Ordering.GT) {
+            return Data_Ordering.GT.value;
+        };
+        var v1 = Data_Ord.compare(Data_Date_Component.ordMonth)(x.value1)(y.value1);
+        if (v1 instanceof Data_Ordering.LT) {
+            return Data_Ordering.LT.value;
+        };
+        if (v1 instanceof Data_Ordering.GT) {
+            return Data_Ordering.GT.value;
+        };
+        return Data_Ord.compare(Data_Date_Component.ordDay)(x.value2)(y.value2);
+    };
+});
+var diff = function (dictDuration) {
+    return function (v) {
+        return function (v1) {
+            return Data_Time_Duration.toDuration(dictDuration)($foreign.calcDiff(v.value0, Data_Enum.fromEnum(Data_Date_Component.boundedEnumMonth)(v.value1), v.value2, v1.value0, Data_Enum.fromEnum(Data_Date_Component.boundedEnumMonth)(v1.value1), v1.value2));
+        };
+    };
+};
+var day = function (v) {
+    return v.value2;
+};
+var canonicalDate = function (y) {
+    return function (m) {
+        return function (d) {
+            var mkDate = function (y$prime) {
+                return function (m$prime) {
+                    return function (d$prime) {
+                        return new $$Date(y$prime, Data_Maybe.fromJust()(Data_Enum.toEnum(Data_Date_Component.boundedEnumMonth)(m$prime)), d$prime);
+                    };
+                };
+            };
+            return $foreign.canonicalDateImpl(mkDate, y, Data_Enum.fromEnum(Data_Date_Component.boundedEnumMonth)(m), d);
+        };
+    };
+};
+var exactDate = function (y) {
+    return function (m) {
+        return function (d) {
+            var dt = new $$Date(y, m, d);
+            var $97 = Data_Eq.eq(eqDate)(canonicalDate(y)(m)(d))(dt);
+            if ($97) {
+                return new Data_Maybe.Just(dt);
+            };
+            return Data_Maybe.Nothing.value;
+        };
+    };
+};
+var boundedDate = new Data_Bounded.Bounded(function () {
+    return ordDate;
+}, new $$Date(Data_Bounded.bottom(Data_Date_Component.boundedYear), Data_Bounded.bottom(Data_Date_Component.boundedMonth), Data_Bounded.bottom(Data_Date_Component.boundedDay)), new $$Date(Data_Bounded.top(Data_Date_Component.boundedYear), Data_Bounded.top(Data_Date_Component.boundedMonth), Data_Bounded.top(Data_Date_Component.boundedDay)));
+module.exports = {
+    canonicalDate: canonicalDate, 
+    day: day, 
+    diff: diff, 
+    exactDate: exactDate, 
+    isLeapYear: isLeapYear, 
+    lastDayOfMonth: lastDayOfMonth, 
+    month: month, 
+    weekday: weekday, 
+    year: year, 
+    eqDate: eqDate, 
+    ordDate: ordDate, 
+    genericDate: genericDate, 
+    boundedDate: boundedDate, 
+    showDate: showDate
+};
+
+},{"../Control.Apply":198,"../Control.Semigroupoid":260,"../Data.Boolean":306,"../Data.Bounded":309,"../Data.Date.Component":316,"../Data.Enum":327,"../Data.Eq":329,"../Data.EuclideanRing":331,"../Data.Function":341,"../Data.Function.Uncurried":340,"../Data.Generic":351,"../Data.HeytingAlgebra":354,"../Data.Maybe":397,"../Data.Ord":415,"../Data.Ordering":416,"../Data.Semigroup":430,"../Data.Show":434,"../Data.Time.Duration":447,"../Data.Unit":458,"../Partial.Unsafe":472,"../Prelude":475,"./foreign":317}],319:[function(require,module,exports){
+"use strict";
+
+var createDateTime = function (y, m, d, h, mi, s, ms) {
+  var dateTime = new Date(Date.UTC(y, m, d, h, mi, s, ms));
+  if (y >= 0 && y < 100) {
+    dateTime.setUTCFullYear(y);
+  }
+  return dateTime;
+};
+
+exports.fromDateTimeImpl = function (y, mo, d, h, mi, s, ms) {
+  return createDateTime(y, mo - 1, d, h, mi, s, ms).getTime();
+};
+
+exports.toDateTimeImpl = function (ctor) {
+  return function (instant) {
+    var dt = new Date(instant);
+    return ctor (dt.getUTCFullYear())(dt.getUTCMonth() + 1)(dt.getUTCDate())(dt.getUTCHours())(dt.getUTCMinutes())(dt.getUTCSeconds())(dt.getUTCMilliseconds());
+  };
+};
+
+},{}],320:[function(require,module,exports){
+// Generated by purs version 0.11.6
+"use strict";
+var $foreign = require("./foreign");
+var Control_Apply = require("../Control.Apply");
+var Data_Boolean = require("../Data.Boolean");
+var Data_Bounded = require("../Data.Bounded");
+var Data_Date = require("../Data.Date");
+var Data_Date_Component = require("../Data.Date.Component");
+var Data_DateTime = require("../Data.DateTime");
+var Data_Enum = require("../Data.Enum");
+var Data_Eq = require("../Data.Eq");
+var Data_Function_Uncurried = require("../Data.Function.Uncurried");
+var Data_Generic = require("../Data.Generic");
+var Data_HeytingAlgebra = require("../Data.HeytingAlgebra");
+var Data_Maybe = require("../Data.Maybe");
+var Data_Ord = require("../Data.Ord");
+var Data_Ring = require("../Data.Ring");
+var Data_Semigroup = require("../Data.Semigroup");
+var Data_Show = require("../Data.Show");
+var Data_Time = require("../Data.Time");
+var Data_Time_Component = require("../Data.Time.Component");
+var Data_Time_Duration = require("../Data.Time.Duration");
+var Data_Unit = require("../Data.Unit");
+var Partial_Unsafe = require("../Partial.Unsafe");
+var Prelude = require("../Prelude");
+var Instant = function (x) {
+    return x;
+};
+var unInstant = function (v) {
+    return v;
+};
+var toDateTime = (function () {
+    var mkDateTime = function (y) {
+        return function (mo) {
+            return function (d) {
+                return function (h) {
+                    return function (mi) {
+                        return function (s) {
+                            return function (ms) {
+                                return new Data_DateTime.DateTime(Data_Date.canonicalDate(y)(Data_Maybe.fromJust()(Data_Enum.toEnum(Data_Date_Component.boundedEnumMonth)(mo)))(d), new Data_Time.Time(h, mi, s, ms));
+                            };
+                        };
+                    };
+                };
+            };
+        };
+    };
+    return $foreign.toDateTimeImpl(mkDateTime);
+})();
+var showInstant = new Data_Show.Show(function (v) {
+    return "(Instant " + (Data_Show.show(Data_Time_Duration.showMilliseconds)(v) + ")");
+});
+var ordDateTime = Data_Time_Duration.ordMilliseconds;
+var instant = function (v) {
+    if (v >= -8.6399778816e15 && v <= 8.639977881599999e15) {
+        return new Data_Maybe.Just(v);
+    };
+    if (Data_Boolean.otherwise) {
+        return Data_Maybe.Nothing.value;
+    };
+    throw new Error("Failed pattern match at Data.DateTime.Instant line 46, column 1 - line 46, column 41: " + [ v.constructor.name ]);
+};
+var genericDateTime = new Data_Generic.Generic(function (v) {
+    if (v instanceof Data_Generic.SProd && (v.value0 === "Data.DateTime.Instant.Instant" && v.value1.length === 1)) {
+        return Control_Apply.apply(Data_Maybe.applyMaybe)(new Data_Maybe.Just(Instant))(Data_Generic.fromSpine(Data_Time_Duration.genericMilliseconds)(v["value1"][0](Data_Unit.unit)));
+    };
+    return Data_Maybe.Nothing.value;
+}, function ($dollarq) {
+    return new Data_Generic.SigProd("Data.DateTime.Instant.Instant", [ {
+        sigConstructor: "Data.DateTime.Instant.Instant", 
+        sigValues: [ function ($dollarq1) {
+            return Data_Generic.toSignature(Data_Time_Duration.genericMilliseconds)(Data_Generic.anyProxy);
+        } ]
+    } ]);
+}, function (v) {
+    return new Data_Generic.SProd("Data.DateTime.Instant.Instant", [ function ($dollarq) {
+        return Data_Generic.toSpine(Data_Time_Duration.genericMilliseconds)(v);
+    } ]);
+});
+var fromDateTime = function (v) {
+    return $foreign.fromDateTimeImpl(Data_Date.year(v.value0), Data_Enum.fromEnum(Data_Date_Component.boundedEnumMonth)(Data_Date.month(v.value0)), Data_Date.day(v.value0), Data_Time.hour(v.value1), Data_Time.minute(v.value1), Data_Time.second(v.value1), Data_Time.millisecond(v.value1));
+};
+var fromDate = function (d) {
+    return $foreign.fromDateTimeImpl(Data_Date.year(d), Data_Enum.fromEnum(Data_Date_Component.boundedEnumMonth)(Data_Date.month(d)), Data_Date.day(d), Data_Bounded.bottom(Data_Time_Component.boundedHour), Data_Bounded.bottom(Data_Time_Component.boundedMinute), Data_Bounded.bottom(Data_Time_Component.boundedSecond), Data_Bounded.bottom(Data_Time_Component.boundedMillisecond));
+};
+var eqDateTime = Data_Time_Duration.eqMilliseconds;
+var boundedInstant = new Data_Bounded.Bounded(function () {
+    return ordDateTime;
+}, -8.6399778816e15, 8.639977881599999e15);
+module.exports = {
+    fromDate: fromDate, 
+    fromDateTime: fromDateTime, 
+    instant: instant, 
+    toDateTime: toDateTime, 
+    unInstant: unInstant, 
+    eqDateTime: eqDateTime, 
+    ordDateTime: ordDateTime, 
+    genericDateTime: genericDateTime, 
+    boundedInstant: boundedInstant, 
+    showInstant: showInstant
+};
+
+},{"../Control.Apply":198,"../Data.Boolean":306,"../Data.Bounded":309,"../Data.Date":318,"../Data.Date.Component":316,"../Data.DateTime":323,"../Data.Enum":327,"../Data.Eq":329,"../Data.Function.Uncurried":340,"../Data.Generic":351,"../Data.HeytingAlgebra":354,"../Data.Maybe":397,"../Data.Ord":415,"../Data.Ring":426,"../Data.Semigroup":430,"../Data.Show":434,"../Data.Time":448,"../Data.Time.Component":446,"../Data.Time.Duration":447,"../Data.Unit":458,"../Partial.Unsafe":472,"../Prelude":475,"./foreign":319}],321:[function(require,module,exports){
+// Generated by purs version 0.11.6
+"use strict";
+var Control_Applicative = require("../Control.Applicative");
+var Control_Apply = require("../Control.Apply");
+var Control_Category = require("../Control.Category");
+var Control_Comonad = require("../Control.Comonad");
+var Control_Extend = require("../Control.Extend");
+var Data_DateTime = require("../Data.DateTime");
+var Data_Eq = require("../Data.Eq");
+var Data_Foldable = require("../Data.Foldable");
+var Data_Functor = require("../Data.Functor");
+var Data_Generic = require("../Data.Generic");
+var Data_HeytingAlgebra = require("../Data.HeytingAlgebra");
+var Data_Maybe = require("../Data.Maybe");
+var Data_Newtype = require("../Data.Newtype");
+var Data_Ord = require("../Data.Ord");
+var Data_Ordering = require("../Data.Ordering");
+var Data_Semigroup = require("../Data.Semigroup");
+var Data_Show = require("../Data.Show");
+var Data_Time_Duration = require("../Data.Time.Duration");
+var Data_Traversable = require("../Data.Traversable");
+var Data_Unit = require("../Data.Unit");
+var Prelude = require("../Prelude");
+var LocaleName = function (x) {
+    return x;
+};
+var Locale = (function () {
+    function Locale(value0, value1) {
+        this.value0 = value0;
+        this.value1 = value1;
+    };
+    Locale.create = function (value0) {
+        return function (value1) {
+            return new Locale(value0, value1);
+        };
+    };
+    return Locale;
+})();
+var LocalValue = (function () {
+    function LocalValue(value0, value1) {
+        this.value0 = value0;
+        this.value1 = value1;
+    };
+    LocalValue.create = function (value0) {
+        return function (value1) {
+            return new LocalValue(value0, value1);
+        };
+    };
+    return LocalValue;
+})();
+var showLocaleName = new Data_Show.Show(function (v) {
+    return "(LocaleName " + (Data_Show.show(Data_Show.showString)(v) + ")");
+});
+var showLocale = new Data_Show.Show(function (v) {
+    return "(Locale " + (Data_Show.show(Data_Maybe.showMaybe(showLocaleName))(v.value0) + (" " + (Data_Show.show(Data_Time_Duration.showMinutes)(v.value1) + ")")));
+});
+var showLocalValue = function (dictShow) {
+    return new Data_Show.Show(function (v) {
+        return "(LocalValue " + (Data_Show.show(showLocale)(v.value0) + (" " + (Data_Show.show(dictShow)(v.value1) + ")")));
+    });
+};
+var ordLocaleName = Data_Ord.ordString;
+var newtypeLocaleName = new Data_Newtype.Newtype(function (n) {
+    return n;
+}, LocaleName);
+var genericLocaleName = new Data_Generic.Generic(function (v) {
+    if (v instanceof Data_Generic.SProd && (v.value0 === "Data.DateTime.Locale.LocaleName" && v.value1.length === 1)) {
+        return Control_Apply.apply(Data_Maybe.applyMaybe)(new Data_Maybe.Just(LocaleName))(Data_Generic.fromSpine(Data_Generic.genericString)(v["value1"][0](Data_Unit.unit)));
+    };
+    return Data_Maybe.Nothing.value;
+}, function ($dollarq) {
+    return new Data_Generic.SigProd("Data.DateTime.Locale.LocaleName", [ {
+        sigConstructor: "Data.DateTime.Locale.LocaleName", 
+        sigValues: [ function ($dollarq1) {
+            return Data_Generic.toSignature(Data_Generic.genericString)(Data_Generic.anyProxy);
+        } ]
+    } ]);
+}, function (v) {
+    return new Data_Generic.SProd("Data.DateTime.Locale.LocaleName", [ function ($dollarq) {
+        return Data_Generic.toSpine(Data_Generic.genericString)(v);
+    } ]);
+});
+var genericLocale = new Data_Generic.Generic(function (v) {
+    if (v instanceof Data_Generic.SProd && (v.value0 === "Data.DateTime.Locale.Locale" && v.value1.length === 2)) {
+        return Control_Apply.apply(Data_Maybe.applyMaybe)(Control_Apply.apply(Data_Maybe.applyMaybe)(new Data_Maybe.Just(Locale.create))(Data_Generic.fromSpine(Data_Generic.genericMaybe(genericLocaleName))(v["value1"][0](Data_Unit.unit))))(Data_Generic.fromSpine(Data_Time_Duration.genericMinutes)(v["value1"][1](Data_Unit.unit)));
+    };
+    return Data_Maybe.Nothing.value;
+}, function ($dollarq) {
+    return new Data_Generic.SigProd("Data.DateTime.Locale.Locale", [ {
+        sigConstructor: "Data.DateTime.Locale.Locale", 
+        sigValues: [ function ($dollarq1) {
+            return Data_Generic.toSignature(Data_Generic.genericMaybe(genericLocaleName))(Data_Generic.anyProxy);
+        }, function ($dollarq1) {
+            return Data_Generic.toSignature(Data_Time_Duration.genericMinutes)(Data_Generic.anyProxy);
+        } ]
+    } ]);
+}, function (v) {
+    return new Data_Generic.SProd("Data.DateTime.Locale.Locale", [ function ($dollarq) {
+        return Data_Generic.toSpine(Data_Generic.genericMaybe(genericLocaleName))(v.value0);
+    }, function ($dollarq) {
+        return Data_Generic.toSpine(Data_Time_Duration.genericMinutes)(v.value1);
+    } ]);
+});
+var genericLocalValue = function (dictGeneric) {
+    return new Data_Generic.Generic(function (v) {
+        if (v instanceof Data_Generic.SProd && (v.value0 === "Data.DateTime.Locale.LocalValue" && v.value1.length === 2)) {
+            return Control_Apply.apply(Data_Maybe.applyMaybe)(Control_Apply.apply(Data_Maybe.applyMaybe)(new Data_Maybe.Just(LocalValue.create))(Data_Generic.fromSpine(genericLocale)(v["value1"][0](Data_Unit.unit))))(Data_Generic.fromSpine(dictGeneric)(v["value1"][1](Data_Unit.unit)));
+        };
+        return Data_Maybe.Nothing.value;
+    }, function ($dollarq) {
+        return new Data_Generic.SigProd("Data.DateTime.Locale.LocalValue", [ {
+            sigConstructor: "Data.DateTime.Locale.LocalValue", 
+            sigValues: [ function ($dollarq1) {
+                return Data_Generic.toSignature(genericLocale)(Data_Generic.anyProxy);
+            }, function ($dollarq1) {
+                return Data_Generic.toSignature(dictGeneric)(Data_Generic.anyProxy);
+            } ]
+        } ]);
+    }, function (v) {
+        return new Data_Generic.SProd("Data.DateTime.Locale.LocalValue", [ function ($dollarq) {
+            return Data_Generic.toSpine(genericLocale)(v.value0);
+        }, function ($dollarq) {
+            return Data_Generic.toSpine(dictGeneric)(v.value1);
+        } ]);
+    });
+};
+var functorLocalValue = new Data_Functor.Functor(function (f) {
+    return function (v) {
+        return new LocalValue(v.value0, f(v.value1));
+    };
+});
+var foldableLocalValue = new Data_Foldable.Foldable(function (dictMonoid) {
+    return function (f) {
+        return function (v) {
+            return f(v.value1);
+        };
+    };
+}, function (f) {
+    return function (b) {
+        return function (v) {
+            return f(b)(v.value1);
+        };
+    };
+}, function (f) {
+    return function (b) {
+        return function (v) {
+            return f(v.value1)(b);
+        };
+    };
+});
+var traversableLocalValue = new Data_Traversable.Traversable(function () {
+    return foldableLocalValue;
+}, function () {
+    return functorLocalValue;
+}, function (dictApplicative) {
+    return Data_Traversable.traverse(traversableLocalValue)(dictApplicative)(Control_Category.id(Control_Category.categoryFn));
+}, function (dictApplicative) {
+    return function (f) {
+        return function (v) {
+            return Control_Apply.apply(dictApplicative.Apply0())(Data_Functor.map((dictApplicative.Apply0()).Functor0())(LocalValue.create)(Control_Applicative.pure(dictApplicative)(v.value0)))(f(v.value1));
+        };
+    };
+});
+var extendLocalValue = new Control_Extend.Extend(function () {
+    return functorLocalValue;
+}, function (f) {
+    return function (v) {
+        return new LocalValue(v.value0, f(v));
+    };
+});
+var eqLocaleName = Data_Eq.eqString;
+var eqLocale = new Data_Eq.Eq(function (x) {
+    return function (y) {
+        return Data_Eq.eq(Data_Maybe.eqMaybe(eqLocaleName))(x.value0)(y.value0) && Data_Eq.eq(Data_Time_Duration.eqMinutes)(x.value1)(y.value1);
+    };
+});
+var ordLocale = new Data_Ord.Ord(function () {
+    return eqLocale;
+}, function (x) {
+    return function (y) {
+        var v = Data_Ord.compare(Data_Maybe.ordMaybe(ordLocaleName))(x.value0)(y.value0);
+        if (v instanceof Data_Ordering.LT) {
+            return Data_Ordering.LT.value;
+        };
+        if (v instanceof Data_Ordering.GT) {
+            return Data_Ordering.GT.value;
+        };
+        return Data_Ord.compare(Data_Time_Duration.ordMinutes)(x.value1)(y.value1);
+    };
+});
+var eqLocalValue = function (dictEq) {
+    return new Data_Eq.Eq(function (x) {
+        return function (y) {
+            return Data_Eq.eq(eqLocale)(x.value0)(y.value0) && Data_Eq.eq(dictEq)(x.value1)(y.value1);
+        };
+    });
+};
+var ordLocalValue = function (dictOrd) {
+    return new Data_Ord.Ord(function () {
+        return eqLocalValue(dictOrd.Eq0());
+    }, function (x) {
+        return function (y) {
+            var v = Data_Ord.compare(ordLocale)(x.value0)(y.value0);
+            if (v instanceof Data_Ordering.LT) {
+                return Data_Ordering.LT.value;
+            };
+            if (v instanceof Data_Ordering.GT) {
+                return Data_Ordering.GT.value;
+            };
+            return Data_Ord.compare(dictOrd)(x.value1)(y.value1);
+        };
+    });
+};
+var comonadLocalValue = new Control_Comonad.Comonad(function () {
+    return extendLocalValue;
+}, function (v) {
+    return v.value1;
+});
+module.exports = {
+    LocalValue: LocalValue, 
+    Locale: Locale, 
+    LocaleName: LocaleName, 
+    eqLocale: eqLocale, 
+    ordLocale: ordLocale, 
+    genericLocale: genericLocale, 
+    showLocale: showLocale, 
+    newtypeLocaleName: newtypeLocaleName, 
+    eqLocaleName: eqLocaleName, 
+    ordLocaleName: ordLocaleName, 
+    genericLocaleName: genericLocaleName, 
+    showLocaleName: showLocaleName, 
+    eqLocalValue: eqLocalValue, 
+    ordLocalValue: ordLocalValue, 
+    genericLocalValue: genericLocalValue, 
+    showLocalValue: showLocalValue, 
+    functorLocalValue: functorLocalValue, 
+    extendLocalValue: extendLocalValue, 
+    comonadLocalValue: comonadLocalValue, 
+    foldableLocalValue: foldableLocalValue, 
+    traversableLocalValue: traversableLocalValue
+};
+
+},{"../Control.Applicative":196,"../Control.Apply":198,"../Control.Category":203,"../Control.Comonad":204,"../Control.Extend":206,"../Data.DateTime":323,"../Data.Eq":329,"../Data.Foldable":334,"../Data.Functor":347,"../Data.Generic":351,"../Data.HeytingAlgebra":354,"../Data.Maybe":397,"../Data.Newtype":408,"../Data.Ord":415,"../Data.Ordering":416,"../Data.Semigroup":430,"../Data.Show":434,"../Data.Time.Duration":447,"../Data.Traversable":452,"../Data.Unit":458,"../Prelude":475}],322:[function(require,module,exports){
+"use strict";
+
+var createUTC = function (y, mo, d, h, m, s, ms) {
+  var date = new Date(Date.UTC(y, mo, d, h, m, s, ms));
+  if (y >= 0 && y < 100) {
+    date.setUTCFullYear(y);
+  }
+  return date.getTime();
+};
+
+exports.calcDiff = function (rec1, rec2) {
+  var msUTC1 = createUTC(rec1.year, rec1.month - 1, rec1.day, rec1.hour, rec1.minute, rec1.second, rec1.millisecond);
+  var msUTC2 = createUTC(rec2.year, rec2.month - 1, rec2.day, rec2.hour, rec2.minute, rec2.second, rec2.millisecond);
+  return msUTC1 - msUTC2;
+};
+
+exports.adjustImpl = function (just) {
+  return function (nothing) {
+    return function (offset) {
+      return function (rec) {
+        var msUTC = createUTC(rec.year, rec.month - 1, rec.day, rec.hour, rec.minute, rec.second, rec.millisecond);
+        var dt = new Date(msUTC + offset);
+        return isNaN(dt.getTime()) ? nothing : just({
+          year: dt.getUTCFullYear(),
+          month: dt.getUTCMonth() + 1,
+          day: dt.getUTCDate(),
+          hour: dt.getUTCHours(),
+          minute: dt.getUTCMinutes(),
+          second: dt.getUTCSeconds(),
+          millisecond: dt.getUTCMilliseconds()
+        });
+      };
+    };
+  };
+};
+
+},{}],323:[function(require,module,exports){
+// Generated by purs version 0.11.6
+"use strict";
+var $foreign = require("./foreign");
+var Control_Apply = require("../Control.Apply");
+var Control_Bind = require("../Control.Bind");
+var Data_Bounded = require("../Data.Bounded");
+var Data_Date = require("../Data.Date");
+var Data_Date_Component = require("../Data.Date.Component");
+var Data_Enum = require("../Data.Enum");
+var Data_Eq = require("../Data.Eq");
+var Data_Function = require("../Data.Function");
+var Data_Function_Uncurried = require("../Data.Function.Uncurried");
+var Data_Functor = require("../Data.Functor");
+var Data_Generic = require("../Data.Generic");
+var Data_HeytingAlgebra = require("../Data.HeytingAlgebra");
+var Data_Maybe = require("../Data.Maybe");
+var Data_Ord = require("../Data.Ord");
+var Data_Ordering = require("../Data.Ordering");
+var Data_Semigroup = require("../Data.Semigroup");
+var Data_Show = require("../Data.Show");
+var Data_Time = require("../Data.Time");
+var Data_Time_Component = require("../Data.Time.Component");
+var Data_Time_Duration = require("../Data.Time.Duration");
+var Data_Unit = require("../Data.Unit");
+var Prelude = require("../Prelude");
+var DateTime = (function () {
+    function DateTime(value0, value1) {
+        this.value0 = value0;
+        this.value1 = value1;
+    };
+    DateTime.create = function (value0) {
+        return function (value1) {
+            return new DateTime(value0, value1);
+        };
+    };
+    return DateTime;
+})();
+var toRecord = function (v) {
+    return {
+        year: Data_Enum.fromEnum(Data_Date_Component.boundedEnumYear)(Data_Date.year(v.value0)), 
+        month: Data_Enum.fromEnum(Data_Date_Component.boundedEnumMonth)(Data_Date.month(v.value0)), 
+        day: Data_Enum.fromEnum(Data_Date_Component.boundedEnumDay)(Data_Date.day(v.value0)), 
+        hour: Data_Enum.fromEnum(Data_Time_Component.boundedEnumHour)(Data_Time.hour(v.value1)), 
+        minute: Data_Enum.fromEnum(Data_Time_Component.boundedEnumMinute)(Data_Time.minute(v.value1)), 
+        second: Data_Enum.fromEnum(Data_Time_Component.boundedEnumSecond)(Data_Time.second(v.value1)), 
+        millisecond: Data_Enum.fromEnum(Data_Time_Component.boundedEnumMillisecond)(Data_Time.millisecond(v.value1))
+    };
+};
+var time = function (v) {
+    return v.value1;
+};
+var showDateTime = new Data_Show.Show(function (v) {
+    return "(DateTime " + (Data_Show.show(Data_Date.showDate)(v.value0) + (" " + (Data_Show.show(Data_Time.showTime)(v.value1) + ")")));
+});
+var modifyTimeF = function (dictFunctor) {
+    return function (f) {
+        return function (v) {
+            return Data_Functor.map(dictFunctor)(DateTime.create(v.value0))(f(v.value1));
+        };
+    };
+};
+var modifyTime = function (f) {
+    return function (v) {
+        return new DateTime(v.value0, f(v.value1));
+    };
+};
+var modifyDateF = function (dictFunctor) {
+    return function (f) {
+        return function (v) {
+            return Data_Functor.map(dictFunctor)(Data_Function.flip(DateTime.create)(v.value1))(f(v.value0));
+        };
+    };
+};
+var modifyDate = function (f) {
+    return function (v) {
+        return new DateTime(f(v.value0), v.value1);
+    };
+};
+var genericDateTime = new Data_Generic.Generic(function (v) {
+    if (v instanceof Data_Generic.SProd && (v.value0 === "Data.DateTime.DateTime" && v.value1.length === 2)) {
+        return Control_Apply.apply(Data_Maybe.applyMaybe)(Control_Apply.apply(Data_Maybe.applyMaybe)(new Data_Maybe.Just(DateTime.create))(Data_Generic.fromSpine(Data_Date.genericDate)(v["value1"][0](Data_Unit.unit))))(Data_Generic.fromSpine(Data_Time.genericTime)(v["value1"][1](Data_Unit.unit)));
+    };
+    return Data_Maybe.Nothing.value;
+}, function ($dollarq) {
+    return new Data_Generic.SigProd("Data.DateTime.DateTime", [ {
+        sigConstructor: "Data.DateTime.DateTime", 
+        sigValues: [ function ($dollarq1) {
+            return Data_Generic.toSignature(Data_Date.genericDate)(Data_Generic.anyProxy);
+        }, function ($dollarq1) {
+            return Data_Generic.toSignature(Data_Time.genericTime)(Data_Generic.anyProxy);
+        } ]
+    } ]);
+}, function (v) {
+    return new Data_Generic.SProd("Data.DateTime.DateTime", [ function ($dollarq) {
+        return Data_Generic.toSpine(Data_Date.genericDate)(v.value0);
+    }, function ($dollarq) {
+        return Data_Generic.toSpine(Data_Time.genericTime)(v.value1);
+    } ]);
+});
+var eqDateTime = new Data_Eq.Eq(function (x) {
+    return function (y) {
+        return Data_Eq.eq(Data_Date.eqDate)(x.value0)(y.value0) && Data_Eq.eq(Data_Time.eqTime)(x.value1)(y.value1);
+    };
+});
+var ordDateTime = new Data_Ord.Ord(function () {
+    return eqDateTime;
+}, function (x) {
+    return function (y) {
+        var v = Data_Ord.compare(Data_Date.ordDate)(x.value0)(y.value0);
+        if (v instanceof Data_Ordering.LT) {
+            return Data_Ordering.LT.value;
+        };
+        if (v instanceof Data_Ordering.GT) {
+            return Data_Ordering.GT.value;
+        };
+        return Data_Ord.compare(Data_Time.ordTime)(x.value1)(y.value1);
+    };
+});
+var diff = function (dictDuration) {
+    return function (dt1) {
+        return function (dt2) {
+            return Data_Time_Duration.toDuration(dictDuration)($foreign.calcDiff(toRecord(dt1), toRecord(dt2)));
+        };
+    };
+};
+var date = function (v) {
+    return v.value0;
+};
+var boundedDateTime = new Data_Bounded.Bounded(function () {
+    return ordDateTime;
+}, new DateTime(Data_Bounded.bottom(Data_Date.boundedDate), Data_Bounded.bottom(Data_Time.boundedTime)), new DateTime(Data_Bounded.top(Data_Date.boundedDate), Data_Bounded.top(Data_Time.boundedTime)));
+var adjust = function (dictDuration) {
+    return function (d) {
+        return function (dt) {
+            return Control_Bind.bind(Data_Maybe.bindMaybe)($foreign.adjustImpl(Data_Maybe.Just.create)(Data_Maybe.Nothing.value)(Data_Time_Duration.fromDuration(dictDuration)(d))(toRecord(dt)))(function (rec) {
+                return Control_Apply.apply(Data_Maybe.applyMaybe)(Data_Functor.map(Data_Maybe.functorMaybe)(DateTime.create)(Control_Bind.join(Data_Maybe.bindMaybe)(Control_Apply.apply(Data_Maybe.applyMaybe)(Control_Apply.apply(Data_Maybe.applyMaybe)(Data_Functor.map(Data_Maybe.functorMaybe)(Data_Date.exactDate)(Data_Enum.toEnum(Data_Date_Component.boundedEnumYear)(rec.year)))(Data_Enum.toEnum(Data_Date_Component.boundedEnumMonth)(rec.month)))(Data_Enum.toEnum(Data_Date_Component.boundedEnumDay)(rec.day)))))(Control_Apply.apply(Data_Maybe.applyMaybe)(Control_Apply.apply(Data_Maybe.applyMaybe)(Control_Apply.apply(Data_Maybe.applyMaybe)(Data_Functor.map(Data_Maybe.functorMaybe)(Data_Time.Time.create)(Data_Enum.toEnum(Data_Time_Component.boundedEnumHour)(rec.hour)))(Data_Enum.toEnum(Data_Time_Component.boundedEnumMinute)(rec.minute)))(Data_Enum.toEnum(Data_Time_Component.boundedEnumSecond)(rec.second)))(Data_Enum.toEnum(Data_Time_Component.boundedEnumMillisecond)(rec.millisecond)));
+            });
+        };
+    };
+};
+module.exports = {
+    DateTime: DateTime, 
+    adjust: adjust, 
+    date: date, 
+    diff: diff, 
+    modifyDate: modifyDate, 
+    modifyDateF: modifyDateF, 
+    modifyTime: modifyTime, 
+    modifyTimeF: modifyTimeF, 
+    time: time, 
+    eqDateTime: eqDateTime, 
+    ordDateTime: ordDateTime, 
+    genericDateTime: genericDateTime, 
+    boundedDateTime: boundedDateTime, 
+    showDateTime: showDateTime
+};
+
+},{"../Control.Apply":198,"../Control.Bind":202,"../Data.Bounded":309,"../Data.Date":318,"../Data.Date.Component":316,"../Data.Enum":327,"../Data.Eq":329,"../Data.Function":341,"../Data.Function.Uncurried":340,"../Data.Functor":347,"../Data.Generic":351,"../Data.HeytingAlgebra":354,"../Data.Maybe":397,"../Data.Ord":415,"../Data.Ordering":416,"../Data.Semigroup":430,"../Data.Show":434,"../Data.Time":448,"../Data.Time.Component":446,"../Data.Time.Duration":447,"../Data.Unit":458,"../Prelude":475,"./foreign":322}],324:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Category = require("../Control.Category");
@@ -33560,7 +37025,7 @@ module.exports = {
     distributiveFunction: distributiveFunction
 };
 
-},{"../Control.Category":202,"../Control.Semigroupoid":250,"../Data.Function":318,"../Data.Functor":324,"../Data.Identity":332,"../Data.Newtype":385,"../Prelude":450}],303:[function(require,module,exports){
+},{"../Control.Category":203,"../Control.Semigroupoid":260,"../Data.Function":341,"../Data.Functor":347,"../Data.Identity":355,"../Data.Newtype":408,"../Prelude":475}],325:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Data_EuclideanRing = require("../Data.EuclideanRing");
@@ -33600,7 +37065,7 @@ module.exports = {
     divisionringNumber: divisionringNumber
 };
 
-},{"../Data.EuclideanRing":308,"../Data.Ring":403,"../Data.Semiring":409}],304:[function(require,module,exports){
+},{"../Data.EuclideanRing":331,"../Data.Ring":426,"../Data.Semiring":432}],326:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Alt = require("../Control.Alt");
@@ -34036,7 +37501,512 @@ module.exports = {
     semigroupEither: semigroupEither
 };
 
-},{"../Control.Alt":193,"../Control.Applicative":195,"../Control.Apply":197,"../Control.Bind":201,"../Control.Extend":205,"../Control.Monad":244,"../Data.Bifoldable":288,"../Data.Bifunctor":294,"../Data.Bitraversable":295,"../Data.Bounded":299,"../Data.Eq":306,"../Data.Foldable":311,"../Data.Function":318,"../Data.Functor":324,"../Data.Functor.Invariant":322,"../Data.Maybe":374,"../Data.Monoid":383,"../Data.Ord":392,"../Data.Ordering":393,"../Data.Semigroup":407,"../Data.Semiring":409,"../Data.Show":411,"../Data.Traversable":427,"../Prelude":450}],305:[function(require,module,exports){
+},{"../Control.Alt":194,"../Control.Applicative":196,"../Control.Apply":198,"../Control.Bind":202,"../Control.Extend":206,"../Control.Monad":254,"../Data.Bifoldable":298,"../Data.Bifunctor":304,"../Data.Bitraversable":305,"../Data.Bounded":309,"../Data.Eq":329,"../Data.Foldable":334,"../Data.Function":341,"../Data.Functor":347,"../Data.Functor.Invariant":345,"../Data.Maybe":397,"../Data.Monoid":406,"../Data.Ord":415,"../Data.Ordering":416,"../Data.Semigroup":430,"../Data.Semiring":432,"../Data.Show":434,"../Data.Traversable":452,"../Prelude":475}],327:[function(require,module,exports){
+// Generated by purs version 0.11.6
+"use strict";
+var Control_Applicative = require("../Control.Applicative");
+var Control_Apply = require("../Control.Apply");
+var Control_Bind = require("../Control.Bind");
+var Control_MonadPlus = require("../Control.MonadPlus");
+var Control_MonadZero = require("../Control.MonadZero");
+var Control_Semigroupoid = require("../Control.Semigroupoid");
+var Data_Boolean = require("../Data.Boolean");
+var Data_Bounded = require("../Data.Bounded");
+var Data_Char = require("../Data.Char");
+var Data_Either = require("../Data.Either");
+var Data_Eq = require("../Data.Eq");
+var Data_EuclideanRing = require("../Data.EuclideanRing");
+var Data_Function = require("../Data.Function");
+var Data_Functor = require("../Data.Functor");
+var Data_HeytingAlgebra = require("../Data.HeytingAlgebra");
+var Data_Maybe = require("../Data.Maybe");
+var Data_Newtype = require("../Data.Newtype");
+var Data_NonEmpty = require("../Data.NonEmpty");
+var Data_Ord = require("../Data.Ord");
+var Data_Ordering = require("../Data.Ordering");
+var Data_Ring = require("../Data.Ring");
+var Data_Semiring = require("../Data.Semiring");
+var Data_Tuple = require("../Data.Tuple");
+var Data_Unfoldable = require("../Data.Unfoldable");
+var Data_Unit = require("../Data.Unit");
+var Partial_Unsafe = require("../Partial.Unsafe");
+var Prelude = require("../Prelude");
+var Cardinality = function (x) {
+    return x;
+};
+var Enum = function (Ord0, pred, succ) {
+    this.Ord0 = Ord0;
+    this.pred = pred;
+    this.succ = succ;
+};
+var BoundedEnum = function (Bounded0, Enum1, cardinality, fromEnum, toEnum) {
+    this.Bounded0 = Bounded0;
+    this.Enum1 = Enum1;
+    this.cardinality = cardinality;
+    this.fromEnum = fromEnum;
+    this.toEnum = toEnum;
+};
+var toEnum = function (dict) {
+    return dict.toEnum;
+};
+var succ = function (dict) {
+    return dict.succ;
+};
+var pred = function (dict) {
+    return dict.pred;
+};
+var ordCardinality = Data_Ord.ordInt;
+var newtypeCardinality = new Data_Newtype.Newtype(function (n) {
+    return n;
+}, Cardinality);
+var intStepFromTo = function (step) {
+    return function (from) {
+        return function (to) {
+            return Data_Unfoldable.unfoldr(Data_Unfoldable.unfoldableArray)(function (e) {
+                var $54 = e <= to;
+                if ($54) {
+                    return Data_Maybe.Just.create(new Data_Tuple.Tuple(e, e + step | 0));
+                };
+                return Data_Maybe.Nothing.value;
+            })(from);
+        };
+    };
+};
+var fromEnum = function (dict) {
+    return dict.fromEnum;
+};
+var toEnumWithDefaults = function (dictBoundedEnum) {
+    return function (b) {
+        return function (t) {
+            return function (x) {
+                var v = toEnum(dictBoundedEnum)(x);
+                if (v instanceof Data_Maybe.Just) {
+                    return v.value0;
+                };
+                if (v instanceof Data_Maybe.Nothing) {
+                    var $57 = x < fromEnum(dictBoundedEnum)(Data_Bounded.bottom(dictBoundedEnum.Bounded0()));
+                    if ($57) {
+                        return b;
+                    };
+                    return t;
+                };
+                throw new Error("Failed pattern match at Data.Enum line 272, column 28 - line 274, column 56: " + [ v.constructor.name ]);
+            };
+        };
+    };
+};
+var eqCardinality = Data_Eq.eqInt;
+var enumUnit = new Enum(function () {
+    return Data_Ord.ordUnit;
+}, Data_Function["const"](Data_Maybe.Nothing.value), Data_Function["const"](Data_Maybe.Nothing.value));
+var enumTuple = function (dictEnum) {
+    return function (dictBoundedEnum) {
+        return new Enum(function () {
+            return Data_Tuple.ordTuple(dictEnum.Ord0())((dictBoundedEnum.Enum1()).Ord0());
+        }, function (v) {
+            return Data_Maybe.maybe(Data_Functor.map(Data_Maybe.functorMaybe)(Data_Function.flip(Data_Tuple.Tuple.create)(Data_Bounded.top(dictBoundedEnum.Bounded0())))(pred(dictEnum)(v.value0)))(function ($101) {
+                return Data_Maybe.Just.create(Data_Tuple.Tuple.create(v.value0)($101));
+            })(pred(dictBoundedEnum.Enum1())(v.value1));
+        }, function (v) {
+            return Data_Maybe.maybe(Data_Functor.map(Data_Maybe.functorMaybe)(Data_Function.flip(Data_Tuple.Tuple.create)(Data_Bounded.bottom(dictBoundedEnum.Bounded0())))(succ(dictEnum)(v.value0)))(function ($102) {
+                return Data_Maybe.Just.create(Data_Tuple.Tuple.create(v.value0)($102));
+            })(succ(dictBoundedEnum.Enum1())(v.value1));
+        });
+    };
+};
+var enumOrdering = new Enum(function () {
+    return Data_Ord.ordOrdering;
+}, function (v) {
+    if (v instanceof Data_Ordering.LT) {
+        return Data_Maybe.Nothing.value;
+    };
+    if (v instanceof Data_Ordering.EQ) {
+        return new Data_Maybe.Just(Data_Ordering.LT.value);
+    };
+    if (v instanceof Data_Ordering.GT) {
+        return new Data_Maybe.Just(Data_Ordering.EQ.value);
+    };
+    throw new Error("Failed pattern match at Data.Enum line 84, column 1 - line 84, column 39: " + [ v.constructor.name ]);
+}, function (v) {
+    if (v instanceof Data_Ordering.LT) {
+        return new Data_Maybe.Just(Data_Ordering.EQ.value);
+    };
+    if (v instanceof Data_Ordering.EQ) {
+        return new Data_Maybe.Just(Data_Ordering.GT.value);
+    };
+    if (v instanceof Data_Ordering.GT) {
+        return Data_Maybe.Nothing.value;
+    };
+    throw new Error("Failed pattern match at Data.Enum line 84, column 1 - line 84, column 39: " + [ v.constructor.name ]);
+});
+var enumMaybe = function (dictBoundedEnum) {
+    return new Enum(function () {
+        return Data_Maybe.ordMaybe((dictBoundedEnum.Enum1()).Ord0());
+    }, function (v) {
+        if (v instanceof Data_Maybe.Nothing) {
+            return Data_Maybe.Nothing.value;
+        };
+        if (v instanceof Data_Maybe.Just) {
+            return Data_Maybe.Just.create(pred(dictBoundedEnum.Enum1())(v.value0));
+        };
+        throw new Error("Failed pattern match at Data.Enum line 92, column 1 - line 92, column 54: " + [ v.constructor.name ]);
+    }, function (v) {
+        if (v instanceof Data_Maybe.Nothing) {
+            return Data_Maybe.Just.create(new Data_Maybe.Just(Data_Bounded.bottom(dictBoundedEnum.Bounded0())));
+        };
+        if (v instanceof Data_Maybe.Just) {
+            return Data_Functor.map(Data_Maybe.functorMaybe)(Data_Maybe.Just.create)(succ(dictBoundedEnum.Enum1())(v.value0));
+        };
+        throw new Error("Failed pattern match at Data.Enum line 92, column 1 - line 92, column 54: " + [ v.constructor.name ]);
+    });
+};
+var enumInt = new Enum(function () {
+    return Data_Ord.ordInt;
+}, function (n) {
+    var $70 = n > Data_Bounded.bottom(Data_Bounded.boundedInt);
+    if ($70) {
+        return new Data_Maybe.Just(n - 1 | 0);
+    };
+    return Data_Maybe.Nothing.value;
+}, function (n) {
+    var $71 = n < Data_Bounded.top(Data_Bounded.boundedInt);
+    if ($71) {
+        return new Data_Maybe.Just(n + 1 | 0);
+    };
+    return Data_Maybe.Nothing.value;
+});
+var enumFromTo = function (dictEnum) {
+    return function (dictUnfoldable) {
+        return function (from) {
+            return function (to) {
+                var go = function (mx) {
+                    return Control_Bind.bind(Data_Maybe.bindMaybe)(mx)(function (v) {
+                        return Control_Bind.discard(Control_Bind.discardUnit)(Data_Maybe.bindMaybe)(Control_MonadZero.guard(Data_Maybe.monadZeroMaybe)(Data_Ord.lessThanOrEq(dictEnum.Ord0())(v)(to)))(function () {
+                            return Control_Applicative.pure(Data_Maybe.applicativeMaybe)(new Data_Tuple.Tuple(v, succ(dictEnum)(v)));
+                        });
+                    });
+                };
+                return Data_Unfoldable.unfoldr(dictUnfoldable)(go)(new Data_Maybe.Just(from));
+            };
+        };
+    };
+};
+var enumFromThenTo = function (dictBoundedEnum) {
+    return function (a) {
+        return function (b) {
+            return function (c) {
+                var c$prime = fromEnum(dictBoundedEnum)(c);
+                var b$prime = fromEnum(dictBoundedEnum)(b);
+                var a$prime = fromEnum(dictBoundedEnum)(a);
+                return Data_Functor.map(Data_Functor.functorArray)(function ($103) {
+                    return Data_Maybe.fromJust()(toEnum(dictBoundedEnum)($103));
+                })(intStepFromTo(b$prime - a$prime | 0)(a$prime)(c$prime));
+            };
+        };
+    };
+};
+var enumEither = function (dictBoundedEnum) {
+    return function (dictBoundedEnum1) {
+        return new Enum(function () {
+            return Data_Either.ordEither((dictBoundedEnum.Enum1()).Ord0())((dictBoundedEnum1.Enum1()).Ord0());
+        }, function (v) {
+            if (v instanceof Data_Either.Left) {
+                return Data_Maybe.maybe(Data_Maybe.Nothing.value)(function ($104) {
+                    return Data_Maybe.Just.create(Data_Either.Left.create($104));
+                })(pred(dictBoundedEnum.Enum1())(v.value0));
+            };
+            if (v instanceof Data_Either.Right) {
+                return Data_Maybe.maybe(Data_Maybe.Just.create(new Data_Either.Left(Data_Bounded.top(dictBoundedEnum.Bounded0()))))(function ($105) {
+                    return Data_Maybe.Just.create(Data_Either.Right.create($105));
+                })(pred(dictBoundedEnum1.Enum1())(v.value0));
+            };
+            throw new Error("Failed pattern match at Data.Enum line 98, column 1 - line 98, column 75: " + [ v.constructor.name ]);
+        }, function (v) {
+            if (v instanceof Data_Either.Left) {
+                return Data_Maybe.maybe(Data_Maybe.Just.create(new Data_Either.Right(Data_Bounded.bottom(dictBoundedEnum1.Bounded0()))))(function ($106) {
+                    return Data_Maybe.Just.create(Data_Either.Left.create($106));
+                })(succ(dictBoundedEnum.Enum1())(v.value0));
+            };
+            if (v instanceof Data_Either.Right) {
+                return Data_Maybe.maybe(Data_Maybe.Nothing.value)(function ($107) {
+                    return Data_Maybe.Just.create(Data_Either.Right.create($107));
+                })(succ(dictBoundedEnum1.Enum1())(v.value0));
+            };
+            throw new Error("Failed pattern match at Data.Enum line 98, column 1 - line 98, column 75: " + [ v.constructor.name ]);
+        });
+    };
+};
+var enumBoolean = new Enum(function () {
+    return Data_Ord.ordBoolean;
+}, function (v) {
+    if (v) {
+        return new Data_Maybe.Just(false);
+    };
+    return Data_Maybe.Nothing.value;
+}, function (v) {
+    if (!v) {
+        return new Data_Maybe.Just(true);
+    };
+    return Data_Maybe.Nothing.value;
+});
+var diag = function (a) {
+    return new Data_Tuple.Tuple(a, a);
+};
+var downFrom = function (dictEnum) {
+    return function (dictUnfoldable) {
+        return Data_Unfoldable.unfoldr(dictUnfoldable)(function ($108) {
+            return Data_Functor.map(Data_Maybe.functorMaybe)(diag)(pred(dictEnum)($108));
+        });
+    };
+};
+var upFrom = function (dictEnum) {
+    return function (dictUnfoldable) {
+        return Data_Unfoldable.unfoldr(dictUnfoldable)(function ($109) {
+            return Data_Functor.map(Data_Maybe.functorMaybe)(diag)(succ(dictEnum)($109));
+        });
+    };
+};
+var upFromIncluding = function (dictEnum) {
+    return function (dictUnfoldable) {
+        return function (x) {
+            return new Data_NonEmpty.NonEmpty(x, upFrom(dictEnum)(dictUnfoldable)(x));
+        };
+    };
+};
+var defaultToEnum = function (dictBounded) {
+    return function (dictEnum) {
+        return function (n) {
+            if (n < 0) {
+                return Data_Maybe.Nothing.value;
+            };
+            if (n === 0) {
+                return new Data_Maybe.Just(Data_Bounded.bottom(dictBounded));
+            };
+            if (Data_Boolean.otherwise) {
+                return Control_Bind.bind(Data_Maybe.bindMaybe)(defaultToEnum(dictBounded)(dictEnum)(n - 1 | 0))(succ(dictEnum));
+            };
+            throw new Error("Failed pattern match at Data.Enum line 251, column 1 - line 251, column 65: " + [ n.constructor.name ]);
+        };
+    };
+};
+var defaultSucc = function (toEnum$prime) {
+    return function (fromEnum$prime) {
+        return function (a) {
+            return toEnum$prime(fromEnum$prime(a) + 1 | 0);
+        };
+    };
+};
+var defaultPred = function (toEnum$prime) {
+    return function (fromEnum$prime) {
+        return function (a) {
+            return toEnum$prime(fromEnum$prime(a) - 1 | 0);
+        };
+    };
+};
+var defaultFromEnum = function (dictEnum) {
+    return function ($110) {
+        return Data_Maybe.maybe(0)(function (prd) {
+            return defaultFromEnum(dictEnum)(prd) + 1 | 0;
+        })(pred(dictEnum)($110));
+    };
+};
+var defaultCardinality = function (dictBounded) {
+    return function (dictEnum) {
+        var defaultCardinality$prime = function (i) {
+            return function ($111) {
+                return Data_Maybe.maybe(i)(defaultCardinality$prime(i + 1 | 0))(succ(dictEnum)($111));
+            };
+        };
+        return Cardinality(defaultCardinality$prime(1)(Data_Bounded.bottom(dictBounded)));
+    };
+};
+var charToEnum = function (v) {
+    if (v >= Data_Bounded.bottom(Data_Bounded.boundedInt) && v <= Data_Bounded.top(Data_Bounded.boundedInt)) {
+        return Data_Maybe.Just.create(Data_Char.fromCharCode(v));
+    };
+    return Data_Maybe.Nothing.value;
+};
+var enumChar = new Enum(function () {
+    return Data_Ord.ordChar;
+}, defaultPred(charToEnum)(Data_Char.toCharCode), defaultSucc(charToEnum)(Data_Char.toCharCode));
+var cardinality = function (dict) {
+    return dict.cardinality;
+};
+var boundedEnumUnit = new BoundedEnum(function () {
+    return Data_Bounded.boundedUnit;
+}, function () {
+    return enumUnit;
+}, 1, Data_Function["const"](0), function (v) {
+    if (v === 0) {
+        return new Data_Maybe.Just(Data_Unit.unit);
+    };
+    return Data_Maybe.Nothing.value;
+});
+var boundedEnumTuple = function (dictBoundedEnum) {
+    return function (dictBoundedEnum1) {
+        return new BoundedEnum(function () {
+            return Data_Tuple.boundedTuple(dictBoundedEnum.Bounded0())(dictBoundedEnum1.Bounded0());
+        }, function () {
+            return enumTuple(dictBoundedEnum.Enum1())(dictBoundedEnum1);
+        }, Cardinality(Data_Newtype.unwrap(newtypeCardinality)(cardinality(dictBoundedEnum)) * Data_Newtype.unwrap(newtypeCardinality)(cardinality(dictBoundedEnum1)) | 0), (function () {
+            var from = function (v) {
+                return function (v1) {
+                    return (fromEnum(dictBoundedEnum)(v1.value0) * v | 0) + fromEnum(dictBoundedEnum1)(v1.value1) | 0;
+                };
+            };
+            return from(cardinality(dictBoundedEnum1));
+        })(), (function () {
+            var to = function (v) {
+                return function (n) {
+                    return Control_Apply.apply(Data_Maybe.applyMaybe)(Data_Functor.map(Data_Maybe.functorMaybe)(Data_Tuple.Tuple.create)(toEnum(dictBoundedEnum)(n / v | 0)))(toEnum(dictBoundedEnum1)(n % v));
+                };
+            };
+            return to(cardinality(dictBoundedEnum1));
+        })());
+    };
+};
+var boundedEnumOrdering = new BoundedEnum(function () {
+    return Data_Bounded.boundedOrdering;
+}, function () {
+    return enumOrdering;
+}, 3, function (v) {
+    if (v instanceof Data_Ordering.LT) {
+        return 0;
+    };
+    if (v instanceof Data_Ordering.EQ) {
+        return 1;
+    };
+    if (v instanceof Data_Ordering.GT) {
+        return 2;
+    };
+    throw new Error("Failed pattern match at Data.Enum line 200, column 1 - line 200, column 53: " + [ v.constructor.name ]);
+}, function (v) {
+    if (v === 0) {
+        return new Data_Maybe.Just(Data_Ordering.LT.value);
+    };
+    if (v === 1) {
+        return new Data_Maybe.Just(Data_Ordering.EQ.value);
+    };
+    if (v === 2) {
+        return new Data_Maybe.Just(Data_Ordering.GT.value);
+    };
+    return Data_Maybe.Nothing.value;
+});
+var boundedEnumMaybe = function (dictBoundedEnum) {
+    return new BoundedEnum(function () {
+        return Data_Maybe.boundedMaybe(dictBoundedEnum.Bounded0());
+    }, function () {
+        return enumMaybe(dictBoundedEnum);
+    }, Cardinality(Data_Newtype.unwrap(newtypeCardinality)(cardinality(dictBoundedEnum)) + 1 | 0), function (v) {
+        if (v instanceof Data_Maybe.Nothing) {
+            return 0;
+        };
+        if (v instanceof Data_Maybe.Just) {
+            return fromEnum(dictBoundedEnum)(v.value0) + 1 | 0;
+        };
+        throw new Error("Failed pattern match at Data.Enum line 210, column 1 - line 210, column 68: " + [ v.constructor.name ]);
+    }, function (v) {
+        if (v === 0) {
+            return Control_Applicative.pure(Data_Maybe.applicativeMaybe)(Data_Maybe.Nothing.value);
+        };
+        return Data_Functor.map(Data_Maybe.functorMaybe)(Data_Maybe.Just.create)(toEnum(dictBoundedEnum)(v - 1 | 0));
+    });
+};
+var boundedEnumEither = function (dictBoundedEnum) {
+    return function (dictBoundedEnum1) {
+        return new BoundedEnum(function () {
+            return Data_Either.boundedEither(dictBoundedEnum.Bounded0())(dictBoundedEnum1.Bounded0());
+        }, function () {
+            return enumEither(dictBoundedEnum)(dictBoundedEnum1);
+        }, Cardinality(Data_Newtype.unwrap(newtypeCardinality)(cardinality(dictBoundedEnum)) + Data_Newtype.unwrap(newtypeCardinality)(cardinality(dictBoundedEnum1)) | 0), function (v) {
+            if (v instanceof Data_Either.Left) {
+                return fromEnum(dictBoundedEnum)(v.value0);
+            };
+            if (v instanceof Data_Either.Right) {
+                return fromEnum(dictBoundedEnum1)(v.value0) + Data_Newtype.unwrap(newtypeCardinality)(cardinality(dictBoundedEnum)) | 0;
+            };
+            throw new Error("Failed pattern match at Data.Enum line 217, column 1 - line 217, column 89: " + [ v.constructor.name ]);
+        }, function (n) {
+            var to = function (v) {
+                if (n >= 0 && n < v) {
+                    return Data_Functor.map(Data_Maybe.functorMaybe)(Data_Either.Left.create)(toEnum(dictBoundedEnum)(n));
+                };
+                if (Data_Boolean.otherwise) {
+                    return Data_Functor.map(Data_Maybe.functorMaybe)(Data_Either.Right.create)(toEnum(dictBoundedEnum1)(n - v | 0));
+                };
+                throw new Error("Failed pattern match at Data.Enum line 224, column 5 - line 224, column 46: " + [ v.constructor.name ]);
+            };
+            return to(cardinality(dictBoundedEnum));
+        });
+    };
+};
+var boundedEnumChar = new BoundedEnum(function () {
+    return Data_Bounded.boundedChar;
+}, function () {
+    return enumChar;
+}, Data_Char.toCharCode(Data_Bounded.top(Data_Bounded.boundedChar)) - Data_Char.toCharCode(Data_Bounded.bottom(Data_Bounded.boundedChar)) | 0, Data_Char.toCharCode, charToEnum);
+var boundedEnumBoolean = new BoundedEnum(function () {
+    return Data_Bounded.boundedBoolean;
+}, function () {
+    return enumBoolean;
+}, 2, function (v) {
+    if (!v) {
+        return 0;
+    };
+    if (v) {
+        return 1;
+    };
+    throw new Error("Failed pattern match at Data.Enum line 181, column 1 - line 181, column 51: " + [ v.constructor.name ]);
+}, function (v) {
+    if (v === 0) {
+        return new Data_Maybe.Just(false);
+    };
+    if (v === 1) {
+        return new Data_Maybe.Just(true);
+    };
+    return Data_Maybe.Nothing.value;
+});
+module.exports = {
+    Cardinality: Cardinality, 
+    BoundedEnum: BoundedEnum, 
+    Enum: Enum, 
+    cardinality: cardinality, 
+    defaultCardinality: defaultCardinality, 
+    defaultFromEnum: defaultFromEnum, 
+    defaultPred: defaultPred, 
+    defaultSucc: defaultSucc, 
+    defaultToEnum: defaultToEnum, 
+    downFrom: downFrom, 
+    enumFromThenTo: enumFromThenTo, 
+    enumFromTo: enumFromTo, 
+    fromEnum: fromEnum, 
+    pred: pred, 
+    succ: succ, 
+    toEnum: toEnum, 
+    toEnumWithDefaults: toEnumWithDefaults, 
+    upFrom: upFrom, 
+    upFromIncluding: upFromIncluding, 
+    newtypeCardinality: newtypeCardinality, 
+    eqCardinality: eqCardinality, 
+    ordCardinality: ordCardinality, 
+    enumBoolean: enumBoolean, 
+    enumInt: enumInt, 
+    enumChar: enumChar, 
+    enumUnit: enumUnit, 
+    enumOrdering: enumOrdering, 
+    enumMaybe: enumMaybe, 
+    enumEither: enumEither, 
+    enumTuple: enumTuple, 
+    boundedEnumBoolean: boundedEnumBoolean, 
+    boundedEnumChar: boundedEnumChar, 
+    boundedEnumUnit: boundedEnumUnit, 
+    boundedEnumOrdering: boundedEnumOrdering, 
+    boundedEnumMaybe: boundedEnumMaybe, 
+    boundedEnumEither: boundedEnumEither, 
+    boundedEnumTuple: boundedEnumTuple
+};
+
+},{"../Control.Applicative":196,"../Control.Apply":198,"../Control.Bind":202,"../Control.MonadPlus":255,"../Control.MonadZero":256,"../Control.Semigroupoid":260,"../Data.Boolean":306,"../Data.Bounded":309,"../Data.Char":313,"../Data.Either":326,"../Data.Eq":329,"../Data.EuclideanRing":331,"../Data.Function":341,"../Data.Functor":347,"../Data.HeytingAlgebra":354,"../Data.Maybe":397,"../Data.Newtype":408,"../Data.NonEmpty":409,"../Data.Ord":415,"../Data.Ordering":416,"../Data.Ring":426,"../Data.Semiring":432,"../Data.Tuple":454,"../Data.Unfoldable":456,"../Data.Unit":458,"../Partial.Unsafe":472,"../Prelude":475}],328:[function(require,module,exports){
 "use strict";
 
 exports.refEq = function (r1) {
@@ -34057,7 +38027,7 @@ exports.eqArrayImpl = function (f) {
   };
 };
 
-},{}],306:[function(require,module,exports){
+},{}],329:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -34130,7 +38100,7 @@ module.exports = {
     eq1Array: eq1Array
 };
 
-},{"../Data.Unit":433,"../Data.Void":434,"./foreign":305}],307:[function(require,module,exports){
+},{"../Data.Unit":458,"../Data.Void":459,"./foreign":328}],330:[function(require,module,exports){
 "use strict";
 
 exports.intDegree = function (x) {
@@ -34156,7 +38126,7 @@ exports.numDiv = function (n1) {
   };
 };
 
-},{}],308:[function(require,module,exports){
+},{}],331:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -34246,7 +38216,7 @@ module.exports = {
     euclideanRingNumber: euclideanRingNumber
 };
 
-},{"../Data.BooleanAlgebra":297,"../Data.CommutativeRing":300,"../Data.Eq":306,"../Data.HeytingAlgebra":331,"../Data.Ring":403,"../Data.Semiring":409,"./foreign":307}],309:[function(require,module,exports){
+},{"../Data.BooleanAlgebra":307,"../Data.CommutativeRing":314,"../Data.Eq":329,"../Data.HeytingAlgebra":354,"../Data.Ring":426,"../Data.Semiring":432,"./foreign":330}],332:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Data_CommutativeRing = require("../Data.CommutativeRing");
@@ -34265,7 +38235,7 @@ module.exports = {
     fieldNumber: fieldNumber
 };
 
-},{"../Data.CommutativeRing":300,"../Data.DivisionRing":303,"../Data.EuclideanRing":308,"../Data.Ring":403,"../Data.Semiring":409}],310:[function(require,module,exports){
+},{"../Data.CommutativeRing":314,"../Data.DivisionRing":325,"../Data.EuclideanRing":331,"../Data.Ring":426,"../Data.Semiring":432}],333:[function(require,module,exports){
 "use strict";
 
 exports.foldrArray = function (f) {
@@ -34294,7 +38264,7 @@ exports.foldlArray = function (f) {
   };
 };
 
-},{}],311:[function(require,module,exports){
+},{}],334:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -34845,7 +38815,7 @@ module.exports = {
     foldableMultiplicative: foldableMultiplicative
 };
 
-},{"../Control.Alt":193,"../Control.Applicative":195,"../Control.Apply":197,"../Control.Bind":201,"../Control.Category":202,"../Control.Plus":249,"../Control.Semigroupoid":250,"../Data.Eq":306,"../Data.Function":318,"../Data.Functor":324,"../Data.HeytingAlgebra":331,"../Data.Maybe":374,"../Data.Maybe.First":372,"../Data.Maybe.Last":373,"../Data.Monoid":383,"../Data.Monoid.Additive":377,"../Data.Monoid.Conj":378,"../Data.Monoid.Disj":379,"../Data.Monoid.Dual":380,"../Data.Monoid.Endo":381,"../Data.Monoid.Multiplicative":382,"../Data.Newtype":385,"../Data.Ord":392,"../Data.Ordering":393,"../Data.Semigroup":407,"../Data.Semiring":409,"../Data.Unit":433,"../Prelude":450,"./foreign":310}],312:[function(require,module,exports){
+},{"../Control.Alt":194,"../Control.Applicative":196,"../Control.Apply":198,"../Control.Bind":202,"../Control.Category":203,"../Control.Plus":259,"../Control.Semigroupoid":260,"../Data.Eq":329,"../Data.Function":341,"../Data.Functor":347,"../Data.HeytingAlgebra":354,"../Data.Maybe":397,"../Data.Maybe.First":395,"../Data.Maybe.Last":396,"../Data.Monoid":406,"../Data.Monoid.Additive":400,"../Data.Monoid.Conj":401,"../Data.Monoid.Disj":402,"../Data.Monoid.Dual":403,"../Data.Monoid.Endo":404,"../Data.Monoid.Multiplicative":405,"../Data.Newtype":408,"../Data.Ord":415,"../Data.Ordering":416,"../Data.Semigroup":430,"../Data.Semiring":432,"../Data.Unit":458,"../Prelude":475,"./foreign":333}],335:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Applicative = require("../Control.Applicative");
@@ -35178,7 +39148,7 @@ module.exports = {
     foldableWithIndexMultiplicative: foldableWithIndexMultiplicative
 };
 
-},{"../Control.Applicative":195,"../Control.Apply":197,"../Control.Bind":201,"../Control.Semigroupoid":250,"../Data.Foldable":311,"../Data.Function":318,"../Data.FunctorWithIndex":326,"../Data.Maybe":374,"../Data.Maybe.First":372,"../Data.Maybe.Last":373,"../Data.Monoid":383,"../Data.Monoid.Additive":377,"../Data.Monoid.Conj":378,"../Data.Monoid.Disj":379,"../Data.Monoid.Dual":380,"../Data.Monoid.Endo":381,"../Data.Monoid.Multiplicative":382,"../Data.Newtype":385,"../Data.Semigroup":407,"../Data.Unit":433,"../Prelude":450}],313:[function(require,module,exports){
+},{"../Control.Applicative":196,"../Control.Apply":198,"../Control.Bind":202,"../Control.Semigroupoid":260,"../Data.Foldable":334,"../Data.Function":341,"../Data.FunctorWithIndex":349,"../Data.Maybe":397,"../Data.Maybe.First":395,"../Data.Maybe.Last":396,"../Data.Monoid":406,"../Data.Monoid.Additive":400,"../Data.Monoid.Conj":401,"../Data.Monoid.Disj":402,"../Data.Monoid.Dual":403,"../Data.Monoid.Endo":404,"../Data.Monoid.Multiplicative":405,"../Data.Newtype":408,"../Data.Semigroup":430,"../Data.Unit":458,"../Prelude":475}],336:[function(require,module,exports){
 "use strict";
 
 exports.toForeign = function (value) {
@@ -35209,7 +39179,7 @@ exports.isArray = Array.isArray || function (value) {
   return Object.prototype.toString.call(value) === "[object Array]";
 };
 
-},{}],314:[function(require,module,exports){
+},{}],337:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -35507,7 +39477,7 @@ module.exports = {
     unsafeFromForeign: $foreign.unsafeFromForeign
 };
 
-},{"../Control.Applicative":195,"../Control.Monad.Error.Class":227,"../Control.Monad.Except":229,"../Control.Monad.Except.Trans":228,"../Control.Semigroupoid":250,"../Data.Boolean":296,"../Data.Either":304,"../Data.Eq":306,"../Data.Function":318,"../Data.HeytingAlgebra":331,"../Data.Identity":332,"../Data.Int":336,"../Data.List.NonEmpty":368,"../Data.Maybe":374,"../Data.Ord":392,"../Data.Ordering":393,"../Data.Semigroup":407,"../Data.Show":411,"../Data.String":422,"../Prelude":450,"./foreign":313}],315:[function(require,module,exports){
+},{"../Control.Applicative":196,"../Control.Monad.Error.Class":233,"../Control.Monad.Except":235,"../Control.Monad.Except.Trans":234,"../Control.Semigroupoid":260,"../Data.Boolean":306,"../Data.Either":326,"../Data.Eq":329,"../Data.Function":341,"../Data.HeytingAlgebra":354,"../Data.Identity":355,"../Data.Int":359,"../Data.List.NonEmpty":391,"../Data.Maybe":397,"../Data.Ord":415,"../Data.Ordering":416,"../Data.Semigroup":430,"../Data.Show":434,"../Data.String":445,"../Prelude":475,"./foreign":336}],338:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Apply = require("../Control.Apply");
@@ -35586,7 +39556,7 @@ module.exports = {
     monoidFormUrlEncoded: monoidFormUrlEncoded
 };
 
-},{"../Control.Apply":197,"../Control.Semigroupoid":250,"../Data.Eq":306,"../Data.Functor":324,"../Data.Generic":328,"../Data.Maybe":374,"../Data.Monoid":383,"../Data.Newtype":385,"../Data.Ord":392,"../Data.Semigroup":407,"../Data.Show":411,"../Data.String":422,"../Data.Tuple":429,"../Data.Unit":433,"../Global":436,"../Prelude":450}],316:[function(require,module,exports){
+},{"../Control.Apply":198,"../Control.Semigroupoid":260,"../Data.Eq":329,"../Data.Functor":347,"../Data.Generic":351,"../Data.Maybe":397,"../Data.Monoid":406,"../Data.Newtype":408,"../Data.Ord":415,"../Data.Semigroup":430,"../Data.Show":434,"../Data.String":445,"../Data.Tuple":454,"../Data.Unit":458,"../Global":461,"../Prelude":475}],339:[function(require,module,exports){
 "use strict";
 
 // module Data.Function.Uncurried
@@ -35808,7 +39778,7 @@ exports.runFn10 = function (fn) {
   };
 };
 
-},{}],317:[function(require,module,exports){
+},{}],340:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -35844,7 +39814,7 @@ module.exports = {
     runFn9: $foreign.runFn9
 };
 
-},{"../Data.Unit":433,"./foreign":316}],318:[function(require,module,exports){
+},{"../Data.Unit":458,"./foreign":339}],341:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Category = require("../Control.Category");
@@ -35887,7 +39857,7 @@ module.exports = {
     on: on
 };
 
-},{"../Control.Category":202}],319:[function(require,module,exports){
+},{"../Control.Category":203}],342:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Alt = require("../Control.Alt");
@@ -36054,7 +40024,7 @@ module.exports = {
     comonadApp: comonadApp
 };
 
-},{"../Control.Alt":193,"../Control.Alternative":194,"../Control.Applicative":195,"../Control.Apply":197,"../Control.Bind":201,"../Control.Comonad":203,"../Control.Extend":205,"../Control.Lazy":206,"../Control.Monad":244,"../Control.MonadPlus":245,"../Control.MonadZero":246,"../Control.Plus":249,"../Data.Eq":306,"../Data.Foldable":311,"../Data.Functor":324,"../Data.Monoid":383,"../Data.Newtype":385,"../Data.Ord":392,"../Data.Semigroup":407,"../Data.Show":411,"../Data.Traversable":427,"../Prelude":450,"../Unsafe.Coerce":466}],320:[function(require,module,exports){
+},{"../Control.Alt":194,"../Control.Alternative":195,"../Control.Applicative":196,"../Control.Apply":198,"../Control.Bind":202,"../Control.Comonad":204,"../Control.Extend":206,"../Control.Lazy":207,"../Control.Monad":254,"../Control.MonadPlus":255,"../Control.MonadZero":256,"../Control.Plus":259,"../Data.Eq":329,"../Data.Foldable":334,"../Data.Functor":347,"../Data.Monoid":406,"../Data.Newtype":408,"../Data.Ord":415,"../Data.Semigroup":430,"../Data.Show":434,"../Data.Traversable":452,"../Prelude":475,"../Unsafe.Coerce":493}],343:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Alt = require("../Control.Alt");
@@ -36250,7 +40220,7 @@ module.exports = {
     alternativeCompose: alternativeCompose
 };
 
-},{"../Control.Alt":193,"../Control.Alternative":194,"../Control.Applicative":195,"../Control.Apply":197,"../Control.Category":202,"../Control.Plus":249,"../Control.Semigroupoid":250,"../Data.Eq":306,"../Data.Foldable":311,"../Data.Function":318,"../Data.Functor":324,"../Data.Functor.App":319,"../Data.Newtype":385,"../Data.Ord":392,"../Data.Semigroup":407,"../Data.Show":411,"../Data.Traversable":427,"../Prelude":450}],321:[function(require,module,exports){
+},{"../Control.Alt":194,"../Control.Alternative":195,"../Control.Applicative":196,"../Control.Apply":198,"../Control.Category":203,"../Control.Plus":259,"../Control.Semigroupoid":260,"../Data.Eq":329,"../Data.Foldable":334,"../Data.Function":341,"../Data.Functor":347,"../Data.Functor.App":342,"../Data.Newtype":408,"../Data.Ord":415,"../Data.Semigroup":430,"../Data.Show":434,"../Data.Traversable":452,"../Prelude":475}],344:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Data_Functor = require("../Data.Functor");
@@ -36283,7 +40253,7 @@ module.exports = {
     coerce: coerce
 };
 
-},{"../Data.Functor":324,"../Data.Void":434,"../Prelude":450}],322:[function(require,module,exports){
+},{"../Data.Functor":347,"../Data.Void":459,"../Prelude":475}],345:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Data_Functor = require("../Data.Functor");
@@ -36310,7 +40280,7 @@ module.exports = {
     invariantArray: invariantArray
 };
 
-},{"../Data.Functor":324}],323:[function(require,module,exports){
+},{"../Data.Functor":347}],346:[function(require,module,exports){
 "use strict";
 
 exports.arrayMap = function (f) {
@@ -36324,7 +40294,7 @@ exports.arrayMap = function (f) {
   };
 };
 
-},{}],324:[function(require,module,exports){
+},{}],347:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -36382,7 +40352,7 @@ module.exports = {
     functorArray: functorArray
 };
 
-},{"../Control.Semigroupoid":250,"../Data.Function":318,"../Data.Unit":433,"./foreign":323}],325:[function(require,module,exports){
+},{"../Control.Semigroupoid":260,"../Data.Function":341,"../Data.Unit":458,"./foreign":346}],348:[function(require,module,exports){
 "use strict";
 
 exports.mapWithIndexArray = function (f) {
@@ -36396,7 +40366,7 @@ exports.mapWithIndexArray = function (f) {
   };
 };
 
-},{}],326:[function(require,module,exports){
+},{}],349:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -36476,7 +40446,7 @@ module.exports = {
     functorWithIndexMultiplicative: functorWithIndexMultiplicative
 };
 
-},{"../Data.Function":318,"../Data.Functor":324,"../Data.Maybe":374,"../Data.Maybe.First":372,"../Data.Maybe.Last":373,"../Data.Monoid.Additive":377,"../Data.Monoid.Conj":378,"../Data.Monoid.Disj":379,"../Data.Monoid.Dual":380,"../Data.Monoid.Multiplicative":382,"../Data.Unit":433,"../Prelude":450,"./foreign":325}],327:[function(require,module,exports){
+},{"../Data.Function":341,"../Data.Functor":347,"../Data.Maybe":397,"../Data.Maybe.First":395,"../Data.Maybe.Last":396,"../Data.Monoid.Additive":400,"../Data.Monoid.Conj":401,"../Data.Monoid.Disj":402,"../Data.Monoid.Dual":403,"../Data.Monoid.Multiplicative":405,"../Data.Unit":458,"../Prelude":475,"./foreign":348}],350:[function(require,module,exports){
 "use strict";
 
 // module Data.Generic
@@ -36519,7 +40489,7 @@ exports.zipCompare = function (f) {
   };
 };
 
-},{}],328:[function(require,module,exports){
+},{}],351:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -37575,7 +41545,7 @@ module.exports = {
     showGenericSignature: showGenericSignature
 };
 
-},{"../Control.Applicative":195,"../Control.Apply":197,"../Control.Semigroupoid":250,"../Data.Array":286,"../Data.Boolean":296,"../Data.Either":304,"../Data.Eq":306,"../Data.Foldable":311,"../Data.Function":318,"../Data.Functor":324,"../Data.HeytingAlgebra":331,"../Data.Identity":332,"../Data.List.Types":369,"../Data.Maybe":374,"../Data.Monoid":383,"../Data.NonEmpty":386,"../Data.Ord":392,"../Data.Ordering":393,"../Data.Ring":403,"../Data.Semigroup":407,"../Data.Show":411,"../Data.String":422,"../Data.Traversable":427,"../Data.Tuple":429,"../Data.Unit":433,"../Data.Void":434,"../Prelude":450,"../Type.Proxy":464,"./foreign":327}],329:[function(require,module,exports){
+},{"../Control.Applicative":196,"../Control.Apply":198,"../Control.Semigroupoid":260,"../Data.Array":296,"../Data.Boolean":306,"../Data.Either":326,"../Data.Eq":329,"../Data.Foldable":334,"../Data.Function":341,"../Data.Functor":347,"../Data.HeytingAlgebra":354,"../Data.Identity":355,"../Data.List.Types":392,"../Data.Maybe":397,"../Data.Monoid":406,"../Data.NonEmpty":409,"../Data.Ord":415,"../Data.Ordering":416,"../Data.Ring":426,"../Data.Semigroup":430,"../Data.Show":434,"../Data.String":445,"../Data.Traversable":452,"../Data.Tuple":454,"../Data.Unit":458,"../Data.Void":459,"../Prelude":475,"../Type.Proxy":491,"./foreign":350}],352:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Apply = require("../Control.Apply");
@@ -38220,7 +42190,7 @@ module.exports = {
     showCustomMethod: showCustomMethod
 };
 
-},{"../Control.Apply":197,"../Data.Either":304,"../Data.Eq":306,"../Data.Generic":328,"../Data.Maybe":374,"../Data.Ord":392,"../Data.Ordering":393,"../Data.Semigroup":407,"../Data.Show":411,"../Data.String":422,"../Data.Unit":433,"../Prelude":450}],330:[function(require,module,exports){
+},{"../Control.Apply":198,"../Data.Either":326,"../Data.Eq":329,"../Data.Generic":351,"../Data.Maybe":397,"../Data.Ord":415,"../Data.Ordering":416,"../Data.Semigroup":430,"../Data.Show":434,"../Data.String":445,"../Data.Unit":458,"../Prelude":475}],353:[function(require,module,exports){
 "use strict";
 
 exports.boolConj = function (b1) {
@@ -38239,7 +42209,7 @@ exports.boolNot = function (b) {
   return !b;
 };
 
-},{}],331:[function(require,module,exports){
+},{}],354:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -38332,7 +42302,7 @@ module.exports = {
     heytingAlgebraFunction: heytingAlgebraFunction
 };
 
-},{"../Data.Unit":433,"./foreign":330}],332:[function(require,module,exports){
+},{"../Data.Unit":458,"./foreign":353}],355:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Alt = require("../Control.Alt");
@@ -38533,7 +42503,7 @@ module.exports = {
     traversableIdentity: traversableIdentity
 };
 
-},{"../Control.Alt":193,"../Control.Applicative":195,"../Control.Apply":197,"../Control.Bind":201,"../Control.Comonad":203,"../Control.Extend":205,"../Control.Lazy":206,"../Control.Monad":244,"../Data.BooleanAlgebra":297,"../Data.Bounded":299,"../Data.CommutativeRing":300,"../Data.Eq":306,"../Data.EuclideanRing":308,"../Data.Field":309,"../Data.Foldable":311,"../Data.Functor":324,"../Data.Functor.Invariant":322,"../Data.HeytingAlgebra":331,"../Data.Monoid":383,"../Data.Newtype":385,"../Data.Ord":392,"../Data.Ring":403,"../Data.Semigroup":407,"../Data.Semiring":409,"../Data.Show":411,"../Data.Traversable":427,"../Prelude":450}],333:[function(require,module,exports){
+},{"../Control.Alt":194,"../Control.Applicative":196,"../Control.Apply":198,"../Control.Bind":202,"../Control.Comonad":204,"../Control.Extend":206,"../Control.Lazy":207,"../Control.Monad":254,"../Data.BooleanAlgebra":307,"../Data.Bounded":309,"../Data.CommutativeRing":314,"../Data.Eq":329,"../Data.EuclideanRing":331,"../Data.Field":332,"../Data.Foldable":334,"../Data.Functor":347,"../Data.Functor.Invariant":345,"../Data.HeytingAlgebra":354,"../Data.Monoid":406,"../Data.Newtype":408,"../Data.Ord":415,"../Data.Ring":426,"../Data.Semigroup":430,"../Data.Semiring":432,"../Data.Show":434,"../Data.Traversable":452,"../Prelude":475}],356:[function(require,module,exports){
 "use strict";
 
 // module Data.Int.Bits
@@ -38585,7 +42555,7 @@ exports.complement = function (n) {
   return ~n;
 };
 
-},{}],334:[function(require,module,exports){
+},{}],357:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -38599,7 +42569,7 @@ module.exports = {
     zshr: $foreign.zshr
 };
 
-},{"./foreign":333}],335:[function(require,module,exports){
+},{"./foreign":356}],358:[function(require,module,exports){
 "use strict";
 
 // module Data.Int
@@ -38656,7 +42626,7 @@ exports.pow = function (x) {
   };
 };
 
-},{}],336:[function(require,module,exports){
+},{}],359:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -38817,7 +42787,7 @@ module.exports = {
     toStringAs: $foreign.toStringAs
 };
 
-},{"../Control.Semigroupoid":250,"../Data.Boolean":296,"../Data.Bounded":299,"../Data.Eq":306,"../Data.HeytingAlgebra":331,"../Data.Int.Bits":334,"../Data.Maybe":374,"../Data.Ord":392,"../Data.Ordering":393,"../Data.Ring":403,"../Data.Show":411,"../Global":436,"../Math":438,"../Prelude":450,"./foreign":335}],337:[function(require,module,exports){
+},{"../Control.Semigroupoid":260,"../Data.Boolean":306,"../Data.Bounded":309,"../Data.Eq":329,"../Data.HeytingAlgebra":354,"../Data.Int.Bits":357,"../Data.Maybe":397,"../Data.Ord":415,"../Data.Ordering":416,"../Data.Ring":426,"../Data.Show":434,"../Global":461,"../Math":463,"../Prelude":475,"./foreign":358}],360:[function(require,module,exports){
 "use strict";
 
 exports.defer = function () {
@@ -38848,7 +42818,7 @@ exports.force = function (l) {
   return l.force();
 };
 
-},{}],338:[function(require,module,exports){
+},{}],361:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -39091,7 +43061,7 @@ module.exports = {
     force: $foreign.force
 };
 
-},{"../Control.Applicative":195,"../Control.Apply":197,"../Control.Bind":201,"../Control.Comonad":203,"../Control.Extend":205,"../Control.Lazy":206,"../Control.Monad":244,"../Control.Semigroupoid":250,"../Data.BooleanAlgebra":297,"../Data.Bounded":299,"../Data.CommutativeRing":300,"../Data.Eq":306,"../Data.EuclideanRing":308,"../Data.Field":309,"../Data.Function":318,"../Data.Functor":324,"../Data.Functor.Invariant":322,"../Data.HeytingAlgebra":331,"../Data.Monoid":383,"../Data.Ord":392,"../Data.Ring":403,"../Data.Semigroup":407,"../Data.Semiring":409,"../Data.Show":411,"../Data.Unit":433,"../Prelude":450,"./foreign":337}],339:[function(require,module,exports){
+},{"../Control.Applicative":196,"../Control.Apply":198,"../Control.Bind":202,"../Control.Comonad":204,"../Control.Extend":206,"../Control.Lazy":207,"../Control.Monad":254,"../Control.Semigroupoid":260,"../Data.BooleanAlgebra":307,"../Data.Bounded":309,"../Data.CommutativeRing":314,"../Data.Eq":329,"../Data.EuclideanRing":331,"../Data.Field":332,"../Data.Function":341,"../Data.Functor":347,"../Data.Functor.Invariant":345,"../Data.HeytingAlgebra":354,"../Data.Monoid":406,"../Data.Ord":415,"../Data.Ring":426,"../Data.Semigroup":430,"../Data.Semiring":432,"../Data.Show":434,"../Data.Unit":458,"../Prelude":475,"./foreign":360}],362:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Data_Lens_Lens_Tuple = require("../Data.Lens.Lens.Tuple");
@@ -39100,7 +43070,7 @@ var Data_Lens_Prism_Either = require("../Data.Lens.Prism.Either");
 var Data_Lens_Prism_Maybe = require("../Data.Lens.Prism.Maybe");
 module.exports = {};
 
-},{"../Data.Lens.Lens.Tuple":356,"../Data.Lens.Lens.Unit":357,"../Data.Lens.Prism.Either":359,"../Data.Lens.Prism.Maybe":360}],340:[function(require,module,exports){
+},{"../Data.Lens.Lens.Tuple":379,"../Data.Lens.Lens.Unit":380,"../Data.Lens.Prism.Either":382,"../Data.Lens.Prism.Maybe":383}],363:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Applicative = require("../Control.Applicative");
@@ -39537,7 +43507,7 @@ module.exports = {
     unfolded: unfolded
 };
 
-},{"../Control.Applicative":195,"../Control.Apply":197,"../Control.Category":202,"../Control.Semigroupoid":250,"../Data.Either":304,"../Data.Eq":306,"../Data.Foldable":311,"../Data.Function":318,"../Data.Functor":324,"../Data.HeytingAlgebra":331,"../Data.Lens.Internal.Forget":345,"../Data.Lens.Internal.Indexed":347,"../Data.Lens.Types":364,"../Data.List":370,"../Data.List.Types":369,"../Data.Maybe":374,"../Data.Maybe.First":372,"../Data.Maybe.Last":373,"../Data.Monoid":383,"../Data.Monoid.Additive":377,"../Data.Monoid.Conj":378,"../Data.Monoid.Disj":379,"../Data.Monoid.Dual":380,"../Data.Monoid.Endo":381,"../Data.Monoid.Multiplicative":382,"../Data.Newtype":385,"../Data.Ord":392,"../Data.Profunctor":401,"../Data.Profunctor.Choice":394,"../Data.Ring":403,"../Data.Semigroup":407,"../Data.Tuple":429,"../Data.Unit":433,"../Prelude":450}],341:[function(require,module,exports){
+},{"../Control.Applicative":196,"../Control.Apply":198,"../Control.Category":203,"../Control.Semigroupoid":260,"../Data.Either":326,"../Data.Eq":329,"../Data.Foldable":334,"../Data.Function":341,"../Data.Functor":347,"../Data.HeytingAlgebra":354,"../Data.Lens.Internal.Forget":368,"../Data.Lens.Internal.Indexed":370,"../Data.Lens.Types":387,"../Data.List":393,"../Data.List.Types":392,"../Data.Maybe":397,"../Data.Maybe.First":395,"../Data.Maybe.Last":396,"../Data.Monoid":406,"../Data.Monoid.Additive":400,"../Data.Monoid.Conj":401,"../Data.Monoid.Disj":402,"../Data.Monoid.Dual":403,"../Data.Monoid.Endo":404,"../Data.Monoid.Multiplicative":405,"../Data.Newtype":408,"../Data.Ord":415,"../Data.Profunctor":424,"../Data.Profunctor.Choice":417,"../Data.Ring":426,"../Data.Semigroup":430,"../Data.Tuple":454,"../Data.Unit":458,"../Prelude":475}],364:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Category = require("../Control.Category");
@@ -39603,7 +43573,7 @@ module.exports = {
     viewOn: viewOn
 };
 
-},{"../Control.Category":202,"../Control.Monad.State.Class":238,"../Control.Semigroupoid":250,"../Data.Function":318,"../Data.Lens.Internal.Forget":345,"../Data.Lens.Internal.Indexed":347,"../Data.Lens.Types":364,"../Data.Newtype":385,"../Data.Profunctor.Strong":400,"../Data.Tuple":429,"../Prelude":450}],342:[function(require,module,exports){
+},{"../Control.Category":203,"../Control.Monad.State.Class":248,"../Control.Semigroupoid":260,"../Data.Function":341,"../Data.Lens.Internal.Forget":368,"../Data.Lens.Internal.Indexed":370,"../Data.Lens.Types":387,"../Data.Newtype":408,"../Data.Profunctor.Strong":423,"../Data.Tuple":454,"../Prelude":475}],365:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Category = require("../Control.Category");
@@ -39668,7 +43638,7 @@ module.exports = {
     zipWithOf: zipWithOf
 };
 
-},{"../Control.Category":202,"../Data.Distributive":302,"../Data.Function":318,"../Data.Functor":324,"../Data.Lens.Internal.Grating":346,"../Data.Lens.Internal.Zipping":353,"../Data.Lens.Types":364,"../Data.Newtype":385,"../Data.Profunctor":401,"../Data.Profunctor.Closed":395,"../Data.Profunctor.Costar":397,"../Data.Profunctor.Star":399,"../Prelude":450}],343:[function(require,module,exports){
+},{"../Control.Category":203,"../Data.Distributive":324,"../Data.Function":341,"../Data.Functor":347,"../Data.Lens.Internal.Grating":369,"../Data.Lens.Internal.Zipping":376,"../Data.Lens.Types":387,"../Data.Newtype":408,"../Data.Profunctor":424,"../Data.Profunctor.Closed":418,"../Data.Profunctor.Costar":420,"../Data.Profunctor.Star":422,"../Prelude":475}],366:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Applicative = require("../Control.Applicative");
@@ -39762,7 +43732,7 @@ module.exports = {
     unIndex: unIndex
 };
 
-},{"../Control.Applicative":195,"../Control.Apply":197,"../Control.Category":202,"../Control.Monad.State":240,"../Control.Monad.State.Class":238,"../Control.Monad.State.Trans":239,"../Control.Semigroupoid":250,"../Data.Function":318,"../Data.Functor":324,"../Data.Functor.Compose":320,"../Data.Identity":332,"../Data.Lens.Internal.Indexed":347,"../Data.Lens.Internal.Wander":352,"../Data.Lens.Iso.Newtype":354,"../Data.Lens.Setter":362,"../Data.Lens.Types":364,"../Data.Newtype":385,"../Data.Profunctor":401,"../Data.Profunctor.Star":399,"../Data.Profunctor.Strong":400,"../Data.Semiring":409,"../Data.TraversableWithIndex":428,"../Data.Tuple":429,"../Prelude":450}],344:[function(require,module,exports){
+},{"../Control.Applicative":196,"../Control.Apply":198,"../Control.Category":203,"../Control.Monad.State":250,"../Control.Monad.State.Class":248,"../Control.Monad.State.Trans":249,"../Control.Semigroupoid":260,"../Data.Function":341,"../Data.Functor":347,"../Data.Functor.Compose":343,"../Data.Identity":355,"../Data.Lens.Internal.Indexed":370,"../Data.Lens.Internal.Wander":375,"../Data.Lens.Iso.Newtype":377,"../Data.Lens.Setter":385,"../Data.Lens.Types":387,"../Data.Newtype":408,"../Data.Profunctor":424,"../Data.Profunctor.Star":422,"../Data.Profunctor.Strong":423,"../Data.Semiring":432,"../Data.TraversableWithIndex":453,"../Data.Tuple":454,"../Prelude":475}],367:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Semigroupoid = require("../Control.Semigroupoid");
@@ -39805,7 +43775,7 @@ module.exports = {
     profunctorExchange: profunctorExchange
 };
 
-},{"../Control.Semigroupoid":250,"../Data.Functor":324,"../Data.Profunctor":401,"../Prelude":450}],345:[function(require,module,exports){
+},{"../Control.Semigroupoid":260,"../Data.Functor":347,"../Data.Profunctor":424,"../Prelude":475}],368:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Semigroupoid = require("../Control.Semigroupoid");
@@ -39897,7 +43867,7 @@ module.exports = {
     wanderForget: wanderForget
 };
 
-},{"../Control.Semigroupoid":250,"../Data.Const":301,"../Data.Either":304,"../Data.Functor":324,"../Data.Lens.Internal.Wander":352,"../Data.Monoid":383,"../Data.Newtype":385,"../Data.Profunctor":401,"../Data.Profunctor.Choice":394,"../Data.Profunctor.Cochoice":396,"../Data.Profunctor.Strong":400,"../Data.Semigroup":407,"../Data.Tuple":429,"../Prelude":450}],346:[function(require,module,exports){
+},{"../Control.Semigroupoid":260,"../Data.Const":315,"../Data.Either":326,"../Data.Functor":347,"../Data.Lens.Internal.Wander":375,"../Data.Monoid":406,"../Data.Newtype":408,"../Data.Profunctor":424,"../Data.Profunctor.Choice":417,"../Data.Profunctor.Cochoice":419,"../Data.Profunctor.Strong":423,"../Data.Semigroup":430,"../Data.Tuple":454,"../Prelude":475}],369:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Semigroupoid = require("../Control.Semigroupoid");
@@ -39944,7 +43914,7 @@ module.exports = {
     closedGrating: closedGrating
 };
 
-},{"../Control.Semigroupoid":250,"../Data.Newtype":385,"../Data.Profunctor":401,"../Data.Profunctor.Closed":395,"../Prelude":450}],347:[function(require,module,exports){
+},{"../Control.Semigroupoid":260,"../Data.Newtype":408,"../Data.Profunctor":424,"../Data.Profunctor.Closed":418,"../Prelude":475}],370:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Semigroupoid = require("../Control.Semigroupoid");
@@ -40030,7 +44000,7 @@ module.exports = {
     wanderIndexed: wanderIndexed
 };
 
-},{"../Control.Semigroupoid":250,"../Data.Either":304,"../Data.Function":318,"../Data.Lens.Internal.Wander":352,"../Data.Newtype":385,"../Data.Profunctor":401,"../Data.Profunctor.Choice":394,"../Data.Profunctor.Strong":400,"../Data.Tuple":429,"../Prelude":450}],348:[function(require,module,exports){
+},{"../Control.Semigroupoid":260,"../Data.Either":326,"../Data.Function":341,"../Data.Lens.Internal.Wander":375,"../Data.Newtype":408,"../Data.Profunctor":424,"../Data.Profunctor.Choice":417,"../Data.Profunctor.Strong":423,"../Data.Tuple":454,"../Prelude":475}],371:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Semigroupoid = require("../Control.Semigroupoid");
@@ -40098,7 +44068,7 @@ module.exports = {
     choiceMarket: choiceMarket
 };
 
-},{"../Control.Semigroupoid":250,"../Data.Bifunctor":294,"../Data.Either":304,"../Data.Functor":324,"../Data.Profunctor":401,"../Data.Profunctor.Choice":394,"../Prelude":450}],349:[function(require,module,exports){
+},{"../Control.Semigroupoid":260,"../Data.Bifunctor":304,"../Data.Either":326,"../Data.Functor":347,"../Data.Profunctor":424,"../Data.Profunctor.Choice":417,"../Prelude":475}],372:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Semigroupoid = require("../Control.Semigroupoid");
@@ -40188,7 +44158,7 @@ module.exports = {
     costrongRe: costrongRe
 };
 
-},{"../Control.Semigroupoid":250,"../Data.Newtype":385,"../Data.Profunctor":401,"../Data.Profunctor.Choice":394,"../Data.Profunctor.Cochoice":396,"../Data.Profunctor.Costrong":398,"../Data.Profunctor.Strong":400,"../Prelude":450}],350:[function(require,module,exports){
+},{"../Control.Semigroupoid":260,"../Data.Newtype":408,"../Data.Profunctor":424,"../Data.Profunctor.Choice":417,"../Data.Profunctor.Cochoice":419,"../Data.Profunctor.Costrong":421,"../Data.Profunctor.Strong":423,"../Prelude":475}],373:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Semigroupoid = require("../Control.Semigroupoid");
@@ -40246,7 +44216,7 @@ module.exports = {
     strongShop: strongShop
 };
 
-},{"../Control.Semigroupoid":250,"../Data.Profunctor":401,"../Data.Profunctor.Strong":400,"../Data.Tuple":429,"../Prelude":450}],351:[function(require,module,exports){
+},{"../Control.Semigroupoid":260,"../Data.Profunctor":424,"../Data.Profunctor.Strong":423,"../Data.Tuple":454,"../Prelude":475}],374:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Data_Either = require("../Data.Either");
@@ -40374,7 +44344,7 @@ module.exports = {
     traversableTagged: traversableTagged
 };
 
-},{"../Data.Either":304,"../Data.Eq":306,"../Data.Foldable":311,"../Data.Function":318,"../Data.Functor":324,"../Data.Newtype":385,"../Data.Ord":392,"../Data.Profunctor":401,"../Data.Profunctor.Choice":394,"../Data.Profunctor.Closed":395,"../Data.Profunctor.Costrong":398,"../Data.Traversable":427,"../Data.Tuple":429,"../Prelude":450}],352:[function(require,module,exports){
+},{"../Data.Either":326,"../Data.Eq":329,"../Data.Foldable":334,"../Data.Function":341,"../Data.Functor":347,"../Data.Newtype":408,"../Data.Ord":415,"../Data.Profunctor":424,"../Data.Profunctor.Choice":417,"../Data.Profunctor.Closed":418,"../Data.Profunctor.Costrong":421,"../Data.Traversable":452,"../Data.Tuple":454,"../Prelude":475}],375:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Data_Functor = require("../Data.Functor");
@@ -40417,7 +44387,7 @@ module.exports = {
     wanderStar: wanderStar
 };
 
-},{"../Data.Functor":324,"../Data.Identity":332,"../Data.Newtype":385,"../Data.Profunctor.Choice":394,"../Data.Profunctor.Star":399,"../Data.Profunctor.Strong":400,"../Prelude":450}],353:[function(require,module,exports){
+},{"../Data.Functor":347,"../Data.Identity":355,"../Data.Newtype":408,"../Data.Profunctor.Choice":417,"../Data.Profunctor.Star":422,"../Data.Profunctor.Strong":423,"../Prelude":475}],376:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Data_Newtype = require("../Data.Newtype");
@@ -40458,7 +44428,7 @@ module.exports = {
     closedZipping: closedZipping
 };
 
-},{"../Data.Newtype":385,"../Data.Profunctor":401,"../Data.Profunctor.Closed":395}],354:[function(require,module,exports){
+},{"../Data.Newtype":408,"../Data.Profunctor":424,"../Data.Profunctor.Closed":418}],377:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Data_Lens_Iso = require("../Data.Lens.Iso");
@@ -40474,7 +44444,7 @@ module.exports = {
     _Newtype: _Newtype
 };
 
-},{"../Data.Lens.Iso":355,"../Data.Newtype":385}],355:[function(require,module,exports){
+},{"../Data.Lens.Iso":378,"../Data.Newtype":408}],378:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Category = require("../Control.Category");
@@ -40630,7 +44600,7 @@ module.exports = {
     withIso: withIso
 };
 
-},{"../Control.Category":202,"../Control.Semigroupoid":250,"../Data.Boolean":296,"../Data.Eq":306,"../Data.Function":318,"../Data.Functor":324,"../Data.Lens.Internal.Exchange":344,"../Data.Lens.Internal.Re":349,"../Data.Lens.Types":364,"../Data.Maybe":374,"../Data.Newtype":385,"../Data.Profunctor":401,"../Data.Tuple":429,"../Prelude":450}],356:[function(require,module,exports){
+},{"../Control.Category":203,"../Control.Semigroupoid":260,"../Data.Boolean":306,"../Data.Eq":329,"../Data.Function":341,"../Data.Functor":347,"../Data.Lens.Internal.Exchange":367,"../Data.Lens.Internal.Re":372,"../Data.Lens.Types":387,"../Data.Maybe":397,"../Data.Newtype":408,"../Data.Profunctor":424,"../Data.Tuple":454,"../Prelude":475}],379:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Data_Lens_Lens = require("../Data.Lens.Lens");
@@ -40647,7 +44617,7 @@ module.exports = {
     _2: _2
 };
 
-},{"../Data.Lens.Lens":358,"../Data.Profunctor.Strong":400,"../Data.Tuple":429}],357:[function(require,module,exports){
+},{"../Data.Lens.Lens":381,"../Data.Profunctor.Strong":423,"../Data.Tuple":454}],380:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Data_Function = require("../Data.Function");
@@ -40661,7 +44631,7 @@ module.exports = {
     united: united
 };
 
-},{"../Data.Function":318,"../Data.Lens.Lens":358,"../Data.Unit":433,"../Prelude":450}],358:[function(require,module,exports){
+},{"../Data.Function":341,"../Data.Lens.Lens":381,"../Data.Unit":458,"../Prelude":475}],381:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Category = require("../Control.Category");
@@ -40766,7 +44736,7 @@ module.exports = {
     withLens: withLens
 };
 
-},{"../Control.Category":202,"../Data.Lens.Internal.Indexed":347,"../Data.Lens.Internal.Shop":350,"../Data.Lens.Types":364,"../Data.Newtype":385,"../Data.Profunctor":401,"../Data.Profunctor.Strong":400,"../Data.Tuple":429,"../Prelude":450}],359:[function(require,module,exports){
+},{"../Control.Category":203,"../Data.Lens.Internal.Indexed":370,"../Data.Lens.Internal.Shop":373,"../Data.Lens.Types":387,"../Data.Newtype":408,"../Data.Profunctor":424,"../Data.Profunctor.Strong":423,"../Data.Tuple":454,"../Prelude":475}],382:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Data_Either = require("../Data.Either");
@@ -40783,7 +44753,7 @@ module.exports = {
     _Right: _Right
 };
 
-},{"../Data.Either":304,"../Data.Lens.Prism":361,"../Data.Profunctor.Choice":394}],360:[function(require,module,exports){
+},{"../Data.Either":326,"../Data.Lens.Prism":384,"../Data.Profunctor.Choice":417}],383:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Data_Either = require("../Data.Either");
@@ -40803,7 +44773,7 @@ module.exports = {
     _Nothing: _Nothing
 };
 
-},{"../Data.Either":304,"../Data.Function":318,"../Data.Lens.Prism":361,"../Data.Maybe":374,"../Data.Unit":433,"../Prelude":450}],361:[function(require,module,exports){
+},{"../Data.Either":326,"../Data.Function":341,"../Data.Lens.Prism":384,"../Data.Maybe":397,"../Data.Unit":458,"../Prelude":475}],384:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Category = require("../Control.Category");
@@ -40910,7 +44880,7 @@ module.exports = {
     withPrism: withPrism
 };
 
-},{"../Control.Category":202,"../Control.MonadPlus":245,"../Control.MonadZero":246,"../Control.Semigroupoid":250,"../Data.Either":304,"../Data.Eq":306,"../Data.Function":318,"../Data.HeytingAlgebra":331,"../Data.Lens.Internal.Market":348,"../Data.Lens.Internal.Tagged":351,"../Data.Lens.Types":364,"../Data.Maybe":374,"../Data.Newtype":385,"../Data.Profunctor":401,"../Data.Profunctor.Choice":394,"../Prelude":450}],362:[function(require,module,exports){
+},{"../Control.Category":203,"../Control.MonadPlus":255,"../Control.MonadZero":256,"../Control.Semigroupoid":260,"../Data.Either":326,"../Data.Eq":329,"../Data.Function":341,"../Data.HeytingAlgebra":354,"../Data.Lens.Internal.Market":371,"../Data.Lens.Internal.Tagged":374,"../Data.Lens.Types":387,"../Data.Maybe":397,"../Data.Newtype":408,"../Data.Profunctor":424,"../Data.Profunctor.Choice":417,"../Prelude":475}],385:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Monad_State_Class = require("../Control.Monad.State.Class");
@@ -41101,7 +45071,7 @@ module.exports = {
     subOver: subOver
 };
 
-},{"../Control.Monad.State.Class":238,"../Control.Semigroupoid":250,"../Data.EuclideanRing":308,"../Data.Function":318,"../Data.HeytingAlgebra":331,"../Data.Lens.Internal.Indexed":347,"../Data.Lens.Types":364,"../Data.Maybe":374,"../Data.Ring":403,"../Data.Semigroup":407,"../Data.Semiring":409,"../Data.Tuple":429,"../Prelude":450}],363:[function(require,module,exports){
+},{"../Control.Monad.State.Class":248,"../Control.Semigroupoid":260,"../Data.EuclideanRing":331,"../Data.Function":341,"../Data.HeytingAlgebra":354,"../Data.Lens.Internal.Indexed":370,"../Data.Lens.Types":387,"../Data.Maybe":397,"../Data.Ring":426,"../Data.Semigroup":430,"../Data.Semiring":432,"../Data.Tuple":454,"../Prelude":475}],386:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Alternative = require("../Control.Alternative");
@@ -41208,7 +45178,7 @@ module.exports = {
     traversed: traversed
 };
 
-},{"../Control.Alternative":194,"../Control.Applicative":195,"../Control.Category":202,"../Control.Plus":249,"../Control.Semigroupoid":250,"../Data.Eq":306,"../Data.Function":318,"../Data.Lens.Indexed":343,"../Data.Lens.Internal.Indexed":347,"../Data.Lens.Internal.Wander":352,"../Data.Lens.Types":364,"../Data.Monoid.Disj":379,"../Data.Newtype":385,"../Data.Profunctor.Star":399,"../Data.Traversable":427,"../Data.Tuple":429,"../Prelude":450}],364:[function(require,module,exports){
+},{"../Control.Alternative":195,"../Control.Applicative":196,"../Control.Category":203,"../Control.Plus":259,"../Control.Semigroupoid":260,"../Data.Eq":329,"../Data.Function":341,"../Data.Lens.Indexed":366,"../Data.Lens.Internal.Indexed":370,"../Data.Lens.Internal.Wander":375,"../Data.Lens.Types":387,"../Data.Monoid.Disj":402,"../Data.Newtype":408,"../Data.Profunctor.Star":422,"../Data.Traversable":452,"../Data.Tuple":454,"../Prelude":475}],387:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Data_Lens_Internal_Exchange = require("../Data.Lens.Internal.Exchange");
@@ -41227,7 +45197,7 @@ var Data_Profunctor_Strong = require("../Data.Profunctor.Strong");
 var Data_Tuple = require("../Data.Tuple");
 module.exports = {};
 
-},{"../Data.Lens.Internal.Exchange":344,"../Data.Lens.Internal.Forget":345,"../Data.Lens.Internal.Grating":346,"../Data.Lens.Internal.Indexed":347,"../Data.Lens.Internal.Market":348,"../Data.Lens.Internal.Re":349,"../Data.Lens.Internal.Shop":350,"../Data.Lens.Internal.Tagged":351,"../Data.Lens.Internal.Wander":352,"../Data.Profunctor":401,"../Data.Profunctor.Choice":394,"../Data.Profunctor.Closed":395,"../Data.Profunctor.Strong":400,"../Data.Tuple":429}],365:[function(require,module,exports){
+},{"../Data.Lens.Internal.Exchange":367,"../Data.Lens.Internal.Forget":368,"../Data.Lens.Internal.Grating":369,"../Data.Lens.Internal.Indexed":370,"../Data.Lens.Internal.Market":371,"../Data.Lens.Internal.Re":372,"../Data.Lens.Internal.Shop":373,"../Data.Lens.Internal.Tagged":374,"../Data.Lens.Internal.Wander":375,"../Data.Profunctor":424,"../Data.Profunctor.Choice":417,"../Data.Profunctor.Closed":418,"../Data.Profunctor.Strong":423,"../Data.Tuple":454}],388:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Data_Lens_Common = require("../Data.Lens.Common");
@@ -41242,7 +45212,7 @@ var Data_Lens_Traversal = require("../Data.Lens.Traversal");
 var Data_Lens_Types = require("../Data.Lens.Types");
 module.exports = {};
 
-},{"../Data.Lens.Common":339,"../Data.Lens.Fold":340,"../Data.Lens.Getter":341,"../Data.Lens.Grate":342,"../Data.Lens.Iso":355,"../Data.Lens.Lens":358,"../Data.Lens.Prism":361,"../Data.Lens.Setter":362,"../Data.Lens.Traversal":363,"../Data.Lens.Types":364}],366:[function(require,module,exports){
+},{"../Data.Lens.Common":362,"../Data.Lens.Fold":363,"../Data.Lens.Getter":364,"../Data.Lens.Grate":365,"../Data.Lens.Iso":378,"../Data.Lens.Lens":381,"../Data.Lens.Prism":384,"../Data.Lens.Setter":385,"../Data.Lens.Traversal":386,"../Data.Lens.Types":387}],389:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Alt = require("../Control.Alt");
@@ -41790,7 +45760,7 @@ module.exports = {
     traversableNonEmptyList: traversableNonEmptyList
 };
 
-},{"../Control.Alt":193,"../Control.Alternative":194,"../Control.Applicative":195,"../Control.Apply":197,"../Control.Bind":201,"../Control.Category":202,"../Control.Comonad":203,"../Control.Extend":205,"../Control.Lazy":206,"../Control.Monad":244,"../Control.MonadPlus":245,"../Control.MonadZero":246,"../Control.Plus":249,"../Control.Semigroupoid":250,"../Data.Eq":306,"../Data.Foldable":311,"../Data.Function":318,"../Data.Functor":324,"../Data.Lazy":338,"../Data.Maybe":374,"../Data.Monoid":383,"../Data.Newtype":385,"../Data.NonEmpty":386,"../Data.Ord":392,"../Data.Ordering":393,"../Data.Semigroup":407,"../Data.Show":411,"../Data.Traversable":427,"../Data.Tuple":429,"../Data.Unfoldable":431,"../Prelude":450}],367:[function(require,module,exports){
+},{"../Control.Alt":194,"../Control.Alternative":195,"../Control.Applicative":196,"../Control.Apply":198,"../Control.Bind":202,"../Control.Category":203,"../Control.Comonad":204,"../Control.Extend":206,"../Control.Lazy":207,"../Control.Monad":254,"../Control.MonadPlus":255,"../Control.MonadZero":256,"../Control.Plus":259,"../Control.Semigroupoid":260,"../Data.Eq":329,"../Data.Foldable":334,"../Data.Function":341,"../Data.Functor":347,"../Data.Lazy":361,"../Data.Maybe":397,"../Data.Monoid":406,"../Data.Newtype":408,"../Data.NonEmpty":409,"../Data.Ord":415,"../Data.Ordering":416,"../Data.Semigroup":430,"../Data.Show":434,"../Data.Traversable":452,"../Data.Tuple":454,"../Data.Unfoldable":456,"../Prelude":475}],390:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Alt = require("../Control.Alt");
@@ -42709,7 +46679,7 @@ module.exports = {
     showPattern: showPattern
 };
 
-},{"../Control.Alt":193,"../Control.Alternative":194,"../Control.Applicative":195,"../Control.Apply":197,"../Control.Bind":201,"../Control.Category":202,"../Control.Lazy":206,"../Control.Monad.Rec.Class":235,"../Control.Semigroupoid":250,"../Data.Boolean":296,"../Data.Eq":306,"../Data.Foldable":311,"../Data.Function":318,"../Data.Functor":324,"../Data.HeytingAlgebra":331,"../Data.Lazy":338,"../Data.List.Lazy.Types":366,"../Data.Maybe":374,"../Data.Newtype":385,"../Data.NonEmpty":386,"../Data.Ord":392,"../Data.Ordering":393,"../Data.Ring":403,"../Data.Semigroup":407,"../Data.Semiring":409,"../Data.Show":411,"../Data.Traversable":427,"../Data.Tuple":429,"../Data.Unfoldable":431,"../Prelude":450}],368:[function(require,module,exports){
+},{"../Control.Alt":194,"../Control.Alternative":195,"../Control.Applicative":196,"../Control.Apply":198,"../Control.Bind":202,"../Control.Category":203,"../Control.Lazy":207,"../Control.Monad.Rec.Class":245,"../Control.Semigroupoid":260,"../Data.Boolean":306,"../Data.Eq":329,"../Data.Foldable":334,"../Data.Function":341,"../Data.Functor":347,"../Data.HeytingAlgebra":354,"../Data.Lazy":361,"../Data.List.Lazy.Types":389,"../Data.Maybe":397,"../Data.Newtype":408,"../Data.NonEmpty":409,"../Data.Ord":415,"../Data.Ordering":416,"../Data.Ring":426,"../Data.Semigroup":430,"../Data.Semiring":432,"../Data.Show":434,"../Data.Traversable":452,"../Data.Tuple":454,"../Data.Unfoldable":456,"../Prelude":475}],391:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Bind = require("../Control.Bind");
@@ -43121,7 +47091,7 @@ module.exports = {
     zipWithA: zipWithA
 };
 
-},{"../Control.Bind":201,"../Control.Category":202,"../Control.Semigroupoid":250,"../Data.Boolean":296,"../Data.Eq":306,"../Data.Foldable":311,"../Data.Function":318,"../Data.Functor":324,"../Data.List":370,"../Data.List.Types":369,"../Data.Maybe":374,"../Data.NonEmpty":386,"../Data.Ord":392,"../Data.Ring":403,"../Data.Semigroup":407,"../Data.Semigroup.Foldable":404,"../Data.Semigroup.Traversable":405,"../Data.Semiring":409,"../Data.Traversable":427,"../Data.Tuple":429,"../Data.Unfoldable":431,"../Partial.Unsafe":447,"../Prelude":450}],369:[function(require,module,exports){
+},{"../Control.Bind":202,"../Control.Category":203,"../Control.Semigroupoid":260,"../Data.Boolean":306,"../Data.Eq":329,"../Data.Foldable":334,"../Data.Function":341,"../Data.Functor":347,"../Data.List":393,"../Data.List.Types":392,"../Data.Maybe":397,"../Data.NonEmpty":409,"../Data.Ord":415,"../Data.Ring":426,"../Data.Semigroup":430,"../Data.Semigroup.Foldable":427,"../Data.Semigroup.Traversable":428,"../Data.Semiring":432,"../Data.Traversable":452,"../Data.Tuple":454,"../Data.Unfoldable":456,"../Partial.Unsafe":472,"../Prelude":475}],392:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Alt = require("../Control.Alt");
@@ -43647,7 +47617,7 @@ module.exports = {
     traversable1NonEmptyList: traversable1NonEmptyList
 };
 
-},{"../Control.Alt":193,"../Control.Alternative":194,"../Control.Applicative":195,"../Control.Apply":197,"../Control.Bind":201,"../Control.Category":202,"../Control.Comonad":203,"../Control.Extend":205,"../Control.Monad":244,"../Control.MonadPlus":245,"../Control.MonadZero":246,"../Control.Plus":249,"../Control.Semigroupoid":250,"../Data.Eq":306,"../Data.Foldable":311,"../Data.Function":318,"../Data.Functor":324,"../Data.HeytingAlgebra":331,"../Data.Maybe":374,"../Data.Monoid":383,"../Data.Newtype":385,"../Data.NonEmpty":386,"../Data.Ord":392,"../Data.Ordering":393,"../Data.Semigroup":407,"../Data.Semigroup.Foldable":404,"../Data.Semigroup.Traversable":405,"../Data.Show":411,"../Data.Traversable":427,"../Data.Tuple":429,"../Data.Unfoldable":431,"../Prelude":450}],370:[function(require,module,exports){
+},{"../Control.Alt":194,"../Control.Alternative":195,"../Control.Applicative":196,"../Control.Apply":198,"../Control.Bind":202,"../Control.Category":203,"../Control.Comonad":204,"../Control.Extend":206,"../Control.Monad":254,"../Control.MonadPlus":255,"../Control.MonadZero":256,"../Control.Plus":259,"../Control.Semigroupoid":260,"../Data.Eq":329,"../Data.Foldable":334,"../Data.Function":341,"../Data.Functor":347,"../Data.HeytingAlgebra":354,"../Data.Maybe":397,"../Data.Monoid":406,"../Data.Newtype":408,"../Data.NonEmpty":409,"../Data.Ord":415,"../Data.Ordering":416,"../Data.Semigroup":430,"../Data.Semigroup.Foldable":427,"../Data.Semigroup.Traversable":428,"../Data.Show":434,"../Data.Traversable":452,"../Data.Tuple":454,"../Data.Unfoldable":456,"../Prelude":475}],393:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Alt = require("../Control.Alt");
@@ -44780,7 +48750,7 @@ module.exports = {
     showPattern: showPattern
 };
 
-},{"../Control.Alt":193,"../Control.Alternative":194,"../Control.Applicative":195,"../Control.Apply":197,"../Control.Bind":201,"../Control.Category":202,"../Control.Lazy":206,"../Control.Monad.Rec.Class":235,"../Control.Semigroupoid":250,"../Data.Bifunctor":294,"../Data.Boolean":296,"../Data.Eq":306,"../Data.Foldable":311,"../Data.Function":318,"../Data.Functor":324,"../Data.HeytingAlgebra":331,"../Data.List.Types":369,"../Data.Maybe":374,"../Data.Newtype":385,"../Data.NonEmpty":386,"../Data.Ord":392,"../Data.Ordering":393,"../Data.Ring":403,"../Data.Semigroup":407,"../Data.Semiring":409,"../Data.Show":411,"../Data.Traversable":427,"../Data.Tuple":429,"../Data.Unfoldable":431,"../Data.Unit":433,"../Prelude":450}],371:[function(require,module,exports){
+},{"../Control.Alt":194,"../Control.Alternative":195,"../Control.Applicative":196,"../Control.Apply":198,"../Control.Bind":202,"../Control.Category":203,"../Control.Lazy":207,"../Control.Monad.Rec.Class":245,"../Control.Semigroupoid":260,"../Data.Bifunctor":304,"../Data.Boolean":306,"../Data.Eq":329,"../Data.Foldable":334,"../Data.Function":341,"../Data.Functor":347,"../Data.HeytingAlgebra":354,"../Data.List.Types":392,"../Data.Maybe":397,"../Data.Newtype":408,"../Data.NonEmpty":409,"../Data.Ord":415,"../Data.Ordering":416,"../Data.Ring":426,"../Data.Semigroup":430,"../Data.Semiring":432,"../Data.Show":434,"../Data.Traversable":452,"../Data.Tuple":454,"../Data.Unfoldable":456,"../Data.Unit":458,"../Prelude":475}],394:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Applicative = require("../Control.Applicative");
@@ -44789,8 +48759,10 @@ var Control_Category = require("../Control.Category");
 var Control_Semigroupoid = require("../Control.Semigroupoid");
 var Data_Eq = require("../Data.Eq");
 var Data_Foldable = require("../Data.Foldable");
+var Data_FoldableWithIndex = require("../Data.FoldableWithIndex");
 var Data_Function = require("../Data.Function");
 var Data_Functor = require("../Data.Functor");
+var Data_FunctorWithIndex = require("../Data.FunctorWithIndex");
 var Data_HeytingAlgebra = require("../Data.HeytingAlgebra");
 var Data_List = require("../Data.List");
 var Data_List_Lazy = require("../Data.List.Lazy");
@@ -44804,6 +48776,7 @@ var Data_Semigroup = require("../Data.Semigroup");
 var Data_Semiring = require("../Data.Semiring");
 var Data_Show = require("../Data.Show");
 var Data_Traversable = require("../Data.Traversable");
+var Data_TraversableWithIndex = require("../Data.TraversableWithIndex");
 var Data_Tuple = require("../Data.Tuple");
 var Data_Unfoldable = require("../Data.Unfoldable");
 var Partial_Unsafe = require("../Partial.Unsafe");
@@ -44990,7 +48963,7 @@ var values = function (v) {
     if (v instanceof Three) {
         return Data_Semigroup.append(Data_List_Types.semigroupList)(values(v.value0))(Data_Semigroup.append(Data_List_Types.semigroupList)(Control_Applicative.pure(Data_List_Types.applicativeList)(v.value2))(Data_Semigroup.append(Data_List_Types.semigroupList)(values(v.value3))(Data_Semigroup.append(Data_List_Types.semigroupList)(Control_Applicative.pure(Data_List_Types.applicativeList)(v.value5))(values(v.value6)))));
     };
-    throw new Error("Failed pattern match at Data.Map line 557, column 1 - line 557, column 40: " + [ v.constructor.name ]);
+    throw new Error("Failed pattern match at Data.Map line 590, column 1 - line 590, column 40: " + [ v.constructor.name ]);
 };
 var size = function (v) {
     if (v instanceof Leaf) {
@@ -45002,7 +48975,7 @@ var size = function (v) {
     if (v instanceof Three) {
         return ((2 + size(v.value0) | 0) + size(v.value3) | 0) + size(v.value6) | 0;
     };
-    throw new Error("Failed pattern match at Data.Map line 584, column 1 - line 584, column 35: " + [ v.constructor.name ]);
+    throw new Error("Failed pattern match at Data.Map line 617, column 1 - line 617, column 35: " + [ v.constructor.name ]);
 };
 var singleton = function (k) {
     return function (v) {
@@ -45040,9 +49013,9 @@ var toAscUnfoldable = function (dictUnfoldable) {
                         $copy_v = new Data_List_Types.Cons(v.value0.value0, new Data_List_Types.Cons(singleton(v.value0.value1)(v.value0.value2), new Data_List_Types.Cons(v.value0.value3, new Data_List_Types.Cons(singleton(v.value0.value4)(v.value0.value5), new Data_List_Types.Cons(v.value0.value6, v.value1)))));
                         return;
                     };
-                    throw new Error("Failed pattern match at Data.Map line 539, column 18 - line 548, column 71: " + [ v.value0.constructor.name ]);
+                    throw new Error("Failed pattern match at Data.Map line 572, column 18 - line 581, column 71: " + [ v.value0.constructor.name ]);
                 };
-                throw new Error("Failed pattern match at Data.Map line 538, column 3 - line 538, column 19: " + [ v.constructor.name ]);
+                throw new Error("Failed pattern match at Data.Map line 571, column 3 - line 571, column 19: " + [ v.constructor.name ]);
             };
             while (!$tco_done) {
                 $tco_result = $tco_loop($copy_v);
@@ -45076,9 +49049,9 @@ var toUnfoldable = function (dictUnfoldable) {
                         $tco_done = true;
                         return Data_Maybe.Just.create(new Data_Tuple.Tuple(new Data_Tuple.Tuple(v.value0.value1, v.value0.value2), new Data_List_Types.Cons(singleton(v.value0.value4)(v.value0.value5), new Data_List_Types.Cons(v.value0.value0, new Data_List_Types.Cons(v.value0.value3, new Data_List_Types.Cons(v.value0.value6, v.value1))))));
                     };
-                    throw new Error("Failed pattern match at Data.Map line 528, column 18 - line 533, column 77: " + [ v.value0.constructor.name ]);
+                    throw new Error("Failed pattern match at Data.Map line 561, column 18 - line 566, column 77: " + [ v.value0.constructor.name ]);
                 };
-                throw new Error("Failed pattern match at Data.Map line 527, column 3 - line 527, column 19: " + [ v.constructor.name ]);
+                throw new Error("Failed pattern match at Data.Map line 560, column 3 - line 560, column 19: " + [ v.constructor.name ]);
             };
             while (!$tco_done) {
                 $tco_result = $tco_loop($copy_v);
@@ -45100,7 +49073,7 @@ var showTree = function (dictShow) {
             if (v instanceof Three) {
                 return "Three (" + (showTree(dictShow)(dictShow1)(v.value0) + (") (" + (Data_Show.show(dictShow)(v.value1) + (") (" + (Data_Show.show(dictShow1)(v.value2) + (") (" + (showTree(dictShow)(dictShow1)(v.value3) + (") (" + (Data_Show.show(dictShow)(v.value4) + (") (" + (Data_Show.show(dictShow1)(v.value5) + (") (" + (showTree(dictShow)(dictShow1)(v.value6) + ")")))))))))))));
             };
-            throw new Error("Failed pattern match at Data.Map line 115, column 1 - line 115, column 62: " + [ v.constructor.name ]);
+            throw new Error("Failed pattern match at Data.Map line 148, column 1 - line 148, column 62: " + [ v.constructor.name ]);
         };
     };
 };
@@ -45122,7 +49095,7 @@ var mapWithKey = function (v) {
         if (v1 instanceof Three) {
             return new Three(mapWithKey(v)(v1.value0), v1.value1, v(v1.value1)(v1.value2), mapWithKey(v)(v1.value3), v1.value4, v(v1.value4)(v1.value5), mapWithKey(v)(v1.value6));
         };
-        throw new Error("Failed pattern match at Data.Map line 590, column 1 - line 590, column 67: " + [ v.constructor.name, v1.constructor.name ]);
+        throw new Error("Failed pattern match at Data.Map line 623, column 1 - line 623, column 67: " + [ v.constructor.name, v1.constructor.name ]);
     };
 };
 var lookupLE = function (dictOrd) {
@@ -45149,7 +49122,7 @@ var lookupLE = function (dictOrd) {
                 if (v2 instanceof Data_Ordering.LT) {
                     return go(v.value0);
                 };
-                throw new Error("Failed pattern match at Data.Map line 187, column 33 - line 190, column 20: " + [ v2.constructor.name ]);
+                throw new Error("Failed pattern match at Data.Map line 220, column 33 - line 223, column 20: " + [ v2.constructor.name ]);
             };
             if (v instanceof Three) {
                 var v3 = comp(k)(v.value4);
@@ -45168,9 +49141,9 @@ var lookupLE = function (dictOrd) {
                 if (v3 instanceof Data_Ordering.LT) {
                     return go(new Two(v.value0, v.value1, v.value2, v.value3));
                 };
-                throw new Error("Failed pattern match at Data.Map line 191, column 45 - line 194, column 36: " + [ v3.constructor.name ]);
+                throw new Error("Failed pattern match at Data.Map line 224, column 45 - line 227, column 36: " + [ v3.constructor.name ]);
             };
-            throw new Error("Failed pattern match at Data.Map line 186, column 5 - line 186, column 22: " + [ v.constructor.name ]);
+            throw new Error("Failed pattern match at Data.Map line 219, column 5 - line 219, column 22: " + [ v.constructor.name ]);
         };
         return go;
     };
@@ -45199,7 +49172,7 @@ var lookupGE = function (dictOrd) {
                 if (v2 instanceof Data_Ordering.GT) {
                     return go(v.value3);
                 };
-                throw new Error("Failed pattern match at Data.Map line 221, column 33 - line 224, column 21: " + [ v2.constructor.name ]);
+                throw new Error("Failed pattern match at Data.Map line 254, column 33 - line 257, column 21: " + [ v2.constructor.name ]);
             };
             if (v instanceof Three) {
                 var v3 = comp(k)(v.value1);
@@ -45218,9 +49191,9 @@ var lookupGE = function (dictOrd) {
                 if (v3 instanceof Data_Ordering.GT) {
                     return go(new Two(v.value3, v.value4, v.value5, v.value6));
                 };
-                throw new Error("Failed pattern match at Data.Map line 225, column 45 - line 228, column 37: " + [ v3.constructor.name ]);
+                throw new Error("Failed pattern match at Data.Map line 258, column 45 - line 261, column 37: " + [ v3.constructor.name ]);
             };
-            throw new Error("Failed pattern match at Data.Map line 220, column 5 - line 220, column 22: " + [ v.constructor.name ]);
+            throw new Error("Failed pattern match at Data.Map line 253, column 5 - line 253, column 22: " + [ v.constructor.name ]);
         };
         return go;
     };
@@ -45271,7 +49244,7 @@ var lookup = function (dictOrd) {
                     $copy_v = v.value3;
                     return;
                 };
-                throw new Error("Failed pattern match at Data.Map line 162, column 5 - line 162, column 22: " + [ v.constructor.name ]);
+                throw new Error("Failed pattern match at Data.Map line 195, column 5 - line 195, column 22: " + [ v.constructor.name ]);
             };
             while (!$tco_done) {
                 $tco_result = $tco_loop($copy_v);
@@ -45298,7 +49271,7 @@ var keys = function (v) {
     if (v instanceof Three) {
         return Data_Semigroup.append(Data_List_Types.semigroupList)(keys(v.value0))(Data_Semigroup.append(Data_List_Types.semigroupList)(Control_Applicative.pure(Data_List_Types.applicativeList)(v.value1))(Data_Semigroup.append(Data_List_Types.semigroupList)(keys(v.value3))(Data_Semigroup.append(Data_List_Types.semigroupList)(Control_Applicative.pure(Data_List_Types.applicativeList)(v.value4))(keys(v.value6)))));
     };
-    throw new Error("Failed pattern match at Data.Map line 551, column 1 - line 551, column 38: " + [ v.constructor.name ]);
+    throw new Error("Failed pattern match at Data.Map line 584, column 1 - line 584, column 38: " + [ v.constructor.name ]);
 };
 var isSubmap = function (dictOrd) {
     return function (dictEq) {
@@ -45329,7 +49302,23 @@ var functorMap = new Data_Functor.Functor(function (v) {
         if (v1 instanceof Three) {
             return new Three(Data_Functor.map(functorMap)(v)(v1.value0), v1.value1, v(v1.value2), Data_Functor.map(functorMap)(v)(v1.value3), v1.value4, v(v1.value5), Data_Functor.map(functorMap)(v)(v1.value6));
         };
-        throw new Error("Failed pattern match at Data.Map line 87, column 1 - line 87, column 39: " + [ v.constructor.name, v1.constructor.name ]);
+        throw new Error("Failed pattern match at Data.Map line 91, column 1 - line 91, column 39: " + [ v.constructor.name, v1.constructor.name ]);
+    };
+});
+var functorWithIndexMap = new Data_FunctorWithIndex.FunctorWithIndex(function () {
+    return functorMap;
+}, function (v) {
+    return function (v1) {
+        if (v1 instanceof Leaf) {
+            return Leaf.value;
+        };
+        if (v1 instanceof Two) {
+            return new Two(Data_FunctorWithIndex.mapWithIndex(functorWithIndexMap)(v)(v1.value0), v1.value1, v(v1.value1)(v1.value2), Data_FunctorWithIndex.mapWithIndex(functorWithIndexMap)(v)(v1.value3));
+        };
+        if (v1 instanceof Three) {
+            return new Three(Data_FunctorWithIndex.mapWithIndex(functorWithIndexMap)(v)(v1.value0), v1.value1, v(v1.value1)(v1.value2), Data_FunctorWithIndex.mapWithIndex(functorWithIndexMap)(v)(v1.value3), v1.value4, v(v1.value4)(v1.value5), Data_FunctorWithIndex.mapWithIndex(functorWithIndexMap)(v)(v1.value6));
+        };
+        throw new Error("Failed pattern match at Data.Map line 96, column 1 - line 96, column 59: " + [ v.constructor.name, v1.constructor.name ]);
     };
 });
 var fromZipper = function ($copy_dictOrd) {
@@ -45375,9 +49364,9 @@ var fromZipper = function ($copy_dictOrd) {
                         $copy_tree = new Three(v.value0.value0, v.value0.value1, v.value0.value2, v.value0.value3, v.value0.value4, v.value0.value5, tree);
                         return;
                     };
-                    throw new Error("Failed pattern match at Data.Map line 380, column 3 - line 385, column 88: " + [ v.value0.constructor.name ]);
+                    throw new Error("Failed pattern match at Data.Map line 413, column 3 - line 418, column 88: " + [ v.value0.constructor.name ]);
                 };
-                throw new Error("Failed pattern match at Data.Map line 377, column 1 - line 377, column 80: " + [ v.constructor.name, tree.constructor.name ]);
+                throw new Error("Failed pattern match at Data.Map line 410, column 1 - line 410, column 80: " + [ v.constructor.name, tree.constructor.name ]);
             };
             while (!$tco_done) {
                 $tco_result = $tco_loop($tco_var_dictOrd, $tco_var_v, $copy_tree);
@@ -45423,9 +49412,9 @@ var insert = function (dictOrd) {
                                 $copy_v2 = new KickUp(new Two(v1.value0.value0, v1.value0.value1, v1.value0.value2, v1.value0.value3), v1.value0.value4, v1.value0.value5, new Two(v2.value0, v2.value1, v2.value2, v2.value3));
                                 return;
                             };
-                            throw new Error("Failed pattern match at Data.Map line 416, column 5 - line 421, column 108: " + [ v1.value0.constructor.name, v2.constructor.name ]);
+                            throw new Error("Failed pattern match at Data.Map line 449, column 5 - line 454, column 108: " + [ v1.value0.constructor.name, v2.constructor.name ]);
                         };
-                        throw new Error("Failed pattern match at Data.Map line 413, column 3 - line 413, column 56: " + [ v1.constructor.name, v2.constructor.name ]);
+                        throw new Error("Failed pattern match at Data.Map line 446, column 3 - line 446, column 56: " + [ v1.constructor.name, v2.constructor.name ]);
                     };
                     while (!$tco_done) {
                         $tco_result = $tco_loop($tco_var_v1, $copy_v2);
@@ -45484,7 +49473,7 @@ var insert = function (dictOrd) {
                             $copy_v1 = v1.value6;
                             return;
                         };
-                        throw new Error("Failed pattern match at Data.Map line 396, column 3 - line 396, column 55: " + [ ctx.constructor.name, v1.constructor.name ]);
+                        throw new Error("Failed pattern match at Data.Map line 429, column 3 - line 429, column 55: " + [ ctx.constructor.name, v1.constructor.name ]);
                     };
                     while (!$tco_done) {
                         $tco_result = $tco_loop($tco_var_ctx, $copy_v1);
@@ -45505,8 +49494,8 @@ var pop = function (dictOrd) {
                 };
                 if (ctxs instanceof Data_List_Types.Cons) {
                     var __unused = function (dictPartial1) {
-                        return function ($dollar53) {
-                            return $dollar53;
+                        return function ($dollar57) {
+                            return $dollar57;
                         };
                     };
                     return __unused()((function () {
@@ -45561,17 +49550,17 @@ var pop = function (dictOrd) {
                         if (ctxs.value0 instanceof ThreeRight && ctxs.value0.value3 instanceof Three) {
                             return fromZipper(dictOrd)(ctxs.value1)(new Three(ctxs.value0.value0, ctxs.value0.value1, ctxs.value0.value2, new Two(ctxs.value0.value3.value0, ctxs.value0.value3.value1, ctxs.value0.value3.value2, ctxs.value0.value3.value3), ctxs.value0.value3.value4, ctxs.value0.value3.value5, new Two(ctxs.value0.value3.value6, ctxs.value0.value4, ctxs.value0.value5, tree)));
                         };
-                        throw new Error("Failed pattern match at Data.Map line 466, column 9 - line 483, column 136: " + [ ctxs.value0.constructor.name, tree.constructor.name ]);
+                        throw new Error("Failed pattern match at Data.Map line 499, column 9 - line 516, column 136: " + [ ctxs.value0.constructor.name, tree.constructor.name ]);
                     })());
                 };
-                throw new Error("Failed pattern match at Data.Map line 463, column 5 - line 483, column 136: " + [ ctxs.constructor.name ]);
+                throw new Error("Failed pattern match at Data.Map line 496, column 5 - line 516, column 136: " + [ ctxs.constructor.name ]);
             };
         };
         var removeMaxNode = function (ctx) {
             return function (m) {
                 var __unused = function (dictPartial1) {
-                    return function ($dollar55) {
-                        return $dollar55;
+                    return function ($dollar59) {
+                        return $dollar59;
                     };
                 };
                 return __unused()((function () {
@@ -45587,14 +49576,14 @@ var pop = function (dictOrd) {
                     if (m instanceof Three) {
                         return removeMaxNode(new Data_List_Types.Cons(new ThreeRight(m.value0, m.value1, m.value2, m.value3, m.value4, m.value5), ctx))(m.value6);
                     };
-                    throw new Error("Failed pattern match at Data.Map line 495, column 5 - line 499, column 107: " + [ m.constructor.name ]);
+                    throw new Error("Failed pattern match at Data.Map line 528, column 5 - line 532, column 107: " + [ m.constructor.name ]);
                 })());
             };
         };
         var maxNode = function (m) {
             var __unused = function (dictPartial1) {
-                return function ($dollar57) {
-                    return $dollar57;
+                return function ($dollar61) {
+                    return $dollar61;
                 };
             };
             return __unused()((function () {
@@ -45616,7 +49605,7 @@ var pop = function (dictOrd) {
                 if (m instanceof Three) {
                     return maxNode(m.value6);
                 };
-                throw new Error("Failed pattern match at Data.Map line 486, column 33 - line 490, column 45: " + [ m.constructor.name ]);
+                throw new Error("Failed pattern match at Data.Map line 519, column 33 - line 523, column 45: " + [ m.constructor.name ]);
             })());
         };
         var comp = Data_Ord.compare(dictOrd);
@@ -45691,7 +49680,7 @@ var pop = function (dictOrd) {
                         $copy_m = m.value6;
                         return;
                     };
-                    throw new Error("Failed pattern match at Data.Map line 436, column 34 - line 459, column 80: " + [ m.constructor.name ]);
+                    throw new Error("Failed pattern match at Data.Map line 469, column 34 - line 492, column 80: " + [ m.constructor.name ]);
                 };
                 while (!$tco_done) {
                     $tco_result = $tco_loop($tco_var_ctx, $copy_m);
@@ -45739,7 +49728,7 @@ var traversableMap = new Data_Traversable.Traversable(function () {
             if (v instanceof Three) {
                 return Control_Apply.apply(dictApplicative.Apply0())(Control_Apply.apply(dictApplicative.Apply0())(Control_Apply.apply(dictApplicative.Apply0())(Control_Apply.apply(dictApplicative.Apply0())(Control_Apply.apply(dictApplicative.Apply0())(Control_Apply.apply(dictApplicative.Apply0())(Data_Functor.map((dictApplicative.Apply0()).Functor0())(Three.create)(Data_Traversable.traverse(traversableMap)(dictApplicative)(f)(v.value0)))(Control_Applicative.pure(dictApplicative)(v.value1)))(f(v.value2)))(Data_Traversable.traverse(traversableMap)(dictApplicative)(f)(v.value3)))(Control_Applicative.pure(dictApplicative)(v.value4)))(f(v.value5)))(Data_Traversable.traverse(traversableMap)(dictApplicative)(f)(v.value6));
             };
-            throw new Error("Failed pattern match at Data.Map line 97, column 1 - line 97, column 47: " + [ f.constructor.name, v.constructor.name ]);
+            throw new Error("Failed pattern match at Data.Map line 114, column 1 - line 114, column 47: " + [ f.constructor.name, v.constructor.name ]);
         };
     };
 });
@@ -45757,7 +49746,7 @@ var foldSubmap = function (dictOrd) {
                         if (kmin instanceof Data_Maybe.Nothing) {
                             return Data_Function["const"](false);
                         };
-                        throw new Error("Failed pattern match at Data.Map line 281, column 7 - line 285, column 22: " + [ kmin.constructor.name ]);
+                        throw new Error("Failed pattern match at Data.Map line 314, column 7 - line 318, column 22: " + [ kmin.constructor.name ]);
                     })();
                     var tooLarge = (function () {
                         if (kmax instanceof Data_Maybe.Just) {
@@ -45768,7 +49757,7 @@ var foldSubmap = function (dictOrd) {
                         if (kmax instanceof Data_Maybe.Nothing) {
                             return Data_Function["const"](false);
                         };
-                        throw new Error("Failed pattern match at Data.Map line 288, column 7 - line 292, column 22: " + [ kmax.constructor.name ]);
+                        throw new Error("Failed pattern match at Data.Map line 321, column 7 - line 325, column 22: " + [ kmax.constructor.name ]);
                     })();
                     var inBounds = (function () {
                         if (kmin instanceof Data_Maybe.Just && kmax instanceof Data_Maybe.Just) {
@@ -45789,7 +49778,7 @@ var foldSubmap = function (dictOrd) {
                         if (kmin instanceof Data_Maybe.Nothing && kmax instanceof Data_Maybe.Nothing) {
                             return Data_Function["const"](true);
                         };
-                        throw new Error("Failed pattern match at Data.Map line 295, column 7 - line 303, column 21: " + [ kmin.constructor.name, kmax.constructor.name ]);
+                        throw new Error("Failed pattern match at Data.Map line 328, column 7 - line 336, column 21: " + [ kmin.constructor.name, kmax.constructor.name ]);
                     })();
                     var go = function (v) {
                         if (v instanceof Leaf) {
@@ -45797,20 +49786,20 @@ var foldSubmap = function (dictOrd) {
                         };
                         if (v instanceof Two) {
                             return Data_Semigroup.append(dictMonoid.Semigroup0())((function () {
-                                var $619 = tooSmall(v.value1);
-                                if ($619) {
+                                var $637 = tooSmall(v.value1);
+                                if ($637) {
                                     return Data_Monoid.mempty(dictMonoid);
                                 };
                                 return go(v.value0);
                             })())(Data_Semigroup.append(dictMonoid.Semigroup0())((function () {
-                                var $620 = inBounds(v.value1);
-                                if ($620) {
+                                var $638 = inBounds(v.value1);
+                                if ($638) {
                                     return f(v.value1)(v.value2);
                                 };
                                 return Data_Monoid.mempty(dictMonoid);
                             })())((function () {
-                                var $621 = tooLarge(v.value1);
-                                if ($621) {
+                                var $639 = tooLarge(v.value1);
+                                if ($639) {
                                     return Data_Monoid.mempty(dictMonoid);
                                 };
                                 return go(v.value3);
@@ -45818,38 +49807,38 @@ var foldSubmap = function (dictOrd) {
                         };
                         if (v instanceof Three) {
                             return Data_Semigroup.append(dictMonoid.Semigroup0())((function () {
-                                var $626 = tooSmall(v.value1);
-                                if ($626) {
+                                var $644 = tooSmall(v.value1);
+                                if ($644) {
                                     return Data_Monoid.mempty(dictMonoid);
                                 };
                                 return go(v.value0);
                             })())(Data_Semigroup.append(dictMonoid.Semigroup0())((function () {
-                                var $627 = inBounds(v.value1);
-                                if ($627) {
+                                var $645 = inBounds(v.value1);
+                                if ($645) {
                                     return f(v.value1)(v.value2);
                                 };
                                 return Data_Monoid.mempty(dictMonoid);
                             })())(Data_Semigroup.append(dictMonoid.Semigroup0())((function () {
-                                var $628 = tooSmall(v.value4) || tooLarge(v.value1);
-                                if ($628) {
+                                var $646 = tooSmall(v.value4) || tooLarge(v.value1);
+                                if ($646) {
                                     return Data_Monoid.mempty(dictMonoid);
                                 };
                                 return go(v.value3);
                             })())(Data_Semigroup.append(dictMonoid.Semigroup0())((function () {
-                                var $629 = inBounds(v.value4);
-                                if ($629) {
+                                var $647 = inBounds(v.value4);
+                                if ($647) {
                                     return f(v.value4)(v.value5);
                                 };
                                 return Data_Monoid.mempty(dictMonoid);
                             })())((function () {
-                                var $630 = tooLarge(v.value4);
-                                if ($630) {
+                                var $648 = tooLarge(v.value4);
+                                if ($648) {
                                     return Data_Monoid.mempty(dictMonoid);
                                 };
                                 return go(v.value6);
                             })()))));
                         };
-                        throw new Error("Failed pattern match at Data.Map line 321, column 10 - line 333, column 54: " + [ v.constructor.name ]);
+                        throw new Error("Failed pattern match at Data.Map line 354, column 10 - line 366, column 54: " + [ v.constructor.name ]);
                     };
                     return go;
                 };
@@ -45884,7 +49873,7 @@ var findMin = (function () {
                     $copy_v1 = v1.value0;
                     return;
                 };
-                throw new Error("Failed pattern match at Data.Map line 259, column 5 - line 259, column 22: " + [ v.constructor.name, v1.constructor.name ]);
+                throw new Error("Failed pattern match at Data.Map line 292, column 5 - line 292, column 22: " + [ v.constructor.name, v1.constructor.name ]);
             };
             while (!$tco_done) {
                 $tco_result = $tco_loop($tco_var_v, $copy_v1);
@@ -45915,7 +49904,7 @@ var lookupGT = function (dictOrd) {
                 if (v2 instanceof Data_Ordering.GT) {
                     return go(v.value3);
                 };
-                throw new Error("Failed pattern match at Data.Map line 238, column 33 - line 241, column 21: " + [ v2.constructor.name ]);
+                throw new Error("Failed pattern match at Data.Map line 271, column 33 - line 274, column 21: " + [ v2.constructor.name ]);
             };
             if (v instanceof Three) {
                 var v3 = comp(k)(v.value1);
@@ -45931,9 +49920,9 @@ var lookupGT = function (dictOrd) {
                 if (v3 instanceof Data_Ordering.GT) {
                     return go(new Two(v.value3, v.value4, v.value5, v.value6));
                 };
-                throw new Error("Failed pattern match at Data.Map line 242, column 45 - line 245, column 37: " + [ v3.constructor.name ]);
+                throw new Error("Failed pattern match at Data.Map line 275, column 45 - line 278, column 37: " + [ v3.constructor.name ]);
             };
-            throw new Error("Failed pattern match at Data.Map line 237, column 5 - line 237, column 22: " + [ v.constructor.name ]);
+            throw new Error("Failed pattern match at Data.Map line 270, column 5 - line 270, column 22: " + [ v.constructor.name ]);
         };
         return go;
     };
@@ -45965,7 +49954,7 @@ var findMax = (function () {
                     $copy_v1 = v1.value6;
                     return;
                 };
-                throw new Error("Failed pattern match at Data.Map line 251, column 5 - line 251, column 22: " + [ v.constructor.name, v1.constructor.name ]);
+                throw new Error("Failed pattern match at Data.Map line 284, column 5 - line 284, column 22: " + [ v.constructor.name, v1.constructor.name ]);
             };
             while (!$tco_done) {
                 $tco_result = $tco_loop($tco_var_v, $copy_v1);
@@ -45996,7 +49985,7 @@ var lookupLT = function (dictOrd) {
                 if (v2 instanceof Data_Ordering.LT) {
                     return go(v.value0);
                 };
-                throw new Error("Failed pattern match at Data.Map line 204, column 33 - line 207, column 20: " + [ v2.constructor.name ]);
+                throw new Error("Failed pattern match at Data.Map line 237, column 33 - line 240, column 20: " + [ v2.constructor.name ]);
             };
             if (v instanceof Three) {
                 var v3 = comp(k)(v.value4);
@@ -46012,9 +50001,9 @@ var lookupLT = function (dictOrd) {
                 if (v3 instanceof Data_Ordering.LT) {
                     return go(new Two(v.value0, v.value1, v.value2, v.value3));
                 };
-                throw new Error("Failed pattern match at Data.Map line 208, column 45 - line 211, column 36: " + [ v3.constructor.name ]);
+                throw new Error("Failed pattern match at Data.Map line 241, column 45 - line 244, column 36: " + [ v3.constructor.name ]);
             };
-            throw new Error("Failed pattern match at Data.Map line 203, column 5 - line 203, column 22: " + [ v.constructor.name ]);
+            throw new Error("Failed pattern match at Data.Map line 236, column 5 - line 236, column 22: " + [ v.constructor.name ]);
         };
         return go;
     };
@@ -46063,8 +50052,8 @@ var fromFoldable = function (dictOrd) {
 };
 var filterWithKey = function (dictOrd) {
     return function (predicate) {
-        return function ($719) {
-            return fromFoldable(dictOrd)(Data_List_Lazy_Types.foldableList)(Data_List_Lazy.filter(Data_Tuple.uncurry(predicate))(toUnfoldable(Data_List_Lazy_Types.unfoldableList)($719)));
+        return function ($750) {
+            return fromFoldable(dictOrd)(Data_List_Lazy_Types.foldableList)(Data_List_Lazy.filter(Data_Tuple.uncurry(predicate))(toUnfoldable(Data_List_Lazy_Types.unfoldableList)($750)));
         };
     };
 };
@@ -46075,8 +50064,8 @@ var filter = function (dictOrd) {
 };
 var filterKeys = function (dictOrd) {
     return function (predicate) {
-        return filterWithKey(dictOrd)(function ($720) {
-            return Data_Function["const"](predicate($720));
+        return filterWithKey(dictOrd)(function ($751) {
+            return Data_Function["const"](predicate($751));
         });
     };
 };
@@ -46102,10 +50091,56 @@ var checkValid = function (tree) {
                 return n + 1 | 0;
             })(Data_Semigroup.append(Data_List_Types.semigroupList)(allHeights(v.value0))(Data_Semigroup.append(Data_List_Types.semigroupList)(allHeights(v.value3))(allHeights(v.value6))));
         };
-        throw new Error("Failed pattern match at Data.Map line 150, column 3 - line 150, column 36: " + [ v.constructor.name ]);
+        throw new Error("Failed pattern match at Data.Map line 183, column 3 - line 183, column 36: " + [ v.constructor.name ]);
     };
     return Data_List.length(Data_List.nub(Data_Eq.eqInt)(allHeights(tree))) === 1;
 };
+var asList = Control_Category.id(Control_Category.categoryFn);
+var foldableWithIndexMap = new Data_FoldableWithIndex.FoldableWithIndex(function () {
+    return foldableMap;
+}, function (dictMonoid) {
+    return function (f) {
+        return function (m) {
+            return Data_Foldable.foldMap(Data_List_Types.foldableList)(dictMonoid)(Data_Tuple.uncurry(f))(asList(toUnfoldable(Data_List_Types.unfoldableList)(m)));
+        };
+    };
+}, function (f) {
+    return function (z) {
+        return function (m) {
+            return Data_Foldable.foldl(Data_List_Types.foldableList)(function ($752) {
+                return Data_Tuple.uncurry(Data_Function.flip(f)($752));
+            })(z)(asList(toUnfoldable(Data_List_Types.unfoldableList)(m)));
+        };
+    };
+}, function (f) {
+    return function (z) {
+        return function (m) {
+            return Data_Foldable.foldr(Data_List_Types.foldableList)(Data_Tuple.uncurry(f))(z)(asList(toUnfoldable(Data_List_Types.unfoldableList)(m)));
+        };
+    };
+});
+var traversableWithIndexMap = new Data_TraversableWithIndex.TraversableWithIndex(function () {
+    return foldableWithIndexMap;
+}, function () {
+    return functorWithIndexMap;
+}, function () {
+    return traversableMap;
+}, function (dictApplicative) {
+    return function (f) {
+        return function (v) {
+            if (v instanceof Leaf) {
+                return Control_Applicative.pure(dictApplicative)(Leaf.value);
+            };
+            if (v instanceof Two) {
+                return Control_Apply.apply(dictApplicative.Apply0())(Control_Apply.apply(dictApplicative.Apply0())(Control_Apply.apply(dictApplicative.Apply0())(Data_Functor.map((dictApplicative.Apply0()).Functor0())(Two.create)(Data_TraversableWithIndex.traverseWithIndex(traversableWithIndexMap)(dictApplicative)(f)(v.value0)))(Control_Applicative.pure(dictApplicative)(v.value1)))(f(v.value1)(v.value2)))(Data_TraversableWithIndex.traverseWithIndex(traversableWithIndexMap)(dictApplicative)(f)(v.value3));
+            };
+            if (v instanceof Three) {
+                return Control_Apply.apply(dictApplicative.Apply0())(Control_Apply.apply(dictApplicative.Apply0())(Control_Apply.apply(dictApplicative.Apply0())(Control_Apply.apply(dictApplicative.Apply0())(Control_Apply.apply(dictApplicative.Apply0())(Control_Apply.apply(dictApplicative.Apply0())(Data_Functor.map((dictApplicative.Apply0()).Functor0())(Three.create)(Data_TraversableWithIndex.traverseWithIndex(traversableWithIndexMap)(dictApplicative)(f)(v.value0)))(Control_Applicative.pure(dictApplicative)(v.value1)))(f(v.value1)(v.value2)))(Data_TraversableWithIndex.traverseWithIndex(traversableWithIndexMap)(dictApplicative)(f)(v.value3)))(Control_Applicative.pure(dictApplicative)(v.value4)))(f(v.value4)(v.value5)))(Data_TraversableWithIndex.traverseWithIndex(traversableWithIndexMap)(dictApplicative)(f)(v.value6));
+            };
+            throw new Error("Failed pattern match at Data.Map line 131, column 1 - line 131, column 67: " + [ f.constructor.name, v.constructor.name ]);
+        };
+    };
+});
 var alter = function (dictOrd) {
     return function (f) {
         return function (k) {
@@ -46117,7 +50152,7 @@ var alter = function (dictOrd) {
                 if (v instanceof Data_Maybe.Just) {
                     return insert(dictOrd)(k)(v.value0)(m);
                 };
-                throw new Error("Failed pattern match at Data.Map line 504, column 15 - line 506, column 25: " + [ v.constructor.name ]);
+                throw new Error("Failed pattern match at Data.Map line 537, column 15 - line 539, column 25: " + [ v.constructor.name ]);
             };
         };
     };
@@ -46133,7 +50168,7 @@ var fromFoldableWith = function (dictOrd) {
                     if (v1 instanceof Data_Maybe.Nothing) {
                         return new Data_Maybe.Just(v);
                     };
-                    throw new Error("Failed pattern match at Data.Map line 521, column 3 - line 521, column 38: " + [ v.constructor.name, v1.constructor.name ]);
+                    throw new Error("Failed pattern match at Data.Map line 554, column 3 - line 554, column 38: " + [ v.constructor.name, v1.constructor.name ]);
                 };
             };
             return Data_Foldable.foldl(dictFoldable)(function (m) {
@@ -46150,8 +50185,8 @@ var unionWith = function (dictOrd) {
             return function (m2) {
                 var go = function (m) {
                     return function (v) {
-                        return alter(dictOrd)(function ($721) {
-                            return Data_Maybe.Just.create(Data_Maybe.maybe(v.value1)(f(v.value1))($721));
+                        return alter(dictOrd)(function ($753) {
+                            return Data_Maybe.Just.create(Data_Maybe.maybe(v.value1)(f(v.value1))($753));
                         })(v.value0)(m);
                     };
                 };
@@ -46236,11 +50271,14 @@ module.exports = {
     semigroupMap: semigroupMap, 
     monoidMap: monoidMap, 
     functorMap: functorMap, 
+    functorWithIndexMap: functorWithIndexMap, 
     foldableMap: foldableMap, 
-    traversableMap: traversableMap
+    foldableWithIndexMap: foldableWithIndexMap, 
+    traversableMap: traversableMap, 
+    traversableWithIndexMap: traversableWithIndexMap
 };
 
-},{"../Control.Applicative":195,"../Control.Apply":197,"../Control.Category":202,"../Control.Semigroupoid":250,"../Data.Eq":306,"../Data.Foldable":311,"../Data.Function":318,"../Data.Functor":324,"../Data.HeytingAlgebra":331,"../Data.List":370,"../Data.List.Lazy":367,"../Data.List.Lazy.Types":366,"../Data.List.Types":369,"../Data.Maybe":374,"../Data.Monoid":383,"../Data.Ord":392,"../Data.Ordering":393,"../Data.Semigroup":407,"../Data.Semiring":409,"../Data.Show":411,"../Data.Traversable":427,"../Data.Tuple":429,"../Data.Unfoldable":431,"../Partial.Unsafe":447,"../Prelude":450}],372:[function(require,module,exports){
+},{"../Control.Applicative":196,"../Control.Apply":198,"../Control.Category":203,"../Control.Semigroupoid":260,"../Data.Eq":329,"../Data.Foldable":334,"../Data.FoldableWithIndex":335,"../Data.Function":341,"../Data.Functor":347,"../Data.FunctorWithIndex":349,"../Data.HeytingAlgebra":354,"../Data.List":393,"../Data.List.Lazy":390,"../Data.List.Lazy.Types":389,"../Data.List.Types":392,"../Data.Maybe":397,"../Data.Monoid":406,"../Data.Ord":415,"../Data.Ordering":416,"../Data.Semigroup":430,"../Data.Semiring":432,"../Data.Show":434,"../Data.Traversable":452,"../Data.TraversableWithIndex":453,"../Data.Tuple":454,"../Data.Unfoldable":456,"../Partial.Unsafe":472,"../Prelude":475}],395:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Applicative = require("../Control.Applicative");
@@ -46319,7 +50357,7 @@ module.exports = {
     monoidFirst: monoidFirst
 };
 
-},{"../Control.Applicative":195,"../Control.Apply":197,"../Control.Bind":201,"../Control.Extend":205,"../Control.Monad":244,"../Data.Bounded":299,"../Data.Eq":306,"../Data.Functor":324,"../Data.Functor.Invariant":322,"../Data.Maybe":374,"../Data.Monoid":383,"../Data.Newtype":385,"../Data.Ord":392,"../Data.Semigroup":407,"../Data.Show":411,"../Prelude":450}],373:[function(require,module,exports){
+},{"../Control.Applicative":196,"../Control.Apply":198,"../Control.Bind":202,"../Control.Extend":206,"../Control.Monad":254,"../Data.Bounded":309,"../Data.Eq":329,"../Data.Functor":347,"../Data.Functor.Invariant":345,"../Data.Maybe":397,"../Data.Monoid":406,"../Data.Newtype":408,"../Data.Ord":415,"../Data.Semigroup":430,"../Data.Show":434,"../Prelude":475}],396:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Applicative = require("../Control.Applicative");
@@ -46401,7 +50439,7 @@ module.exports = {
     monoidLast: monoidLast
 };
 
-},{"../Control.Applicative":195,"../Control.Apply":197,"../Control.Bind":201,"../Control.Extend":205,"../Control.Monad":244,"../Data.Bounded":299,"../Data.Eq":306,"../Data.Functor":324,"../Data.Functor.Invariant":322,"../Data.Maybe":374,"../Data.Monoid":383,"../Data.Newtype":385,"../Data.Ord":392,"../Data.Semigroup":407,"../Data.Show":411,"../Prelude":450}],374:[function(require,module,exports){
+},{"../Control.Applicative":196,"../Control.Apply":198,"../Control.Bind":202,"../Control.Extend":206,"../Control.Monad":254,"../Data.Bounded":309,"../Data.Eq":329,"../Data.Functor":347,"../Data.Functor.Invariant":345,"../Data.Maybe":397,"../Data.Monoid":406,"../Data.Newtype":408,"../Data.Ord":415,"../Data.Semigroup":430,"../Data.Show":434,"../Prelude":475}],397:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Alt = require("../Control.Alt");
@@ -46677,7 +50715,7 @@ module.exports = {
     showMaybe: showMaybe
 };
 
-},{"../Control.Alt":193,"../Control.Alternative":194,"../Control.Applicative":195,"../Control.Apply":197,"../Control.Bind":201,"../Control.Category":202,"../Control.Extend":205,"../Control.Monad":244,"../Control.MonadZero":246,"../Control.Plus":249,"../Data.Bounded":299,"../Data.Eq":306,"../Data.Function":318,"../Data.Functor":324,"../Data.Functor.Invariant":322,"../Data.Monoid":383,"../Data.Ord":392,"../Data.Ordering":393,"../Data.Semigroup":407,"../Data.Show":411,"../Data.Unit":433,"../Prelude":450}],375:[function(require,module,exports){
+},{"../Control.Alt":194,"../Control.Alternative":195,"../Control.Applicative":196,"../Control.Apply":198,"../Control.Bind":202,"../Control.Category":203,"../Control.Extend":206,"../Control.Monad":254,"../Control.MonadZero":256,"../Control.Plus":259,"../Data.Bounded":309,"../Data.Eq":329,"../Data.Function":341,"../Data.Functor":347,"../Data.Functor.Invariant":345,"../Data.Monoid":406,"../Data.Ord":415,"../Data.Ordering":416,"../Data.Semigroup":430,"../Data.Show":434,"../Data.Unit":458,"../Prelude":475}],398:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Data_MediaType = require("../Data.MediaType");
@@ -46710,7 +50748,7 @@ module.exports = {
     textXML: textXML
 };
 
-},{"../Data.MediaType":376}],376:[function(require,module,exports){
+},{"../Data.MediaType":399}],399:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Apply = require("../Control.Apply");
@@ -46770,7 +50808,7 @@ module.exports = {
     showMediaType: showMediaType
 };
 
-},{"../Control.Apply":197,"../Data.Eq":306,"../Data.Generic":328,"../Data.Maybe":374,"../Data.Newtype":385,"../Data.Ord":392,"../Data.Semigroup":407,"../Data.Show":411,"../Data.Unit":433,"../Prelude":450}],377:[function(require,module,exports){
+},{"../Control.Apply":198,"../Data.Eq":329,"../Data.Generic":351,"../Data.Maybe":397,"../Data.Newtype":408,"../Data.Ord":415,"../Data.Semigroup":430,"../Data.Show":434,"../Data.Unit":458,"../Prelude":475}],400:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Applicative = require("../Control.Applicative");
@@ -46885,7 +50923,7 @@ module.exports = {
     monoidAdditive: monoidAdditive
 };
 
-},{"../Control.Applicative":195,"../Control.Apply":197,"../Control.Bind":201,"../Control.Comonad":203,"../Control.Extend":205,"../Control.Monad":244,"../Data.Bounded":299,"../Data.Eq":306,"../Data.Functor":324,"../Data.Functor.Invariant":322,"../Data.Monoid":383,"../Data.Newtype":385,"../Data.Ord":392,"../Data.Semigroup":407,"../Data.Semiring":409,"../Data.Show":411,"../Prelude":450}],378:[function(require,module,exports){
+},{"../Control.Applicative":196,"../Control.Apply":198,"../Control.Bind":202,"../Control.Comonad":204,"../Control.Extend":206,"../Control.Monad":254,"../Data.Bounded":309,"../Data.Eq":329,"../Data.Functor":347,"../Data.Functor.Invariant":345,"../Data.Monoid":406,"../Data.Newtype":408,"../Data.Ord":415,"../Data.Semigroup":430,"../Data.Semiring":432,"../Data.Show":434,"../Prelude":475}],401:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Applicative = require("../Control.Applicative");
@@ -47013,7 +51051,7 @@ module.exports = {
     semiringConj: semiringConj
 };
 
-},{"../Control.Applicative":195,"../Control.Apply":197,"../Control.Bind":201,"../Control.Comonad":203,"../Control.Extend":205,"../Control.Monad":244,"../Data.Bounded":299,"../Data.Eq":306,"../Data.Functor":324,"../Data.Functor.Invariant":322,"../Data.HeytingAlgebra":331,"../Data.Monoid":383,"../Data.Newtype":385,"../Data.Ord":392,"../Data.Semigroup":407,"../Data.Semiring":409,"../Data.Show":411,"../Prelude":450}],379:[function(require,module,exports){
+},{"../Control.Applicative":196,"../Control.Apply":198,"../Control.Bind":202,"../Control.Comonad":204,"../Control.Extend":206,"../Control.Monad":254,"../Data.Bounded":309,"../Data.Eq":329,"../Data.Functor":347,"../Data.Functor.Invariant":345,"../Data.HeytingAlgebra":354,"../Data.Monoid":406,"../Data.Newtype":408,"../Data.Ord":415,"../Data.Semigroup":430,"../Data.Semiring":432,"../Data.Show":434,"../Prelude":475}],402:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Applicative = require("../Control.Applicative");
@@ -47141,7 +51179,7 @@ module.exports = {
     semiringDisj: semiringDisj
 };
 
-},{"../Control.Applicative":195,"../Control.Apply":197,"../Control.Bind":201,"../Control.Comonad":203,"../Control.Extend":205,"../Control.Monad":244,"../Data.Bounded":299,"../Data.Eq":306,"../Data.Functor":324,"../Data.Functor.Invariant":322,"../Data.HeytingAlgebra":331,"../Data.Monoid":383,"../Data.Newtype":385,"../Data.Ord":392,"../Data.Semigroup":407,"../Data.Semiring":409,"../Data.Show":411,"../Prelude":450}],380:[function(require,module,exports){
+},{"../Control.Applicative":196,"../Control.Apply":198,"../Control.Bind":202,"../Control.Comonad":204,"../Control.Extend":206,"../Control.Monad":254,"../Data.Bounded":309,"../Data.Eq":329,"../Data.Functor":347,"../Data.Functor.Invariant":345,"../Data.HeytingAlgebra":354,"../Data.Monoid":406,"../Data.Newtype":408,"../Data.Ord":415,"../Data.Semigroup":430,"../Data.Semiring":432,"../Data.Show":434,"../Prelude":475}],403:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Applicative = require("../Control.Applicative");
@@ -47255,7 +51293,7 @@ module.exports = {
     monoidDual: monoidDual
 };
 
-},{"../Control.Applicative":195,"../Control.Apply":197,"../Control.Bind":201,"../Control.Comonad":203,"../Control.Extend":205,"../Control.Monad":244,"../Data.Bounded":299,"../Data.Eq":306,"../Data.Functor":324,"../Data.Functor.Invariant":322,"../Data.Monoid":383,"../Data.Newtype":385,"../Data.Ord":392,"../Data.Semigroup":407,"../Data.Show":411,"../Prelude":450}],381:[function(require,module,exports){
+},{"../Control.Applicative":196,"../Control.Apply":198,"../Control.Bind":202,"../Control.Comonad":204,"../Control.Extend":206,"../Control.Monad":254,"../Data.Bounded":309,"../Data.Eq":329,"../Data.Functor":347,"../Data.Functor.Invariant":345,"../Data.Monoid":406,"../Data.Newtype":408,"../Data.Ord":415,"../Data.Semigroup":430,"../Data.Show":434,"../Prelude":475}],404:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Category = require("../Control.Category");
@@ -47298,7 +51336,7 @@ module.exports = {
     monoidEndo: monoidEndo
 };
 
-},{"../Control.Category":202,"../Control.Semigroupoid":250,"../Data.Functor.Invariant":322,"../Data.Monoid":383,"../Data.Newtype":385,"../Data.Semigroup":407,"../Prelude":450}],382:[function(require,module,exports){
+},{"../Control.Category":203,"../Control.Semigroupoid":260,"../Data.Functor.Invariant":345,"../Data.Monoid":406,"../Data.Newtype":408,"../Data.Semigroup":430,"../Prelude":475}],405:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Applicative = require("../Control.Applicative");
@@ -47413,7 +51451,7 @@ module.exports = {
     monoidMultiplicative: monoidMultiplicative
 };
 
-},{"../Control.Applicative":195,"../Control.Apply":197,"../Control.Bind":201,"../Control.Comonad":203,"../Control.Extend":205,"../Control.Monad":244,"../Data.Bounded":299,"../Data.Eq":306,"../Data.Functor":324,"../Data.Functor.Invariant":322,"../Data.Monoid":383,"../Data.Newtype":385,"../Data.Ord":392,"../Data.Semigroup":407,"../Data.Semiring":409,"../Data.Show":411,"../Prelude":450}],383:[function(require,module,exports){
+},{"../Control.Applicative":196,"../Control.Apply":198,"../Control.Bind":202,"../Control.Comonad":204,"../Control.Extend":206,"../Control.Monad":254,"../Data.Bounded":309,"../Data.Eq":329,"../Data.Functor":347,"../Data.Functor.Invariant":345,"../Data.Monoid":406,"../Data.Newtype":408,"../Data.Ord":415,"../Data.Semigroup":430,"../Data.Semiring":432,"../Data.Show":434,"../Prelude":475}],406:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Data_Boolean = require("../Data.Boolean");
@@ -47496,9 +51534,9 @@ module.exports = {
     monoidArray: monoidArray
 };
 
-},{"../Data.Boolean":296,"../Data.Eq":306,"../Data.EuclideanRing":308,"../Data.Function":318,"../Data.Ord":392,"../Data.Ordering":393,"../Data.Semigroup":407,"../Data.Unit":433,"../Prelude":450}],384:[function(require,module,exports){
-arguments[4][266][0].apply(exports,arguments)
-},{"dup":266}],385:[function(require,module,exports){
+},{"../Data.Boolean":306,"../Data.Eq":329,"../Data.EuclideanRing":331,"../Data.Function":341,"../Data.Ord":415,"../Data.Ordering":416,"../Data.Semigroup":430,"../Data.Unit":458,"../Prelude":475}],407:[function(require,module,exports){
+arguments[4][276][0].apply(exports,arguments)
+},{"dup":276}],408:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Semigroupoid = require("../Control.Semigroupoid");
@@ -47703,7 +51741,7 @@ module.exports = {
     wrap: wrap
 };
 
-},{"../Control.Semigroupoid":250,"../Data.Function":318,"../Data.Functor":324,"../Prelude":450}],386:[function(require,module,exports){
+},{"../Control.Semigroupoid":260,"../Data.Function":341,"../Data.Functor":347,"../Prelude":475}],409:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Alt = require("../Control.Alt");
@@ -47888,7 +51926,7 @@ module.exports = {
     traversableNonEmpty: traversableNonEmpty
 };
 
-},{"../Control.Alt":193,"../Control.Alternative":194,"../Control.Applicative":195,"../Control.Apply":197,"../Control.Category":202,"../Control.Plus":249,"../Data.Eq":306,"../Data.Foldable":311,"../Data.Functor":324,"../Data.HeytingAlgebra":331,"../Data.Ord":392,"../Data.Ordering":393,"../Data.Semigroup":407,"../Data.Show":411,"../Data.Traversable":427,"../Prelude":450}],387:[function(require,module,exports){
+},{"../Control.Alt":194,"../Control.Alternative":195,"../Control.Applicative":196,"../Control.Apply":198,"../Control.Category":203,"../Control.Plus":259,"../Data.Eq":329,"../Data.Foldable":334,"../Data.Functor":347,"../Data.HeytingAlgebra":354,"../Data.Ord":415,"../Data.Ordering":416,"../Data.Semigroup":430,"../Data.Show":434,"../Data.Traversable":452,"../Prelude":475}],410:[function(require,module,exports){
 "use strict";
 
 exports["null"] = null;
@@ -47901,7 +51939,7 @@ exports.notNull = function (x) {
   return x;
 };
 
-},{}],388:[function(require,module,exports){
+},{}],411:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -47948,7 +51986,7 @@ module.exports = {
     ord1Nullable: ord1Nullable
 };
 
-},{"../Control.Semigroupoid":250,"../Data.Eq":306,"../Data.Function":318,"../Data.Function.Uncurried":317,"../Data.Maybe":374,"../Data.Ord":392,"../Data.Show":411,"../Prelude":450,"./foreign":387}],389:[function(require,module,exports){
+},{"../Control.Semigroupoid":260,"../Data.Eq":329,"../Data.Function":341,"../Data.Function.Uncurried":340,"../Data.Maybe":397,"../Data.Ord":415,"../Data.Show":434,"../Prelude":475,"./foreign":410}],412:[function(require,module,exports){
 "use strict";
 
 exports.unsafeCompareImpl = function (lt) {
@@ -47963,7 +52001,7 @@ exports.unsafeCompareImpl = function (lt) {
   };
 };
 
-},{}],390:[function(require,module,exports){
+},{}],413:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -47973,7 +52011,7 @@ module.exports = {
     unsafeCompare: unsafeCompare
 };
 
-},{"../Data.Ordering":393,"./foreign":389}],391:[function(require,module,exports){
+},{"../Data.Ordering":416,"./foreign":412}],414:[function(require,module,exports){
 "use strict";
 
 exports.ordArrayImpl = function (f) {
@@ -48002,7 +52040,7 @@ exports.ordArrayImpl = function (f) {
   };
 };
 
-},{}],392:[function(require,module,exports){
+},{}],415:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -48273,7 +52311,7 @@ module.exports = {
     ord1Array: ord1Array
 };
 
-},{"../Data.Eq":306,"../Data.Function":318,"../Data.Ord.Unsafe":390,"../Data.Ordering":393,"../Data.Ring":403,"../Data.Semiring":409,"../Data.Unit":433,"../Data.Void":434,"./foreign":391}],393:[function(require,module,exports){
+},{"../Data.Eq":329,"../Data.Function":341,"../Data.Ord.Unsafe":413,"../Data.Ordering":416,"../Data.Ring":426,"../Data.Semiring":432,"../Data.Unit":458,"../Data.Void":459,"./foreign":414}],416:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Data_Eq = require("../Data.Eq");
@@ -48362,7 +52400,7 @@ module.exports = {
     showOrdering: showOrdering
 };
 
-},{"../Data.Eq":306,"../Data.Semigroup":407,"../Data.Show":411}],394:[function(require,module,exports){
+},{"../Data.Eq":329,"../Data.Semigroup":430,"../Data.Show":434}],417:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Category = require("../Control.Category");
@@ -48424,7 +52462,7 @@ module.exports = {
     choiceFn: choiceFn
 };
 
-},{"../Control.Category":202,"../Control.Semigroupoid":250,"../Data.Either":304,"../Data.Function":318,"../Data.Functor":324,"../Data.Profunctor":401,"../Prelude":450}],395:[function(require,module,exports){
+},{"../Control.Category":203,"../Control.Semigroupoid":260,"../Data.Either":326,"../Data.Function":341,"../Data.Functor":347,"../Data.Profunctor":424,"../Prelude":475}],418:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Semigroupoid = require("../Control.Semigroupoid");
@@ -48446,7 +52484,7 @@ module.exports = {
     closedFunction: closedFunction
 };
 
-},{"../Control.Semigroupoid":250,"../Data.Profunctor":401,"../Prelude":450}],396:[function(require,module,exports){
+},{"../Control.Semigroupoid":260,"../Data.Profunctor":424,"../Prelude":475}],419:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Data_Either = require("../Data.Either");
@@ -48468,7 +52506,7 @@ module.exports = {
     unright: unright
 };
 
-},{"../Data.Either":304,"../Data.Profunctor":401}],397:[function(require,module,exports){
+},{"../Data.Either":326,"../Data.Profunctor":424}],420:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Applicative = require("../Control.Applicative");
@@ -48670,7 +52708,7 @@ module.exports = {
     closedCostar: closedCostar
 };
 
-},{"../Control.Applicative":195,"../Control.Apply":197,"../Control.Bind":201,"../Control.Category":202,"../Control.Comonad":203,"../Control.Extend":205,"../Control.Monad":244,"../Control.Semigroupoid":250,"../Data.Distributive":302,"../Data.Either":304,"../Data.Function":318,"../Data.Functor":324,"../Data.Functor.Invariant":322,"../Data.Newtype":385,"../Data.Profunctor":401,"../Data.Profunctor.Closed":395,"../Data.Profunctor.Cochoice":396,"../Data.Profunctor.Costrong":398,"../Data.Profunctor.Strong":400,"../Data.Tuple":429,"../Prelude":450}],398:[function(require,module,exports){
+},{"../Control.Applicative":196,"../Control.Apply":198,"../Control.Bind":202,"../Control.Category":203,"../Control.Comonad":204,"../Control.Extend":206,"../Control.Monad":254,"../Control.Semigroupoid":260,"../Data.Distributive":324,"../Data.Either":326,"../Data.Function":341,"../Data.Functor":347,"../Data.Functor.Invariant":345,"../Data.Newtype":408,"../Data.Profunctor":424,"../Data.Profunctor.Closed":418,"../Data.Profunctor.Cochoice":419,"../Data.Profunctor.Costrong":421,"../Data.Profunctor.Strong":423,"../Data.Tuple":454,"../Prelude":475}],421:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Data_Profunctor = require("../Data.Profunctor");
@@ -48692,7 +52730,7 @@ module.exports = {
     unsecond: unsecond
 };
 
-},{"../Data.Profunctor":401,"../Data.Tuple":429}],399:[function(require,module,exports){
+},{"../Data.Profunctor":424,"../Data.Tuple":454}],422:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Alt = require("../Control.Alt");
@@ -48940,7 +52978,7 @@ module.exports = {
     closedStar: closedStar
 };
 
-},{"../Control.Alt":193,"../Control.Alternative":194,"../Control.Applicative":195,"../Control.Apply":197,"../Control.Bind":201,"../Control.Category":202,"../Control.Monad":244,"../Control.MonadPlus":245,"../Control.MonadZero":246,"../Control.Plus":249,"../Control.Semigroupoid":250,"../Data.Distributive":302,"../Data.Either":304,"../Data.Function":318,"../Data.Functor":324,"../Data.Functor.Invariant":322,"../Data.Newtype":385,"../Data.Profunctor":401,"../Data.Profunctor.Choice":394,"../Data.Profunctor.Closed":395,"../Data.Profunctor.Strong":400,"../Data.Tuple":429,"../Prelude":450}],400:[function(require,module,exports){
+},{"../Control.Alt":194,"../Control.Alternative":195,"../Control.Applicative":196,"../Control.Apply":198,"../Control.Bind":202,"../Control.Category":203,"../Control.Monad":254,"../Control.MonadPlus":255,"../Control.MonadZero":256,"../Control.Plus":259,"../Control.Semigroupoid":260,"../Data.Distributive":324,"../Data.Either":326,"../Data.Function":341,"../Data.Functor":347,"../Data.Functor.Invariant":345,"../Data.Newtype":408,"../Data.Profunctor":424,"../Data.Profunctor.Choice":417,"../Data.Profunctor.Closed":418,"../Data.Profunctor.Strong":423,"../Data.Tuple":454,"../Prelude":475}],423:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Category = require("../Control.Category");
@@ -48997,7 +53035,7 @@ module.exports = {
     strongFn: strongFn
 };
 
-},{"../Control.Category":202,"../Control.Semigroupoid":250,"../Data.Functor":324,"../Data.Profunctor":401,"../Data.Tuple":429,"../Prelude":450}],401:[function(require,module,exports){
+},{"../Control.Category":203,"../Control.Semigroupoid":260,"../Data.Functor":347,"../Data.Profunctor":424,"../Data.Tuple":454,"../Prelude":475}],424:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Category = require("../Control.Category");
@@ -49059,7 +53097,7 @@ module.exports = {
     profunctorFn: profunctorFn
 };
 
-},{"../Control.Category":202,"../Control.Semigroupoid":250,"../Data.Newtype":385,"../Prelude":450}],402:[function(require,module,exports){
+},{"../Control.Category":203,"../Control.Semigroupoid":260,"../Data.Newtype":408,"../Prelude":475}],425:[function(require,module,exports){
 "use strict";
 
 exports.intSub = function (x) {
@@ -49075,7 +53113,7 @@ exports.numSub = function (n1) {
   };
 };
 
-},{}],403:[function(require,module,exports){
+},{}],426:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -49127,7 +53165,7 @@ module.exports = {
     ringFn: ringFn
 };
 
-},{"../Data.Semiring":409,"../Data.Unit":433,"./foreign":402}],404:[function(require,module,exports){
+},{"../Data.Semiring":432,"../Data.Unit":458,"./foreign":425}],427:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Apply = require("../Control.Apply");
@@ -49237,7 +53275,7 @@ module.exports = {
     foldableMultiplicative: foldableMultiplicative
 };
 
-},{"../Control.Apply":197,"../Control.Category":202,"../Control.Semigroupoid":250,"../Data.Foldable":311,"../Data.Function":318,"../Data.Functor":324,"../Data.Monoid.Dual":380,"../Data.Monoid.Multiplicative":382,"../Data.Semigroup":407,"../Data.Unit":433,"../Prelude":450}],405:[function(require,module,exports){
+},{"../Control.Apply":198,"../Control.Category":203,"../Control.Semigroupoid":260,"../Data.Foldable":334,"../Data.Function":341,"../Data.Functor":347,"../Data.Monoid.Dual":403,"../Data.Monoid.Multiplicative":405,"../Data.Semigroup":430,"../Data.Unit":458,"../Prelude":475}],428:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Category = require("../Control.Category");
@@ -49279,7 +53317,7 @@ module.exports = {
     traverse1Default: traverse1Default
 };
 
-},{"../Control.Category":202,"../Data.Functor":324,"../Data.Semigroup.Foldable":404,"../Data.Traversable":427,"../Prelude":450}],406:[function(require,module,exports){
+},{"../Control.Category":203,"../Data.Functor":347,"../Data.Semigroup.Foldable":427,"../Data.Traversable":452,"../Prelude":475}],429:[function(require,module,exports){
 "use strict";
 
 exports.concatString = function (s1) {
@@ -49296,7 +53334,7 @@ exports.concatArray = function (xs) {
   };
 };
 
-},{}],407:[function(require,module,exports){
+},{}],430:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -49337,7 +53375,7 @@ module.exports = {
     semigroupArray: semigroupArray
 };
 
-},{"../Data.Unit":433,"../Data.Void":434,"./foreign":406}],408:[function(require,module,exports){
+},{"../Data.Unit":458,"../Data.Void":459,"./foreign":429}],431:[function(require,module,exports){
 "use strict";
 
 exports.intAdd = function (x) {
@@ -49366,7 +53404,7 @@ exports.numMul = function (n1) {
   };
 };
 
-},{}],409:[function(require,module,exports){
+},{}],432:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -49431,7 +53469,7 @@ module.exports = {
     semiringUnit: semiringUnit
 };
 
-},{"../Data.Unit":433,"./foreign":408}],410:[function(require,module,exports){
+},{"../Data.Unit":458,"./foreign":431}],433:[function(require,module,exports){
 "use strict";
 
 exports.showIntImpl = function (n) {
@@ -49494,7 +53532,7 @@ exports.showArrayImpl = function (f) {
   };
 };
 
-},{}],411:[function(require,module,exports){
+},{}],434:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -49531,7 +53569,7 @@ module.exports = {
     showArray: showArray
 };
 
-},{"./foreign":410}],412:[function(require,module,exports){
+},{"./foreign":433}],435:[function(require,module,exports){
 "use strict";
 
 exports["new"] = function () {
@@ -49570,7 +53608,7 @@ exports["delete"] = function (m) {
   };
 };
 
-},{}],413:[function(require,module,exports){
+},{}],436:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -49585,7 +53623,7 @@ module.exports = {
     poke: $foreign.poke
 };
 
-},{"../Control.Monad.Eff":226,"../Control.Monad.ST":237,"../Data.Maybe":374,"./foreign":412}],414:[function(require,module,exports){
+},{"../Control.Monad.Eff":232,"../Control.Monad.ST":247,"../Data.Maybe":397,"./foreign":435}],437:[function(require,module,exports){
 "use strict";
 
 exports._copyEff = function (m) {
@@ -49712,7 +53750,7 @@ exports.keys = Object.keys || toArrayWithKey(function (k) {
   return function () { return k; };
 });
 
-},{}],415:[function(require,module,exports){
+},{}],438:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -50097,7 +54135,7 @@ module.exports = {
     toArrayWithKey: $foreign.toArrayWithKey
 };
 
-},{"../Control.Applicative":195,"../Control.Apply":197,"../Control.Bind":201,"../Control.Category":202,"../Control.Monad.Eff":226,"../Control.Monad.ST":237,"../Control.Semigroupoid":250,"../Data.Array":286,"../Data.Eq":306,"../Data.Foldable":311,"../Data.FoldableWithIndex":312,"../Data.Function":318,"../Data.Function.Uncurried":317,"../Data.Functor":324,"../Data.FunctorWithIndex":326,"../Data.HeytingAlgebra":331,"../Data.Maybe":374,"../Data.Monoid":383,"../Data.Ord":392,"../Data.Semigroup":407,"../Data.Show":411,"../Data.StrMap.ST":413,"../Data.Traversable":427,"../Data.TraversableWithIndex":428,"../Data.Tuple":429,"../Data.Unfoldable":431,"../Prelude":450,"./foreign":414}],416:[function(require,module,exports){
+},{"../Control.Applicative":196,"../Control.Apply":198,"../Control.Bind":202,"../Control.Category":203,"../Control.Monad.Eff":232,"../Control.Monad.ST":247,"../Control.Semigroupoid":260,"../Data.Array":296,"../Data.Eq":329,"../Data.Foldable":334,"../Data.FoldableWithIndex":335,"../Data.Function":341,"../Data.Function.Uncurried":340,"../Data.Functor":347,"../Data.FunctorWithIndex":349,"../Data.HeytingAlgebra":354,"../Data.Maybe":397,"../Data.Monoid":406,"../Data.Ord":415,"../Data.Semigroup":430,"../Data.Show":434,"../Data.StrMap.ST":436,"../Data.Traversable":452,"../Data.TraversableWithIndex":453,"../Data.Tuple":454,"../Data.Unfoldable":456,"../Prelude":475,"./foreign":437}],439:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_MonadPlus = require("../Control.MonadPlus");
@@ -50202,7 +54240,7 @@ module.exports = {
     showRegexFlags: showRegexFlags
 };
 
-},{"../Control.MonadPlus":245,"../Control.MonadZero":246,"../Data.Eq":306,"../Data.Functor":324,"../Data.HeytingAlgebra":331,"../Data.Monoid":383,"../Data.Semigroup":407,"../Data.Show":411,"../Data.String":422,"../Prelude":450}],417:[function(require,module,exports){
+},{"../Control.MonadPlus":255,"../Control.MonadZero":256,"../Data.Eq":329,"../Data.Functor":347,"../Data.HeytingAlgebra":354,"../Data.Monoid":406,"../Data.Semigroup":430,"../Data.Show":434,"../Data.String":445,"../Prelude":475}],440:[function(require,module,exports){
 "use strict";
 
 exports["showRegex'"] = function (r) {
@@ -50254,11 +54292,10 @@ exports._match = function (just) {
         if (m == null) {
           return nothing;
         } else {
-          var list = [];
           for (var i = 0; i < m.length; i++) {
-            list.push(m[i] == null ? nothing : just(m[i]));
+            m[i] = m[i] == null ? nothing : just(m[i]);
           }
-          return just(list);
+          return just(m);
         }
       };
     };
@@ -50300,7 +54337,7 @@ exports.split = function (r) {
   };
 };
 
-},{}],418:[function(require,module,exports){
+},{}],441:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -50376,7 +54413,7 @@ module.exports = {
     test: $foreign.test
 };
 
-},{"../Control.Semigroupoid":250,"../Data.Either":304,"../Data.Function":318,"../Data.Maybe":374,"../Data.Semigroup":407,"../Data.Show":411,"../Data.String":422,"../Data.String.Regex.Flags":416,"../Prelude":450,"./foreign":417}],419:[function(require,module,exports){
+},{"../Control.Semigroupoid":260,"../Data.Either":326,"../Data.Function":341,"../Data.Maybe":397,"../Data.Semigroup":430,"../Data.Show":434,"../Data.String":445,"../Data.String.Regex.Flags":439,"../Prelude":475,"./foreign":440}],442:[function(require,module,exports){
 "use strict";
 
 exports.charCodeAt = function (i) {
@@ -50398,7 +54435,7 @@ exports.char = function (s) {
   throw new Error("Data.String.Unsafe.char: Expected string of length 1.");
 };
 
-},{}],420:[function(require,module,exports){
+},{}],443:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -50408,7 +54445,7 @@ module.exports = {
     charCodeAt: $foreign.charCodeAt
 };
 
-},{"./foreign":419}],421:[function(require,module,exports){
+},{"./foreign":442}],444:[function(require,module,exports){
 "use strict";
 
 exports._charAt = function (just) {
@@ -50590,7 +54627,7 @@ exports.joinWith = function (s) {
   };
 };
 
-},{}],422:[function(require,module,exports){
+},{}],445:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -50626,6 +54663,11 @@ var toChar = $foreign._toChar(Data_Maybe.Just.create)(Data_Maybe.Nothing.value);
 var takeWhile = function (p) {
     return function (s) {
         return $foreign.take($foreign.count(p)(s))(s);
+    };
+};
+var takeRight = function (i) {
+    return function (s) {
+        return $foreign.drop($foreign.length(s) - i | 0)(s);
     };
 };
 var splitAt = $foreign._splitAt(Data_Maybe.Just.create)(Data_Maybe.Nothing.value);
@@ -50696,6 +54738,11 @@ var dropWhile = function (p) {
         return $foreign.drop($foreign.count(p)(s))(s);
     };
 };
+var dropRight = function (i) {
+    return function (s) {
+        return $foreign.take($foreign.length(s) - i | 0)(s);
+    };
+};
 var contains = function (pat) {
     return function ($48) {
         return Data_Maybe.isJust(indexOf(pat)($48));
@@ -50709,6 +54756,7 @@ module.exports = {
     charAt: charAt, 
     charCodeAt: charCodeAt, 
     contains: contains, 
+    dropRight: dropRight, 
     dropWhile: dropWhile, 
     indexOf: indexOf, 
     "indexOf'": indexOf$prime, 
@@ -50719,6 +54767,7 @@ module.exports = {
     splitAt: splitAt, 
     stripPrefix: stripPrefix, 
     stripSuffix: stripSuffix, 
+    takeRight: takeRight, 
     takeWhile: takeWhile, 
     toChar: toChar, 
     uncons: uncons, 
@@ -50746,7 +54795,273 @@ module.exports = {
     trim: $foreign.trim
 };
 
-},{"../Control.Semigroupoid":250,"../Data.Eq":306,"../Data.Function":318,"../Data.Maybe":374,"../Data.Newtype":385,"../Data.Ord":392,"../Data.Ordering":393,"../Data.Ring":403,"../Data.Semigroup":407,"../Data.Semiring":409,"../Data.Show":411,"../Data.String.Unsafe":420,"../Prelude":450,"./foreign":421}],423:[function(require,module,exports){
+},{"../Control.Semigroupoid":260,"../Data.Eq":329,"../Data.Function":341,"../Data.Maybe":397,"../Data.Newtype":408,"../Data.Ord":415,"../Data.Ordering":416,"../Data.Ring":426,"../Data.Semigroup":430,"../Data.Semiring":432,"../Data.Show":434,"../Data.String.Unsafe":443,"../Prelude":475,"./foreign":444}],446:[function(require,module,exports){
+// Generated by purs version 0.11.6
+"use strict";
+var Control_Apply = require("../Control.Apply");
+var Control_Semigroupoid = require("../Control.Semigroupoid");
+var Data_Boolean = require("../Data.Boolean");
+var Data_Bounded = require("../Data.Bounded");
+var Data_Enum = require("../Data.Enum");
+var Data_Eq = require("../Data.Eq");
+var Data_Generic = require("../Data.Generic");
+var Data_HeytingAlgebra = require("../Data.HeytingAlgebra");
+var Data_Maybe = require("../Data.Maybe");
+var Data_Ord = require("../Data.Ord");
+var Data_Ring = require("../Data.Ring");
+var Data_Semigroup = require("../Data.Semigroup");
+var Data_Semiring = require("../Data.Semiring");
+var Data_Show = require("../Data.Show");
+var Data_Unit = require("../Data.Unit");
+var Prelude = require("../Prelude");
+var Second = function (x) {
+    return x;
+};
+var Minute = function (x) {
+    return x;
+};
+var Millisecond = function (x) {
+    return x;
+};
+var Hour = function (x) {
+    return x;
+};
+var showSecond = new Data_Show.Show(function (v) {
+    return "(Second " + (Data_Show.show(Data_Show.showInt)(v) + ")");
+});
+var showMinute = new Data_Show.Show(function (v) {
+    return "(Minute " + (Data_Show.show(Data_Show.showInt)(v) + ")");
+});
+var showMillisecond = new Data_Show.Show(function (v) {
+    return "(Millisecond " + (Data_Show.show(Data_Show.showInt)(v) + ")");
+});
+var showHour = new Data_Show.Show(function (v) {
+    return "(Hour " + (Data_Show.show(Data_Show.showInt)(v) + ")");
+});
+var ordSecond = Data_Ord.ordInt;
+var ordMinute = Data_Ord.ordInt;
+var ordMillisecond = Data_Ord.ordInt;
+var ordHour = Data_Ord.ordInt;
+var genericSecond = new Data_Generic.Generic(function (v) {
+    if (v instanceof Data_Generic.SProd && (v.value0 === "Data.Time.Component.Second" && v.value1.length === 1)) {
+        return Control_Apply.apply(Data_Maybe.applyMaybe)(new Data_Maybe.Just(Second))(Data_Generic.fromSpine(Data_Generic.genericInt)(v["value1"][0](Data_Unit.unit)));
+    };
+    return Data_Maybe.Nothing.value;
+}, function ($dollarq) {
+    return new Data_Generic.SigProd("Data.Time.Component.Second", [ {
+        sigConstructor: "Data.Time.Component.Second", 
+        sigValues: [ function ($dollarq1) {
+            return Data_Generic.toSignature(Data_Generic.genericInt)(Data_Generic.anyProxy);
+        } ]
+    } ]);
+}, function (v) {
+    return new Data_Generic.SProd("Data.Time.Component.Second", [ function ($dollarq) {
+        return Data_Generic.toSpine(Data_Generic.genericInt)(v);
+    } ]);
+});
+var genericMinute = new Data_Generic.Generic(function (v) {
+    if (v instanceof Data_Generic.SProd && (v.value0 === "Data.Time.Component.Minute" && v.value1.length === 1)) {
+        return Control_Apply.apply(Data_Maybe.applyMaybe)(new Data_Maybe.Just(Minute))(Data_Generic.fromSpine(Data_Generic.genericInt)(v["value1"][0](Data_Unit.unit)));
+    };
+    return Data_Maybe.Nothing.value;
+}, function ($dollarq) {
+    return new Data_Generic.SigProd("Data.Time.Component.Minute", [ {
+        sigConstructor: "Data.Time.Component.Minute", 
+        sigValues: [ function ($dollarq1) {
+            return Data_Generic.toSignature(Data_Generic.genericInt)(Data_Generic.anyProxy);
+        } ]
+    } ]);
+}, function (v) {
+    return new Data_Generic.SProd("Data.Time.Component.Minute", [ function ($dollarq) {
+        return Data_Generic.toSpine(Data_Generic.genericInt)(v);
+    } ]);
+});
+var genericMillisecond = new Data_Generic.Generic(function (v) {
+    if (v instanceof Data_Generic.SProd && (v.value0 === "Data.Time.Component.Millisecond" && v.value1.length === 1)) {
+        return Control_Apply.apply(Data_Maybe.applyMaybe)(new Data_Maybe.Just(Millisecond))(Data_Generic.fromSpine(Data_Generic.genericInt)(v["value1"][0](Data_Unit.unit)));
+    };
+    return Data_Maybe.Nothing.value;
+}, function ($dollarq) {
+    return new Data_Generic.SigProd("Data.Time.Component.Millisecond", [ {
+        sigConstructor: "Data.Time.Component.Millisecond", 
+        sigValues: [ function ($dollarq1) {
+            return Data_Generic.toSignature(Data_Generic.genericInt)(Data_Generic.anyProxy);
+        } ]
+    } ]);
+}, function (v) {
+    return new Data_Generic.SProd("Data.Time.Component.Millisecond", [ function ($dollarq) {
+        return Data_Generic.toSpine(Data_Generic.genericInt)(v);
+    } ]);
+});
+var genericHour = new Data_Generic.Generic(function (v) {
+    if (v instanceof Data_Generic.SProd && (v.value0 === "Data.Time.Component.Hour" && v.value1.length === 1)) {
+        return Control_Apply.apply(Data_Maybe.applyMaybe)(new Data_Maybe.Just(Hour))(Data_Generic.fromSpine(Data_Generic.genericInt)(v["value1"][0](Data_Unit.unit)));
+    };
+    return Data_Maybe.Nothing.value;
+}, function ($dollarq) {
+    return new Data_Generic.SigProd("Data.Time.Component.Hour", [ {
+        sigConstructor: "Data.Time.Component.Hour", 
+        sigValues: [ function ($dollarq1) {
+            return Data_Generic.toSignature(Data_Generic.genericInt)(Data_Generic.anyProxy);
+        } ]
+    } ]);
+}, function (v) {
+    return new Data_Generic.SProd("Data.Time.Component.Hour", [ function ($dollarq) {
+        return Data_Generic.toSpine(Data_Generic.genericInt)(v);
+    } ]);
+});
+var eqSecond = Data_Eq.eqInt;
+var eqMinute = Data_Eq.eqInt;
+var eqMillisecond = Data_Eq.eqInt;
+var eqHour = Data_Eq.eqInt;
+var boundedSecond = new Data_Bounded.Bounded(function () {
+    return ordSecond;
+}, 0, 59);
+var boundedMinute = new Data_Bounded.Bounded(function () {
+    return ordMinute;
+}, 0, 59);
+var boundedMillisecond = new Data_Bounded.Bounded(function () {
+    return ordMillisecond;
+}, 0, 999);
+var boundedHour = new Data_Bounded.Bounded(function () {
+    return ordHour;
+}, 0, 23);
+var boundedEnumSecond = new Data_Enum.BoundedEnum(function () {
+    return boundedSecond;
+}, function () {
+    return enumSecond;
+}, 60, function (v) {
+    return v;
+}, function (n) {
+    if (n >= 0 && n <= 59) {
+        return new Data_Maybe.Just(n);
+    };
+    if (Data_Boolean.otherwise) {
+        return Data_Maybe.Nothing.value;
+    };
+    throw new Error("Failed pattern match at Data.Time.Component line 94, column 1 - line 94, column 49: " + [ n.constructor.name ]);
+});
+var enumSecond = new Data_Enum.Enum(function () {
+    return ordSecond;
+}, function ($64) {
+    return Data_Enum.toEnum(boundedEnumSecond)((function (v) {
+        return v - 1 | 0;
+    })(Data_Enum.fromEnum(boundedEnumSecond)($64)));
+}, function ($65) {
+    return Data_Enum.toEnum(boundedEnumSecond)((function (v) {
+        return v + 1 | 0;
+    })(Data_Enum.fromEnum(boundedEnumSecond)($65)));
+});
+var boundedEnumMinute = new Data_Enum.BoundedEnum(function () {
+    return boundedMinute;
+}, function () {
+    return enumMinute;
+}, 60, function (v) {
+    return v;
+}, function (n) {
+    if (n >= 0 && n <= 59) {
+        return new Data_Maybe.Just(n);
+    };
+    if (Data_Boolean.otherwise) {
+        return Data_Maybe.Nothing.value;
+    };
+    throw new Error("Failed pattern match at Data.Time.Component line 64, column 1 - line 64, column 49: " + [ n.constructor.name ]);
+});
+var enumMinute = new Data_Enum.Enum(function () {
+    return ordMinute;
+}, function ($66) {
+    return Data_Enum.toEnum(boundedEnumMinute)((function (v) {
+        return v - 1 | 0;
+    })(Data_Enum.fromEnum(boundedEnumMinute)($66)));
+}, function ($67) {
+    return Data_Enum.toEnum(boundedEnumMinute)((function (v) {
+        return v + 1 | 0;
+    })(Data_Enum.fromEnum(boundedEnumMinute)($67)));
+});
+var boundedEnumMillisecond = new Data_Enum.BoundedEnum(function () {
+    return boundedMillisecond;
+}, function () {
+    return enumMillisecond;
+}, 1000, function (v) {
+    return v;
+}, function (n) {
+    if (n >= 0 && n <= 999) {
+        return new Data_Maybe.Just(n);
+    };
+    if (Data_Boolean.otherwise) {
+        return Data_Maybe.Nothing.value;
+    };
+    throw new Error("Failed pattern match at Data.Time.Component line 125, column 1 - line 125, column 59: " + [ n.constructor.name ]);
+});
+var enumMillisecond = new Data_Enum.Enum(function () {
+    return ordMillisecond;
+}, function ($68) {
+    return Data_Enum.toEnum(boundedEnumMillisecond)((function (v) {
+        return v - 1 | 0;
+    })(Data_Enum.fromEnum(boundedEnumMillisecond)($68)));
+}, function ($69) {
+    return Data_Enum.toEnum(boundedEnumMillisecond)((function (v) {
+        return v + 1 | 0;
+    })(Data_Enum.fromEnum(boundedEnumMillisecond)($69)));
+});
+var boundedEnumHour = new Data_Enum.BoundedEnum(function () {
+    return boundedHour;
+}, function () {
+    return enumHour;
+}, 24, function (v) {
+    return v;
+}, function (n) {
+    if (n >= 0 && n <= 23) {
+        return new Data_Maybe.Just(n);
+    };
+    if (Data_Boolean.otherwise) {
+        return Data_Maybe.Nothing.value;
+    };
+    throw new Error("Failed pattern match at Data.Time.Component line 34, column 1 - line 34, column 45: " + [ n.constructor.name ]);
+});
+var enumHour = new Data_Enum.Enum(function () {
+    return ordHour;
+}, function ($70) {
+    return Data_Enum.toEnum(boundedEnumHour)((function (v) {
+        return v - 1 | 0;
+    })(Data_Enum.fromEnum(boundedEnumHour)($70)));
+}, function ($71) {
+    return Data_Enum.toEnum(boundedEnumHour)((function (v) {
+        return v + 1 | 0;
+    })(Data_Enum.fromEnum(boundedEnumHour)($71)));
+});
+module.exports = {
+    eqHour: eqHour, 
+    ordHour: ordHour, 
+    genericHour: genericHour, 
+    boundedHour: boundedHour, 
+    enumHour: enumHour, 
+    boundedEnumHour: boundedEnumHour, 
+    showHour: showHour, 
+    eqMinute: eqMinute, 
+    ordMinute: ordMinute, 
+    genericMinute: genericMinute, 
+    boundedMinute: boundedMinute, 
+    enumMinute: enumMinute, 
+    boundedEnumMinute: boundedEnumMinute, 
+    showMinute: showMinute, 
+    eqSecond: eqSecond, 
+    ordSecond: ordSecond, 
+    genericSecond: genericSecond, 
+    boundedSecond: boundedSecond, 
+    enumSecond: enumSecond, 
+    boundedEnumSecond: boundedEnumSecond, 
+    showSecond: showSecond, 
+    eqMillisecond: eqMillisecond, 
+    ordMillisecond: ordMillisecond, 
+    genericMillisecond: genericMillisecond, 
+    boundedMillisecond: boundedMillisecond, 
+    enumMillisecond: enumMillisecond, 
+    boundedEnumMillisecond: boundedEnumMillisecond, 
+    showMillisecond: showMillisecond
+};
+
+},{"../Control.Apply":198,"../Control.Semigroupoid":260,"../Data.Boolean":306,"../Data.Bounded":309,"../Data.Enum":327,"../Data.Eq":329,"../Data.Generic":351,"../Data.HeytingAlgebra":354,"../Data.Maybe":397,"../Data.Ord":415,"../Data.Ring":426,"../Data.Semigroup":430,"../Data.Semiring":432,"../Data.Show":434,"../Data.Unit":458,"../Prelude":475}],447:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Apply = require("../Control.Apply");
@@ -51004,7 +55319,213 @@ module.exports = {
     durationDays: durationDays
 };
 
-},{"../Control.Apply":197,"../Control.Category":202,"../Control.Semigroupoid":250,"../Data.Eq":306,"../Data.EuclideanRing":308,"../Data.Generic":328,"../Data.Maybe":374,"../Data.Newtype":385,"../Data.Ord":392,"../Data.Ring":403,"../Data.Semigroup":407,"../Data.Semiring":409,"../Data.Show":411,"../Data.Unit":433,"../Prelude":450}],424:[function(require,module,exports){
+},{"../Control.Apply":198,"../Control.Category":203,"../Control.Semigroupoid":260,"../Data.Eq":329,"../Data.EuclideanRing":331,"../Data.Generic":351,"../Data.Maybe":397,"../Data.Newtype":408,"../Data.Ord":415,"../Data.Ring":426,"../Data.Semigroup":430,"../Data.Semiring":432,"../Data.Show":434,"../Data.Unit":458,"../Prelude":475}],448:[function(require,module,exports){
+// Generated by purs version 0.11.6
+"use strict";
+var Control_Apply = require("../Control.Apply");
+var Data_Bounded = require("../Data.Bounded");
+var Data_Enum = require("../Data.Enum");
+var Data_Eq = require("../Data.Eq");
+var Data_EuclideanRing = require("../Data.EuclideanRing");
+var Data_Function = require("../Data.Function");
+var Data_Functor = require("../Data.Functor");
+var Data_Generic = require("../Data.Generic");
+var Data_HeytingAlgebra = require("../Data.HeytingAlgebra");
+var Data_Int = require("../Data.Int");
+var Data_Maybe = require("../Data.Maybe");
+var Data_Newtype = require("../Data.Newtype");
+var Data_Ord = require("../Data.Ord");
+var Data_Ordering = require("../Data.Ordering");
+var Data_Ring = require("../Data.Ring");
+var Data_Semigroup = require("../Data.Semigroup");
+var Data_Semiring = require("../Data.Semiring");
+var Data_Show = require("../Data.Show");
+var Data_Time_Component = require("../Data.Time.Component");
+var Data_Time_Duration = require("../Data.Time.Duration");
+var Data_Tuple = require("../Data.Tuple");
+var Data_Unit = require("../Data.Unit");
+var $$Math = require("../Math");
+var Partial_Unsafe = require("../Partial.Unsafe");
+var Prelude = require("../Prelude");
+var Time = (function () {
+    function Time(value0, value1, value2, value3) {
+        this.value0 = value0;
+        this.value1 = value1;
+        this.value2 = value2;
+        this.value3 = value3;
+    };
+    Time.create = function (value0) {
+        return function (value1) {
+            return function (value2) {
+                return function (value3) {
+                    return new Time(value0, value1, value2, value3);
+                };
+            };
+        };
+    };
+    return Time;
+})();
+var showTime = new Data_Show.Show(function (v) {
+    return "(Time " + (Data_Show.show(Data_Time_Component.showHour)(v.value0) + (" " + (Data_Show.show(Data_Time_Component.showMinute)(v.value1) + (" " + (Data_Show.show(Data_Time_Component.showSecond)(v.value2) + (" " + (Data_Show.show(Data_Time_Component.showMillisecond)(v.value3) + ")")))))));
+});
+var setSecond = function (s) {
+    return function (v) {
+        return new Time(v.value0, v.value1, s, v.value3);
+    };
+};
+var setMinute = function (m) {
+    return function (v) {
+        return new Time(v.value0, m, v.value2, v.value3);
+    };
+};
+var setMillisecond = function (ms) {
+    return function (v) {
+        return new Time(v.value0, v.value1, v.value2, ms);
+    };
+};
+var setHour = function (h) {
+    return function (v) {
+        return new Time(h, v.value1, v.value2, v.value3);
+    };
+};
+var second = function (v) {
+    return v.value2;
+};
+var minute = function (v) {
+    return v.value1;
+};
+var millisecond = function (v) {
+    return v.value3;
+};
+var millisToTime = function (v) {
+    var hours = $$Math.floor(v / 3600000.0);
+    var minutes = $$Math.floor((v - hours * 3600000.0) / 60000.0);
+    var seconds = $$Math.floor((v - (hours * 3600000.0 + minutes * 60000.0)) / 1000.0);
+    var milliseconds = v - (hours * 3600000.0 + minutes * 60000.0 + seconds * 1000.0);
+    return Data_Maybe.fromJust()(Control_Apply.apply(Data_Maybe.applyMaybe)(Control_Apply.apply(Data_Maybe.applyMaybe)(Control_Apply.apply(Data_Maybe.applyMaybe)(Data_Functor.map(Data_Maybe.functorMaybe)(Time.create)(Data_Enum.toEnum(Data_Time_Component.boundedEnumHour)(Data_Int.floor(hours))))(Data_Enum.toEnum(Data_Time_Component.boundedEnumMinute)(Data_Int.floor(minutes))))(Data_Enum.toEnum(Data_Time_Component.boundedEnumSecond)(Data_Int.floor(seconds))))(Data_Enum.toEnum(Data_Time_Component.boundedEnumMillisecond)(Data_Int.floor(milliseconds))));
+};
+var hour = function (v) {
+    return v.value0;
+};
+var timeToMillis = function (t) {
+    return Data_Time_Duration.Milliseconds(3600000.0 * Data_Int.toNumber(Data_Enum.fromEnum(Data_Time_Component.boundedEnumHour)(hour(t))) + 60000.0 * Data_Int.toNumber(Data_Enum.fromEnum(Data_Time_Component.boundedEnumMinute)(minute(t))) + 1000.0 * Data_Int.toNumber(Data_Enum.fromEnum(Data_Time_Component.boundedEnumSecond)(second(t))) + Data_Int.toNumber(Data_Enum.fromEnum(Data_Time_Component.boundedEnumMillisecond)(millisecond(t))));
+};
+var genericTime = new Data_Generic.Generic(function (v) {
+    if (v instanceof Data_Generic.SProd && (v.value0 === "Data.Time.Time" && v.value1.length === 4)) {
+        return Control_Apply.apply(Data_Maybe.applyMaybe)(Control_Apply.apply(Data_Maybe.applyMaybe)(Control_Apply.apply(Data_Maybe.applyMaybe)(Control_Apply.apply(Data_Maybe.applyMaybe)(new Data_Maybe.Just(Time.create))(Data_Generic.fromSpine(Data_Time_Component.genericHour)(v["value1"][0](Data_Unit.unit))))(Data_Generic.fromSpine(Data_Time_Component.genericMinute)(v["value1"][1](Data_Unit.unit))))(Data_Generic.fromSpine(Data_Time_Component.genericSecond)(v["value1"][2](Data_Unit.unit))))(Data_Generic.fromSpine(Data_Time_Component.genericMillisecond)(v["value1"][3](Data_Unit.unit)));
+    };
+    return Data_Maybe.Nothing.value;
+}, function ($dollarq) {
+    return new Data_Generic.SigProd("Data.Time.Time", [ {
+        sigConstructor: "Data.Time.Time", 
+        sigValues: [ function ($dollarq1) {
+            return Data_Generic.toSignature(Data_Time_Component.genericHour)(Data_Generic.anyProxy);
+        }, function ($dollarq1) {
+            return Data_Generic.toSignature(Data_Time_Component.genericMinute)(Data_Generic.anyProxy);
+        }, function ($dollarq1) {
+            return Data_Generic.toSignature(Data_Time_Component.genericSecond)(Data_Generic.anyProxy);
+        }, function ($dollarq1) {
+            return Data_Generic.toSignature(Data_Time_Component.genericMillisecond)(Data_Generic.anyProxy);
+        } ]
+    } ]);
+}, function (v) {
+    return new Data_Generic.SProd("Data.Time.Time", [ function ($dollarq) {
+        return Data_Generic.toSpine(Data_Time_Component.genericHour)(v.value0);
+    }, function ($dollarq) {
+        return Data_Generic.toSpine(Data_Time_Component.genericMinute)(v.value1);
+    }, function ($dollarq) {
+        return Data_Generic.toSpine(Data_Time_Component.genericSecond)(v.value2);
+    }, function ($dollarq) {
+        return Data_Generic.toSpine(Data_Time_Component.genericMillisecond)(v.value3);
+    } ]);
+});
+var eqTime = new Data_Eq.Eq(function (x) {
+    return function (y) {
+        return Data_Eq.eq(Data_Time_Component.eqHour)(x.value0)(y.value0) && Data_Eq.eq(Data_Time_Component.eqMinute)(x.value1)(y.value1) && Data_Eq.eq(Data_Time_Component.eqSecond)(x.value2)(y.value2) && Data_Eq.eq(Data_Time_Component.eqMillisecond)(x.value3)(y.value3);
+    };
+});
+var ordTime = new Data_Ord.Ord(function () {
+    return eqTime;
+}, function (x) {
+    return function (y) {
+        var v = Data_Ord.compare(Data_Time_Component.ordHour)(x.value0)(y.value0);
+        if (v instanceof Data_Ordering.LT) {
+            return Data_Ordering.LT.value;
+        };
+        if (v instanceof Data_Ordering.GT) {
+            return Data_Ordering.GT.value;
+        };
+        var v1 = Data_Ord.compare(Data_Time_Component.ordMinute)(x.value1)(y.value1);
+        if (v1 instanceof Data_Ordering.LT) {
+            return Data_Ordering.LT.value;
+        };
+        if (v1 instanceof Data_Ordering.GT) {
+            return Data_Ordering.GT.value;
+        };
+        var v2 = Data_Ord.compare(Data_Time_Component.ordSecond)(x.value2)(y.value2);
+        if (v2 instanceof Data_Ordering.LT) {
+            return Data_Ordering.LT.value;
+        };
+        if (v2 instanceof Data_Ordering.GT) {
+            return Data_Ordering.GT.value;
+        };
+        return Data_Ord.compare(Data_Time_Component.ordMillisecond)(x.value3)(y.value3);
+    };
+});
+var diff = function (dictDuration) {
+    return function (t1) {
+        return function (t2) {
+            return Data_Time_Duration.toDuration(dictDuration)(Data_Ring.sub(Data_Time_Duration.ringMilliseconds)(timeToMillis(t1))(timeToMillis(t2)));
+        };
+    };
+};
+var boundedTime = new Data_Bounded.Bounded(function () {
+    return ordTime;
+}, new Time(Data_Bounded.bottom(Data_Time_Component.boundedHour), Data_Bounded.bottom(Data_Time_Component.boundedMinute), Data_Bounded.bottom(Data_Time_Component.boundedSecond), Data_Bounded.bottom(Data_Time_Component.boundedMillisecond)), new Time(Data_Bounded.top(Data_Time_Component.boundedHour), Data_Bounded.top(Data_Time_Component.boundedMinute), Data_Bounded.top(Data_Time_Component.boundedSecond), Data_Bounded.top(Data_Time_Component.boundedMillisecond)));
+var maxTime = timeToMillis(Data_Bounded.top(boundedTime));
+var adjust = function (dictDuration) {
+    return function (d) {
+        return function (t) {
+            var tLength = timeToMillis(t);
+            var d$prime = Data_Time_Duration.fromDuration(dictDuration)(d);
+            var wholeDays = Data_Time_Duration.Days($$Math.floor(Data_Newtype.unwrap(Data_Time_Duration.newtypeMilliseconds)(d$prime) / 8.64e7));
+            var msAdjust = Data_Ring.sub(Data_Time_Duration.ringMilliseconds)(d$prime)(Data_Time_Duration.fromDuration(Data_Time_Duration.durationDays)(wholeDays));
+            var msAdjusted = Data_Semiring.add(Data_Time_Duration.semiringMilliseconds)(tLength)(msAdjust);
+            var wrap = (function () {
+                var $134 = Data_Ord.greaterThan(Data_Time_Duration.ordMilliseconds)(msAdjusted)(maxTime);
+                if ($134) {
+                    return 1.0;
+                };
+                var $135 = Data_Ord.lessThan(Data_Time_Duration.ordMilliseconds)(msAdjusted)(Data_Ring.negate(Data_Time_Duration.ringMilliseconds)(maxTime));
+                if ($135) {
+                    return -1.0;
+                };
+                return 0.0;
+            })();
+            return new Data_Tuple.Tuple(Data_Semiring.add(Data_Time_Duration.semiringDays)(wholeDays)(wrap), millisToTime(Data_Ring.sub(Data_Time_Duration.ringMilliseconds)(msAdjusted)(8.64e7 * wrap)));
+        };
+    };
+};
+module.exports = {
+    Time: Time, 
+    adjust: adjust, 
+    diff: diff, 
+    hour: hour, 
+    millisecond: millisecond, 
+    minute: minute, 
+    second: second, 
+    setHour: setHour, 
+    setMillisecond: setMillisecond, 
+    setMinute: setMinute, 
+    setSecond: setSecond, 
+    eqTime: eqTime, 
+    ordTime: ordTime, 
+    genericTime: genericTime, 
+    boundedTime: boundedTime, 
+    showTime: showTime
+};
+
+},{"../Control.Apply":198,"../Data.Bounded":309,"../Data.Enum":327,"../Data.Eq":329,"../Data.EuclideanRing":331,"../Data.Function":341,"../Data.Functor":347,"../Data.Generic":351,"../Data.HeytingAlgebra":354,"../Data.Int":359,"../Data.Maybe":397,"../Data.Newtype":408,"../Data.Ord":415,"../Data.Ordering":416,"../Data.Ring":426,"../Data.Semigroup":430,"../Data.Semiring":432,"../Data.Show":434,"../Data.Time.Component":446,"../Data.Time.Duration":447,"../Data.Tuple":454,"../Data.Unit":458,"../Math":463,"../Partial.Unsafe":472,"../Prelude":475}],449:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Applicative = require("../Control.Applicative");
@@ -51107,9 +55628,9 @@ module.exports = {
     applicativeStateR: applicativeStateR
 };
 
-},{"../Control.Applicative":195,"../Control.Apply":197,"../Data.Functor":324,"../Data.Traversable.Accum":425,"../Prelude":450}],425:[function(require,module,exports){
-arguments[4][266][0].apply(exports,arguments)
-},{"dup":266}],426:[function(require,module,exports){
+},{"../Control.Applicative":196,"../Control.Apply":198,"../Data.Functor":347,"../Data.Traversable.Accum":450,"../Prelude":475}],450:[function(require,module,exports){
+arguments[4][276][0].apply(exports,arguments)
+},{"dup":276}],451:[function(require,module,exports){
 "use strict";
 
 // jshint maxparams: 3
@@ -51175,7 +55696,7 @@ exports.traverseArrayImpl = function () {
   };
 }();
 
-},{}],427:[function(require,module,exports){
+},{}],452:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -51453,7 +55974,7 @@ module.exports = {
     traversableMultiplicative: traversableMultiplicative
 };
 
-},{"../Control.Applicative":195,"../Control.Apply":197,"../Control.Category":202,"../Data.Foldable":311,"../Data.Functor":324,"../Data.Maybe":374,"../Data.Maybe.First":372,"../Data.Maybe.Last":373,"../Data.Monoid.Additive":377,"../Data.Monoid.Conj":378,"../Data.Monoid.Disj":379,"../Data.Monoid.Dual":380,"../Data.Monoid.Multiplicative":382,"../Data.Traversable.Accum":425,"../Data.Traversable.Accum.Internal":424,"../Prelude":450,"./foreign":426}],428:[function(require,module,exports){
+},{"../Control.Applicative":196,"../Control.Apply":198,"../Control.Category":203,"../Data.Foldable":334,"../Data.Functor":347,"../Data.Maybe":397,"../Data.Maybe.First":395,"../Data.Maybe.Last":396,"../Data.Monoid.Additive":400,"../Data.Monoid.Conj":401,"../Data.Monoid.Disj":402,"../Data.Monoid.Dual":403,"../Data.Monoid.Multiplicative":405,"../Data.Traversable.Accum":450,"../Data.Traversable.Accum.Internal":449,"../Prelude":475,"./foreign":451}],453:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Semigroupoid = require("../Control.Semigroupoid");
@@ -51681,7 +56202,7 @@ module.exports = {
     traversableWithIndexMultiplicative: traversableWithIndexMultiplicative
 };
 
-},{"../Control.Semigroupoid":250,"../Data.FoldableWithIndex":312,"../Data.Function":318,"../Data.FunctorWithIndex":326,"../Data.Maybe":374,"../Data.Maybe.First":372,"../Data.Maybe.Last":373,"../Data.Monoid.Additive":377,"../Data.Monoid.Conj":378,"../Data.Monoid.Disj":379,"../Data.Monoid.Dual":380,"../Data.Monoid.Multiplicative":382,"../Data.Traversable":427,"../Data.Traversable.Accum":425,"../Data.Traversable.Accum.Internal":424,"../Data.Unit":433,"../Prelude":450}],429:[function(require,module,exports){
+},{"../Control.Semigroupoid":260,"../Data.FoldableWithIndex":335,"../Data.Function":341,"../Data.FunctorWithIndex":349,"../Data.Maybe":397,"../Data.Maybe.First":395,"../Data.Maybe.Last":396,"../Data.Monoid.Additive":400,"../Data.Monoid.Conj":401,"../Data.Monoid.Disj":402,"../Data.Monoid.Dual":403,"../Data.Monoid.Multiplicative":405,"../Data.Traversable":452,"../Data.Traversable.Accum":450,"../Data.Traversable.Accum.Internal":449,"../Data.Unit":458,"../Prelude":475}],454:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Applicative = require("../Control.Applicative");
@@ -52103,7 +56624,7 @@ module.exports = {
     distributiveTuple: distributiveTuple
 };
 
-},{"../Control.Applicative":195,"../Control.Apply":197,"../Control.Biapplicative":198,"../Control.Biapply":199,"../Control.Bind":201,"../Control.Comonad":203,"../Control.Extend":205,"../Control.Lazy":206,"../Control.Monad":244,"../Control.Semigroupoid":250,"../Data.Bifoldable":288,"../Data.Bifunctor":294,"../Data.Bitraversable":295,"../Data.BooleanAlgebra":297,"../Data.Bounded":299,"../Data.CommutativeRing":300,"../Data.Distributive":302,"../Data.Eq":306,"../Data.Foldable":311,"../Data.Function":318,"../Data.Functor":324,"../Data.Functor.Invariant":322,"../Data.HeytingAlgebra":331,"../Data.Maybe":374,"../Data.Maybe.First":372,"../Data.Monoid":383,"../Data.Newtype":385,"../Data.Ord":392,"../Data.Ordering":393,"../Data.Ring":403,"../Data.Semigroup":407,"../Data.Semiring":409,"../Data.Show":411,"../Data.Traversable":427,"../Data.Unit":433,"../Prelude":450,"../Type.Equality":463}],430:[function(require,module,exports){
+},{"../Control.Applicative":196,"../Control.Apply":198,"../Control.Biapplicative":199,"../Control.Biapply":200,"../Control.Bind":202,"../Control.Comonad":204,"../Control.Extend":206,"../Control.Lazy":207,"../Control.Monad":254,"../Control.Semigroupoid":260,"../Data.Bifoldable":298,"../Data.Bifunctor":304,"../Data.Bitraversable":305,"../Data.BooleanAlgebra":307,"../Data.Bounded":309,"../Data.CommutativeRing":314,"../Data.Distributive":324,"../Data.Eq":329,"../Data.Foldable":334,"../Data.Function":341,"../Data.Functor":347,"../Data.Functor.Invariant":345,"../Data.HeytingAlgebra":354,"../Data.Maybe":397,"../Data.Maybe.First":395,"../Data.Monoid":406,"../Data.Newtype":408,"../Data.Ord":415,"../Data.Ordering":416,"../Data.Ring":426,"../Data.Semigroup":430,"../Data.Semiring":432,"../Data.Show":434,"../Data.Traversable":452,"../Data.Unit":458,"../Prelude":475,"../Type.Equality":490}],455:[function(require,module,exports){
 "use strict";
 
 exports.unfoldrArrayImpl = function (isNothing) {
@@ -52128,7 +56649,7 @@ exports.unfoldrArrayImpl = function (isNothing) {
   };
 };
 
-},{}],431:[function(require,module,exports){
+},{}],456:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -52196,12 +56717,12 @@ module.exports = {
     unfoldableArray: unfoldableArray
 };
 
-},{"../Data.Function":318,"../Data.Functor":324,"../Data.Maybe":374,"../Data.Ord":392,"../Data.Ring":403,"../Data.Traversable":427,"../Data.Tuple":429,"../Data.Unit":433,"../Partial.Unsafe":447,"../Prelude":450,"./foreign":430}],432:[function(require,module,exports){
+},{"../Data.Function":341,"../Data.Functor":347,"../Data.Maybe":397,"../Data.Ord":415,"../Data.Ring":426,"../Data.Traversable":452,"../Data.Tuple":454,"../Data.Unit":458,"../Partial.Unsafe":472,"../Prelude":475,"./foreign":455}],457:[function(require,module,exports){
 "use strict";
 
 exports.unit = {};
 
-},{}],433:[function(require,module,exports){
+},{}],458:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -52214,7 +56735,7 @@ module.exports = {
     unit: $foreign.unit
 };
 
-},{"../Data.Show":411,"./foreign":432}],434:[function(require,module,exports){
+},{"../Data.Show":434,"./foreign":457}],459:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Data_Show = require("../Data.Show");
@@ -52241,7 +56762,7 @@ module.exports = {
     showVoid: showVoid
 };
 
-},{"../Data.Show":411}],435:[function(require,module,exports){
+},{"../Data.Show":434}],460:[function(require,module,exports){
 /* globals exports */
 "use strict";
 
@@ -52268,7 +56789,7 @@ exports.encodeURI = encodeURI;
 exports.decodeURIComponent = decodeURIComponent;
 exports.encodeURIComponent = encodeURIComponent;
 
-},{}],436:[function(require,module,exports){
+},{}],461:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -52285,7 +56806,7 @@ module.exports = {
     readInt: $foreign.readInt
 };
 
-},{"./foreign":435}],437:[function(require,module,exports){
+},{"./foreign":460}],462:[function(require,module,exports){
 "use strict";
 
 // module Math
@@ -52368,7 +56889,7 @@ exports.sqrt1_2 = Math.SQRT1_2;
 
 exports.sqrt2 = Math.SQRT2;
 
-},{}],438:[function(require,module,exports){
+},{}],463:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -52403,7 +56924,7 @@ module.exports = {
     trunc: $foreign.trunc
 };
 
-},{"./foreign":437}],439:[function(require,module,exports){
+},{"./foreign":462}],464:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Semigroupoid = require("../Control.Semigroupoid");
@@ -52472,7 +56993,7 @@ module.exports = {
     requestableUnit: requestableUnit
 };
 
-},{"../Control.Semigroupoid":250,"../DOM.File.Types":253,"../DOM.Node.Types":262,"../DOM.XHR.Types":266,"../Data.Argonaut.Core":269,"../Data.ArrayBuffer.Types":287,"../Data.FormURLEncoded":315,"../Data.Maybe":374,"../Data.MediaType":376,"../Data.MediaType.Common":375,"../Data.Show":411,"../Data.Tuple":429,"../Prelude":450,"../Unsafe.Coerce":466}],440:[function(require,module,exports){
+},{"../Control.Semigroupoid":260,"../DOM.File.Types":263,"../DOM.Node.Types":272,"../DOM.XHR.Types":276,"../Data.Argonaut.Core":279,"../Data.ArrayBuffer.Types":297,"../Data.FormURLEncoded":338,"../Data.Maybe":397,"../Data.MediaType":399,"../Data.MediaType.Common":398,"../Data.Show":434,"../Data.Tuple":454,"../Prelude":475,"../Unsafe.Coerce":493}],465:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Applicative = require("../Control.Applicative");
@@ -52627,7 +57148,7 @@ module.exports = {
     responsableJson: responsableJson
 };
 
-},{"../Control.Applicative":195,"../Control.Monad.Except.Trans":228,"../Control.Semigroupoid":250,"../DOM.File.Types":253,"../DOM.Node.Types":262,"../Data.Argonaut.Core":269,"../Data.ArrayBuffer.Types":287,"../Data.Eq":306,"../Data.Foreign":314,"../Data.Function":318,"../Data.Identity":332,"../Data.Maybe":374,"../Data.MediaType":376,"../Data.MediaType.Common":375,"../Data.Show":411,"../Data.Tuple":429,"../Data.Unit":433,"../Prelude":450,"../Unsafe.Coerce":466}],441:[function(require,module,exports){
+},{"../Control.Applicative":196,"../Control.Monad.Except.Trans":234,"../Control.Semigroupoid":260,"../DOM.File.Types":263,"../DOM.Node.Types":272,"../Data.Argonaut.Core":279,"../Data.ArrayBuffer.Types":297,"../Data.Eq":329,"../Data.Foreign":337,"../Data.Function":341,"../Data.Identity":355,"../Data.Maybe":397,"../Data.MediaType":399,"../Data.MediaType.Common":398,"../Data.Show":434,"../Data.Tuple":454,"../Data.Unit":458,"../Prelude":475,"../Unsafe.Coerce":493}],466:[function(require,module,exports){
 (function (process){
 /* global exports */
 /* global XMLHttpRequest */
@@ -52721,7 +57242,7 @@ exports._ajax = function () {
 
 
 }).call(this,require('_process'))
-},{"_process":468}],442:[function(require,module,exports){
+},{"_process":495}],467:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -53114,7 +57635,7 @@ module.exports = {
     retry: retry
 };
 
-},{"../Control.Applicative":195,"../Control.Bind":201,"../Control.Monad.Aff":211,"../Control.Monad.Aff.Compat":208,"../Control.Monad.Eff":226,"../Control.Monad.Eff.Class":214,"../Control.Monad.Eff.Exception":218,"../Control.Monad.Eff.Ref":220,"../Control.Monad.Error.Class":227,"../Control.Monad.Except":229,"../Control.Monad.Except.Trans":228,"../Control.Parallel":248,"../Control.Semigroupoid":250,"../Data.Argonaut.Parser":278,"../Data.Array":286,"../Data.Either":304,"../Data.Eq":306,"../Data.Foldable":311,"../Data.Foreign":314,"../Data.Function":318,"../Data.Function.Uncurried":317,"../Data.Functor":324,"../Data.HTTP.Method":329,"../Data.HeytingAlgebra":331,"../Data.Identity":332,"../Data.Int":336,"../Data.List.Types":369,"../Data.Maybe":374,"../Data.MediaType":376,"../Data.Nullable":388,"../Data.Ring":403,"../Data.Semiring":409,"../Data.Show":411,"../Data.Time.Duration":423,"../Data.Tuple":429,"../Math":438,"../Network.HTTP.Affjax.Request":439,"../Network.HTTP.Affjax.Response":440,"../Network.HTTP.RequestHeader":443,"../Network.HTTP.ResponseHeader":444,"../Network.HTTP.StatusCode":445,"../Prelude":450,"./foreign":441}],443:[function(require,module,exports){
+},{"../Control.Applicative":196,"../Control.Bind":202,"../Control.Monad.Aff":213,"../Control.Monad.Aff.Compat":210,"../Control.Monad.Eff":232,"../Control.Monad.Eff.Class":218,"../Control.Monad.Eff.Exception":222,"../Control.Monad.Eff.Ref":226,"../Control.Monad.Error.Class":233,"../Control.Monad.Except":235,"../Control.Monad.Except.Trans":234,"../Control.Parallel":258,"../Control.Semigroupoid":260,"../Data.Argonaut.Parser":288,"../Data.Array":296,"../Data.Either":326,"../Data.Eq":329,"../Data.Foldable":334,"../Data.Foreign":337,"../Data.Function":341,"../Data.Function.Uncurried":340,"../Data.Functor":347,"../Data.HTTP.Method":352,"../Data.HeytingAlgebra":354,"../Data.Identity":355,"../Data.Int":359,"../Data.List.Types":392,"../Data.Maybe":397,"../Data.MediaType":399,"../Data.Nullable":411,"../Data.Ring":426,"../Data.Semiring":432,"../Data.Show":434,"../Data.Time.Duration":447,"../Data.Tuple":454,"../Math":463,"../Network.HTTP.Affjax.Request":464,"../Network.HTTP.Affjax.Response":465,"../Network.HTTP.RequestHeader":468,"../Network.HTTP.ResponseHeader":469,"../Network.HTTP.StatusCode":470,"../Prelude":475,"./foreign":466}],468:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Data_Eq = require("../Data.Eq");
@@ -53214,7 +57735,7 @@ module.exports = {
     showRequestHeader: showRequestHeader
 };
 
-},{"../Data.Eq":306,"../Data.HeytingAlgebra":331,"../Data.MediaType":376,"../Data.Newtype":385,"../Data.Semigroup":407,"../Data.Show":411,"../Prelude":450}],444:[function(require,module,exports){
+},{"../Data.Eq":329,"../Data.HeytingAlgebra":354,"../Data.MediaType":399,"../Data.Newtype":408,"../Data.Semigroup":430,"../Data.Show":434,"../Prelude":475}],469:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Apply = require("../Control.Apply");
@@ -53287,7 +57808,7 @@ module.exports = {
     showResponseHeader: showResponseHeader
 };
 
-},{"../Control.Apply":197,"../Data.Eq":306,"../Data.Generic":328,"../Data.HeytingAlgebra":331,"../Data.Maybe":374,"../Data.Semigroup":407,"../Data.Show":411,"../Data.Unit":433,"../Prelude":450}],445:[function(require,module,exports){
+},{"../Control.Apply":198,"../Data.Eq":329,"../Data.Generic":351,"../Data.HeytingAlgebra":354,"../Data.Maybe":397,"../Data.Semigroup":430,"../Data.Show":434,"../Data.Unit":458,"../Prelude":475}],470:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Apply = require("../Control.Apply");
@@ -53333,7 +57854,7 @@ module.exports = {
     showStatusCode: showStatusCode
 };
 
-},{"../Control.Apply":197,"../Data.Eq":306,"../Data.Generic":328,"../Data.Maybe":374,"../Data.Semigroup":407,"../Data.Show":411,"../Data.Unit":433,"../Prelude":450}],446:[function(require,module,exports){
+},{"../Control.Apply":198,"../Data.Eq":329,"../Data.Generic":351,"../Data.Maybe":397,"../Data.Semigroup":430,"../Data.Show":434,"../Data.Unit":458,"../Prelude":475}],471:[function(require,module,exports){
 "use strict";
 
 // module Partial.Unsafe
@@ -53342,7 +57863,7 @@ exports.unsafePartial = function (f) {
   return f();
 };
 
-},{}],447:[function(require,module,exports){
+},{}],472:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -53365,7 +57886,7 @@ module.exports = {
     unsafePartial: $foreign.unsafePartial
 };
 
-},{"../Partial":449,"./foreign":446}],448:[function(require,module,exports){
+},{"../Partial":474,"./foreign":471}],473:[function(require,module,exports){
 "use strict";
 
 // module Partial
@@ -53376,7 +57897,7 @@ exports.crashWith = function () {
   };
 };
 
-},{}],449:[function(require,module,exports){
+},{}],474:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -53388,7 +57909,7 @@ module.exports = {
     crashWith: $foreign.crashWith
 };
 
-},{"./foreign":448}],450:[function(require,module,exports){
+},{"./foreign":473}],475:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Applicative = require("../Control.Applicative");
@@ -53419,7 +57940,7 @@ var Data_Unit = require("../Data.Unit");
 var Data_Void = require("../Data.Void");
 module.exports = {};
 
-},{"../Control.Applicative":195,"../Control.Apply":197,"../Control.Bind":201,"../Control.Category":202,"../Control.Monad":244,"../Control.Semigroupoid":250,"../Data.Boolean":296,"../Data.BooleanAlgebra":297,"../Data.Bounded":299,"../Data.CommutativeRing":300,"../Data.DivisionRing":303,"../Data.Eq":306,"../Data.EuclideanRing":308,"../Data.Field":309,"../Data.Function":318,"../Data.Functor":324,"../Data.HeytingAlgebra":331,"../Data.NaturalTransformation":384,"../Data.Ord":392,"../Data.Ordering":393,"../Data.Ring":403,"../Data.Semigroup":407,"../Data.Semiring":409,"../Data.Show":411,"../Data.Unit":433,"../Data.Void":434}],451:[function(require,module,exports){
+},{"../Control.Applicative":196,"../Control.Apply":198,"../Control.Bind":202,"../Control.Category":203,"../Control.Monad":254,"../Control.Semigroupoid":260,"../Data.Boolean":306,"../Data.BooleanAlgebra":307,"../Data.Bounded":309,"../Data.CommutativeRing":314,"../Data.DivisionRing":325,"../Data.Eq":329,"../Data.EuclideanRing":331,"../Data.Field":332,"../Data.Function":341,"../Data.Functor":347,"../Data.HeytingAlgebra":354,"../Data.NaturalTransformation":407,"../Data.Ord":415,"../Data.Ordering":416,"../Data.Ring":426,"../Data.Semigroup":430,"../Data.Semiring":432,"../Data.Show":434,"../Data.Unit":458,"../Data.Void":459}],476:[function(require,module,exports){
 /* global exports */
 "use strict";
 
@@ -53483,7 +58004,7 @@ function unsafeFromPropsArray(props) {
 };
 exports.unsafeFromPropsArray = unsafeFromPropsArray;
 
-},{"react":187}],452:[function(require,module,exports){
+},{"react":187}],477:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -53992,7 +58513,7 @@ module.exports = {
     unsafeUnfoldProps: $foreign.unsafeUnfoldProps
 };
 
-},{"../Control.Monad.Eff":226,"../Control.Monad.Eff.Unsafe":224,"../Control.Semigroupoid":250,"../Data.Nullable":388,"../Prelude":450,"../React":455,"./foreign":451}],453:[function(require,module,exports){
+},{"../Control.Monad.Eff":232,"../Control.Monad.Eff.Unsafe":230,"../Control.Semigroupoid":260,"../Data.Nullable":411,"../Prelude":475,"../React":480,"./foreign":476}],478:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var React = require("../React");
@@ -54472,7 +58993,7 @@ module.exports = {
     "wbr'": wbr$prime
 };
 
-},{"../React":455,"../React.DOM.Props":452,"../Unsafe.Coerce":466}],454:[function(require,module,exports){
+},{"../React":480,"../React.DOM.Props":477,"../Unsafe.Coerce":493}],479:[function(require,module,exports){
 /* global exports */
 "use strict";
 
@@ -54671,7 +59192,7 @@ function stopPropagation(event) {
 };
 exports.stopPropagation = stopPropagation;
 
-},{"create-react-class":2,"react":187}],455:[function(require,module,exports){
+},{"create-react-class":2,"react":187}],480:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -54780,7 +59301,7 @@ module.exports = {
     writeStateWithCallback: $foreign.writeStateWithCallback
 };
 
-},{"../Control.Applicative":195,"../Control.Monad.Eff":226,"../Control.Monad.Eff.Uncurried":222,"../Data.Functor":324,"../Data.Maybe":374,"../Data.Nullable":388,"../Data.Unit":433,"../Prelude":450,"../Unsafe.Coerce":466,"./foreign":454}],456:[function(require,module,exports){
+},{"../Control.Applicative":196,"../Control.Monad.Eff":232,"../Control.Monad.Eff.Uncurried":228,"../Data.Functor":347,"../Data.Maybe":397,"../Data.Nullable":411,"../Data.Unit":458,"../Prelude":475,"../Unsafe.Coerce":493,"./foreign":479}],481:[function(require,module,exports){
 /* global exports */
 "use strict";
 
@@ -54798,7 +59319,7 @@ exports.findDOMNodeImpl = ReactDOM.findDOMNode;
 exports.renderToStringImpl = ReactDOMServer.renderToString;
 exports.renderToStaticMarkupImpl = ReactDOMServer.renderToStaticMarkup;
 
-},{"react-dom":31,"react-dom/server":161}],457:[function(require,module,exports){
+},{"react-dom":31,"react-dom/server":161}],482:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -54828,9 +59349,10 @@ module.exports = {
     unmountComponentAtNode: unmountComponentAtNode
 };
 
-},{"../Control.Monad.Eff":226,"../Control.Monad.Eff.Uncurried":222,"../DOM":267,"../DOM.Node.Types":262,"../Data.Function.Uncurried":317,"../Data.Maybe":374,"../Data.Nullable":388,"../React":455,"../Unsafe.Coerce":466,"./foreign":456}],458:[function(require,module,exports){
+},{"../Control.Monad.Eff":232,"../Control.Monad.Eff.Uncurried":228,"../DOM":277,"../DOM.Node.Types":272,"../Data.Function.Uncurried":340,"../Data.Maybe":397,"../Data.Nullable":411,"../React":480,"../Unsafe.Coerce":493,"./foreign":481}],483:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
+var Concur_Core = require("../Concur.Core");
 var Concur_React = require("../Concur.React");
 var Concur_React_DOM = require("../Concur.React.DOM");
 var Concur_React_Widgets = require("../Concur.React.Widgets");
@@ -54874,8 +59396,8 @@ var decodePostArray = function (json) {
     return Control_Bind.bind(Data_Either.bindEither)(Data_Argonaut_Decode_Class.decodeJson(Data_Argonaut_Decode_Class.decodeArray(Data_Argonaut_Decode_Class.decodeJsonJson))(json))(Data_Traversable.traverse(Data_Traversable.traversableArray)(Data_Either.applicativeEither)(Data_Argonaut_Decode_Class.decodeJson(decodeJsonPost)));
 };
 var fetchReddit = function (sub) {
-    var fetchPosts = Control_Bind.discard(Control_Bind.discardUnit)(Concur_React.widgetBind)(Control_Monad_Eff_Class.liftEff(Concur_React.widgetMonadEff(Data_Monoid.monoidArray))(Control_Monad_Eff_Console.log("Fetching posts from subreddit - " + sub)))(function () {
-        return Control_Bind.bind(Concur_React.widgetBind)(Control_Alt.alt(Concur_React.widgetAlt(Data_Semigroup.semigroupArray))(Control_Monad_Aff_Class.liftAff(Concur_React.widgetMonadAff(Data_Monoid.monoidArray))(Network_HTTP_Affjax.get(Network_HTTP_Affjax_Response.responsableJson)("https://www.reddit.com/r/" + (sub + ".json"))))(Concur_React_DOM.text("Loading...")))(function (v) {
+    var fetchPosts = Control_Bind.discard(Control_Bind.discardUnit)(Concur_Core.widgetBind)(Control_Monad_Eff_Class.liftEff(Concur_Core.widgetMonadEff(Data_Monoid.monoidArray))(Control_Monad_Eff_Console.log("Fetching posts from subreddit - " + sub)))(function () {
+        return Control_Bind.bind(Concur_Core.widgetBind)(Control_Alt.alt(Concur_Core.widgetAlt(Data_Semigroup.semigroupArray))(Control_Monad_Aff_Class.liftAff(Concur_Core.widgetMonadAff(Data_Monoid.monoidArray))(Network_HTTP_Affjax.get(Network_HTTP_Affjax_Response.responsableJson)("https://www.reddit.com/r/" + (sub + ".json"))))(Concur_React_DOM.text("Loading...")))(function (v) {
             var postsResp = Control_Bind.bind(Data_Either.bindEither)(Data_Argonaut_Decode_Class.decodeJson(Data_Argonaut_Decode_Class.decodeStrMap(Data_Argonaut_Decode_Class.decodeJsonJson))(v.response))(function (v1) {
                 return Control_Bind.bind(Data_Either.bindEither)(Data_Argonaut_Decode_Combinators.getField(Data_Argonaut_Decode_Class.decodeStrMap(Data_Argonaut_Decode_Class.decodeJsonJson))(v1)("data"))(function (v2) {
                     return Control_Bind.bind(Data_Either.bindEither)(Data_Argonaut_Decode_Combinators.getField(Data_Argonaut_Decode_Class.decodeJsonJson)(v2)("children"))(function (v3) {
@@ -54887,16 +59409,16 @@ var fetchReddit = function (sub) {
                 return Concur_React_DOM.text("Error: " + postsResp.value0);
             };
             if (postsResp instanceof Data_Either.Right) {
-                return Control_Bind.discard(Control_Bind.discardUnit)(Concur_React.widgetBind)(Concur_React_DOM["div'"]([ Concur_React_DOM["div'"](Data_Functor.map(Data_Functor.functorArray)(function (v1) {
+                return Control_Bind.discard(Control_Bind.discardUnit)(Concur_Core.widgetBind)(Concur_React_DOM["div'"]([ Concur_React_DOM["div'"](Data_Functor.map(Data_Functor.functorArray)(function (v1) {
                     return Concur_React_DOM["div'"]([ Concur_React_DOM.text(v1.title) ]);
                 })(Data_Array.take(5)(postsResp.value0))), Concur_React_DOM["div'"]([ Concur_React_Widgets["textButton'"]("Refresh") ]) ]))(function () {
                     return fetchPosts;
                 });
             };
-            throw new Error("Failed pattern match at Test.Ajax line 61, column 7 - line 68, column 11: " + [ postsResp.constructor.name ]);
+            throw new Error("Failed pattern match at Test.Ajax line 62, column 7 - line 69, column 11: " + [ postsResp.constructor.name ]);
         });
     });
-    var showPosts = Control_Bind.bind(Concur_React.widgetBind)(Concur_React_Widgets["textButton'"]("Fetch posts"))(function (v) {
+    var showPosts = Control_Bind.bind(Concur_Core.widgetBind)(Concur_React_Widgets["textButton'"]("Fetch posts"))(function (v) {
         return fetchPosts;
     });
     return Concur_React_DOM["div'"]([ Concur_React_DOM["h4'"]([ Concur_React_DOM.text("/r/" + sub) ]), showPosts ]);
@@ -54911,8 +59433,10 @@ module.exports = {
     decodeJsonPost: decodeJsonPost
 };
 
-},{"../Concur.React":192,"../Concur.React.DOM":188,"../Concur.React.Widgets":191,"../Control.Alt":193,"../Control.Applicative":195,"../Control.Bind":201,"../Control.Monad.Aff.Class":207,"../Control.Monad.Eff.Class":214,"../Control.Monad.Eff.Console":216,"../Data.Argonaut":281,"../Data.Argonaut.Decode.Class":270,"../Data.Argonaut.Decode.Combinators":271,"../Data.Array":286,"../Data.Either":304,"../Data.Functor":324,"../Data.Monoid":383,"../Data.Semigroup":407,"../Data.Traversable":427,"../Network.HTTP.Affjax":442,"../Network.HTTP.Affjax.Response":440,"../Prelude":450}],459:[function(require,module,exports){
+},{"../Concur.Core":188,"../Concur.React":193,"../Concur.React.DOM":189,"../Concur.React.Widgets":192,"../Control.Alt":194,"../Control.Applicative":196,"../Control.Bind":202,"../Control.Monad.Aff.Class":209,"../Control.Monad.Eff.Class":218,"../Control.Monad.Eff.Console":220,"../Data.Argonaut":291,"../Data.Argonaut.Decode.Class":280,"../Data.Argonaut.Decode.Combinators":281,"../Data.Array":296,"../Data.Either":326,"../Data.Functor":347,"../Data.Monoid":406,"../Data.Semigroup":430,"../Data.Traversable":452,"../Network.HTTP.Affjax":467,"../Network.HTTP.Affjax.Response":465,"../Prelude":475}],484:[function(require,module,exports){
+// Generated by purs version 0.11.6
 "use strict";
+var Concur_Core = require("../Concur.Core");
 var Concur_React = require("../Concur.React");
 var Concur_React_DOM = require("../Concur.React.DOM");
 var Concur_React_Widgets = require("../Concur.React.Widgets");
@@ -54949,7 +59473,7 @@ var colorWidget = function (s) {
             width: "80.0%"
         }) ])(Data_Maybe.maybe([ Concur_React_DOM.text("no colors found") ])(Data_Functor.map(Data_Functor.functorArray)(showColor))(matchInput(inp)));
     };
-    return Control_Bind.bind(Concur_React.widgetBind)(Concur_React_DOM["div'"]([ Concur_React_DOM.text("Insert some color codes, or "), Data_Functor.voidLeft(Concur_React.widgetFunctor)(Concur_React_Widgets["textButton'"]("get an example"))(exampleText), Concur_React_DOM["div'"]([ Concur_React_Widgets.textArea([ React_DOM_Props.style({
+    return Control_Bind.bind(Concur_Core.widgetBind)(Concur_React_DOM["div'"]([ Concur_React_DOM.text("Insert some color codes, or "), Data_Functor.voidLeft(Concur_Core.widgetFunctor)(Concur_React_Widgets["textButton'"]("get an example"))(exampleText), Concur_React_DOM["div'"]([ Concur_React_Widgets.textArea([ React_DOM_Props.style({
         width: "80%", 
         height: "6em"
     }) ])(s), showColors(s) ]) ]))(colorWidget);
@@ -54959,9 +59483,10 @@ module.exports = {
     exampleText: exampleText
 };
 
-},{"../Concur.React":192,"../Concur.React.DOM":188,"../Concur.React.Widgets":191,"../Control.Bind":201,"../Data.Either":304,"../Data.Function":318,"../Data.Functor":324,"../Data.Maybe":374,"../Data.String.Regex":418,"../Data.String.Regex.Flags":416,"../Data.Traversable":427,"../Prelude":450,"../React.DOM.Props":452}],460:[function(require,module,exports){
+},{"../Concur.Core":188,"../Concur.React":193,"../Concur.React.DOM":189,"../Concur.React.Widgets":192,"../Control.Bind":202,"../Data.Either":326,"../Data.Function":341,"../Data.Functor":347,"../Data.Maybe":397,"../Data.String.Regex":441,"../Data.String.Regex.Flags":439,"../Data.Traversable":452,"../Prelude":475,"../React.DOM.Props":477}],485:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
+var Concur_Core = require("../Concur.Core");
 var Concur_React = require("../Concur.React");
 var Concur_React_DOM = require("../Concur.React.DOM");
 var Concur_React_Widgets = require("../Concur.React.Widgets");
@@ -54976,8 +59501,8 @@ var Data_Semiring = require("../Data.Semiring");
 var Data_Show = require("../Data.Show");
 var Prelude = require("../Prelude");
 var counterWidget = function (count) {
-    return Control_Bind.bind(Concur_React.widgetBind)(Concur_React_DOM["div'"]([ Concur_React_DOM["p'"]([ Concur_React_DOM.text("State: " + Data_Show.show(Data_Show.showInt)(count)) ]), Data_Functor.voidLeft(Concur_React.widgetFunctor)(Concur_React_Widgets["textButton'"]("Increment"))(count + 1 | 0), Data_Functor.voidLeft(Concur_React.widgetFunctor)(Concur_React_Widgets["textButton'"]("Decrement"))(count - 1 | 0) ]))(function (v) {
-        return Control_Bind.discard(Control_Bind.discardUnit)(Concur_React.widgetBind)(Control_Monad_Eff_Class.liftEff(Concur_React.widgetMonadEff(Data_Monoid.monoidArray))(Control_Monad_Eff_Console.log("COUNT IS NOW: " + Data_Show.show(Data_Show.showInt)(v))))(function () {
+    return Control_Bind.bind(Concur_Core.widgetBind)(Concur_React_DOM["div'"]([ Concur_React_DOM["p'"]([ Concur_React_DOM.text("State: " + Data_Show.show(Data_Show.showInt)(count)) ]), Data_Functor.voidLeft(Concur_Core.widgetFunctor)(Concur_React_Widgets["textButton'"]("Increment"))(count + 1 | 0), Data_Functor.voidLeft(Concur_Core.widgetFunctor)(Concur_React_Widgets["textButton'"]("Decrement"))(count - 1 | 0) ]))(function (v) {
+        return Control_Bind.discard(Control_Bind.discardUnit)(Concur_Core.widgetBind)(Control_Monad_Eff_Class.liftEff(Concur_Core.widgetMonadEff(Data_Monoid.monoidArray))(Control_Monad_Eff_Console.log("COUNT IS NOW: " + Data_Show.show(Data_Show.showInt)(v))))(function () {
             return counterWidget(v);
         });
     });
@@ -54986,9 +59511,10 @@ module.exports = {
     counterWidget: counterWidget
 };
 
-},{"../Concur.React":192,"../Concur.React.DOM":188,"../Concur.React.Widgets":191,"../Control.Bind":201,"../Control.Monad.Eff.Class":214,"../Control.Monad.Eff.Console":216,"../Data.Functor":324,"../Data.Monoid":383,"../Data.Ring":403,"../Data.Semigroup":407,"../Data.Semiring":409,"../Data.Show":411,"../Prelude":450}],461:[function(require,module,exports){
+},{"../Concur.Core":188,"../Concur.React":193,"../Concur.React.DOM":189,"../Concur.React.Widgets":192,"../Control.Bind":202,"../Control.Monad.Eff.Class":218,"../Control.Monad.Eff.Console":220,"../Data.Functor":347,"../Data.Monoid":406,"../Data.Ring":426,"../Data.Semigroup":430,"../Data.Semiring":432,"../Data.Show":434,"../Prelude":475}],486:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
+var Concur_Core = require("../Concur.Core");
 var Concur_React = require("../Concur.React");
 var Concur_React_Widgets = require("../Concur.React.Widgets");
 var Control_Bind = require("../Control.Bind");
@@ -54996,9 +59522,9 @@ var Control_Monad_Eff_Class = require("../Control.Monad.Eff.Class");
 var Control_Monad_Eff_Console = require("../Control.Monad.Eff.Console");
 var Data_Monoid = require("../Data.Monoid");
 var Prelude = require("../Prelude");
-var helloWidget = Control_Bind.discard(Control_Bind.discardUnit)(Concur_React.widgetBind)(Concur_React_Widgets["textButton'"]("Click to Say Hello"))(function () {
-    return Control_Bind.discard(Control_Bind.discardUnit)(Concur_React.widgetBind)(Control_Monad_Eff_Class.liftEff(Concur_React.widgetMonadEff(Data_Monoid.monoidArray))(Control_Monad_Eff_Console.log("You said Hello!")))(function () {
-        return Control_Bind.discard(Control_Bind.discardUnit)(Concur_React.widgetBind)(Concur_React_Widgets["textButton'"]("Hello Sailor!"))(function () {
+var helloWidget = Control_Bind.discard(Control_Bind.discardUnit)(Concur_Core.widgetBind)(Concur_React_Widgets["textButton'"]("Click to Say Hello"))(function () {
+    return Control_Bind.discard(Control_Bind.discardUnit)(Concur_Core.widgetBind)(Control_Monad_Eff_Class.liftEff(Concur_Core.widgetMonadEff(Data_Monoid.monoidArray))(Control_Monad_Eff_Console.log("You said Hello!")))(function () {
+        return Control_Bind.discard(Control_Bind.discardUnit)(Concur_Core.widgetBind)(Concur_React_Widgets["textButton'"]("Hello Sailor!"))(function () {
             return helloWidget;
         });
     });
@@ -55007,9 +59533,9 @@ module.exports = {
     helloWidget: helloWidget
 };
 
-},{"../Concur.React":192,"../Concur.React.Widgets":191,"../Control.Bind":201,"../Control.Monad.Eff.Class":214,"../Control.Monad.Eff.Console":216,"../Data.Monoid":383,"../Prelude":450}],462:[function(require,module,exports){
+},{"../Concur.Core":188,"../Concur.React":193,"../Concur.React.Widgets":192,"../Control.Bind":202,"../Control.Monad.Eff.Class":218,"../Control.Monad.Eff.Console":220,"../Data.Monoid":406,"../Prelude":475}],487:[function(require,module,exports){
 "use strict";
-var Concur_React = require("../Concur.React");
+var Concur_Core = require("../Concur.Core");
 var Concur_React_Run = require("../Concur.React.Run");
 var Control_Alt = require("../Control.Alt");
 var Control_Bind = require("../Control.Bind");
@@ -55023,17 +59549,112 @@ var Test_Ajax = require("../Test.Ajax");
 var Test_Color = require("../Test.Color");
 var Test_Counter = require("../Test.Counter");
 var Test_Hello = require("../Test.Hello");
+var Test_SlowButtonList = require("../Test.SlowButtonList");
+var Test_Timers = require("../Test.Timers");
 var main = function __do() {
     Concur_React_Run.runWidgetInDom("hello")(Test_Hello.helloWidget)();
-    Concur_React_Run.runWidgetInDom("counter")(Control_Alt.alt(Concur_React.widgetAlt(Data_Semigroup.semigroupArray))(Test_Counter.counterWidget(0))(Test_Counter.counterWidget(100)))();
+    Concur_React_Run.runWidgetInDom("counter")(Control_Alt.alt(Concur_Core.widgetAlt(Data_Semigroup.semigroupArray))(Test_Counter.counterWidget(0))(Test_Counter.counterWidget(100)))();
     Concur_React_Run.runWidgetInDom("ajax")(Test_Ajax.ajaxWidget)();
-    return Concur_React_Run.runWidgetInDom("color")(Test_Color.colorWidget(""))();
+    Concur_React_Run.runWidgetInDom("color")(Test_Color.colorWidget(""))();
+    Concur_React_Run.runWidgetInDom("timers")(Test_Timers.timersWidget)();
+    return Concur_React_Run.runWidgetInDom("slowButtonList")(Test_SlowButtonList.slowButtonListDemo)();
 };
 module.exports = {
     main: main
 };
 
-},{"../Concur.React":192,"../Concur.React.Run":189,"../Control.Alt":193,"../Control.Bind":201,"../Control.Monad.Eff":226,"../Control.Monad.Eff.Console":216,"../DOM":267,"../Data.Semigroup":407,"../Network.HTTP.Affjax":442,"../Prelude":450,"../Test.Ajax":458,"../Test.Color":459,"../Test.Counter":460,"../Test.Hello":461}],463:[function(require,module,exports){
+},{"../Concur.Core":188,"../Concur.React.Run":190,"../Control.Alt":194,"../Control.Bind":202,"../Control.Monad.Eff":232,"../Control.Monad.Eff.Console":220,"../DOM":277,"../Data.Semigroup":430,"../Network.HTTP.Affjax":467,"../Prelude":475,"../Test.Ajax":483,"../Test.Color":484,"../Test.Counter":485,"../Test.Hello":486,"../Test.SlowButtonList":488,"../Test.Timers":489}],488:[function(require,module,exports){
+"use strict";
+var Concur_Core = require("../Concur.Core");
+var Concur_React = require("../Concur.React");
+var Concur_React_DOM = require("../Concur.React.DOM");
+var Concur_React_Widgets = require("../Concur.React.Widgets");
+var Control_Alt = require("../Control.Alt");
+var Control_Bind = require("../Control.Bind");
+var Control_Semigroupoid = require("../Control.Semigroupoid");
+var Data_Array = require("../Data.Array");
+var Data_Functor = require("../Data.Functor");
+var Data_Semigroup = require("../Data.Semigroup");
+var Data_Show = require("../Data.Show");
+var Prelude = require("../Prelude");
+var slowButtonList = (function () {
+    var buttonize = function (n) {
+        return Data_Functor.voidLeft(Concur_Core.widgetFunctor)(Concur_React_Widgets["textButton'"](Data_Show.show(Data_Show.showInt)(n)))(n);
+    };
+    return function ($2) {
+        return Concur_React_DOM["div'"](Data_Functor.map(Data_Functor.functorArray)(buttonize)($2));
+    };
+})();
+var slowButtonListDemo = Control_Bind.discard(Control_Bind.discardUnit)(Concur_Core.widgetBind)(Concur_React_Widgets["textButton'"]("Show a HUGE list of 5000 buttons"))(function () {
+    return Control_Bind.bind(Concur_Core.widgetBind)(slowButtonList(Data_Array.range(1)(5000)))(function (v) {
+        return Control_Bind.discard(Control_Bind.discardUnit)(Concur_Core.widgetBind)(Control_Alt.alt(Concur_Core.widgetAlt(Data_Semigroup.semigroupArray))(Concur_React_DOM.text("You clicked button#" + Data_Show.show(Data_Show.showInt)(v)))(Concur_React_Widgets["textButton'"]("Restart?")))(function () {
+            return slowButtonListDemo;
+        });
+    });
+});
+module.exports = {
+    slowButtonList: slowButtonList, 
+    slowButtonListDemo: slowButtonListDemo
+};
+
+},{"../Concur.Core":188,"../Concur.React":193,"../Concur.React.DOM":189,"../Concur.React.Widgets":192,"../Control.Alt":194,"../Control.Bind":202,"../Control.Semigroupoid":260,"../Data.Array":296,"../Data.Functor":347,"../Data.Semigroup":430,"../Data.Show":434,"../Prelude":475}],489:[function(require,module,exports){
+// Generated by purs version 0.11.6
+"use strict";
+var Concur_Core = require("../Concur.Core");
+var Concur_React = require("../Concur.React");
+var Concur_React_DOM = require("../Concur.React.DOM");
+var Concur_React_Widgets = require("../Concur.React.Widgets");
+var Control_Alt = require("../Control.Alt");
+var Control_Alternative = require("../Control.Alternative");
+var Control_Applicative = require("../Control.Applicative");
+var Control_Bind = require("../Control.Bind");
+var Control_Monad_Aff = require("../Control.Monad.Aff");
+var Control_Monad_Aff_Class = require("../Control.Monad.Aff.Class");
+var Control_Monad_Eff_Class = require("../Control.Monad.Eff.Class");
+var Control_Monad_Eff_Console = require("../Control.Monad.Eff.Console");
+var Control_Monad_Eff_Now = require("../Control.Monad.Eff.Now");
+var Control_Plus = require("../Control.Plus");
+var Control_Semigroupoid = require("../Control.Semigroupoid");
+var Data_DateTime_Instant = require("../Data.DateTime.Instant");
+var Data_Function = require("../Data.Function");
+var Data_Functor = require("../Data.Functor");
+var Data_Maybe = require("../Data.Maybe");
+var Data_Monoid = require("../Data.Monoid");
+var Data_Ring = require("../Data.Ring");
+var Data_Semigroup = require("../Data.Semigroup");
+var Data_Show = require("../Data.Show");
+var Data_Time_Duration = require("../Data.Time.Duration");
+var Prelude = require("../Prelude");
+var timerWidget = function (idx) {
+    var getNewTime = Control_Bind.bind(Concur_Core.widgetBind)(Control_Monad_Eff_Class.liftEff(Concur_Core.widgetMonadEff(Data_Monoid.monoidArray))(Control_Monad_Eff_Now.now))(function (v) {
+        return Control_Bind.discard(Control_Bind.discardUnit)(Concur_Core.widgetBind)(Control_Monad_Eff_Class.liftEff(Concur_Core.widgetMonadEff(Data_Monoid.monoidArray))(Control_Monad_Eff_Console.log("Started Timer " + (Data_Show.show(Data_Show.showInt)(idx) + (" at time " + Data_Show.show(Data_DateTime_Instant.showInstant)(v))))))(function () {
+            return Control_Bind.discard(Control_Bind.discardUnit)(Concur_Core.widgetBind)(Control_Alt.alt(Concur_Core.widgetAlt(Data_Semigroup.semigroupArray))(Control_Monad_Aff_Class.liftAff(Concur_Core.widgetMonadAff(Data_Monoid.monoidArray))(Control_Monad_Aff.delay(3000.0)))(Concur_React_Widgets["textButton'"]("Cancel")))(function () {
+                return Control_Bind.bind(Concur_Core.widgetBind)(Control_Monad_Eff_Class.liftEff(Concur_Core.widgetMonadEff(Data_Monoid.monoidArray))(Control_Monad_Eff_Now.now))(function (v1) {
+                    return Control_Bind.discard(Control_Bind.discardUnit)(Concur_Core.widgetBind)(Control_Monad_Eff_Class.liftEff(Concur_Core.widgetMonadEff(Data_Monoid.monoidArray))(Control_Monad_Eff_Console.log("Stopped Timer " + (Data_Show.show(Data_Show.showInt)(idx) + (" at time " + Data_Show.show(Data_DateTime_Instant.showInstant)(v1))))))(function () {
+                        return Control_Applicative.pure(Concur_Core.widgetApplicative)(Data_Ring.sub(Data_Time_Duration.ringMilliseconds)(Data_DateTime_Instant.unInstant(v1))(Data_DateTime_Instant.unInstant(v)));
+                    });
+                });
+            });
+        });
+    });
+    var timer = function (prevTimeResult) {
+        return Control_Bind.bind(Concur_Core.widgetBind)(Concur_React_DOM["div'"]([ Data_Maybe.maybe(Control_Plus.empty(Concur_Core.widgetPlus(Data_Monoid.monoidArray)))(function (t) {
+            return Concur_React_DOM["div'"]([ Concur_React_DOM.text("Previous time - " + Data_Show.show(Data_Time_Duration.showMilliseconds)(t)) ]);
+        })(prevTimeResult), Control_Bind.bind(Concur_Core.widgetBind)(Concur_React_Widgets["textButton'"]("Start timer"))(function (v) {
+            return getNewTime;
+        }) ]))(function ($5) {
+            return timer(Data_Maybe.Just.create($5));
+        });
+    };
+    return Concur_React_DOM["div'"]([ Concur_React_DOM["h4'"]([ Concur_React_DOM.text("Timer " + Data_Show.show(Data_Show.showInt)(idx)) ]), timer(Data_Maybe.Nothing.value) ]);
+};
+var timersWidget = Concur_React_DOM["div'"](Data_Functor.map(Data_Functor.functorArray)(timerWidget)([ 1, 2, 3, 4, 5 ]));
+module.exports = {
+    timerWidget: timerWidget, 
+    timersWidget: timersWidget
+};
+
+},{"../Concur.Core":188,"../Concur.React":193,"../Concur.React.DOM":189,"../Concur.React.Widgets":192,"../Control.Alt":194,"../Control.Alternative":195,"../Control.Applicative":196,"../Control.Bind":202,"../Control.Monad.Aff":213,"../Control.Monad.Aff.Class":209,"../Control.Monad.Eff.Class":218,"../Control.Monad.Eff.Console":220,"../Control.Monad.Eff.Now":224,"../Control.Plus":259,"../Control.Semigroupoid":260,"../Data.DateTime.Instant":320,"../Data.Function":341,"../Data.Functor":347,"../Data.Maybe":397,"../Data.Monoid":406,"../Data.Ring":426,"../Data.Semigroup":430,"../Data.Show":434,"../Data.Time.Duration":447,"../Prelude":475}],490:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var TypeEquals = function (from, to) {
@@ -55058,7 +59679,7 @@ module.exports = {
     refl: refl
 };
 
-},{}],464:[function(require,module,exports){
+},{}],491:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var Control_Applicative = require("../Control.Applicative");
@@ -55361,7 +59982,7 @@ module.exports = {
     showProxy3: showProxy3
 };
 
-},{"../Control.Applicative":195,"../Control.Apply":197,"../Control.Bind":201,"../Control.Monad":244,"../Data.BooleanAlgebra":297,"../Data.Bounded":299,"../Data.CommutativeRing":300,"../Data.Eq":306,"../Data.Functor":324,"../Data.HeytingAlgebra":331,"../Data.Ord":392,"../Data.Ordering":393,"../Data.Ring":403,"../Data.Semigroup":407,"../Data.Semiring":409,"../Data.Show":411,"../Prelude":450}],465:[function(require,module,exports){
+},{"../Control.Applicative":196,"../Control.Apply":198,"../Control.Bind":202,"../Control.Monad":254,"../Data.BooleanAlgebra":307,"../Data.Bounded":309,"../Data.CommutativeRing":314,"../Data.Eq":329,"../Data.Functor":347,"../Data.HeytingAlgebra":354,"../Data.Ord":415,"../Data.Ordering":416,"../Data.Ring":426,"../Data.Semigroup":430,"../Data.Semiring":432,"../Data.Show":434,"../Prelude":475}],492:[function(require,module,exports){
 "use strict";
 
 // module Unsafe.Coerce
@@ -55370,7 +59991,7 @@ exports.unsafeCoerce = function (x) {
   return x;
 };
 
-},{}],466:[function(require,module,exports){
+},{}],493:[function(require,module,exports){
 // Generated by purs version 0.11.6
 "use strict";
 var $foreign = require("./foreign");
@@ -55378,10 +59999,10 @@ module.exports = {
     unsafeCoerce: $foreign.unsafeCoerce
 };
 
-},{"./foreign":465}],467:[function(require,module,exports){
+},{"./foreign":492}],494:[function(require,module,exports){
 require('Test.Main').main();
 
-},{"Test.Main":462}],468:[function(require,module,exports){
+},{"Test.Main":487}],495:[function(require,module,exports){
 // shim for using process in browser
 var process = module.exports = {};
 
@@ -55567,4 +60188,4 @@ process.chdir = function (dir) {
 };
 process.umask = function() { return 0; };
 
-},{}]},{},[467]);
+},{}]},{},[494]);
