@@ -12,6 +12,7 @@ import Test.Ajax (ajaxWidget)
 import Test.Color (colorWidget)
 import Test.Counter (counterWidget)
 import Test.Hello (helloWidget)
+import Test.SlowButtonList (slowButtonListDemo)
 import Test.Timers (timersWidget)
 
 main :: forall eff. Eff (dom :: DOM, console :: CONSOLE, ajax :: AJAX | eff) Unit
@@ -21,5 +22,6 @@ main = do
   runWidgetInDom "ajax" ajaxWidget
   runWidgetInDom "color" (colorWidget "")
   runWidgetInDom "timers" timersWidget
+  runWidgetInDom "slowButtonList" slowButtonListDemo
   -- TODO: This is currently buggy
   -- runWidgetInDom "tailRec" tailRecDemo
