@@ -2,17 +2,12 @@ module Concur.React.Widgets where
 
 import Prelude
 
-import Concur.Core (Widget(Widget), WidgetStep(WidgetStep))
+import Concur.Core (Widget, withViewEvent, wrapViewEvent)
 import Concur.React (HTML, NodeTag)
 import Concur.React.DOM as CD
-import Control.Monad.Aff.AVar (takeVar)
-import Control.Monad.Aff.Class (liftAff)
-import Control.Monad.Eff.AVar (makeEmptyVar, tryPutVar)
+import Control.Monad.Eff.AVar (tryPutVar)
 import Control.Monad.Eff.Class (liftEff)
-import Control.Monad.Free (liftF, resume, wrap)
 import Control.Monad.IOSync (IOSync, runIOSync')
-import Control.Parallel.Class (parallel, sequential)
-import Control.Plus (alt)
 import Data.Either (Either(..), either)
 import React as R
 import React.DOM as D
@@ -46,13 +41,6 @@ textButton props label = displayButton props (CD.text label)
 textButton' :: String -> Widget HTML Unit
 textButton' = textButton []
 
--- Helper
-withViewEvent :: forall a. ((a -> IOSync Unit) -> HTML) -> Widget HTML a
-withViewEvent mkView = Widget (liftF (WidgetStep (do
-     v <- liftEff makeEmptyVar
-     pure { view: mkView (\a -> void (liftEff (tryPutVar a v))), cont: liftAff (takeVar v) }
-  )))
-
 textArea :: Array P.Props -> String -> Widget HTML String
 textArea props contents = withViewEvent (\h -> [D.textarea (props <> [P.value contents, P.onChange (runIOSync' <<< h <<< getEventTargetValueString)]) []])
 
@@ -71,15 +59,9 @@ elEvent evt = elEventMany [evt]
 
 -- Wrap an element with multiple arbitrary eventHandlers over a widget
 elEventMany :: forall a b. (Array ((a -> IOSync Unit) -> P.Props)) -> NodeTag -> Array P.Props -> Widget HTML b -> Widget HTML (Either a b)
-elEventMany evts e props (Widget w) = Widget $
-  case resume w of
-    Right a -> pure (Right a)
-    Left (WidgetStep wsm) -> wrap $ WidgetStep $ do
-      ws <- wsm
-      var <- liftEff makeEmptyVar
-      let view' = [e (props <> ((\evt -> evt (\a -> void (liftEff (tryPutVar (pure (Left a)) var)))) <$> evts)) ws.view]
-      let cont' = sequential (alt (parallel (liftAff (takeVar var))) (parallel (map (map Right) ws.cont)))
-      pure {view: view', cont: cont'}
+elEventMany evts e props w = wrapViewEvent mkView w
+  where
+    mkView var view = [e (props <> (map (\evt -> evt (\a -> void (liftEff (tryPutVar (pure (Left a)) var)))) evts)) view]
 
 -- Wrap a div with key handlers around a widget
 -- Returns a `Left unit on key events.

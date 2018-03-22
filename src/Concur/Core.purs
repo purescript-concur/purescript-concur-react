@@ -3,10 +3,14 @@ module Concur.Core where
 import Prelude
 
 import Control.Alternative (class Alternative)
-import Control.Monad.Aff (Aff, never)
+import Control.Monad.Aff (Aff, never, runAff_)
+import Control.Monad.Aff.AVar (AVar, takeVar)
 import Control.Monad.Aff.Class (class MonadAff, liftAff)
+import Control.Monad.Aff.Unsafe (unsafeCoerceAff)
 import Control.Monad.Eff (Eff)
+import Control.Monad.Eff.AVar (makeEmptyVar, tryPutVar)
 import Control.Monad.Eff.Class (class MonadEff, liftEff)
+import Control.Monad.Eff.Console (log)
 import Control.Monad.Free (Free, hoistFree, resume, liftF, wrap)
 import Control.Monad.IO (IO)
 import Control.Monad.IOSync (IOSync)
@@ -30,19 +34,6 @@ instance functorWidgetStep :: Functor (WidgetStep v) where
 
 displayStep :: forall a v. v -> WidgetStep v a
 displayStep v = WidgetStep (pure { view: v, cont: liftAff never })
-
--- Sync but Non blocking eff
-effActionStep :: forall a v eff. v -> Eff eff a -> WidgetStep v a
-effActionStep v eff = WidgetStep (pure { view: v, cont: liftEff eff })
-
--- Sync and blocking eff
--- WARNING: UNSAFE: This will block the UI rendering
-unsafeBlockingEffActionStep :: forall a v eff. v -> Eff eff a -> WidgetStep v a
-unsafeBlockingEffActionStep v eff = WidgetStep (liftEff eff >>= \a -> pure { view: v, cont: pure a })
-
--- Async aff
-affActionStep :: forall a v eff. v -> Aff eff a -> WidgetStep v a
-affActionStep v aff = WidgetStep (pure { view: v, cont: liftAff aff })
 
 newtype Widget v a = Widget (Free (WidgetStep v) a)
 
@@ -105,24 +96,52 @@ display v = Widget (liftF (displayStep v))
 orr :: forall m a. Plus m => Array (m a) -> m a
 orr = foldl (<|>) empty
 
--- Unfortunately 'affect' is also the verb form of 'effect'
--- So we can't use `affect` and `effect` for these
-
 -- Sync but Non blocking eff
 effAction :: forall a v eff. v -> Eff eff a -> Widget v a
-effAction v eff = Widget (liftF (effActionStep v eff))
+effAction v eff = affAction v $ liftEff eff
 
 -- Sync and blocking eff
 -- WARNING: UNSAFE: This will block the UI rendering
 unsafeBlockingEffAction :: forall a v eff. v -> Eff eff a -> Widget v a
-unsafeBlockingEffAction v eff = Widget (liftF (unsafeBlockingEffActionStep v eff))
+unsafeBlockingEffAction v eff = Widget $ liftF $ WidgetStep $
+  liftEff eff >>= \a -> pure { view: v, cont: pure a }
 
 -- Async aff
 affAction :: forall a v eff. v -> Aff eff a -> Widget v a
-affAction v aff = Widget (liftF (affActionStep v aff))
+affAction v aff = Widget $ liftF $ WidgetStep $ do
+  var <- liftEff $ do
+    var <- makeEmptyVar
+    runAff_ (handler var) (unsafeCoerceAff aff)
+    pure var
+  pure { view: v, cont: liftAff (takeVar var) }
+  where
+    handler _   (Left e) = log ("Aff failed - " <> show e)
+    handler var (Right a) = void (tryPutVar a var)
 
 instance widgetMonadEff :: Monoid v => MonadEff eff (Widget v) where
   liftEff = effAction mempty
 
 instance widgetMonadAff :: Monoid v => MonadAff eff (Widget v) where
   liftAff = affAction mempty
+
+-- Helpers for some very common use of unsafe blocking io
+
+-- Construct a widget from a primitive view event
+withViewEvent :: forall a v. ((a -> IOSync Unit) -> v) -> Widget v a
+withViewEvent mkView = Widget (liftF (WidgetStep (do
+     v <- liftEff makeEmptyVar
+     pure { view: mkView (\a -> void (liftEff (tryPutVar a v))), cont: liftAff (takeVar v) }
+  )))
+
+-- Construct a widget, by wrapping an existing widget in a view event
+-- Returns Left on view event firing, Right on wrapped widget finishing
+wrapViewEvent :: forall a b v. (AVar (Free (WidgetStep v) (Either a b)) -> v -> v) -> Widget v b -> Widget v (Either a b)
+wrapViewEvent mkView (Widget w) = Widget $
+  case resume w of
+    Right a -> pure (Right a)
+    Left (WidgetStep wsm) -> wrap $ WidgetStep $ do
+      ws <- wsm
+      var <- liftEff makeEmptyVar
+      let view' = mkView var ws.view
+      let cont' = sequential (alt (parallel (liftAff (takeVar var))) (parallel (map (map Right) ws.cont)))
+      pure {view: view', cont: cont'}
