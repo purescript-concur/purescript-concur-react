@@ -1,18 +1,19 @@
 module Concur.React.DOM where
 
 import Prelude (pure, (<<<))
-import Concur.React (el', display, Widget, HTML)
+import Concur.Core (display, Widget)
+import Concur.React (el', HTML)
 import React.DOM as D
 import React.DOM.Props as P
 
 -- Wrappers for all DOM elements from purescript-react
 -- TODO: Generate these mechanically somehow
 
-text :: forall a eff. String -> Widget HTML eff a
+text :: forall a. String -> Widget HTML a
 text = display <<< pure <<< D.text
 
-type El = forall a eff. Array P.Props -> Array (Widget HTML eff a) -> Widget HTML eff a
-type El' = forall a eff. Array (Widget HTML eff a) -> Widget HTML eff a
+type El = forall a. Array P.Props -> Array (Widget HTML a) -> Widget HTML a
+type El' = forall a. Array (Widget HTML a) -> Widget HTML a
 
 a :: El
 a = el' <<< D.a

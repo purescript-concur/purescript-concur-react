@@ -1,8 +1,11 @@
 {
     "name": "purescript-concur",
-    "set": "psc-0.11.7",
-    "source": "https://github.com/purescript/package-sets.git",
+    "set": "psc-0.11.7-concur-1",
+    "source": "https://github.com/concurui/package-sets.git",
     "depends": [
+        "datetime",
+        "io",
+        "free",
         "argonaut",
         "affjax",
         "aff",

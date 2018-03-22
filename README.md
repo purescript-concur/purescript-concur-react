@@ -14,10 +14,8 @@ Individual example sources -
 2. A simple counter widget. [Source](https://github.com/ajnsit/purescript-concur/blob/master/src/Test/Counter.purs).
 3. Using AJAX and handling JSON responses. [Source](https://github.com/ajnsit/purescript-concur/blob/master/src/Test/Ajax.purs).
 4. A small widget to visualise CSS color codes. [Source](https://github.com/ajnsit/purescript-concur/blob/master/src/Test/Color.purs).
-
-Disabled demos -
-
-1. Tail Recursion demo. [Source](https://github.com/ajnsit/purescript-concur/blob/master/src/Test/TailRec.purs). Currently disabled due to a bug. Showed how Widgets written using tail recursion are stack safe, even though Purescript is strict.
+5. Asynchronous timers which can be cancelled. [Source](https://github.com/ajnsit/purescript-concur/blob/master/src/Test/Timers.purs).
+6. Performance test - A huge list of parallel buttons. This currently performs terribly. [Source](https://github.com/ajnsit/purescript-concur/blob/master/src/Test/SlowButtonList.purs).
 
 ## Building the example from source
 
