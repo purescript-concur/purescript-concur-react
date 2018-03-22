@@ -21,9 +21,28 @@ newtype WidgetStep v a = WidgetStep (IOSync
   , cont :: IO a
   })
 
+unWidgetStep :: forall v a. WidgetStep v a -> IOSync { view :: v, cont :: IO a }
+unWidgetStep (WidgetStep x) = x
+
 instance functorWidgetStep :: Functor (WidgetStep v) where
   map f (WidgetStep w) = WidgetStep (map mod w)
     where mod ws = ws { cont = map f ws.cont }
+
+displayStep :: forall a v. v -> WidgetStep v a
+displayStep v = WidgetStep (pure { view: v, cont: liftAff never })
+
+-- Sync but Non blocking eff
+effActionStep :: forall a v eff. v -> Eff eff a -> WidgetStep v a
+effActionStep v eff = WidgetStep (pure { view: v, cont: liftEff eff })
+
+-- Sync and blocking eff
+-- WARNING: UNSAFE: This will block the UI rendering
+unsafeBlockingEffActionStep :: forall a v eff. v -> Eff eff a -> WidgetStep v a
+unsafeBlockingEffActionStep v eff = WidgetStep (liftEff eff >>= \a -> pure { view: v, cont: pure a })
+
+-- Async aff
+affActionStep :: forall a v eff. v -> Aff eff a -> WidgetStep v a
+affActionStep v aff = WidgetStep (pure { view: v, cont: liftAff aff })
 
 newtype Widget v a = Widget (Free (WidgetStep v) a)
 
@@ -53,11 +72,17 @@ instance widgetSemigroup :: Semigroup v => Semigroup (Widget v a) where
           Left ws1 -> case resume w2 of
             Right a2 -> pure a2
             Left ws2 -> join (liftF (appendWidgetStep ws1 ws2))
-      appendWidgetStep (WidgetStep ws1) (WidgetStep ws2) = WidgetStep (appendWidgetStepInner <$> ws1 <*> ws2)
-      appendWidgetStepInner ws1' ws2' =
-        { view : ws1'.view <> ws2'.view
-        , cont : sequential (alt (parallel ws1'.cont) (parallel ws2'.cont))
-        }
+      appendWidgetStep (WidgetStep wsm1) (WidgetStep wsm2) = WidgetStep $ do
+        ws1 <- wsm1
+        ws2 <- wsm2
+        let v = ws1.view <> ws2.view
+        let c = do
+                  e <- sequential (alt (parallel (map Left ws1.cont)) (parallel (map Right ws2.cont)))
+                  pure $ case e of
+                      -- Taking care to not run any of the effects again
+                      Left  e' -> appendFree e' (join (liftF (WidgetStep (pure ws2))))
+                      Right e' -> appendFree (join (liftF (WidgetStep (pure ws1)))) e'
+        pure { view: v, cont: c }
 
 instance widgetAlt :: Semigroup v => Alt (Widget v) where
   alt = append
@@ -75,7 +100,7 @@ mapViewStep f (WidgetStep ws) = WidgetStep (map mod ws)
   where mod ws' = ws' { view = f ws'.view }
 
 display :: forall a v. v -> Widget v a
-display v = Widget (liftF (WidgetStep (pure { view: v, cont: liftAff never })))
+display v = Widget (liftF (displayStep v))
 
 orr :: forall m a. Plus m => Array (m a) -> m a
 orr = foldl (<|>) empty
@@ -85,16 +110,16 @@ orr = foldl (<|>) empty
 
 -- Sync but Non blocking eff
 effAction :: forall a v eff. v -> Eff eff a -> Widget v a
-effAction v eff = Widget (liftF (WidgetStep (pure { view: v, cont: liftEff eff })))
+effAction v eff = Widget (liftF (effActionStep v eff))
 
 -- Sync and blocking eff
 -- WARNING: UNSAFE: This will block the UI rendering
-unsafeBlockingEffAction :: forall a v. v -> IOSync a -> Widget v a
-unsafeBlockingEffAction v eff = Widget (liftF (WidgetStep (eff >>= \a -> pure { view: v, cont: pure a })))
+unsafeBlockingEffAction :: forall a v eff. v -> Eff eff a -> Widget v a
+unsafeBlockingEffAction v eff = Widget (liftF (unsafeBlockingEffActionStep v eff))
 
 -- Async aff
 affAction :: forall a v eff. v -> Aff eff a -> Widget v a
-affAction v aff = Widget (liftF (WidgetStep (pure { view: v, cont: liftAff aff })))
+affAction v aff = Widget (liftF (affActionStep v aff))
 
 instance widgetMonadEff :: Monoid v => MonadEff eff (Widget v) where
   liftEff = effAction mempty

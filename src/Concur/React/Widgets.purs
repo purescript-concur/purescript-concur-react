@@ -11,6 +11,8 @@ import Control.Monad.Eff.AVar (makeEmptyVar, tryPutVar)
 import Control.Monad.Eff.Class (liftEff)
 import Control.Monad.Free (liftF, resume)
 import Control.Monad.IOSync (IOSync, runIOSync')
+import Control.Parallel.Class (parallel, sequential)
+import Control.Plus (alt)
 import Data.Either (Either(..), either)
 import React as R
 import React.DOM as D
@@ -72,12 +74,12 @@ elEventMany :: forall a b. (Array ((a -> IOSync Unit) -> P.Props)) -> NodeTag ->
 elEventMany evts e props (Widget w) = Widget $
   case resume w of
     Right a -> pure (Right a)
-    Left (WidgetStep wsm) -> liftF (WidgetStep (do
+    Left (WidgetStep wsm) -> join $ liftF $ WidgetStep $ do
       ws <- wsm
-      v <- liftEff makeEmptyVar
-      -- TODO: Handle Right
-      pure { view: [e (props <> ((\evt -> evt (\a -> void (liftEff (tryPutVar a v)))) <$> evts)) ws.view], cont: map Left (liftAff (takeVar v)) }
-    ))
+      var <- liftEff makeEmptyVar
+      let view' = [e (props <> ((\evt -> evt (\a -> void (liftEff (tryPutVar (pure (Left a)) var)))) <$> evts)) ws.view]
+      let cont' = sequential (alt (parallel (liftAff (takeVar var))) (parallel (map (map Right) ws.cont)))
+      pure {view: view', cont: cont'}
 
 -- Wrap a div with key handlers around a widget
 -- Returns a `Left unit on key events.

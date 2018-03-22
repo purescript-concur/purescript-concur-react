@@ -13,7 +13,7 @@ import Data.String.Regex.Flags (global)
 import Data.Traversable (sequence)
 import React.DOM.Props as P
 
-colorWidget :: forall a eff. String -> Widget HTML a
+colorWidget :: forall a. String -> Widget HTML a
 colorWidget s =
     D.div' [ D.text "Insert some color codes, or "
            , textButton' "get an example" $> exampleText

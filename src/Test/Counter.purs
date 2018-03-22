@@ -9,7 +9,7 @@ import Concur.React.Widgets (textButton')
 import Control.Monad.Eff.Class (liftEff)
 import Control.Monad.Eff.Console (log)
 
-counterWidget :: forall a eff. Int -> Widget HTML a
+counterWidget :: forall a. Int -> Widget HTML a
 counterWidget count = do
   n <- div'
         [ p' [text ("State: " <> show count)]

@@ -38,13 +38,13 @@ instance decodeJsonPost :: DecodeJson Post where
 subreddits :: Array String
 subreddits = ["programming", "purescript", "haskell", "javascript"]
 
-ajaxWidget :: forall a eff. Widget HTML a
+ajaxWidget :: forall a. Widget HTML a
 ajaxWidget = div'
   [ p' [text "Click button to fetch posts from reddit"]
   , div' (map fetchReddit subreddits)
   ]
 
-fetchReddit :: forall a eff. String -> Widget HTML a
+fetchReddit :: forall a. String -> Widget HTML a
 fetchReddit sub = div'
   [ h4' [text ("/r/" <> sub)]
   , showPosts
