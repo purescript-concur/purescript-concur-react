@@ -63,7 +63,7 @@ instance widgetSemigroup :: Semigroup v => Semigroup (Widget v a) where
           Left ws1 -> case resume w2' of
             Right a2 -> pure a2
             Left ws2 -> wrap (appendWidgetStep ws1 ws2)
-      appendWidgetStep (WidgetStep wsm1) (WidgetStep wsm2) = WidgetStep $ do
+      appendWidgetStep (WidgetStep wsm1) (WidgetStep wsm2) = WidgetStep do
         ws1 <- wsm1
         ws2 <- wsm2
         let v = ws1.view <> ws2.view
@@ -108,8 +108,8 @@ unsafeBlockingEffAction v eff = Widget $ liftF $ WidgetStep $
 
 -- Async aff
 affAction :: forall a v eff. v -> Aff eff a -> Widget v a
-affAction v aff = Widget $ liftF $ WidgetStep $ do
-  var <- liftEff $ do
+affAction v aff = Widget $ liftF $ WidgetStep do
+  var <- liftEff do
     var <- makeEmptyVar
     runAff_ (handler var) (unsafeCoerceAff aff)
     pure var
@@ -139,7 +139,7 @@ wrapViewEvent :: forall a b v. ((a -> IOSync Unit) -> v -> v) -> Widget v b -> W
 wrapViewEvent mkView (Widget w) = Widget $
   case resume w of
     Right a -> pure (Right a)
-    Left (WidgetStep wsm) -> wrap $ WidgetStep $ do
+    Left (WidgetStep wsm) -> wrap $ WidgetStep do
       ws <- wsm
       var <- liftEff makeEmptyVar
       let view' = mkView (\a -> void (liftEff (tryPutVar (pure (Left a)) var))) ws.view
