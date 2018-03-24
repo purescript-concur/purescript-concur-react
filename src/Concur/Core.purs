@@ -40,17 +40,10 @@ newtype Widget v a = Widget (Free (WidgetStep v) a)
 unWidget :: forall v a. Widget v a -> Free (WidgetStep v) a
 unWidget (Widget w) = w
 
-instance widgetFunctor :: Functor (Widget v) where
-  map k (Widget w) = Widget (map k w)
-
-instance widgetBind :: Bind (Widget v) where
-  bind (Widget w) f = Widget (bind w (unWidget <<< f))
-
-instance widgetApplicative :: Applicative (Widget v) where
-  pure = Widget <<< pure
-
-instance widgetApply :: Apply (Widget v) where
-  apply = ap
+derive newtype instance widgetFunctor :: Functor (Widget v)
+derive newtype instance widgetBind :: Bind (Widget v)
+derive newtype instance widgetApplicative :: Applicative (Widget v)
+derive newtype instance widgetApply :: Apply (Widget v)
 
 instance widgetMonad :: Monad (Widget v)
 
