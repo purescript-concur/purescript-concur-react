@@ -31,7 +31,7 @@ componentClass winit = R.createClass (R.spec' init render)
     init this = discharge (unWidget winit) this
     discharge w this = case resume w of
       Right _ -> pure []
-      Left (WidgetStep mws) -> runIOSync' $ do
+      Left (WidgetStep mws) -> runIOSync' do
         ws <- mws
         liftEff $ runAff_ (handler this) $ runIO' ws.cont
         pure ws.view
