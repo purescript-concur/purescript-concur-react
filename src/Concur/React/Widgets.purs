@@ -9,11 +9,12 @@ import Control.Monad.Eff.AVar (tryPutVar)
 import Control.Monad.Eff.Class (liftEff)
 import Control.Monad.IOSync (IOSync, runIOSync')
 import Data.Either (Either(..), either)
+import Data.Function (applyFlipped)
 import React as R
 import React.DOM as D
 import React.DOM.Props as P
 
--- Combinator Widgets, at a more higher level than those in Concur.React.DOM
+-- Combinator Widgets, at a higher level than those in Concur.React.DOM
 
 -- Wrap a button around a widget
 -- Returns a `Left unit on click events.
@@ -58,10 +59,8 @@ elEvent :: forall a b. ((a -> IOSync Unit) -> P.Props) -> NodeTag -> Array P.Pro
 elEvent evt = elEventMany [evt]
 
 -- Wrap an element with multiple arbitrary eventHandlers over a widget
-elEventMany :: forall a b. (Array ((a -> IOSync Unit) -> P.Props)) -> NodeTag -> Array P.Props -> Widget HTML b -> Widget HTML (Either a b)
-elEventMany evts e props w = wrapViewEvent mkView w
-  where
-    mkView var view = [e (props <> (map (\evt -> evt (\a -> void (liftEff (tryPutVar (pure (Left a)) var)))) evts)) view]
+elEventMany :: forall a b. Array ((a -> IOSync Unit) -> P.Props) -> NodeTag -> Array P.Props -> Widget HTML b -> Widget HTML (Either a b)
+elEventMany evts e props w = wrapViewEvent (\h v -> [e (props <> (map (applyFlipped h) evts)) v]) w
 
 -- Wrap a div with key handlers around a widget
 -- Returns a `Left unit on key events.

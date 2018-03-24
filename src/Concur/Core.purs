@@ -4,7 +4,7 @@ import Prelude
 
 import Control.Alternative (class Alternative)
 import Control.Monad.Aff (Aff, never, runAff_)
-import Control.Monad.Aff.AVar (AVar, takeVar)
+import Control.Monad.Aff.AVar (takeVar)
 import Control.Monad.Aff.Class (class MonadAff, liftAff)
 import Control.Monad.Aff.Unsafe (unsafeCoerceAff)
 import Control.Monad.Eff (Eff)
@@ -135,13 +135,13 @@ withViewEvent mkView = Widget (liftF (WidgetStep (do
 
 -- Construct a widget, by wrapping an existing widget in a view event
 -- Returns Left on view event firing, Right on wrapped widget finishing
-wrapViewEvent :: forall a b v. (AVar (Free (WidgetStep v) (Either a b)) -> v -> v) -> Widget v b -> Widget v (Either a b)
+wrapViewEvent :: forall a b v. ((a -> IOSync Unit) -> v -> v) -> Widget v b -> Widget v (Either a b)
 wrapViewEvent mkView (Widget w) = Widget $
   case resume w of
     Right a -> pure (Right a)
     Left (WidgetStep wsm) -> wrap $ WidgetStep $ do
       ws <- wsm
       var <- liftEff makeEmptyVar
-      let view' = mkView var ws.view
+      let view' = mkView (\a -> void (liftEff (tryPutVar (pure (Left a)) var))) ws.view
       let cont' = sequential (alt (parallel (liftAff (takeVar var))) (parallel (map (map Right) ws.cont)))
       pure {view: view', cont: cont'}
