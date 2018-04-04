@@ -1,7 +1,7 @@
 {
   "name": "purescript-concur-react",
   "version": "0.1.0",
-  "description": "Concur implementation for Purescript, with React bindings",
+  "description": "Concur UI framework for Purescript, React backend",
   "license": "MIT",
   "repository": "ajnsit/purescript-concur-react",
   "author": {

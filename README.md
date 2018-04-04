@@ -1,4 +1,4 @@
-# Purescript Concur (React backend)
+# Purescript Concur (React Backend)
 
 [Concur UI Lib](https://github.com/ajnsit/concur) implementation for Purescript. React Backend.
 

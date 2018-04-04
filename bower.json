@@ -1,5 +1,5 @@
 {
-  "name": "purescript-concur",
+  "name": "purescript-concur-react",
   "ignore": [
     "**/.*",
     "node_modules",
