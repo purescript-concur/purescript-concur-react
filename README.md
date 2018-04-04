@@ -1,8 +1,6 @@
-# purescript-concur-react
+# Purescript Concur (React backend)
 
 [Concur UI Lib](https://github.com/ajnsit/concur) implementation for Purescript. React Backend.
-
-The API needs a little bit more work, but it does work.
 
 ## Examples
 
@@ -16,6 +14,11 @@ Individual example sources -
 4. A small widget to visualise CSS color codes. [Source](https://github.com/ajnsit/purescript-concur/blob/master/src/Test/Color.purs).
 5. Asynchronous timers which can be cancelled. [Source](https://github.com/ajnsit/purescript-concur/blob/master/src/Test/Timers.purs).
 6. Performance test - A huge list of parallel buttons. This currently performs terribly. [Source](https://github.com/ajnsit/purescript-concur/blob/master/src/Test/SlowButtonList.purs).
+
+## External React Components
+
+Concur supports using external React components. For example, there is an ongoing effort to create concur bindings for [SemanticUI-React](https://react.semantic-ui.com). Look at the [Sources](https://github.com/ajnsit/purescript-concur-semantic), and the [Demo](https://ajnsit.github.io/purescript-concur-semantic/).
+
 
 ## Building the example from source
 
