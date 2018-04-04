@@ -14,21 +14,21 @@
   "dependencies": {
     "purescript-react": "^5.1.0",
     "purescript-arrays": "^4.2.2",
-    "purescript-console": "^3.0.0",
     "purescript-aff": "^4.0.2",
     "purescript-tailrec": "^3.3.0",
-    "purescript-psci-support": "^3.0.0",
-    "purescript-affjax": "^5.0.0",
-    "purescript-argonaut": "^3.1.0",
     "purescript-free": "https://github.com/ajnsit/purescript-free.git#v4.2.0-concur",
     "purescript-io": "https://github.com/ajnsit/purescript-io.git#v5.0.0-patch1",
-    "purescript-datetime": "^3.4.1",
-    "purescript-now": "^3.0.0",
     "purescript-folds": "^3.1.0",
     "purescript-nonempty": "^4.2.0",
-    "purescript-foldable-traversable": "^3.7.1"
+    "purescript-foldable-traversable": "^3.7.1",
+    "purescript-react-dom": "^5.0.0"
   },
   "devDependencies": {
-    "purescript-react-dom": "^5.0.0"
+    "purescript-affjax": "^5.0.0",
+    "purescript-argonaut": "^3.1.0",
+    "purescript-console": "^3.0.0",
+    "purescript-datetime": "^3.4.1",
+    "purescript-now": "^3.0.0",
+    "purescript-psci-support": "^3.0.0"
   }
 }

@@ -10,13 +10,13 @@
   },
   "files": [],
   "scripts": {
-    "build": "pulp browserify --main Test.Main --to html/index.js"
+    "build": "pulp build",
+    "build-examples": "pulp browserify -I examples --to html/index.js"
   },
   "dependencies": {
     "react": "^15.3.2",
     "react-dom": "^15.3.2"
   },
   "devDependencies": {
-    "psc-package": "^0.2.5"
   }
 }
