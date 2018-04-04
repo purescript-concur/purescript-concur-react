@@ -5,10 +5,8 @@ import Prelude
 import Concur.Core (Widget, withViewEvent, wrapViewEvent)
 import Concur.React (HTML, NodeTag)
 import Concur.React.DOM as CD
-import Control.Monad.Eff.AVar (tryPutVar)
-import Control.Monad.Eff.Class (liftEff)
 import Control.Monad.IOSync (IOSync, runIOSync')
-import Data.Either (Either(..), either)
+import Data.Either (Either, either)
 import Data.Function (applyFlipped)
 import React as R
 import React.DOM as D
