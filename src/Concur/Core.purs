@@ -3,14 +3,12 @@ module Concur.Core where
 import Prelude
 
 import Control.Alternative (class Alternative)
-import Control.Monad.Aff (Aff, never, runAff_)
+import Control.Monad.Aff (Aff, never)
 import Control.Monad.Aff.AVar (takeVar)
 import Control.Monad.Aff.Class (class MonadAff, liftAff)
-import Control.Monad.Aff.Unsafe (unsafeCoerceAff)
 import Control.Monad.Eff (Eff)
 import Control.Monad.Eff.AVar (makeEmptyVar, tryPutVar)
 import Control.Monad.Eff.Class (class MonadEff, liftEff)
-import Control.Monad.Eff.Console (log)
 import Control.Monad.Free (Free, hoistFree, resume, liftF, wrap)
 import Control.Monad.IO (IO)
 import Control.Monad.IOSync (IOSync)
@@ -101,15 +99,7 @@ unsafeBlockingEffAction v eff = Widget $ liftF $ WidgetStep $
 
 -- Async aff
 affAction :: forall a v eff. v -> Aff eff a -> Widget v a
-affAction v aff = Widget $ liftF $ WidgetStep do
-  var <- liftEff do
-    var <- makeEmptyVar
-    runAff_ (handler var) (unsafeCoerceAff aff)
-    pure var
-  pure { view: v, cont: liftAff (takeVar var) }
-  where
-    handler _   (Left e) = log ("Aff failed - " <> show e)
-    handler var (Right a) = void (tryPutVar a var)
+affAction v aff = Widget $ liftF $ WidgetStep $ pure { view: v, cont: liftAff aff }
 
 instance widgetMonadEff :: Monoid v => MonadEff eff (Widget v) where
   liftEff = effAction mempty
