@@ -11,21 +11,29 @@ import Control.Monad.Eff (Eff)
 import Control.Monad.Eff.AVar (makeEmptyVar, tryPutVar)
 import Control.Monad.Eff.Class (class MonadEff, liftEff)
 import Control.Monad.Eff.Console (log)
-import Control.Monad.Free (Free, hoistFree, resume, liftF, wrap)
+import Control.Monad.Free (Free, hoistFree, liftF, resume, wrap)
 import Control.Monad.IO (IO)
 import Control.Monad.IOSync (IOSync)
+import Control.MultiAlternative (class MultiAlternative, orr)
 import Control.Parallel.Class (parallel, sequential)
-import Control.Plus (class Alt, class Plus, alt, (<|>), empty)
+import Control.Plus (class Alt, class Plus, alt, empty)
+import Data.Array.NonEmpty (NonEmptyArray, fromArray, updateAt)
 import Data.Either (Either(..))
-import Data.Foldable (foldl)
+import Data.FoldableWithIndex (foldlWithIndex)
+import Data.Maybe (Maybe(Nothing, Just), fromMaybe)
 import Data.Monoid (class Monoid, mempty)
+import Data.Semigroup.Foldable (foldMap1)
+import Data.Traversable (sequence)
+import Data.Tuple (Tuple(..))
 
-newtype WidgetStep v a = WidgetStep (IOSync
+type WidgetStepRecord v a =
   { view :: v
   , cont :: IO a
-  })
+  }
 
-unWidgetStep :: forall v a. WidgetStep v a -> IOSync { view :: v, cont :: IO a }
+newtype WidgetStep v a = WidgetStep (IOSync (WidgetStepRecord v a))
+
+unWidgetStep :: forall v a. WidgetStep v a -> IOSync (WidgetStepRecord v a)
 unWidgetStep (WidgetStep x) = x
 
 instance functorWidgetStep :: Functor (WidgetStep v) where
@@ -44,31 +52,50 @@ derive newtype instance widgetFunctor :: Functor (Widget v)
 derive newtype instance widgetBind :: Bind (Widget v)
 derive newtype instance widgetApplicative :: Applicative (Widget v)
 derive newtype instance widgetApply :: Apply (Widget v)
-
 instance widgetMonad :: Monad (Widget v)
 
-instance widgetSemigroup :: Semigroup v => Semigroup (Widget v a) where
-  append (Widget w1) (Widget w2) = Widget (appendFree w1 w2)
-    where
-      appendFree w1' w2' =
-        case resume w1' of
-          Right a1 -> pure a1
-          Left ws1 -> case resume w2' of
-            Right a2 -> pure a2
-            Left ws2 -> wrap (appendWidgetStep ws1 ws2)
-      appendWidgetStep (WidgetStep wsm1) (WidgetStep wsm2) = WidgetStep do
-        ws1 <- wsm1
-        ws2 <- wsm2
-        let v = ws1.view <> ws2.view
-        let c = do
-                  e <- sequential (alt (parallel (map Left ws1.cont)) (parallel (map Right ws2.cont)))
-                  pure $ case e of
-                      -- Taking care to not run any of the effects again
-                      Left  e' -> appendFree e' (wrap (WidgetStep (pure ws2)))
-                      Right e' -> appendFree (wrap (WidgetStep (pure ws1))) e'
-        pure { view: v, cont: c }
+-- Util
+flipEither :: forall a b. Either a b -> Either b a
+flipEither (Left a) = Right a
+flipEither (Right b) = Left b
 
-instance widgetAlt :: Semigroup v => Alt (Widget v) where
+-- This instance is more efficient than `defaultOrr` for a large number of widgets
+instance widgetMultiAlternative :: Monoid v => MultiAlternative (Widget v) where
+  orr wss = case fromArray wss of
+    Just wsne -> Widget $ comb $ map unWidget wsne
+    Nothing -> empty
+    where
+      comb :: forall v' a. Monoid v'
+           => NonEmptyArray (Free (WidgetStep v') a)
+           -> Free (WidgetStep v') a
+      -- Use flipEither so `Left` indicates a return value, which we can short circuit on
+      -- 'Either.sequence'
+      comb wfs = case sequence (map (flipEither <<< resume) wfs) of
+        Left a -> pure a
+        Right wsm -> wrap $ WidgetStep do
+            -- 'IOSync.sequence'
+            ws <- sequence $ map unWidgetStep wsm
+            pure { view: foldMap1 _.view ws
+                 , cont: merge ws (map _.cont ws)
+                 }
+
+      merge :: forall v' a. Monoid v'
+          => NonEmptyArray (WidgetStepRecord v' (Free (WidgetStep v') a))
+          -> NonEmptyArray (IO (Free (WidgetStep v') a))
+          -> IO (Free (WidgetStep v') a)
+      merge ws wscs = do
+        -- wsm' is discharged wsm, with all the IO action run exactly once
+        let wsm = map (wrap <<< WidgetStep <<< pure) ws
+        -- TODO: We know the array is non-empty. We need something like foldl1WithIndex.
+        Tuple i e <- sequential (foldlWithIndex (\i r w -> alt (parallel (map (Tuple i) w)) r) empty wscs)
+        -- TODO: All the IO in ws is already discharged. Use a more efficient way than comb to process it
+        -- TODO: Also, more importantly, we would like to not have to cancel running fibers unless one of them returns a result
+        pure $ comb (fromMaybe wsm (updateAt i e wsm))
+
+instance widgetSemigroup :: Monoid v => Semigroup (Widget v a) where
+  append w1 w2 = orr [w1, w2]
+
+instance widgetAlt :: Monoid v => Alt (Widget v) where
   alt = append
 
 instance widgetPlus :: Monoid v => Plus (Widget v) where
@@ -86,8 +113,8 @@ mapViewStep f (WidgetStep ws) = WidgetStep (map mod ws)
 display :: forall a v. v -> Widget v a
 display v = Widget (liftF (displayStep v))
 
-orr :: forall m a. Plus m => Array (m a) -> m a
-orr = foldl (<|>) empty
+-- orr :: forall m a. Plus m => Array (m a) -> m a
+-- orr = foldl (<|>) empty
 
 -- Sync but Non blocking eff
 effAction :: forall a v eff. v -> Eff eff a -> Widget v a

@@ -2,7 +2,7 @@ module Concur.React where
 
 import Prelude
 
-import Concur.Core (Widget, WidgetStep(WidgetStep), mapView, orr, unWidget)
+import Concur.Core (Widget, WidgetStep(WidgetStep), mapView, unWidget)
 import Control.Monad.Aff (runAff_)
 import Control.Monad.Eff.Class (liftEff)
 import Control.Monad.Eff.Console (log)
@@ -10,6 +10,8 @@ import Control.Monad.Eff.Unsafe (unsafeCoerceEff)
 import Control.Monad.Free (resume)
 import Control.Monad.IO (runIO')
 import Control.Monad.IOSync (runIOSync')
+import Control.MultiAlternative (class MultiAlternative, orr)
+import Control.ShiftMap (class ShiftMap, shiftMap)
 import Data.Either (Either(..))
 import React as R
 import React.DOM as D
@@ -19,10 +21,10 @@ type HTML = Array R.ReactElement
 type NodeName = Array R.ReactElement -> R.ReactElement
 type NodeTag = Array P.Props -> Array R.ReactElement -> R.ReactElement
 
-el :: forall a. NodeName -> Widget HTML a -> Widget HTML a
-el n = mapView (\v -> [n v])
+el :: forall m a. ShiftMap (Widget HTML) m => NodeName -> m a -> m a
+el n = shiftMap (mapView (\v -> [n v]))
 
-el' :: forall a. NodeName -> Array (Widget HTML a) -> Widget HTML a
+el' :: forall m a. MultiAlternative m => ShiftMap (Widget HTML) m => NodeName -> Array (m a) -> m a
 el' n = el n <<< orr
 
 componentClass :: forall props a. Widget HTML a -> R.ReactClass props

@@ -12,6 +12,8 @@ import Control.Monad.Writer (WriterT, mapWriterT)
 class ShiftMap s t where
   shiftMap :: (s ~> s) -> (t ~> t)
 
+-- Instances for common transformers
+
 instance idShiftMap :: ShiftMap m m where
   shiftMap = id
 
