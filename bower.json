@@ -16,7 +16,7 @@
     "purescript-arrays": "^4.2.2",
     "purescript-aff": "^4.0.2",
     "purescript-tailrec": "^3.3.0",
-    "purescript-free": "https://github.com/ajnsit/purescript-free.git#v4.2.0-concur",
+    "purescript-free": "https://github.com/purescript/purescript-free.git#v4.3.0",
     "purescript-io": "https://github.com/ajnsit/purescript-io.git#v5.0.0-patch1",
     "purescript-folds": "^3.1.0",
     "purescript-nonempty": "^4.2.0",
