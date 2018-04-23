@@ -113,9 +113,6 @@ mapViewStep f (WidgetStep ws) = WidgetStep (map mod ws)
 display :: forall a v. v -> Widget v a
 display v = Widget (liftF (displayStep v))
 
--- orr :: forall m a. Plus m => Array (m a) -> m a
--- orr = foldl (<|>) empty
-
 -- Sync but Non blocking eff
 effAction :: forall a v eff. v -> Eff eff a -> Widget v a
 effAction v eff = affAction v $ liftEff eff
