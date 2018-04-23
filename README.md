@@ -39,7 +39,8 @@ Individual example sources -
 
 1. Hello World! Shows simple effectful widgets. [Source](https://github.com/ajnsit/purescript-concur/blob/master/src/Test/Hello.purs).
 2. A simple counter widget. [Source](https://github.com/ajnsit/purescript-concur/blob/master/src/Test/Counter.purs).
-3. Using AJAX and handling JSON responses. [Source](https://github.com/ajnsit/purescript-concur/blob/master/src/Test/Ajax.purs).
-4. A small widget to visualise CSS color codes. [Source](https://github.com/ajnsit/purescript-concur/blob/master/src/Test/Color.purs).
-5. Asynchronous timers which can be cancelled. [Source](https://github.com/ajnsit/purescript-concur/blob/master/src/Test/Timers.purs).
-6. Performance test - A huge list of parallel buttons. This currently performs terribly. [Source](https://github.com/ajnsit/purescript-concur/blob/master/src/Test/SlowButtonList.purs).
+3. A postfix calculator. [Source](https://github.com/ajnsit/purescript-concur/blob/master/src/Test/Calc.purs).
+4. Using AJAX and handling JSON responses. [Source](https://github.com/ajnsit/purescript-concur/blob/master/src/Test/Ajax.purs).
+5. A small widget to visualise CSS color codes. [Source](https://github.com/ajnsit/purescript-concur/blob/master/src/Test/Color.purs).
+6. Asynchronous timers which can be cancelled. [Source](https://github.com/ajnsit/purescript-concur/blob/master/src/Test/Timers.purs).
+7. Performance test - A huge list of parallel buttons. [Source](https://github.com/ajnsit/purescript-concur/blob/master/src/Test/SlowButtonList.purs).
