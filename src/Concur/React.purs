@@ -26,9 +26,9 @@ el' n = el n <<< orr
 componentClass :: forall props a. Widget HTML a -> R.ReactClass props
 componentClass winit = R.createClass (R.spec' init render)
   where
-    init this = runIOSync' $ discharge winit (handler this)
+    init this = runIOSync' $ discharge (handler this) winit
     handler this (Right r) = do
-      v <- discharge r (handler this)
+      v <- discharge (handler this) r
       void $ liftEff $ R.writeState this v
     handler _ (Left err) = do
       liftEff $ log ("FAILED! " <> show err)

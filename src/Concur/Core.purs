@@ -60,10 +60,10 @@ instance widgetMonad :: Monad (Widget v)
 -- | 2. Runs the sync IO action
 -- | 3. Extracts and returns the view
 discharge :: forall a v. Monoid v
-          => Widget v a
-          -> (Either Error (Widget v a) -> IOSync Unit)
+          => (Either Error (Widget v a) -> IOSync Unit)
+          -> Widget v a
           -> IOSync v
-discharge (Widget w) handler = case resume w of
+discharge handler (Widget w) = case resume w of
   Right _ -> pure mempty
   Left (WidgetStep mws) -> do
     ws <- mws
