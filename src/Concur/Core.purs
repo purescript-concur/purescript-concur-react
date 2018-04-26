@@ -111,6 +111,9 @@ instance widgetMultiAlternative :: Monoid v => MultiAlternative (Widget v) where
 instance widgetSemigroup :: Monoid v => Semigroup (Widget v a) where
   append w1 w2 = orr [w1, w2]
 
+instance widgetMonoid :: Monoid v => Monoid (Widget v a) where
+  mempty = empty
+
 instance widgetAlt :: Monoid v => Alt (Widget v) where
   alt = append
 
