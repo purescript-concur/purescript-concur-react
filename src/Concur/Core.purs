@@ -119,7 +119,7 @@ instance widgetPlus :: Monoid v => Plus (Widget v) where
 
 instance widgetAlternative :: Monoid v => Alternative (Widget v)
 
-mapView :: forall a v. (v -> v) -> Widget v a -> Widget v a
+mapView :: forall a v1 v2. (v1 -> v2) -> Widget v1 a -> Widget v2 a
 mapView f (Widget w) = Widget (hoistFree (mapViewStep f) w)
 
 mapViewStep :: forall v1 v2 a. (v1 -> v2) -> WidgetStep v1 a -> WidgetStep v2 a
