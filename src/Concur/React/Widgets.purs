@@ -63,12 +63,31 @@ elEventMany evts e props w = wrapViewEvent (\h v -> [e (props <> (map (applyFlip
 -- Wrap a div with key handlers around a widget
 -- Returns a `Left unit on key events.
 -- Or a `Right a` when the inner `Widget HTML a` ends.
-wrapKeyHandler :: forall a. Array P.Props -> Widget HTML a -> Widget HTML (Either R.KeyboardEvent a)
-wrapKeyHandler props w = elEvent (\h -> P.onKeyDown (runIOSync' <<< h)) D.div props w
+wrapKeyHandler :: forall a. NodeTag -> Array P.Props -> (R.KeyboardEvent -> a) -> Widget HTML a -> Widget HTML a
+wrapKeyHandler e props f w = either f id <$> w'
+  where w' =  wrapViewEvent (\h v -> [e (props <> [P.onKeyDown (\e -> (runIOSync' (h e)))]) v]) w
 
 -- Specialised key handler widget with only static children
-displayKeyHandler :: Array P.Props -> (forall a. Widget HTML a) -> Widget HTML R.KeyboardEvent
-displayKeyHandler props w = either id id <$> wrapKeyHandler props w
+displayKeyHandler :: NodeTag -> Array P.Props -> (forall a. Widget HTML a) -> Widget HTML R.KeyboardEvent
+displayKeyHandler e props w = wrapKeyHandler e props id w
+
+-- Add a click handler around a widget
+wrapClickHandler :: forall m a. NodeTag -> Array P.Props -> (R.Event -> a) -> Widget HTML a -> Widget HTML a
+wrapClickHandler e props f w = either f id <$> w'
+  where w' =  wrapViewEvent (\h v -> [e (props <> [P.onClick (\e -> (runIOSync' (h e)))]) v]) w
+
+-- Specialised click handler widget with only static children
+displayClickHandler :: NodeTag -> Array P.Props -> (forall a. Widget HTML a) -> Widget HTML R.Event
+displayClickHandler e props w = wrapClickHandler e props id w
+
+-- Add a double click handler around a widget
+wrapDoubleClickHandler :: forall m a. NodeTag -> Array P.Props -> (R.Event -> a) -> Widget HTML a -> Widget HTML a
+wrapDoubleClickHandler e props f w = either f id <$> w'
+  where w' =  wrapViewEvent (\h v -> [e (props <> [P.onDoubleClick (\e -> (runIOSync' (h e)))]) v]) w
+
+-- Specialised double click handler widget with only static children
+displayDoubleClickHandler :: NodeTag -> Array P.Props -> (forall a. Widget HTML a) -> Widget HTML R.Event
+displayDoubleClickHandler e props w = wrapDoubleClickHandler e props id w
 
 -- Generic function to get info out of events
 -- TODO: Move these to some other place
