@@ -1,8 +1,10 @@
 module Concur.React.DOM where
 
-import Prelude (pure, (<<<))
 import Concur.Core (display, Widget)
 import Concur.React (el', HTML)
+import Control.MultiAlternative (class MultiAlternative)
+import Control.ShiftMap (class ShiftMap)
+import Prelude (pure, (<<<))
 import React.DOM as D
 import React.DOM.Props as P
 
@@ -12,8 +14,8 @@ import React.DOM.Props as P
 text :: forall a. String -> Widget HTML a
 text = display <<< pure <<< D.text
 
-type El = forall a. Array P.Props -> Array (Widget HTML a) -> Widget HTML a
-type El' = forall a. Array (Widget HTML a) -> Widget HTML a
+type El = forall m a. MultiAlternative m => ShiftMap (Widget HTML) m => Array P.Props -> Array (m a) -> m a
+type El' = forall m a. MultiAlternative m => ShiftMap (Widget HTML) m => Array (m a) -> m a
 
 a :: El
 a = el' <<< D.a
