@@ -8,8 +8,10 @@ import Concur.React.DOM as CD
 import Control.Monad.IOSync (IOSync, runIOSync')
 import Data.Either (Either, either)
 import Data.Function (applyFlipped)
+import React (handle)
 import React as R
 import React.DOM as D
+import React.DOM.Props (unsafeMkProps)
 import React.DOM.Props as P
 
 -- Combinator Widgets, at a higher level than those in Concur.React.DOM
@@ -51,6 +53,20 @@ textInput props contents = withViewEvent (\h -> [D.input (props <> [P._type "tex
 
 textInput' :: String -> Widget HTML String
 textInput' = textInput []
+
+-- Can't use P.onKeyDown because that doesn't allow getting event information in the handler
+textInputEnter :: Array P.Props -> String -> Widget HTML String
+textInputEnter props contents = withViewEvent (\h -> [D.input (props <> [P._type "text", P.value contents, onHandleEnter h]) []])
+  where
+   onHandleEnter :: (String -> IOSync Unit) -> P.Props
+   onHandleEnter h = unsafeMkProps "onKeyDown" (handle f)
+     where
+       f e = if getKeyboardEventKeyString e == "Enter"
+         then runIOSync' $ h $ getEventTargetValueString e
+         else pure unit
+
+textInputEnter' :: String -> Widget HTML String
+textInputEnter' = textInputEnter []
 
 checkbox :: Array P.Props -> Boolean -> Widget HTML Boolean
 checkbox props checked = withViewEvent (\h -> [D.input (props <> [P._type "checkbox", P.checked checked, P.onChange (\_ -> runIOSync' (h (not checked)))]) []])
@@ -95,3 +111,4 @@ displayDoubleClickHandler e props w = wrapDoubleClickHandler e props id w
 -- Generic function to get info out of events
 -- TODO: Move these to some other place
 foreign import getEventTargetValueString :: R.Event -> String
+foreign import getKeyboardEventKeyString :: R.Event -> String

@@ -1,11 +1,9 @@
 module Test.Todos where
 
-import Prelude hiding (div)
-
 import Concur.Core (Widget)
 import Concur.React (HTML)
 import Concur.React.DOM (a, div, footer, header, li, p', section, span, strong, text, ul)
-import Concur.React.Widgets (displayButton, displayDoubleClickHandler, elEvent, textInput, wrapClickHandler, checkbox)
+import Concur.React.Widgets (checkbox, displayButton, displayDoubleClickHandler, elEvent, textInputEnter, wrapClickHandler)
 import Control.Alternative (empty)
 import Control.Monad.IOSync (runIOSync')
 import Control.Monad.State.Trans (StateT, get, lift, put, runStateT)
@@ -14,6 +12,7 @@ import Data.Array (concatMap, cons, drop, filter, intercalate, length, null, ran
 import Data.Either (Either(..), either)
 import Data.Maybe (Maybe(..), maybe)
 import Data.Tuple (Tuple(..), fst, snd)
+import Prelude hiding (div)
 import React.DOM as D
 import React.DOM.Props as P
 
@@ -66,7 +65,7 @@ widgetTodos = forever $ div [ P.className "todomvc-wrapper" ]
 widgetInput :: EntriesWidget Unit
 widgetInput = header [ P.className "header" ]$ pure do
   elist <- get
-  s <- lift $ textInput [P.className "new-todo", P.placeholder "What needs to be done?", P.name "newTodo"] ""
+  s <- lift $ textInputEnter [P.className "new-todo", P.placeholder "What needs to be done?", P.name "newTodo"] ""
   put $ elist { entries = cons {desc:s, completed:false} elist.entries }
 
 classList :: Array (Maybe String) -> P.Props
@@ -115,7 +114,7 @@ widgetEntry todo = go false
             ]
         , if editing
             then map (\desc' -> Right $ Just $ todo { desc = desc' }) $
-                   textInput [P.className "edit", P.name "title", P.value desc] ""
+                   textInputEnter [P.className "edit", P.name "title", P.value desc] ""
             else empty
         ]
     completed = todo.completed

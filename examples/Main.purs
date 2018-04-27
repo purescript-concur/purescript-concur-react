@@ -27,6 +27,3 @@ main = do
   runWidgetInDom "timers" timersWidget
   runWidgetInDom "hugeButtonList" (hugeButtonListDemo 50000)
   runWidgetInDom "tailRecursionDemo" tailRecDemo
-
-  -- TODO: This is currently buggy
-  -- runWidgetInDom "tailRec" tailRecDemo
