@@ -4,7 +4,7 @@ import Prelude hiding (div)
 
 import Concur.Core (Widget)
 import Concur.React (HTML)
-import Concur.React.DOM (a, div, footer, h1, header, li, p', section, span, strong, text, ul)
+import Concur.React.DOM (a, div, footer, header, li, p', section, span, strong, text, ul)
 import Concur.React.Widgets (displayButton, displayDoubleClickHandler, elEvent, textInput, wrapClickHandler, checkbox)
 import Control.Alternative (empty)
 import Control.Monad.IOSync (runIOSync')
