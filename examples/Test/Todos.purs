@@ -25,10 +25,7 @@ type Entry =
     , completed :: Boolean
     }
 
-data EntriesVisibility
-  = All
-  | Active
-  | Completed
+data EntriesVisibility = All | Active | Completed
 derive instance eqEntriesVisibility :: Eq EntriesVisibility
 
 type EntriesList =
@@ -67,13 +64,10 @@ widgetTodos = forever $ div [ P.className "todomvc-wrapper" ]
   ]
 
 widgetInput :: EntriesWidget Unit
-widgetInput = header [ P.className "header" ]
-  [ h1 [] [lift $ text "todos"]
-  , do
-      elist <- get
-      s <- lift $ textInput [P.className "new-todo", P.placeholder "What needs to be done?", P.name "newTodo"] ""
-      put $ elist { entries = cons {desc:s, completed:false} elist.entries }
-  ]
+widgetInput = header [ P.className "header" ]$ pure do
+  elist <- get
+  s <- lift $ textInput [P.className "new-todo", P.placeholder "What needs to be done?", P.name "newTodo"] ""
+  put $ elist { entries = cons {desc:s, completed:false} elist.entries }
 
 classList :: Array (Maybe String) -> P.Props
 classList = P.className <<< intercalate " " <<< concatMap (maybe [] (\s -> [s]))
