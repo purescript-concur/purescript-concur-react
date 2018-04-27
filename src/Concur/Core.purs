@@ -122,6 +122,14 @@ instance widgetPlus :: Monoid v => Plus (Widget v) where
 
 instance widgetAlternative :: Monoid v => Alternative (Widget v)
 
+-- Pause for a negligible amount of time. Forces continuations to pass through the trampoline.
+-- Avoids stack overflows in (pathological) cases where a widget calls itself repeatedly without any intervening widgets or effects.
+-- E.g. -
+--   BAD  `counter n = if n < 10000 then counter (n+1) else pure n`
+--   GOOD `counter n = if n < 10000 then (do pulse; counter (n+1)) else pure n`
+pulse :: forall v. Monoid v => Widget v Unit
+pulse = unsafeBlockingEffAction mempty (pure unit)
+
 mapView :: forall a v1 v2. (v1 -> v2) -> Widget v1 a -> Widget v2 a
 mapView f (Widget w) = Widget (hoistFree (mapViewStep f) w)
 

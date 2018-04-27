@@ -2,14 +2,14 @@ module Test.TailRec where
 
 import Prelude
 
-import Concur.Core (Widget)
-import Concur.React (HTML) -- , pulse)
+import Concur.Core (Widget, pulse)
+import Concur.React (HTML)
 import Concur.React.DOM (div', p', text)
 import Concur.React.Widgets (textButton')
 
 -- How many iterations to run at a time
 maxIterations :: Int
-maxIterations = 1000000
+maxIterations = 10000
 
 tailRecDemo :: forall a. Widget HTML a
 tailRecDemo = do
@@ -30,5 +30,5 @@ tailRecWidget count times = do
      else do
        -- For the first maxIterations times, tailRecWidget calls itself in a tight loop
        -- This would blow the stack, if it weren't for the pulse here.
-       -- pulse
+       pulse
        tailRecWidget newCount times
