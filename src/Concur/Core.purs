@@ -15,6 +15,7 @@ import Control.Monad.Eff.Exception (Error)
 import Control.Monad.Free (Free, hoistFree, liftF, resume, wrap)
 import Control.Monad.IO (IO, runIO')
 import Control.Monad.IOSync (IOSync, runIOSync)
+import Control.Monad.Rec.Class (class MonadRec)
 import Control.MultiAlternative (class MultiAlternative, orr)
 import Control.Parallel.Class (parallel, sequential)
 import Control.Plus (class Alt, class Plus, alt, empty)
@@ -45,7 +46,6 @@ displayStep :: forall a v. v -> WidgetStep v a
 displayStep v = WidgetStep (pure { view: v, cont: liftAff never })
 
 newtype Widget v a = Widget (Free (WidgetStep v) a)
-
 unWidget :: forall v a. Widget v a -> Free (WidgetStep v) a
 unWidget (Widget w) = w
 
@@ -54,6 +54,7 @@ derive newtype instance widgetBind :: Bind (Widget v)
 derive newtype instance widgetApplicative :: Applicative (Widget v)
 derive newtype instance widgetApply :: Apply (Widget v)
 instance widgetMonad :: Monad (Widget v)
+derive newtype instance widgetMonadRec :: MonadRec (Widget v)
 
 -- | Discharge a widget.
 -- | 1. Forks the async IO action
