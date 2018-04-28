@@ -6,6 +6,7 @@ import Concur.React.DOM (a, div, footer, header, li, p', section, span, strong, 
 import Concur.React.Widgets (checkbox, displayButton, displayDoubleClickHandler, elEvent, textInputEnter, wrapClickHandler)
 import Control.Alternative (empty)
 import Control.Monad.IOSync (runIOSync')
+import Control.Monad.Rec.Class (forever)
 import Control.Monad.State.Trans (StateT, get, lift, put, runStateT)
 import Control.MultiAlternative (orr)
 import Data.Array (concatMap, cons, drop, filter, intercalate, length, null, range, take, zip)
@@ -42,9 +43,6 @@ entriesLeft :: EntriesList -> Int
 entriesLeft elist = length elist.entries - entriesCompleted elist
 
 type EntriesWidget a = StateT EntriesList (Widget HTML) a
-
-forever :: forall a b m. Monad m => m a -> m b
-forever m = m >>= \_ -> forever m
 
 widgetTodos :: forall a. EntriesWidget a
 widgetTodos = forever $ div [ P.className "todomvc-wrapper" ]
@@ -114,7 +112,7 @@ widgetEntry todo = go false
             ]
         , if editing
             then map (\desc' -> Right $ Just $ todo { desc = desc' }) $
-                   textInputEnter [P.className "edit", P.name "title", P.value desc] ""
+                   textInputEnter [P.className "edit", P.name "title"] desc
             else empty
         ]
     completed = todo.completed
