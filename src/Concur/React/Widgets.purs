@@ -5,6 +5,7 @@ import Prelude
 import Concur.Core (Widget, withViewEvent, wrapViewEvent)
 import Concur.React (HTML, NodeTag)
 import Concur.React.DOM as CD
+import Control.Monad.Eff (Eff)
 import Control.Monad.IOSync (IOSync, runIOSync')
 import Data.Either (Either, either)
 import Data.Function (applyFlipped)
@@ -49,21 +50,22 @@ textArea' :: String -> Widget HTML String
 textArea' = textArea []
 
 textInput :: Array P.Props -> String -> Widget HTML String
-textInput props contents = withViewEvent (\h -> [D.input (props <> [P._type "text", P.value contents, P.onChange (runIOSync' <<< h <<< getEventTargetValueString)]) []])
+textInput props contents = withViewEvent (\h -> [D.input (props <> [P._type "text", P.defaultValue contents, P.onChange (runIOSync' <<< h <<< getEventTargetValueString)]) []])
 
 textInput' :: String -> Widget HTML String
 textInput' = textInput []
 
--- Can't use P.onKeyDown because that doesn't allow getting event information in the handler
+-- Can't use P.onKeyDown because that doesn't allow getting event information (i.e. value) in the handler
+-- Also have to manually handle resetting the value of the checkbox on enter.
 textInputEnter :: Array P.Props -> String -> Widget HTML String
-textInputEnter props contents = withViewEvent (\h -> [D.input (props <> [P._type "text", P.value contents, onHandleEnter h]) []])
+textInputEnter props contents = withViewEvent (\h -> [D.input (props <> [P._type "text", P.defaultValue contents, onHandleEnter h]) []])
   where
    onHandleEnter :: (String -> IOSync Unit) -> P.Props
    onHandleEnter h = unsafeMkProps "onKeyDown" (handle f)
      where
-       f e = if getKeyboardEventKeyString e == "Enter"
-         then runIOSync' $ h $ getEventTargetValueString e
-         else pure unit
+       f e = when (getKeyboardEventKeyString e == "Enter") do
+                 runIOSync' $ h $ getEventTargetValueString e
+                 resetTargetValue "" e
 
 textInputEnter' :: String -> Widget HTML String
 textInputEnter' = textInputEnter []
@@ -112,3 +114,4 @@ displayDoubleClickHandler e props w = wrapDoubleClickHandler e props id w
 -- TODO: Move these to some other place
 foreign import getEventTargetValueString :: R.Event -> String
 foreign import getKeyboardEventKeyString :: R.Event -> String
+foreign import resetTargetValue :: forall eff. String -> R.Event -> Eff eff Unit
