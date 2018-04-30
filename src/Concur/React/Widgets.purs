@@ -73,6 +73,9 @@ textInputEnter' = textInputEnter []
 checkbox :: Array P.Props -> Boolean -> Widget HTML Boolean
 checkbox props checked = withViewEvent (\h -> [D.input (props <> [P._type "checkbox", P.checked checked, P.onChange (\_ -> runIOSync' (h (not checked)))]) []])
 
+checkbox' :: Boolean -> Widget HTML Boolean
+checkbox' = checkbox []
+
 -- Wrap an element with an arbitrary eventHandler over a widget
 elEvent :: forall a b. ((a -> IOSync Unit) -> P.Props) -> NodeTag -> Array P.Props -> Widget HTML b -> Widget HTML (Either a b)
 elEvent evt = elEventMany [evt]
