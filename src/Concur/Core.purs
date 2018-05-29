@@ -3,7 +3,7 @@ module Concur.Core where
 import Prelude
 
 import Control.Alternative (class Alternative)
-import Control.Monad.Aff (Aff, never, runAff_)
+import Control.Monad.Aff (Aff, effCanceler, makeAff, never, runAff_)
 import Control.Monad.Aff.AVar (takeVar)
 import Control.Monad.Aff.Class (class MonadAff, liftAff)
 import Control.Monad.Aff.Unsafe (unsafeCoerceAff)
@@ -162,6 +162,10 @@ affAction v aff = Widget $ liftF $ WidgetStep do
   where
     handler _   (Left e) = log ("Aff failed - " <> show e)
     handler var (Right a) = void (tryPutVar a var)
+
+-- Async callback
+asyncAction :: forall eff v a. v -> ((Either Error a -> Eff eff Unit) -> Eff eff (Eff eff Unit)) -> Widget v a
+asyncAction v handler = affAction v (makeAff (map effCanceler <<< handler))
 
 instance widgetMonadEff :: Monoid v => MonadEff eff (Widget v) where
   liftEff = effAction mempty
