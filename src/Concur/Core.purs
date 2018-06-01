@@ -13,8 +13,8 @@ import Control.Monad.Eff.Class (class MonadEff, liftEff)
 import Control.Monad.Eff.Console (log)
 import Control.Monad.Eff.Exception (Error)
 import Control.Monad.Free (Free, hoistFree, liftF, resume, wrap)
-import Control.Monad.IO (IO, runIO')
-import Control.Monad.IOSync (IOSync, runIOSync)
+import Control.Monad.IO (IO)
+import Control.Monad.IOSync (IOSync)
 import Control.Monad.Rec.Class (class MonadRec)
 import Control.MultiAlternative (class MultiAlternative, orr)
 import Control.Parallel.Class (parallel, sequential)
@@ -55,21 +55,6 @@ derive newtype instance widgetApplicative :: Applicative (Widget v)
 derive newtype instance widgetApply :: Apply (Widget v)
 instance widgetMonad :: Monad (Widget v)
 derive newtype instance widgetMonadRec :: MonadRec (Widget v)
-
--- | Discharge a widget.
--- | 1. Forks the async IO action
--- | 2. Runs the sync IO action
--- | 3. Extracts and returns the view
-discharge :: forall a v. Monoid v
-          => (Either Error (Widget v a) -> IOSync Unit)
-          -> Widget v a
-          -> IOSync v
-discharge handler (Widget w) = case resume w of
-  Right _ -> pure mempty
-  Left (WidgetStep mws) -> do
-    ws <- mws
-    liftEff $ runAff_ (runIOSync <<< handler <<< map Widget) $ runIO' ws.cont
-    pure ws.view
 
 -- Util
 flipEither :: forall a b. Either a b -> Either b a
