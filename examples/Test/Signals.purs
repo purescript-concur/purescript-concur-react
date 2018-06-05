@@ -9,10 +9,6 @@ import Concur.React.DOM (div', text)
 import Concur.React.Widgets (textButton')
 import Control.Alternative ((<|>))
 
--- A button that can change its label according to some operation
-click :: String -> Int -> Widget HTML Int
-click s n = n <$ textButton' (show n)
-
 -- Counting buttons
 clicks :: Signal HTML Int
 clicks = loop 0 $ \n ->

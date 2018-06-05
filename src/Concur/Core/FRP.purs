@@ -3,9 +3,11 @@ module Concur.Core.FRP where
 import Prelude
 
 import Concur.Core (Widget, WidgetCombinator)
-import Control.Comonad (extract)
+import Control.Alternative ((<|>))
+import Control.Comonad (class Comonad, class Extend, extract)
 import Control.Comonad.Cofree (Cofree, mkCofree, tail)
 import Data.Either (Either(..))
+import Data.Monoid (class Monoid)
 
 
 ----------
@@ -17,11 +19,35 @@ import Data.Either (Either(..))
 -- | A Widget can be considered to be a one-shot Event. (There is no stream of events in Concur).
 -- | Signals then are never-ending widget loops that allow access to their last return value.
 -- | This last produced value allows composition with other widgets even for never-ending widgets.
-type Signal v a = Cofree (Widget v) a
+newtype Signal v a = Signal (Cofree (Widget v) a)
+
+-- Signals allow us to have an FRP network!
+-- But we need a custom bind instance
+
+runSignal :: forall v a. Signal v a -> Cofree (Widget v) a
+runSignal (Signal s) = s
+
+derive newtype instance signalFunctor :: Functor (Signal v)
+derive newtype instance signalExtend :: Extend (Signal v)
+derive newtype instance signalComonad :: Comonad (Signal v)
+derive newtype instance signalApplicative :: Monoid v => Applicative (Signal v)
+derive newtype instance signalApply :: Monoid v => Apply (Signal v)
+
+instance bindSignal :: Monoid v => Bind (Signal v) where
+  bind fa f = go fa
+    where
+    go fa' =
+      let fh = f (extract fa')
+      in hold (extract fh) ((go <$> update fa') <|> (update fh))
+
+instance monadSignal :: Monoid v => Monad (Signal v)
+
+instance signalMonad :: Monoid v => Monad (Signal v)
+-- derive newtype instance sigMonadRec :: Monoid v => MonadRec (Sig v)
 
 -- | Construct a signal from an initial value, and a step widget
 hold :: forall v a. a -> Widget v (Signal v a) -> Signal v a
-hold = mkCofree
+hold a w = Signal (mkCofree a (map runSignal w))
 
 -- | A constant signal
 always :: forall v a. a -> Signal v a
@@ -29,7 +55,7 @@ always a = a `hold` (pure (always a))
 
 -- | Update signal to a new value
 update :: forall v a. Signal v a -> Widget v (Signal v a)
-update = tail
+update s = map Signal (tail (runSignal s))
 
 -- | Construct a signal by polling a signal with a nested widget for values
 poll :: forall v a. Signal v (Widget v a) -> Widget v (Signal v a)
