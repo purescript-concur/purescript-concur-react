@@ -1,4 +1,4 @@
-module Concur.Gen where
+module Concur.Core.Gen where
 
 import Prelude
 
