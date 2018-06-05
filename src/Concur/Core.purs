@@ -56,6 +56,8 @@ derive newtype instance widgetApply :: Apply (Widget v)
 instance widgetMonad :: Monad (Widget v)
 derive newtype instance widgetMonadRec :: MonadRec (Widget v)
 
+-- A Widget combinator which can combine two widgets in a layout
+type WidgetCombinator v = forall a. Widget v a -> Widget v a -> Widget v a
 -- Util
 flipEither :: forall a b. Either a b -> Either b a
 flipEither (Left a) = Right a

@@ -13,6 +13,7 @@ import Test.Calc (calcWidget)
 import Test.Color (colorWidget)
 import Test.Counter (counterWidget)
 import Test.Hello (helloWidget)
+import Test.Signals (countingWidget)
 import Test.SlowButtonList (hugeButtonListDemo)
 import Test.TailRec (tailRecDemo)
 import Test.Timers (timersWidget)
@@ -21,6 +22,7 @@ main :: forall eff. Eff (dom :: DOM, console :: CONSOLE, ajax :: AJAX | eff) Uni
 main = do
   runWidgetInDom "hello" helloWidget
   runWidgetInDom "counter" (counterWidget 0 <|> counterWidget 100)
+  runWidgetInDom "signals" countingWidget
   runWidgetInDom "calc" calcWidget
   runWidgetInDom "ajax" ajaxWidget
   runWidgetInDom "color" (colorWidget "")
