@@ -5,7 +5,8 @@ import Prelude
 import Concur.Core (Widget, WidgetCombinator)
 import Control.Alternative ((<|>))
 import Control.Comonad (class Comonad, class Extend, extract)
-import Control.Comonad.Cofree (Cofree, mkCofree, tail)
+import Control.Comonad.Cofree (Cofree, hoistCofree, mkCofree, tail)
+import Control.ShiftMap (class ShiftMap)
 import Data.Either (Either(..))
 import Data.Monoid (class Monoid)
 
@@ -44,6 +45,9 @@ instance monadSignal :: Monoid v => Monad (Signal v)
 
 instance signalMonad :: Monoid v => Monad (Signal v)
 -- derive newtype instance sigMonadRec :: Monoid v => MonadRec (Sig v)
+
+instance shiftMapSignal :: ShiftMap (Widget v) (Signal v) where
+  shiftMap f (Signal s) = Signal (hoistCofree f s)
 
 -- | Construct a signal from an initial value, and a step widget
 hold :: forall v a. a -> Widget v (Signal v a) -> Signal v a
