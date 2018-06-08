@@ -6,6 +6,7 @@ import Concur.Core (Widget, WidgetCombinator)
 import Control.Alternative ((<|>))
 import Control.Comonad (class Comonad, class Extend, extract)
 import Control.Comonad.Cofree (Cofree, hoistCofree, mkCofree, tail)
+import Control.Lazy (class Lazy)
 import Control.ShiftMap (class ShiftMap)
 import Data.Either (Either(..))
 import Data.Monoid (class Monoid)
@@ -33,13 +34,17 @@ derive newtype instance signalExtend :: Extend (Signal v)
 derive newtype instance signalComonad :: Comonad (Signal v)
 derive newtype instance signalApplicative :: Monoid v => Applicative (Signal v)
 derive newtype instance signalApply :: Monoid v => Apply (Signal v)
+derive newtype instance signalLazy :: Monoid v => Lazy (Signal v a)
 
 instance bindSignal :: Monoid v => Bind (Signal v) where
-  bind fa f = go fa
+  bind :: forall a b. Signal v a -> (a -> Signal v b) -> Signal v b
+  bind sa' f = go sa'
     where
-    go fa' =
-      let fh = f (extract fa')
-      in hold (extract fh) ((go <$> update fa') <|> (update fh))
+      go sa = go' sa (f (extract sa))
+      go' sa sb =
+        let mrestart = go <$> update sa
+            msplit = go' sa <$> update sb
+        in hold (extract sb) (mrestart <|> msplit)
 
 instance monadSignal :: Monoid v => Monad (Signal v)
 
