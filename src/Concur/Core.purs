@@ -169,15 +169,14 @@ withViewEvent mkView = Widget (liftF (WidgetStep (do
      pure { view: mkView (\a -> void (liftEff (tryPutVar a v))), cont: liftAff (takeVar v) }
   )))
 
--- Construct a widget, by wrapping an existing widget in a view event
--- Returns Left on view event firing, Right on wrapped widget finishing
-wrapViewEvent :: forall a b v. ((a -> IOSync Unit) -> v -> v) -> Widget v b -> Widget v (Either a b)
+-- | Construct a widget, by wrapping an existing widget in a view event
+wrapViewEvent :: forall a v. ((a -> IOSync Unit) -> v -> v) -> Widget v a -> Widget v a
 wrapViewEvent mkView (Widget w) = Widget $
   case resume w of
-    Right a -> pure (Right a)
+    Right a -> pure a
     Left (WidgetStep wsm) -> wrap $ WidgetStep do
       ws <- wsm
       var <- liftEff makeEmptyVar
-      let view' = mkView (\a -> void (liftEff (tryPutVar (pure (Left a)) var))) ws.view
-      let cont' = sequential (alt (parallel (liftAff (takeVar var))) (parallel (map (map Right) ws.cont)))
+      let view' = mkView (\a -> void (liftEff (tryPutVar (pure a) var))) ws.view
+      let cont' = sequential (alt (parallel (liftAff (takeVar var))) (parallel ws.cont))
       pure {view: view', cont: cont'}

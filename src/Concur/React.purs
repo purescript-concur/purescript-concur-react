@@ -18,9 +18,11 @@ type HTML = Array R.ReactElement
 type NodeName = Array R.ReactElement -> R.ReactElement
 type NodeTag = Array P.Props -> Array R.ReactElement -> R.ReactElement
 
+-- | Wrap a widget with a node and raw props
 el :: forall m a. ShiftMap (Widget HTML) m => NodeName -> m a -> m a
 el n = shiftMap (mapView (\v -> [n v]))
 
+-- | Wrap some widgets with a node and raw props
 el' :: forall m a. MultiAlternative m => ShiftMap (Widget HTML) m => NodeName -> Array (m a) -> m a
 el' n = el n <<< orr
 
