@@ -4,8 +4,8 @@ import Prelude
 
 import Concur.Core (Widget, pulse)
 import Concur.React (HTML)
-import Concur.React.DOM (div', p', text)
-import Concur.React.Widgets (textButton')
+import Concur.React.DOM (button, div', p', text)
+import Concur.React.Props (onClick)
 
 -- How many iterations to run at a time
 maxIterations :: Int
@@ -16,7 +16,7 @@ tailRecDemo = do
   div'[ p' [text ("Clicking this button will perform " <> show maxIterations <> " iterations via tail recursion ")]
       , p' [text "Once done, you can restart the iterations as many times you want."]
       , do
-          textButton' "Start Tail Recursion Demo"
+          button [unit <$ onClick] [text "Start Tail Recursion Demo"]
           tailRecWidget 0 2
       ]
 
@@ -25,7 +25,7 @@ tailRecWidget count times = do
   let newCount = count + 1
   if newCount > maxIterations
      then do
-       textButton' ("Ran " <> show count <> " iterations. Restart? (n = " <> show times <> ")")
+       button [unit <$ onClick] [text ("Ran " <> show count <> " iterations. Restart? (n = " <> show times <> ")")]
        tailRecWidget 0 (times + 1)
      else do
        -- For the first maxIterations times, tailRecWidget calls itself in a tight loop

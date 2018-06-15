@@ -2,8 +2,9 @@ module Concur.React where
 
 import Prelude
 
-import Concur.Core (Widget, mapView)
+import Concur.Core (Widget, wrapViewEvent)
 import Concur.Core.Discharge (discharge, dischargeAsync)
+import Concur.React.Props (Props, mkProp)
 import Control.Monad.Eff.Class (liftEff)
 import Control.Monad.Eff.Console (log)
 import Control.Monad.IOSync (runIOSync')
@@ -13,18 +14,20 @@ import Data.Either (Either(..))
 import React as R
 import React.DOM as D
 import React.DOM.Props as P
+import Unsafe.Coerce (unsafeCoerce)
 
 type HTML = Array R.ReactElement
 type NodeName = Array R.ReactElement -> R.ReactElement
 type NodeTag = Array P.Props -> Array R.ReactElement -> R.ReactElement
 
--- | Wrap a widget with a node and raw props
-el :: forall m a. ShiftMap (Widget HTML) m => NodeName -> m a -> m a
-el n = shiftMap (mapView (\v -> [n v]))
+-- BIG HACK! We use UnsafeCoerce to allow this to typecheck. This MIGHT cause RUNTIME errors! Verify!
+-- | Wrap a widget with a node that can have eventHandlers attached
+el :: forall m a. ShiftMap (Widget HTML) m => NodeTag -> Array (Props a) -> m a -> m a
+el e props = shiftMap (wrapViewEvent \h v -> [e (map (mkProp h) (unsafeCoerce props)) v])
 
--- | Wrap some widgets with a node and raw props
-el' :: forall m a. MultiAlternative m => ShiftMap (Widget HTML) m => NodeName -> Array (m a) -> m a
-el' n = el n <<< orr
+-- | Wrap some widgets with a node that can have eventHandlers attached
+el' :: forall m a. ShiftMap (Widget HTML) m => MultiAlternative m => NodeTag -> Array (Props a) -> Array (m a) -> m a
+el' e props = el e props <<< orr
 
 componentClass :: forall props a. Widget HTML a -> R.ReactClass props
 componentClass winit = R.createClass (R.spec' init render)

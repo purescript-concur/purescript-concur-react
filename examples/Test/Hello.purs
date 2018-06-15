@@ -4,16 +4,27 @@ import Prelude
 
 import Concur.Core (Widget)
 import Concur.React (HTML)
-import Concur.React.DomProps (input)
-import Concur.React.Props (_type, defaultValue, onClick)
+import Concur.React.DOM (button, text, div')
+import Concur.React.Props (onClick)
 import Control.Monad.Eff.Class (liftEff)
 import Control.Monad.Eff.Console (log)
+import Control.Monad.State.Class (get, put)
+import Control.Monad.State.Trans (StateT, runStateT)
+import Control.Monad.Trans.Class (lift)
+import Data.Tuple (snd)
 
-helloWidget :: forall a. Widget HTML a
-helloWidget = do
-  button "Click to Say Hello"
+helloWidget :: Widget HTML Int
+helloWidget = snd <$> runStateT helloWidgetS 0
+
+helloWidgetS :: forall a. StateT Int (Widget HTML) a
+helloWidgetS = do
+  count <- get
+  e <- lift $ div'
+    [ but "Say Hello!"
+    , but $ "For the " <> show count <> " time, hello sailor!"
+    ]
+  put (count + 1)
   liftEff (log "You said Hello!")
-  button "Hello Sailor!"
-  helloWidget
+  helloWidgetS
   where
-    button s = input [_type "button", defaultValue s, unit <$ onClick] []
+    but s = button [onClick] [text s]

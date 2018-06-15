@@ -4,8 +4,8 @@ import Prelude
 
 import Concur.Core (Widget)
 import Concur.React (HTML)
-import Concur.React.DOM (text, div', p', h4')
-import Concur.React.Widgets (textButton')
+import Concur.React.DOM (button, div', h4', p', text)
+import Concur.React.Props (onClick)
 import Control.Alt ((<|>))
 import Control.Monad.Aff.Class (liftAff)
 import Control.Monad.Eff.Class (liftEff)
@@ -50,7 +50,7 @@ fetchReddit sub = div'
   , showPosts
   ]
   where
-    showPosts = textButton' "Fetch posts" >>= \_ -> fetchPosts
+    showPosts = button [onClick] [text "Fetch posts"] >>= \_ -> fetchPosts
     fetchPosts = do
       liftEff (log ("Fetching posts from subreddit - " <> sub))
       resp <- (liftAff (get ("https://www.reddit.com/r/" <> sub <> ".json"))) <|> (text "Loading...")
@@ -64,6 +64,6 @@ fetchReddit sub = div'
         Right posts -> do
           div'
             [ div' (map (\(Post p) -> div' [text p.title]) (take 5 posts))
-            , div' [textButton' "Refresh"]
+            , div' [button [unit <$ onClick] [text "Refresh"]]
             ]
           fetchPosts

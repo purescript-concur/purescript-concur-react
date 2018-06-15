@@ -4,8 +4,8 @@ import Prelude
 
 import Concur.Core (Widget)
 import Concur.React (HTML)
-import Concur.React.DOM (div', h4', text)
-import Concur.React.Widgets (textButton')
+import Concur.React.DOM (button, div', h4', text)
+import Concur.React.Props (onClick)
 import Control.Alt ((<|>))
 import Control.Alternative (empty)
 import Control.Monad.Aff (Milliseconds(..), delay)
@@ -27,12 +27,12 @@ timerWidget idx = div'
   where
     timer prevTimeResult = do
       div'[ maybe empty (\t -> div' [text ("Previous time - " <> show t)]) prevTimeResult
-          , textButton' "Start timer" >>= \_ -> getNewTime
+          , button [onClick] [text "Start timer"] >>= \_ -> getNewTime
           ] >>= Just >>> timer
     getNewTime = do
       startTime <- liftEff now
       liftEff $ log $ "Started Timer " <> show idx <> " at time " <> show startTime
-      liftAff (delay (Milliseconds 3000.0)) <|> textButton' "Cancel"
+      liftAff (delay (Milliseconds 3000.0)) <|> button [unit <$ onClick] [text "Cancel"]
       stopTime <- liftEff now
       liftEff $ log $ "Stopped Timer " <> show idx <> " at time " <> show stopTime
       pure $ unInstant stopTime - unInstant startTime

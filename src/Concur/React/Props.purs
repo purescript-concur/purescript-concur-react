@@ -2,8 +2,13 @@ module Concur.React.Props where
 
 import Prelude
 
-import Control.Monad.IOSync (IOSync, runIOSync')
-import React (Event, KeyboardEvent, MouseEvent)
+import Control.Monad.Eff (Eff)
+import Control.Monad.Eff.Class (liftEff)
+import Control.Monad.IOSync (runIOSync', IOSync)
+import Data.Array (concatMap, intercalate)
+import Data.Maybe (Maybe(..), maybe)
+import React (Event, KeyboardEvent, MouseEvent, handle)
+import React as R
 import React.DOM.Props as P
 
 data Props a = PrimProp P.Props | Handler ((a -> IOSync Unit) -> P.Props)
@@ -12,9 +17,35 @@ instance functorProps :: Functor Props where
   map _ (PrimProp p) = PrimProp p
   map f (Handler h) = Handler \k -> h (k <<< f)
 
+-- | Selectively invoke event handlers
+mapMaybe :: forall a b. (a -> IOSync (Maybe b)) -> Props a -> Props b
+mapMaybe _ (PrimProp p) = PrimProp p
+mapMaybe f (Handler h) = Handler (h <<< g)
+  where
+    g k a = do
+      b' <- f a
+      case b' of
+        Just b -> k b
+        Nothing -> pure unit
+
+-- | Internal. Use unsafeMkProps instead.
 mkProp :: forall a. (a -> IOSync Unit) -> Props a -> P.Props
 mkProp _ (PrimProp a) = a
 mkProp h (Handler f) = f h
+
+-- | Construct a custom prop handler
+unsafeMkPropHandler :: forall a. String -> Props a
+unsafeMkPropHandler s = Handler \f -> P.unsafeMkProps s (handle (\e -> runIOSync' (f e)))
+
+-- | Construct a custom key value prop
+unsafeMkProp :: forall a. String -> a -> Props a
+unsafeMkProp s v = PrimProp (P.unsafeMkProps s v)
+
+-- | Shortcut for the common case of a list of classes
+classList :: forall a. Array (Maybe String) -> Props a
+classList = className <<< intercalate " " <<< concatMap (maybe [] (\s -> [s]))
+
+-- The standard set of props
 
 aria :: forall ariaAttrs a. { | ariaAttrs } -> Props a
 aria = PrimProp <<< P.aria
@@ -582,8 +613,6 @@ onTouchStart = Handler \k -> P.onTouchStart (runIOSync' <<< k)
 onScroll :: Props Event
 onScroll = Handler \k -> P.onScroll (runIOSync' <<< k)
 
--- data Props a = PrimProp P.Props | Handler ((a -> IOSync Unit) -> P.Props)
-
 onWheel :: Props Event
 onWheel = Handler \k -> P.onWheel (runIOSync' <<< k)
 
@@ -629,3 +658,25 @@ d = PrimProp <<< P.d
 
 viewBox :: forall a. String -> Props a
 viewBox = PrimProp <<< P.viewBox
+
+--------------------------------------------------------------------------------
+-- Extra props
+
+inputValue :: Props Event -> Props String
+inputValue = mapMaybe (\e -> Just <$> liftEff (getEventTargetValueString e))
+
+-- Can't use Concur.React.Props.onKeyDown because that doesn't allow getting event information (i.e. value) in the handler
+-- Also have to manually handle resetting the value of the checkbox on enter.
+onHandleEnter :: Props String
+onHandleEnter = flip mapMaybe (unsafeMkPropHandler "onKeyDown") \e ->
+  if (getKeyboardEventKeyString e == "Enter")
+  then do
+    liftEff (resetTargetValue "" e)
+    Just <$> liftEff (getEventTargetValueString e)
+  else pure Nothing
+
+-- Generic function to get info out of events
+-- TODO: Move these to some other place
+foreign import getEventTargetValueString :: R.Event -> forall eff. Eff eff String
+foreign import getKeyboardEventKeyString :: R.Event -> String
+foreign import resetTargetValue :: forall eff. String -> R.Event -> Eff eff Unit

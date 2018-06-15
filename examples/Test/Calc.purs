@@ -4,8 +4,8 @@ import Prelude
 
 import Concur.Core (Widget)
 import Concur.React (HTML)
-import Concur.React.DOM (div', text)
-import Concur.React.Widgets (textButton')
+import Concur.React.DOM (button, div', text)
+import Concur.React.Props (onClick)
 import Control.MultiAlternative (orr)
 import Data.List (List(..), uncons, (:))
 import Data.Maybe (Maybe(..))
@@ -30,7 +30,7 @@ calcButtonsWidget = div'
     opTimes = but Times "*"
     opMinus = but Minus "-"
     opPlus = but Plus "+"
-    but x s = x <$ textButton' s
+    but x s = x <$ button [onClick] [text s]
 
 -- Postfix calculation
 calc :: List Int -> CalculatorAction -> Tuple (List Int) Int

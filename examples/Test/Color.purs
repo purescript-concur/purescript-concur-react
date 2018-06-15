@@ -5,31 +5,31 @@ import Prelude
 import Concur.Core (Widget)
 import Concur.Core.FRP (Signal, dyn, hold)
 import Concur.React (HTML)
+import Concur.React.DOM (button, text, textarea)
 import Concur.React.DOM as D
-import Concur.React.Widgets (textArea, textButton')
+import Concur.React.Props (inputValue, onChange, onClick, style, value)
 import Data.Either (either)
 import Data.Maybe (Maybe(..), maybe)
 import Data.String.Regex (match, regex)
 import Data.String.Regex.Flags (global)
 import Data.Traversable (sequence)
-import React.DOM.Props as P
 
 colorSignal :: String -> Signal HTML String
 colorSignal s = hold s do
   s' <- D.div' [ D.text "Insert some color codes, or "
-              , textButton' "get an example" $> exampleText
-              , D.div' [textArea [P.style {width: "80%", height: "6em"}] s]
+              , button [onClick] [text "get an example"] $> exampleText
+              , D.div' [textarea [value s, inputValue onChange, style {width: "80%", height: "6em"}] []]
               ]
   pure (colorSignal s')
 
 showColors :: String -> Signal HTML String
 showColors inp = hold inp do
-  D.div [P.style { width : "80.0%" }]
+  D.div [style { width : "80.0%" }]
     (maybe [D.text "no colors found"] (map showColor) (matchInput inp))
   where
   matchInput input = either (const Nothing) (flip match input) (regex "#[0-9a-fA-F]{6}" global) >>= sequence
-  showColor col = D.span [P.style (style col)] [D.text col]
-  style col = {display:"inline-block", margin:"4px" , textAlign:"center", width:"7em", backgroundColor: col, color: "white"}
+  showColor col = D.span [style (colstyle col)] [D.text col]
+  colstyle col = {display:"inline-block", margin:"4px" , textAlign:"center", width:"7em", backgroundColor: col, color: "white"}
 
 colorWidget :: forall a. String -> Widget HTML a
 colorWidget s = dyn do
