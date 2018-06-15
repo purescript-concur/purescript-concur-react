@@ -8,7 +8,8 @@ import Concur.React.DOM as CD
 import Concur.React.Props (Props, mkProp)
 import Control.Monad.Eff (Eff)
 import Control.Monad.IOSync (IOSync, runIOSync')
-import Control.MultiAlternative (orr)
+import Control.MultiAlternative (class MultiAlternative, orr)
+import Control.ShiftMap (class ShiftMap, shiftMap)
 import Data.Either (Either(..), either)
 import Data.Function (applyFlipped)
 import React (handle)
@@ -16,17 +17,18 @@ import React as R
 import React.DOM as D
 import React.DOM.Props (unsafeMkProps)
 import React.DOM.Props as P
+import Unsafe.Coerce (unsafeCoerce)
 
 -- Combinator Widgets, at a higher level than those in Concur.React.DOM
 
--- BIG TODO: Use ShiftMap where ever possible
+-- BIG HACK! We use UnsafeCoerce to allow this to typecheck. This MIGHT cause RUNTIME errors! Verify!
 
 -- | Wrap a widget with a node that can have eventHandlers attached
-elProps :: forall a. NodeTag -> Array (Props a) -> Widget HTML a -> Widget HTML a
-elProps e props = wrapViewEvent \h v -> [e (map (mkProp h) props) v]
+elProps :: forall m a. ShiftMap (Widget HTML) m => NodeTag -> Array (Props a) -> m a -> m a
+elProps e props = shiftMap (wrapViewEvent \h v -> [e (map (mkProp h) (unsafeCoerce props)) v])
 
 -- | Wrap some widgets with a node that can have eventHandlers attached
-elProps' :: forall a. NodeTag -> Array (Props a) -> Array (Widget HTML a) -> Widget HTML a
+elProps' :: forall m a. ShiftMap (Widget HTML) m => MultiAlternative m => NodeTag -> Array (Props a) -> Array (m a) -> m a
 elProps' e props = elProps e props <<< orr
 
 -- Wrap a button around a widget

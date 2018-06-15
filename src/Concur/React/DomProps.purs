@@ -4,6 +4,8 @@ import Concur.Core (display, Widget)
 import Concur.React (HTML)
 import Concur.React.Props (Props)
 import Concur.React.Widgets (elProps')
+import Control.MultiAlternative (class MultiAlternative)
+import Control.ShiftMap (class ShiftMap)
 import Prelude (pure, (<<<))
 import React.DOM as D
 
@@ -14,8 +16,8 @@ import React.DOM as D
 text :: forall a. String -> Widget HTML a
 text = display <<< pure <<< D.text
 
-type El = forall a. Array (Props a) -> Array (Widget HTML a) -> Widget HTML a
-type El' = forall a. Array (Widget HTML a) -> Widget HTML a
+type El = forall m a. MultiAlternative m => ShiftMap (Widget HTML) m => Array (Props a) -> Array (m a) -> m a
+type El' = forall m a. MultiAlternative m => ShiftMap (Widget HTML) m => Array (m a) -> m a
 
 a :: El
 a = elProps' D.a
