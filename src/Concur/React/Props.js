@@ -1,7 +1,9 @@
 "use strict";
 
 exports.getEventTargetValueString = function(event) {
-    return event.target.value;
+    return function() {
+      return event.target.value;
+    };
 };
 
 exports.getKeyboardEventKeyString = function(event) {
@@ -12,6 +14,6 @@ exports.resetTargetValue = function(s) {
     return function(event) {
         return function() {
             event.target.value = s;
-        }
+        };
     };
 };
