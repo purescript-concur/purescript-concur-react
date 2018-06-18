@@ -17,6 +17,8 @@
 
 ## Documentation
 
+Work in progress tutorials are published in the [Concur Documentation site](https://github.com/ajnsit/concur-documentation/blob/master/README.md)
+
 API documentation is [published on Pursuit](https://pursuit.purescript.org/packages/purescript-concur-react).
 
 ## Installation
