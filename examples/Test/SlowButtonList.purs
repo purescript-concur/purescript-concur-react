@@ -7,7 +7,6 @@ import Concur.React (HTML)
 import Concur.React.DOM (button, div', text)
 import Concur.React.Props (onClick)
 import Control.Alt ((<|>))
-import Control.Monad.IOSync (runIOSync')
 import Data.Array ((..))
 import React.DOM as D
 import React.DOM.Props as P
@@ -35,4 +34,4 @@ slowButtonList = div' <<< map buttonize
 -- Use a lower level interface to create a large number of button views manually
 -- This is slightly better than the slow version, because it doesn't create individual aff actions for each button.
 fastButtonList :: Array Int -> Widget HTML Int
-fastButtonList arr = withViewEvent (\h -> map (\i -> D.button [P.onClick (const (runIOSync' (h i)))] [D.text (show i)]) arr)
+fastButtonList arr = withViewEvent (\h -> map (\i -> D.button [P.onClick (const (h i))] [D.text (show i)]) arr)

@@ -2,28 +2,29 @@ module Concur.React.Props where
 
 import Prelude
 
-import Control.Monad.Eff (Eff)
-import Control.Monad.Eff.Class (liftEff)
-import Control.Monad.IOSync (runIOSync', IOSync)
 import Data.Array (concatMap, intercalate)
-import Data.Maybe (Maybe(..), maybe)
-import React (Event, KeyboardEvent, MouseEvent, handle)
+import Data.Maybe (Maybe, maybe)
+import Data.Nullable (Nullable)
+import Effect (Effect)
+import Effect.Uncurried (mkEffectFn1)
+import React (ReactRef)
 import React.DOM.Props as P
+import React.SyntheticEvent (SyntheticAnimationEvent, SyntheticClipboardEvent, SyntheticCompositionEvent, SyntheticEvent, SyntheticFocusEvent, SyntheticInputEvent, SyntheticKeyboardEvent, SyntheticMouseEvent, SyntheticTouchEvent, SyntheticTransitionEvent, SyntheticUIEvent, SyntheticWheelEvent)
 
-data Props a = PrimProp P.Props | Handler ((a -> IOSync Unit) -> P.Props)
+data Props a = PrimProp P.Props | Handler ((a -> Effect Unit) -> P.Props)
 
 instance functorProps :: Functor Props where
   map _ (PrimProp p) = PrimProp p
   map f (Handler h) = Handler \k -> h (k <<< f)
 
 -- | Internal. Do not use. Use unsafeMkProp, or unsafeMkPropHandler instead.
-mkProp :: forall a. (a -> IOSync Unit) -> Props a -> P.Props
+mkProp :: forall a. (a -> Effect Unit) -> Props a -> P.Props
 mkProp _ (PrimProp a) = a
 mkProp h (Handler f) = f h
 
 -- | Construct a custom prop handler
 unsafeMkPropHandler :: forall a. String -> Props a
-unsafeMkPropHandler s = Handler \f -> P.unsafeMkProps s (handle (\e -> runIOSync' (f e)))
+unsafeMkPropHandler s = Handler \f -> P.unsafeMkProps s (mkEffectFn1 f)
 
 -- | Construct a custom key value prop
 unsafeMkProp :: forall a. String -> a -> Props a
@@ -33,7 +34,7 @@ unsafeMkProp s v = PrimProp (P.unsafeMkProps s v)
 classList :: forall a. Array (Maybe String) -> Props a
 classList = className <<< intercalate " " <<< concatMap (maybe [] (\s -> [s]))
 
--- The standard set of props
+-- The Standard Set of Props
 
 aria :: forall ariaAttrs a. { | ariaAttrs } -> Props a
 aria = PrimProp <<< P.aria
@@ -484,130 +485,422 @@ security = PrimProp <<< P.security
 unselectable :: forall a. Boolean -> Props a
 unselectable = PrimProp <<< P.unselectable
 
--- | Event producing props.
--- | React's event objects are reused ("for efficiency") and thus are not usable outside
--- | of the immediate event handler. This means that a prop that returns a React Event is not useful by itself.
--- | If you want to fetch some properties from the event object, you can use one of the appropriate methods in this module.
+onAnimationStart :: Props SyntheticAnimationEvent
+onAnimationStart = Handler P.onAnimationStart
 
-onAnimationStart :: Props Event
-onAnimationStart = Handler \k -> P.onAnimationStart (runIOSync' <<< k)
+onAnimationEnd :: Props SyntheticAnimationEvent
+onAnimationEnd = Handler P.onAnimationEnd
 
-onAnimationEnd :: Props Event
-onAnimationEnd = Handler \k -> P.onAnimationEnd (runIOSync' <<< k)
+onAnimationIteration :: Props SyntheticAnimationEvent
+onAnimationIteration = Handler P.onAnimationIteration
 
-onAnimationIteration :: Props Event
-onAnimationIteration = Handler \k -> P.onAnimationIteration (runIOSync' <<< k)
+onTransitionEnd :: Props SyntheticTransitionEvent
+onTransitionEnd = Handler P.onTransitionEnd
 
-onTransitionEnd :: Props Event
-onTransitionEnd = Handler \k -> P.onTransitionEnd (runIOSync' <<< k)
+onToggle :: Props SyntheticEvent
+onToggle = Handler P.onToggle
 
-onLoad :: Props Event
-onLoad = Handler \k -> P.onLoad (runIOSync' <<< k)
+onError :: Props SyntheticEvent
+onError = Handler P.onError
 
-onCopy :: Props Event
-onCopy = Handler \k -> P.onCopy (runIOSync' <<< k)
+onLoad :: Props SyntheticEvent
+onLoad = Handler P.onLoad
 
-onCut :: Props Event
-onCut = Handler \k -> P.onCut (runIOSync' <<< k)
+onAbort :: Props SyntheticEvent
+onAbort = Handler P.onAbort
 
-onPaste :: Props Event
-onPaste = Handler \k -> P.onPaste (runIOSync' <<< k)
+onCanPlay :: Props SyntheticEvent
+onCanPlay = Handler P.onCanPlay
 
-onKeyDown :: Props KeyboardEvent
-onKeyDown = Handler \k -> P.onKeyDown (runIOSync' <<< k)
+onCanPlayThrough :: Props SyntheticEvent
+onCanPlayThrough = Handler P.onCanPlayThrough
 
-onKeyPress :: Props KeyboardEvent
-onKeyPress = Handler \k -> P.onKeyPress (runIOSync' <<< k)
+onDurationChange :: Props SyntheticEvent
+onDurationChange = Handler P.onDurationChange
 
-onKeyUp :: Props KeyboardEvent
-onKeyUp = Handler \k -> P.onKeyUp (runIOSync' <<< k)
+onEmptied :: Props SyntheticEvent
+onEmptied = Handler P.onEmptied
 
-onFocus :: Props Event
-onFocus = Handler \k -> P.onFocus (runIOSync' <<< k)
+onEncrypted :: Props SyntheticEvent
+onEncrypted = Handler P.onEncrypted
 
-onBlur :: Props Event
-onBlur = Handler \k -> P.onBlur (runIOSync' <<< k)
+onEnded :: Props SyntheticEvent
+onEnded = Handler P.onEnded
 
-onChange :: Props Event
-onChange = Handler \k -> P.onChange (runIOSync' <<< k)
+onLoadedData :: Props SyntheticEvent
+onLoadedData = Handler P.onLoadedData
 
-onInput :: Props Event
-onInput = Handler \k -> P.onInput (runIOSync' <<< k)
+onLoadedMetadata :: Props SyntheticEvent
+onLoadedMetadata = Handler P.onLoadedMetadata
 
-onInvalid :: Props Event
-onInvalid = Handler \k -> P.onInvalid (runIOSync' <<< k)
+onLoadStart :: Props SyntheticEvent
+onLoadStart = Handler P.onLoadStart
 
-onSubmit :: Props Event
-onSubmit = Handler \k -> P.onSubmit (runIOSync' <<< k)
+onPause :: Props SyntheticEvent
+onPause = Handler P.onPause
 
-onClick :: Props Event
-onClick = Handler \k -> P.onClick (runIOSync' <<< k)
+onPlay :: Props SyntheticEvent
+onPlay = Handler P.onPlay
 
-onDoubleClick :: Props Event
-onDoubleClick = Handler \k -> P.onDoubleClick (runIOSync' <<< k)
+onPlaying :: Props SyntheticEvent
+onPlaying = Handler P.onPlaying
 
-onDrag :: Props Event
-onDrag = Handler \k -> P.onDrag (runIOSync' <<< k)
+onProgress :: Props SyntheticEvent
+onProgress = Handler P.onProgress
 
-onDragEnd :: Props Event
-onDragEnd = Handler \k -> P.onDragEnd (runIOSync' <<< k)
+onRateChange :: Props SyntheticEvent
+onRateChange = Handler P.onRateChange
 
-onDragEnter :: Props Event
-onDragEnter = Handler \k -> P.onDragEnter (runIOSync' <<< k)
+onSeeked :: Props SyntheticEvent
+onSeeked = Handler P.onSeeked
 
-onDragExit :: Props Event
-onDragExit = Handler \k -> P.onDragExit (runIOSync' <<< k)
+onSeeking :: Props SyntheticEvent
+onSeeking = Handler P.onSeeking
 
-onDragLeave :: Props Event
-onDragLeave = Handler \k -> P.onDragLeave (runIOSync' <<< k)
+onStalled :: Props SyntheticEvent
+onStalled = Handler P.onStalled
 
-onDragOver :: Props Event
-onDragOver = Handler \k -> P.onDragOver (runIOSync' <<< k)
+onSuspend :: Props SyntheticEvent
+onSuspend = Handler P.onSuspend
 
-onDragStart :: Props Event
-onDragStart = Handler \k -> P.onDragStart (runIOSync' <<< k)
+onTimeUpdate :: Props SyntheticEvent
+onTimeUpdate = Handler P.onTimeUpdate
 
-onDrop :: Props Event
-onDrop = Handler \k -> P.onDrop (runIOSync' <<< k)
+onVolumeChange :: Props SyntheticEvent
+onVolumeChange = Handler P.onVolumeChange
 
-onMouseDown :: Props MouseEvent
-onMouseDown = Handler \k -> P.onMouseDown (runIOSync' <<< k)
+onWaiting :: Props SyntheticEvent
+onWaiting = Handler P.onWaiting
 
-onMouseEnter :: Props MouseEvent
-onMouseEnter = Handler \k -> P.onMouseEnter (runIOSync' <<< k)
+onCopy :: Props SyntheticClipboardEvent
+onCopy = Handler P.onCopy
 
-onMouseLeave :: Props MouseEvent
-onMouseLeave = Handler \k -> P.onMouseLeave (runIOSync' <<< k)
+onCut :: Props SyntheticClipboardEvent
+onCut = Handler P.onCut
 
-onMouseMove :: Props MouseEvent
-onMouseMove = Handler \k -> P.onMouseMove (runIOSync' <<< k)
+onPaste :: Props SyntheticClipboardEvent
+onPaste = Handler P.onPaste
 
-onMouseOut :: Props MouseEvent
-onMouseOut = Handler \k -> P.onMouseOut (runIOSync' <<< k)
+onCompositionEnd :: Props SyntheticCompositionEvent
+onCompositionEnd = Handler P.onCompositionEnd
 
-onMouseOver :: Props MouseEvent
-onMouseOver = Handler \k -> P.onMouseOver (runIOSync' <<< k)
+onCompositionStart :: Props SyntheticCompositionEvent
+onCompositionStart = Handler P.onCompositionStart
 
-onMouseUp :: Props MouseEvent
-onMouseUp = Handler \k -> P.onMouseUp (runIOSync' <<< k)
+onCompositionUpdate :: Props SyntheticCompositionEvent
+onCompositionUpdate = Handler P.onCompositionUpdate
 
-onTouchCancel :: Props Event
-onTouchCancel = Handler \k -> P.onTouchCancel (runIOSync' <<< k)
+onKeyDown :: Props SyntheticKeyboardEvent
+onKeyDown = Handler P.onKeyDown
 
-onTouchEnd :: Props Event
-onTouchEnd = Handler \k -> P.onTouchEnd (runIOSync' <<< k)
+onKeyPress :: Props SyntheticKeyboardEvent
+onKeyPress = Handler P.onKeyPress
 
-onTouchMove :: Props Event
-onTouchMove = Handler \k -> P.onTouchMove (runIOSync' <<< k)
+onKeyUp :: Props SyntheticKeyboardEvent
+onKeyUp = Handler P.onKeyUp
 
-onTouchStart :: Props Event
-onTouchStart = Handler \k -> P.onTouchStart (runIOSync' <<< k)
+onFocus :: Props SyntheticFocusEvent
+onFocus = Handler P.onFocus
 
-onScroll :: Props Event
-onScroll = Handler \k -> P.onScroll (runIOSync' <<< k)
+onBlur :: Props SyntheticFocusEvent
+onBlur = Handler P.onBlur
 
-onWheel :: Props Event
-onWheel = Handler \k -> P.onWheel (runIOSync' <<< k)
+onChange :: Props SyntheticInputEvent
+onChange = Handler P.onChange
+
+onInput :: Props SyntheticInputEvent
+onInput = Handler P.onInput
+
+onInvalid :: Props SyntheticInputEvent
+onInvalid = Handler P.onInvalid
+
+onSubmit :: Props SyntheticInputEvent
+onSubmit = Handler P.onSubmit
+
+onClick :: Props SyntheticMouseEvent
+onClick = Handler P.onClick
+
+onContextMenu :: Props SyntheticMouseEvent
+onContextMenu = Handler P.onContextMenu
+
+onDoubleClick :: Props SyntheticMouseEvent
+onDoubleClick = Handler P.onDoubleClick
+
+onDrag :: Props SyntheticMouseEvent
+onDrag = Handler P.onDrag
+
+onDragEnd :: Props SyntheticMouseEvent
+onDragEnd = Handler P.onDragEnd
+
+onDragEnter :: Props SyntheticMouseEvent
+onDragEnter = Handler P.onDragEnter
+
+onDragExit :: Props SyntheticMouseEvent
+onDragExit = Handler P.onDragExit
+
+onDragLeave :: Props SyntheticMouseEvent
+onDragLeave = Handler P.onDragLeave
+
+onDragOver :: Props SyntheticMouseEvent
+onDragOver = Handler P.onDragOver
+
+onDragStart :: Props SyntheticMouseEvent
+onDragStart = Handler P.onDragStart
+
+onDrop :: Props SyntheticMouseEvent
+onDrop = Handler P.onDrop
+
+onMouseDown :: Props SyntheticMouseEvent
+onMouseDown = Handler P.onMouseDown
+
+onMouseEnter :: Props SyntheticMouseEvent
+onMouseEnter = Handler P.onMouseEnter
+
+onMouseLeave :: Props SyntheticMouseEvent
+onMouseLeave = Handler P.onMouseLeave
+
+onMouseMove :: Props SyntheticMouseEvent
+onMouseMove = Handler P.onMouseMove
+
+onMouseOut :: Props SyntheticMouseEvent
+onMouseOut = Handler P.onMouseOut
+
+onMouseOver :: Props SyntheticMouseEvent
+onMouseOver = Handler P.onMouseOver
+
+onMouseUp :: Props SyntheticMouseEvent
+onMouseUp = Handler P.onMouseUp
+
+onSelect :: Props SyntheticEvent
+onSelect = Handler P.onSelect
+
+onTouchCancel :: Props SyntheticTouchEvent
+onTouchCancel = Handler P.onTouchCancel
+
+onTouchEnd :: Props SyntheticTouchEvent
+onTouchEnd = Handler P.onTouchEnd
+
+onTouchMove :: Props SyntheticTouchEvent
+onTouchMove = Handler P.onTouchMove
+
+onTouchStart :: Props SyntheticTouchEvent
+onTouchStart = Handler P.onTouchStart
+
+onScroll :: Props SyntheticUIEvent
+onScroll = Handler P.onScroll
+
+onWheel :: Props SyntheticWheelEvent
+onWheel = Handler P.onWheel
+
+onAnimationStartCapture :: Props SyntheticAnimationEvent
+onAnimationStartCapture = Handler P.onAnimationStartCapture
+
+onAnimationEndCapture :: Props SyntheticAnimationEvent
+onAnimationEndCapture = Handler P.onAnimationEndCapture
+
+onAnimationIterationCapture :: Props SyntheticAnimationEvent
+onAnimationIterationCapture = Handler P.onAnimationIterationCapture
+
+onTransitionEndCapture :: Props SyntheticTransitionEvent
+onTransitionEndCapture = Handler P.onTransitionEndCapture
+
+onToggleCapture :: Props SyntheticEvent
+onToggleCapture = Handler P.onToggleCapture
+
+onErrorCapture :: Props SyntheticEvent
+onErrorCapture = Handler P.onErrorCapture
+
+onLoadCapture :: Props SyntheticEvent
+onLoadCapture = Handler P.onLoadCapture
+
+onAbortCapture :: Props SyntheticEvent
+onAbortCapture = Handler P.onAbortCapture
+
+onCanPlayCapture :: Props SyntheticEvent
+onCanPlayCapture = Handler P.onCanPlayCapture
+
+onCanPlayThroughCapture :: Props SyntheticEvent
+onCanPlayThroughCapture = Handler P.onCanPlayThroughCapture
+
+onDurationChangeCapture :: Props SyntheticEvent
+onDurationChangeCapture = Handler P.onDurationChangeCapture
+
+onEmptiedCapture :: Props SyntheticEvent
+onEmptiedCapture = Handler P.onEmptiedCapture
+
+onEncryptedCapture :: Props SyntheticEvent
+onEncryptedCapture = Handler P.onEncryptedCapture
+
+onEndedCapture :: Props SyntheticEvent
+onEndedCapture = Handler P.onEndedCapture
+
+onLoadedDataCapture :: Props SyntheticEvent
+onLoadedDataCapture = Handler P.onLoadedDataCapture
+
+onLoadedMetadataCapture :: Props SyntheticEvent
+onLoadedMetadataCapture = Handler P.onLoadedMetadataCapture
+
+onLoadStartCapture :: Props SyntheticEvent
+onLoadStartCapture = Handler P.onLoadStartCapture
+
+onPauseCapture :: Props SyntheticEvent
+onPauseCapture = Handler P.onPauseCapture
+
+onPlayCapture :: Props SyntheticEvent
+onPlayCapture = Handler P.onPlayCapture
+
+onPlayingCapture :: Props SyntheticEvent
+onPlayingCapture = Handler P.onPlayingCapture
+
+onProgressCapture :: Props SyntheticEvent
+onProgressCapture = Handler P.onProgressCapture
+
+onRateChangeCapture :: Props SyntheticEvent
+onRateChangeCapture = Handler P.onRateChangeCapture
+
+onSeekedCapture :: Props SyntheticEvent
+onSeekedCapture = Handler P.onSeekedCapture
+
+onSeekingCapture :: Props SyntheticEvent
+onSeekingCapture = Handler P.onSeekingCapture
+
+onStalledCapture :: Props SyntheticEvent
+onStalledCapture = Handler P.onStalledCapture
+
+onSuspendCapture :: Props SyntheticEvent
+onSuspendCapture = Handler P.onSuspendCapture
+
+onTimeUpdateCapture :: Props SyntheticEvent
+onTimeUpdateCapture = Handler P.onTimeUpdateCapture
+
+onVolumeChangeCapture :: Props SyntheticEvent
+onVolumeChangeCapture = Handler P.onVolumeChangeCapture
+
+onWaitingCapture :: Props SyntheticEvent
+onWaitingCapture = Handler P.onWaitingCapture
+
+onCopyCapture :: Props SyntheticClipboardEvent
+onCopyCapture = Handler P.onCopyCapture
+
+onCutCapture :: Props SyntheticClipboardEvent
+onCutCapture = Handler P.onCutCapture
+
+onPasteCapture :: Props SyntheticClipboardEvent
+onPasteCapture = Handler P.onPasteCapture
+
+onCompositionEndCapture :: Props SyntheticCompositionEvent
+onCompositionEndCapture = Handler P.onCompositionEndCapture
+
+onCompositionStartCapture :: Props SyntheticCompositionEvent
+onCompositionStartCapture = Handler P.onCompositionStartCapture
+
+onCompositionUpdateCapture :: Props SyntheticCompositionEvent
+onCompositionUpdateCapture = Handler P.onCompositionUpdateCapture
+
+onKeyDownCapture :: Props SyntheticKeyboardEvent
+onKeyDownCapture = Handler P.onKeyDownCapture
+
+onKeyPressCapture :: Props SyntheticKeyboardEvent
+onKeyPressCapture = Handler P.onKeyPressCapture
+
+onKeyUpCapture :: Props SyntheticKeyboardEvent
+onKeyUpCapture = Handler P.onKeyUpCapture
+
+onFocusCapture :: Props SyntheticFocusEvent
+onFocusCapture = Handler P.onFocusCapture
+
+onBlurCapture :: Props SyntheticFocusEvent
+onBlurCapture = Handler P.onBlurCapture
+
+onChangeCapture :: Props SyntheticInputEvent
+onChangeCapture = Handler P.onChangeCapture
+
+onInputCapture :: Props SyntheticInputEvent
+onInputCapture = Handler P.onInputCapture
+
+onInvalidCapture :: Props SyntheticInputEvent
+onInvalidCapture = Handler P.onInvalidCapture
+
+onSubmitCapture :: Props SyntheticInputEvent
+onSubmitCapture = Handler P.onSubmitCapture
+
+onClickCapture :: Props SyntheticMouseEvent
+onClickCapture = Handler P.onClickCapture
+
+onContextMenuCapture :: Props SyntheticMouseEvent
+onContextMenuCapture = Handler P.onContextMenuCapture
+
+onDoubleClickCapture :: Props SyntheticMouseEvent
+onDoubleClickCapture = Handler P.onDoubleClickCapture
+
+onDragCapture :: Props SyntheticMouseEvent
+onDragCapture = Handler P.onDragCapture
+
+onDragEndCapture :: Props SyntheticMouseEvent
+onDragEndCapture = Handler P.onDragEndCapture
+
+onDragEnterCapture :: Props SyntheticMouseEvent
+onDragEnterCapture = Handler P.onDragEnterCapture
+
+onDragExitCapture :: Props SyntheticMouseEvent
+onDragExitCapture = Handler P.onDragExitCapture
+
+onDragLeaveCapture :: Props SyntheticMouseEvent
+onDragLeaveCapture = Handler P.onDragLeaveCapture
+
+onDragOverCapture :: Props SyntheticMouseEvent
+onDragOverCapture = Handler P.onDragOverCapture
+
+onDragStartCapture :: Props SyntheticMouseEvent
+onDragStartCapture = Handler P.onDragStartCapture
+
+onDropCapture :: Props SyntheticMouseEvent
+onDropCapture = Handler P.onDropCapture
+
+onMouseDownCapture :: Props SyntheticMouseEvent
+onMouseDownCapture = Handler P.onMouseDownCapture
+
+onMouseEnterCapture :: Props SyntheticMouseEvent
+onMouseEnterCapture = Handler P.onMouseEnterCapture
+
+onMouseLeaveCapture :: Props SyntheticMouseEvent
+onMouseLeaveCapture = Handler P.onMouseLeaveCapture
+
+onMouseMoveCapture :: Props SyntheticMouseEvent
+onMouseMoveCapture = Handler P.onMouseMoveCapture
+
+onMouseOutCapture :: Props SyntheticMouseEvent
+onMouseOutCapture = Handler P.onMouseOutCapture
+
+onMouseOverCapture :: Props SyntheticMouseEvent
+onMouseOverCapture = Handler P.onMouseOverCapture
+
+onMouseUpCapture :: Props SyntheticMouseEvent
+onMouseUpCapture = Handler P.onMouseUpCapture
+
+onSelectCapture :: Props SyntheticEvent
+onSelectCapture = Handler P.onSelectCapture
+
+onTouchCancelCapture :: Props SyntheticTouchEvent
+onTouchCancelCapture = Handler P.onTouchCancelCapture
+
+onTouchEndCapture :: Props SyntheticTouchEvent
+onTouchEndCapture = Handler P.onTouchEndCapture
+
+onTouchMoveCapture :: Props SyntheticTouchEvent
+onTouchMoveCapture = Handler P.onTouchMoveCapture
+
+onTouchStartCapture :: Props SyntheticTouchEvent
+onTouchStartCapture = Handler P.onTouchStartCapture
+
+onScrollCapture :: Props SyntheticUIEvent
+onScrollCapture = Handler P.onScrollCapture
+
+onWheelCapture :: Props SyntheticWheelEvent
+onWheelCapture = Handler P.onWheelCapture
+
+ref :: Props (Nullable ReactRef)
+ref = Handler P.ref
 
 suppressContentEditableWarning :: forall a. Boolean -> Props a
 suppressContentEditableWarning = PrimProp <<< P.suppressContentEditableWarning
@@ -651,40 +944,3 @@ d = PrimProp <<< P.d
 
 viewBox :: forall a. String -> Props a
 viewBox = PrimProp <<< P.viewBox
-
---------------------------------------------------------------------------------
--- Event props
-
--- | Converts a prop to return the input target value instead of the event object
-inputValue :: Props Event -> Props String
-inputValue = mapMaybe (\e -> Just <$> liftEff (getEventTargetValueString e))
-
--- | Selectively invoke event handlers
--- | The prop does not return until the mapped function returns (Just val)
-mapMaybe :: forall a b. Show b => (a -> IOSync (Maybe b)) -> Props a -> Props b
-mapMaybe _ (PrimProp p) = PrimProp p
-mapMaybe f (Handler h) = Handler \k -> h (g k)
-  where
-    g k a = do
-      b' <- f a
-      case b' of
-        Just b -> k b
-        Nothing -> pure unit
-
--- | Special custom prop that only returns when the enter key is pressed.
--- Can't use Concur.React.Props.onKeyDown because that doesn't allow getting event information (i.e. value) in the handler
--- Also have to manually handle resetting the value of the input on enter.
-onHandleEnter :: Props String
-onHandleEnter = mapMaybe g (unsafeMkPropHandler "onKeyDown")
-  where
-    g e = if (getKeyboardEventKeyString e == "Enter")
-      then do
-        liftEff (resetTargetValue "" e)
-        Just <$> liftEff (getEventTargetValueString e)
-      else pure Nothing
-
--- Generic function to get info out of events
--- TODO: Move these to some other place
-foreign import getKeyboardEventKeyString :: Event -> String
-foreign import getEventTargetValueString :: Event -> forall eff. Eff eff String
-foreign import resetTargetValue :: forall eff. String -> Event -> Eff eff Unit

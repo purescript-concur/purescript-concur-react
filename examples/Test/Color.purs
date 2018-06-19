@@ -7,25 +7,31 @@ import Concur.Core.FRP (Signal, dyn, hold)
 import Concur.React (HTML)
 import Concur.React.DOM (button, text, textarea)
 import Concur.React.DOM as D
-import Concur.React.Props (inputValue, onChange, onClick, style, value)
+import Concur.React.Props (onChange, onClick, style, value)
+import Data.Array.NonEmpty (toArray)
 import Data.Either (either)
 import Data.Maybe (Maybe(..), maybe)
 import Data.String.Regex (match, regex)
 import Data.String.Regex.Flags (global)
 import Data.Traversable (sequence)
+import Unsafe.Coerce (unsafeCoerce)
 
 colorSignal :: String -> Signal HTML String
 colorSignal s = hold s do
-  s' <- D.div' [ D.text "Insert some color codes, or "
-              , button [onClick] [text "get an example"] $> exampleText
-              , D.div' [textarea [value s, inputValue onChange, style {width: "80%", height: "6em"}] []]
-              ]
+  s' <- D.div'
+    [ D.text "Insert some color codes, or "
+    , button [onClick] [text "get an example"] $> exampleText
+    , D.div' [textarea [value s, targetValue <$> onChange, style {width: "80%", height: "6em"}] []]
+    ]
   pure (colorSignal s')
+  where
+    -- This seems ridiculous
+    targetValue e = (unsafeCoerce e).target.value
 
 showColors :: String -> Signal HTML String
 showColors inp = hold inp do
   D.div [style { width : "80.0%" }]
-    (maybe [D.text "no colors found"] (map showColor) (matchInput inp))
+    (maybe [D.text "no colors found"] (map showColor <<< toArray) (matchInput inp))
   where
   matchInput input = either (const Nothing) (flip match input) (regex "#[0-9a-fA-F]{6}" global) >>= sequence
   showColor col = D.span [style (colstyle col)] [D.text col]

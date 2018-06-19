@@ -9,8 +9,6 @@ import Control.Comonad.Cofree (Cofree, hoistCofree, mkCofree, tail)
 import Control.Lazy (class Lazy)
 import Control.ShiftMap (class ShiftMap)
 import Data.Either (Either(..))
-import Data.Monoid (class Monoid)
-
 
 ----------
 -- SIGNALS
@@ -47,8 +45,6 @@ instance bindSignal :: Monoid v => Bind (Signal v) where
         in hold (extract sb) (mrestart <|> msplit)
 
 instance monadSignal :: Monoid v => Monad (Signal v)
-
-instance signalMonad :: Monoid v => Monad (Signal v)
 -- derive newtype instance sigMonadRec :: Monoid v => MonadRec (Sig v)
 
 instance shiftMapSignal :: ShiftMap (Widget v) (Signal v) where

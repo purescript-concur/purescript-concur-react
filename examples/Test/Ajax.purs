@@ -7,14 +7,16 @@ import Concur.React (HTML)
 import Concur.React.DOM (button, div', h4', p', text)
 import Concur.React.Props (onClick)
 import Control.Alt ((<|>))
-import Control.Monad.Aff.Class (liftAff)
-import Control.Monad.Eff.Class (liftEff)
-import Control.Monad.Eff.Console (log)
-import Data.Argonaut (class DecodeJson, Json, decodeJson, (.?))
+import Effect.Aff.Class (liftAff)
+import Effect.Class (liftEffect)
+import Effect.Console (log)
+import Data.Argonaut.Core (Json)
+import Data.Argonaut.Decode (class DecodeJson, decodeJson, (.?))
 import Data.Array (take)
 import Data.Either (Either(..))
 import Data.Traversable (traverse)
 import Network.HTTP.Affjax (get)
+import Network.HTTP.Affjax.Response as Response
 
 -- Fetches posts from reddit json
 newtype Post = Post
@@ -52,8 +54,8 @@ fetchReddit sub = div'
   where
     showPosts = button [onClick] [text "Fetch posts"] >>= \_ -> fetchPosts
     fetchPosts = do
-      liftEff (log ("Fetching posts from subreddit - " <> sub))
-      resp <- (liftAff (get ("https://www.reddit.com/r/" <> sub <> ".json"))) <|> (text "Loading...")
+      liftEffect (log ("Fetching posts from subreddit - " <> sub))
+      resp <- (liftAff (get Response.json ("https://www.reddit.com/r/" <> sub <> ".json"))) <|> (text "Loading...")
       let postsResp = do
             o <- decodeJson resp.response
             d1 <- o .? "data"

@@ -3,39 +3,36 @@ module Concur.Core where
 import Prelude
 
 import Control.Alternative (class Alternative)
-import Control.Monad.Aff (Aff, effCanceler, makeAff, never, runAff_)
-import Control.Monad.Aff.AVar (takeVar)
-import Control.Monad.Aff.Class (class MonadAff, liftAff)
-import Control.Monad.Aff.Unsafe (unsafeCoerceAff)
-import Control.Monad.Eff (Eff)
-import Control.Monad.Eff.AVar (makeEmptyVar, tryPutVar)
-import Control.Monad.Eff.Class (class MonadEff, liftEff)
-import Control.Monad.Eff.Console (log)
-import Control.Monad.Eff.Exception (Error)
 import Control.Monad.Free (Free, hoistFree, liftF, resume, wrap)
-import Control.Monad.IO (IO)
-import Control.Monad.IOSync (IOSync)
 import Control.Monad.Rec.Class (class MonadRec)
 import Control.MultiAlternative (class MultiAlternative, orr)
 import Control.Parallel.Class (parallel, sequential)
 import Control.Plus (class Alt, class Plus, alt, empty)
+import Control.ShiftMap (class ShiftMap)
 import Data.Array.NonEmpty (NonEmptyArray, fromArray, updateAt)
 import Data.Either (Either(..))
 import Data.FoldableWithIndex (foldlWithIndex)
 import Data.Maybe (Maybe(Nothing, Just), fromMaybe)
-import Data.Monoid (class Monoid, mempty)
 import Data.Semigroup.Foldable (foldMap1)
 import Data.Traversable (sequence)
 import Data.Tuple (Tuple(..))
+import Effect (Effect)
+import Effect.AVar (empty, tryPut) as EVar
+import Effect.Aff (Aff, effectCanceler, makeAff, never, runAff_)
+import Effect.Aff.AVar (take) as AVar
+import Effect.Aff.Class (class MonadAff, liftAff)
+import Effect.Class (class MonadEffect, liftEffect)
+import Effect.Console (log)
+import Effect.Exception (Error)
 
 type WidgetStepRecord v a =
   { view :: v
-  , cont :: IO a
+  , cont :: Aff a
   }
 
-newtype WidgetStep v a = WidgetStep (IOSync (WidgetStepRecord v a))
+newtype WidgetStep v a = WidgetStep (Effect (WidgetStepRecord v a))
 
-unWidgetStep :: forall v a. WidgetStep v a -> IOSync (WidgetStepRecord v a)
+unWidgetStep :: forall v a. WidgetStep v a -> Effect (WidgetStepRecord v a)
 unWidgetStep (WidgetStep x) = x
 
 instance functorWidgetStep :: Functor (WidgetStep v) where
@@ -55,6 +52,9 @@ derive newtype instance widgetApplicative :: Applicative (Widget v)
 derive newtype instance widgetApply :: Apply (Widget v)
 instance widgetMonad :: Monad (Widget v)
 derive newtype instance widgetMonadRec :: MonadRec (Widget v)
+
+instance widgetShiftMap :: ShiftMap (Widget v) (Widget v) where
+  shiftMap = identity
 
 -- A Widget combinator which can combine two widgets in a layout
 type WidgetCombinator v = forall a. Widget v a -> Widget v a -> Widget v a
@@ -77,7 +77,7 @@ instance widgetMultiAlternative :: Monoid v => MultiAlternative (Widget v) where
       comb wfs = case sequence (map (flipEither <<< resume) wfs) of
         Left a -> pure a
         Right wsm -> wrap $ WidgetStep do
-            -- 'IOSync.sequence'
+            -- 'Effect.sequence'
             ws <- sequence $ map unWidgetStep wsm
             pure { view: foldMap1 _.view ws
                  , cont: merge ws (map _.cont ws)
@@ -85,14 +85,14 @@ instance widgetMultiAlternative :: Monoid v => MultiAlternative (Widget v) where
 
       merge :: forall v' a. Monoid v'
           => NonEmptyArray (WidgetStepRecord v' (Free (WidgetStep v') a))
-          -> NonEmptyArray (IO (Free (WidgetStep v') a))
-          -> IO (Free (WidgetStep v') a)
+          -> NonEmptyArray (Aff (Free (WidgetStep v') a))
+          -> Aff (Free (WidgetStep v') a)
       merge ws wscs = do
-        -- wsm' is discharged wsm, with all the IO action run exactly once
+        -- wsm' is discharged wsm, with all the Aff action run exactly once
         let wsm = map (wrap <<< WidgetStep <<< pure) ws
         -- TODO: We know the array is non-empty. We need something like foldl1WithIndex.
         Tuple i e <- sequential (foldlWithIndex (\i r w -> alt (parallel (map (Tuple i) w)) r) empty wscs)
-        -- TODO: All the IO in ws is already discharged. Use a more efficient way than comb to process it
+        -- TODO: All the Aff in ws is already discharged. Use a more efficient way than comb to process it
         -- TODO: Also, more importantly, we would like to not have to cancel running fibers unless one of them returns a result
         pure $ comb (fromMaybe wsm (updateAt i e wsm))
 
@@ -129,54 +129,62 @@ display :: forall a v. v -> Widget v a
 display v = Widget (liftF (displayStep v))
 
 -- Sync but Non blocking eff
-effAction :: forall a v eff. v -> Eff eff a -> Widget v a
-effAction v eff = affAction v $ liftEff eff
+effAction :: forall a v. v -> Effect a -> Widget v a
+effAction v eff = affAction v $ liftEffect eff
 
 -- Sync and blocking eff
 -- WARNING: UNSAFE: This will block the UI rendering
-unsafeBlockingEffAction :: forall a v eff. v -> Eff eff a -> Widget v a
+unsafeBlockingEffAction :: forall a v. v -> Effect a -> Widget v a
 unsafeBlockingEffAction v eff = Widget $ liftF $ WidgetStep $
-  liftEff eff >>= \a -> pure { view: v, cont: pure a }
+  liftEffect eff >>= \a -> pure { view: v, cont: pure a }
 
 -- Async aff
-affAction :: forall a v eff. v -> Aff eff a -> Widget v a
+affAction :: forall a v. v -> Aff a -> Widget v a
 affAction v aff = Widget $ liftF $ WidgetStep do
-  var <- liftEff do
-    var <- makeEmptyVar
-    runAff_ (handler var) (unsafeCoerceAff aff)
+  var <- liftEffect do
+    var <- EVar.empty
+    runAff_ (handler var) aff
     pure var
-  pure { view: v, cont: liftAff (takeVar var) }
+  pure { view: v, cont: liftAff (AVar.take var) }
   where
     handler _   (Left e) = log ("Aff failed - " <> show e)
-    handler var (Right a) = void (tryPutVar a var)
+    handler var (Right a) = void (EVar.tryPut a var)
 
 -- Async callback
-asyncAction :: forall eff v a. v -> ((Either Error a -> Eff eff Unit) -> Eff eff (Eff eff Unit)) -> Widget v a
-asyncAction v handler = affAction v (makeAff (map effCanceler <<< handler))
+asyncAction :: forall v a. v -> ((Either Error a -> Effect Unit) -> Effect (Effect Unit)) -> Widget v a
+asyncAction v handler = affAction v (makeAff (map effectCanceler <<< handler))
 
-instance widgetMonadEff :: Monoid v => MonadEff eff (Widget v) where
-  liftEff = effAction mempty
+instance widgetMonadEff :: Monoid v => MonadEffect (Widget v) where
+  liftEffect = effAction mempty
 
-instance widgetMonadAff :: Monoid v => MonadAff eff (Widget v) where
+instance widgetMonadAff :: Monoid v => MonadAff (Widget v) where
   liftAff = affAction mempty
 
 -- Helpers for some very common use of unsafe blocking io
 
 -- Construct a widget from a primitive view event
-withViewEvent :: forall a v. ((a -> IOSync Unit) -> v) -> Widget v a
+withViewEvent :: forall a v. ((a -> Effect Unit) -> v) -> Widget v a
 withViewEvent mkView = Widget (liftF (WidgetStep (do
-     v <- liftEff makeEmptyVar
-     pure { view: mkView (\a -> void (liftEff (tryPutVar a v))), cont: liftAff (takeVar v) }
+     v <- liftEffect EVar.empty
+     pure { view: mkView (\a -> void (liftEffect (EVar.tryPut a v))), cont: liftAff (AVar.take v) }
   )))
 
 -- | Construct a widget, by wrapping an existing widget in a view event
-wrapViewEvent :: forall a v. ((a -> IOSync Unit) -> v -> v) -> Widget v a -> Widget v a
+wrapViewEvent :: forall a v. ((a -> Effect Unit) -> v -> v) -> Widget v a -> Widget v a
 wrapViewEvent mkView (Widget w) = Widget $
   case resume w of
     Right a -> pure a
     Left (WidgetStep wsm) -> wrap $ WidgetStep do
       ws <- wsm
-      var <- liftEff makeEmptyVar
-      let view' = mkView (\a -> void (liftEff (tryPutVar (pure a) var))) ws.view
-      let cont' = sequential (alt (parallel (liftAff (takeVar var))) (parallel ws.cont))
+      var <- liftEffect EVar.empty
+      let view' = mkView (\a -> void (liftEffect (EVar.tryPut (pure a) var))) ws.view
+      let cont' = sequential (alt (parallel (liftAff (AVar.take var))) (parallel ws.cont))
       pure {view: view', cont: cont'}
+
+-- | Construct a widget with just props
+mkLeafWidget :: forall a v. ((a -> Effect Unit) -> v) -> Widget v a
+mkLeafWidget mkView = Widget $ wrap $ WidgetStep do
+  var <- liftEffect EVar.empty
+  let view' = mkView (\a -> void (liftEffect (EVar.tryPut (pure a) var)))
+  let cont' = liftAff (AVar.take var)
+  pure {view: view', cont: cont'}

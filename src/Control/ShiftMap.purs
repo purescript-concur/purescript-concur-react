@@ -14,9 +14,6 @@ class ShiftMap s t where
 
 -- Instances for common transformers
 
-instance idShiftMap :: ShiftMap m m where
-  shiftMap = id
-
 instance exceptShiftMap :: ShiftMap m (ExceptT e m) where
   shiftMap = mapExceptT
 
