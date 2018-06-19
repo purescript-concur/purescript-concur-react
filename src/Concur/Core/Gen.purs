@@ -8,7 +8,6 @@ import Control.Monad.Free (Free, hoistFree, liftF, resume, wrap)
 import Data.Array (foldr, snoc)
 import Data.Either (Either(..))
 import Data.Maybe (Maybe(..))
-import Data.Monoid (class Monoid)
 import Data.Tuple (Tuple(..))
 
 -- Internal data types
