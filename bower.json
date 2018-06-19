@@ -12,23 +12,26 @@
     "url": "git://github.com/ajnsit/purescript-concur.git"
   },
   "dependencies": {
-    "purescript-react": "^5.1.0",
-    "purescript-arrays": "^4.2.2",
-    "purescript-aff": "^4.0.2",
-    "purescript-tailrec": "^3.3.0",
-    "purescript-free": "https://github.com/purescript/purescript-free.git#v4.3.0",
-    "purescript-io": "https://github.com/ajnsit/purescript-io.git#v5.0.0-patch1",
-    "purescript-folds": "^3.1.0",
-    "purescript-nonempty": "^4.2.0",
-    "purescript-foldable-traversable": "^3.7.1",
-    "purescript-react-dom": "^5.0.0"
+    "purescript-react": "^6.0.0",
+    "purescript-arrays": "^5.0.0",
+    "purescript-aff": "^5.0.0",
+    "purescript-avar": "^3.0.0",
+    "purescript-tailrec": "^4.0.0",
+    "purescript-free": "^5.0.0",
+    "purescript-nonempty": "^5.0.0",
+    "purescript-foldable-traversable": "^4.0.0",
+    "purescript-react": "^6.0.0",
+    "purescript-react-dom": "^6.0.0",
+    "purescript-web-dom": "^1.0.0",
+    "purescript-web-html": "^1.0.0"
   },
   "devDependencies": {
-    "purescript-affjax": "^5.0.0",
-    "purescript-argonaut": "^3.1.0",
-    "purescript-console": "^3.0.0",
-    "purescript-datetime": "^3.4.1",
-    "purescript-now": "^3.0.0",
-    "purescript-psci-support": "^3.0.0"
+    "purescript-affjax": "^6.0.0",
+    "purescript-argonaut-core": "^4.0.0",
+    "purescript-argonaut-codecs": "^4.0.0",
+    "purescript-console": "^4.1.0",
+    "purescript-datetime": "^4.0.0",
+    "purescript-now": "^4.0.0",
+    "purescript-psci-support": "^4.0.0"
   }
 }
