@@ -136,12 +136,12 @@ effAction v eff = affAction v $ liftEffect eff
 -- WARNING: UNSAFE: This will block the UI rendering
 unsafeBlockingEffAction :: forall a v. v -> Effect a -> Widget v a
 unsafeBlockingEffAction v eff = Widget $ liftF $ WidgetStep $
-  liftEffect eff >>= \a -> pure { view: v, cont: pure a }
+  eff >>= \a -> pure { view: v, cont: pure a }
 
 -- Async aff
 affAction :: forall a v. v -> Aff a -> Widget v a
 affAction v aff = Widget $ liftF $ WidgetStep do
-  var <- liftEffect do
+  var <- do
     var <- EVar.empty
     runAff_ (handler var) aff
     pure var
@@ -165,8 +165,8 @@ instance widgetMonadAff :: Monoid v => MonadAff (Widget v) where
 -- Construct a widget from a primitive view event
 withViewEvent :: forall a v. ((a -> Effect Unit) -> v) -> Widget v a
 withViewEvent mkView = Widget (liftF (WidgetStep (do
-     v <- liftEffect EVar.empty
-     pure { view: mkView (\a -> void (liftEffect (EVar.tryPut a v))), cont: liftAff (AVar.take v) }
+     v <- EVar.empty
+     pure { view: mkView (\a -> void (EVar.tryPut a v)), cont: liftAff (AVar.take v) }
   )))
 
 -- | Construct a widget, by wrapping an existing widget in a view event
@@ -176,15 +176,15 @@ wrapViewEvent mkView (Widget w) = Widget $
     Right a -> pure a
     Left (WidgetStep wsm) -> wrap $ WidgetStep do
       ws <- wsm
-      var <- liftEffect EVar.empty
-      let view' = mkView (\a -> void (liftEffect (EVar.tryPut (pure a) var))) ws.view
+      var <- EVar.empty
+      let view' = mkView (\a -> void (EVar.tryPut (pure a) var)) ws.view
       let cont' = sequential (alt (parallel (liftAff (AVar.take var))) (parallel ws.cont))
       pure {view: view', cont: cont'}
 
 -- | Construct a widget with just props
 mkLeafWidget :: forall a v. ((a -> Effect Unit) -> v) -> Widget v a
 mkLeafWidget mkView = Widget $ wrap $ WidgetStep do
-  var <- liftEffect EVar.empty
-  let view' = mkView (\a -> void (liftEffect (EVar.tryPut (pure a) var)))
+  var <- EVar.empty
+  let view' = mkView (\a -> void (EVar.tryPut (pure a) var))
   let cont' = liftAff (AVar.take var)
   pure {view: view', cont: cont'}
