@@ -3,11 +3,9 @@ module Concur.Core.FRP where
 import Prelude
 
 import Concur.Core (Widget, WidgetCombinator)
-import Control.Alternative (empty, (<|>))
-import Control.Comonad (class Comonad, class Extend, extract)
-import Control.Cofree (Cofree, hoistCofree, mkCofree, tail)
-import Control.Lazy (class Lazy)
-import Control.ShiftMap (class ShiftMap)
+import Control.Alternative (empty)
+import Control.Comonad (extract)
+import Control.Cofree (Cofree, mkCofree, tail)
 import Data.Either (Either(..))
 import Data.Maybe (Maybe(..))
 
@@ -25,6 +23,9 @@ type Signal v a = Cofree (Widget v) a
 -- | Construct a signal from an initial value, and a step widget
 hold :: forall v a. a -> Widget v (Signal v a) -> Signal v a
 hold = mkCofree
+
+display :: forall v. Widget v (Signal v Unit) -> Signal v Unit
+display w = hold unit w
 
 -- | A constant signal
 always :: forall v a. Monoid v => a -> Signal v a
@@ -49,7 +50,7 @@ loopW a f = hold a (go <$> f a)
   where go x = loopW x f
 
 -- | Loop a signal so that the return value is passed to the beginning again.
-loopS :: forall v a. Monoid v => Show a => a -> (a -> Signal v a) -> Signal v a
+loopS :: forall v a. Monoid v => a -> (a -> Signal v a) -> Signal v a
 loopS a f = hold (extract this) do
   s <- update this
   pure (loopS (extract s) f)
