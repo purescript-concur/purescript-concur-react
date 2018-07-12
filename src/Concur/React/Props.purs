@@ -10,6 +10,7 @@ import Effect.Uncurried (mkEffectFn1)
 import React (ReactRef)
 import React.DOM.Props as P
 import React.SyntheticEvent (SyntheticAnimationEvent, SyntheticClipboardEvent, SyntheticCompositionEvent, SyntheticEvent, SyntheticFocusEvent, SyntheticInputEvent, SyntheticKeyboardEvent, SyntheticMouseEvent, SyntheticTouchEvent, SyntheticTransitionEvent, SyntheticUIEvent, SyntheticWheelEvent)
+import Unsafe.Coerce (unsafeCoerce)
 
 data Props a = PrimProp P.Props | Handler ((a -> Effect Unit) -> P.Props)
 
@@ -33,6 +34,29 @@ unsafeMkProp s v = PrimProp (P.unsafeMkProps s v)
 -- | Shortcut for the common case of a list of classes
 classList :: forall a. Array (Maybe String) -> Props a
 classList = className <<< intercalate " " <<< concatMap (maybe [] (\s -> [s]))
+
+-- | Use this to filter the output of an event handler prop.
+-- | For example, to only handle the enter key - `filterProp isEnterEvent onKeyDown`
+filterProp :: forall a. (a -> Boolean) -> Props a -> Props a
+filterProp _ p@(PrimProp _) = p
+filterProp ok (Handler g) = Handler \h -> (g \a ->
+  if ok a then h a else pure unit)
+
+-- FFI + Util stuff
+-- | Get the event target's current value
+-- | HACK: This is brittle thanks to React's event object reuse!
+-- | Safest is to use it directly on the prop like `unsafeTargetValue <$> onKeyDown`
+unsafeTargetValue :: SyntheticKeyboardEvent -> String
+unsafeTargetValue e = (unsafeCoerce e).target.value
+
+-- | Check if a keyboard event was Enter
+isEnterEvent :: SyntheticKeyboardEvent -> Boolean
+isEnterEvent e =
+  e'.which == 13 || e'.keyCode == 13
+  where e' = unsafeCoerce e
+
+-- | IMPORTANT: UNSAFE: It's unsafe to use this outside this module
+foreign import resetTargetValue :: forall event. String -> event -> Effect Unit
 
 -- The Standard Set of Props
 
@@ -598,6 +622,9 @@ onKeyPress = Handler P.onKeyPress
 
 onKeyUp :: Props SyntheticKeyboardEvent
 onKeyUp = Handler P.onKeyUp
+
+onKeyEnter :: Props SyntheticKeyboardEvent
+onKeyEnter = filterProp isEnterEvent onKeyDown
 
 onFocus :: Props SyntheticFocusEvent
 onFocus = Handler P.onFocus
