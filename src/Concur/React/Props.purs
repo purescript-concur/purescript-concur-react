@@ -28,7 +28,7 @@ unsafeMkPropHandler :: forall a. String -> Props a
 unsafeMkPropHandler s = Handler \f -> P.unsafeMkProps s (mkEffectFn1 f)
 
 -- | Construct a custom key value prop
-unsafeMkProp :: forall a. String -> a -> Props a
+unsafeMkProp :: forall a b. String -> a -> Props b
 unsafeMkProp s v = PrimProp (P.unsafeMkProps s v)
 
 -- | Shortcut for the common case of a list of classes
