@@ -23,6 +23,10 @@ API documentation is [published on Pursuit](https://pursuit.purescript.org/packa
 
 ## Installation
 
+You can quickly get a production setup going by cloning the [Purescript Concur Webpack Starter](https://github.com/ajnsit/purescript-concur-webpack-starter).
+
+Else you can also install purescript-concur manually using bower -
+
 ```bash
 bower install purescript-concur-react
 ```
