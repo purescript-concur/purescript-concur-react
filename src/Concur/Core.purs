@@ -171,15 +171,19 @@ withViewEvent mkView = Widget (liftF (WidgetStep (do
 
 -- | Construct a widget, by wrapping an existing widget in a view event
 wrapViewEvent :: forall a v. ((a -> Effect Unit) -> v -> v) -> Widget v a -> Widget v a
-wrapViewEvent mkView (Widget w) = Widget $
-  case resume w of
-    Right a -> pure a
-    Left (WidgetStep wsm) -> wrap $ WidgetStep do
-      ws <- wsm
-      var <- EVar.empty
-      let view' = mkView (\a -> void (EVar.tryPut (pure a) var)) ws.view
-      let cont' = sequential (alt (parallel (liftAff (AVar.take var))) (parallel ws.cont))
-      pure {view: view', cont: cont'}
+wrapViewEvent mkView (Widget w) = Widget (wrapViewEvent' w)
+  where
+    wrapViewEvent' w' = 
+      case resume w' of
+        Right a -> pure a
+        Left (WidgetStep wsm) -> wrap $ WidgetStep do
+          ws <- wsm
+          var <- EVar.empty
+          let eventHandler = (\a -> void (EVar.tryPut (pure a) var))
+          let viewMapper = mkView eventHandler
+          let view' = viewMapper ws.view
+          let cont' = sequential (alt (parallel (liftAff (AVar.take var))) (parallel (map wrapViewEvent' ws.cont)))
+          pure {view: view', cont: cont'}
 
 -- | Construct a widget with just props
 mkLeafWidget :: forall a v. ((a -> Effect Unit) -> v) -> Widget v a
