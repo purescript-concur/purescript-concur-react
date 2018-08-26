@@ -15,10 +15,12 @@ import Test.SlowButtonList (hugeButtonListDemo)
 import Test.TailRec (tailRecDemo)
 import Test.Timers (timersWidget)
 import Test.Todos (todosWidget)
+import Test.EditHeadings (editHeadings)
 
 main :: Effect Unit
 main = do
   runWidgetInDom "todos" todosWidget
+  runWidgetInDom "editHeadings" editHeadings
   runWidgetInDom "hello" helloWidget
   runWidgetInDom "counter" (counterWidget 0 <|> counterWidget 100)
   runWidgetInDom "signals" countingWidget

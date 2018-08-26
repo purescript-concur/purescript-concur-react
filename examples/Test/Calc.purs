@@ -4,7 +4,7 @@ import Prelude
 
 import Concur.Core (Widget)
 import Concur.React (HTML)
-import Concur.React.DOM (button, div', text)
+import Concur.React.DOM (button, text, table', tr', td', tbody')
 import Concur.React.Props (onClick)
 import Control.MultiAlternative (orr)
 import Data.List (List(..), uncons, (:))
@@ -16,11 +16,11 @@ data CalculatorAction = Plus | Minus | Times | Div | Enter | Clear | Digit Int
 
 -- Button pad widget
 calcButtonsWidget :: Widget HTML CalculatorAction
-calcButtonsWidget = div'
-  [ div' [d 7, d 8, d 9, opDiv]
-  , div' [d 4, d 5, d 6, opTimes]
-  , div' [d 1, d 2, d 3, opMinus]
-  , div' [d 0, ent, cls, opPlus]
+calcButtonsWidget = table' $ pure $ tbody' $
+  [ tr' [d 7, d 8, d 9, opDiv]
+  , tr' [d 4, d 5, d 6, opTimes]
+  , tr' [d 1, d 2, d 3, opMinus]
+  , tr' [d 0, ent, cls, opPlus]
   ]
   where
     d n     = but (Digit n) (show n)
@@ -30,7 +30,7 @@ calcButtonsWidget = div'
     opTimes = but Times "*"
     opMinus = but Minus "-"
     opPlus = but Plus "+"
-    but x s = x <$ button [onClick] [text s]
+    but x s = x <$ td' [button [onClick] [text s]]
 
 -- Postfix calculation
 calc :: List Int -> CalculatorAction -> Tuple (List Int) Int

@@ -60,8 +60,9 @@ Individual example sources -
 2. A simple counter widget. [Source](https://github.com/ajnsit/purescript-concur/blob/master/examples/Test/Counter.purs).
 3. Concur has Signals! Example counting widget implemented with Signals! [Source](https://github.com/ajnsit/purescript-concur/blob/master/examples/Test/Signals.purs).
 4. A full-featured TodoMVC implementation with Signals. [Source](https://github.com/ajnsit/purescript-concur/blob/master/examples/Test/Todos.purs).
-5. A postfix calculator. [Source](https://github.com/ajnsit/purescript-concur/blob/master/examples/Test/Calc.purs).
-6. Using AJAX and handling JSON responses. [Source](https://github.com/ajnsit/purescript-concur/blob/master/examples/Test/Ajax.purs).
-7. A small widget to visualise CSS color codes. [Source](https://github.com/ajnsit/purescript-concur/blob/master/examples/Test/Color.purs).
-8. Asynchronous timers which can be cancelled. [Source](https://github.com/ajnsit/purescript-concur/blob/master/examples/Test/Timers.purs).
-9. Performance test - A huge list of 50 thousand parallel buttons. This has two variants, fast (uses slightly lower level interface) and slow (idiomatic concur code). [Source](https://github.com/ajnsit/purescript-concur/blob/master/examples/Test/SlowButtonList.purs).
+5. A fully editable tree in ~30 lines of code (with Signals). [Source](https://github.com/ajnsit/purescript-concur/blob/master/examples/Test/EditHeadings.purs).
+6. A postfix calculator. [Source](https://github.com/ajnsit/purescript-concur/blob/master/examples/Test/Calc.purs).
+7. Using AJAX and handling JSON responses. [Source](https://github.com/ajnsit/purescript-concur/blob/master/examples/Test/Ajax.purs).
+8. A small widget to visualise CSS color codes. [Source](https://github.com/ajnsit/purescript-concur/blob/master/examples/Test/Color.purs).
+9. Asynchronous timers which can be cancelled. [Source](https://github.com/ajnsit/purescript-concur/blob/master/examples/Test/Timers.purs).
+10. Performance test - A huge list of 50 thousand parallel buttons. This has two variants, fast (uses slightly lower level interface) and slow (idiomatic concur code). [Source](https://github.com/ajnsit/purescript-concur/blob/master/examples/Test/SlowButtonList.purs).
