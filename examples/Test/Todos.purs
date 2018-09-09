@@ -3,7 +3,7 @@ module Test.Todos where
 import Prelude
 
 import Concur.Core (Widget)
-import Concur.Core.FRP (Signal, always, dyn, hold, loopS, loopW)
+import Concur.Core.FRP (Signal, always, dyn, loopS, loopW, step)
 import Concur.React (HTML)
 import Concur.React.DOM as D
 import Concur.React.Props as P
@@ -42,7 +42,7 @@ todos s = loopS s \s' -> do
 
 todo :: Filter -> Todo -> Signal HTML (Maybe Todo)
 todo p t = if runFilter p t
-  then hold (Just t) $ D.div'
+  then step (Just t) $ D.div'
     [ todo p <<< (\b -> t {done = b}) <$> checkbox t.done
     , do _ <- D.span [mark t.done, P.onDoubleClick] [D.text t.name]
          todo p <<< (\s -> t {name = s}) <$> D.span' [textInputEnter t.name "" false]
@@ -59,7 +59,7 @@ todo p t = if runFilter p t
       else P.style {}
 
 filterButtons :: Todos -> Signal HTML Todos
-filterButtons s = hold s $ D.div' (mkFilter <$> filters)
+filterButtons s = step s $ D.div' (mkFilter <$> filters)
   where
     mkFilter f = D.button [select f, defer (\_ -> filterButtons (s {filter = f})) <$ P.onClick] [D.text (show f)]
     filters = [All, Active, Completed]

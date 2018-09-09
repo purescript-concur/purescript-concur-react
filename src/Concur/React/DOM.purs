@@ -547,14 +547,14 @@ main = el' D.main
 main' :: El'
 main' = main []
 
-map_ :: El1
-map_ = el D.map
+_map_ :: El1
+_map_ = el D.map
 
-map :: El
-map = el' D.map
+_map :: El
+_map = el' D.map
 
-map' :: El'
-map' = map []
+_map' :: El'
+_map' = _map []
 
 mark_ :: El1
 mark_ = el D.mark

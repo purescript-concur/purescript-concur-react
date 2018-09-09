@@ -56,8 +56,6 @@ derive newtype instance widgetMonadRec :: MonadRec (Widget v)
 instance widgetShiftMap :: ShiftMap (Widget v) (Widget v) where
   shiftMap = identity
 
--- A Widget combinator which can combine two widgets in a layout
-type WidgetCombinator v = forall a. Widget v a -> Widget v a -> Widget v a
 -- Util
 flipEither :: forall a b. Either a b -> Either b a
 flipEither (Left a) = Right a
@@ -173,7 +171,7 @@ withViewEvent mkView = Widget (liftF (WidgetStep (do
 wrapViewEvent :: forall a v. ((a -> Effect Unit) -> v -> v) -> Widget v a -> Widget v a
 wrapViewEvent mkView (Widget w) = Widget (wrapViewEvent' w)
   where
-    wrapViewEvent' w' = 
+    wrapViewEvent' w' =
       case resume w' of
         Right a -> pure a
         Left (WidgetStep wsm) -> wrap $ WidgetStep do
@@ -192,3 +190,9 @@ mkLeafWidget mkView = Widget $ wrap $ WidgetStep do
   let view' = mkView (\a -> void (EVar.tryPut (pure a) var))
   let cont' = liftAff (AVar.take var)
   pure {view: view', cont: cont'}
+
+-- A very useful combinator for widgets with localised state
+loopState :: forall v a s. s -> (s -> Widget v (Either s a)) -> Widget v a
+loopState s f = f s >>= case _ of
+  Left s' -> loopState s' f
+  Right a -> pure a

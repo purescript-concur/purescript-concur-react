@@ -9,7 +9,6 @@ import Control.Monad.State (StateT)
 import Control.Monad.Writer (WriterT)
 import Control.Plus (class Plus, empty, alt)
 import Data.Foldable (foldl)
-import Data.Monoid (class Monoid)
 
 class Plus m <= MultiAlternative m where
   orr :: forall a. Array (m a) -> m a

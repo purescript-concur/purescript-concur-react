@@ -3,7 +3,7 @@ module Test.EditHeadings where
 import Prelude
 
 import Concur.Core (Widget)
-import Concur.Core.FRP (Signal, dyn, hold, loopS)
+import Concur.Core.FRP (Signal, dyn, loopS, step)
 import Concur.React (HTML)
 import Concur.React.DOM (div', button, h5, text, ul_, li_)
 import Concur.React.Props (onClick, onDoubleClick)
@@ -33,7 +33,7 @@ testTree = Tree
   }
 
 mkChildren :: Signal HTML (Maybe Tree)
-mkChildren = hold Nothing $ do
+mkChildren = step Nothing $ do
   _ <- button [onClick] [text "New"]
   pure (pure (Just (Tree {title: "New Heading", children: []})))
 
@@ -43,7 +43,7 @@ treeView (Just t) = treeView' t
   where
     treeView' (Tree tree) = li_ [] $ do
       title' <- editableTitle tree.title
-      shouldDel <- hold false (pure true <$ button [onClick] [text "Delete"])
+      shouldDel <- step false (pure true <$ button [onClick] [text "Delete"])
       if shouldDel
         then pure Nothing
         else do
@@ -55,7 +55,7 @@ treeView (Just t) = treeView' t
           pure (Just (Tree {title: title', children: children'}))
 
 editableTitle :: String -> Signal HTML String
-editableTitle title = hold title do
+editableTitle title = step title do
   _ <- h5 [onDoubleClick] [text title]
   edited <- div'
     [ textInputEnter title title false
@@ -65,4 +65,3 @@ editableTitle title = hold title do
 
 editHeadings :: forall a. Widget HTML a
 editHeadings = dyn $ ul_ [] $ loopS (Just testTree) treeView
-

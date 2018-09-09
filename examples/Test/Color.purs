@@ -3,7 +3,7 @@ module Test.Color where
 import Prelude
 
 import Concur.Core (Widget)
-import Concur.Core.FRP (Signal, dyn, hold)
+import Concur.Core.FRP (Signal, dyn, hold, step)
 import Concur.React (HTML)
 import Concur.React.DOM (button, text, textarea)
 import Concur.React.DOM as D
@@ -17,7 +17,7 @@ import Data.Traversable (sequence)
 import Unsafe.Coerce (unsafeCoerce)
 
 colorSignal :: String -> Signal HTML String
-colorSignal s = hold s do
+colorSignal s = step s do
   s' <- D.div'
     [ D.text "Insert some color codes, or "
     , button [onClick] [text "get an example"] $> exampleText

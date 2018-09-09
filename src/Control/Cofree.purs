@@ -17,6 +17,8 @@ module Control.Cofree
   ) where
 
 import Prelude
+
+import Concur.Core (Widget)
 import Control.Alternative (class Alternative, (<|>), empty)
 import Control.Comonad (class Comonad, extract)
 import Control.Extend (class Extend)
@@ -31,7 +33,6 @@ import Data.Lazy (Lazy, force, defer)
 import Data.Ord (class Ord1, compare1)
 import Data.Traversable (class Traversable, traverse)
 import Data.Tuple (Tuple(..), fst, snd)
-import Concur.Core (Widget)
 
 -- | The `Cofree` `Comonad` for a functor.
 -- |

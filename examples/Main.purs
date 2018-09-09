@@ -9,13 +9,14 @@ import Test.Ajax (ajaxWidget)
 import Test.Calc (calcWidget)
 import Test.Color (colorWidget)
 import Test.Counter (counterWidget)
+import Test.EditHeadings (editHeadings)
 import Test.Hello (helloWidget)
+import Test.Login (loginWidget)
 import Test.Signals (countingWidget)
 import Test.SlowButtonList (hugeButtonListDemo)
 import Test.TailRec (tailRecDemo)
 import Test.Timers (timersWidget)
 import Test.Todos (todosWidget)
-import Test.EditHeadings (editHeadings)
 
 main :: Effect Unit
 main = do
@@ -30,3 +31,4 @@ main = do
   runWidgetInDom "timers" timersWidget
   runWidgetInDom "hugeButtonList" (hugeButtonListDemo 50000)
   runWidgetInDom "tailRecursionDemo" tailRecDemo
+  runWidgetInDom "login" loginWidget
