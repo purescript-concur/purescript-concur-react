@@ -6,3 +6,5 @@ tmp/
 output/
 html/index.js
 /.psc-package
+/.cache
+/dist

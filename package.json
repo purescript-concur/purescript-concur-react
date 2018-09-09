@@ -10,12 +10,15 @@
   },
   "files": [],
   "scripts": {
-    "build": "pulp build",
-    "build-examples": "pulp browserify -I examples --to html/index.js"
+    "ps": "bower install && pulp build -I examples",
+    "build": "node_modules/.bin/parcel build examples/index.html",
+    "start": "node_modules/.bin/parcel examples/index.html"
   },
   "dependencies": {
     "react": "^16.4.1",
     "react-dom": "^16.4.1"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "parcel-bundler": "^1.9.7"
+  }
 }
