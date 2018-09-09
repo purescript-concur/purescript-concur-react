@@ -58,11 +58,12 @@ Individual example sources -
 
 1. Hello World! Shows simple effectful widgets. [Source](https://github.com/ajnsit/purescript-concur/blob/master/examples/Test/Hello.purs).
 2. A simple counter widget. [Source](https://github.com/ajnsit/purescript-concur/blob/master/examples/Test/Counter.purs).
-3. Concur has Signals! Example counting widget implemented with Signals! [Source](https://github.com/ajnsit/purescript-concur/blob/master/examples/Test/Signals.purs).
-4. A full-featured TodoMVC implementation with Signals. [Source](https://github.com/ajnsit/purescript-concur/blob/master/examples/Test/Todos.purs).
-5. A fully editable tree in ~30 lines of code (with Signals). [Source](https://github.com/ajnsit/purescript-concur/blob/master/examples/Test/EditHeadings.purs).
-6. A postfix calculator. [Source](https://github.com/ajnsit/purescript-concur/blob/master/examples/Test/Calc.purs).
-7. Using AJAX and handling JSON responses. [Source](https://github.com/ajnsit/purescript-concur/blob/master/examples/Test/Ajax.purs).
-8. A small widget to visualise CSS color codes. [Source](https://github.com/ajnsit/purescript-concur/blob/master/examples/Test/Color.purs).
-9. Asynchronous timers which can be cancelled. [Source](https://github.com/ajnsit/purescript-concur/blob/master/examples/Test/Timers.purs).
-10. Performance test - A huge list of 50 thousand parallel buttons. This has two variants, fast (uses slightly lower level interface) and slow (idiomatic concur code). [Source](https://github.com/ajnsit/purescript-concur/blob/master/examples/Test/SlowButtonList.purs).
+3. A login widget. [Source](https://github.com/ajnsit/purescript-concur/blob/master/examples/Test/Login.purs).
+4. Concur has Signals! Example counting widget implemented with Signals! [Source](https://github.com/ajnsit/purescript-concur/blob/master/examples/Test/Signals.purs).
+5. A full-featured TodoMVC implementation with Signals. [Source](https://github.com/ajnsit/purescript-concur/blob/master/examples/Test/Todos.purs).
+6. A fully editable tree in ~30 lines of code (with Signals). [Source](https://github.com/ajnsit/purescript-concur/blob/master/examples/Test/EditHeadings.purs).
+7. A postfix calculator. [Source](https://github.com/ajnsit/purescript-concur/blob/master/examples/Test/Calc.purs).
+8. Using AJAX and handling JSON responses. [Source](https://github.com/ajnsit/purescript-concur/blob/master/examples/Test/Ajax.purs).
+9. A small widget to visualise CSS color codes. [Source](https://github.com/ajnsit/purescript-concur/blob/master/examples/Test/Color.purs).
+10. Asynchronous timers which can be cancelled. [Source](https://github.com/ajnsit/purescript-concur/blob/master/examples/Test/Timers.purs).
+11. Performance test - A huge list of 50 thousand parallel buttons. This has two variants, fast (uses slightly lower level interface) and slow (idiomatic concur code). [Source](https://github.com/ajnsit/purescript-concur/blob/master/examples/Test/SlowButtonList.purs).
