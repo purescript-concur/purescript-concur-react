@@ -10,9 +10,10 @@
   },
   "files": [],
   "scripts": {
-    "ps": "bower install && pulp build -I examples",
-    "build": "node_modules/.bin/parcel build examples/index.html",
-    "start": "node_modules/.bin/parcel examples/index.html"
+    "ps": "bower install && pulp build --source-maps -I examples",
+    "build": "node_modules/.bin/parcel build index.html",
+    "start": "node_modules/.bin/parcel index.html",
+    "watch": "node_modules/.bin/parcel watch index.html"
   },
   "dependencies": {
     "react": "^16.4.1",
