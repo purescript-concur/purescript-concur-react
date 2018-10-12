@@ -8,7 +8,7 @@ import Control.Monad.Rec.Class (class MonadRec)
 import Control.MultiAlternative (class MultiAlternative, orr)
 import Control.Parallel.Class (parallel, sequential)
 import Control.Plus (class Alt, class Plus, alt, empty)
-import Control.ShiftMap (class ShiftMap)
+import Control.ShiftMap (class ShiftMap, class ShiftUp)
 import Data.Array.NonEmpty (NonEmptyArray, fromArray, updateAt)
 import Data.Either (Either(..))
 import Data.FoldableWithIndex (foldlWithIndex)
@@ -55,6 +55,9 @@ derive newtype instance widgetMonadRec :: MonadRec (Widget v)
 
 instance widgetShiftMap :: ShiftMap (Widget v) (Widget v) where
   shiftMap = identity
+
+instance widgetShiftUp :: ShiftUp (Widget v) (Widget v) where
+  shiftUp = identity
 
 -- Util
 flipEither :: forall a b. Either a b -> Either b a
@@ -192,7 +195,7 @@ mkLeafWidget mkView = Widget $ wrap $ WidgetStep do
   pure {view: view', cont: cont'}
 
 -- A very useful combinator for widgets with localised state
-loopState :: forall v a s. s -> (s -> Widget v (Either s a)) -> Widget v a
+loopState :: forall m a s. Monad m => s -> (s -> m (Either s a)) -> m a
 loopState s f = f s >>= case _ of
   Left s' -> loopState s' f
   Right a -> pure a

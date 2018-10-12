@@ -5,10 +5,10 @@ import Prelude
 import Concur.Core (Widget, wrapViewEvent, mkLeafWidget)
 import Concur.Core.Discharge (discharge, dischargeAsync)
 import Concur.React.Props (Props, mkProp)
-import Effect.Console (log)
 import Control.MultiAlternative (class MultiAlternative, orr)
-import Control.ShiftMap (class ShiftMap, shiftMap)
+import Control.ShiftMap (class ShiftMap, class ShiftUp, shiftMap, shiftUp)
 import Data.Either (Either(..))
+import Effect.Console (log)
 import React as R
 import React.DOM as D
 import React.DOM.Props as P
@@ -25,8 +25,8 @@ el :: forall m a. ShiftMap (Widget HTML) m => NodeTag -> Array (Props a) -> m a 
 el e props = shiftMap (wrapViewEvent \h v -> [e (map (mkProp h) (unsafeCoerce props)) v])
 
 -- | Promote a leaf node to a widget
-elLeaf :: forall a. LeafTag -> Array (Props a) -> Widget HTML a
-elLeaf e props = mkLeafWidget \h -> [e (map (mkProp h) (unsafeCoerce props))]
+elLeaf :: forall m a. ShiftUp (Widget HTML) m => LeafTag -> Array (Props a) -> m a
+elLeaf e props = shiftUp (mkLeafWidget \h -> [e (map (mkProp h) (unsafeCoerce props))])
 
 -- | Wrap some widgets with a node that can have eventHandlers attached
 el' :: forall m a. ShiftMap (Widget HTML) m => MultiAlternative m => NodeTag -> Array (Props a) -> Array (m a) -> m a

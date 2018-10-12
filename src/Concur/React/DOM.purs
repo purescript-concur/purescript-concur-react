@@ -6,7 +6,7 @@ import Concur.Core (display, Widget)
 import Concur.React (HTML, el, el', elLeaf)
 import Concur.React.Props (Props)
 import Control.MultiAlternative (class MultiAlternative)
-import Control.ShiftMap (class ShiftMap)
+import Control.ShiftMap (class ShiftMap, class ShiftUp, shiftUp)
 import React.DOM as D
 
 -- Wrappers for all DOM elements from purescript-react
@@ -15,18 +15,19 @@ import React.DOM as D
 type El1 = forall m a. ShiftMap (Widget HTML) m => Array (Props a) -> m a -> m a
 type El = forall m a. MultiAlternative m => ShiftMap (Widget HTML) m => Array (Props a) -> Array (m a) -> m a
 type El' = forall m a. MultiAlternative m => ShiftMap (Widget HTML) m => Array (m a) -> m a
-type ElLeaf = forall a. Array (Props a) -> Widget HTML a
+type ElLeaf = forall m a. ShiftUp (Widget HTML) m => Array (Props a) -> m a
+type ElLeaf' = forall m a. ShiftUp (Widget HTML) m => m a
 
 -------------------------------------------------------------------------------------------------------------------
 
-text :: forall a. String -> Widget HTML a
-text = display <<< pure <<< D.text
+text :: String -> ElLeaf'
+text str = shiftUp (display [D.text str])
 
-int :: forall a. Int -> Widget HTML a
-int = display <<< pure <<< D.int
+int :: Int -> ElLeaf'
+int x = shiftUp (display [D.int x])
 
-number :: forall a. Number -> Widget HTML a
-number = display <<< pure <<< D.number
+number :: Number -> ElLeaf'
+number x = shiftUp (display [D.number x])
 
 a_ :: El1
 a_ = el D.a
@@ -58,7 +59,7 @@ address' = address []
 area :: ElLeaf
 area = elLeaf D.area
 
-area' :: forall a. Widget HTML a
+area' :: ElLeaf'
 area' = area []
 
 article_ :: El1
@@ -100,7 +101,7 @@ b' = b []
 base :: ElLeaf
 base = elLeaf D.base
 
-base' :: forall a. Widget HTML a
+base' :: ElLeaf'
 base' = base []
 
 bdi_ :: El1
@@ -151,7 +152,7 @@ body' = body []
 br :: ElLeaf
 br = elLeaf D.br
 
-br' :: forall a. Widget HTML a
+br' :: ElLeaf'
 br' = br []
 
 button_ :: El1
@@ -202,7 +203,7 @@ code' = code []
 col :: ElLeaf
 col = elLeaf D.col
 
-col' :: forall a. Widget HTML a
+col' :: ElLeaf'
 col' = col []
 
 colgroup_ :: El1
@@ -316,7 +317,7 @@ em' = em []
 embed :: ElLeaf
 embed = elLeaf D.embed
 
-embed' :: forall a. Widget HTML a
+embed' :: ElLeaf'
 embed' = embed []
 
 fieldset_ :: El1
@@ -439,7 +440,7 @@ header' = header []
 hr :: ElLeaf
 hr = elLeaf D.hr
 
-hr' :: forall a. Widget HTML a
+hr' :: ElLeaf'
 hr' = hr []
 
 html_ :: El1
@@ -472,13 +473,13 @@ iframe' = iframe []
 img :: ElLeaf
 img = elLeaf D.img
 
-img' :: forall a. Widget HTML a
+img' :: ElLeaf'
 img' = img []
 
 input :: ElLeaf
 input = elLeaf D.input
 
-input' :: forall a. Widget HTML a
+input' :: ElLeaf'
 input' = input []
 
 ins_ :: El1
@@ -502,7 +503,7 @@ kbd' = kbd []
 keygen :: ElLeaf
 keygen = elLeaf D.keygen
 
-keygen' :: forall a. Widget HTML a
+keygen' :: ElLeaf'
 keygen' = keygen []
 
 label_ :: El1
@@ -535,7 +536,7 @@ li' = li []
 link :: ElLeaf
 link = elLeaf D.link
 
-link' :: forall a. Widget HTML a
+link' :: ElLeaf'
 link' = link []
 
 main_ :: El1
@@ -577,13 +578,13 @@ menu' = menu []
 menuitem :: ElLeaf
 menuitem = elLeaf D.menuitem
 
-menuitem' :: forall a. Widget HTML a
+menuitem' :: ElLeaf'
 menuitem' = menuitem []
 
 meta :: ElLeaf
 meta = elLeaf D.meta
 
-meta' :: forall a. Widget HTML a
+meta' :: ElLeaf'
 meta' = meta []
 
 meter_ :: El1
@@ -670,7 +671,7 @@ p' = p []
 param :: ElLeaf
 param = elLeaf D.param
 
-param' :: forall a. Widget HTML a
+param' :: ElLeaf'
 param' = param []
 
 picture_ :: El1
@@ -793,7 +794,7 @@ small' = small []
 source :: ElLeaf
 source = elLeaf D.source
 
-source' :: forall a. Widget HTML a
+source' :: ElLeaf'
 source' = source []
 
 span_ :: El1
@@ -943,7 +944,7 @@ tr' = tr []
 track :: ElLeaf
 track = elLeaf D.track
 
-track' :: forall a. Widget HTML a
+track' :: ElLeaf'
 track' = track []
 
 u_ :: El1
@@ -985,5 +986,5 @@ video' = video []
 wbr :: ElLeaf
 wbr = elLeaf D.wbr
 
-wbr' :: forall a. Widget HTML a
+wbr' :: ElLeaf'
 wbr' = wbr []
