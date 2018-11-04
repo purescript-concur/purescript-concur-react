@@ -21,6 +21,11 @@ Work in progress tutorials are published in the [Concur Documentation site](http
 
 API documentation is [published on Pursuit](https://pursuit.purescript.org/packages/purescript-concur-react).
 
+## Ports to other languages
+
+1. [Concur for Haskell](https://github.com/ajnsit/concur) - The original version of Concur written in Haskell.
+2. [Concur for Javascript](https://github.com/ajnsit/concur-js) - An official but experimental port to Javascript.
+
 ## Installation
 
 You can quickly get a production setup going by cloning the [Purescript Concur Webpack Starter](https://github.com/ajnsit/purescript-concur-webpack-starter).
