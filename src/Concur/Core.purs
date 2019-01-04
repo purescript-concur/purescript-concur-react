@@ -163,7 +163,7 @@ instance widgetMonadAff :: Monoid v => MonadAff (Widget v) where
 
 -- Helpers for some very common use of unsafe blocking io
 
--- Construct a widget from a primitive view event
+-- | Construct a widget from a primitive view event
 withViewEvent :: forall a v. ((a -> Effect Unit) -> v) -> Widget v a
 withViewEvent mkView = Widget (liftF (WidgetStep (do
      v <- EVar.empty
@@ -194,8 +194,13 @@ mkLeafWidget mkView = Widget $ wrap $ WidgetStep do
   let cont' = liftAff (AVar.take var)
   pure {view: view', cont: cont'}
 
--- A very useful combinator for widgets with localised state
+-- | A very useful combinator for widgets with localised state
 loopState :: forall m a s. Monad m => s -> (s -> m (Either s a)) -> m a
 loopState s f = f s >>= case _ of
   Left s' -> loopState s' f
   Right a -> pure a
+
+-- | The Elm Architecture
+tea :: forall a s m x. Monad m => s -> (s -> m a) -> (a -> s -> s) -> m x
+tea s render update = go s
+  where go st = render st >>= (flip update st >>> go)
