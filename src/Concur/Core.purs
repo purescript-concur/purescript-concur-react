@@ -17,7 +17,7 @@ import Data.Semigroup.Foldable (foldMap1)
 import Data.Traversable (traverse)
 import Data.Tuple (Tuple(..))
 import Effect (Effect)
-import Effect.AVar (empty, tryPut) as EVar
+import Effect.AVar (empty, tryPut, tryTake) as EVar
 import Effect.Aff (Aff, effectCanceler, makeAff, never, runAff_)
 import Effect.Aff.AVar (take) as AVar
 import Effect.Aff.Class (class MonadAff, liftAff)
@@ -145,11 +145,13 @@ unsafeBlockingEffAction v eff = Widget $ liftF $ WidgetStep $
 -- Async aff
 affAction :: forall a v. v -> Aff a -> Widget v a
 affAction v aff = Widget $ liftF $ WidgetStep do
-  var <- do
-    var <- EVar.empty
-    runAff_ (handler var) aff
-    pure var
-  pure { view: v, cont: liftAff (AVar.take var) }
+  var <- EVar.empty
+  runAff_ (handler var) aff
+  -- Detect synchronous resolution
+  ma <- EVar.tryTake var
+  case ma of
+    Just a -> pure { view: v, cont: pure a }
+    Nothing -> pure { view: v, cont: liftAff (AVar.take var) }
   where
     handler _   (Left e) = log ("Aff failed - " <> show e)
     handler var (Right a) = void (EVar.tryPut a var)
