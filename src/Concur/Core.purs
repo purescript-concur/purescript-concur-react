@@ -3,7 +3,7 @@ module Concur.Core where
 import Prelude
 
 import Control.Alternative (class Alternative)
-import Control.Monad.Free (Free, hoistFree, liftF, resume, wrap)
+import Control.Monad.Free (Free, hoistFree, liftF, resume', wrap)
 import Control.Monad.Rec.Class (class MonadRec)
 import Control.MultiAlternative (class MultiAlternative, orr)
 import Control.Parallel.Class (parallel, sequential)
@@ -14,7 +14,7 @@ import Data.Either (Either(..))
 import Data.FoldableWithIndex (foldlWithIndex)
 import Data.Maybe (Maybe(Nothing, Just), fromMaybe)
 import Data.Semigroup.Foldable (foldMap1)
-import Data.Traversable (sequence)
+import Data.Traversable (traverse)
 import Data.Tuple (Tuple(..))
 import Effect (Effect)
 import Effect.AVar (empty, tryPut) as EVar
@@ -64,6 +64,9 @@ flipEither :: forall a b. Either a b -> Either b a
 flipEither (Left a) = Right a
 flipEither (Right b) = Left b
 
+resume :: forall f a. Functor f => Free f a -> Either a (f (Free f a))
+resume = resume' (\g i -> Right (i <$> g)) Left
+
 -- This instance is more efficient than `defaultOrr` for a large number of widgets
 instance widgetMultiAlternative :: Monoid v => MultiAlternative (Widget v) where
   orr wss = case fromArray wss of
@@ -73,13 +76,13 @@ instance widgetMultiAlternative :: Monoid v => MultiAlternative (Widget v) where
       comb :: forall v' a. Monoid v'
            => NonEmptyArray (Free (WidgetStep v') a)
            -> Free (WidgetStep v') a
-      -- Use flipEither so `Left` indicates a return value, which we can short circuit on
-      -- 'Either.sequence'
-      comb wfs = case sequence (map (flipEither <<< resume) wfs) of
+      -- If any sub-widget finished, then finish
+      -- 'Either.traverse'
+      comb wfs = case traverse resume wfs of
         Left a -> pure a
         Right wsm -> wrap $ WidgetStep do
-            -- 'Effect.sequence'
-            ws <- sequence $ map unWidgetStep wsm
+            -- 'Effect.traverse'
+            ws <- traverse unWidgetStep wsm
             pure { view: foldMap1 _.view ws
                  , cont: merge ws (map _.cont ws)
                  }
@@ -176,8 +179,8 @@ wrapViewEvent mkView (Widget w) = Widget (wrapViewEvent' w)
   where
     wrapViewEvent' w' =
       case resume w' of
-        Right a -> pure a
-        Left (WidgetStep wsm) -> wrap $ WidgetStep do
+        Left a -> pure a
+        Right (WidgetStep wsm) -> wrap $ WidgetStep do
           ws <- wsm
           var <- EVar.empty
           let eventHandler = (\a -> void (EVar.tryPut (pure a) var))
