@@ -3,11 +3,12 @@ module Concur.React where
 import Prelude
 
 import Concur.Core (Widget, wrapViewEvent, mkLeafWidget)
-import Concur.Core.Discharge (discharge, dischargeAsync)
+import Concur.Core.Discharge (discharge, dischargePartialEffect)
 import Concur.React.Props (Props, mkProp)
 import Control.MultiAlternative (class MultiAlternative, orr)
 import Control.ShiftMap (class ShiftMap, class ShiftUp, shiftMap, shiftUp)
 import Data.Either (Either(..))
+import Data.Tuple (Tuple(..))
 import Effect.Console (log)
 import React as R
 import React.DOM as D
@@ -41,16 +42,12 @@ componentClass :: forall a. Widget HTML a -> R.ReactClass {}
 componentClass winit = R.component "Concur" component
   where
     component this = do
-      v <- dischargeAsync (handler this) winit
+      Tuple winit' v <- dischargePartialEffect winit
       pure
         { state: mkComponentState v
         , render: render <$> R.getState this
+        , componentDidMount: handler this (Right winit')
         }
-    -- purescript-aff guarantees that sync computations in Aff are resolved synchronously.
-    -- That is a good thing in general, but if it happens during init, then setState gets
-    --  called before the component has had a chance to mount itself (init is called before mount).
-    -- So inside init, we force async widget resolution by using `dischargeAsync` instead of `discharge`.
-    --  instead of using setState to set the new view.
     handler this (Right r) = do
       v <- discharge (handler this) r
       void $ R.writeState this (mkComponentState v)

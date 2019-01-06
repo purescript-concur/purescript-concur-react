@@ -2,10 +2,11 @@ module Concur.Core.Discharge where
 
 import Prelude
 
-import Concur.Core (Widget(..), WidgetStep(..))
-import Control.Monad.Free (resume)
+import Concur.Core (Widget(..), WidgetStep(..), unWidget)
+import Control.Monad.Free (resume, wrap)
 import Data.Either (Either(..))
 import Data.Maybe (Maybe(..))
+import Data.Tuple (Tuple(..))
 import Effect (Effect)
 import Effect.AVar (empty, tryTake) as EVar
 import Effect.Aff (Aff, Milliseconds(..), delay, launchAff, runAff_)
@@ -29,6 +30,17 @@ discharge handler (Widget w) = case resume w of
     ws <- mws
     runAff_ (handler <<< map Widget) ws.cont
     pure ws.view
+
+-- | Discharge only the top level blocking effect of a widget (if any) to get access to the view
+-- | Returns the view, and the remaining widget
+dischargePartialEffect :: forall a v. Monoid v
+                       => Widget v a
+                       -> Effect (Tuple (Widget v a) v)
+dischargePartialEffect w = case resume (unWidget w) of
+  Right _ -> pure (Tuple w mempty)
+  Left (WidgetStep mws) -> do
+    ws <- mws
+    pure (Tuple (Widget (wrap (WidgetStep (pure ws)))) ws.view)
 
 -- | Discharge a widget, forces async resolution of the continuation.
 -- | 1. Runs the Effect action
