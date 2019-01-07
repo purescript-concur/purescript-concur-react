@@ -27,9 +27,12 @@ discharge :: forall a v. Monoid v
 discharge handler (Widget w) = case resume w of
   Right _ -> pure mempty
   Left (WidgetStep mws) -> do
-    ws <- mws
-    runAff_ (handler <<< map Widget) ws.cont
-    pure ws.view
+    ews <- mws
+    case ews of
+      Left w' -> discharge handler (Widget w') -- pure mempty
+      Right ws -> do
+        runAff_ (handler <<< map Widget) ws.cont
+        pure ws.view
 
 -- | Discharge only the top level blocking effect of a widget (if any) to get access to the view
 -- | Returns the view, and the remaining widget
@@ -39,8 +42,10 @@ dischargePartialEffect :: forall a v. Monoid v
 dischargePartialEffect w = case resume (unWidget w) of
   Right _ -> pure (Tuple w mempty)
   Left (WidgetStep mws) -> do
-    ws <- mws
-    pure (Tuple (Widget (wrap (WidgetStep (pure ws)))) ws.view)
+    ews <- mws
+    case ews of
+      Left w' -> dischargePartialEffect (Widget w') -- pure mempty
+      Right ws -> pure (Tuple (Widget (wrap (WidgetStep (pure (Right ws))))) ws.view)
 
 -- | Discharge a widget, forces async resolution of the continuation.
 -- | 1. Runs the Effect action
@@ -53,12 +58,15 @@ dischargeAsync :: forall a v. Monoid v
 dischargeAsync handler (Widget w) = case resume w of
   Right _ -> pure mempty
   Left (WidgetStep mws) -> do
-    ws <- mws
-    runAff_ (handler <<< map Widget) do
-      delay (Milliseconds 0.0)
-      a <- ws.cont
-      pure a
-    pure ws.view
+    ews <- mws
+    case ews of
+      Left w' -> dischargeAsync handler (Widget w') -- pure mempty
+      Right ws -> do
+        runAff_ (handler <<< map Widget) do
+          delay (Milliseconds 0.0)
+          a <- ws.cont
+          pure a
+        pure ws.view
 
 -- | Discharge a sync widget.
 -- | 1. Runs the Effect action
@@ -75,13 +83,17 @@ dischargeSync handler (Widget winit) = go winit
     go w = case resume w of
       Right _ -> pure mempty
       Left (WidgetStep mws) -> do
-        ws <- mws
-        res <- ioToIosync ws.cont
-        case res of
-          Left w' -> go w'
-          Right io -> do
-            runAff_ (handler <<< map Widget) io
-            pure ws.view
+        ews <- mws
+        case ews of
+          Left w' -> dischargeSync handler (Widget w') -- pure mempty
+          -- Left _ -> pure mempty
+          Right ws -> do
+            res <- ioToIosync ws.cont
+            case res of
+              Left w' -> go w'
+              Right io -> do
+                runAff_ (handler <<< map Widget) io
+                pure ws.view
 
 -- UTIL
 -- Potentially early resolve an Aff (if it can be run synchronously)

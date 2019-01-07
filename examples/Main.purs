@@ -10,8 +10,8 @@ import Test.Calc (calcWidget)
 import Test.Color (colorWidget)
 import Test.Counter (counterWidget)
 import Test.EditHeadings (editHeadings)
-import Test.Hello (helloWidget)
 import Test.Login (loginWidget)
+import Test.PreEffect (preEffectWidget)
 import Test.Signals (countingWidget)
 import Test.SlowButtonList (hugeButtonListDemo)
 import Test.TailRec (tailRecDemo)
@@ -22,13 +22,13 @@ main :: Effect Unit
 main = do
   runWidgetInDom "todos" todosWidget
   runWidgetInDom "editHeadings" editHeadings
-  runWidgetInDom "hello" helloWidget
-  runWidgetInDom "counter" (counterWidget 0 <|> counterWidget 100)
-  runWidgetInDom "signals" countingWidget
-  runWidgetInDom "calc" calcWidget
-  runWidgetInDom "ajax" ajaxWidget
-  runWidgetInDom "color" (colorWidget "")
+  runWidgetInDom "hello" preEffectWidget
+  -- runWidgetInDom "counter" (counterWidget 0 <|> counterWidget 100)
+  -- runWidgetInDom "signals" countingWidget
+  -- runWidgetInDom "calc" calcWidget
+  -- runWidgetInDom "ajax" ajaxWidget
+  -- runWidgetInDom "color" (colorWidget "")
   runWidgetInDom "timers" timersWidget
-  runWidgetInDom "hugeButtonList" (hugeButtonListDemo 50000)
-  runWidgetInDom "tailRecursionDemo" tailRecDemo
-  runWidgetInDom "login" loginWidget
+  -- runWidgetInDom "hugeButtonList" (hugeButtonListDemo 50000)
+  -- runWidgetInDom "tailRecursionDemo" tailRecDemo
+  -- runWidgetInDom "login" loginWidget
