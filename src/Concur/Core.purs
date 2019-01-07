@@ -14,7 +14,7 @@ import Data.Either (Either(..))
 import Data.FoldableWithIndex (foldlWithIndex)
 import Data.Maybe (Maybe(Nothing, Just), fromMaybe)
 import Data.Semigroup.Foldable (foldMap1)
-import Data.Traversable (sequence, traverse)
+import Data.Traversable (traverse)
 import Data.Tuple (Tuple(..))
 import Effect (Effect)
 import Effect.AVar (empty, tryPut, tryTake) as EVar
@@ -70,7 +70,6 @@ flipEither (Right b) = Left b
 resume :: forall f a. Functor f => Free f a -> Either a (f (Free f a))
 resume = resume' (\g i -> Right (i <$> g)) Left
 
--- This instance is more efficient than `defaultOrr` for a large number of widgets
 instance widgetMultiAlternative :: Monoid v => MultiAlternative (Widget v) where
   orr wss = case fromArray wss of
     Just wsne -> Widget $ comb $ map unWidget wsne
@@ -86,15 +85,24 @@ instance widgetMultiAlternative :: Monoid v => MultiAlternative (Widget v) where
         Right wsm -> wrap $ WidgetStep do
             -- 'Effect.traverse'
             ewss <- traverse unWidgetStep wsm
-            -- 'Either.traverse'
-            -- Short circuit on any sub-widget finishing
-            let ews = sequence ewss
-            pure case ews of
-              Left a -> Left a
-              Right ws -> Right
-                { view: foldMap1 _.view ws
-                , cont: merge ws (map _.cont ws)
-                }
+            -- 'Effect.traverse'
+            ws <- traverse stepWidget ewss
+            pure (Right
+              { view: foldMap1 _.view ws
+              , cont: merge ws (map _.cont ws)
+              })
+
+      stepWidget :: forall v' a. Monoid v'
+                 => Either (Free (WidgetStep v') a) (WidgetStepRecord v' (Free (WidgetStep v') a))
+                 -> Effect (WidgetStepRecord v' (Free (WidgetStep v') a))
+      stepWidget (Left w) = case resume w of
+        Left a -> pure {view: mempty, cont: pure (pure a)}
+        Right (WidgetStep effws) -> do
+          ews <- effws
+          case ews of
+            Left w' -> stepWidget (Left w')
+            Right ws -> pure ws
+      stepWidget (Right ws) = pure ws
 
       merge :: forall v' a. Monoid v'
           => NonEmptyArray (WidgetStepRecord v' (Free (WidgetStep v') a))

@@ -2,7 +2,7 @@ module Test.PreEffect where
 
 import Prelude
 
-import Concur.Core (Widget, effAction, pulse, unsafeBlockingEffAction)
+import Concur.Core (Widget)
 import Concur.React (HTML)
 import Concur.React.DOM (button, div', text)
 import Concur.React.Props (onClick)
@@ -14,7 +14,6 @@ preEffectWidget = div' [example 1, text "asd", example 2, text "HELLO", example 
 
 example :: forall a. Int -> Widget HTML a
 example x = do
-  -- pulse
   liftEffect (log $ "example" <> show x)
   _ <- button [onClick] [text $ "example" <> show x]
   example x
