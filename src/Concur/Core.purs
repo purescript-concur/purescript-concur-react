@@ -170,6 +170,7 @@ affAction v aff = Widget $ liftF $ WidgetStep do
     Just a -> Left a
     Nothing -> Right { view: v, cont: liftAff (AVar.take var) }
   where
+    -- TODO: allow client code to handle aff failures
     handler _   (Left e) = log ("Aff failed - " <> show e)
     handler var (Right a) = void (EVar.tryPut a var)
 
