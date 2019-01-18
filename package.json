@@ -10,17 +10,23 @@
   },
   "files": [],
   "scripts": {
+    "clean": "rimraf output && rimraf .pulp-cache",
+    "build": "pulp build -- --censor-lib --strict",
     "ps": "bower install && pulp build --source-maps -I examples",
-    "build": "node_modules/.bin/parcel build index.html",
-    "start": "node_modules/.bin/parcel index.html",
-    "watch": "node_modules/.bin/parcel watch index.html"
+    "prod": "parcel build index.html",
+    "start": "parcel index.html",
+    "watch": "parcel watch index.html"
   },
   "dependencies": {
     "react": "^16.4.1",
     "react-dom": "^16.4.1"
   },
   "devDependencies": {
+    "bower": "^1.8.6",
     "parcel-bundler": "^1.9.7",
-    "purescript": "^0.12.1"
+    "pulp": "^12.3.1",
+    "purescript": "^0.12.1",
+    "purescript-psa": "^0.7.3",
+    "rimraf": "^2.6.3"
   }
 }
