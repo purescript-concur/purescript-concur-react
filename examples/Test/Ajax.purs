@@ -2,21 +2,21 @@ module Test.Ajax where
 
 import Prelude
 
+import Affjax as AX
+import Affjax.ResponseFormat as ResponseFormat
 import Concur.Core (Widget)
 import Concur.React (HTML)
 import Concur.React.DOM (button, div', h4', p', text)
 import Concur.React.Props (onClick)
 import Control.Alt ((<|>))
-import Effect.Aff.Class (liftAff)
-import Effect.Class (liftEffect)
-import Effect.Console (log)
 import Data.Argonaut.Core (Json)
-import Data.Argonaut.Decode (class DecodeJson, decodeJson, (.?))
+import Data.Argonaut.Decode (class DecodeJson, decodeJson, (.:))
 import Data.Array (take)
 import Data.Either (Either(..))
 import Data.Traversable (traverse)
-import Network.HTTP.Affjax (get)
-import Network.HTTP.Affjax.Response as Response
+import Effect.Aff.Class (liftAff)
+import Effect.Class (liftEffect)
+import Effect.Console (log)
 
 -- Fetches posts from reddit json
 newtype Post = Post
@@ -32,9 +32,9 @@ decodePostArray json = decodeJson json >>= traverse decodeJson
 instance decodeJsonPost :: DecodeJson Post where
   decodeJson json = do
     obj <- decodeJson json
-    d <- obj .? "data"
-    id <- d .? "id"
-    title <- d .? "title"
+    d <- obj .: "data"
+    id <- d .: "id"
+    title <- d .: "title"
     pure (Post { id, title })
 
 subreddits :: Array String
@@ -54,18 +54,22 @@ fetchReddit sub = div'
   where
     showPosts = button [onClick] [text "Fetch posts"] >>= \_ -> fetchPosts
     fetchPosts = do
+      let url = "https://www.reddit.com/r/" <> sub <> ".json"
       liftEffect (log ("Fetching posts from subreddit - " <> sub))
-      resp <- (liftAff (get Response.json ("https://www.reddit.com/r/" <> sub <> ".json"))) <|> (text "Loading...")
-      let postsResp = do
-            o <- decodeJson resp.response
-            d1 <- o .? "data"
-            cs <- d1 .? "children"
-            decodePostArray cs
-      case postsResp of
-        Left err -> text ("Error: " <> err)
-        Right posts -> do
-          div'
-            [ div' (map (\(Post p) -> div' [text p.title]) (take 5 posts))
-            , div' [button [unit <$ onClick] [text "Refresh"]]
-            ]
-          fetchPosts
+      resp <- (liftAff (AX.get ResponseFormat.json url)) <|> (text "Loading...")
+      case resp.body of
+        Left err -> text $ "GET " <> url <> " response failed to decode: " <> AX.printResponseFormatError err
+        Right body -> do
+          let postsResp = do
+                o <- decodeJson body
+                d1 <- o .: "data"
+                cs <- d1 .: "children"
+                decodePostArray cs
+          case postsResp of
+            Left err -> text ("Error: " <> err)
+            Right posts -> do
+              div'
+                [ div' (map (\(Post p) -> div' [text p.title]) (take 5 posts))
+                , div' [button [unit <$ onClick] [text "Refresh"]]
+                ]
+              fetchPosts
