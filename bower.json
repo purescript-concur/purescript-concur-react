@@ -23,10 +23,10 @@
     "purescript-foldable-traversable": "^4.1.1",
     "purescript-react-dom": "^6.0.0",
     "purescript-web-dom": "^1.0.0",
-    "purescript-web-html": "^1.2.0"
+    "purescript-web-html": "^1.2.0",
+    "purescript-console": "^4.2.0"
   },
   "devDependencies": {
-    "purescript-console": "^4.2.0",
     "purescript-affjax": "^7.0.0",
     "purescript-argonaut-core": "^4.0.1",
     "purescript-argonaut-codecs": "^5.1.1",
