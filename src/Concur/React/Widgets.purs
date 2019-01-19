@@ -6,8 +6,6 @@ import Concur.Core (Widget, loopState)
 import Concur.React (HTML)
 import Concur.React.DOM as D
 import Concur.React.Props as P
-import Control.MultiAlternative (class MultiAlternative)
-import Control.ShiftMap (class ShiftMap, class ShiftUp)
 import Data.Either (Either(..))
 import Effect.Class (liftEffect)
 import Unsafe.Coerce (unsafeCoerce)
@@ -23,7 +21,7 @@ textInputEnter value hint reset = do
 
 -- | A Text input that has a button attached
 -- | Returns its contents on the user pressing enter, or clicking the button
-textInputWithButton :: forall m. ShiftMap (Widget HTML) m => MultiAlternative m => ShiftUp (Widget HTML) m => Monad m => String -> String -> String -> m String
+textInputWithButton :: String -> String -> String -> Widget HTML String
 textInputWithButton value hint buttonlabel = loopState value \s -> D.div'
   [ D.input
     [ Left <<< unsafeGetVal <$> P.onChange
@@ -35,4 +33,5 @@ textInputWithButton value hint buttonlabel = loopState value \s -> D.div'
   , Right s <$ D.button [P.onClick] [D.text buttonlabel]
   ]
   where
+  unsafeGetVal :: forall e. e -> String
   unsafeGetVal e = (unsafeCoerce e).target.value

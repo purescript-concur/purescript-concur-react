@@ -6,7 +6,7 @@ import Concur.Core (display, Widget)
 import Concur.React (HTML, el, el', elLeaf)
 import Concur.React.Props (Props)
 import Control.MultiAlternative (class MultiAlternative)
-import Control.ShiftMap (class ShiftMap, class ShiftUp, shiftUp)
+import Control.ShiftMap (class ShiftMap)
 import React.DOM as D
 
 -- Wrappers for all DOM elements from purescript-react
@@ -15,19 +15,19 @@ import React.DOM as D
 type El1 = forall m a. ShiftMap (Widget HTML) m => Array (Props a) -> m a -> m a
 type El = forall m a. MultiAlternative m => ShiftMap (Widget HTML) m => Array (Props a) -> Array (m a) -> m a
 type El' = forall m a. MultiAlternative m => ShiftMap (Widget HTML) m => Array (m a) -> m a
-type ElLeaf = forall m a. ShiftUp (Widget HTML) m => Array (Props a) -> m a
-type ElLeaf' = forall m a. ShiftUp (Widget HTML) m => m a
+type ElLeaf = forall a. Array (Props a) -> Widget HTML a
+type ElLeaf' = forall a. Widget HTML a
 
 -------------------------------------------------------------------------------------------------------------------
 
 text :: String -> ElLeaf'
-text str = shiftUp (display [D.text str])
+text str = display [D.text str]
 
 int :: Int -> ElLeaf'
-int x = shiftUp (display [D.int x])
+int x = display [D.int x]
 
 number :: Number -> ElLeaf'
-number x = shiftUp (display [D.number x])
+number x = display [D.number x]
 
 a_ :: El1
 a_ = el D.a

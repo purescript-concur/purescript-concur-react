@@ -8,7 +8,7 @@ import Control.Monad.Rec.Class (class MonadRec)
 import Control.MultiAlternative (class MultiAlternative, orr)
 import Control.Parallel.Class (parallel, sequential)
 import Control.Plus (class Alt, class Plus, alt, empty)
-import Control.ShiftMap (class ShiftMap, class ShiftUp)
+import Control.ShiftMap (class ShiftMap)
 import Data.Array.NonEmpty (NonEmptyArray, fromArray, updateAt)
 import Data.Either (Either(..))
 import Data.FoldableWithIndex (foldlWithIndex)
@@ -58,9 +58,6 @@ derive newtype instance widgetMonadRec :: MonadRec (Widget v)
 
 instance widgetShiftMap :: ShiftMap (Widget v) (Widget v) where
   shiftMap = identity
-
-instance widgetShiftUp :: ShiftUp (Widget v) (Widget v) where
-  shiftUp = identity
 
 -- Util
 flipEither :: forall a b. Either a b -> Either b a
