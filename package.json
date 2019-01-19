@@ -10,6 +10,7 @@
   },
   "files": [],
   "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
     "clean": "rimraf output && rimraf .pulp-cache",
     "build": "pulp build -- --censor-lib --strict",
     "ps": "bower install && pulp build --source-maps -I examples",
@@ -18,8 +19,8 @@
     "watch": "parcel watch index.html"
   },
   "dependencies": {
-    "react": "^16.4.1",
-    "react-dom": "^16.4.1"
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0"
   },
   "devDependencies": {
     "bower": "^1.8.6",
