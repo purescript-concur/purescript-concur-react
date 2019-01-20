@@ -9,7 +9,7 @@ import Effect (Effect)
 import Effect.Uncurried (mkEffectFn1)
 import React (ReactRef)
 import React.DOM.Props as P
-import React.SyntheticEvent (SyntheticAnimationEvent, SyntheticClipboardEvent, SyntheticCompositionEvent, SyntheticEvent, SyntheticFocusEvent, SyntheticInputEvent, SyntheticKeyboardEvent, SyntheticMouseEvent, SyntheticTouchEvent, SyntheticTransitionEvent, SyntheticUIEvent, SyntheticWheelEvent)
+import React.SyntheticEvent (SyntheticAnimationEvent, SyntheticClipboardEvent, SyntheticCompositionEvent, SyntheticEvent, SyntheticEvent_, SyntheticFocusEvent, SyntheticInputEvent, SyntheticKeyboardEvent, SyntheticMouseEvent, SyntheticTouchEvent, SyntheticTransitionEvent, SyntheticUIEvent, SyntheticWheelEvent)
 import Unsafe.Coerce (unsafeCoerce)
 
 data Props a = PrimProp P.Props | Handler ((a -> Effect Unit) -> P.Props)
@@ -46,7 +46,7 @@ filterProp ok (Handler g) = Handler \h -> (g \a ->
 -- | Get the event target's current value
 -- | HACK: This is brittle thanks to React's event object reuse!
 -- | Safest is to use it directly on the prop like `unsafeTargetValue <$> onKeyDown`
-unsafeTargetValue :: SyntheticKeyboardEvent -> String
+unsafeTargetValue :: forall r. SyntheticEvent_ r -> String
 unsafeTargetValue e = (unsafeCoerce e).target.value
 
 -- | Check if a keyboard event was Enter
