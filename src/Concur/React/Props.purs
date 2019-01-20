@@ -12,6 +12,11 @@ import React.DOM.Props as P
 import React.SyntheticEvent (SyntheticAnimationEvent, SyntheticClipboardEvent, SyntheticCompositionEvent, SyntheticEvent, SyntheticEvent_, SyntheticFocusEvent, SyntheticInputEvent, SyntheticKeyboardEvent, SyntheticMouseEvent, SyntheticTouchEvent, SyntheticTransitionEvent, SyntheticUIEvent, SyntheticWheelEvent)
 import Unsafe.Coerce (unsafeCoerce)
 
+foreign import emptyProp_ :: P.Props
+
+emptyProp :: forall a. Props a
+emptyProp = PrimProp emptyProp_
+
 data Props a = PrimProp P.Props | Handler ((a -> Effect Unit) -> P.Props)
 
 instance functorProps :: Functor Props where
@@ -30,6 +35,22 @@ unsafeMkPropHandler s = Handler \f -> P.unsafeMkProps s (mkEffectFn1 f)
 -- | Construct a custom key value prop
 unsafeMkProp :: forall a b. String -> a -> Props b
 unsafeMkProp s v = PrimProp (P.unsafeMkProps s v)
+
+foreign import data RRef :: Type -> Type
+foreign import createRef :: forall a. Effect (RRef a)
+foreign import refSetter :: forall a. RRef a -> a -> Effect Unit
+foreign import refGetter :: forall a. RRef a -> Effect (Maybe a)
+
+-- | Use `refProp` to convert a `Handler` to a static prop
+-- | The value returned by the handler is stored in the RRef passed
+refProp :: forall a b. RRef a -> Props a -> Props b
+refProp rref (PrimProp p) = PrimProp p
+refProp rref (Handler f) = PrimProp (f (refSetter rref))
+
+-- | Use `handleProp` to handle an event manually
+handleProp :: forall a b. (a -> Effect Unit) -> Props a -> Props b
+handleProp _ (PrimProp p) = PrimProp p
+handleProp f (Handler g) = PrimProp (g f)
 
 -- | Shortcut for the common case of a list of classes
 classList :: forall a. Array (Maybe String) -> Props a

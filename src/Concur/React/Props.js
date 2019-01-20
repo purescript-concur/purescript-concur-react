@@ -7,3 +7,33 @@ exports.resetTargetValue = function(s) {
         }
     };
 };
+
+exports.emptyProp_ = {}
+
+exports.createRef = function() {
+  return (function() {
+    var x;
+    return [
+      function(cur) {
+        x=cur;
+      },
+      function() {
+        return x;
+      }
+    ];
+  })();
+};
+
+exports.refSetter = function(ref) {
+  return function(cur) {
+    return function() {
+      return ref[0](cur);
+    }
+  };
+};
+
+exports.refGetter = function(ref) {
+  return function() {
+    return ref[1]();
+  };
+};
