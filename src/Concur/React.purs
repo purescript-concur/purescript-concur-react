@@ -11,7 +11,6 @@ import Data.Either (Either(..))
 import Data.Tuple (Tuple(..))
 import Effect.Console (log)
 import React as R
-import React.DOM as D
 import React.DOM.Props as P
 import Unsafe.Coerce (unsafeCoerce)
 
@@ -54,8 +53,7 @@ componentClass winit = R.component "Concur" component
     handler _ (Left err) = do
       log ("FAILED! " <> show err)
       pure unit
-    -- TODO: Refine the div wrapper. This is just a placeholder.
-    render st = D.div' st.view
+    render st = R.toElement st.view
 
 renderComponent :: forall a. Widget HTML a -> R.ReactElement
 renderComponent init = R.createLeafElement (componentClass init) {}
