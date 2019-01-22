@@ -4,7 +4,7 @@ import Prelude
 
 import Data.Array (concatMap, intercalate)
 import Data.Maybe (Maybe, maybe)
-import Data.Nullable (Nullable)
+import Data.Nullable (Nullable, toMaybe)
 import Effect (Effect)
 import Effect.Uncurried (mkEffectFn1)
 import React (ReactRef)
@@ -39,7 +39,16 @@ unsafeMkProp s v = PrimProp (P.unsafeMkProps s v)
 foreign import data RRef :: Type -> Type
 foreign import createRef :: forall a. Effect (RRef a)
 foreign import refSetter :: forall a. RRef a -> a -> Effect Unit
-foreign import refGetter :: forall a. RRef a -> Effect (Maybe a)
+foreign import refGetter_ :: forall a. RRef a -> Effect (Nullable a)
+
+-- | `refGetter` will collapse nullable values
+-- | So it will never return a `Just null`, only either `Nothing`, or `Just (notNull a)`
+-- | So with `Nullable a`, it is easier, without loss of generality, to use `refNullableGetter`
+refGetter :: forall a. RRef a -> Effect (Maybe a)
+refGetter rf = toMaybe <$> refGetter_ rf
+
+refNullableGetter :: forall a. RRef (Nullable a) -> Effect (Maybe a)
+refNullableGetter rf = (unsafeCoerce <<< toMaybe) <$> refGetter_ rf
 
 -- | Use `refProp` to convert a `Handler` to a static prop
 -- | The value returned by the handler is stored in the RRef passed

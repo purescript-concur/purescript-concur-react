@@ -5,7 +5,7 @@ import Prelude hiding (div)
 import Concur.Core (Widget, loopState)
 import Concur.React (HTML)
 import Concur.React.DOM (button, div, div', h1', text)
-import Concur.React.Props (onClick, style)
+import Concur.React.Props (onClick, placeholder, style)
 import Concur.React.Widgets (textInputWithButton)
 import Control.Monad.State (StateT, evalStateT, get)
 import Control.Monad.State.Trans (lift)
@@ -36,11 +36,11 @@ login = loopState {msg: "", uname: ""} \s -> do
   uname <- div'
     [ div' [text "Try logging in as 'demo' or 'admin'"]
     , div [style { color: "red"}] [text s.msg]
-    , div' [ textInputWithButton s.uname "Enter Username" "Login" ]
+    , div' [ textInputWithButton s.uname "Login" [placeholder "Enter Username"] [] ]
     ]
   -- The following could be an effectful ajax call, instead of a pure lookup
   pure $ case M.lookup uname userMap of
-    Nothing -> Left (s {msg = "Login Failed for user '" <> s.uname <> "'"})
+    Nothing -> Left (s {msg = "Login Failed for user '" <> uname <> "'"})
     Just u -> Right u
 
 logout :: User -> Widget HTML Unit

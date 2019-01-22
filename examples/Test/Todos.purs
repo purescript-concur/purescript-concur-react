@@ -31,7 +31,7 @@ todosWidget = dyn $ todos {filter: All, todos: []}
 
 mkTodo :: Array Todo -> Signal HTML (Array Todo)
 mkTodo ts = loopW ts \ts' -> D.div' $ pure $ do
-  s <- textInputEnter "" "What do you want to do?" true
+  s <- textInputEnter "" true [P.placeholder "What do you want to do?"]
   pure (cons {name: s, done: false} ts')
 
 todos :: Todos -> Signal HTML Todos
@@ -45,7 +45,7 @@ todo p t = if runFilter p t
   then step (Just t) $ D.div'
     [ todo p <<< (\b -> t {done = b}) <$> checkbox t.done
     , do _ <- D.span [mark t.done, P.onDoubleClick] [D.text t.name]
-         todo p <<< (\s -> t {name = s}) <$> D.span' [textInputEnter t.name "" false]
+         todo p <<< (\s -> t {name = s}) <$> D.span' [textInputEnter t.name false []]
     , defer (\_ -> always Nothing) <$ D.button [P.onClick] [D.text "Delete"]
     ]
   else always (Just t)

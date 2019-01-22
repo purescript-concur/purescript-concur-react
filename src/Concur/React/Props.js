@@ -32,7 +32,7 @@ exports.refSetter = function(ref) {
   };
 };
 
-exports.refGetter = function(ref) {
+exports.refGetter_ = function(ref) {
   return function() {
     return ref[1]();
   };

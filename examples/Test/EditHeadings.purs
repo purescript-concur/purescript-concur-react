@@ -6,7 +6,7 @@ import Concur.Core (Widget)
 import Concur.Core.FRP (Signal, dyn, loopS, step)
 import Concur.React (HTML)
 import Concur.React.DOM (div', button, h5, text, ul_, li_)
-import Concur.React.Props (onClick, onDoubleClick)
+import Concur.React.Props (onClick, onDoubleClick, placeholder)
 import Concur.React.Widgets (textInputEnter)
 import Data.Array (catMaybes, cons)
 import Data.Maybe (Maybe(..))
@@ -58,7 +58,7 @@ editableTitle :: String -> Signal HTML String
 editableTitle title = step title do
   _ <- h5 [onDoubleClick] [text title]
   edited <- div'
-    [ textInputEnter title title false
+    [ textInputEnter title false [placeholder title]
     , title <$ button [onClick] [text "Cancel"]
     ]
   pure $ editableTitle $ if edited == "" then title else edited
