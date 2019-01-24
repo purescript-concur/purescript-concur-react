@@ -32,6 +32,7 @@
     "purescript-argonaut-codecs": "^5.1.1",
     "purescript-datetime": "^4.1.0",
     "purescript-now": "^4.0.0",
-    "purescript-psci-support": "^4.0.0"
+    "purescript-psci-support": "^4.0.0",
+    "purescript-routing": "^8.0.0"
   }
 }
