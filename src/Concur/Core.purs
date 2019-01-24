@@ -129,6 +129,7 @@ instance widgetPlus :: Monoid v => Plus (Widget v) where
 instance widgetAlternative :: Monoid v => Alternative (Widget v)
 
 -- Pause for a negligible amount of time. Forces continuations to pass through the trampoline.
+-- (Somewhat similar to calling `setTimeout` of zero in Javascript)
 -- Avoids stack overflows in (pathological) cases where a widget calls itself repeatedly without any intervening widgets or effects.
 -- E.g. -
 --   BAD  `counter n = if n < 10000 then counter (n+1) else pure n`
@@ -216,14 +217,3 @@ mkLeafWidget mkView = Widget $ wrap $ WidgetStep do
   let view' = mkView (\a -> void (EVar.tryPut (pure a) var))
   let cont' = liftAff (AVar.take var)
   pure (Right {view: view', cont: cont'})
-
--- | A very useful combinator for widgets with localised state
-loopState :: forall m a s. Monad m => s -> (s -> m (Either s a)) -> m a
-loopState s f = f s >>= case _ of
-  Left s' -> loopState s' f
-  Right a -> pure a
-
--- | The Elm Architecture
-tea :: forall a s m x. Monad m => s -> (s -> m a) -> (a -> s -> s) -> m x
-tea s render update = go s
-  where go st = render st >>= (flip update st >>> go)
