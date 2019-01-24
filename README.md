@@ -11,6 +11,11 @@
    <a href="https://www.reddit.com/r/concurhaskell/" rel="nofollow">
       <img src="https://img.shields.io/badge/reddit-join%20the%20discussion%20%E2%86%A3-1158c2.svg" alt="Join the chat at https://gitter.im/concurhaskell" style="max-width:100%;">
    </a>
+   <a href="https://pursuit.purescript.org/packages/purescript-concur-react">
+     <img src="https://pursuit.purescript.org/packages/purescript-concur-react/badge"
+        alt="Purescript-Concur-React on Pursuit">
+     </img>
+   </a>
 </p>
 
 [Concur UI Lib](https://github.com/ajnsit/concur) is a brand new client side Web UI framework that explores an entirely new paradigm. It does not follow FRP (think Reflex or Reactive Banana), or Elm architecture, but aims to combine the best parts of both. This repo contains the Concur implementation for Purescript, using the React backend.
