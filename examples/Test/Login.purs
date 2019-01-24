@@ -2,7 +2,8 @@ module Test.Login where
 
 import Prelude hiding (div)
 
-import Concur.Core (Widget, loopState)
+import Concur.Core (Widget)
+import Concur.Core.Patterns (loopState)
 import Concur.React (HTML)
 import Concur.React.DOM (button, div, div', h1', text)
 import Concur.React.Props (onClick, placeholder, style)
