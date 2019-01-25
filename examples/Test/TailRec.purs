@@ -11,7 +11,7 @@ import Effect.Aff.Class (liftAff)
 
 tailRecDemo :: forall a. Widget HTML a
 tailRecDemo = do
-  D.div'[ D.p' [D.text ("This demo shows that tail recursion is stack safe in Concur. (Even without using tailRecM.")]
+  D.div'[ D.p' [D.text ("This demo shows that tail recursion is stack safe in Concur (even without using tailRecM).")]
         , D.p' [D.text "This widget performs a tail recursive call roughly once every 10 milliseconds, and will never exhaust the stack."]
         , do
             void $ D.button [P.onClick] [D.text "Start Tail Recursion Demo"]
