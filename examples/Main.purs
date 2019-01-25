@@ -32,5 +32,5 @@ main = do
   runWidgetInDom "color" (colorWidget "")
   runWidgetInDom "timers" timersWidget
   runWidgetInDom "hugeButtonList" (hugeButtonListDemo 50000)
-  runWidgetInDom "tailRecursionDemo" tailRecDemo
+  runWidgetInDom "tailRecursion" tailRecDemo
   runWidgetInDom "login" loginWidget
