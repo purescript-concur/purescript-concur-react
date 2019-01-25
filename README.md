@@ -63,16 +63,16 @@ Concur supports using external React components. For example, there is an ongoin
 
 Individual example sources -
 
-1. Hello World! Shows simple effectful widgets. [Source](https://github.com/ajnsit/purescript-concur/blob/master/examples/Test/Hello.purs).
-2. A simple counter widget. [Source](https://github.com/ajnsit/purescript-concur/blob/master/examples/Test/Counter.purs).
-3. A login widget. [Source](https://github.com/ajnsit/purescript-concur/blob/master/examples/Test/Login.purs).
-4. Concur has Signals! Example counting widget implemented with Signals! [Source](https://github.com/ajnsit/purescript-concur/blob/master/examples/Test/Signals.purs).
-5. A full-featured TodoMVC implementation with Signals. [Source](https://github.com/ajnsit/purescript-concur/blob/master/examples/Test/Todos.purs).
-6. A fully editable tree in ~30 lines of code (with Signals). [Source](https://github.com/ajnsit/purescript-concur/blob/master/examples/Test/EditHeadings.purs).
-7. A postfix calculator. [Source](https://github.com/ajnsit/purescript-concur/blob/master/examples/Test/Calc.purs).
-8. Using AJAX and handling JSON responses. [Source](https://github.com/ajnsit/purescript-concur/blob/master/examples/Test/Ajax.purs).
-9. A small widget to visualise CSS color codes. [Source](https://github.com/ajnsit/purescript-concur/blob/master/examples/Test/Color.purs).
-10. Asynchronous timers which can be cancelled. [Source](https://github.com/ajnsit/purescript-concur/blob/master/examples/Test/Timers.purs).
-11. A routed widget which demonstrates routing. [Source](https://github.com/ajnsit/purescript-concur/blob/master/examples/Test/Routing.purs).
-12. Performance test - A huge list of 50 thousand parallel buttons. This has two variants, fast (uses slightly lower level interface) and slow (idiomatic concur code). [Source](https://github.com/ajnsit/purescript-concur/blob/master/examples/Test/SlowButtonList.purs).
-13. Tail Recursion demo - Since Concur is purely functional in nature, its primary mode of iteration is via recursion. Purescript in general is NOT stack stafe with tail recursion; It uses tricks like tailRec and tailRecM. However, Concur performs trampolining to make monadic recursion completely stack safe. This example demonstrates that by making a huge number of tail recursive calls in a short span of time. [Source](https://github.com/ajnsit/purescript-concur/blob/master/examples/Test/TailRec.purs).
+1. **Hello World!** Shows simple effectful widgets with state using StateT. [Source](https://github.com/ajnsit/purescript-concur/blob/master/examples/Test/Hello.purs).
+2. **A simple counter widget** without using StateT. [Source](https://github.com/ajnsit/purescript-concur/blob/master/examples/Test/Counter.purs).
+3. **A login widget**. [Source](https://github.com/ajnsit/purescript-concur/blob/master/examples/Test/Login.purs).
+4. Concur has Signals! Sample **counting widget implemented with Signals**! [Source](https://github.com/ajnsit/purescript-concur/blob/master/examples/Test/Signals.purs).
+5. A **Full-featured TodoMVC implementation** with Signals. [Source](https://github.com/ajnsit/purescript-concur/blob/master/examples/Test/Todos.purs).
+6. A **Fully editable tree** in ~30 lines of code (with Signals). [Source](https://github.com/ajnsit/purescript-concur/blob/master/examples/Test/EditHeadings.purs).
+7. A **Postfix calculator**. [Source](https://github.com/ajnsit/purescript-concur/blob/master/examples/Test/Calc.purs).
+8. Using **AJAX and handling JSON** responses. [Source](https://github.com/ajnsit/purescript-concur/blob/master/examples/Test/Ajax.purs).
+9. A small widget to **Visualise CSS color codes**. [Source](https://github.com/ajnsit/purescript-concur/blob/master/examples/Test/Color.purs).
+10. **Asynchronous timers** which can be cancelled. [Source](https://github.com/ajnsit/purescript-concur/blob/master/examples/Test/Timers.purs).
+11. A **Routed widget** which demonstrates routing. [Source](https://github.com/ajnsit/purescript-concur/blob/master/examples/Test/Routing.purs).
+12. **Performance test** - A huge list of 50 thousand parallel buttons. This has two variants, fast (uses slightly lower level interface) and slow (idiomatic concur code). [Source](https://github.com/ajnsit/purescript-concur/blob/master/examples/Test/SlowButtonList.purs).
+13. **Tail Recursion demo** - Since Concur is purely functional in nature, its primary mode of iteration is via recursion. Purescript in general is NOT stack stafe with tail recursion; It uses tricks like tailRec and tailRecM. However, Concur performs trampolining to make monadic recursion completely stack safe. This example demonstrates that by making a huge number of tail recursive calls in a short span of time. [Source](https://github.com/ajnsit/purescript-concur/blob/master/examples/Test/TailRec.purs).
