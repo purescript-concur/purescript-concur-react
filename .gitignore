@@ -8,3 +8,5 @@ html/index.js
 /.psc-package
 /.cache
 /dist
+/.psci_modules
+
