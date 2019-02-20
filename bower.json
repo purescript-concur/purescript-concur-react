@@ -27,10 +27,10 @@
     "purescript-console": "^4.2.0"
   },
   "devDependencies": {
-    "purescript-affjax": "^7.0.0",
+    "purescript-affjax": "^7.0.2",
     "purescript-argonaut-core": "^4.0.1",
-    "purescript-argonaut-codecs": "^5.1.1",
-    "purescript-datetime": "^4.1.0",
+    "purescript-argonaut-codecs": "^5.1.2",
+    "purescript-datetime": "^4.1.1",
     "purescript-now": "^4.0.0",
     "purescript-psci-support": "^4.0.0",
     "purescript-routing": "^8.0.0"
