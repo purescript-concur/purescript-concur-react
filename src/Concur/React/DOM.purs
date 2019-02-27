@@ -1,26 +1,36 @@
 module Concur.React.DOM where
 
-import Prelude hiding (div,map,sub)
+import Prelude hiding (div, map, sub)
 
 import Concur.Core (display, Widget)
 import Concur.React (HTML, el, el', elLeaf)
 import Concur.React.Props (Props)
 import Control.MultiAlternative (class MultiAlternative)
 import Control.ShiftMap (class ShiftMap)
+
 import React.DOM as D
 
 -- Wrappers for all DOM elements from purescript-react
 -- TODO: Generate these mechanically somehow
+type El1
+  = forall m a. ShiftMap (Widget HTML) m => Array (Props a) -> m a -> m a
 
-type El1 = forall m a. ShiftMap (Widget HTML) m => Array (Props a) -> m a -> m a
-type El = forall m a. MultiAlternative m => ShiftMap (Widget HTML) m => Array (Props a) -> Array (m a) -> m a
-type El' = forall m a. MultiAlternative m => ShiftMap (Widget HTML) m => Array (m a) -> m a
-type ElLeaf = forall a. Array (Props a) -> Widget HTML a
-type ElLeaf' = forall a. Widget HTML a
+type El
+  = forall m a. MultiAlternative m => ShiftMap (Widget HTML) m => Array (Props a) -> Array (m a) -> m a
+
+type El'
+  = forall m a. MultiAlternative m => ShiftMap (Widget HTML) m => Array (m a) -> m a
+
+type ElLeaf
+  = forall a. Array (Props a) -> Widget HTML a
+
+type ElLeaf'
+  = forall a. Widget HTML a
 
 -------------------------------------------------------------------------------------------------------------------
-
-text :: String -> ElLeaf'
+text ::
+  String ->
+  ElLeaf'
 text str = display [D.text str]
 
 int :: Int -> ElLeaf'
@@ -90,10 +100,10 @@ audio' :: El'
 audio' = audio []
 
 b_ :: El1
-b_ = el D. b
+b_ = el D.b
 
 b :: El
-b = el' D. b
+b = el' D.b
 
 b' :: El'
 b' = b []

@@ -14,26 +14,46 @@ class Plus m <= MultiAlternative m where
   orr :: forall a. Array (m a) -> m a
 
 -- Use this if there isn't a more efficient implementation
-defaultOrr :: forall a m. Plus m => Array (m a) -> m a
+defaultOrr ::
+  forall a m.
+  Plus m =>
+  Array (m a) ->
+  m a
 defaultOrr xs = foldl alt empty xs
 
 -- Instances for common transformers
-
 -- TODO: Define an instance for all monad transformers
 -- instance multiAlternativeMonadTrans :: (Plus (t m), MonadTrans t) => MultiAlternative (t m) where
 --   orr = defaultOrr
-
-instance exceptMultiAlternative :: (Monoid e, MultiAlternative m, Monad m) => MultiAlternative (ExceptT e m) where
+instance exceptMultiAlternative ::
+  ( Monoid e
+  , MultiAlternative m
+  , Monad m
+  ) =>
+  MultiAlternative (ExceptT e m) where
   orr = defaultOrr
 
-instance rwsMultiAlternative :: MultiAlternative m => MultiAlternative (RWST r w s m) where
+instance rwsMultiAlternative ::
+  ( MultiAlternative m
+  ) =>
+  MultiAlternative (RWST r w s m) where
   orr = defaultOrr
 
-instance readerMultiAlternative :: MultiAlternative m => MultiAlternative (ReaderT r m) where
+instance readerMultiAlternative ::
+  ( MultiAlternative m
+  ) =>
+  MultiAlternative (ReaderT r m) where
   orr = defaultOrr
 
-instance stateMultiAlternative :: (MultiAlternative m, Monad m) => MultiAlternative (StateT s m) where
+instance stateMultiAlternative ::
+  ( MultiAlternative m
+  , Monad m
+  ) =>
+  MultiAlternative (StateT s m) where
   orr = defaultOrr
 
-instance writerMultiAlternative :: MultiAlternative m => MultiAlternative (WriterT s m) where
+instance writerMultiAlternative ::
+  ( MultiAlternative m
+  ) =>
+  MultiAlternative (WriterT s m) where
   orr = defaultOrr

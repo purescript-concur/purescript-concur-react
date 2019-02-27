@@ -13,7 +13,6 @@ class ShiftMap s t where
   shiftMap :: (s ~> s) -> (t ~> t)
 
 -- Instances for common transformers
-
 instance exceptShiftMap :: ShiftMap m (ExceptT e m) where
   shiftMap = mapExceptT
 

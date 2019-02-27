@@ -8,43 +8,80 @@ import Data.Nullable (Nullable, toMaybe)
 import Effect (Effect)
 import Effect.Uncurried (mkEffectFn1)
 import React (ReactRef)
-import React.DOM.Props as P
-import React.SyntheticEvent (SyntheticAnimationEvent, SyntheticClipboardEvent, SyntheticCompositionEvent, SyntheticEvent, SyntheticEvent_, SyntheticFocusEvent, SyntheticInputEvent, SyntheticKeyboardEvent, SyntheticMouseEvent, SyntheticTouchEvent, SyntheticTransitionEvent, SyntheticUIEvent, SyntheticWheelEvent)
+import React.SyntheticEvent
+  ( SyntheticAnimationEvent
+  , SyntheticClipboardEvent
+  , SyntheticCompositionEvent
+  , SyntheticEvent
+  , SyntheticEvent_
+  , SyntheticFocusEvent
+  , SyntheticInputEvent
+  , SyntheticKeyboardEvent
+  , SyntheticMouseEvent
+  , SyntheticTouchEvent
+  , SyntheticTransitionEvent
+  , SyntheticUIEvent
+  , SyntheticWheelEvent
+  )
 import Unsafe.Coerce (unsafeCoerce)
+
+import React.DOM.Props as P
 
 foreign import emptyProp_ :: P.Props
 
 emptyProp :: forall a. Props a
 emptyProp = PrimProp emptyProp_
 
-data Props a = PrimProp P.Props | Handler ((a -> Effect Unit) -> P.Props)
+data Props a
+  = PrimProp P.Props
+  | Handler ((a -> Effect Unit) -> P.Props)
 
 instance functorProps :: Functor Props where
   map _ (PrimProp p) = PrimProp p
-  map f (Handler h) = Handler \k -> h (k <<< f)
+  map f (Handler h) = Handler \k ->
+    h (k <<< f)
 
 -- | Internal. Do not use. Use unsafeMkProp, or unsafeMkPropHandler instead.
-mkProp :: forall a. (a -> Effect Unit) -> Props a -> P.Props
+mkProp ::
+  forall a.
+  (a -> Effect Unit) ->
+  Props a ->
+  P.Props
 mkProp _ (PrimProp a) = a
+
 mkProp h (Handler f) = f h
 
 -- | Construct a custom prop handler
-unsafeMkPropHandler :: forall a. String -> Props a
-unsafeMkPropHandler s = Handler \f -> P.unsafeMkProps s (mkEffectFn1 f)
+unsafeMkPropHandler ::
+  forall a.
+  String ->
+  Props a
+unsafeMkPropHandler s = Handler \f ->
+  P.unsafeMkProps s (mkEffectFn1 f)
 
 -- | Construct a custom key value prop
-unsafeMkProp :: forall a b. String -> a -> Props b
+unsafeMkProp ::
+  forall a b.
+  String ->
+  a ->
+  Props b
 unsafeMkProp s v = PrimProp (P.unsafeMkProps s v)
 
 foreign import data RRef :: Type -> Type
+
 foreign import createRef :: forall a. Effect (RRef a)
+
 foreign import refSetter :: forall a. RRef a -> a -> Effect Unit
+
 foreign import refGetter_ :: forall a. RRef a -> Effect (Nullable a)
 
 -- | `refGetter` will collapse nullable values
 -- | So it will never return a `Just null`, only either `Nothing`, or `Just (notNull a)`
 -- | So with `Nullable a`, it is easier, without loss of generality, to use `refNullableGetter`
-refGetter :: forall a. RRef a -> Effect (Maybe a)
+refGetter ::
+  forall a.
+  RRef a ->
+  Effect (Maybe a)
 refGetter rf = toMaybe <$> refGetter_ rf
 
 refNullableGetter :: forall a. RRef (Nullable a) -> Effect (Maybe a)
@@ -52,54 +89,83 @@ refNullableGetter rf = (unsafeCoerce <<< toMaybe) <$> refGetter_ rf
 
 -- | Use `refProp` to convert a `Handler` to a static prop
 -- | The value returned by the handler is stored in the RRef passed
-refProp :: forall a b. RRef a -> Props a -> Props b
+refProp ::
+  forall a b.
+  RRef a ->
+  Props a ->
+  Props b
 refProp rref (PrimProp p) = PrimProp p
+
 refProp rref (Handler f) = PrimProp (f (refSetter rref))
 
 -- | Use `handleProp` to handle an event manually
-handleProp :: forall a b. (a -> Effect Unit) -> Props a -> Props b
+handleProp ::
+  forall a b.
+  (a -> Effect Unit) ->
+  Props a ->
+  Props b
 handleProp _ (PrimProp p) = PrimProp p
+
 handleProp f (Handler g) = PrimProp (g f)
 
 -- | Shortcut for the common case of a list of classes
-classList :: forall a. Array (Maybe String) -> Props a
-classList = className <<< intercalate " " <<< concatMap (maybe [] (\s -> [s]))
+classList ::
+  forall a.
+  Array (Maybe String) ->
+  Props a
+classList = className <<< intercalate " " <<< concatMap (maybe [] (\s ->
+  [s]))
 
 -- | Use this to filter the output of an event handler prop.
 -- | For example, to only handle the enter key - `filterProp isEnterEvent onKeyDown`
-filterProp :: forall a. (a -> Boolean) -> Props a -> Props a
+filterProp ::
+  forall a.
+  (a -> Boolean) ->
+  Props a ->
+  Props a
 filterProp _ p@(PrimProp _) = p
-filterProp ok (Handler g) = Handler \h -> (g \a ->
-  if ok a then h a else pure unit)
+
+filterProp ok (Handler g) = Handler \h ->
+  (g \a ->
+    if ok a
+      then h a
+      else pure unit)
 
 -- FFI + Util stuff
 -- | Get the event target's current value
 -- | HACK: This is brittle thanks to React's event object reuse!
 -- | Safest is to use it directly on the prop like `unsafeTargetValue <$> onKeyDown`
-unsafeTargetValue :: forall r. SyntheticEvent_ r -> String
+unsafeTargetValue ::
+  forall r.
+  SyntheticEvent_ r ->
+  String
 unsafeTargetValue e = (unsafeCoerce e).target.value
 
 -- | Check if a keyboard event was Enter
-isEnterEvent :: SyntheticKeyboardEvent -> Boolean
-isEnterEvent e =
-  e'.which == 13 || e'.keyCode == 13
-  where e' = unsafeCoerce e
+isEnterEvent ::
+  SyntheticKeyboardEvent ->
+  Boolean
+isEnterEvent e = e'.which == 13 || e'.keyCode == 13
+  where
+  e' = unsafeCoerce e
 
 -- | IMPORTANT: UNSAFE: It's unsafe to use this outside this module
 foreign import resetTargetValue :: forall event. String -> event -> Effect Unit
 
 -- The Standard Set of Props
-
-aria :: forall ariaAttrs a. { | ariaAttrs } -> Props a
+aria ::
+  forall ariaAttrs a.
+  { | ariaAttrs} ->
+  Props a
 aria = PrimProp <<< P.aria
 
-_data :: forall dataAttrs a. { | dataAttrs } -> Props a
+_data :: forall dataAttrs a. { | dataAttrs} -> Props a
 _data = PrimProp <<< P._data
 
-style :: forall style a. { | style } -> Props a
+style :: forall style a. { | style} -> Props a
 style = PrimProp <<< P.style
 
-dangerouslySetInnerHTML :: forall a. { __html :: String } -> Props a
+dangerouslySetInnerHTML :: forall a. {__html :: String} -> Props a
 dangerouslySetInnerHTML = PrimProp <<< P.dangerouslySetInnerHTML
 
 accept :: forall a. String -> Props a
@@ -478,7 +544,10 @@ wrap :: forall a. String -> Props a
 wrap = PrimProp <<< P.wrap
 
 -- RDFa Attributes
-about :: forall a. String -> Props a
+about ::
+  forall a.
+  String ->
+  Props a
 about = PrimProp <<< P.about
 
 datatype :: forall a. String -> Props a
@@ -503,7 +572,10 @@ vocab :: forall a. String -> Props a
 vocab = PrimProp <<< P.vocab
 
 -- Non-standard Attributes
-autoCapitalize :: forall a. String -> Props a
+autoCapitalize ::
+  forall a.
+  String ->
+  Props a
 autoCapitalize = PrimProp <<< P.autoCapitalize
 
 autoCorrect :: forall a. String -> Props a
@@ -963,7 +1035,10 @@ suppressContentEditableWarning :: forall a. Boolean -> Props a
 suppressContentEditableWarning = PrimProp <<< P.suppressContentEditableWarning
 
 -- SVG attributes
-x :: forall a. Int -> Props a
+x ::
+  forall a.
+  Int ->
+  Props a
 x = PrimProp <<< P.x
 
 y :: forall a. Int -> Props a

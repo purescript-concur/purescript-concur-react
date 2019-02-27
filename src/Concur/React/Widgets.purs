@@ -4,15 +4,20 @@ import Prelude
 
 import Concur.Core (Widget)
 import Concur.React (HTML)
-import Concur.React.DOM as D
 import Concur.React.Props (Props)
-import Concur.React.Props as P
 import Data.Maybe (Maybe(..))
 import Effect.Class (liftEffect)
 import Unsafe.Coerce (unsafeCoerce)
 
+import Concur.React.DOM as D
+import Concur.React.Props as P
+
 -- | A Text input that returns its contents on enter
-textInputEnter :: String -> Boolean -> (forall a. Array (Props a)) -> Widget HTML String
+textInputEnter ::
+  String ->
+  Boolean ->
+  (forall a. Array (Props a)) ->
+  Widget HTML String
 textInputEnter val reset props = do
   e <- D.input $ props <> [P.onKeyEnter, P.defaultValue val]
   -- HACK: Using forced do notation, to force evaluation of the text input value in the same handler
@@ -22,7 +27,12 @@ textInputEnter val reset props = do
 
 -- | A Text input that has a button attached
 -- | Returns its contents on the user pressing enter, or clicking the button
-textInputWithButton :: String -> String -> (forall a. Array (Props a)) -> (forall a. Array (Props a)) -> Widget HTML String
+textInputWithButton ::
+  String ->
+  String ->
+  (forall a. Array (Props a)) ->
+  (forall a. Array (Props a)) ->
+  Widget HTML String
 textInputWithButton val buttonlabel inpProps buttonProps = do
   ref <- liftEffect P.createRef
   D.div'
