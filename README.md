@@ -26,6 +26,16 @@ Work in progress tutorials are published in the [Concur Documentation site](http
 
 API documentation is [published on Pursuit](https://pursuit.purescript.org/packages/purescript-concur-react).
 
+## Performance
+
+Purescript-Concur is reasonably light. The [entire *uncompressed* JS bundle](https://github.com/ajnsit/purescript-concur/blob/master/docs/index.prod.minified.0dfb135e.js), including react and all libraries, for the entire example application in this repo clocks in at 300KB. You can build this bundle yourself with the command `npm run prod`.
+
+This leads to pretty fast initial load times. Running the Chrome audit on https://ajnsit.github.io/purescript-concur/ produces -
+
+<p align="center">
+   <img src="docs/Purescript-Concur-Performance.png">
+</p>
+
 ## Ports to other languages
 
 1. [Concur for Haskell](https://github.com/ajnsit/concur) - The original version of Concur written in Haskell.
