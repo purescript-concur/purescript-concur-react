@@ -10,6 +10,7 @@ import Test.Calc (calcWidget)
 import Test.Color (colorWidget)
 import Test.Counter (counterWidget)
 import Test.EditHeadings (editHeadings)
+import Test.FocusCount (focusCountWidget)
 import Test.Hello (helloWidget)
 import Test.Login (loginWidget)
 import Test.Routing (routingWidget)
@@ -34,3 +35,4 @@ main = do
   runWidgetInDom "hugeButtonList" (hugeButtonListDemo 50000)
   runWidgetInDom "tailRecursion" tailRecDemo
   runWidgetInDom "login" loginWidget
+  runWidgetInDom "focusCount" focusCountWidget
