@@ -9,9 +9,10 @@ import Control.MultiAlternative (class MultiAlternative, orr)
 import Control.Parallel.Class (parallel, sequential)
 import Control.Plus (class Alt, class Plus, alt, empty)
 import Control.ShiftMap (class ShiftMap)
+import Data.Array as A
 import Data.Array.NonEmpty (NonEmptyArray, fromArray, updateAt)
 import Data.Either (Either(..))
-import Data.FoldableWithIndex (foldlWithIndex)
+import Data.FoldableWithIndex (foldlWithIndex, foldrWithIndex)
 import Data.Maybe (Maybe(Nothing, Just), fromMaybe)
 import Data.Semigroup.Foldable (foldMap1)
 import Data.Traversable (traverse)
@@ -137,6 +138,23 @@ instance widgetMultiAlternative ::
       -- TODO: All the Aff in ws is already discharged. Use a more efficient way than comb to process it
       -- TODO: Also, more importantly, we would like to not have to cancel running fibers unless one of them returns a result
       pure $ comb (fromMaybe wsm (updateAt i e wsm))
+
+-- | Run multiple widgets in parallel until *all* finish, and collect their outputs
+-- | Contrast with `orr`
+-- TODO: Performance? Don't orr with `empty`.
+andd ::
+  forall v a.
+  Monoid v =>
+  Array (Widget v a) ->
+  Widget v (Array a)
+andd ws = do
+  Tuple i e <- foldrWithIndex (\i w r -> alt (map (Tuple i) w) r) empty ws
+  let ws' = fromMaybe ws $ A.deleteAt i ws
+  if A.length ws' <= 0
+    then pure [e]
+    else do
+      rest <- andd ws'
+      pure $ fromMaybe [] $ A.insertAt i e rest
 
 instance widgetSemigroup :: (Monoid v) => Semigroup (Widget v a) where
   append w1 w2 = orr [w1, w2]
