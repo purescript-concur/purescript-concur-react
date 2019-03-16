@@ -17,6 +17,7 @@ import Test.Routing (routingWidget)
 import Test.Signals (countingWidget)
 import Test.SlowButtonList (hugeButtonListDemo)
 import Test.TailRec (tailRecDemo)
+import Test.TheElmArchitecture (teaWidget)
 import Test.Timers (timersWidget)
 import Test.Todos (todosWidget)
 
@@ -36,3 +37,4 @@ main = do
   runWidgetInDom "tailRecursion" tailRecDemo
   runWidgetInDom "login" loginWidget
   runWidgetInDom "focusCount" focusCountWidget
+  runWidgetInDom "teaWidget" teaWidget
