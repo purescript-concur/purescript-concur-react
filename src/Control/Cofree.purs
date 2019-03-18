@@ -17,7 +17,7 @@ module Control.Cofree
 
 import Prelude
 
-import Concur.Core (Widget)
+import Concur.Core.Types (Widget)
 import Control.Alternative (class Alternative, (<|>), empty)
 import Control.Comonad (class Comonad, extract)
 import Control.Extend (class Extend)

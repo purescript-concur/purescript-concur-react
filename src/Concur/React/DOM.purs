@@ -1,13 +1,12 @@
 module Concur.React.DOM where
 
-import Prelude hiding (div, map, sub)
+import Prelude hiding (div,map,sub)
 
-import Concur.Core (display, Widget)
+import Concur.Core.Types (Widget, display)
 import Concur.React (HTML, el, el', elLeaf)
 import Concur.React.Props (Props)
 import Control.MultiAlternative (class MultiAlternative)
 import Control.ShiftMap (class ShiftMap)
-
 import React.DOM as D
 
 -- Wrappers for all DOM elements from purescript-react

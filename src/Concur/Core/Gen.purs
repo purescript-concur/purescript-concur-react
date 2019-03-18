@@ -2,7 +2,7 @@ module Concur.Core.Gen where
 
 import Prelude
 
-import Concur.Core (Widget)
+import Concur.Core.Types (Widget)
 import Control.Alt ((<|>))
 import Control.Monad.Free (Free, hoistFree, liftF, resume, wrap)
 import Data.Array (foldr, snoc)

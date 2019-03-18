@@ -2,7 +2,7 @@ module Concur.React.Run where
 
 import Prelude
 
-import Concur.Core (Widget)
+import Concur.Core.Types (Widget)
 import Concur.React (HTML, renderComponent)
 import Data.Maybe (Maybe(..))
 import Effect (Effect)

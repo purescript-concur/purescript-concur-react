@@ -2,18 +2,18 @@ module Concur.React where
 
 import Prelude
 
-import Concur.Core (Widget, wrapViewEvent, mkLeafWidget)
+import Concur.Core (mkLeafWidget, wrapViewEvent)
 import Concur.Core.Discharge (discharge, dischargePartialEffect)
+import Concur.Core.Types (Widget)
 import Concur.React.Props (Props, mkProp)
 import Control.MultiAlternative (class MultiAlternative, orr)
 import Control.ShiftMap (class ShiftMap, shiftMap)
 import Data.Either (Either(..))
 import Data.Tuple (Tuple(..))
 import Effect.Console (log)
-import Unsafe.Coerce (unsafeCoerce)
-
 import React as R
 import React.DOM.Props as P
+import Unsafe.Coerce (unsafeCoerce)
 
 type HTML
   = Array R.ReactElement
