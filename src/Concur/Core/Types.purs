@@ -5,6 +5,7 @@ import Prelude
 import Control.Alternative (class Alternative)
 import Control.Monad.Free (Free, hoistFree, liftF, resume', wrap)
 import Control.Monad.Rec.Class (class MonadRec)
+import Control.Monad.Trans.Class (class MonadTrans, lift)
 import Control.MultiAlternative (class MultiAlternative, orr)
 import Control.Parallel.Class (parallel, sequential)
 import Control.Plus (class Alt, class Plus, alt, empty)
@@ -169,6 +170,17 @@ instance widgetPlus :: (Monoid v) => Plus (Widget v) where
   empty = display mempty
 
 instance widgetAlternative :: (Monoid v) => Alternative (Widget v)
+
+-- | A way to lift widgets into higher monads
+class LiftWidget v m where
+  liftWidget :: forall a. Widget v a -> m a
+
+-- LiftWidget instance for all transformers
+instance liftWidgetTrans :: MonadTrans t => LiftWidget v (t (Widget v)) where
+  liftWidget = lift
+
+-- | A Nice way to bring into scope all needed functionality which we need to write widgets
+class (Monad m, Monoid v, ShiftMap (Widget v) m, LiftWidget v m, MultiAlternative m) <= IsWidget v m
 
 -- Pause for a negligible amount of time. Forces continuations to pass through the trampoline.
 -- (Somewhat similar to calling `setTimeout` of zero in Javascript)
