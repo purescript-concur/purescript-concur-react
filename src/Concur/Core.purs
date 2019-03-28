@@ -1,11 +1,15 @@
 module Concur.Core
 ( module Concur.Core.Types
 , module Concur.Core
+, module Concur.Core.LiftWidget
+, module Concur.Core.IsWidget
 )
 where
 
 import Concur.Core.Discharge (discharge)
 import Concur.Core.Types (Widget(..), WidgetStep(..), resume, unWidget)
+import Concur.Core.LiftWidget (class LiftWidget, liftWidget)
+import Concur.Core.IsWidget (class IsWidget)
 import Control.Monad.Free (Free, liftF, wrap)
 import Control.Parallel.Class (parallel, sequential)
 import Control.Plus (alt)

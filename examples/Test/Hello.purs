@@ -9,7 +9,6 @@ import Concur.React.DOM (button, text, div')
 import Concur.React.Props (onClick)
 import Control.Monad.State.Class (get, put)
 import Control.Monad.State.Trans (StateT, runStateT)
-import Control.Monad.Trans.Class (lift)
 import Data.Tuple (snd)
 import Effect.Class (liftEffect)
 import Effect.Console (log)
@@ -24,7 +23,7 @@ helloWidgetS :: forall a. StateSubscription Int -> StateT Int (Widget HTML) a
 helloWidgetS subs = do
   count <- get
   -- liftEffect $ sendState subs "Increment" count
-  newCount <- lift $ withStateful subs "Increment" $ map (const (count + 1)) $ div'
+  newCount <- withStateful subs "Increment" $ map (const (count + 1)) $ div'
     [ but "Say Hello!"
     , but $ "For the " <> show count <> " time, hello sailor!"
     ]

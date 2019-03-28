@@ -4,6 +4,7 @@ import Prelude
 
 import Concur.Core (mkLeafWidget, wrapViewEvent)
 import Concur.Core.Discharge (discharge, dischargePartialEffect)
+import Concur.Core.LiftWidget (class LiftWidget, liftWidget)
 import Concur.Core.Types (Widget)
 import Concur.React.Props (Props, mkProp)
 import Control.MultiAlternative (class MultiAlternative, orr)
@@ -41,11 +42,12 @@ el e props = shiftMap (wrapViewEvent \h v ->
 
 -- | Promote a leaf node to a widget
 elLeaf ::
-  forall a.
+  forall m a.
+  LiftWidget HTML m =>
   LeafTag ->
   Array (Props a) ->
-  Widget HTML a
-elLeaf e props = mkLeafWidget \h ->
+  m a
+elLeaf e props = liftWidget $ mkLeafWidget \h ->
   [e (map (mkProp h) (unsafeCoerce props))]
 
 -- | Wrap some widgets with a node that can have eventHandlers attached

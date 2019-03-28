@@ -2,6 +2,7 @@ module Concur.React.DOM where
 
 import Prelude hiding (div,map,sub)
 
+import Concur.Core.LiftWidget (class LiftWidget, liftWidget)
 import Concur.Core.Types (Widget, display)
 import Concur.React (HTML, el, el', elLeaf)
 import Concur.React.Props (Props)
@@ -21,22 +22,22 @@ type El'
   = forall m a. MultiAlternative m => ShiftMap (Widget HTML) m => Array (m a) -> m a
 
 type ElLeaf
-  = forall a. Array (Props a) -> Widget HTML a
+  = forall m a. LiftWidget HTML m => Array (Props a) -> m a
 
 type ElLeaf'
-  = forall a. Widget HTML a
+  = forall m a. LiftWidget HTML m => m a
 
 -------------------------------------------------------------------------------------------------------------------
 text ::
   String ->
   ElLeaf'
-text str = display [D.text str]
+text str = liftWidget $ display [D.text str]
 
 int :: Int -> ElLeaf'
-int x = display [D.int x]
+int x = liftWidget $ display [D.int x]
 
 number :: Number -> ElLeaf'
-number x = display [D.number x]
+number x = liftWidget $ display [D.number x]
 
 a_ :: El1
 a_ = el D.a

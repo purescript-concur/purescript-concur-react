@@ -9,7 +9,6 @@ import Concur.React.DOM (button, div, div', h1', text)
 import Concur.React.Props (onClick, placeholder, style)
 import Concur.React.Widgets (textInputWithButton)
 import Control.Monad.State (StateT, evalStateT, get)
-import Control.Monad.State.Trans (lift)
 import Data.Either (Either(..))
 import Data.Map (Map, fromFoldable)
 import Data.Map as M
@@ -85,5 +84,5 @@ loginWidget :: forall a. Widget HTML a
 loginWidget = runTask do
   u <- currentUser
   div'
-    [ lift (text "HELLO!")
+    [ text "HELLO!"
     ]
