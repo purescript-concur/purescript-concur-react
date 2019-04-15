@@ -14,7 +14,6 @@ import Data.Tuple (Tuple(..))
 import Effect.Console (log)
 import React as R
 import React.DOM.Props as P
-import Unsafe.Coerce (unsafeCoerce)
 
 type HTML
   = Array R.ReactElement
@@ -28,7 +27,6 @@ type NodeTag
 type LeafTag
   = Array P.Props -> R.ReactElement
 
--- BIG HACK! We use UnsafeCoerce to allow this to typecheck. This MIGHT cause RUNTIME errors! Verify!
 -- | Wrap a widget with a node that can have eventHandlers attached
 el ::
   forall m a.
@@ -37,8 +35,8 @@ el ::
   Array (Props a) ->
   m a ->
   m a
-el e props = shiftMap (wrapViewEvent \h v ->
-  [e (map (mkProp h) (unsafeCoerce props)) v])
+el e props = shiftMap (\f w -> wrapViewEvent (\h v ->
+  [e (map (mkProp h <<< map f) props) v]) w)
 
 -- | Promote a leaf node to a widget
 elLeaf ::
@@ -48,7 +46,7 @@ elLeaf ::
   Array (Props a) ->
   m a
 elLeaf e props = liftWidget $ mkLeafWidget \h ->
-  [e (map (mkProp h) (unsafeCoerce props))]
+  [e (map (mkProp h) props)]
 
 -- | Wrap some widgets with a node that can have eventHandlers attached
 el' ::

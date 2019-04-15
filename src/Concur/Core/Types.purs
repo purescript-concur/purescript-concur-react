@@ -68,7 +68,7 @@ instance widgetMonad :: Monad (Widget v)
 derive newtype instance widgetMonadRec :: MonadRec (Widget v)
 
 instance widgetShiftMap :: ShiftMap (Widget v) (Widget v) where
-  shiftMap = identity
+  shiftMap f = f identity
 
 -- Util
 flipEither ::

@@ -21,18 +21,17 @@ import Concur.Core.Types (Widget)
 import Control.Alternative (class Alternative, (<|>), empty)
 import Control.Comonad (class Comonad, extract)
 import Control.Extend (class Extend)
+import Control.Lazy as Z
 import Control.Monad.Free (Free, runFreeM)
 import Control.Monad.Rec.Class (class MonadRec)
 import Control.Monad.State (State, StateT(..), runState, runStateT, state)
 import Control.ShiftMap (class ShiftMap)
 import Data.Eq (class Eq1, eq1)
 import Data.Foldable (class Foldable, foldr, foldl, foldMap)
-import Data.Lazy (Lazy, force, defer)
+import Data.Lazy (Lazy, defer, force)
 import Data.Ord (class Ord1, compare1)
 import Data.Traversable (class Traversable, traverse)
 import Data.Tuple (Tuple(..), fst, snd)
-
-import Control.Lazy as Z
 
 -- | The `Cofree` `Comonad` for a functor.
 -- |
@@ -221,5 +220,7 @@ instance lazyCofree :: Z.Lazy (Cofree f a) where
     let (Cofree t) = k unit
     in force t)
 
-instance shiftMapCofree :: ShiftMap (Widget v) (Cofree (Widget v)) where
-  shiftMap = hoistCofree
+instance shiftMapCofree :: Monoid v => ShiftMap (Widget v) (Cofree (Widget v)) where
+  shiftMap f (Cofree l) = deferCofree \_ ->
+    let Tuple a rest = force l
+    in Tuple a (f pure rest)
