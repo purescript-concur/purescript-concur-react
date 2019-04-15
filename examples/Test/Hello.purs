@@ -3,32 +3,20 @@ module Test.Hello where
 import Prelude
 
 import Concur.Core (Widget)
-import Concur.Core.DevTools (StateSubscription, connectDevTools, subscribe, withStateful)
 import Concur.React (HTML)
-import Concur.React.DOM (button, text, div')
-import Concur.React.Props (onClick)
+import Concur.React.DOM as D
+import Concur.React.Props as P
+import Control.Monad.Rec.Class (forever)
 import Control.Monad.State.Class (get, put)
 import Control.Monad.State.Trans (StateT, runStateT)
-import Data.Tuple (snd)
-import Effect.Class (liftEffect)
-import Effect.Console (log)
 
-helloWidget :: Widget HTML Int
+helloWidget :: forall a. Widget HTML a
 helloWidget = do
-  conn <- liftEffect connectDevTools
-  subs <- liftEffect $ subscribe conn
-  snd <$> runStateT (helloWidgetS subs) 0
+  void $ runStateT helloWidgetS 0
+  D.text "Actually this will never be reached, but the compiler is not smart enough to deduce that"
 
-helloWidgetS :: forall a. StateSubscription Int -> StateT Int (Widget HTML) a
-helloWidgetS subs = do
+helloWidgetS :: forall a. StateT Int (Widget HTML) a
+helloWidgetS = forever do
   count <- get
-  -- liftEffect $ sendState subs "Increment" count
-  newCount <- withStateful subs "Increment" $ map (const (count + 1)) $ div'
-    [ but "Say Hello!"
-    , but $ "For the " <> show count <> " time, hello sailor!"
-    ]
-  put newCount -- (count + 1)
-  liftEffect (log "You said Hello!")
-  helloWidgetS subs
-  where
-    but s = button [onClick] [text s]
+  void $ D.div' [ D.button [P.onClick] [D.text ("For the " <> show count <> " time, hello sailor!")] ]
+  put (count + 1)
