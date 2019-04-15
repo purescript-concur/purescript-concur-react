@@ -5,8 +5,8 @@ import Prelude hiding (div)
 import Concur.Core (Widget)
 import Concur.Core.Patterns (loopState)
 import Concur.React (HTML)
-import Concur.React.DOM (button, div, div', h1', text)
-import Concur.React.Props (onClick, placeholder, style)
+import Concur.React.DOM as D
+import Concur.React.Props as P
 import Concur.React.Widgets (textInputWithButton)
 import Control.Monad.State (StateT, evalStateT, get)
 import Data.Either (Either(..))
@@ -33,10 +33,10 @@ userMap = fromFoldable
 
 login :: Widget HTML User
 login = loopState {msg: "", uname: ""} \s -> do
-  uname <- div'
-    [ div' [text "Try logging in as 'demo' or 'admin'"]
-    , div [style { color: "red"}] [text s.msg]
-    , div' [ textInputWithButton s.uname "Login" [placeholder "Enter Username"] [] ]
+  uname <- D.div'
+    [ D.div' [D.text "Try logging in as 'demo' or 'admin'"]
+    , D.div [P.style { color: "red"}] [D.text s.msg]
+    , D.div' [ textInputWithButton s.uname "Login" [P.placeholder "Enter Username"] [] ]
     ]
   -- The following could be an effectful ajax call, instead of a pure lookup
   pure $ case M.lookup uname userMap of
@@ -44,24 +44,24 @@ login = loopState {msg: "", uname: ""} \s -> do
     Just u -> Right u
 
 logout :: User -> Widget HTML Unit
-logout u = div'
-  [ text ("Logged in as " <> u.login <> " ")
-  , unit <$ button [onClick] [text "Logout"]
+logout u = D.div'
+  [ D.text ("Logged in as " <> u.login <> " ")
+  , unit <$ D.button [P.onClick] [D.text "Logout"]
   ]
 
 -- PAGES ---------------------------------------------------
 
 centerPage :: forall a. String -> Widget HTML a -> Widget HTML a
-centerPage title contents = div'
-  [ h1' [text title]
-  , div'[ contents ]
+centerPage title contents = D.div'
+  [ D.h1' [D.text title]
+  , D.div'[ contents ]
   ]
 
 loggedInPage :: forall a. String -> User -> Widget HTML a -> Widget HTML (Maybe a)
-loggedInPage title user contents = div'
-  [ h1' [text title]
-  , div'[ Nothing <$ logout user ]
-  , div'[ Just <$> contents ]
+loggedInPage title user contents = D.div'
+  [ D.h1' [D.text title]
+  , D.div'[ Nothing <$ logout user ]
+  , D.div'[ Just <$> contents ]
   ]
 
 ------------------------------------------------------------
@@ -83,6 +83,6 @@ runTask task = do
 loginWidget :: forall a. Widget HTML a
 loginWidget = runTask do
   u <- currentUser
-  div'
-    [ text "HELLO!"
+  D.div'
+    [ D.text "HELLO!"
     ]
