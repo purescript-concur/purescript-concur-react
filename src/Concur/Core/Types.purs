@@ -11,11 +11,11 @@ import Control.Plus (class Alt, class Plus, alt, empty)
 import Control.ShiftMap (class ShiftMap)
 import Data.Array as A
 import Data.Array.NonEmpty (NonEmptyArray, fromArray, updateAt)
-import Data.Either (Either(..))
+import Data.Either (Either(..), either)
 import Data.FoldableWithIndex (foldlWithIndex, foldrWithIndex)
 import Data.Maybe (Maybe(Nothing, Just), fromMaybe)
 import Data.Semigroup.Foldable (foldMap1)
-import Data.Traversable (traverse)
+import Data.Traversable (sequence, traverse)
 import Data.Tuple (Tuple(..))
 import Effect (Effect)
 import Effect.AVar (empty, tryPut, tryTake) as EVar
@@ -104,25 +104,30 @@ instance widgetMultiAlternative ::
         -- 'Effect.traverse'
         ewss <- traverse unWidgetStep wsm
         -- 'Effect.traverse'
-        ws <- traverse stepWidget ewss
-        pure (Right { view: foldMap1 _.view ws
-                    , cont: merge ws (map _.cont ws)
-                    })
+        ews <- traverse stepWidget ewss
+        -- Check if we got a result
+        -- Either.sequence
+        case sequence ews of
+          -- I don't like rewrapping the result, might cause loops (such as https://github.com/ajnsit/purescript-concur/issues/16)
+          -- But we needed to run the effects so we already committed to returning a widget continuation
+          Left a -> pure (Left (pure a))
+          Right ws -> pure $ Right
+            { view: foldMap1 _.view ws
+            , cont: merge ws (map _.cont ws)
+            }
+    -- Completely discharge the effect of the widget, until we get a result, or an aff
     stepWidget ::
       forall v' a.
       Monoid v' =>
       Either (Free (WidgetStep v') a) (WidgetStepRecord v' (Free (WidgetStep v') a)) ->
-      Effect (WidgetStepRecord v' (Free (WidgetStep v') a))
-    stepWidget (Left w) = case resume w of
-      Left a -> pure { view: mempty
-                     , cont: pure (pure a)
-                     }
-      Right (WidgetStep effws) -> do
-        ews <- effws
-        case ews of
-          Left w' -> stepWidget (Left w')
-          Right ws -> pure ws
-    stepWidget (Right ws) = pure ws
+      Effect (Either a (WidgetStepRecord v' (Free (WidgetStep v') a)))
+    stepWidget = either stepWidgetLeft stepWidgetRight
+      where
+      stepWidgetRight ws = pure (Right ws)
+      stepWidgetLeft w = case resume w of
+        Left a -> pure (Left a)
+        Right (WidgetStep effws) -> effws >>= stepWidget
+
     merge ::
       forall v' a.
       Monoid v' =>
