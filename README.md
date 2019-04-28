@@ -43,7 +43,7 @@ This leads to pretty fast initial load times. Running the Chrome audit on https:
 
 ## Installation
 
-You can quickly get a production setup going (using Parcel) by cloning the [Purescript Concur Starter](https://github.com/ajnsit/purescript-concur-starter).
+You can quickly get a production setup going (using Spago and Parcel) by cloning the [Purescript Concur Starter](https://github.com/ajnsit/purescript-concur-starter).
 
 Else you can also install purescript-concur manually using bower -
 
@@ -57,10 +57,12 @@ bower install purescript-concur-react
 git clone https://github.com/ajnsit/purescript-concur.git
 cd purescript-concur
 npm install
-# Build examples
-npm run ps
+# Build source and examples
+npm run build
+# Start a local server
+npm run start
 # Check examples
-open html/index.html
+open localhost:1234 in the browser
 ```
 
 ## External React Components
