@@ -3,17 +3,21 @@ module Test.Todos where
 import Prelude
 
 import Concur.Core (Widget)
-import Concur.Core.FRP (Signal, always, dyn, loopS, loopW, step)
+import Concur.Core.FRP (Signal, always, dyn, loopS, loopW, runWidgetOnce, step)
 import Concur.Core.Patterns (retryUntil)
 import Concur.React (HTML)
 import Concur.React.DOM as D
 import Concur.React.Props as P
 import Concur.React.Widgets (textInputEnter)
 import Control.Lazy (defer)
-import Data.Array (catMaybes, cons)
-import Data.Maybe (Maybe(..))
-import Data.String (null)
+import Data.Array (catMaybes, cons, intercalate)
+import Data.Maybe (Maybe(..), fromMaybe)
+import Data.Nullable (toMaybe)
+import Data.String (Pattern(..), codePointFromChar, countPrefix, null, split)
+import Data.String.CodePoints (drop, take)
 import Data.Traversable (traverse)
+import Effect.Class (liftEffect)
+import Test.FFI (storageGet, storageSet)
 
 -- A proof of concept, Mini TodoMVC with Signals!
 -- Supports Todo creation, completion, editing, and deletion.
@@ -28,18 +32,37 @@ instance showFilter :: Show Filter where
 type Todo = {name :: String, done :: Boolean}
 type Todos = {filter :: Filter, todos :: Array Todo}
 
+serialiseTodos :: Array Todo -> String
+serialiseTodos todosArr = intercalate "\n" (map serialiseTodo todosArr)
+  where serialiseTodo {name, done} = name <> "\t" <> if done then "T" else "F"
+
+deserialiseTodos :: String -> Array Todo
+deserialiseTodos s =
+  let deserialiseTodo t =
+        let prefixLen = countPrefix (_ /= (codePointFromChar '\t')) t
+        in { name: take prefixLen t, done: drop (prefixLen+1) t /= "F" }
+  in map deserialiseTodo (split (Pattern "\n") s)
+
+localStorageKey :: String
+localStorageKey = "todos"
+
 todosWidget :: forall a. Widget HTML a
-todosWidget = dyn $ todos {filter: All, todos: []}
+todosWidget = do
+  savedTodosNullable <- liftEffect $ storageGet localStorageKey
+  let savedTodos = fromMaybe [] $ map deserialiseTodos $ toMaybe savedTodosNullable
+  dyn $ todos {filter: All, todos: savedTodos}
 
 mkTodo :: Array Todo -> Signal HTML (Array Todo)
 mkTodo ts = loopW ts \ts' -> D.div' $ pure do
   s <- retryUntil (not <<< null) $ textInputEnter "" true [P.placeholder "What do you want to do?"]
-  pure (cons {name: s, done: false} ts')
+  let newTodos = cons {name: s, done: false} ts'
+  pure newTodos
 
 todos :: Todos -> Signal HTML Todos
 todos s = loopS s \s' -> do
   ts <- mkTodo s'.todos
   ts' <- map catMaybes (traverse (todo s'.filter) ts)
+  runWidgetOnce $ liftEffect $ storageSet localStorageKey (serialiseTodos ts')
   filterButtons s' {todos = ts'}
 
 todo :: Filter -> Todo -> Signal HTML (Maybe Todo)
