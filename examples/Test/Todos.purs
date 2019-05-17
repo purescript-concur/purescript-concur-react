@@ -37,7 +37,7 @@ serialiseTodos todosArr = intercalate "\n" (map serialiseTodo todosArr)
   where serialiseTodo {name, done} = name <> "\t" <> if done then "T" else "F"
 
 deserialiseTodos :: String -> Array Todo
-deserialiseTodos s =
+deserialiseTodos s = if null s then [] else
   let deserialiseTodo t =
         let prefixLen = countPrefix (_ /= (codePointFromChar '\t')) t
         in { name: take prefixLen t, done: drop (prefixLen+1) t /= "F" }
