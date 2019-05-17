@@ -14,7 +14,7 @@
     "clean": "rimraf output && rimraf .pulp-cache && rimraf temp",
     "build": "pulp build -I examples -- --censor-lib --strict",
     "dev": "rimraf temp && bower install && pulp build -I examples && parcel build index.html",
-    "prod": "rimraf temp && bower install && mkdir temp && pulp build --to temp/index.prod.js -I examples && java -jar closure-compiler/closure-compiler-v20190301.jar --js temp/index.prod.js --js_output_file temp/index.prod.minified.js && cp index.prod.html temp && parcel build temp/index.prod.html && rimraf temp",
+    "prod": "rimraf temp && bower install && mkdir temp && pulp build --to temp/index.prod.js -I examples && java -jar closure-compiler/closure-compiler-v20190301.jar --js temp/index.prod.js --js_output_file temp/index.prod.minified.js && cp index.prod.html temp && parcel build temp/index.prod.html && mv dist/index.prod.html dist/index.html && rimraf temp",
     "prod1": "rimraf temp && bower install && mkdir temp && pulp build --to temp/index.prod.js -I examples && java -jar closure-compiler/closure-compiler-v20190301.jar --compilation_level ADVANCED_OPTIMIZATIONS --js temp/index.prod.js --js_output_file temp/index.prod.minified.js && cp index.prod.html temp && parcel build temp/index.prod.html && rimraf temp",
     "start": "parcel index.html",
     "watch": "parcel watch index.html",
