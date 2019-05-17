@@ -80,7 +80,7 @@ Individual example sources -
 3. **Focus counter** demonstrates a stateful widget, with multiple event handlers, and no action types needed! [Source](https://github.com/ajnsit/purescript-concur/blob/master/examples/Test/FocusCount.purs).
 4. **A login widget**. [Source](https://github.com/ajnsit/purescript-concur/blob/master/examples/Test/Login.purs).
 5. Concur has Signals! Sample **counting widget implemented with Signals**! [Source](https://github.com/ajnsit/purescript-concur/blob/master/examples/Test/Signals.purs).
-6. A **Full-featured TodoMVC implementation** with Signals. [Source](https://github.com/ajnsit/purescript-concur/blob/master/examples/Test/Todos.purs).
+6. A **Full-featured TodoMVC implementation with LocalStorage Persistence** built with Signals. [Source](https://github.com/ajnsit/purescript-concur/blob/master/examples/Test/Todos.purs).
 7. A **Fully editable tree** in ~30 lines of code (with Signals). [Source](https://github.com/ajnsit/purescript-concur/blob/master/examples/Test/EditHeadings.purs).
 8. A **Postfix calculator**. [Source](https://github.com/ajnsit/purescript-concur/blob/master/examples/Test/Calc.purs).
 9. Using **AJAX and handling JSON** responses. [Source](https://github.com/ajnsit/purescript-concur/blob/master/examples/Test/Ajax.purs).
