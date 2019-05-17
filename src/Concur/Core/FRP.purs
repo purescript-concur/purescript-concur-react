@@ -3,6 +3,7 @@ module Concur.Core.FRP where
 import Prelude
 
 import Concur.Core (Widget)
+import Control.Alternative (empty)
 import Control.Cofree (Cofree, mkCofree, tail)
 import Control.Comonad (extract)
 import Data.Either (Either(..), either, hush)
@@ -27,8 +28,13 @@ step ::
   Signal v a
 step = mkCofree
 
+-- | Display a widget which returns a continuation
 display :: forall v. Widget v (Signal v Unit) -> Signal v Unit
 display w = step unit w
+
+-- | Run a widget once then stop. This will reflow when a parent signal reflows
+runWidgetOnce :: forall v. Monoid v => Widget v Unit -> Signal v Unit
+runWidgetOnce w = display do w *> empty
 
 -- | A constant signal
 always ::
