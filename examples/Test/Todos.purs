@@ -4,6 +4,7 @@ import Prelude
 
 import Concur.Core (Widget)
 import Concur.Core.FRP (Signal, always, dyn, loopS, loopW, step)
+import Concur.Core.Patterns (retryUntil)
 import Concur.React (HTML)
 import Concur.React.DOM as D
 import Concur.React.Props as P
@@ -11,6 +12,7 @@ import Concur.React.Widgets (textInputEnter)
 import Control.Lazy (defer)
 import Data.Array (catMaybes, cons)
 import Data.Maybe (Maybe(..))
+import Data.String (null)
 import Data.Traversable (traverse)
 
 -- A proof of concept, Mini TodoMVC with Signals!
@@ -30,8 +32,8 @@ todosWidget :: forall a. Widget HTML a
 todosWidget = dyn $ todos {filter: All, todos: []}
 
 mkTodo :: Array Todo -> Signal HTML (Array Todo)
-mkTodo ts = loopW ts \ts' -> D.div' $ pure $ do
-  s <- textInputEnter "" true [P.placeholder "What do you want to do?"]
+mkTodo ts = loopW ts \ts' -> D.div' $ pure do
+  s <- retryUntil (not <<< null) $ textInputEnter "" true [P.placeholder "What do you want to do?"]
   pure (cons {name: s, done: false} ts')
 
 todos :: Todos -> Signal HTML Todos
@@ -45,7 +47,7 @@ todo p t = if runFilter p t
   then step (Just t) $ D.div'
     [ todo p <<< (\b -> t {done = b}) <$> checkbox t.done
     , do _ <- D.span [mark t.done, P.onDoubleClick] [D.text t.name]
-         todo p <<< (\s -> t {name = s}) <$> D.span' [textInputEnter t.name false []]
+         todo p <<< (\s -> t {name = s}) <$> D.span' [retryUntil (not <<< null) $ textInputEnter t.name false []]
     , defer (\_ -> always Nothing) <$ D.button [P.onClick] [D.text "Delete"]
     ]
   else always (Just t)
