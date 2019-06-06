@@ -27,16 +27,17 @@ type ElLeaf
 type ElLeaf'
   = forall m a. LiftWidget HTML m => m a
 
+type ElLeafFunc' x
+  = forall m a. LiftWidget HTML m => x -> m a
+
 -------------------------------------------------------------------------------------------------------------------
-text ::
-  String ->
-  ElLeaf'
+text :: ElLeafFunc' String
 text str = liftWidget $ display [D.text str]
 
-int :: Int -> ElLeaf'
+int :: ElLeafFunc' Int
 int x = liftWidget $ display [D.int x]
 
-number :: Number -> ElLeaf'
+number :: ElLeafFunc' Number
 number x = liftWidget $ display [D.number x]
 
 a_ :: El1
