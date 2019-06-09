@@ -44,7 +44,7 @@ elLeaf
   => (Array p -> v)
   -> Array (Props p a)
   -> m a
-elLeaf f = CD.elLeaf (pure <<< f)
+elLeaf f = CD.elLeaf (\ps -> [f ps])
 
 -- Wrappers for all DOM elements from purescript-react
 -- TODO: Generate these mechanically somehow
