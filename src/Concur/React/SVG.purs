@@ -1,15 +1,12 @@
 module Concur.React.SVG where
 
-import Prelude hiding (div, map, sub)
+import Prelude hiding (div,map,sub)
 
-import Concur.React (el')
-import Concur.React.DOM (El, El')
-
+import Concur.React.DOM (El, El', el')
 import React.DOM.SVG as S
 
 -------------------------------------------------------------------------------------------------------------------
-circle ::
-  El
+circle :: El
 circle = el' S.circle
 
 circle' :: El'

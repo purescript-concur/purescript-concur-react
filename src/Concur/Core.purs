@@ -6,6 +6,8 @@ module Concur.Core
 )
 where
 
+import Prelude (class Monoid, Unit, bind, map, pure, show, void, ($), (<<<), (<>))
+
 import Concur.Core.Discharge (discharge)
 import Concur.Core.Types (Widget(..), WidgetStep(..), resume, unWidget)
 import Concur.Core.LiftWidget (class LiftWidget, liftWidget)
@@ -20,7 +22,6 @@ import Effect.AVar (empty, tryPut) as EVar
 import Effect.Aff.AVar (take) as AVar
 import Effect.Aff.Class (liftAff)
 import Effect.Console (log)
-import Prelude (class Monoid, Unit, bind, map, pure, show, void, ($), (<<<), (<>))
 
 -- Helpers for some very common use of unsafe blocking io
 
