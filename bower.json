@@ -1,6 +1,6 @@
 {
   "name": "purescript-concur-react",
-  "version": "0.3.7",
+  "version": "0.3.8",
   "ignore": [
     "**/.*",
     "node_modules",
@@ -13,29 +13,31 @@
     "url": "git://github.com/ajnsit/purescript-concur.git"
   },
   "dependencies": {
-    "purescript-react": "^6.1.0",
-    "purescript-arrays": "^5.2.1",
+    "purescript-react": "^7.0.1",
+    "purescript-arrays": "^5.3.0",
     "purescript-aff": "^5.1.1",
     "purescript-avar": "^3.0.0",
     "purescript-tailrec": "^4.0.0",
     "purescript-free": "^5.2.0",
     "purescript-nonempty": "^5.0.0",
     "purescript-foldable-traversable": "^4.1.1",
-    "purescript-react-dom": "^6.0.1",
-    "purescript-web-dom": "^2.0.0",
-    "purescript-web-html": "^2.0.1",
+    "purescript-react-dom": "^6.1.0",
+    "purescript-web-dom": "^3.0.0",
+    "purescript-web-html": "^2.2.1",
     "purescript-console": "^4.2.0"
   },
   "devDependencies": {
     "purescript-affjax": "^9.0.0",
     "purescript-argonaut-core": "^5.0.0",
-    "purescript-argonaut-codecs": "^6.0.1",
+    "purescript-argonaut-codecs": "^6.0.2",
     "purescript-datetime": "^4.1.1",
     "purescript-now": "^4.0.0",
     "purescript-psci-support": "^4.0.0",
     "purescript-routing": "^9.0.0"
   },
   "resolutions": {
-    "purescript-typelevel-prelude": "^4.0.0"
+    "purescript-typelevel-prelude": "^4.0.0",
+    "purescript-react": "^7.0.1",
+    "purescript-web-dom": "^3.0.0"
   }
 }
