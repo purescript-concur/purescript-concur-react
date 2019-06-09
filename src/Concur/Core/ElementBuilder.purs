@@ -17,5 +17,5 @@ data Element e f p
   | LeafElement e (f p)
 
 instance elementBuilderElement :: ElementBuilder e f p (Element e f p) where
-  buildNode e fp v = NodeElement e fp v
-  buildLeaf e fp = LeafElement e fp
+  buildNode = NodeElement
+  buildLeaf = LeafElement
