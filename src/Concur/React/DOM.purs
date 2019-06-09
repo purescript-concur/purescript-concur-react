@@ -12,7 +12,8 @@ import Control.MultiAlternative (class MultiAlternative)
 import Control.ShiftMap (class ShiftMap)
 import React.DOM as D
 
--- The signature of el, el', and elLeaf changed recently
+-- | The React backend uses Array to make view monoidal
+-- | We use this view adapeter to derive our specialised `el` functions
 viewAdapter
   :: forall ps vs res
   .  (ps -> vs -> res)
