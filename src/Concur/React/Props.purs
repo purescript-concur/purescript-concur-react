@@ -2,12 +2,14 @@ module Concur.React.Props where
 
 import Prelude
 
+import Concur.Core.Props (Props(..), filterProp)
 import Data.Array (concatMap, intercalate)
 import Data.Maybe (Maybe, maybe)
 import Data.Nullable (Nullable, toMaybe)
 import Effect (Effect)
 import Effect.Uncurried (mkEffectFn1)
 import React (ReactRef)
+import React.DOM.Props as P
 import React.SyntheticEvent
   ( SyntheticAnimationEvent
   , SyntheticClipboardEvent
@@ -25,37 +27,18 @@ import React.SyntheticEvent
   )
 import Unsafe.Coerce (unsafeCoerce)
 
-import React.DOM.Props as P
-
 foreign import emptyProp_ :: P.Props
 
-emptyProp :: forall a. Props a
+type ReactProps a = Props P.Props a
+
+emptyProp :: forall a. ReactProps a
 emptyProp = PrimProp emptyProp_
-
-data Props a
-  = PrimProp P.Props
-  | Handler ((a -> Effect Unit) -> P.Props)
-
-instance functorProps :: Functor Props where
-  map _ (PrimProp p) = PrimProp p
-  map f (Handler h) = Handler \k ->
-    h (k <<< f)
-
--- | Internal. Do not use. Use unsafeMkProp, or unsafeMkPropHandler instead.
-mkProp ::
-  forall a.
-  (a -> Effect Unit) ->
-  Props a ->
-  P.Props
-mkProp _ (PrimProp a) = a
-
-mkProp h (Handler f) = f h
 
 -- | Construct a custom prop handler
 unsafeMkPropHandler ::
   forall a.
   String ->
-  Props a
+  ReactProps a
 unsafeMkPropHandler s = Handler \f ->
   P.unsafeMkProps s (mkEffectFn1 f)
 
@@ -64,7 +47,7 @@ unsafeMkProp ::
   forall a b.
   String ->
   a ->
-  Props b
+  ReactProps b
 unsafeMkProp s v = PrimProp (P.unsafeMkProps s v)
 
 foreign import data RRef :: Type -> Type
@@ -92,44 +75,19 @@ refNullableGetter rf = (unsafeCoerce <<< toMaybe) <$> refGetter_ rf
 refProp ::
   forall a b.
   RRef a ->
-  Props a ->
-  Props b
+  ReactProps a ->
+  ReactProps b
 refProp rref (PrimProp p) = PrimProp p
 
 refProp rref (Handler f) = PrimProp (f (refSetter rref))
-
--- | Use `handleProp` to handle an event manually
-handleProp ::
-  forall a b.
-  (a -> Effect Unit) ->
-  Props a ->
-  Props b
-handleProp _ (PrimProp p) = PrimProp p
-
-handleProp f (Handler g) = PrimProp (g f)
 
 -- | Shortcut for the common case of a list of classes
 classList ::
   forall a.
   Array (Maybe String) ->
-  Props a
+  ReactProps a
 classList = className <<< intercalate " " <<< concatMap (maybe [] (\s ->
   [s]))
-
--- | Use this to filter the output of an event handler prop.
--- | For example, to only handle the enter key - `filterProp isEnterEvent onKeyDown`
-filterProp ::
-  forall a.
-  (a -> Boolean) ->
-  Props a ->
-  Props a
-filterProp _ p@(PrimProp _) = p
-
-filterProp ok (Handler g) = Handler \h ->
-  (g \a ->
-    if ok a
-      then h a
-      else pure unit)
 
 -- FFI + Util stuff
 -- | Get the event target's current value
@@ -156,923 +114,923 @@ foreign import resetTargetValue :: forall event. String -> event -> Effect Unit
 aria ::
   forall ariaAttrs a.
   { | ariaAttrs} ->
-  Props a
+  ReactProps a
 aria = PrimProp <<< P.aria
 
-_data :: forall dataAttrs a. { | dataAttrs} -> Props a
+_data :: forall dataAttrs a. { | dataAttrs} -> ReactProps a
 _data = PrimProp <<< P._data
 
-style :: forall style a. { | style} -> Props a
+style :: forall style a. { | style} -> ReactProps a
 style = PrimProp <<< P.style
 
-dangerouslySetInnerHTML :: forall a. {__html :: String} -> Props a
+dangerouslySetInnerHTML :: forall a. {__html :: String} -> ReactProps a
 dangerouslySetInnerHTML = PrimProp <<< P.dangerouslySetInnerHTML
 
-accept :: forall a. String -> Props a
+accept :: forall a. String -> ReactProps a
 accept = PrimProp <<< P.accept
 
-acceptCharset :: forall a. String -> Props a
+acceptCharset :: forall a. String -> ReactProps a
 acceptCharset = PrimProp <<< P.acceptCharset
 
-accessKey :: forall a. String -> Props a
+accessKey :: forall a. String -> ReactProps a
 accessKey = PrimProp <<< P.accessKey
 
-action :: forall a. String -> Props a
+action :: forall a. String -> ReactProps a
 action = PrimProp <<< P.action
 
-allowFullScreen :: forall a. Boolean -> Props a
+allowFullScreen :: forall a. Boolean -> ReactProps a
 allowFullScreen = PrimProp <<< P.allowFullScreen
 
-allowTransparency :: forall a. Boolean -> Props a
+allowTransparency :: forall a. Boolean -> ReactProps a
 allowTransparency = PrimProp <<< P.allowTransparency
 
-alt :: forall a. String -> Props a
+alt :: forall a. String -> ReactProps a
 alt = PrimProp <<< P.alt
 
-async :: forall a. Boolean -> Props a
+async :: forall a. Boolean -> ReactProps a
 async = PrimProp <<< P.async
 
-autoComplete :: forall a. String -> Props a
+autoComplete :: forall a. String -> ReactProps a
 autoComplete = PrimProp <<< P.autoComplete
 
-autoFocus :: forall a. Boolean -> Props a
+autoFocus :: forall a. Boolean -> ReactProps a
 autoFocus = PrimProp <<< P.autoFocus
 
-autoPlay :: forall a. Boolean -> Props a
+autoPlay :: forall a. Boolean -> ReactProps a
 autoPlay = PrimProp <<< P.autoPlay
 
-capture :: forall a. Boolean -> Props a
+capture :: forall a. Boolean -> ReactProps a
 capture = PrimProp <<< P.capture
 
-cellPadding :: forall a. String -> Props a
+cellPadding :: forall a. String -> ReactProps a
 cellPadding = PrimProp <<< P.cellPadding
 
-cellSpacing :: forall a. String -> Props a
+cellSpacing :: forall a. String -> ReactProps a
 cellSpacing = PrimProp <<< P.cellSpacing
 
-charSet :: forall a. String -> Props a
+charSet :: forall a. String -> ReactProps a
 charSet = PrimProp <<< P.charSet
 
-challenge :: forall a. String -> Props a
+challenge :: forall a. String -> ReactProps a
 challenge = PrimProp <<< P.challenge
 
-checked :: forall a. Boolean -> Props a
+checked :: forall a. Boolean -> ReactProps a
 checked = PrimProp <<< P.checked
 
-cite :: forall a. String -> Props a
+cite :: forall a. String -> ReactProps a
 cite = PrimProp <<< P.cite
 
-classID :: forall a. String -> Props a
+classID :: forall a. String -> ReactProps a
 classID = PrimProp <<< P.classID
 
-className :: forall a. String -> Props a
+className :: forall a. String -> ReactProps a
 className = PrimProp <<< P.className
 
-cols :: forall a. Int -> Props a
+cols :: forall a. Int -> ReactProps a
 cols = PrimProp <<< P.cols
 
-colSpan :: forall a. Int -> Props a
+colSpan :: forall a. Int -> ReactProps a
 colSpan = PrimProp <<< P.colSpan
 
-content :: forall a. String -> Props a
+content :: forall a. String -> ReactProps a
 content = PrimProp <<< P.content
 
-contentEditable :: forall a. Boolean -> Props a
+contentEditable :: forall a. Boolean -> ReactProps a
 contentEditable = PrimProp <<< P.contentEditable
 
-contextMenu :: forall a. String -> Props a
+contextMenu :: forall a. String -> ReactProps a
 contextMenu = PrimProp <<< P.contextMenu
 
-controls :: forall a. Boolean -> Props a
+controls :: forall a. Boolean -> ReactProps a
 controls = PrimProp <<< P.controls
 
-coords :: forall a. String -> Props a
+coords :: forall a. String -> ReactProps a
 coords = PrimProp <<< P.coords
 
-crossOrigin :: forall a. String -> Props a
+crossOrigin :: forall a. String -> ReactProps a
 crossOrigin = PrimProp <<< P.crossOrigin
 
-dateTime :: forall a. String -> Props a
+dateTime :: forall a. String -> ReactProps a
 dateTime = PrimProp <<< P.dateTime
 
-default :: forall a. Boolean -> Props a
+default :: forall a. Boolean -> ReactProps a
 default = PrimProp <<< P.default
 
-defaultChecked :: forall a. Boolean -> Props a
+defaultChecked :: forall a. Boolean -> ReactProps a
 defaultChecked = PrimProp <<< P.defaultChecked
 
-defaultValue :: forall a. String -> Props a
+defaultValue :: forall a. String -> ReactProps a
 defaultValue = PrimProp <<< P.defaultValue
 
-defer :: forall a. Boolean -> Props a
+defer :: forall a. Boolean -> ReactProps a
 defer = PrimProp <<< P.defer
 
-dir :: forall a. String -> Props a
+dir :: forall a. String -> ReactProps a
 dir = PrimProp <<< P.dir
 
-disabled :: forall a. Boolean -> Props a
+disabled :: forall a. Boolean -> ReactProps a
 disabled = PrimProp <<< P.disabled
 
-download :: forall a. String -> Props a
+download :: forall a. String -> ReactProps a
 download = PrimProp <<< P.download
 
-draggable :: forall a. Boolean -> Props a
+draggable :: forall a. Boolean -> ReactProps a
 draggable = PrimProp <<< P.draggable
 
-encType :: forall a. String -> Props a
+encType :: forall a. String -> ReactProps a
 encType = PrimProp <<< P.encType
 
-form :: forall a. String -> Props a
+form :: forall a. String -> ReactProps a
 form = PrimProp <<< P.form
 
-formAction :: forall a. String -> Props a
+formAction :: forall a. String -> ReactProps a
 formAction = PrimProp <<< P.formAction
 
-formEncType :: forall a. String -> Props a
+formEncType :: forall a. String -> ReactProps a
 formEncType = PrimProp <<< P.formEncType
 
-formMethod :: forall a. String -> Props a
+formMethod :: forall a. String -> ReactProps a
 formMethod = PrimProp <<< P.formMethod
 
-formNoValidate :: forall a. Boolean -> Props a
+formNoValidate :: forall a. Boolean -> ReactProps a
 formNoValidate = PrimProp <<< P.formNoValidate
 
-formTarget :: forall a. String -> Props a
+formTarget :: forall a. String -> ReactProps a
 formTarget = PrimProp <<< P.formTarget
 
-frameBorder :: forall a. String -> Props a
+frameBorder :: forall a. String -> ReactProps a
 frameBorder = PrimProp <<< P.frameBorder
 
-headers :: forall a. String -> Props a
+headers :: forall a. String -> ReactProps a
 headers = PrimProp <<< P.headers
 
-height :: forall a. String -> Props a
+height :: forall a. String -> ReactProps a
 height = PrimProp <<< P.height
 
-hidden :: forall a. Boolean -> Props a
+hidden :: forall a. Boolean -> ReactProps a
 hidden = PrimProp <<< P.hidden
 
-high :: forall a. String -> Props a
+high :: forall a. String -> ReactProps a
 high = PrimProp <<< P.high
 
-href :: forall a. String -> Props a
+href :: forall a. String -> ReactProps a
 href = PrimProp <<< P.href
 
-hrefLang :: forall a. String -> Props a
+hrefLang :: forall a. String -> ReactProps a
 hrefLang = PrimProp <<< P.hrefLang
 
-htmlFor :: forall a. String -> Props a
+htmlFor :: forall a. String -> ReactProps a
 htmlFor = PrimProp <<< P.htmlFor
 
-httpEquiv :: forall a. String -> Props a
+httpEquiv :: forall a. String -> ReactProps a
 httpEquiv = PrimProp <<< P.httpEquiv
 
-icon :: forall a. String -> Props a
+icon :: forall a. String -> ReactProps a
 icon = PrimProp <<< P.icon
 
-_id :: forall a. String -> Props a
+_id :: forall a. String -> ReactProps a
 _id = PrimProp <<< P._id
 
-inputMode :: forall a. String -> Props a
+inputMode :: forall a. String -> ReactProps a
 inputMode = PrimProp <<< P.inputMode
 
-integrity :: forall a. String -> Props a
+integrity :: forall a. String -> ReactProps a
 integrity = PrimProp <<< P.integrity
 
-is :: forall a. String -> Props a
+is :: forall a. String -> ReactProps a
 is = PrimProp <<< P.is
 
-key :: forall a. String -> Props a
+key :: forall a. String -> ReactProps a
 key = PrimProp <<< P.key
 
-keyParams :: forall a. String -> Props a
+keyParams :: forall a. String -> ReactProps a
 keyParams = PrimProp <<< P.keyParams
 
-keyType :: forall a. String -> Props a
+keyType :: forall a. String -> ReactProps a
 keyType = PrimProp <<< P.keyType
 
-kind :: forall a. String -> Props a
+kind :: forall a. String -> ReactProps a
 kind = PrimProp <<< P.kind
 
-label :: forall a. String -> Props a
+label :: forall a. String -> ReactProps a
 label = PrimProp <<< P.label
 
-lang :: forall a. String -> Props a
+lang :: forall a. String -> ReactProps a
 lang = PrimProp <<< P.lang
 
-list :: forall a. String -> Props a
+list :: forall a. String -> ReactProps a
 list = PrimProp <<< P.list
 
-loop :: forall a. Boolean -> Props a
+loop :: forall a. Boolean -> ReactProps a
 loop = PrimProp <<< P.loop
 
-low :: forall a. String -> Props a
+low :: forall a. String -> ReactProps a
 low = PrimProp <<< P.low
 
-manifest :: forall a. String -> Props a
+manifest :: forall a. String -> ReactProps a
 manifest = PrimProp <<< P.manifest
 
-marginHeight :: forall a. String -> Props a
+marginHeight :: forall a. String -> ReactProps a
 marginHeight = PrimProp <<< P.marginHeight
 
-marginWidth :: forall a. String -> Props a
+marginWidth :: forall a. String -> ReactProps a
 marginWidth = PrimProp <<< P.marginWidth
 
-max :: forall a. String -> Props a
+max :: forall a. String -> ReactProps a
 max = PrimProp <<< P.max
 
-maxLength :: forall a. String -> Props a
+maxLength :: forall a. String -> ReactProps a
 maxLength = PrimProp <<< P.maxLength
 
-media :: forall a. String -> Props a
+media :: forall a. String -> ReactProps a
 media = PrimProp <<< P.media
 
-mediaGroup :: forall a. String -> Props a
+mediaGroup :: forall a. String -> ReactProps a
 mediaGroup = PrimProp <<< P.mediaGroup
 
-method :: forall a. String -> Props a
+method :: forall a. String -> ReactProps a
 method = PrimProp <<< P.method
 
-min :: forall a. String -> Props a
+min :: forall a. String -> ReactProps a
 min = PrimProp <<< P.min
 
-minLength :: forall a. String -> Props a
+minLength :: forall a. String -> ReactProps a
 minLength = PrimProp <<< P.minLength
 
-multiple :: forall a. Boolean -> Props a
+multiple :: forall a. Boolean -> ReactProps a
 multiple = PrimProp <<< P.multiple
 
-muted :: forall a. Boolean -> Props a
+muted :: forall a. Boolean -> ReactProps a
 muted = PrimProp <<< P.muted
 
-name :: forall a. String -> Props a
+name :: forall a. String -> ReactProps a
 name = PrimProp <<< P.name
 
-nonce :: forall a. String -> Props a
+nonce :: forall a. String -> ReactProps a
 nonce = PrimProp <<< P.nonce
 
-noValidate :: forall a. Boolean -> Props a
+noValidate :: forall a. Boolean -> ReactProps a
 noValidate = PrimProp <<< P.noValidate
 
-open :: forall a. Boolean -> Props a
+open :: forall a. Boolean -> ReactProps a
 open = PrimProp <<< P.open
 
-optimum :: forall a. String -> Props a
+optimum :: forall a. String -> ReactProps a
 optimum = PrimProp <<< P.optimum
 
-pattern :: forall a. String -> Props a
+pattern :: forall a. String -> ReactProps a
 pattern = PrimProp <<< P.pattern
 
-placeholder :: forall a. String -> Props a
+placeholder :: forall a. String -> ReactProps a
 placeholder = PrimProp <<< P.placeholder
 
-poster :: forall a. String -> Props a
+poster :: forall a. String -> ReactProps a
 poster = PrimProp <<< P.poster
 
-preload :: forall a. String -> Props a
+preload :: forall a. String -> ReactProps a
 preload = PrimProp <<< P.preload
 
-profile :: forall a. String -> Props a
+profile :: forall a. String -> ReactProps a
 profile = PrimProp <<< P.profile
 
-radioGroup :: forall a. String -> Props a
+radioGroup :: forall a. String -> ReactProps a
 radioGroup = PrimProp <<< P.radioGroup
 
-readOnly :: forall a. Boolean -> Props a
+readOnly :: forall a. Boolean -> ReactProps a
 readOnly = PrimProp <<< P.readOnly
 
-rel :: forall a. String -> Props a
+rel :: forall a. String -> ReactProps a
 rel = PrimProp <<< P.rel
 
-required :: forall a. Boolean -> Props a
+required :: forall a. Boolean -> ReactProps a
 required = PrimProp <<< P.required
 
-reversed :: forall a. Boolean -> Props a
+reversed :: forall a. Boolean -> ReactProps a
 reversed = PrimProp <<< P.reversed
 
-role :: forall a. String -> Props a
+role :: forall a. String -> ReactProps a
 role = PrimProp <<< P.role
 
-rows :: forall a. Int -> Props a
+rows :: forall a. Int -> ReactProps a
 rows = PrimProp <<< P.rows
 
-rowSpan :: forall a. Int -> Props a
+rowSpan :: forall a. Int -> ReactProps a
 rowSpan = PrimProp <<< P.rowSpan
 
-sandbox :: forall a. String -> Props a
+sandbox :: forall a. String -> ReactProps a
 sandbox = PrimProp <<< P.sandbox
 
-scope :: forall a. String -> Props a
+scope :: forall a. String -> ReactProps a
 scope = PrimProp <<< P.scope
 
-scoped :: forall a. Boolean -> Props a
+scoped :: forall a. Boolean -> ReactProps a
 scoped = PrimProp <<< P.scoped
 
-scrolling :: forall a. String -> Props a
+scrolling :: forall a. String -> ReactProps a
 scrolling = PrimProp <<< P.scrolling
 
-seamless :: forall a. Boolean -> Props a
+seamless :: forall a. Boolean -> ReactProps a
 seamless = PrimProp <<< P.seamless
 
-selected :: forall a. Boolean -> Props a
+selected :: forall a. Boolean -> ReactProps a
 selected = PrimProp <<< P.selected
 
-shape :: forall a. String -> Props a
+shape :: forall a. String -> ReactProps a
 shape = PrimProp <<< P.shape
 
-size :: forall a. Int -> Props a
+size :: forall a. Int -> ReactProps a
 size = PrimProp <<< P.size
 
-sizes :: forall a. String -> Props a
+sizes :: forall a. String -> ReactProps a
 sizes = PrimProp <<< P.sizes
 
-span :: forall a. Int -> Props a
+span :: forall a. Int -> ReactProps a
 span = PrimProp <<< P.span
 
-spellCheck :: forall a. Boolean -> Props a
+spellCheck :: forall a. Boolean -> ReactProps a
 spellCheck = PrimProp <<< P.spellCheck
 
-src :: forall a. String -> Props a
+src :: forall a. String -> ReactProps a
 src = PrimProp <<< P.src
 
-srcDoc :: forall a. String -> Props a
+srcDoc :: forall a. String -> ReactProps a
 srcDoc = PrimProp <<< P.srcDoc
 
-srcLang :: forall a. String -> Props a
+srcLang :: forall a. String -> ReactProps a
 srcLang = PrimProp <<< P.srcLang
 
-srcSet :: forall a. String -> Props a
+srcSet :: forall a. String -> ReactProps a
 srcSet = PrimProp <<< P.srcSet
 
-start :: forall a. Int -> Props a
+start :: forall a. Int -> ReactProps a
 start = PrimProp <<< P.start
 
-step :: forall a. String -> Props a
+step :: forall a. String -> ReactProps a
 step = PrimProp <<< P.step
 
-summary :: forall a. String -> Props a
+summary :: forall a. String -> ReactProps a
 summary = PrimProp <<< P.summary
 
-tabIndex :: forall a. Int -> Props a
+tabIndex :: forall a. Int -> ReactProps a
 tabIndex = PrimProp <<< P.tabIndex
 
-target :: forall a. String -> Props a
+target :: forall a. String -> ReactProps a
 target = PrimProp <<< P.target
 
-title :: forall a. String -> Props a
+title :: forall a. String -> ReactProps a
 title = PrimProp <<< P.title
 
-_type :: forall a. String -> Props a
+_type :: forall a. String -> ReactProps a
 _type = PrimProp <<< P._type
 
-useMap :: forall a. String -> Props a
+useMap :: forall a. String -> ReactProps a
 useMap = PrimProp <<< P.useMap
 
-value :: forall a. String -> Props a
+value :: forall a. String -> ReactProps a
 value = PrimProp <<< P.value
 
-valueArray :: forall a. Array String -> Props a
+valueArray :: forall a. Array String -> ReactProps a
 valueArray = PrimProp <<< P.valueArray
 
-width :: forall a. String -> Props a
+width :: forall a. String -> ReactProps a
 width = PrimProp <<< P.width
 
-wmode :: forall a. String -> Props a
+wmode :: forall a. String -> ReactProps a
 wmode = PrimProp <<< P.wmode
 
-wrap :: forall a. String -> Props a
+wrap :: forall a. String -> ReactProps a
 wrap = PrimProp <<< P.wrap
 
 -- RDFa Attributes
 about ::
   forall a.
   String ->
-  Props a
+  ReactProps a
 about = PrimProp <<< P.about
 
-datatype :: forall a. String -> Props a
+datatype :: forall a. String -> ReactProps a
 datatype = PrimProp <<< P.datatype
 
-inlist :: forall a. String -> Props a
+inlist :: forall a. String -> ReactProps a
 inlist = PrimProp <<< P.inlist
 
-prefix :: forall a. String -> Props a
+prefix :: forall a. String -> ReactProps a
 prefix = PrimProp <<< P.prefix
 
-property :: forall a. String -> Props a
+property :: forall a. String -> ReactProps a
 property = PrimProp <<< P.property
 
-resource :: forall a. String -> Props a
+resource :: forall a. String -> ReactProps a
 resource = PrimProp <<< P.resource
 
-typeof :: forall a. String -> Props a
+typeof :: forall a. String -> ReactProps a
 typeof = PrimProp <<< P.typeof
 
-vocab :: forall a. String -> Props a
+vocab :: forall a. String -> ReactProps a
 vocab = PrimProp <<< P.vocab
 
 -- Non-standard Attributes
 autoCapitalize ::
   forall a.
   String ->
-  Props a
+  ReactProps a
 autoCapitalize = PrimProp <<< P.autoCapitalize
 
-autoCorrect :: forall a. String -> Props a
+autoCorrect :: forall a. String -> ReactProps a
 autoCorrect = PrimProp <<< P.autoCorrect
 
-autoSave :: forall a. String -> Props a
+autoSave :: forall a. String -> ReactProps a
 autoSave = PrimProp <<< P.autoSave
 
-color :: forall a. String -> Props a
+color :: forall a. String -> ReactProps a
 color = PrimProp <<< P.color
 
-itemProp :: forall a. String -> Props a
+itemProp :: forall a. String -> ReactProps a
 itemProp = PrimProp <<< P.itemProp
 
-itemScope :: forall a. Boolean -> Props a
+itemScope :: forall a. Boolean -> ReactProps a
 itemScope = PrimProp <<< P.itemScope
 
-itemType :: forall a. String -> Props a
+itemType :: forall a. String -> ReactProps a
 itemType = PrimProp <<< P.itemType
 
-itemID :: forall a. String -> Props a
+itemID :: forall a. String -> ReactProps a
 itemID = PrimProp <<< P.itemID
 
-itemRef :: forall a. String -> Props a
+itemRef :: forall a. String -> ReactProps a
 itemRef = PrimProp <<< P.itemRef
 
-results :: forall a. Int -> Props a
+results :: forall a. Int -> ReactProps a
 results = PrimProp <<< P.results
 
-security :: forall a. String -> Props a
+security :: forall a. String -> ReactProps a
 security = PrimProp <<< P.security
 
-unselectable :: forall a. Boolean -> Props a
+unselectable :: forall a. Boolean -> ReactProps a
 unselectable = PrimProp <<< P.unselectable
 
-onAnimationStart :: Props SyntheticAnimationEvent
+onAnimationStart :: ReactProps SyntheticAnimationEvent
 onAnimationStart = Handler P.onAnimationStart
 
-onAnimationEnd :: Props SyntheticAnimationEvent
+onAnimationEnd :: ReactProps SyntheticAnimationEvent
 onAnimationEnd = Handler P.onAnimationEnd
 
-onAnimationIteration :: Props SyntheticAnimationEvent
+onAnimationIteration :: ReactProps SyntheticAnimationEvent
 onAnimationIteration = Handler P.onAnimationIteration
 
-onTransitionEnd :: Props SyntheticTransitionEvent
+onTransitionEnd :: ReactProps SyntheticTransitionEvent
 onTransitionEnd = Handler P.onTransitionEnd
 
-onToggle :: Props SyntheticEvent
+onToggle :: ReactProps SyntheticEvent
 onToggle = Handler P.onToggle
 
-onError :: Props SyntheticEvent
+onError :: ReactProps SyntheticEvent
 onError = Handler P.onError
 
-onLoad :: Props SyntheticEvent
+onLoad :: ReactProps SyntheticEvent
 onLoad = Handler P.onLoad
 
-onAbort :: Props SyntheticEvent
+onAbort :: ReactProps SyntheticEvent
 onAbort = Handler P.onAbort
 
-onCanPlay :: Props SyntheticEvent
+onCanPlay :: ReactProps SyntheticEvent
 onCanPlay = Handler P.onCanPlay
 
-onCanPlayThrough :: Props SyntheticEvent
+onCanPlayThrough :: ReactProps SyntheticEvent
 onCanPlayThrough = Handler P.onCanPlayThrough
 
-onDurationChange :: Props SyntheticEvent
+onDurationChange :: ReactProps SyntheticEvent
 onDurationChange = Handler P.onDurationChange
 
-onEmptied :: Props SyntheticEvent
+onEmptied :: ReactProps SyntheticEvent
 onEmptied = Handler P.onEmptied
 
-onEncrypted :: Props SyntheticEvent
+onEncrypted :: ReactProps SyntheticEvent
 onEncrypted = Handler P.onEncrypted
 
-onEnded :: Props SyntheticEvent
+onEnded :: ReactProps SyntheticEvent
 onEnded = Handler P.onEnded
 
-onLoadedData :: Props SyntheticEvent
+onLoadedData :: ReactProps SyntheticEvent
 onLoadedData = Handler P.onLoadedData
 
-onLoadedMetadata :: Props SyntheticEvent
+onLoadedMetadata :: ReactProps SyntheticEvent
 onLoadedMetadata = Handler P.onLoadedMetadata
 
-onLoadStart :: Props SyntheticEvent
+onLoadStart :: ReactProps SyntheticEvent
 onLoadStart = Handler P.onLoadStart
 
-onPause :: Props SyntheticEvent
+onPause :: ReactProps SyntheticEvent
 onPause = Handler P.onPause
 
-onPlay :: Props SyntheticEvent
+onPlay :: ReactProps SyntheticEvent
 onPlay = Handler P.onPlay
 
-onPlaying :: Props SyntheticEvent
+onPlaying :: ReactProps SyntheticEvent
 onPlaying = Handler P.onPlaying
 
-onProgress :: Props SyntheticEvent
+onProgress :: ReactProps SyntheticEvent
 onProgress = Handler P.onProgress
 
-onRateChange :: Props SyntheticEvent
+onRateChange :: ReactProps SyntheticEvent
 onRateChange = Handler P.onRateChange
 
-onSeeked :: Props SyntheticEvent
+onSeeked :: ReactProps SyntheticEvent
 onSeeked = Handler P.onSeeked
 
-onSeeking :: Props SyntheticEvent
+onSeeking :: ReactProps SyntheticEvent
 onSeeking = Handler P.onSeeking
 
-onStalled :: Props SyntheticEvent
+onStalled :: ReactProps SyntheticEvent
 onStalled = Handler P.onStalled
 
-onSuspend :: Props SyntheticEvent
+onSuspend :: ReactProps SyntheticEvent
 onSuspend = Handler P.onSuspend
 
-onTimeUpdate :: Props SyntheticEvent
+onTimeUpdate :: ReactProps SyntheticEvent
 onTimeUpdate = Handler P.onTimeUpdate
 
-onVolumeChange :: Props SyntheticEvent
+onVolumeChange :: ReactProps SyntheticEvent
 onVolumeChange = Handler P.onVolumeChange
 
-onWaiting :: Props SyntheticEvent
+onWaiting :: ReactProps SyntheticEvent
 onWaiting = Handler P.onWaiting
 
-onCopy :: Props SyntheticClipboardEvent
+onCopy :: ReactProps SyntheticClipboardEvent
 onCopy = Handler P.onCopy
 
-onCut :: Props SyntheticClipboardEvent
+onCut :: ReactProps SyntheticClipboardEvent
 onCut = Handler P.onCut
 
-onPaste :: Props SyntheticClipboardEvent
+onPaste :: ReactProps SyntheticClipboardEvent
 onPaste = Handler P.onPaste
 
-onCompositionEnd :: Props SyntheticCompositionEvent
+onCompositionEnd :: ReactProps SyntheticCompositionEvent
 onCompositionEnd = Handler P.onCompositionEnd
 
-onCompositionStart :: Props SyntheticCompositionEvent
+onCompositionStart :: ReactProps SyntheticCompositionEvent
 onCompositionStart = Handler P.onCompositionStart
 
-onCompositionUpdate :: Props SyntheticCompositionEvent
+onCompositionUpdate :: ReactProps SyntheticCompositionEvent
 onCompositionUpdate = Handler P.onCompositionUpdate
 
-onKeyDown :: Props SyntheticKeyboardEvent
+onKeyDown :: ReactProps SyntheticKeyboardEvent
 onKeyDown = Handler P.onKeyDown
 
-onKeyPress :: Props SyntheticKeyboardEvent
+onKeyPress :: ReactProps SyntheticKeyboardEvent
 onKeyPress = Handler P.onKeyPress
 
-onKeyUp :: Props SyntheticKeyboardEvent
+onKeyUp :: ReactProps SyntheticKeyboardEvent
 onKeyUp = Handler P.onKeyUp
 
-onKeyEnter :: Props SyntheticKeyboardEvent
+onKeyEnter :: ReactProps SyntheticKeyboardEvent
 onKeyEnter = filterProp isEnterEvent onKeyDown
 
-onFocus :: Props SyntheticFocusEvent
+onFocus :: ReactProps SyntheticFocusEvent
 onFocus = Handler P.onFocus
 
-onBlur :: Props SyntheticFocusEvent
+onBlur :: ReactProps SyntheticFocusEvent
 onBlur = Handler P.onBlur
 
-onChange :: Props SyntheticInputEvent
+onChange :: ReactProps SyntheticInputEvent
 onChange = Handler P.onChange
 
-onInput :: Props SyntheticInputEvent
+onInput :: ReactProps SyntheticInputEvent
 onInput = Handler P.onInput
 
-onInvalid :: Props SyntheticInputEvent
+onInvalid :: ReactProps SyntheticInputEvent
 onInvalid = Handler P.onInvalid
 
-onSubmit :: Props SyntheticInputEvent
+onSubmit :: ReactProps SyntheticInputEvent
 onSubmit = Handler P.onSubmit
 
-onClick :: Props SyntheticMouseEvent
+onClick :: ReactProps SyntheticMouseEvent
 onClick = Handler P.onClick
 
-onContextMenu :: Props SyntheticMouseEvent
+onContextMenu :: ReactProps SyntheticMouseEvent
 onContextMenu = Handler P.onContextMenu
 
-onDoubleClick :: Props SyntheticMouseEvent
+onDoubleClick :: ReactProps SyntheticMouseEvent
 onDoubleClick = Handler P.onDoubleClick
 
-onDrag :: Props SyntheticMouseEvent
+onDrag :: ReactProps SyntheticMouseEvent
 onDrag = Handler P.onDrag
 
-onDragEnd :: Props SyntheticMouseEvent
+onDragEnd :: ReactProps SyntheticMouseEvent
 onDragEnd = Handler P.onDragEnd
 
-onDragEnter :: Props SyntheticMouseEvent
+onDragEnter :: ReactProps SyntheticMouseEvent
 onDragEnter = Handler P.onDragEnter
 
-onDragExit :: Props SyntheticMouseEvent
+onDragExit :: ReactProps SyntheticMouseEvent
 onDragExit = Handler P.onDragExit
 
-onDragLeave :: Props SyntheticMouseEvent
+onDragLeave :: ReactProps SyntheticMouseEvent
 onDragLeave = Handler P.onDragLeave
 
-onDragOver :: Props SyntheticMouseEvent
+onDragOver :: ReactProps SyntheticMouseEvent
 onDragOver = Handler P.onDragOver
 
-onDragStart :: Props SyntheticMouseEvent
+onDragStart :: ReactProps SyntheticMouseEvent
 onDragStart = Handler P.onDragStart
 
-onDrop :: Props SyntheticMouseEvent
+onDrop :: ReactProps SyntheticMouseEvent
 onDrop = Handler P.onDrop
 
-onMouseDown :: Props SyntheticMouseEvent
+onMouseDown :: ReactProps SyntheticMouseEvent
 onMouseDown = Handler P.onMouseDown
 
-onMouseEnter :: Props SyntheticMouseEvent
+onMouseEnter :: ReactProps SyntheticMouseEvent
 onMouseEnter = Handler P.onMouseEnter
 
-onMouseLeave :: Props SyntheticMouseEvent
+onMouseLeave :: ReactProps SyntheticMouseEvent
 onMouseLeave = Handler P.onMouseLeave
 
-onMouseMove :: Props SyntheticMouseEvent
+onMouseMove :: ReactProps SyntheticMouseEvent
 onMouseMove = Handler P.onMouseMove
 
-onMouseOut :: Props SyntheticMouseEvent
+onMouseOut :: ReactProps SyntheticMouseEvent
 onMouseOut = Handler P.onMouseOut
 
-onMouseOver :: Props SyntheticMouseEvent
+onMouseOver :: ReactProps SyntheticMouseEvent
 onMouseOver = Handler P.onMouseOver
 
-onMouseUp :: Props SyntheticMouseEvent
+onMouseUp :: ReactProps SyntheticMouseEvent
 onMouseUp = Handler P.onMouseUp
 
-onSelect :: Props SyntheticEvent
+onSelect :: ReactProps SyntheticEvent
 onSelect = Handler P.onSelect
 
-onTouchCancel :: Props SyntheticTouchEvent
+onTouchCancel :: ReactProps SyntheticTouchEvent
 onTouchCancel = Handler P.onTouchCancel
 
-onTouchEnd :: Props SyntheticTouchEvent
+onTouchEnd :: ReactProps SyntheticTouchEvent
 onTouchEnd = Handler P.onTouchEnd
 
-onTouchMove :: Props SyntheticTouchEvent
+onTouchMove :: ReactProps SyntheticTouchEvent
 onTouchMove = Handler P.onTouchMove
 
-onTouchStart :: Props SyntheticTouchEvent
+onTouchStart :: ReactProps SyntheticTouchEvent
 onTouchStart = Handler P.onTouchStart
 
-onScroll :: Props SyntheticUIEvent
+onScroll :: ReactProps SyntheticUIEvent
 onScroll = Handler P.onScroll
 
-onWheel :: Props SyntheticWheelEvent
+onWheel :: ReactProps SyntheticWheelEvent
 onWheel = Handler P.onWheel
 
-onAnimationStartCapture :: Props SyntheticAnimationEvent
+onAnimationStartCapture :: ReactProps SyntheticAnimationEvent
 onAnimationStartCapture = Handler P.onAnimationStartCapture
 
-onAnimationEndCapture :: Props SyntheticAnimationEvent
+onAnimationEndCapture :: ReactProps SyntheticAnimationEvent
 onAnimationEndCapture = Handler P.onAnimationEndCapture
 
-onAnimationIterationCapture :: Props SyntheticAnimationEvent
+onAnimationIterationCapture :: ReactProps SyntheticAnimationEvent
 onAnimationIterationCapture = Handler P.onAnimationIterationCapture
 
-onTransitionEndCapture :: Props SyntheticTransitionEvent
+onTransitionEndCapture :: ReactProps SyntheticTransitionEvent
 onTransitionEndCapture = Handler P.onTransitionEndCapture
 
-onToggleCapture :: Props SyntheticEvent
+onToggleCapture :: ReactProps SyntheticEvent
 onToggleCapture = Handler P.onToggleCapture
 
-onErrorCapture :: Props SyntheticEvent
+onErrorCapture :: ReactProps SyntheticEvent
 onErrorCapture = Handler P.onErrorCapture
 
-onLoadCapture :: Props SyntheticEvent
+onLoadCapture :: ReactProps SyntheticEvent
 onLoadCapture = Handler P.onLoadCapture
 
-onAbortCapture :: Props SyntheticEvent
+onAbortCapture :: ReactProps SyntheticEvent
 onAbortCapture = Handler P.onAbortCapture
 
-onCanPlayCapture :: Props SyntheticEvent
+onCanPlayCapture :: ReactProps SyntheticEvent
 onCanPlayCapture = Handler P.onCanPlayCapture
 
-onCanPlayThroughCapture :: Props SyntheticEvent
+onCanPlayThroughCapture :: ReactProps SyntheticEvent
 onCanPlayThroughCapture = Handler P.onCanPlayThroughCapture
 
-onDurationChangeCapture :: Props SyntheticEvent
+onDurationChangeCapture :: ReactProps SyntheticEvent
 onDurationChangeCapture = Handler P.onDurationChangeCapture
 
-onEmptiedCapture :: Props SyntheticEvent
+onEmptiedCapture :: ReactProps SyntheticEvent
 onEmptiedCapture = Handler P.onEmptiedCapture
 
-onEncryptedCapture :: Props SyntheticEvent
+onEncryptedCapture :: ReactProps SyntheticEvent
 onEncryptedCapture = Handler P.onEncryptedCapture
 
-onEndedCapture :: Props SyntheticEvent
+onEndedCapture :: ReactProps SyntheticEvent
 onEndedCapture = Handler P.onEndedCapture
 
-onLoadedDataCapture :: Props SyntheticEvent
+onLoadedDataCapture :: ReactProps SyntheticEvent
 onLoadedDataCapture = Handler P.onLoadedDataCapture
 
-onLoadedMetadataCapture :: Props SyntheticEvent
+onLoadedMetadataCapture :: ReactProps SyntheticEvent
 onLoadedMetadataCapture = Handler P.onLoadedMetadataCapture
 
-onLoadStartCapture :: Props SyntheticEvent
+onLoadStartCapture :: ReactProps SyntheticEvent
 onLoadStartCapture = Handler P.onLoadStartCapture
 
-onPauseCapture :: Props SyntheticEvent
+onPauseCapture :: ReactProps SyntheticEvent
 onPauseCapture = Handler P.onPauseCapture
 
-onPlayCapture :: Props SyntheticEvent
+onPlayCapture :: ReactProps SyntheticEvent
 onPlayCapture = Handler P.onPlayCapture
 
-onPlayingCapture :: Props SyntheticEvent
+onPlayingCapture :: ReactProps SyntheticEvent
 onPlayingCapture = Handler P.onPlayingCapture
 
-onProgressCapture :: Props SyntheticEvent
+onProgressCapture :: ReactProps SyntheticEvent
 onProgressCapture = Handler P.onProgressCapture
 
-onRateChangeCapture :: Props SyntheticEvent
+onRateChangeCapture :: ReactProps SyntheticEvent
 onRateChangeCapture = Handler P.onRateChangeCapture
 
-onSeekedCapture :: Props SyntheticEvent
+onSeekedCapture :: ReactProps SyntheticEvent
 onSeekedCapture = Handler P.onSeekedCapture
 
-onSeekingCapture :: Props SyntheticEvent
+onSeekingCapture :: ReactProps SyntheticEvent
 onSeekingCapture = Handler P.onSeekingCapture
 
-onStalledCapture :: Props SyntheticEvent
+onStalledCapture :: ReactProps SyntheticEvent
 onStalledCapture = Handler P.onStalledCapture
 
-onSuspendCapture :: Props SyntheticEvent
+onSuspendCapture :: ReactProps SyntheticEvent
 onSuspendCapture = Handler P.onSuspendCapture
 
-onTimeUpdateCapture :: Props SyntheticEvent
+onTimeUpdateCapture :: ReactProps SyntheticEvent
 onTimeUpdateCapture = Handler P.onTimeUpdateCapture
 
-onVolumeChangeCapture :: Props SyntheticEvent
+onVolumeChangeCapture :: ReactProps SyntheticEvent
 onVolumeChangeCapture = Handler P.onVolumeChangeCapture
 
-onWaitingCapture :: Props SyntheticEvent
+onWaitingCapture :: ReactProps SyntheticEvent
 onWaitingCapture = Handler P.onWaitingCapture
 
-onCopyCapture :: Props SyntheticClipboardEvent
+onCopyCapture :: ReactProps SyntheticClipboardEvent
 onCopyCapture = Handler P.onCopyCapture
 
-onCutCapture :: Props SyntheticClipboardEvent
+onCutCapture :: ReactProps SyntheticClipboardEvent
 onCutCapture = Handler P.onCutCapture
 
-onPasteCapture :: Props SyntheticClipboardEvent
+onPasteCapture :: ReactProps SyntheticClipboardEvent
 onPasteCapture = Handler P.onPasteCapture
 
-onCompositionEndCapture :: Props SyntheticCompositionEvent
+onCompositionEndCapture :: ReactProps SyntheticCompositionEvent
 onCompositionEndCapture = Handler P.onCompositionEndCapture
 
-onCompositionStartCapture :: Props SyntheticCompositionEvent
+onCompositionStartCapture :: ReactProps SyntheticCompositionEvent
 onCompositionStartCapture = Handler P.onCompositionStartCapture
 
-onCompositionUpdateCapture :: Props SyntheticCompositionEvent
+onCompositionUpdateCapture :: ReactProps SyntheticCompositionEvent
 onCompositionUpdateCapture = Handler P.onCompositionUpdateCapture
 
-onKeyDownCapture :: Props SyntheticKeyboardEvent
+onKeyDownCapture :: ReactProps SyntheticKeyboardEvent
 onKeyDownCapture = Handler P.onKeyDownCapture
 
-onKeyPressCapture :: Props SyntheticKeyboardEvent
+onKeyPressCapture :: ReactProps SyntheticKeyboardEvent
 onKeyPressCapture = Handler P.onKeyPressCapture
 
-onKeyUpCapture :: Props SyntheticKeyboardEvent
+onKeyUpCapture :: ReactProps SyntheticKeyboardEvent
 onKeyUpCapture = Handler P.onKeyUpCapture
 
-onFocusCapture :: Props SyntheticFocusEvent
+onFocusCapture :: ReactProps SyntheticFocusEvent
 onFocusCapture = Handler P.onFocusCapture
 
-onBlurCapture :: Props SyntheticFocusEvent
+onBlurCapture :: ReactProps SyntheticFocusEvent
 onBlurCapture = Handler P.onBlurCapture
 
-onChangeCapture :: Props SyntheticInputEvent
+onChangeCapture :: ReactProps SyntheticInputEvent
 onChangeCapture = Handler P.onChangeCapture
 
-onInputCapture :: Props SyntheticInputEvent
+onInputCapture :: ReactProps SyntheticInputEvent
 onInputCapture = Handler P.onInputCapture
 
-onInvalidCapture :: Props SyntheticInputEvent
+onInvalidCapture :: ReactProps SyntheticInputEvent
 onInvalidCapture = Handler P.onInvalidCapture
 
-onSubmitCapture :: Props SyntheticInputEvent
+onSubmitCapture :: ReactProps SyntheticInputEvent
 onSubmitCapture = Handler P.onSubmitCapture
 
-onClickCapture :: Props SyntheticMouseEvent
+onClickCapture :: ReactProps SyntheticMouseEvent
 onClickCapture = Handler P.onClickCapture
 
-onContextMenuCapture :: Props SyntheticMouseEvent
+onContextMenuCapture :: ReactProps SyntheticMouseEvent
 onContextMenuCapture = Handler P.onContextMenuCapture
 
-onDoubleClickCapture :: Props SyntheticMouseEvent
+onDoubleClickCapture :: ReactProps SyntheticMouseEvent
 onDoubleClickCapture = Handler P.onDoubleClickCapture
 
-onDragCapture :: Props SyntheticMouseEvent
+onDragCapture :: ReactProps SyntheticMouseEvent
 onDragCapture = Handler P.onDragCapture
 
-onDragEndCapture :: Props SyntheticMouseEvent
+onDragEndCapture :: ReactProps SyntheticMouseEvent
 onDragEndCapture = Handler P.onDragEndCapture
 
-onDragEnterCapture :: Props SyntheticMouseEvent
+onDragEnterCapture :: ReactProps SyntheticMouseEvent
 onDragEnterCapture = Handler P.onDragEnterCapture
 
-onDragExitCapture :: Props SyntheticMouseEvent
+onDragExitCapture :: ReactProps SyntheticMouseEvent
 onDragExitCapture = Handler P.onDragExitCapture
 
-onDragLeaveCapture :: Props SyntheticMouseEvent
+onDragLeaveCapture :: ReactProps SyntheticMouseEvent
 onDragLeaveCapture = Handler P.onDragLeaveCapture
 
-onDragOverCapture :: Props SyntheticMouseEvent
+onDragOverCapture :: ReactProps SyntheticMouseEvent
 onDragOverCapture = Handler P.onDragOverCapture
 
-onDragStartCapture :: Props SyntheticMouseEvent
+onDragStartCapture :: ReactProps SyntheticMouseEvent
 onDragStartCapture = Handler P.onDragStartCapture
 
-onDropCapture :: Props SyntheticMouseEvent
+onDropCapture :: ReactProps SyntheticMouseEvent
 onDropCapture = Handler P.onDropCapture
 
-onMouseDownCapture :: Props SyntheticMouseEvent
+onMouseDownCapture :: ReactProps SyntheticMouseEvent
 onMouseDownCapture = Handler P.onMouseDownCapture
 
-onMouseEnterCapture :: Props SyntheticMouseEvent
+onMouseEnterCapture :: ReactProps SyntheticMouseEvent
 onMouseEnterCapture = Handler P.onMouseEnterCapture
 
-onMouseLeaveCapture :: Props SyntheticMouseEvent
+onMouseLeaveCapture :: ReactProps SyntheticMouseEvent
 onMouseLeaveCapture = Handler P.onMouseLeaveCapture
 
-onMouseMoveCapture :: Props SyntheticMouseEvent
+onMouseMoveCapture :: ReactProps SyntheticMouseEvent
 onMouseMoveCapture = Handler P.onMouseMoveCapture
 
-onMouseOutCapture :: Props SyntheticMouseEvent
+onMouseOutCapture :: ReactProps SyntheticMouseEvent
 onMouseOutCapture = Handler P.onMouseOutCapture
 
-onMouseOverCapture :: Props SyntheticMouseEvent
+onMouseOverCapture :: ReactProps SyntheticMouseEvent
 onMouseOverCapture = Handler P.onMouseOverCapture
 
-onMouseUpCapture :: Props SyntheticMouseEvent
+onMouseUpCapture :: ReactProps SyntheticMouseEvent
 onMouseUpCapture = Handler P.onMouseUpCapture
 
-onSelectCapture :: Props SyntheticEvent
+onSelectCapture :: ReactProps SyntheticEvent
 onSelectCapture = Handler P.onSelectCapture
 
-onTouchCancelCapture :: Props SyntheticTouchEvent
+onTouchCancelCapture :: ReactProps SyntheticTouchEvent
 onTouchCancelCapture = Handler P.onTouchCancelCapture
 
-onTouchEndCapture :: Props SyntheticTouchEvent
+onTouchEndCapture :: ReactProps SyntheticTouchEvent
 onTouchEndCapture = Handler P.onTouchEndCapture
 
-onTouchMoveCapture :: Props SyntheticTouchEvent
+onTouchMoveCapture :: ReactProps SyntheticTouchEvent
 onTouchMoveCapture = Handler P.onTouchMoveCapture
 
-onTouchStartCapture :: Props SyntheticTouchEvent
+onTouchStartCapture :: ReactProps SyntheticTouchEvent
 onTouchStartCapture = Handler P.onTouchStartCapture
 
-onScrollCapture :: Props SyntheticUIEvent
+onScrollCapture :: ReactProps SyntheticUIEvent
 onScrollCapture = Handler P.onScrollCapture
 
-onWheelCapture :: Props SyntheticWheelEvent
+onWheelCapture :: ReactProps SyntheticWheelEvent
 onWheelCapture = Handler P.onWheelCapture
 
-ref :: Props (Nullable ReactRef)
+ref :: ReactProps (Nullable ReactRef)
 ref = Handler P.ref
 
-suppressContentEditableWarning :: forall a. Boolean -> Props a
+suppressContentEditableWarning :: forall a. Boolean -> ReactProps a
 suppressContentEditableWarning = PrimProp <<< P.suppressContentEditableWarning
 
 -- SVG attributes
 x ::
   forall a.
   Int ->
-  Props a
+  ReactProps a
 x = PrimProp <<< P.x
 
-y :: forall a. Int -> Props a
+y :: forall a. Int -> ReactProps a
 y = PrimProp <<< P.y
 
-cx :: forall a. Int -> Props a
+cx :: forall a. Int -> ReactProps a
 cx = PrimProp <<< P.cx
 
-cy :: forall a. Int -> Props a
+cy :: forall a. Int -> ReactProps a
 cy = PrimProp <<< P.cy
 
-r :: forall a. Int -> Props a
+r :: forall a. Int -> ReactProps a
 r = PrimProp <<< P.r
 
-fill :: forall a. String -> Props a
+fill :: forall a. String -> ReactProps a
 fill = PrimProp <<< P.fill
 
-opacity :: forall a. Int -> Props a
+opacity :: forall a. Int -> ReactProps a
 opacity = PrimProp <<< P.opacity
 
-fillOpacity :: forall a. Int -> Props a
+fillOpacity :: forall a. Int -> ReactProps a
 fillOpacity = PrimProp <<< P.fillOpacity
 
-stroke :: forall a. String -> Props a
+stroke :: forall a. String -> ReactProps a
 stroke = PrimProp <<< P.stroke
 
-strokeWidth :: forall a. Int -> Props a
+strokeWidth :: forall a. Int -> ReactProps a
 strokeWidth = PrimProp <<< P.strokeWidth
 
-points :: forall a. String -> Props a
+points :: forall a. String -> ReactProps a
 points = PrimProp <<< P.points
 
-d :: forall a. String -> Props a
+d :: forall a. String -> ReactProps a
 d = PrimProp <<< P.d
 
-viewBox :: forall a. String -> Props a
+viewBox :: forall a. String -> ReactProps a
 viewBox = PrimProp <<< P.viewBox

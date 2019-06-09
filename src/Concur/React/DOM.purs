@@ -5,7 +5,7 @@ import Prelude hiding (div,map,sub)
 import Concur.Core.LiftWidget (class LiftWidget, liftWidget)
 import Concur.Core.Types (Widget, display)
 import Concur.React (HTML, el, el', elLeaf)
-import Concur.React.Props (Props)
+import Concur.React.Props (ReactProps)
 import Control.MultiAlternative (class MultiAlternative)
 import Control.ShiftMap (class ShiftMap)
 import React.DOM as D
@@ -13,16 +13,16 @@ import React.DOM as D
 -- Wrappers for all DOM elements from purescript-react
 -- TODO: Generate these mechanically somehow
 type El1
-  = forall m a. ShiftMap (Widget HTML) m => Array (Props a) -> m a -> m a
+  = forall m a. ShiftMap (Widget HTML) m => Array (ReactProps a) -> m a -> m a
 
 type El
-  = forall m a. MultiAlternative m => ShiftMap (Widget HTML) m => Array (Props a) -> Array (m a) -> m a
+  = forall m a. MultiAlternative m => ShiftMap (Widget HTML) m => Array (ReactProps a) -> Array (m a) -> m a
 
 type El'
   = forall m a. MultiAlternative m => ShiftMap (Widget HTML) m => Array (m a) -> m a
 
 type ElLeaf
-  = forall m a. LiftWidget HTML m => Array (Props a) -> m a
+  = forall m a. LiftWidget HTML m => Array (ReactProps a) -> m a
 
 type ElLeaf'
   = forall m a. LiftWidget HTML m => m a

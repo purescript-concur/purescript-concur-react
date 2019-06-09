@@ -4,19 +4,18 @@ import Prelude
 
 import Concur.Core (Widget)
 import Concur.React (HTML)
-import Concur.React.Props (Props)
+import Concur.React.DOM as D
+import Concur.React.Props (ReactProps)
+import Concur.React.Props as P
 import Data.Maybe (Maybe(..))
 import Effect.Class (liftEffect)
 import Unsafe.Coerce (unsafeCoerce)
-
-import Concur.React.DOM as D
-import Concur.React.Props as P
 
 -- | A Text input that returns its contents on enter
 textInputEnter ::
   String ->
   Boolean ->
-  (forall a. Array (Props a)) ->
+  (forall a. Array (ReactProps a)) ->
   Widget HTML String
 textInputEnter val reset props = do
   e <- D.input $ props <> [P.onKeyEnter, P.defaultValue val]
@@ -30,8 +29,8 @@ textInputEnter val reset props = do
 textInputWithButton ::
   String ->
   String ->
-  (forall a. Array (Props a)) ->
-  (forall a. Array (Props a)) ->
+  (forall a. Array (ReactProps a)) ->
+  (forall a. Array (ReactProps a)) ->
   Widget HTML String
 textInputWithButton val buttonlabel inpProps buttonProps = do
   ref <- liftEffect P.createRef

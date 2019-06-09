@@ -5,8 +5,9 @@ import Prelude
 import Concur.Core (mkLeafWidget, wrapViewEvent)
 import Concur.Core.Discharge (discharge, dischargePartialEffect)
 import Concur.Core.LiftWidget (class LiftWidget, liftWidget)
+import Concur.Core.Props (mkProp)
 import Concur.Core.Types (Widget)
-import Concur.React.Props (Props, mkProp)
+import Concur.React.Props (ReactProps)
 import Control.MultiAlternative (class MultiAlternative, orr)
 import Control.ShiftMap (class ShiftMap, shiftMap)
 import Data.Either (Either(..))
@@ -32,7 +33,7 @@ el ::
   forall m a.
   ShiftMap (Widget HTML) m =>
   NodeTag ->
-  Array (Props a) ->
+  Array (ReactProps a) ->
   m a ->
   m a
 el e props = shiftMap (\f w -> wrapViewEvent (\h v ->
@@ -43,7 +44,7 @@ elLeaf ::
   forall m a.
   LiftWidget HTML m =>
   LeafTag ->
-  Array (Props a) ->
+  Array (ReactProps a) ->
   m a
 elLeaf e props = liftWidget $ mkLeafWidget \h ->
   [e (map (mkProp h) props)]
@@ -54,7 +55,7 @@ el' ::
   ShiftMap (Widget HTML) m =>
   MultiAlternative m =>
   NodeTag ->
-  Array (Props a) ->
+  Array (ReactProps a) ->
   Array (m a) ->
   m a
 el' e props = el e props <<< orr
