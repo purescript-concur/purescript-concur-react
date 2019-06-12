@@ -18,5 +18,5 @@ helloWidget = do
 helloWidgetS :: forall a. StateT Int (Widget HTML) a
 helloWidgetS = forever do
   count <- get
-  void $ D.div' [ D.button [P.onClick] [D.text ("For the " <> show count <> " time, hello sailor!")] ]
+  void $ D.div_ $ D.button [P.onClick] $ D.text ("For the " <> show count <> " time, hello sailor!")
   put (count + 1)

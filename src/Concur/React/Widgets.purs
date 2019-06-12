@@ -11,6 +11,8 @@ import Data.Maybe (Maybe(..))
 import Effect.Class (liftEffect)
 import Unsafe.Coerce (unsafeCoerce)
 
+import Concur.Core.Dado as Da
+
 -- | A Text input that returns its contents on enter
 textInputEnter ::
   String ->
@@ -34,17 +36,16 @@ textInputWithButton ::
   Widget HTML String
 textInputWithButton val buttonlabel inpProps buttonProps = do
   ref <- liftEffect P.createRef
-  D.div'
-    [ D.input $ inpProps <>
+  D.div_ Da.do
+    D.input $ inpProps <>
       [ P.unsafeTargetValue <$> P.onKeyEnter
       , P.defaultValue val
       , P.refProp ref P.ref
       ]
-    , D.text " "
-    , do
-      _ <- D.button (buttonProps <> [P.onClick]) [D.text buttonlabel]
+    D.text " "
+    do
+      _ <- D.button (buttonProps <> [P.onClick]) $ D.text buttonlabel
       mInput <- liftEffect $ P.refNullableGetter ref
       case mInput of
         Nothing -> pure val
         Just inp -> pure (unsafeCoerce inp).value
-    ]

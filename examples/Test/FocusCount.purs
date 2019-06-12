@@ -7,6 +7,8 @@ import Concur.React (HTML)
 import Concur.React.DOM as D
 import Concur.React.Props as P
 
+import Concur.Core.Dado as Da
+
 type InputState = {focusCount:: Int, currentText :: String}
 
 initState :: InputState
@@ -24,7 +26,8 @@ inputWidget st = D.input
 focusCountWidget :: forall a. Widget HTML a
 focusCountWidget = go initState
   where
-  go s = D.div'
-    [ D.p' [D.text $ showState s]
-    , inputWidget s
-    ] >>= go
+  go s = do
+    x <- D.div_ Da.do
+      D.p_ $ D.text $ showState s
+      inputWidget s
+    go x

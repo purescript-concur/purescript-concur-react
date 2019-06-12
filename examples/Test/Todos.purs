@@ -10,6 +10,7 @@ import Concur.React.DOM as D
 import Concur.React.Props as P
 import Concur.React.Widgets (textInputEnter)
 import Control.Lazy (defer)
+import Control.MultiAlternative (orr)
 import Data.Array (catMaybes, cons, intercalate)
 import Data.Maybe (Maybe(..), fromMaybe)
 import Data.Nullable (toMaybe)
@@ -18,6 +19,8 @@ import Data.String.CodePoints (drop, take)
 import Data.Traversable (traverse)
 import Effect.Class (liftEffect)
 import Test.FFI (storageGet, storageSet)
+
+import Concur.Core.Dado as Da
 
 -- A proof of concept, Mini TodoMVC with Signals!
 -- Supports Todo creation, completion, editing, and deletion.
@@ -53,7 +56,7 @@ todosWidget = do
   dyn $ todos {filter: All, todos: savedTodos}
 
 mkTodo :: Array Todo -> Signal HTML (Array Todo)
-mkTodo ts = loopW ts \ts' -> D.div' $ pure do
+mkTodo ts = loopW ts \ts' -> D.div_ do
   s <- retryUntil (not <<< null) $ textInputEnter "" true [P.placeholder "What do you want to do?"]
   let newTodos = cons {name: s, done: false} ts'
   pure newTodos
@@ -67,12 +70,12 @@ todos s = loopS s \s' -> do
 
 todo :: Filter -> Todo -> Signal HTML (Maybe Todo)
 todo p t = if runFilter p t
-  then step (Just t) $ D.div'
-    [ todo p <<< (\b -> t {done = b}) <$> checkbox t.done
-    , do _ <- D.span [mark t.done, P.onDoubleClick] [D.text t.name]
-         todo p <<< (\s -> t {name = s}) <$> D.span' [retryUntil (not <<< null) $ textInputEnter t.name false []]
-    , defer (\_ -> always Nothing) <$ D.button [P.onClick] [D.text "Delete"]
-    ]
+  then step (Just t) $ D.div_ Da.do
+    todo p <<< (\b -> t {done = b}) <$> checkbox t.done
+    do
+      _ <- D.span [mark t.done, P.onDoubleClick] $ D.text t.name
+      todo p <<< (\s -> t {name = s}) <$> D.span_ (retryUntil (not <<< null) $ textInputEnter t.name false [])
+    defer (\_ -> always Nothing) <$ D.button [P.onClick] (D.text "Delete")
   else always (Just t)
   where
     runFilter All _ = true
@@ -84,9 +87,9 @@ todo p t = if runFilter p t
       else P.style {}
 
 filterButtons :: Todos -> Signal HTML Todos
-filterButtons s = step s $ D.div' (mkFilter <$> filters)
+filterButtons s = step s $ D.div_ (orr (mkFilter <$> filters))
   where
-    mkFilter f = D.button [select f, defer (\_ -> filterButtons (s {filter = f})) <$ P.onClick] [D.text (show f)]
+    mkFilter f = D.button [select f, defer (\_ -> filterButtons (s {filter = f})) <$ P.onClick] (D.text (show f))
     filters = [All, Active, Completed]
     select f = if s.filter == f
       then P.style {border:"2px solid lightgray"}

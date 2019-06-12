@@ -4,24 +4,25 @@ import Prelude
 
 import Concur.Core (Widget)
 import Concur.React (HTML)
-import Concur.React.DOM (button, text, table', tr', td', tbody')
+import Concur.React.DOM (button, text, table_, tr_, td_, tbody_)
 import Concur.React.Props (onClick)
 import Control.MultiAlternative (orr)
 import Data.List (List(..), uncons, (:))
 import Data.Maybe (Maybe(..))
 import Data.Tuple (Tuple(..))
 
+import Concur.Core.Dado as Da
+
 -- Possible actions emitted by the Calculator buttons
 data CalculatorAction = Plus | Minus | Times | Div | Enter | Clear | Digit Int
 
 -- Button pad widget
 calcButtonsWidget :: Widget HTML CalculatorAction
-calcButtonsWidget = table' $ pure $ tbody' $
-  [ tr' [d 7, d 8, d 9, opDiv]
-  , tr' [d 4, d 5, d 6, opTimes]
-  , tr' [d 1, d 2, d 3, opMinus]
-  , tr' [d 0, ent, cls, opPlus]
-  ]
+calcButtonsWidget = table_ $ tbody_ Da.do
+  tr_ $ orr [d 7, d 8, d 9, opDiv]
+  tr_ $ orr [d 4, d 5, d 6, opTimes]
+  tr_ $ orr [d 1, d 2, d 3, opMinus]
+  tr_ $ orr [d 0, ent, cls, opPlus]
   where
     d n     = but (Digit n) (show n)
     ent     = but Enter "⏎"
@@ -30,7 +31,7 @@ calcButtonsWidget = table' $ pure $ tbody' $
     opTimes = but Times "*"
     opMinus = but Minus "-"
     opPlus = but Plus "+"
-    but x s = x <$ td' [button [onClick] [text s]]
+    but x s = x <$ (td_ $ button [onClick] $ text s)
 
 -- Postfix calculation
 calc :: List Int -> CalculatorAction -> Tuple (List Int) Int

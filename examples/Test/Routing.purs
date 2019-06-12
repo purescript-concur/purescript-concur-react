@@ -3,10 +3,12 @@ module Test.Routing where
 import Prelude
 
 import Concur.Core (Widget)
+import Concur.Core.Dado as Da
 import Concur.React (HTML)
 import Concur.React.DOM as D
 import Concur.React.Props as P
 import Control.Alt ((<|>))
+import Control.MultiAlternative (orr)
 import Data.Foldable (oneOf)
 import Effect.AVar as Evar
 import Effect.Aff (Milliseconds(..), delay)
@@ -52,13 +54,11 @@ pageForRoute Home = homePage
 pageForRoute (Page i) = page i
 
 homePage :: forall a. Widget HTML a
-homePage = D.div'
-  [ D.h1' [D.text " You are on the Homepage"]
-  , D.div' $ map (\i -> D.div' [D.a [P.href $ "#/" <> show i] [D.text $ "Page " <> show i]]) [1,2]
-  ]
+homePage = D.div_ Da.do
+  D.h1_ $ D.text " You are on the Homepage"
+  D.div_ $ orr $ map (\i -> D.div_ $ D.a [P.href $ "#/" <> show i] $ D.text $ "Page " <> show i) [1,2]
 
 page :: forall a. Int -> Widget HTML a
-page i = D.div'
-  [ D.h1' [D.text $ "You are on Page " <> show i]
-  , D.div' [D.a [P.href "#/"] [D.text "Go Home"]]
-  ]
+page i = D.div_ Da.do
+  D.h1_ $ D.text $ "You are on Page " <> show i
+  D.div_ $ D.a [P.href "#/"] $ D.text "Go Home"

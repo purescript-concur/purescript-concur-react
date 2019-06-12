@@ -13,7 +13,7 @@ import Control.ShiftMap (class ShiftMap)
 import React.DOM as D
 
 -- | The React backend uses Array to make view monoidal
--- | We use this view adapeter to derive our specialised `el` functions
+-- | We use this view adapter to derive our specialised `el` functions
 viewAdapter
   :: forall ps vs res
   .  (ps -> vs -> res)
@@ -49,990 +49,699 @@ elLeaf f = CD.elLeaf (\ps -> [f ps])
 
 -- Wrappers for all DOM elements from purescript-react
 -- TODO: Generate these mechanically somehow
-type El1
+type El
   = forall m a. ShiftMap (Widget HTML) m => Array (ReactProps a) -> m a -> m a
 
-type El
-  = forall m a. MultiAlternative m => ShiftMap (Widget HTML) m => Array (ReactProps a) -> Array (m a) -> m a
-
-type El'
-  = forall m a. MultiAlternative m => ShiftMap (Widget HTML) m => Array (m a) -> m a
+type El_
+  = forall m a. MultiAlternative m => ShiftMap (Widget HTML) m => m a -> m a
 
 type ElLeaf
   = forall m a. LiftWidget HTML m => Array (ReactProps a) -> m a
 
-type ElLeaf'
+type ElLeaf_
   = forall m a. LiftWidget HTML m => m a
 
-type ElLeafFunc' x
+type ElLeafFunc_ x
   = forall m a. LiftWidget HTML m => x -> m a
 
 -------------------------------------------------------------------------------------------------------------------
-text :: ElLeafFunc' String
+text :: ElLeafFunc_ String
 text str = liftWidget $ display [D.text str]
 
-int :: ElLeafFunc' Int
+int :: ElLeafFunc_ Int
 int x = liftWidget $ display [D.int x]
 
-number :: ElLeafFunc' Number
+number :: ElLeafFunc_ Number
 number x = liftWidget $ display [D.number x]
 
-a_ :: El1
-a_ = el D.a
-
 a :: El
-a = el' D.a
+a = el D.a
 
-a' :: El'
-a' = a []
-
-abbr_ :: El1
-abbr_ = el D.abbr
+a_ :: El_
+a_ = a []
 
 abbr :: El
-abbr = el' D.abbr
+abbr = el D.abbr
 
-abbr' :: El'
-abbr' = abbr []
-
-address_ :: El1
-address_ = el D.address
+abbr_ :: El_
+abbr_ = abbr []
 
 address :: El
-address = el' D.address
+address = el D.address
 
-address' :: El'
-address' = address []
+address_ :: El_
+address_ = address []
 
 area :: ElLeaf
 area = elLeaf D.area
 
-area' :: ElLeaf'
-area' = area []
-
-article_ :: El1
-article_ = el D.article
+area_ :: ElLeaf_
+area_ = area []
 
 article :: El
-article = el' D.article
+article = el D.article
 
-article' :: El'
-article' = article []
-
-aside_ :: El1
-aside_ = el D.aside
+article_ :: El_
+article_ = article []
 
 aside :: El
-aside = el' D.aside
+aside = el D.aside
 
-aside' :: El'
-aside' = aside []
-
-audio_ :: El1
-audio_ = el D.audio
+aside_ :: El_
+aside_ = aside []
 
 audio :: El
-audio = el' D.audio
+audio = el D.audio
 
-audio' :: El'
-audio' = audio []
-
-b_ :: El1
-b_ = el D.b
+audio_ :: El_
+audio_ = audio []
 
 b :: El
-b = el' D.b
+b = el D.b
 
-b' :: El'
-b' = b []
+b_ :: El_
+b_ = b []
 
 base :: ElLeaf
 base = elLeaf D.base
 
-base' :: ElLeaf'
-base' = base []
-
-bdi_ :: El1
-bdi_ = el D.bdi
+base_ :: ElLeaf_
+base_ = base []
 
 bdi :: El
-bdi = el' D.bdi
+bdi = el D.bdi
 
-bdi' :: El'
-bdi' = bdi []
-
-bdo_ :: El1
-bdo_ = el D.bdo
+bdi_ :: El_
+bdi_ = bdi []
 
 bdo :: El
-bdo = el' D.bdo
+bdo = el D.bdo
 
-bdo' :: El'
-bdo' = bdo []
-
-big_ :: El1
-big_ = el D.big
+bdo_ :: El_
+bdo_ = bdo []
 
 big :: El
-big = el' D.big
+big = el D.big
 
-big' :: El'
-big' = big []
-
-blockquote_ :: El1
-blockquote_ = el D.blockquote
+big_ :: El_
+big_ = big []
 
 blockquote :: El
-blockquote = el' D.blockquote
+blockquote = el D.blockquote
 
-blockquote' :: El'
-blockquote' = blockquote []
-
-body_ :: El1
-body_ = el D.body
+blockquote_ :: El_
+blockquote_ = blockquote []
 
 body :: El
-body = el' D.body
+body = el D.body
 
-body' :: El'
-body' = body []
+body_ :: El_
+body_ = body []
 
 br :: ElLeaf
 br = elLeaf D.br
 
-br' :: ElLeaf'
-br' = br []
-
-button_ :: El1
-button_ = el D.button
+br_ :: ElLeaf_
+br_ = br []
 
 button :: El
-button = el' D.button
+button = el D.button
 
-button' :: El'
-button' = button []
-
-canvas_ :: El1
-canvas_ = el D.canvas
+button_ :: El_
+button_ = button []
 
 canvas :: El
-canvas = el' D.canvas
+canvas = el D.canvas
 
-canvas' :: El'
-canvas' = canvas []
-
-caption_ :: El1
-caption_ = el D.caption
+canvas_ :: El_
+canvas_ = canvas []
 
 caption :: El
-caption = el' D.caption
+caption = el D.caption
 
-caption' :: El'
-caption' = caption []
-
-cite_ :: El1
-cite_ = el D.cite
+caption_ :: El_
+caption_ = caption []
 
 cite :: El
-cite = el' D.cite
+cite = el D.cite
 
-cite' :: El'
-cite' = cite []
-
-code_ :: El1
-code_ = el D.code
+cite_ :: El_
+cite_ = cite []
 
 code :: El
-code = el' D.code
+code = el D.code
 
-code' :: El'
-code' = code []
+code_ :: El_
+code_ = code []
 
 col :: ElLeaf
 col = elLeaf D.col
 
-col' :: ElLeaf'
-col' = col []
-
-colgroup_ :: El1
-colgroup_ = el D.colgroup
+col_ :: ElLeaf_
+col_ = col []
 
 colgroup :: El
-colgroup = el' D.colgroup
+colgroup = el D.colgroup
 
-colgroup' :: El'
-colgroup' = colgroup []
-
-_data_ :: El1
-_data_ = el D._data
+colgroup_ :: El_
+colgroup_ = colgroup []
 
 _data :: El
-_data = el' D._data
+_data = el D._data
 
-_data' :: El'
-_data' = _data []
-
-datalist_ :: El1
-datalist_ = el D.datalist
+_data_ :: El_
+_data_ = _data []
 
 datalist :: El
-datalist = el' D.datalist
+datalist = el D.datalist
 
-datalist' :: El'
-datalist' = datalist []
-
-dd_ :: El1
-dd_ = el D.dd
+datalist_ :: El_
+datalist_ = datalist []
 
 dd :: El
-dd = el' D.dd
+dd = el D.dd
 
-dd' :: El'
-dd' = dd []
-
-del_ :: El1
-del_ = el D.del
+dd_ :: El_
+dd_ = dd []
 
 del :: El
-del = el' D.del
+del = el D.del
 
-del' :: El'
-del' = del []
-
-details_ :: El1
-details_ = el D.details
+del_ :: El_
+del_ = del []
 
 details :: El
-details = el' D.details
+details = el D.details
 
-details' :: El'
-details' = details []
-
-dfn_ :: El1
-dfn_ = el D.dfn
+details_ :: El_
+details_ = details []
 
 dfn :: El
-dfn = el' D.dfn
+dfn = el D.dfn
 
-dfn' :: El'
-dfn' = dfn []
-
-dialog_ :: El1
-dialog_ = el D.dialog
+dfn_ :: El_
+dfn_ = dfn []
 
 dialog :: El
-dialog = el' D.dialog
+dialog = el D.dialog
 
-dialog' :: El'
-dialog' = dialog []
-
-div_ :: El1
-div_ = el D.div
+dialog_ :: El_
+dialog_ = dialog []
 
 div :: El
-div = el' D.div
+div = el D.div
 
-div' :: El'
-div' = div []
-
-dl_ :: El1
-dl_ = el D.dl
+div_ :: El_
+div_ = div []
 
 dl :: El
-dl = el' D.dl
+dl = el D.dl
 
-dl' :: El'
-dl' = dl []
-
-dt_ :: El1
-dt_ = el D.dt
+dl_ :: El_
+dl_ = dl []
 
 dt :: El
-dt = el' D.dt
+dt = el D.dt
 
-dt' :: El'
-dt' = dt []
-
-em_ :: El1
-em_ = el D.em
+dt_ :: El_
+dt_ = dt []
 
 em :: El
-em = el' D.em
+em = el D.em
 
-em' :: El'
-em' = em []
+em_ :: El_
+em_ = em []
 
 embed :: ElLeaf
 embed = elLeaf D.embed
 
-embed' :: ElLeaf'
-embed' = embed []
-
-fieldset_ :: El1
-fieldset_ = el D.fieldset
+embed_ :: ElLeaf_
+embed_ = embed []
 
 fieldset :: El
-fieldset = el' D.fieldset
+fieldset = el D.fieldset
 
-fieldset' :: El'
-fieldset' = fieldset []
-
-figcaption_ :: El1
-figcaption_ = el D.figcaption
+fieldset_ :: El_
+fieldset_ = fieldset []
 
 figcaption :: El
-figcaption = el' D.figcaption
+figcaption = el D.figcaption
 
-figcaption' :: El'
-figcaption' = figcaption []
-
-figure_ :: El1
-figure_ = el D.figure
+figcaption_ :: El_
+figcaption_ = figcaption []
 
 figure :: El
-figure = el' D.figure
+figure = el D.figure
 
-figure' :: El'
-figure' = figure []
-
-footer_ :: El1
-footer_ = el D.footer
+figure_ :: El_
+figure_ = figure []
 
 footer :: El
-footer = el' D.footer
+footer = el D.footer
 
-footer' :: El'
-footer' = footer []
-
-form_ :: El1
-form_ = el D.form
+footer_ :: El_
+footer_ = footer []
 
 form :: El
-form = el' D.form
+form = el D.form
 
-form' :: El'
-form' = form []
-
-h1_ :: El1
-h1_ = el D.h1
+form_ :: El_
+form_ = form []
 
 h1 :: El
-h1 = el' D.h1
+h1 = el D.h1
 
-h1' :: El'
-h1' = h1 []
-
-h2_ :: El1
-h2_ = el D.h2
+h1_ :: El_
+h1_ = h1 []
 
 h2 :: El
-h2 = el' D.h2
+h2 = el D.h2
 
-h2' :: El'
-h2' = h2 []
-
-h3_ :: El1
-h3_ = el D.h3
+h2_ :: El_
+h2_ = h2 []
 
 h3 :: El
-h3 = el' D.h3
+h3 = el D.h3
 
-h3' :: El'
-h3' = h3 []
-
-h4_ :: El1
-h4_ = el D.h4
+h3_ :: El_
+h3_ = h3 []
 
 h4 :: El
-h4 = el' D.h4
+h4 = el D.h4
 
-h4' :: El'
-h4' = h4 []
-
-h5_ :: El1
-h5_ = el D.h5
+h4_ :: El_
+h4_ = h4 []
 
 h5 :: El
-h5 = el' D.h5
+h5 = el D.h5
 
-h5' :: El'
-h5' = h5 []
-
-h6_ :: El1
-h6_ = el D.h6
+h5_ :: El_
+h5_ = h5 []
 
 h6 :: El
-h6 = el' D.h6
+h6 = el D.h6
 
-h6' :: El'
-h6' = h6 []
-
-head_ :: El1
-head_ = el D.head
+h6_ :: El_
+h6_ = h6 []
 
 head :: El
-head = el' D.head
+head = el D.head
 
-head' :: El'
-head' = head []
-
-header_ :: El1
-header_ = el D.header
+head_ :: El_
+head_ = head []
 
 header :: El
-header = el' D.header
+header = el D.header
 
-header' :: El'
-header' = header []
+header_ :: El_
+header_ = header []
 
 hr :: ElLeaf
 hr = elLeaf D.hr
 
-hr' :: ElLeaf'
-hr' = hr []
-
-html_ :: El1
-html_ = el D.html
+hr_ :: ElLeaf_
+hr_ = hr []
 
 html :: El
-html = el' D.html
+html = el D.html
 
-html' :: El'
-html' = html []
-
-i_ :: El1
-i_ = el D.i
+html_ :: El_
+html_ = html []
 
 i :: El
-i = el' D.i
+i = el D.i
 
-i' :: El'
-i' = i []
-
-iframe_ :: El1
-iframe_ = el D.iframe
+i_ :: El_
+i_ = i []
 
 iframe :: El
-iframe = el' D.iframe
+iframe = el D.iframe
 
-iframe' :: El'
-iframe' = iframe []
+iframe_ :: El_
+iframe_ = iframe []
 
 img :: ElLeaf
 img = elLeaf D.img
 
-img' :: ElLeaf'
-img' = img []
+img_ :: ElLeaf_
+img_ = img []
 
 input :: ElLeaf
 input = elLeaf D.input
 
-input' :: ElLeaf'
-input' = input []
-
-ins_ :: El1
-ins_ = el D.ins
+input_ :: ElLeaf_
+input_ = input []
 
 ins :: El
-ins = el' D.ins
+ins = el D.ins
 
-ins' :: El'
-ins' = ins []
-
-kbd_ :: El1
-kbd_ = el D.kbd
+ins_ :: El_
+ins_ = ins []
 
 kbd :: El
-kbd = el' D.kbd
+kbd = el D.kbd
 
-kbd' :: El'
-kbd' = kbd []
+kbd_ :: El_
+kbd_ = kbd []
 
 keygen :: ElLeaf
 keygen = elLeaf D.keygen
 
-keygen' :: ElLeaf'
-keygen' = keygen []
-
-label_ :: El1
-label_ = el D.label
+keygen_ :: ElLeaf_
+keygen_ = keygen []
 
 label :: El
-label = el' D.label
+label = el D.label
 
-label' :: El'
-label' = label []
-
-legend_ :: El1
-legend_ = el D.legend
+label_ :: El_
+label_ = label []
 
 legend :: El
-legend = el' D.legend
+legend = el D.legend
 
-legend' :: El'
-legend' = legend []
-
-li_ :: El1
-li_ = el D.li
+legend_ :: El_
+legend_ = legend []
 
 li :: El
-li = el' D.li
+li = el D.li
 
-li' :: El'
-li' = li []
+li_ :: El_
+li_ = li []
 
 link :: ElLeaf
 link = elLeaf D.link
 
-link' :: ElLeaf'
-link' = link []
-
-main_ :: El1
-main_ = el D.main
+link_ :: ElLeaf_
+link_ = link []
 
 main :: El
-main = el' D.main
+main = el D.main
 
-main' :: El'
-main' = main []
-
-_map_ :: El1
-_map_ = el D.map
+main_ :: El_
+main_ = main []
 
 _map :: El
-_map = el' D.map
+_map = el D.map
 
-_map' :: El'
-_map' = _map []
-
-mark_ :: El1
-mark_ = el D.mark
+_map_ :: El_
+_map_ = _map []
 
 mark :: El
-mark = el' D.mark
+mark = el D.mark
 
-mark' :: El'
-mark' = mark []
-
-menu_ :: El1
-menu_ = el D.menu
+mark_ :: El_
+mark_ = mark []
 
 menu :: El
-menu = el' D.menu
+menu = el D.menu
 
-menu' :: El'
-menu' = menu []
+menu_ :: El_
+menu_ = menu []
 
 menuitem :: ElLeaf
 menuitem = elLeaf D.menuitem
 
-menuitem' :: ElLeaf'
-menuitem' = menuitem []
+menuitem_ :: ElLeaf_
+menuitem_ = menuitem []
 
 meta :: ElLeaf
 meta = elLeaf D.meta
 
-meta' :: ElLeaf'
-meta' = meta []
-
-meter_ :: El1
-meter_ = el D.meter
+meta_ :: ElLeaf_
+meta_ = meta []
 
 meter :: El
-meter = el' D.meter
+meter = el D.meter
 
-meter' :: El'
-meter' = meter []
-
-nav_ :: El1
-nav_ = el D.nav
+meter_ :: El_
+meter_ = meter []
 
 nav :: El
-nav = el' D.nav
+nav = el D.nav
 
-nav' :: El'
-nav' = nav []
-
-noscript_ :: El1
-noscript_ = el D.noscript
+nav_ :: El_
+nav_ = nav []
 
 noscript :: El
-noscript = el' D.noscript
+noscript = el D.noscript
 
-noscript' :: El'
-noscript' = noscript []
-
-object_ :: El1
-object_ = el D.object
+noscript_ :: El_
+noscript_ = noscript []
 
 object :: El
-object = el' D.object
+object = el D.object
 
-object' :: El'
-object' = object []
-
-ol_ :: El1
-ol_ = el D.ol
+object_ :: El_
+object_ = object []
 
 ol :: El
-ol = el' D.ol
+ol = el D.ol
 
-ol' :: El'
-ol' = ol []
-
-optgroup_ :: El1
-optgroup_ = el D.optgroup
+ol_ :: El_
+ol_ = ol []
 
 optgroup :: El
-optgroup = el' D.optgroup
+optgroup = el D.optgroup
 
-optgroup' :: El'
-optgroup' = optgroup []
-
-option_ :: El1
-option_ = el D.option
+optgroup_ :: El_
+optgroup_ = optgroup []
 
 option :: El
-option = el' D.option
+option = el D.option
 
-option' :: El'
-option' = option []
-
-output_ :: El1
-output_ = el D.output
+option_ :: El_
+option_ = option []
 
 output :: El
-output = el' D.output
+output = el D.output
 
-output' :: El'
-output' = output []
-
-p_ :: El1
-p_ = el D.p
+output_ :: El_
+output_ = output []
 
 p :: El
-p = el' D.p
+p = el D.p
 
-p' :: El'
-p' = p []
+p_ :: El_
+p_ = p []
 
 param :: ElLeaf
 param = elLeaf D.param
 
-param' :: ElLeaf'
-param' = param []
-
-picture_ :: El1
-picture_ = el D.picture
+param_ :: ElLeaf_
+param_ = param []
 
 picture :: El
-picture = el' D.picture
+picture = el D.picture
 
-picture' :: El'
-picture' = picture []
-
-pre_ :: El1
-pre_ = el D.pre
+picture_ :: El_
+picture_ = picture []
 
 pre :: El
-pre = el' D.pre
+pre = el D.pre
 
-pre' :: El'
-pre' = pre []
-
-progress_ :: El1
-progress_ = el D.progress
+pre_ :: El_
+pre_ = pre []
 
 progress :: El
-progress = el' D.progress
+progress = el D.progress
 
-progress' :: El'
-progress' = progress []
-
-q_ :: El1
-q_ = el D.q
+progress_ :: El_
+progress_ = progress []
 
 q :: El
-q = el' D.q
+q = el D.q
 
-q' :: El'
-q' = q []
-
-rp_ :: El1
-rp_ = el D.rp
+q_ :: El_
+q_ = q []
 
 rp :: El
-rp = el' D.rp
+rp = el D.rp
 
-rp' :: El'
-rp' = rp []
-
-rt_ :: El1
-rt_ = el D.rt
+rp_ :: El_
+rp_ = rp []
 
 rt :: El
-rt = el' D.rt
+rt = el D.rt
 
-rt' :: El'
-rt' = rt []
-
-ruby_ :: El1
-ruby_ = el D.ruby
+rt_ :: El_
+rt_ = rt []
 
 ruby :: El
-ruby = el' D.ruby
+ruby = el D.ruby
 
-ruby' :: El'
-ruby' = ruby []
-
-s_ :: El1
-s_ = el D.s
+ruby_ :: El_
+ruby_ = ruby []
 
 s :: El
-s = el' D.s
+s = el D.s
 
-s' :: El'
-s' = s []
-
-samp_ :: El1
-samp_ = el D.samp
+s_ :: El_
+s_ = s []
 
 samp :: El
-samp = el' D.samp
+samp = el D.samp
 
-samp' :: El'
-samp' = samp []
-
-script_ :: El1
-script_ = el D.script
+samp_ :: El_
+samp_ = samp []
 
 script :: El
-script = el' D.script
+script = el D.script
 
-script' :: El'
-script' = script []
-
-section_ :: El1
-section_ = el D.section
+script_ :: El_
+script_ = script []
 
 section :: El
-section = el' D.section
+section = el D.section
 
-section' :: El'
-section' = section []
-
-select_ :: El1
-select_ = el D.select
+section_ :: El_
+section_ = section []
 
 select :: El
-select = el' D.select
+select = el D.select
 
-select' :: El'
-select' = select []
-
-small_ :: El1
-small_ = el D.small
+select_ :: El_
+select_ = select []
 
 small :: El
-small = el' D.small
+small = el D.small
 
-small' :: El'
-small' = small []
+small_ :: El_
+small_ = small []
 
 source :: ElLeaf
 source = elLeaf D.source
 
-source' :: ElLeaf'
-source' = source []
-
-span_ :: El1
-span_ = el D.span
+source_ :: ElLeaf_
+source_ = source []
 
 span :: El
-span = el' D.span
+span = el D.span
 
-span' :: El'
-span' = span []
-
-strong_ :: El1
-strong_ = el D.strong
+span_ :: El_
+span_ = span []
 
 strong :: El
-strong = el' D.strong
+strong = el D.strong
 
-strong' :: El'
-strong' = strong []
-
-style_ :: El1
-style_ = el D.style
+strong_ :: El_
+strong_ = strong []
 
 style :: El
-style = el' D.style
+style = el D.style
 
-style' :: El'
-style' = style []
-
-sub_ :: El1
-sub_ = el D.sub
+style_ :: El_
+style_ = style []
 
 sub :: El
-sub = el' D.sub
+sub = el D.sub
 
-sub' :: El'
-sub' = sub []
-
-summary_ :: El1
-summary_ = el D.summary
+sub_ :: El_
+sub_ = sub []
 
 summary :: El
-summary = el' D.summary
+summary = el D.summary
 
-summary' :: El'
-summary' = summary []
-
-sup_ :: El1
-sup_ = el D.sup
+summary_ :: El_
+summary_ = summary []
 
 sup :: El
-sup = el' D.sup
+sup = el D.sup
 
-sup' :: El'
-sup' = sup []
-
-table_ :: El1
-table_ = el D.table
+sup_ :: El_
+sup_ = sup []
 
 table :: El
-table = el' D.table
+table = el D.table
 
-table' :: El'
-table' = table []
-
-tbody_ :: El1
-tbody_ = el D.tbody
+table_ :: El_
+table_ = table []
 
 tbody :: El
-tbody = el' D.tbody
+tbody = el D.tbody
 
-tbody' :: El'
-tbody' = tbody []
-
-td_ :: El1
-td_ = el D.td
+tbody_ :: El_
+tbody_ = tbody []
 
 td :: El
-td = el' D.td
+td = el D.td
 
-td' :: El'
-td' = td []
-
-textarea_ :: El1
-textarea_ = el D.textarea
+td_ :: El_
+td_ = td []
 
 textarea :: El
-textarea = el' D.textarea
+textarea = el D.textarea
 
-textarea' :: El'
-textarea' = textarea []
-
-tfoot_ :: El1
-tfoot_ = el D.tfoot
+textarea_ :: El_
+textarea_ = textarea []
 
 tfoot :: El
-tfoot = el' D.tfoot
+tfoot = el D.tfoot
 
-tfoot' :: El'
-tfoot' = tfoot []
-
-th_ :: El1
-th_ = el D.th
+tfoot_ :: El_
+tfoot_ = tfoot []
 
 th :: El
-th = el' D.th
+th = el D.th
 
-th' :: El'
-th' = th []
-
-thead_ :: El1
-thead_ = el D.thead
+th_ :: El_
+th_ = th []
 
 thead :: El
-thead = el' D.thead
+thead = el D.thead
 
-thead' :: El'
-thead' = thead []
-
-time_ :: El1
-time_ = el D.time
+thead_ :: El_
+thead_ = thead []
 
 time :: El
-time = el' D.time
+time = el D.time
 
-time' :: El'
-time' = time []
-
-title_ :: El1
-title_ = el D.title
+time_ :: El_
+time_ = time []
 
 title :: El
-title = el' D.title
+title = el D.title
 
-title' :: El'
-title' = title []
-
-tr_ :: El1
-tr_ = el D.tr
+title_ :: El_
+title_ = title []
 
 tr :: El
-tr = el' D.tr
+tr = el D.tr
 
-tr' :: El'
-tr' = tr []
+tr_ :: El_
+tr_ = tr []
 
 track :: ElLeaf
 track = elLeaf D.track
 
-track' :: ElLeaf'
-track' = track []
-
-u_ :: El1
-u_ = el D.u
+track_ :: ElLeaf_
+track_ = track []
 
 u :: El
-u = el' D.u
+u = el D.u
 
-u' :: El'
-u' = u []
-
-ul_ :: El1
-ul_ = el D.ul
+u_ :: El_
+u_ = u []
 
 ul :: El
-ul = el' D.ul
+ul = el D.ul
 
-ul' :: El'
-ul' = ul []
-
-var_ :: El1
-var_ = el D.var
+ul_ :: El_
+ul_ = ul []
 
 var :: El
-var = el' D.var
+var = el D.var
 
-var' :: El'
-var' = var []
-
-video_ :: El1
-video_ = el D.video
+var_ :: El_
+var_ = var []
 
 video :: El
-video = el' D.video
+video = el D.video
 
-video' :: El'
-video' = video []
+video_ :: El_
+video_ = video []
 
 wbr :: ElLeaf
 wbr = elLeaf D.wbr
 
-wbr' :: ElLeaf'
-wbr' = wbr []
+wbr_ :: ElLeaf_
+wbr_ = wbr []
