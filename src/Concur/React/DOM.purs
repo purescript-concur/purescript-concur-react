@@ -13,7 +13,7 @@ import Control.ShiftMap (class ShiftMap)
 import React.DOM as D
 
 -- | The React backend uses Array to make view monoidal
--- | We use this view adapeter to derive our specialised `el` functions
+-- | We use this view adapter to derive our specialised `el` functions
 viewAdapter
   :: forall ps vs res
   .  (ps -> vs -> res)

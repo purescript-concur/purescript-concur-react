@@ -9,4 +9,4 @@ html/index.js
 /.cache
 /dist
 /.psci_modules
-
+/.spago

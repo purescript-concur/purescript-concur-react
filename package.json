@@ -26,11 +26,9 @@
     "react-dom": "^16.8.6"
   },
   "devDependencies": {
-    "bower": "^1.8.8",
     "parcel-bundler": "^1.12.3",
-    "pulp": "^12.4.2",
-    "purescript": "^0.12.5",
-    "purescript-psa": "^0.7.3",
-    "rimraf": "^2.6.3"
+    "rimraf": "^2.6.3",
+    "spago": "^0.8.5",
+    "bower": "^1.8.8"
   }
 }
