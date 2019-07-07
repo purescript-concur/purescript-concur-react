@@ -10,3 +10,4 @@ html/index.js
 /dist
 /.psci_modules
 /.spago
+/package-lock.json
