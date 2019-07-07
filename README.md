@@ -28,7 +28,7 @@ API documentation is [published on Pursuit](https://pursuit.purescript.org/packa
 
 ## Performance
 
-Purescript-Concur is reasonably light. The [entire *uncompressed* JS bundle](https://github.com/ajnsit/purescript-concur/blob/master/docs/index.prod.minified.0dfb135e.js), including react and all libraries, for the entire example application in this repo clocks in at 180KB. You can build this bundle yourself with the command `npm run prod`.
+Purescript-Concur is reasonably light. The [entire *uncompressed* JS bundle](https://github.com/ajnsit/purescript-concur/blob/master/docs/index.prod.minified.0dfb135e.js), including react and all libraries, for the entire example application in this repo clocks in at 180KB. You can build this bundle yourself with the command `npm run prod` (*currently broken* due to the move to spago).
 
 This leads to pretty fast initial load times. Running the Chrome audit on https://ajnsit.github.io/purescript-concur/ produces -
 
