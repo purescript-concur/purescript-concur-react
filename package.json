@@ -19,7 +19,8 @@
     "docs": "npm run prod && cp docs/logo.png dist && cp docs/Purescript-Concur-Performance.png dist && rimraf docs && mv dist docs",
     "start": "parcel index.html",
     "watch": "parcel watch index.html",
-    "bower-update-all": "npx bower-update-all"
+    "bower-update-all": "npx bower-update-all",
+    "generate-bower": "node generate-bower.js"
   },
   "dependencies": {
     "react": "^16.8.6",
@@ -28,7 +29,6 @@
   "devDependencies": {
     "parcel-bundler": "^1.12.3",
     "rimraf": "^2.6.3",
-    "spago": "^0.8.5",
-    "bower": "^1.8.8"
+    "spago": "^0.8.5"
   }
 }

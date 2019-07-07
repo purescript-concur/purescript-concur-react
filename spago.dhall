@@ -5,18 +5,18 @@ You can edit this file as you like.
 { name =
     "concur-react"
 , dependencies =
-    [ "react"
+    [ "aff"
     , "arrays"
-    , "aff"
     , "avar"
-    , "tailrec"
+    , "console"
+    , "foldable-traversable"
     , "free"
     , "nonempty"
-    , "foldable-traversable"
+    , "react"
     , "react-dom"
+    , "tailrec"
     , "web-dom"
     , "web-html"
-    , "console"
     ]
 , packages =
     ./packages.dhall
