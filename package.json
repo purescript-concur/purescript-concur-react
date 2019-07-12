@@ -11,16 +11,16 @@
   "files": [],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "clean": "rimraf output && rimraf .pulp-cache && rimraf temp",
-    "build": "pulp build -I examples -- --censor-lib --strict",
-    "dev": "rimraf temp && bower install && pulp build -I examples && parcel build --public-url ./ index.html",
-    "prod": "rimraf temp && bower install && mkdir temp && pulp build --to temp/index.prod.js -I examples && java -jar closure-compiler/closure-compiler-v20190301.jar --js temp/index.prod.js --js_output_file temp/index.prod.minified.js && cp index.prod.html temp && parcel build --public-url ./ temp/index.prod.html && mv dist/index.prod.html dist/index.html && rimraf temp",
-    "prod1": "rimraf temp && bower install && mkdir temp && pulp build --to temp/index.prod.js -I examples && java -jar closure-compiler/closure-compiler-v20190301.jar --compilation_level ADVANCED_OPTIMIZATIONS --js temp/index.prod.js --js_output_file temp/index.prod.minified.js && cp index.prod.html temp && parcel build --public-url ./ temp/index.prod.html && mv dist/index.prod.html dist/index.html && rimraf temp",
+    "clean": "rimraf output && rimraf temp",
+    "build": "spago build",
+    "dev": "cd examples && rimraf temp && spago build && parcel build --public-url ./ index.html",
+    "prod": "cd examples && rimraf temp && mkdir temp && spago bundle-app --to temp/index.prod.js && java -jar ../closure-compiler/closure-compiler-v20190301.jar --compilation_level ADVANCED_OPTIMIZATIONS --js temp/index.prod.js --js_output_file temp/index.prod.minified.js && cp index.prod.html temp && parcel build --public-url ./ temp/index.prod.html && mv dist/index.prod.html dist/index.html && rimraf temp",
+    "prod1": "rimraf temp && mkdir temp && spago build --to temp/index.prod.js -I examples && java -jar closure-compiler/closure-compiler-v20190301.jar --compilation_level ADVANCED_OPTIMIZATIONS --js temp/index.prod.js --js_output_file temp/index.prod.minified.js && cp index.prod.html temp && parcel build --public-url ./ temp/index.prod.html && mv dist/index.prod.html dist/index.html && rimraf temp",
     "docs": "npm run prod && cp docs/logo.png dist && cp docs/Purescript-Concur-Performance.png dist && rimraf docs && mv dist docs",
     "start": "parcel index.html",
     "watch": "parcel watch index.html",
     "bower-update-all": "npx bower-update-all",
-    "generate-bower": "node generate-bower.js"
+    "generate-bower": "cd lib && node generate-bower.js"
   },
   "dependencies": {
     "react": "^16.8.6",
@@ -28,6 +28,7 @@
   },
   "devDependencies": {
     "parcel-bundler": "^1.12.3",
+    "purescript": "^0.13.2",
     "rimraf": "^2.6.3",
     "spago": "^0.8.5"
   }

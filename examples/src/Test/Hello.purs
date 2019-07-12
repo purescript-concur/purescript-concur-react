@@ -20,3 +20,6 @@ helloWidgetS = forever do
   count <- get
   void $ D.div' [ D.button [P.onClick] [D.text ("For the " <> show count <> " time, hello sailor!")] ]
   put (count + 1)
+
+-- Widgety Widget
+data View = View Int HTML

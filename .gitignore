@@ -11,3 +11,6 @@ html/index.js
 /.psci_modules
 /.spago
 /package-lock.json
+.spago
+.cache
+dist
