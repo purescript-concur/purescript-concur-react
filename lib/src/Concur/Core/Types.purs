@@ -185,7 +185,7 @@ pulse ::
   forall v.
   Monoid v =>
   Widget v Unit
-pulse = unsafeBlockingEffAction (pure unit)
+pulse = effAction (pure unit)
 
 mapView :: forall a v1 v2. (v1 -> v2) -> Widget v1 a -> Widget v2 a
 mapView f (Widget w) = Widget (hoistFree (mapViewStep f) w)
@@ -200,20 +200,12 @@ mapViewStep f (WidgetStep ws) = WidgetStep (map mod ws)
 display :: forall a v. v -> Widget v a
 display v = Widget (liftF (displayStep v))
 
--- Sync but Non blocking eff
+-- Sync eff
 effAction ::
   forall a v.
   Effect a ->
   Widget v a
-effAction eff = unsafeBlockingEffAction eff
-
--- Sync and blocking eff
--- WARNING: UNSAFE: This will block the UI rendering
-unsafeBlockingEffAction ::
-  forall a v.
-  Effect a ->
-  Widget v a
-unsafeBlockingEffAction eff = Widget $ liftF $ WidgetStep $ map Left eff
+effAction = Widget <<< liftF <<< WidgetStep <<< map Left
 
 -- Async aff
 affAction ::
