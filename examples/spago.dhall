@@ -8,11 +8,7 @@ let mkPackage = ../mkPackage.dhall
 in  { name =
         "purescript-concur-react-examples"
     , dependencies =
-        [ "affjax"
-        , "argonaut"
-        , "concur-react"
-        , "routing"
-        ]
+        [ "affjax", "argonaut", "concur-react", "routing" ]
     , packages =
             ../packages.dhall
         //  { concur-react =
