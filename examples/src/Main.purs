@@ -20,9 +20,11 @@ import Test.TailRec (tailRecDemo)
 import Test.TheElmArchitecture (teaWidget)
 import Test.Timers (timersWidget)
 import Test.Todos (todosWidget)
+import Test.Wire (wireWidget)
 
 main :: Effect Unit
 main = do
+  runWidgetInDom "wire" wireWidget
   runWidgetInDom "routing" routingWidget
   runWidgetInDom "todos" todosWidget
   runWidgetInDom "editHeadings" editHeadings

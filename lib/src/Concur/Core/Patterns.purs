@@ -2,14 +2,16 @@ module Concur.Core.Patterns where
 
 import Prelude
 
+import Concur.Core.Types (Widget)
+import Concur.React (HTML)
 import Control.Plus (class Plus, empty, (<|>))
-import Data.Either (Either(..))
+import Data.Either (Either(..), either)
 import Data.Tuple (Tuple(..))
-import Effect.Aff.Class (class MonadAff, liftAff)
-import Effect.Class (class MonadEffect, liftEffect)
-
+import Effect.AVar (AVar)
 import Effect.AVar as EVar
 import Effect.Aff.AVar as AVar
+import Effect.Aff.Class (class MonadAff, liftAff)
+import Effect.Class (class MonadEffect, liftEffect)
 
 -- | A very useful combinator for widgets with localised state
 loopState ::
@@ -91,3 +93,22 @@ forkActionState axn render st = forkAction axn (go st)
     case e of
       Left st'' -> go st'' axn'
       Right f -> render (f st')
+
+
+-- WORKING WITH LOCAL ENVIRONMENTS
+
+type Wire a = AVar a
+
+-- | Use a local environment
+with :: forall a. Wire a -> a -> Widget HTML Unit
+with var a = liftAff $ AVar.put a var
+
+-- | Setup a local environment
+local :: forall a v r. Monoid v => a -> (Wire a -> a -> Widget v r) -> Widget v r
+local a f = liftEffect EVar.empty >>= go a
+  where
+  go a' var = go' a'
+    where
+    go' a'' = do
+      res <- (Left <$> f var a'') <|> (Right <$> (liftAff (AVar.take var)))
+      either pure go' res
