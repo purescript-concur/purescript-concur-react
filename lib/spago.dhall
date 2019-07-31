@@ -12,6 +12,7 @@ You can edit this file as you like.
     , "foldable-traversable"
     , "free"
     , "nonempty"
+    , "profunctor-lenses"
     , "react"
     , "react-dom"
     , "tailrec"

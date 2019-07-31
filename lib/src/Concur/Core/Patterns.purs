@@ -2,12 +2,12 @@ module Concur.Core.Patterns where
 
 import Prelude
 
-import Concur.Core.Types (Widget)
-import Concur.React (HTML)
+import Control.Alt (class Alt)
 import Control.Plus (class Plus, empty, (<|>))
 import Data.Either (Either(..), either)
+import Data.Lens (Lens')
+import Data.Lens as L
 import Data.Tuple (Tuple(..))
-import Effect.AVar (AVar)
 import Effect.AVar as EVar
 import Effect.Aff.AVar as AVar
 import Effect.Aff.Class (class MonadAff, liftAff)
@@ -97,18 +97,27 @@ forkActionState axn render st = forkAction axn (go st)
 
 -- WORKING WITH LOCAL ENVIRONMENTS
 
-type Wire a = AVar a
+-- | A wire can send values up into a local environment
+type Wire m a = { value :: a, send :: a -> m Unit, receive :: m a }
 
--- | Use a local environment
-with :: forall a. Wire a -> a -> Widget HTML Unit
-with var a = liftAff $ AVar.put a var
+-- | Map a Lens over a Wire
+mapWire :: forall m s a. Functor m => Lens' s a -> Wire m s -> Wire m a
+mapWire lens wire =
+  { value: L.view lens wire.value
+  , send: \a -> wire.send $ L.set lens a wire.value
+  , receive: map (L.view lens) wire.receive
+  }
 
--- | Setup a local environment
-local :: forall a v r. Monoid v => a -> (Wire a -> a -> Widget v r) -> Widget v r
-local a f = liftEffect EVar.empty >>= go a
+-- | Setup a local environment with a wire
+local :: forall m r a. Alt m => MonadEffect m => MonadAff m => a -> (Wire m a -> m r) -> m r
+local a f = mkWire a >>= go
   where
-  go a' var = go' a'
-    where
-    go' a'' = do
-      res <- (Left <$> f var a'') <|> (Right <$> (liftAff (AVar.take var)))
-      either pure go' res
+  updateWire wire a' = wire {value=a'}
+  go wire = do
+    res <- (Left <$> f wire) <|> (Right <$> wire.receive)
+    either pure (go <<< updateWire wire) res
+  mkWire a' = liftEffect EVar.empty >>= \var -> pure
+    { value: a'
+    , send: \a'' -> liftAff $ AVar.put a'' var
+    , receive: liftAff $ AVar.take var
+    }
