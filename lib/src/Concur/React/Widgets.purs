@@ -9,6 +9,7 @@ import Concur.React.Props (ReactProps)
 import Concur.React.Props as P
 import Data.Maybe (Maybe(..))
 import Effect.Class (liftEffect)
+import React.Ref as Ref
 import Unsafe.Coerce (unsafeCoerce)
 
 -- | A Text input that returns its contents on enter
@@ -33,17 +34,17 @@ textInputWithButton ::
   (forall a. Array (ReactProps a)) ->
   Widget HTML String
 textInputWithButton val buttonlabel inpProps buttonProps = do
-  ref <- liftEffect P.createRef
+  ref <- liftEffect Ref.createNodeRef
   D.div'
     [ D.input $ inpProps <>
       [ P.unsafeTargetValue <$> P.onKeyEnter
       , P.defaultValue val
-      , P.refProp ref P.ref
+      , P.ref (Ref.fromRef ref)
       ]
     , D.text " "
     , do
       _ <- D.button (buttonProps <> [P.onClick]) [D.text buttonlabel]
-      mInput <- liftEffect $ P.refNullableGetter ref
+      mInput <- liftEffect (Ref.getCurrentRef ref)
       case mInput of
         Nothing -> pure val
         Just inp -> pure (unsafeCoerce inp).value

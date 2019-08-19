@@ -5,10 +5,9 @@ import Prelude
 import Concur.Core.Props (Props(..), filterProp)
 import Data.Array (concatMap, intercalate)
 import Data.Maybe (Maybe, maybe)
-import Data.Nullable (Nullable, toMaybe)
 import Effect (Effect)
 import Effect.Uncurried (mkEffectFn1)
-import React (ReactRef)
+import React.Ref as Ref
 import React.DOM.Props as P
 import React.SyntheticEvent
   ( SyntheticAnimationEvent
@@ -49,37 +48,6 @@ unsafeMkProp ::
   a ->
   ReactProps b
 unsafeMkProp s v = PrimProp (P.unsafeMkProps s v)
-
-foreign import data RRef :: Type -> Type
-
-foreign import createRef :: forall a. Effect (RRef a)
-
-foreign import refSetter :: forall a. RRef a -> a -> Effect Unit
-
-foreign import refGetter_ :: forall a. RRef a -> Effect (Nullable a)
-
--- | `refGetter` will collapse nullable values
--- | So it will never return a `Just null`, only either `Nothing`, or `Just (notNull a)`
--- | So with `Nullable a`, it is easier, without loss of generality, to use `refNullableGetter`
-refGetter ::
-  forall a.
-  RRef a ->
-  Effect (Maybe a)
-refGetter rf = toMaybe <$> refGetter_ rf
-
-refNullableGetter :: forall a. RRef (Nullable a) -> Effect (Maybe a)
-refNullableGetter rf = (unsafeCoerce <<< toMaybe) <$> refGetter_ rf
-
--- | Use `refProp` to convert a `Handler` to a static prop
--- | The value returned by the handler is stored in the RRef passed
-refProp ::
-  forall a b.
-  RRef a ->
-  ReactProps a ->
-  ReactProps b
-refProp rref (PrimProp p) = PrimProp p
-
-refProp rref (Handler f) = PrimProp (f (refSetter rref))
 
 -- | Shortcut for the common case of a list of classes
 classList ::
@@ -986,8 +954,8 @@ onScrollCapture = Handler P.onScrollCapture
 onWheelCapture :: ReactProps SyntheticWheelEvent
 onWheelCapture = Handler P.onWheelCapture
 
-ref :: ReactProps (Nullable ReactRef)
-ref = Handler P.ref
+ref :: forall a. Ref.RefHandler Ref.NativeNode -> ReactProps a
+ref = PrimProp <<< P.ref
 
 suppressContentEditableWarning :: forall a. Boolean -> ReactProps a
 suppressContentEditableWarning = PrimProp <<< P.suppressContentEditableWarning
