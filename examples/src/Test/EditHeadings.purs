@@ -3,14 +3,15 @@ module Test.EditHeadings where
 import Prelude
 
 import Concur.Core (Widget)
-import Concur.Core.FRP (Signal, dyn, loopS, step)
 import Concur.React (HTML)
-import Concur.React.DOM (div', button, h5, text, ul_, li_)
+import Concur.React.DOM (button, div', h5, h5_, li_, text, ul_)
 import Concur.React.Props (onClick, onDoubleClick, placeholder)
 import Concur.React.Widgets (textInputEnter)
-import Data.Array (catMaybes, cons)
+import Control.MultiAlternative (orr)
+import Data.Array (cons)
+import Data.Array as A
 import Data.Maybe (Maybe(..))
-import Data.Traversable (traverse)
+import Data.Tuple (Tuple(..))
 
 newtype Tree = Tree
   { title :: String
@@ -32,36 +33,60 @@ testTree = Tree
     ]
   }
 
-mkChildren :: Signal HTML (Maybe Tree)
-mkChildren = step Nothing $ do
+mkChildren :: Widget HTML Tree
+mkChildren = do
   _ <- button [onClick] [text "New"]
-  pure (pure (Just (Tree {title: "New Heading", children: []})))
+  pure $ Tree {title: "New Heading", children: []}
 
-treeView :: Maybe Tree -> Signal HTML (Maybe Tree)
-treeView Nothing = pure Nothing
-treeView (Just t) = treeView' t
+data Action
+  = EditTitle String
+  | Delete
+  | AddChild Tree
+  | EditChildren (Array Tree)
+
+displayList :: forall a. (a -> Widget HTML (Maybe a)) -> Array a -> Widget HTML (Array a)
+displayList render = go
   where
-    treeView' (Tree tree) = li_ [] $ do
-      title' <- editableTitle tree.title
-      shouldDel <- step false (pure true <$ button [onClick] [text "Delete"])
-      if shouldDel
-        then pure Nothing
-        else do
-          newChild <- mkChildren
-          let children = case newChild of
-                Nothing -> tree.children
-                Just newt -> cons newt tree.children
-          children' <- ul_ [] $ map catMaybes $ traverse treeView' children
-          pure (Just (Tree {title: title', children: children'}))
+  go elems = do
+    Tuple i res <- orr childElements
+    pure $ case res of
+      Nothing -> updateElems (A.deleteAt i elems)
+      Just updatedElem -> updateElems (A.updateAt i updatedElem elems)
+    where
+    childElements = elems # A.mapWithIndex \i a -> (Tuple i <$> render a)
+    updateElems Nothing = elems
+    updateElems (Just elems') = elems'
 
-editableTitle :: String -> Signal HTML String
-editableTitle title = step title do
+treeView :: Tree -> Widget HTML (Maybe Tree)
+treeView (Tree tree) = li_ [] $ do
+  res <- orr
+    [ EditTitle <$> editableTitle tree.title
+    , Delete <$ button [onClick] [text "Delete"]
+    , AddChild <$> mkChildren
+    , EditChildren <$> (ul_ [] $ displayList treeView tree.children)
+    ]
+  case res of
+    EditTitle newTitle -> ret {title: newTitle, children: tree.children}
+    Delete -> pure Nothing
+    AddChild newChild -> ret {title: tree.title, children: cons newChild tree.children}
+    EditChildren newChildren -> ret {title: tree.title, children: newChildren}
+  where
+    ret t = pure (Just (Tree t))
+
+editableTitle :: String -> Widget HTML String
+editableTitle title = do
   _ <- h5 [onDoubleClick] [text title]
   edited <- div'
     [ textInputEnter title false [placeholder title]
     , title <$ button [onClick] [text "Cancel"]
     ]
-  pure $ editableTitle $ if edited == "" then title else edited
+  if edited == "" || edited == "title" then editableTitle title else pure edited
 
 editHeadings :: forall a. Widget HTML a
-editHeadings = dyn $ ul_ [] $ loopS (Just testTree) treeView
+editHeadings = go testTree
+  where
+    go tree = do
+      newTree <- ul_ [] $ treeView tree
+      case newTree of
+        Nothing -> h5_ [] $ text "Tree Deleted"
+        Just tree' -> go tree'
