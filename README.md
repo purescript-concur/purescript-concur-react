@@ -67,7 +67,56 @@ open localhost:1234 in the browser
 
 ## External React Components
 
-Concur supports using external React components. For example, there is an ongoing effort to create concur bindings for [SemanticUI-React](https://react.semantic-ui.com). Look at the [Sources](https://github.com/ajnsit/purescript-concur-semantic), and the [Demo](https://ajnsit.github.io/purescript-concur-semantic/).
+It's easy to add external React components to Concur. Usually all you would require to wrap an external component is to import it as a `ReactClass`, and then wrapping it with one of the `el` functions.
+
+For example, let's say you want to wrap the `Button` component provided by the material-ui library.
+
+*Step 1*: First write an FFI module that exposes the `ReactClass` component -
+
+```javascript
+// Button.js
+exports.classButton =  require('@material-ui/core/Button').default
+```
+
+And import it into your purescript program
+
+```purescript
+-- Button.purs
+foreign import classButton :: forall a. ReactClass a
+```
+
+If you are using the [Purescript React MUI bindings](https://github.com/doolse/purescript-react-mui), then you can simply import the class component from the library without defining the FFI module -
+
+```purescript
+import MaterialUI.Button (classButton)
+```
+
+An aside: The MUI bindings also provide Props type definitions for components, but we don't use them. This is because I am yet to figure out a nice API for typesafe props for components. By "typesafe", I mean ensuring at compile time that you are not passing a prop to a button that is not a part of the allowed set of props for buttons. In practice, I have found that it's not very useful since lots of react props can be used for a large number of components, and it would be a lot of work to map them properly.
+
+*Step 2*: Then wrap up the imported `ReactClass` into a widget to make it usable within Concur -
+
+```purescript
+import Concur.React.DOM (El, el')
+import React (unsafeCreateElement)
+import React.DOM.Props (unsafeFromPropsArray)
+
+button :: El
+button = el' (unsafeCreateElement classButton <<< unsafeFromPropsArray)
+```
+
+(Ignore the `unsafe` functions. That's basically the cost of not having typesafe props. It's on my todo list).
+
+*Step 3*: Now you can use `button` normally within Concur. For example -
+
+```purescript
+import Concur.React.DOM as D
+import Concur.React.Props as P
+
+helloButton = button [P.onClick] [D.text "Hello World!"]
+```
+
+Note that you can mix in the default widgets and props with the MUI ones.
+
 
 ## Examples
 
