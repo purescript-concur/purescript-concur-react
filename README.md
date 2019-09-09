@@ -91,8 +91,6 @@ If you are using the [Purescript React MUI bindings](https://github.com/doolse/p
 import MaterialUI.Button (classButton)
 ```
 
-An aside: The MUI bindings also provide Props type definitions for components, but we don't use them. This is because I am yet to figure out a nice API for typesafe props for components. By "typesafe", I mean ensuring at compile time that you are not passing a prop to a button that is not a part of the allowed set of props for buttons. In practice, I have found that it's not very useful since lots of react props can be used for a large number of components, and it would be a lot of work to map them properly.
-
 *Step 2*: Then wrap up the imported `ReactClass` into a widget to make it usable within Concur -
 
 ```purescript
@@ -103,8 +101,6 @@ import React.DOM.Props (unsafeFromPropsArray)
 button :: El
 button = el' (unsafeCreateElement classButton <<< unsafeFromPropsArray)
 ```
-
-(Ignore the `unsafe` functions. That's basically the cost of not having typesafe props. It's on my todo list).
 
 *Step 3*: Now you can use `button` normally within Concur. For example -
 
