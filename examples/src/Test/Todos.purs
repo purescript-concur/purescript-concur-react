@@ -3,7 +3,7 @@ module Test.Todos where
 import Prelude
 
 import Concur.Core (Widget)
-import Concur.Core.FRP (Signal, always, dyn, loopS, loopW, runWidgetOnce, step)
+import Concur.Core.FRP (Signal, always, dyn, loopS, loopW, fireOnce_, step)
 import Concur.Core.Patterns (retryUntil)
 import Concur.React (HTML)
 import Concur.React.DOM as D
@@ -62,7 +62,7 @@ todos :: Todos -> Signal HTML Todos
 todos s = loopS s \s' -> do
   ts <- mkTodo s'.todos
   ts' <- map catMaybes (traverse (todo s'.filter) ts)
-  runWidgetOnce $ liftEffect $ storageSet localStorageKey (serialiseTodos ts')
+  fireOnce_ $ liftEffect $ storageSet localStorageKey (serialiseTodos ts')
   filterButtons s' {todos = ts'}
 
 todo :: Filter -> Todo -> Signal HTML (Maybe Todo)

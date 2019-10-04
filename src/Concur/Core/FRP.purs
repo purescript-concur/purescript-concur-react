@@ -8,6 +8,8 @@ import Control.Cofree (Cofree, mkCofree, tail)
 import Control.Comonad (extract)
 import Data.Either (Either(..), either, hush)
 import Data.Maybe (Maybe(..))
+import Effect (Effect)
+import Effect.Class (liftEffect)
 
 ----------
 -- SIGNALS
@@ -32,9 +34,28 @@ step = mkCofree
 display :: forall v. Widget v (Signal v Unit) -> Signal v Unit
 display w = step unit w
 
--- | Run a widget once then stop. This will reflow when a parent signal reflows
-runWidgetOnce :: forall v. Monoid v => Widget v Unit -> Signal v Unit
-runWidgetOnce w = display do w *> empty
+-- | Fires a widget once then stop. This will reflow when a parent signal reflows
+-- | Starts as Nothing. Then switches to `Just returnVal` after the Widget is done
+fireOnce :: forall v a. Monoid v => Widget v a -> Signal v (Maybe a)
+fireOnce w = step Nothing do
+  a <- w
+  pure (step (Just a) empty)
+
+-- | Similar to `fireOnce`, but discards the return value
+fireOnce_ :: forall v. Monoid v => Widget v Unit -> Signal v Unit
+fireOnce_ w = display do w *> empty
+
+-- | Wait until we get a `Just` value from a signal
+justWait :: forall v a b. Monoid v => b -> Signal v (Maybe a) -> (a -> Signal v b) -> Signal v b
+justWait b s f = do
+  m <- s
+  case m of
+    Nothing -> pure b
+    Just a -> f a
+
+-- | Run an effectful computation, and do something with the result
+justEffect :: forall v a b. Monoid v => b -> Effect a -> (a -> Signal v b) -> Signal v b
+justEffect b e f = justWait b (fireOnce do liftEffect e) f
 
 -- | A constant signal
 always ::
