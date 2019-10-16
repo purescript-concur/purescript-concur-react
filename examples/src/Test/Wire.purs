@@ -6,22 +6,23 @@ import Concur.React (HTML)
 import Concur.React.DOM as D
 import Concur.React.Props as P
 import Control.Bind (discard)
-import Control.Plus (empty)
 import Data.Function (($))
 import Data.Functor (map, void)
 import Data.Lens as L
+import Data.Ord ((>=))
 import Data.Show (show)
 import Data.Tuple (Tuple(..))
 import Data.Void (absurd)
-import Prelude ((+), (<))
+import Prelude ((+))
 
 counter :: forall b. Wire (Widget HTML) Int -> Widget HTML b
 counter wire = do
   let x = wire.value
-  void $ D.button [ P.onClick ] [ D.text $ show x ]
-  if x < 10
-    then map absurd $ wire.send $ x + 1
-    else empty
+  if x >= 10
+   then D.text "10"
+   else do
+     void $ D.button [ P.onClick ] [ D.text $ show x ]
+     map absurd $ wire.send $ x + 1
 
 wireWidget :: forall a. Widget HTML a
 wireWidget = local (Tuple 0 0) \wire -> D.div []
