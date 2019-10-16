@@ -98,7 +98,7 @@ forkActionState axn render st = forkAction axn (go st)
 -- WORKING WITH LOCAL ENVIRONMENTS
 
 -- | A wire can send values up into a local environment
-type Wire m a = { value :: a, send :: a -> m Unit, receive :: m a }
+type Wire m a = { value :: a, send :: a -> m Void, receive :: m a }
 
 -- | Map a Lens over a Wire
 mapWire :: forall m s a. Functor m => Lens' s a -> Wire m s -> Wire m a
@@ -109,15 +109,15 @@ mapWire lens wire =
   }
 
 -- | Setup a local environment with a wire
-local :: forall m r a. Alt m => MonadEffect m => MonadAff m => a -> (Wire m a -> m r) -> m r
-local a f = mkWire a >>= go
+local :: forall m r a. Alt m => MonadEffect m => MonadAff m => Plus m => a -> (Wire m a -> m r) -> m r
+local a f = do
+  var <- liftEffect EVar.empty
+  go { value: a
+     , send: \a' -> liftAff (AVar.put a' var) *> empty
+     , receive: liftAff $ AVar.take var
+     }
   where
   updateWire wire a' = wire {value=a'}
   go wire = do
     res <- (Left <$> f wire) <|> (Right <$> wire.receive)
     either pure (go <<< updateWire wire) res
-  mkWire a' = liftEffect EVar.empty >>= \var -> pure
-    { value: a'
-    , send: \a'' -> liftAff $ AVar.put a'' var
-    , receive: liftAff $ AVar.take var
-    }
