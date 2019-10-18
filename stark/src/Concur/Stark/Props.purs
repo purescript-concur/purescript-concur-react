@@ -5,7 +5,6 @@ import Prelude
 import Concur.Core.Props (Props(..), filterProp)
 import Data.Array (concatMap, intercalate)
 import Data.Maybe (Maybe, maybe)
-import Effect (Effect)
 import Effect.Uncurried (mkEffectFn1)
 import Stark.Ref as Ref
 import Stark.DOM.Props as P

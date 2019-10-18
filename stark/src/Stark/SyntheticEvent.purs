@@ -88,9 +88,9 @@ module Stark.SyntheticEvent
 
 import Prelude
 
-import Data.Symbol (SProxy(..))
+import Data.Symbol (class IsSymbol, SProxy(..))
 import Effect (Effect)
-
+import Prim.Row (class Cons)
 import Record as R
 
 -- import Prim.Row as Row
@@ -400,4 +400,5 @@ getModifierState :: forall r. String -> SyntheticEvent_ (getModifierState :: Str
 getModifierState _ _ = pure false
 
 -- GET a field out of a record
+get :: forall a s x r. IsSymbol s => Cons s a x r => SProxy s -> Record r -> Effect a
 get s l = pure $ R.get s l
