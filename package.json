@@ -10,10 +10,12 @@
   },
   "files": [],
   "scripts": {
+    "core": "cd core && spago build",
+    "react": "cd react && spago build",
+    "stark": "cd stark && spago build",
     "examples": "cd examples && spago build",
     "examples-dev": "cd examples && spago build && parcel build --public-url ./ index.html",
     "examples-prod": "cd examples && rimraf temp && mkdir temp && spago bundle-app --to temp/index.prod.js && java -jar ../closure-compiler/closure-compiler-v20190301.jar --compilation_level ADVANCED_OPTIMIZATIONS --js temp/index.prod.js --js_output_file temp/index.prod.minified.js && cp index.prod.html temp && parcel build --public-url ./ temp/index.prod.html && mv dist/index.prod.html dist/index.html && rimraf temp",
-    "prod1": "rimraf temp && mkdir temp && spago build --to temp/index.prod.js -I examples && java -jar closure-compiler/closure-compiler-v20190301.jar --compilation_level ADVANCED_OPTIMIZATIONS --js temp/index.prod.js --js_output_file temp/index.prod.minified.js && cp index.prod.html temp && parcel build --public-url ./ temp/index.prod.html && mv dist/index.prod.html dist/index.html && rimraf temp",
     "docs": "cd examples && npm run prod && cp docs/logo.png dist && cp docs/Purescript-Concur-Performance.png dist && rimraf docs && mv dist docs",
     "start": "cd examples && parcel index.html",
     "watch": "cd examples && parcel watch index.html"
