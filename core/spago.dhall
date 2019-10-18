@@ -3,7 +3,7 @@ Welcome to a Spago project!
 You can edit this file as you like.
 -}
 { name =
-    "concur-react"
+    "concur-core"
 , dependencies =
     [ "aff"
     , "arrays"
@@ -13,14 +13,10 @@ You can edit this file as you like.
     , "free"
     , "nonempty"
     , "profunctor-lenses"
-    , "react"
-    , "react-dom"
     , "tailrec"
-    , "web-dom"
-    , "web-html"
     ]
 , packages =
-    ./packages.dhall
+    ../packages.dhall
 , sources =
     [ "src/**/*.purs", "test/**/*.purs" ]
 }
