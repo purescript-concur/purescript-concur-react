@@ -1,6 +1,6 @@
 module Concur.Core.DOM where
 
-import Concur.Core (mkLeafWidget, wrapViewEvent)
+import Concur.Core (mkLeafWidget, mkNodeWidget)
 import Concur.Core.LiftWidget (class LiftWidget, liftWidget)
 import Concur.Core.Props (Props, mkProp)
 import Concur.Core.Types (Widget)
@@ -18,7 +18,7 @@ el
   -> f (Props p a)
   -> m a
   -> m a
-el e props = shiftMap (\f w -> wrapViewEvent (\h v -> (e (map (mkProp h <<< map f) props) v)) w)
+el e props = shiftMap (\f w -> mkNodeWidget (\h v -> (e (map (mkProp h <<< map f) props) v)) w)
 
 -- | Promote a leaf node to a widget
 elLeaf

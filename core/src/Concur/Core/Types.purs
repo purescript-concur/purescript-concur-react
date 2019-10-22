@@ -10,18 +10,18 @@ import Control.Parallel.Class (parallel, sequential)
 import Control.Plus (class Alt, class Plus, alt, empty)
 import Control.ShiftMap (class ShiftMap)
 import Data.Array as A
-import Data.Array.NonEmpty (NonEmptyArray, fromArray, updateAt)
-import Data.Either (Either(..), either)
+import Data.Array.NonEmpty (NonEmptyArray)
+import Data.Array.NonEmpty as NEA
+import Data.Either (Either(..))
 import Data.FoldableWithIndex (foldlWithIndex, foldrWithIndex)
 import Data.Maybe (Maybe(Nothing, Just), fromMaybe)
 import Data.Semigroup.Foldable (foldMap1)
-import Data.Traversable (sequence, traverse)
 import Data.Tuple (Tuple(..))
 import Effect (Effect)
 import Effect.AVar (empty, tryPut, tryTake) as EVar
 import Effect.Aff (Aff, effectCanceler, makeAff, never, runAff_)
 import Effect.Aff.AVar (take) as AVar
-import Effect.Aff.Class (class MonadAff, liftAff)
+import Effect.Aff.Class (class MonadAff)
 import Effect.Class (class MonadEffect)
 import Effect.Console (log)
 import Effect.Exception (Error)
@@ -30,24 +30,23 @@ type WidgetStepRecord v a
   = {view :: v, cont :: Aff a}
 
 newtype WidgetStep v a
-  = WidgetStep (Effect (Either a (WidgetStepRecord v a)))
+  = WidgetStep (Either (Effect a) (WidgetStepRecord v a))
 
 unWidgetStep ::
   forall v a.
   WidgetStep v a ->
-  Effect (Either a (WidgetStepRecord v a))
+  Either (Effect a) (WidgetStepRecord v a)
 unWidgetStep (WidgetStep x) = x
 
 -- derive instance widgetStepFunctor :: Functor (WidgetStep v)
 instance functorWidgetStep :: Functor (WidgetStep v) where
-  map f (WidgetStep w) = WidgetStep (map mod w)
+  map f (WidgetStep w) = WidgetStep (mod w)
     where
-    mod (Right ws) = Right (ws { cont = map f ws.cont
-                               })
-    mod (Left a) = Left (f a)
+    mod (Right ws) = Right (ws { cont = map f ws.cont })
+    mod (Left effa) = Left (map f effa)
 
 displayStep :: forall a v. v -> WidgetStep v a
-displayStep v = WidgetStep (pure (Right { view: v, cont: never }))
+displayStep v = WidgetStep (Right { view: v, cont: never })
 
 newtype Widget v a
   = Widget (Free (WidgetStep v) a)
@@ -76,7 +75,6 @@ flipEither ::
   Either a b ->
   Either b a
 flipEither (Left a) = Right a
-
 flipEither (Right b) = Left b
 
 resume :: forall f a. Functor f => Free f a -> Either a (f (Free f a))
@@ -87,46 +85,61 @@ instance widgetMultiAlternative ::
   ( Monoid v
   ) =>
   MultiAlternative (Widget v) where
-  orr wss = case fromArray wss of
-    Just wsne -> Widget $ comb $ map unWidget wsne
+  orr wss = case NEA.fromArray wss of
+    Just wsne -> Widget $ combine $ map unWidget wsne
     Nothing -> empty
     where
-    comb ::
+    combine ::
       forall v' a.
       Monoid v' =>
       NonEmptyArray (Free (WidgetStep v') a) ->
       Free (WidgetStep v') a
-    -- If any sub-widget finished, then finish
-    -- 'Either.traverse'
-    comb wfs = case traverse resume wfs of
-      Left a -> pure a
-      Right wsm -> wrap $ WidgetStep do
-        -- 'Effect.traverse'
-        ewss <- traverse unWidgetStep wsm
-        -- 'Effect.traverse'
-        ews <- traverse stepWidget ewss
-        -- Check if we got a result
-        -- Either.sequence
-        case sequence ews of
-          -- I don't like rewrapping the result, might cause loops (such as https://github.com/ajnsit/purescript-concur/issues/16)
-          -- But we needed to run the effects so we already committed to returning a widget continuation
-          Left a -> pure (Left (pure a))
-          Right ws -> pure $ Right
-            { view: foldMap1 _.view ws
-            , cont: merge ws (map _.cont ws)
-            }
-    -- Completely discharge the effect of the widget, until we get a result, or an aff
-    stepWidget ::
+    combine wfs =
+      let x = NEA.uncons wfs
+      in case resume x.head of
+        Left a -> pure a
+        Right (WidgetStep x1) -> case x1 of
+          Left eff -> wrap $ WidgetStep $ Left do
+            w <- eff
+            pure $ combine $ NEA.cons' w x.tail
+          Right wsr -> combineInner (NEA.singleton wsr) x.tail
+
+    combineInner ::
       forall v' a.
       Monoid v' =>
-      Either (Free (WidgetStep v') a) (WidgetStepRecord v' (Free (WidgetStep v') a)) ->
-      Effect (Either a (WidgetStepRecord v' (Free (WidgetStep v') a)))
-    stepWidget = either stepWidgetLeft stepWidgetRight
-      where
-      stepWidgetRight ws = pure (Right ws)
-      stepWidgetLeft w = case resume w of
-        Left a -> pure (Left a)
-        Right (WidgetStep effws) -> effws >>= stepWidget
+      NonEmptyArray (WidgetStepRecord v' (Free (WidgetStep v') a)) ->
+      Array (Free (WidgetStep v') a) ->
+      Free (WidgetStep v') a
+    combineInner ws freeArr = case NEA.fromArray freeArr of
+      -- We have collected all the inner views/conts
+      Nothing -> combineViewsConts ws --wrap $ WidgetStep $ Right wsr
+      Just freeNarr -> combineInner1 ws freeNarr
+
+    combineViewsConts ::
+      forall v' a.
+      Monoid v' =>
+      NonEmptyArray (WidgetStepRecord v' (Free (WidgetStep v') a)) ->
+      Free (WidgetStep v') a
+    combineViewsConts ws = wrap $ WidgetStep $ Right
+      { view: foldMap1 _.view ws
+      , cont: merge ws (map _.cont ws)
+      }
+
+    combineInner1 ::
+      forall v' a.
+      Monoid v' =>
+      NonEmptyArray (WidgetStepRecord v' (Free (WidgetStep v') a)) ->
+      NonEmptyArray (Free (WidgetStep v') a) ->
+      Free (WidgetStep v') a
+    combineInner1 ws freeNarr =
+      let x = NEA.uncons freeNarr
+      in case resume x.head of
+        Left a -> pure a
+        Right (WidgetStep x1) -> case x1 of
+          Left eff -> wrap $ WidgetStep $ Left do
+            w <- eff
+            pure $ combineInner1 ws $ NEA.cons' w x.tail
+          Right wsr -> combineInner (NEA.snoc ws wsr) x.tail
 
     merge ::
       forall v' a.
@@ -135,14 +148,14 @@ instance widgetMultiAlternative ::
       NonEmptyArray (Aff (Free (WidgetStep v') a)) ->
       Aff (Free (WidgetStep v') a)
     merge ws wscs = do
-      -- wsm' is discharged wsm, with all the Aff action run exactly once
-      let wsm = map (wrap <<< WidgetStep <<< pure <<< Right) ws
+      let wsm = map (wrap <<< WidgetStep <<< Right) ws
       -- TODO: We know the array is non-empty. We need something like foldl1WithIndex.
       Tuple i e <- sequential (foldlWithIndex (\i r w ->
         alt (parallel (map (Tuple i) w)) r) empty wscs)
-      -- TODO: All the Aff in ws is already discharged. Use a more efficient way than comb to process it
+      -- TODO: All the Aff in ws is already discharged. Use a more efficient way than combine to process it
       -- TODO: Also, more importantly, we would like to not have to cancel running fibers unless one of them returns a result
-      pure $ comb (fromMaybe wsm (updateAt i e wsm))
+      pure $ combine (fromMaybe wsm (NEA.updateAt i e wsm))
+
 
 -- | Run multiple widgets in parallel until *all* finish, and collect their outputs
 -- | Contrast with `orr`
@@ -193,9 +206,7 @@ mapView f (Widget w) = Widget (hoistFree (mapViewStep f) w)
 mapViewStep :: forall v1 v2 a. (v1 -> v2) -> WidgetStep v1 a -> WidgetStep v2 a
 mapViewStep f (WidgetStep ws) = WidgetStep (map mod ws)
   where
-  mod = map (\ws' ->
-    ws' { view = f ws'.view
-        })
+  mod ws' = ws' { view = f ws'.view }
 
 display :: forall a v. v -> Widget v a
 display v = Widget (liftF (displayStep v))
@@ -205,7 +216,7 @@ effAction ::
   forall a v.
   Effect a ->
   Widget v a
-effAction = Widget <<< liftF <<< WidgetStep <<< map Left
+effAction = Widget <<< liftF <<< WidgetStep <<< Left
 
 -- Async aff
 affAction ::
@@ -213,14 +224,14 @@ affAction ::
   v ->
   Aff a ->
   Widget v a
-affAction v aff = Widget $ liftF $ WidgetStep do
+affAction v aff = Widget $ wrap $ WidgetStep $ Left do
   var <- EVar.empty
   runAff_ (handler var) aff
   -- Detect synchronous resolution
   ma <- EVar.tryTake var
   pure case ma of
-    Just a -> Left a
-    Nothing -> Right { view: v, cont: liftAff (AVar.take var) }
+    Just a -> pure a
+    Nothing -> liftF $ WidgetStep $ Right { view: v, cont: AVar.take var }
   where
   -- TODO: allow client code to handle aff failures
   handler _ (Left e) = log ("Aff failed - " <> show e)
@@ -239,3 +250,4 @@ instance widgetMonadEff :: (Monoid v) => MonadEffect (Widget v) where
 
 instance widgetMonadAff :: (Monoid v) => MonadAff (Widget v) where
   liftAff = affAction mempty
+    -- Widget $ liftF $ WidgetStep $ Right { view: mempty, cont: aff }

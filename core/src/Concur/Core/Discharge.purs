@@ -5,13 +5,9 @@ import Prelude
 import Concur.Core.Types (Widget(..), WidgetStep(..), unWidget)
 import Control.Monad.Free (resume, wrap)
 import Data.Either (Either(..))
-import Data.Maybe (Maybe(..))
 import Data.Tuple (Tuple(..))
 import Effect (Effect)
-import Effect.AVar (empty, tryTake) as EVar
-import Effect.Aff (Aff, Milliseconds(..), delay, launchAff, runAff_)
-import Effect.Aff.AVar (put, take) as AVar
-import Effect.Aff.Class (liftAff)
+import Effect.Aff (runAff_)
 import Effect.Exception (Error)
 
 -- Widget discharge strategies
@@ -27,13 +23,13 @@ discharge ::
   Effect v
 discharge handler (Widget w) = case resume w of
   Right _ -> pure mempty
-  Left (WidgetStep mws) -> do
-    ews <- mws
-    case ews of
-      Left w' -> discharge handler (Widget w')
-      Right ws -> do
-        runAff_ (handler <<< map Widget) ws.cont
-        pure ws.view
+  Left (WidgetStep ews) -> case ews of
+    Left eff -> do
+      w' <- eff
+      discharge handler (Widget w')
+    Right ws -> do
+      runAff_ (handler <<< map Widget) ws.cont
+      pure ws.view
 
 -- | Discharge only the top level blocking effect of a widget (if any) to get access to the view
 -- | Returns the view, and the remaining widget
@@ -44,12 +40,13 @@ dischargePartialEffect ::
   Effect (Tuple (Widget v a) v)
 dischargePartialEffect w = case resume (unWidget w) of
   Right _ -> pure (Tuple w mempty)
-  Left (WidgetStep mws) -> do
-    ews <- mws
-    case ews of
-      Left w' -> dischargePartialEffect (Widget w')
-      Right ws -> pure (Tuple (Widget (wrap (WidgetStep (pure (Right ws))))) ws.view)
+  Left (WidgetStep x1) -> case x1 of
+    Left eff -> do
+      w' <- eff
+      dischargePartialEffect (Widget w')
+    Right ws -> pure (Tuple (Widget (wrap (WidgetStep (Right ws)))) ws.view)
 
+{-
 -- | Discharge a widget, forces async resolution of the continuation.
 -- | 1. Runs the Effect action
 -- | 2. Forks the Aff action, using an async delay to guarantee that handler will not be called synchronously.
@@ -117,3 +114,4 @@ ioToIosync io = do
   case ma of
     Nothing -> pure (Right (liftAff (AVar.take v)))
     Just a -> pure (Left a)
+-}
