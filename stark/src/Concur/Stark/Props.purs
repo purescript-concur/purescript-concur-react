@@ -25,13 +25,13 @@ import Stark.SyntheticEvent
   )
 import Unsafe.Coerce (unsafeCoerce)
 
-emptyProp_ :: P.Props
-emptyProp_ = P.Props
+-- emptyProp_ :: P.Props
+-- emptyProp_ = P.Props
 
 type StarkProps a = Props P.Props a
 
-emptyProp :: forall a. StarkProps a
-emptyProp = PrimProp emptyProp_
+-- emptyProp :: forall a. StarkProps a
+-- emptyProp = PrimProp emptyProp_
 
 -- | Construct a custom prop handler
 unsafeMkPropHandler ::

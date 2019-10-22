@@ -20,16 +20,20 @@ import Stark.SyntheticEvent
   , SyntheticWheelEvent
   )
 
-data Props = Props
+data Props = Props String
+
+instance showProp :: Show Props where
+  show :: Props -> String
+  show (Props n) = "[" <> n <> "]"
 
 unsafeMkProps :: forall val. String -> val -> Props
-unsafeMkProps _ _ = Props
+unsafeMkProps n _ = Props n
 
 unsafeUnfoldProps :: forall vals. String -> { | vals } -> Props
-unsafeUnfoldProps _ _ = Props
+unsafeUnfoldProps n _ = Props n
 
 unsafePrefixProps :: forall vals. String -> { | vals } -> Props
-unsafePrefixProps _ _ = Props
+unsafePrefixProps n _ = Props n
 
 aria :: forall ariaAttrs. { | ariaAttrs } -> Props
 aria = unsafePrefixProps "aria-"
