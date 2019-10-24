@@ -116,7 +116,7 @@ let upstream =
 
 let overrides =
   { concur-core = ./core/spago.dhall as Location
-  , concur-react = ./react/spago.dhall as Location
+  , concur-react = ./spago.dhall as Location
   , concur-stark = ./stark/spago.dhall as Location
   , react =
       upstream.react // { version = "v8.0.0" }

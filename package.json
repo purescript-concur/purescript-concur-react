@@ -10,8 +10,8 @@
   },
   "files": [],
   "scripts": {
+    "build": "spago build",
     "core": "cd core && spago build",
-    "react": "cd react && spago build",
     "stark": "cd stark && spago build",
     "examples": "cd examples && spago build",
     "examples-dev": "cd examples && spago build && parcel build --public-url ./ index.html",
