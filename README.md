@@ -28,9 +28,9 @@ API documentation is [published on Pursuit](https://pursuit.purescript.org/packa
 
 ## Performance
 
-Purescript-Concur is reasonably light. The [entire *uncompressed* JS bundle](https://github.com/ajnsit/purescript-concur/blob/master/docs/index.prod.minified.0dfb135e.js), including react and all libraries, for the entire example application in this repo clocks in at 180KB. You can build this bundle yourself with the command `npm run prod` (*currently broken* due to the move to spago).
+Purescript-Concur is reasonably light. The [entire *uncompressed* JS bundle](https://github.com/purescript-concur/purescript-concur-react/blob/master/docs/index.prod.minified.0dfb135e.js), including react and all libraries, for the entire example application in this repo clocks in at 180KB. You can build this bundle yourself with the command `npm run prod` (*currently broken* due to the move to spago).
 
-This leads to pretty fast initial load times. Running the Chrome audit on https://ajnsit.github.io/purescript-concur/ produces -
+This leads to pretty fast initial load times. Running the Chrome audit on https://purescript-concur.github.io/purescript-concur-react/ produces -
 
 <p align="center">
    <img src="docs/Purescript-Concur-Performance.png">
@@ -43,7 +43,7 @@ This leads to pretty fast initial load times. Running the Chrome audit on https:
 
 ## Installation
 
-You can quickly get a production setup going (using Spago and Parcel) by cloning the [Purescript Concur Starter](https://github.com/ajnsit/purescript-concur-starter).
+You can quickly get a production setup going (using Spago and Parcel) by cloning the [Purescript Concur Starter](https://github.com/purescript-concur/purescript-concur-react-starter).
 
 Else you can also install purescript-concur manually using bower -
 
@@ -54,7 +54,7 @@ bower install purescript-concur-react
 ## Building examples from source
 
 ```bash
-git clone https://github.com/ajnsit/purescript-concur.git
+git clone https://github.com/purescript-concur/purescript-concur-react.git
 cd purescript-concur
 npm install
 # Build source and examples
@@ -116,22 +116,22 @@ Note that you can mix in the default widgets and props with the MUI ones.
 
 ## Examples
 
-[Demo](https://ajnsit.github.io/purescript-concur/) and [Source](https://github.com/ajnsit/purescript-concur/blob/master/examples/src/Main.purs) for composing all the examples in one page.
+[Demo](https://purescript-concur.github.io/purescript-concur-react/) and [Source](https://github.com/purescript-concur/purescript-concur-react/blob/master/examples/src/Main.purs) for composing all the examples in one page.
 
 Individual example sources -
 
-1. **Hello World!** Shows simple effectful widgets with state using StateT. [Source](https://github.com/ajnsit/purescript-concur/blob/master/examples/src/Test/Hello.purs).
-2. **A simple counter widget** without using StateT. [Source](https://github.com/ajnsit/purescript-concur/blob/master/examples/src/Test/Counter.purs).
-3. **Focus counter** demonstrates a stateful widget, with multiple event handlers, and no action types needed! [Source](https://github.com/ajnsit/purescript-concur/blob/master/examples/src/Test/FocusCount.purs).
-4. **A login widget**. [Source](https://github.com/ajnsit/purescript-concur/blob/master/examples/src/Test/Login.purs).
-5. Concur has Signals! Sample **counting widget implemented with Signals**! [Source](https://github.com/ajnsit/purescript-concur/blob/master/examples/src/Test/Signals.purs).
-6. A **Full-featured TodoMVC implementation with LocalStorage Persistence** built with Signals. [Source](https://github.com/ajnsit/purescript-concur/blob/master/examples/src/Test/Todos.purs).
-7. A **Fully editable tree** in ~30 lines of code (with Signals). [Source](https://github.com/ajnsit/purescript-concur/blob/master/examples/src/Test/EditHeadings.purs).
-8. A **Postfix calculator**. [Source](https://github.com/ajnsit/purescript-concur/blob/master/examples/src/Test/Calc.purs).
-9. Using **AJAX and handling JSON** responses. [Source](https://github.com/ajnsit/purescript-concur/blob/master/examples/src/Test/Ajax.purs).
-10. A small widget to **Visualise CSS color codes**. [Source](https://github.com/ajnsit/purescript-concur/blob/master/examples/src/Test/Color.purs).
-11. **Asynchronous timers** which can be cancelled. [Source](https://github.com/ajnsit/purescript-concur/blob/master/examples/src/Test/Timers.purs).
-12. A **Routed widget** which demonstrates routing. [Source](https://github.com/ajnsit/purescript-concur/blob/master/examples/src/Test/Routing.purs).
-13. **The Elm Architecture example** demonstrates how Concur subsumes "The Elm Architecture". [Source](https://github.com/ajnsit/purescript-concur/blob/master/examples/src/Test/TheElmArchitecture.purs).
-14. **Performance test** - A huge list of 50 thousand parallel buttons. This has two variants, fast (uses slightly lower level interface) and slow (idiomatic concur code). [Source](https://github.com/ajnsit/purescript-concur/blob/master/examples/src/Test/SlowButtonList.purs).
-15. **Tail Recursion demo** - Since Concur is purely functional in nature, its primary mode of iteration is via recursion. Purescript in general is NOT stack stafe with tail recursion; It uses tricks like tailRec and tailRecM. However, Concur performs trampolining to make monadic recursion completely stack safe. This example demonstrates that by making a huge number of tail recursive calls in a short span of time. [Source](https://github.com/ajnsit/purescript-concur/blob/master/examples/src/Test/TailRec.purs).
+1. **Hello World!** Shows simple effectful widgets with state using StateT. [Source](https://github.com/purescript-concur/purescript-concur-react/blob/master/examples/src/Test/Hello.purs).
+2. **A simple counter widget** without using StateT. [Source](https://github.com/purescript-concur/purescript-concur-react/blob/master/examples/src/Test/Counter.purs).
+3. **Focus counter** demonstrates a stateful widget, with multiple event handlers, and no action types needed! [Source](https://github.com/purescript-concur/purescript-concur-react/blob/master/examples/src/Test/FocusCount.purs).
+4. **A login widget**. [Source](https://github.com/purescript-concur/purescript-concur-react/blob/master/examples/src/Test/Login.purs).
+5. Concur has Signals! Sample **counting widget implemented with Signals**! [Source](https://github.com/purescript-concur/purescript-concur-react/blob/master/examples/src/Test/Signals.purs).
+6. A **Full-featured TodoMVC implementation with LocalStorage Persistence** built with Signals. [Source](https://github.com/purescript-concur/purescript-concur-react/blob/master/examples/src/Test/Todos.purs).
+7. A **Fully editable tree** in ~30 lines of code (with Signals). [Source](https://github.com/purescript-concur/purescript-concur-react/blob/master/examples/src/Test/EditHeadings.purs).
+8. A **Postfix calculator**. [Source](https://github.com/purescript-concur/purescript-concur-react/blob/master/examples/src/Test/Calc.purs).
+9. Using **AJAX and handling JSON** responses. [Source](https://github.com/purescript-concur/purescript-concur-react/blob/master/examples/src/Test/Ajax.purs).
+10. A small widget to **Visualise CSS color codes**. [Source](https://github.com/purescript-concur/purescript-concur-react/blob/master/examples/src/Test/Color.purs).
+11. **Asynchronous timers** which can be cancelled. [Source](https://github.com/purescript-concur/purescript-concur-react/blob/master/examples/src/Test/Timers.purs).
+12. A **Routed widget** which demonstrates routing. [Source](https://github.com/purescript-concur/purescript-concur-react/blob/master/examples/src/Test/Routing.purs).
+13. **The Elm Architecture example** demonstrates how Concur subsumes "The Elm Architecture". [Source](https://github.com/purescript-concur/purescript-concur-react/blob/master/examples/src/Test/TheElmArchitecture.purs).
+14. **Performance test** - A huge list of 50 thousand parallel buttons. This has two variants, fast (uses slightly lower level interface) and slow (idiomatic concur code). [Source](https://github.com/purescript-concur/purescript-concur-react/blob/master/examples/src/Test/SlowButtonList.purs).
+15. **Tail Recursion demo** - Since Concur is purely functional in nature, its primary mode of iteration is via recursion. Purescript in general is NOT stack stafe with tail recursion; It uses tricks like tailRec and tailRecM. However, Concur performs trampolining to make monadic recursion completely stack safe. This example demonstrates that by making a huge number of tail recursive calls in a short span of time. [Source](https://github.com/purescript-concur/purescript-concur-react/blob/master/examples/src/Test/TailRec.purs).
