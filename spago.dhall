@@ -20,6 +20,8 @@ You can edit this file as you like.
     , "web-dom"
     , "web-html"
     ]
+, license = "MIT"
+, repository = "https://github.com/purescript-concur/purescript-concur-react"
 , packages =
     ./packages.dhall
 , sources =
