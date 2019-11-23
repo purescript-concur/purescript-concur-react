@@ -132,7 +132,7 @@ let additions =
           , "tailrec"
           ]
           "https://github.com/purescript-concur/purescript-concur-core"
-          "958bec0c747928fab7e47b0b16cc4c153bd871e2"
+          "v0.4.0"
       }
 
 in  upstream // overrides // additions
