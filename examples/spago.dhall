@@ -6,7 +6,7 @@ You can edit this file as you like.
 { name =
     "purescript-concur-react-examples"
 , dependencies =
-    [ "affjax", "argonaut", "concur-react", "routing" ]
+    [ "affjax", "argonaut", "concur-core", "concur-react", "routing" ]
 , sources =
     [ "src/**/*.purs" ]
 , packages =

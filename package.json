@@ -3,7 +3,7 @@
   "version": "0.3.8",
   "description": "Concur UI framework for Purescript, React backend",
   "license": "MIT",
-  "repository": "ajnsit/purescript-concur-react",
+  "repository": "purescript-concur/purescript-concur-react",
   "author": {
     "name": "Anupam Jain",
     "email": "ajnsit@gmail.com"
@@ -25,9 +25,9 @@
     "react-dom": "^16.8.6"
   },
   "devDependencies": {
-    "parcel-bundler": "^1.12.3",
-    "purescript": "^0.13.2",
-    "rimraf": "^2.6.3",
-    "spago": "^0.9.0"
+    "parcel-bundler": "^1.12.4",
+    "purescript": "^0.13.5",
+    "rimraf": "^3.0.0",
+    "spago": "^0.12.1"
   }
 }

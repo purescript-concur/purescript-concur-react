@@ -56,12 +56,12 @@ fetchReddit sub = div'
     fetchPosts = do
       let url = "https://www.reddit.com/r/" <> sub <> ".json"
       liftEffect (log ("Fetching posts from subreddit - " <> sub))
-      resp <- (liftAff (AX.get ResponseFormat.json url)) <|> (text "Loading...")
-      case resp.body of
-        Left err -> text $ "GET " <> url <> " response failed to decode: " <> AX.printResponseFormatError err
-        Right body -> do
+      result <- (liftAff (AX.get ResponseFormat.json url)) <|> (text "Loading...")
+      case result of
+        Left err -> text $ "GET " <> url <> " response failed to decode: " <> AX.printError err
+        Right response -> do
           let postsResp = do
-                o <- decodeJson body
+                o <- decodeJson response.body
                 d1 <- o .: "data"
                 cs <- d1 .: "children"
                 decodePostArray cs
