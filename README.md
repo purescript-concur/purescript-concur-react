@@ -38,8 +38,11 @@ This leads to pretty fast initial load times. Running the Chrome audit on https:
 
 ## Ports to other languages
 
+Concur's model translates well to other platforms.
+
 1. [Concur for Haskell](https://github.com/ajnsit/concur) - The original version of Concur written in Haskell.
 2. [Concur for Javascript](https://github.com/ajnsit/concur-js) - An official but experimental port to Javascript.
+3. [Concur for Python](https://github.com/potocpav/python-concur) - An unofficial and experimental port to Python. Uses ImgUI for graphics. Created and Maintained by [potocpav](https://github.com/potocpav).
 
 ## Installation
 
