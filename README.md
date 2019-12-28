@@ -66,8 +66,10 @@ bower install purescript-concur-react
 git clone https://github.com/purescript-concur/purescript-concur-react.git
 cd purescript-concur-react
 npm install
-# Build source and examples
+# Build library sources
 npm run build
+# Build examples
+npm run examples
 # Start a local server
 npm run start
 # Check examples
