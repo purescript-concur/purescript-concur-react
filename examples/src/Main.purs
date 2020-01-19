@@ -23,11 +23,13 @@ import Test.TheElmArchitecture (teaWidget)
 import Test.Timers (timersWidget)
 import Test.Todos (todosWidget)
 import Test.Wire (wireWidget)
+import Test.Keyboard (keypadWidget)
 
 main :: Effect Unit
 main = do
     runWidgetInDom "main" $ orr
-      [ widget helloWidget "Hello World"
+      [ widget keypadWidget "Virtual Keypad Example"
+      , widget helloWidget "Hello World"
       , widget (counterWidget 0 <|> counterWidget 100) "Counter"
       , widget focusCountWidget "Count Focus"
       , widget loginWidget "Login"
