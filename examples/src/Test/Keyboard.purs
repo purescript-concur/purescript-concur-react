@@ -5,8 +5,9 @@ import Concur.React (HTML)
 import Concur.React.DOM as D
 import Concur.React.Props as P
 import Control.Alt ((<|>))
-import Control.Applicative (pure, (*>))
-import Control.Bind (bind)
+import Control.Applicative (pure)
+import Control.Bind (bind, discard)
+import Data.BooleanAlgebra (not)
 import Data.Eq (class Eq, (==))
 import Data.Function (($))
 import Data.Maybe (Maybe(..))
@@ -29,11 +30,20 @@ import React.SyntheticEvent as R
 -- A never-ending virtual keypad widget.
 -- Allows the user to navigate and select a key. Displays the selected key.
 keypadWidget :: forall a. Widget HTML a
-keypadWidget = liftEffect startListening *> go Enter ""
+keypadWidget = go Enter "" <|> toggleEvents
   where
   go focus msg = do
     keyPressed <- virtualKeyInput focus <|> D.div' [D.text msg]
     go keyPressed $ "You clicked: " <> show keyPressed
+
+-- On off button for key events
+toggleEvents :: forall a. Widget HTML a
+toggleEvents = go false
+  where
+  go enabled = do
+    _ <- D.button [P.onClick] [D.text $ if enabled then "stop listening" else "start listening"]
+    liftEffect (if enabled then stopListening else startListening)
+    go (not enabled)
 
 -- Displays a keypad with the supplied initial focus.
 -- Allows the user to navigate and select a key. Returns the selected key.

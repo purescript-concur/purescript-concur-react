@@ -1,11 +1,10 @@
 "use strict";
 
-var counter = 0;
-var observers = [];
+var observer = null;
 
 function innerHandler(event) {
   event.preventDefault();
-  observers.forEach(function(o){o(event);});
+  if(observer) observer(event);
 }
 
 // Start listening for keys
@@ -23,10 +22,8 @@ exports.stopListening = function() {
 // Await a key
 // :: EffectFnAff KeyEvent
 exports._awaitKey = function (onError, onSuccess) {
-  var id = counter++;
-  observers[id] = onSuccess;
+  observer = onSuccess;
   return function (cancelError, onCancelerError, onCancelerSuccess) {
-    delete observers[id];
     onCancelerSuccess();
   };
 };
