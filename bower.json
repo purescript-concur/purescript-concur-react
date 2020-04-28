@@ -1,32 +1,36 @@
 {
-    "name": "purescript-concur-react",
-    "license": [
-        "MIT"
-    ],
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/purescript-concur/purescript-concur-react"
-    },
-    "ignore": [
-        "**/.*",
-        "node_modules",
-        "bower_components",
-        "output"
-    ],
-    "dependencies": {
-        "purescript-aff": "^v5.1.2",
-        "purescript-arrays": "^v5.3.1",
-        "purescript-avar": "^v3.0.0",
-        "purescript-concur-core": "^v0.4.2",
-        "purescript-console": "^v4.2.0",
-        "purescript-foldable-traversable": "^v4.1.1",
-        "purescript-free": "^v5.2.0",
-        "purescript-nonempty": "^v5.0.0",
-        "purescript-profunctor-lenses": "^v6.2.0",
-        "purescript-react": "^v8.0.0",
-        "purescript-react-dom": "^v6.1.0",
-        "purescript-tailrec": "^v4.1.0",
-        "purescript-web-dom": "^v4.0.0",
-        "purescript-web-html": "^v2.3.0"
-    }
+  "name": "purescript-concur-react",
+  "license": [
+    "MIT"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/purescript-concur/purescript-concur-react"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "output"
+  ],
+  "dependencies": {
+    "purescript-aff": "^5.1.2",
+    "purescript-arrays": "^5.3.1",
+    "purescript-avar": "^3.0.0",
+    "purescript-concur-core": "^0.4.2",
+    "purescript-console": "^4.4.0",
+    "purescript-foldable-traversable": "^4.1.1",
+    "purescript-free": "^5.2.0",
+    "purescript-nonempty": "^5.0.0",
+    "purescript-profunctor-lenses": "^6.3.0",
+    "purescript-react": "^8.0.0",
+    "purescript-react-dom": "^6.1.0",
+    "purescript-tailrec": "^4.1.1",
+    "purescript-web-dom": "^4.0.1",
+    "purescript-web-html": "^2.3.0"
+  },
+  "resolutions": {
+    "purescript-react": "^8.0.0",
+    "purescript-web-dom": "^4.0.1"
+  }
 }
