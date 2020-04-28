@@ -9,7 +9,8 @@ import Concur.React.DOM (button, div', text)
 import Concur.React.Props (onClick)
 
 -- Counting buttons
-clicks :: Int -> Signal HTML Int
+
+-- clicks :: Int -> Signal HTML Int
 clicks init = loopW init $ \n ->
   div' [ n+1 <$ button [onClick] [text ("Increment this count -> " <> show n)]
        , n-1 <$ button [onClick] [text ("Decrement this count -> " <> show n)]

@@ -32,12 +32,12 @@ testTree = Tree
     ]
   }
 
-mkChildren :: Signal HTML (Maybe Tree)
+mkChildren :: Signal (Widget HTML) (Maybe Tree)
 mkChildren = step Nothing $ do
   _ <- button [onClick] [text "New"]
   pure (pure (Just (Tree {title: "New Heading", children: []})))
 
-treeView :: Maybe Tree -> Signal HTML (Maybe Tree)
+treeView :: Maybe Tree -> Signal (Widget HTML) (Maybe Tree)
 treeView Nothing = pure Nothing
 treeView (Just t) = treeView' t
   where
@@ -54,7 +54,7 @@ treeView (Just t) = treeView' t
           children' <- ul_ [] $ map catMaybes $ traverse treeView' children
           pure (Just (Tree {title: title', children: children'}))
 
-editableTitle :: String -> Signal HTML String
+editableTitle :: String -> Signal (Widget HTML) String
 editableTitle title = step title do
   _ <- h5 [onDoubleClick] [text title]
   edited <- div'

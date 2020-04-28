@@ -52,20 +52,20 @@ todosWidget = do
   let savedTodos = fromMaybe [] $ map deserialiseTodos $ toMaybe savedTodosNullable
   dyn $ todos {filter: All, todos: savedTodos}
 
-mkTodo :: Array Todo -> Signal HTML (Array Todo)
+mkTodo :: Array Todo -> Signal (Widget HTML) (Array Todo)
 mkTodo ts = loopW ts \ts' -> D.div' $ pure do
   s <- retryUntil (not <<< null) $ textInputEnter "" true [P.placeholder "What do you want to do?"]
   let newTodos = cons {name: s, done: false} ts'
   pure newTodos
 
-todos :: Todos -> Signal HTML Todos
+todos :: Todos -> Signal (Widget HTML) Todos
 todos s = loopS s \s' -> do
   ts <- mkTodo s'.todos
   ts' <- map catMaybes (traverse (todo s'.filter) ts)
   fireOnce_ $ liftEffect $ storageSet localStorageKey (serialiseTodos ts')
   filterButtons s' {todos = ts'}
 
-todo :: Filter -> Todo -> Signal HTML (Maybe Todo)
+todo :: Filter -> Todo -> Signal (Widget HTML) (Maybe Todo)
 todo p t = if runFilter p t
   then step (Just t) $ D.div'
     [ todo p <<< (\b -> t {done = b}) <$> checkbox t.done
@@ -83,7 +83,7 @@ todo p t = if runFilter p t
       then P.style {textDecoration: "line-through"}
       else P.style {}
 
-filterButtons :: Todos -> Signal HTML Todos
+filterButtons :: Todos -> Signal (Widget HTML) Todos
 filterButtons s = step s $ D.div' (mkFilter <$> filters)
   where
     mkFilter f = D.button [select f, defer (\_ -> filterButtons (s {filter = f})) <$ P.onClick] [D.text (show f)]
