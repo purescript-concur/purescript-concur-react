@@ -2,14 +2,14 @@ module Concur.React.DOM where
 
 import Prelude hiding (div,map,sub)
 
-import Concur.Core.DOM (el, el', elLeaf) as CD
 import Concur.Core.LiftWidget (class LiftWidget, liftWidget)
-import Concur.Core.Props (Props)
-import Concur.Core.Types (Widget, display)
-import Concur.React (HTML)
+import Concur.Core.Props (Props, mkProp)
+import Concur.Core.Types (Widget, display, mkLeafWidget, mkNodeWidget)
 import Concur.React.Props (ReactProps)
-import Control.MultiAlternative (class MultiAlternative)
-import Control.ShiftMap (class ShiftMap)
+import Concur.React.Types (HTML)
+import Control.MultiAlternative (class MultiAlternative, orr)
+import Control.ShiftMap (class ShiftMap, shiftMap)
+import Data.Functor (map)
 import React.DOM as D
 
 -- | The React backend uses Array to make view monoidal
@@ -20,32 +20,41 @@ viewAdapter
   -> (ps -> vs -> Array res)
 viewAdapter f = \ps vs -> [f ps vs]
 
+leafViewAdapter
+  :: forall ps res
+  .  (ps -> res)
+  -> (ps -> Array res)
+leafViewAdapter f = \ps -> [f ps]
+
 el
   :: forall m a p v
-  .  ShiftMap (Widget (Array v)) m
-  => (Array p -> Array v -> v)
+  .  ShiftMap (Widget v) m
+  => (Array p -> v -> v)
   -> Array (Props p a)
   -> m a
   -> m a
-el f = CD.el (viewAdapter f)
+el e props = shiftMap \f ->
+  mkNodeWidget \h v ->
+    e (map (mkProp h <<< map (pure <<< f)) props) v
 
 el'
   :: forall m a p v
-  .  ShiftMap (Widget (Array v)) m
+  .  ShiftMap (Widget v) m
   => MultiAlternative m
-  => (Array p -> Array v -> v)
+  => (Array p -> v -> v)
   -> Array (Props p a)
   -> Array (m a)
   -> m a
-el' f = CD.el' (viewAdapter f)
+el' f ps ms = el f ps (orr ms)
 
 elLeaf
   :: forall p v m a
-  .  LiftWidget (Array v) m
+  .  LiftWidget v m
   => (Array p -> v)
   -> Array (Props p a)
   -> m a
-elLeaf f = CD.elLeaf (\ps -> [f ps])
+elLeaf e props = liftWidget $ mkLeafWidget \h ->
+  e (map (mkProp h <<< map pure) props)
 
 -- Wrappers for all DOM elements from purescript-react
 -- TODO: Generate these mechanically somehow
@@ -78,961 +87,961 @@ number :: ElLeafFunc' Number
 number x = liftWidget $ display [D.number x]
 
 a_ :: El1
-a_ = el D.a
+a_ = el $ viewAdapter D.a
 
 a :: El
-a = el' D.a
+a = el' $ viewAdapter D.a
 
 a' :: El'
 a' = a []
 
 abbr_ :: El1
-abbr_ = el D.abbr
+abbr_ = el $ viewAdapter D.abbr
 
 abbr :: El
-abbr = el' D.abbr
+abbr = el' $ viewAdapter D.abbr
 
 abbr' :: El'
 abbr' = abbr []
 
 address_ :: El1
-address_ = el D.address
+address_ = el $ viewAdapter D.address
 
 address :: El
-address = el' D.address
+address = el' $ viewAdapter D.address
 
 address' :: El'
 address' = address []
 
 area :: ElLeaf
-area = elLeaf D.area
+area = elLeaf $ leafViewAdapter D.area
 
 area' :: ElLeaf'
 area' = area []
 
 article_ :: El1
-article_ = el D.article
+article_ = el $ viewAdapter D.article
 
 article :: El
-article = el' D.article
+article = el' $ viewAdapter D.article
 
 article' :: El'
 article' = article []
 
 aside_ :: El1
-aside_ = el D.aside
+aside_ = el $ viewAdapter D.aside
 
 aside :: El
-aside = el' D.aside
+aside = el' $ viewAdapter D.aside
 
 aside' :: El'
 aside' = aside []
 
 audio_ :: El1
-audio_ = el D.audio
+audio_ = el $ viewAdapter D.audio
 
 audio :: El
-audio = el' D.audio
+audio = el' $ viewAdapter D.audio
 
 audio' :: El'
 audio' = audio []
 
 b_ :: El1
-b_ = el D.b
+b_ = el $ viewAdapter D.b
 
 b :: El
-b = el' D.b
+b = el' $ viewAdapter D.b
 
 b' :: El'
 b' = b []
 
 base :: ElLeaf
-base = elLeaf D.base
+base = elLeaf $ leafViewAdapter D.base
 
 base' :: ElLeaf'
 base' = base []
 
 bdi_ :: El1
-bdi_ = el D.bdi
+bdi_ = el $ viewAdapter D.bdi
 
 bdi :: El
-bdi = el' D.bdi
+bdi = el' $ viewAdapter D.bdi
 
 bdi' :: El'
 bdi' = bdi []
 
 bdo_ :: El1
-bdo_ = el D.bdo
+bdo_ = el $ viewAdapter D.bdo
 
 bdo :: El
-bdo = el' D.bdo
+bdo = el' $ viewAdapter D.bdo
 
 bdo' :: El'
 bdo' = bdo []
 
 big_ :: El1
-big_ = el D.big
+big_ = el $ viewAdapter D.big
 
 big :: El
-big = el' D.big
+big = el' $ viewAdapter D.big
 
 big' :: El'
 big' = big []
 
 blockquote_ :: El1
-blockquote_ = el D.blockquote
+blockquote_ = el $ viewAdapter D.blockquote
 
 blockquote :: El
-blockquote = el' D.blockquote
+blockquote = el' $ viewAdapter D.blockquote
 
 blockquote' :: El'
 blockquote' = blockquote []
 
 body_ :: El1
-body_ = el D.body
+body_ = el $ viewAdapter D.body
 
 body :: El
-body = el' D.body
+body = el' $ viewAdapter D.body
 
 body' :: El'
 body' = body []
 
 br :: ElLeaf
-br = elLeaf D.br
+br = elLeaf $ leafViewAdapter D.br
 
 br' :: ElLeaf'
 br' = br []
 
 button_ :: El1
-button_ = el D.button
+button_ = el $ viewAdapter D.button
 
 button :: El
-button = el' D.button
+button = el' $ viewAdapter D.button
 
 button' :: El'
 button' = button []
 
 canvas_ :: El1
-canvas_ = el D.canvas
+canvas_ = el $ viewAdapter D.canvas
 
 canvas :: El
-canvas = el' D.canvas
+canvas = el' $ viewAdapter D.canvas
 
 canvas' :: El'
 canvas' = canvas []
 
 caption_ :: El1
-caption_ = el D.caption
+caption_ = el $ viewAdapter D.caption
 
 caption :: El
-caption = el' D.caption
+caption = el' $ viewAdapter D.caption
 
 caption' :: El'
 caption' = caption []
 
 cite_ :: El1
-cite_ = el D.cite
+cite_ = el $ viewAdapter D.cite
 
 cite :: El
-cite = el' D.cite
+cite = el' $ viewAdapter D.cite
 
 cite' :: El'
 cite' = cite []
 
 code_ :: El1
-code_ = el D.code
+code_ = el $ viewAdapter D.code
 
 code :: El
-code = el' D.code
+code = el' $ viewAdapter D.code
 
 code' :: El'
 code' = code []
 
 col :: ElLeaf
-col = elLeaf D.col
+col = elLeaf $ leafViewAdapter D.col
 
 col' :: ElLeaf'
 col' = col []
 
 colgroup_ :: El1
-colgroup_ = el D.colgroup
+colgroup_ = el $ viewAdapter D.colgroup
 
 colgroup :: El
-colgroup = el' D.colgroup
+colgroup = el' $ viewAdapter D.colgroup
 
 colgroup' :: El'
 colgroup' = colgroup []
 
 _data_ :: El1
-_data_ = el D._data
+_data_ = el $ viewAdapter D._data
 
 _data :: El
-_data = el' D._data
+_data = el' $ viewAdapter D._data
 
 _data' :: El'
 _data' = _data []
 
 datalist_ :: El1
-datalist_ = el D.datalist
+datalist_ = el $ viewAdapter D.datalist
 
 datalist :: El
-datalist = el' D.datalist
+datalist = el' $ viewAdapter D.datalist
 
 datalist' :: El'
 datalist' = datalist []
 
 dd_ :: El1
-dd_ = el D.dd
+dd_ = el $ viewAdapter D.dd
 
 dd :: El
-dd = el' D.dd
+dd = el' $ viewAdapter D.dd
 
 dd' :: El'
 dd' = dd []
 
 del_ :: El1
-del_ = el D.del
+del_ = el $ viewAdapter D.del
 
 del :: El
-del = el' D.del
+del = el' $ viewAdapter D.del
 
 del' :: El'
 del' = del []
 
 details_ :: El1
-details_ = el D.details
+details_ = el $ viewAdapter D.details
 
 details :: El
-details = el' D.details
+details = el' $ viewAdapter D.details
 
 details' :: El'
 details' = details []
 
 dfn_ :: El1
-dfn_ = el D.dfn
+dfn_ = el $ viewAdapter D.dfn
 
 dfn :: El
-dfn = el' D.dfn
+dfn = el' $ viewAdapter D.dfn
 
 dfn' :: El'
 dfn' = dfn []
 
 dialog_ :: El1
-dialog_ = el D.dialog
+dialog_ = el $ viewAdapter D.dialog
 
 dialog :: El
-dialog = el' D.dialog
+dialog = el' $ viewAdapter D.dialog
 
 dialog' :: El'
 dialog' = dialog []
 
 div_ :: El1
-div_ = el D.div
+div_ = el $ viewAdapter D.div
 
 div :: El
-div = el' D.div
+div = el' $ viewAdapter D.div
 
 div' :: El'
 div' = div []
 
 dl_ :: El1
-dl_ = el D.dl
+dl_ = el $ viewAdapter D.dl
 
 dl :: El
-dl = el' D.dl
+dl = el' $ viewAdapter D.dl
 
 dl' :: El'
 dl' = dl []
 
 dt_ :: El1
-dt_ = el D.dt
+dt_ = el $ viewAdapter D.dt
 
 dt :: El
-dt = el' D.dt
+dt = el' $ viewAdapter D.dt
 
 dt' :: El'
 dt' = dt []
 
 em_ :: El1
-em_ = el D.em
+em_ = el $ viewAdapter D.em
 
 em :: El
-em = el' D.em
+em = el' $ viewAdapter D.em
 
 em' :: El'
 em' = em []
 
 embed :: ElLeaf
-embed = elLeaf D.embed
+embed = elLeaf $ leafViewAdapter D.embed
 
 embed' :: ElLeaf'
 embed' = embed []
 
 fieldset_ :: El1
-fieldset_ = el D.fieldset
+fieldset_ = el $ viewAdapter D.fieldset
 
 fieldset :: El
-fieldset = el' D.fieldset
+fieldset = el' $ viewAdapter D.fieldset
 
 fieldset' :: El'
 fieldset' = fieldset []
 
 figcaption_ :: El1
-figcaption_ = el D.figcaption
+figcaption_ = el $ viewAdapter D.figcaption
 
 figcaption :: El
-figcaption = el' D.figcaption
+figcaption = el' $ viewAdapter D.figcaption
 
 figcaption' :: El'
 figcaption' = figcaption []
 
 figure_ :: El1
-figure_ = el D.figure
+figure_ = el $ viewAdapter D.figure
 
 figure :: El
-figure = el' D.figure
+figure = el' $ viewAdapter D.figure
 
 figure' :: El'
 figure' = figure []
 
 footer_ :: El1
-footer_ = el D.footer
+footer_ = el $ viewAdapter D.footer
 
 footer :: El
-footer = el' D.footer
+footer = el' $ viewAdapter D.footer
 
 footer' :: El'
 footer' = footer []
 
 form_ :: El1
-form_ = el D.form
+form_ = el $ viewAdapter D.form
 
 form :: El
-form = el' D.form
+form = el' $ viewAdapter D.form
 
 form' :: El'
 form' = form []
 
 h1_ :: El1
-h1_ = el D.h1
+h1_ = el $ viewAdapter D.h1
 
 h1 :: El
-h1 = el' D.h1
+h1 = el' $ viewAdapter D.h1
 
 h1' :: El'
 h1' = h1 []
 
 h2_ :: El1
-h2_ = el D.h2
+h2_ = el $ viewAdapter D.h2
 
 h2 :: El
-h2 = el' D.h2
+h2 = el' $ viewAdapter D.h2
 
 h2' :: El'
 h2' = h2 []
 
 h3_ :: El1
-h3_ = el D.h3
+h3_ = el $ viewAdapter D.h3
 
 h3 :: El
-h3 = el' D.h3
+h3 = el' $ viewAdapter D.h3
 
 h3' :: El'
 h3' = h3 []
 
 h4_ :: El1
-h4_ = el D.h4
+h4_ = el $ viewAdapter D.h4
 
 h4 :: El
-h4 = el' D.h4
+h4 = el' $ viewAdapter D.h4
 
 h4' :: El'
 h4' = h4 []
 
 h5_ :: El1
-h5_ = el D.h5
+h5_ = el $ viewAdapter D.h5
 
 h5 :: El
-h5 = el' D.h5
+h5 = el' $ viewAdapter D.h5
 
 h5' :: El'
 h5' = h5 []
 
 h6_ :: El1
-h6_ = el D.h6
+h6_ = el $ viewAdapter D.h6
 
 h6 :: El
-h6 = el' D.h6
+h6 = el' $ viewAdapter D.h6
 
 h6' :: El'
 h6' = h6 []
 
 head_ :: El1
-head_ = el D.head
+head_ = el $ viewAdapter D.head
 
 head :: El
-head = el' D.head
+head = el' $ viewAdapter D.head
 
 head' :: El'
 head' = head []
 
 header_ :: El1
-header_ = el D.header
+header_ = el $ viewAdapter D.header
 
 header :: El
-header = el' D.header
+header = el' $ viewAdapter D.header
 
 header' :: El'
 header' = header []
 
 hr :: ElLeaf
-hr = elLeaf D.hr
+hr = elLeaf $ leafViewAdapter D.hr
 
 hr' :: ElLeaf'
 hr' = hr []
 
 html_ :: El1
-html_ = el D.html
+html_ = el $ viewAdapter D.html
 
 html :: El
-html = el' D.html
+html = el' $ viewAdapter D.html
 
 html' :: El'
 html' = html []
 
 i_ :: El1
-i_ = el D.i
+i_ = el $ viewAdapter D.i
 
 i :: El
-i = el' D.i
+i = el' $ viewAdapter D.i
 
 i' :: El'
 i' = i []
 
 iframe_ :: El1
-iframe_ = el D.iframe
+iframe_ = el $ viewAdapter D.iframe
 
 iframe :: El
-iframe = el' D.iframe
+iframe = el' $ viewAdapter D.iframe
 
 iframe' :: El'
 iframe' = iframe []
 
 img :: ElLeaf
-img = elLeaf D.img
+img = elLeaf $ leafViewAdapter D.img
 
 img' :: ElLeaf'
 img' = img []
 
 input :: ElLeaf
-input = elLeaf D.input
+input = elLeaf $ leafViewAdapter D.input
 
 input' :: ElLeaf'
 input' = input []
 
 ins_ :: El1
-ins_ = el D.ins
+ins_ = el $ viewAdapter D.ins
 
 ins :: El
-ins = el' D.ins
+ins = el' $ viewAdapter D.ins
 
 ins' :: El'
 ins' = ins []
 
 kbd_ :: El1
-kbd_ = el D.kbd
+kbd_ = el $ viewAdapter D.kbd
 
 kbd :: El
-kbd = el' D.kbd
+kbd = el' $ viewAdapter D.kbd
 
 kbd' :: El'
 kbd' = kbd []
 
 keygen :: ElLeaf
-keygen = elLeaf D.keygen
+keygen = elLeaf $ leafViewAdapter D.keygen
 
 keygen' :: ElLeaf'
 keygen' = keygen []
 
 label_ :: El1
-label_ = el D.label
+label_ = el $ viewAdapter D.label
 
 label :: El
-label = el' D.label
+label = el' $ viewAdapter D.label
 
 label' :: El'
 label' = label []
 
 legend_ :: El1
-legend_ = el D.legend
+legend_ = el $ viewAdapter D.legend
 
 legend :: El
-legend = el' D.legend
+legend = el' $ viewAdapter D.legend
 
 legend' :: El'
 legend' = legend []
 
 li_ :: El1
-li_ = el D.li
+li_ = el $ viewAdapter D.li
 
 li :: El
-li = el' D.li
+li = el' $ viewAdapter D.li
 
 li' :: El'
 li' = li []
 
 link :: ElLeaf
-link = elLeaf D.link
+link = elLeaf $ leafViewAdapter D.link
 
 link' :: ElLeaf'
 link' = link []
 
 main_ :: El1
-main_ = el D.main
+main_ = el $ viewAdapter D.main
 
 main :: El
-main = el' D.main
+main = el' $ viewAdapter D.main
 
 main' :: El'
 main' = main []
 
 _map_ :: El1
-_map_ = el D.map
+_map_ = el $ viewAdapter D.map
 
 _map :: El
-_map = el' D.map
+_map = el' $ viewAdapter D.map
 
 _map' :: El'
 _map' = _map []
 
 mark_ :: El1
-mark_ = el D.mark
+mark_ = el $ viewAdapter D.mark
 
 mark :: El
-mark = el' D.mark
+mark = el' $ viewAdapter D.mark
 
 mark' :: El'
 mark' = mark []
 
 menu_ :: El1
-menu_ = el D.menu
+menu_ = el $ viewAdapter D.menu
 
 menu :: El
-menu = el' D.menu
+menu = el' $ viewAdapter D.menu
 
 menu' :: El'
 menu' = menu []
 
 menuitem :: ElLeaf
-menuitem = elLeaf D.menuitem
+menuitem = elLeaf $ leafViewAdapter D.menuitem
 
 menuitem' :: ElLeaf'
 menuitem' = menuitem []
 
 meta :: ElLeaf
-meta = elLeaf D.meta
+meta = elLeaf $ leafViewAdapter D.meta
 
 meta' :: ElLeaf'
 meta' = meta []
 
 meter_ :: El1
-meter_ = el D.meter
+meter_ = el $ viewAdapter D.meter
 
 meter :: El
-meter = el' D.meter
+meter = el' $ viewAdapter D.meter
 
 meter' :: El'
 meter' = meter []
 
 nav_ :: El1
-nav_ = el D.nav
+nav_ = el $ viewAdapter D.nav
 
 nav :: El
-nav = el' D.nav
+nav = el' $ viewAdapter D.nav
 
 nav' :: El'
 nav' = nav []
 
 noscript_ :: El1
-noscript_ = el D.noscript
+noscript_ = el $ viewAdapter D.noscript
 
 noscript :: El
-noscript = el' D.noscript
+noscript = el' $ viewAdapter D.noscript
 
 noscript' :: El'
 noscript' = noscript []
 
 object_ :: El1
-object_ = el D.object
+object_ = el $ viewAdapter D.object
 
 object :: El
-object = el' D.object
+object = el' $ viewAdapter D.object
 
 object' :: El'
 object' = object []
 
 ol_ :: El1
-ol_ = el D.ol
+ol_ = el $ viewAdapter D.ol
 
 ol :: El
-ol = el' D.ol
+ol = el' $ viewAdapter D.ol
 
 ol' :: El'
 ol' = ol []
 
 optgroup_ :: El1
-optgroup_ = el D.optgroup
+optgroup_ = el $ viewAdapter D.optgroup
 
 optgroup :: El
-optgroup = el' D.optgroup
+optgroup = el' $ viewAdapter D.optgroup
 
 optgroup' :: El'
 optgroup' = optgroup []
 
 option_ :: El1
-option_ = el D.option
+option_ = el $ viewAdapter D.option
 
 option :: El
-option = el' D.option
+option = el' $ viewAdapter D.option
 
 option' :: El'
 option' = option []
 
 output_ :: El1
-output_ = el D.output
+output_ = el $ viewAdapter D.output
 
 output :: El
-output = el' D.output
+output = el' $ viewAdapter D.output
 
 output' :: El'
 output' = output []
 
 p_ :: El1
-p_ = el D.p
+p_ = el $ viewAdapter D.p
 
 p :: El
-p = el' D.p
+p = el' $ viewAdapter D.p
 
 p' :: El'
 p' = p []
 
 param :: ElLeaf
-param = elLeaf D.param
+param = elLeaf $ leafViewAdapter D.param
 
 param' :: ElLeaf'
 param' = param []
 
 picture_ :: El1
-picture_ = el D.picture
+picture_ = el $ viewAdapter D.picture
 
 picture :: El
-picture = el' D.picture
+picture = el' $ viewAdapter D.picture
 
 picture' :: El'
 picture' = picture []
 
 pre_ :: El1
-pre_ = el D.pre
+pre_ = el $ viewAdapter D.pre
 
 pre :: El
-pre = el' D.pre
+pre = el' $ viewAdapter D.pre
 
 pre' :: El'
 pre' = pre []
 
 progress_ :: El1
-progress_ = el D.progress
+progress_ = el $ viewAdapter D.progress
 
 progress :: El
-progress = el' D.progress
+progress = el' $ viewAdapter D.progress
 
 progress' :: El'
 progress' = progress []
 
 q_ :: El1
-q_ = el D.q
+q_ = el $ viewAdapter D.q
 
 q :: El
-q = el' D.q
+q = el' $ viewAdapter D.q
 
 q' :: El'
 q' = q []
 
 rp_ :: El1
-rp_ = el D.rp
+rp_ = el $ viewAdapter D.rp
 
 rp :: El
-rp = el' D.rp
+rp = el' $ viewAdapter D.rp
 
 rp' :: El'
 rp' = rp []
 
 rt_ :: El1
-rt_ = el D.rt
+rt_ = el $ viewAdapter D.rt
 
 rt :: El
-rt = el' D.rt
+rt = el' $ viewAdapter D.rt
 
 rt' :: El'
 rt' = rt []
 
 ruby_ :: El1
-ruby_ = el D.ruby
+ruby_ = el $ viewAdapter D.ruby
 
 ruby :: El
-ruby = el' D.ruby
+ruby = el' $ viewAdapter D.ruby
 
 ruby' :: El'
 ruby' = ruby []
 
 s_ :: El1
-s_ = el D.s
+s_ = el $ viewAdapter D.s
 
 s :: El
-s = el' D.s
+s = el' $ viewAdapter D.s
 
 s' :: El'
 s' = s []
 
 samp_ :: El1
-samp_ = el D.samp
+samp_ = el $ viewAdapter D.samp
 
 samp :: El
-samp = el' D.samp
+samp = el' $ viewAdapter D.samp
 
 samp' :: El'
 samp' = samp []
 
 script_ :: El1
-script_ = el D.script
+script_ = el $ viewAdapter D.script
 
 script :: El
-script = el' D.script
+script = el' $ viewAdapter D.script
 
 script' :: El'
 script' = script []
 
 section_ :: El1
-section_ = el D.section
+section_ = el $ viewAdapter D.section
 
 section :: El
-section = el' D.section
+section = el' $ viewAdapter D.section
 
 section' :: El'
 section' = section []
 
 select_ :: El1
-select_ = el D.select
+select_ = el $ viewAdapter D.select
 
 select :: El
-select = el' D.select
+select = el' $ viewAdapter D.select
 
 select' :: El'
 select' = select []
 
 small_ :: El1
-small_ = el D.small
+small_ = el $ viewAdapter D.small
 
 small :: El
-small = el' D.small
+small = el' $ viewAdapter D.small
 
 small' :: El'
 small' = small []
 
 source :: ElLeaf
-source = elLeaf D.source
+source = elLeaf $ leafViewAdapter D.source
 
 source' :: ElLeaf'
 source' = source []
 
 span_ :: El1
-span_ = el D.span
+span_ = el $ viewAdapter D.span
 
 span :: El
-span = el' D.span
+span = el' $ viewAdapter D.span
 
 span' :: El'
 span' = span []
 
 strong_ :: El1
-strong_ = el D.strong
+strong_ = el $ viewAdapter D.strong
 
 strong :: El
-strong = el' D.strong
+strong = el' $ viewAdapter D.strong
 
 strong' :: El'
 strong' = strong []
 
 style_ :: El1
-style_ = el D.style
+style_ = el $ viewAdapter D.style
 
 style :: El
-style = el' D.style
+style = el' $ viewAdapter D.style
 
 style' :: El'
 style' = style []
 
 sub_ :: El1
-sub_ = el D.sub
+sub_ = el $ viewAdapter D.sub
 
 sub :: El
-sub = el' D.sub
+sub = el' $ viewAdapter D.sub
 
 sub' :: El'
 sub' = sub []
 
 summary_ :: El1
-summary_ = el D.summary
+summary_ = el $ viewAdapter D.summary
 
 summary :: El
-summary = el' D.summary
+summary = el' $ viewAdapter D.summary
 
 summary' :: El'
 summary' = summary []
 
 sup_ :: El1
-sup_ = el D.sup
+sup_ = el $ viewAdapter D.sup
 
 sup :: El
-sup = el' D.sup
+sup = el' $ viewAdapter D.sup
 
 sup' :: El'
 sup' = sup []
 
 table_ :: El1
-table_ = el D.table
+table_ = el $ viewAdapter D.table
 
 table :: El
-table = el' D.table
+table = el' $ viewAdapter D.table
 
 table' :: El'
 table' = table []
 
 tbody_ :: El1
-tbody_ = el D.tbody
+tbody_ = el $ viewAdapter D.tbody
 
 tbody :: El
-tbody = el' D.tbody
+tbody = el' $ viewAdapter D.tbody
 
 tbody' :: El'
 tbody' = tbody []
 
 td_ :: El1
-td_ = el D.td
+td_ = el $ viewAdapter D.td
 
 td :: El
-td = el' D.td
+td = el' $ viewAdapter D.td
 
 td' :: El'
 td' = td []
 
 textarea_ :: El1
-textarea_ = el D.textarea
+textarea_ = el $ viewAdapter D.textarea
 
 textarea :: El
-textarea = el' D.textarea
+textarea = el' $ viewAdapter D.textarea
 
 textarea' :: El'
 textarea' = textarea []
 
 tfoot_ :: El1
-tfoot_ = el D.tfoot
+tfoot_ = el $ viewAdapter D.tfoot
 
 tfoot :: El
-tfoot = el' D.tfoot
+tfoot = el' $ viewAdapter D.tfoot
 
 tfoot' :: El'
 tfoot' = tfoot []
 
 th_ :: El1
-th_ = el D.th
+th_ = el $ viewAdapter D.th
 
 th :: El
-th = el' D.th
+th = el' $ viewAdapter D.th
 
 th' :: El'
 th' = th []
 
 thead_ :: El1
-thead_ = el D.thead
+thead_ = el $ viewAdapter D.thead
 
 thead :: El
-thead = el' D.thead
+thead = el' $ viewAdapter D.thead
 
 thead' :: El'
 thead' = thead []
 
 time_ :: El1
-time_ = el D.time
+time_ = el $ viewAdapter D.time
 
 time :: El
-time = el' D.time
+time = el' $ viewAdapter D.time
 
 time' :: El'
 time' = time []
 
 title_ :: El1
-title_ = el D.title
+title_ = el $ viewAdapter D.title
 
 title :: El
-title = el' D.title
+title = el' $ viewAdapter D.title
 
 title' :: El'
 title' = title []
 
 tr_ :: El1
-tr_ = el D.tr
+tr_ = el $ viewAdapter D.tr
 
 tr :: El
-tr = el' D.tr
+tr = el' $ viewAdapter D.tr
 
 tr' :: El'
 tr' = tr []
 
 track :: ElLeaf
-track = elLeaf D.track
+track = elLeaf $ leafViewAdapter D.track
 
 track' :: ElLeaf'
 track' = track []
 
 u_ :: El1
-u_ = el D.u
+u_ = el $ viewAdapter D.u
 
 u :: El
-u = el' D.u
+u = el' $ viewAdapter D.u
 
 u' :: El'
 u' = u []
 
 ul_ :: El1
-ul_ = el D.ul
+ul_ = el $ viewAdapter D.ul
 
 ul :: El
-ul = el' D.ul
+ul = el' $ viewAdapter D.ul
 
 ul' :: El'
 ul' = ul []
 
 var_ :: El1
-var_ = el D.var
+var_ = el $ viewAdapter D.var
 
 var :: El
-var = el' D.var
+var = el' $ viewAdapter D.var
 
 var' :: El'
 var' = var []
 
 video_ :: El1
-video_ = el D.video
+video_ = el $ viewAdapter D.video
 
 video :: El
-video = el' D.video
+video = el' $ viewAdapter D.video
 
 video' :: El'
 video' = video []
 
 wbr :: ElLeaf
-wbr = elLeaf D.wbr
+wbr = elLeaf $ leafViewAdapter D.wbr
 
 wbr' :: ElLeaf'
 wbr' = wbr []
