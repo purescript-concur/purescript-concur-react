@@ -51,7 +51,7 @@ You can quickly get a production setup going (using Spago and Parcel) by cloning
 Else, if you use Spago -
 
 ```bash
-spago install purescript-concur-react
+spago install concur-react
 ```
 
 Or if you use Bower -
