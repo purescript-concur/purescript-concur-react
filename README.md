@@ -138,7 +138,7 @@ Individual example sources -
 5. **A login widget**. [Source](https://github.com/purescript-concur/purescript-concur-react/blob/master/examples/src/Test/Login.purs).
 6. Concur has Signals! Sample **counting widget implemented with Signals**! [Source](https://github.com/purescript-concur/purescript-concur-react/blob/master/examples/src/Test/Signals.purs).
 7. A **Full-featured TodoMVC implementation with LocalStorage Persistence** built with Signals. [Source](https://github.com/purescript-concur/purescript-concur-react/blob/master/examples/src/Test/Todos.purs).
-8. A **Fully editable tree** in ~30 lines of code (with Signals). [Source](https://github.com/purescript-concur/purescript-concur-react/blob/master/examples/src/Test/EditHeadings.purs).
+8. A **Fully editable tree** in ~30 lines of code (with Signals). [Source](https://github.com/purescript-concur/purescript-concur-react/blob/master/examples/src/Test/EditHeadingsSignals.purs).
 9. A **Postfix calculator**. [Source](https://github.com/purescript-concur/purescript-concur-react/blob/master/examples/src/Test/Calc.purs).
 10. Using **AJAX and handling JSON** responses. [Source](https://github.com/purescript-concur/purescript-concur-react/blob/master/examples/src/Test/Ajax.purs).
 11. A small widget to **Visualise CSS color codes**. [Source](https://github.com/purescript-concur/purescript-concur-react/blob/master/examples/src/Test/Color.purs).
