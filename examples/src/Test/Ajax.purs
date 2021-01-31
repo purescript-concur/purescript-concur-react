@@ -10,7 +10,7 @@ import Concur.React.DOM (button, div', h4', p', text)
 import Concur.React.Props (onClick)
 import Control.Alt ((<|>))
 import Data.Argonaut.Core (Json)
-import Data.Argonaut.Decode (class DecodeJson, decodeJson, (.:))
+import Data.Argonaut.Decode (class DecodeJson, decodeJson, (.:), JsonDecodeError)
 import Data.Array (take)
 import Data.Either (Either(..))
 import Data.Traversable (traverse)
@@ -26,7 +26,7 @@ newtype Post = Post
 
 type PostArray = Array Post
 
-decodePostArray :: Json -> Either String PostArray
+decodePostArray :: Json -> Either JsonDecodeError PostArray
 decodePostArray json = decodeJson json >>= traverse decodeJson
 
 instance decodeJsonPost :: DecodeJson Post where
@@ -66,7 +66,7 @@ fetchReddit sub = div'
                 cs <- d1 .: "children"
                 decodePostArray cs
           case postsResp of
-            Left err -> text ("Error: " <> err)
+            Left err -> text ("Error: " <> show err)
             Right posts -> do
               div'
                 [ div' (map (\(Post p) -> div' [text p.title]) (take 5 posts))
