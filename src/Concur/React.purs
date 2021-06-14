@@ -1,10 +1,7 @@
-
 module Concur.React where
 
 import Prelude
-
-import Concur.Core.Types (Widget, runWidget)
-import Data.Either (Either(..))
+import Concur.Core.Types (Widget, runWidget, Result(..))
 import Data.Maybe (Maybe(..))
 import Effect (Effect)
 import Effect.Ref as Ref
@@ -32,12 +29,12 @@ componentClassWithMount onMount w renderer = do
   thisRef <- Ref.new Nothing
   void $ runWidget w \res -> do
     case res of
-      Left v -> do
+      View v -> do
         mt <- Ref.read thisRef
         case mt of
           Just this -> void $ R.writeState this (mkComponentState v)
           Nothing -> renderer $ element onMount v thisRef
-      Right _ -> log "Application exited"
+      _ -> log "Application exited"
 
 render ::
   ComponentState ->
