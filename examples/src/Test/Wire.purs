@@ -1,7 +1,7 @@
 module Test.Wire where
 
 import Concur.Core.Patterns (Wire, local, mapWire)
-import Concur.Core.Types (Widget)
+import Concur.Core.Types (Widget, silence)
 import Concur.React (HTML)
 import Concur.React.DOM as D
 import Concur.React.Props as P
@@ -22,7 +22,7 @@ counter wire = do
    then D.text "10"
    else do
      void $ D.button [ P.onClick ] [ D.text $ show x ]
-     map absurd $ wire.send $ x + 1
+     map absurd $ silence $ wire.send $ x + 1
 
 wireWidget :: forall a. Widget HTML a
 wireWidget = local (Tuple 0 0) \wire -> D.div []
