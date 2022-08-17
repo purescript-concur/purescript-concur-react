@@ -138,7 +138,7 @@ in upstream
         , "transformers"
         , "tuples"
         ]
-    , repo = "https://github.com/drshade/purescript-concur-core"
+    , repo = "https://github.com/purescript-concur/purescript-concur-core"
     , version = "v0.5.0"
     }
 
