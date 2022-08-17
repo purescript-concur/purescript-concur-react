@@ -1,6 +1,6 @@
 "use strict";
 
-exports.resetTargetValue = function(s) {
+export const resetTargetValue = function(s) {
     return function(event) {
         return function() {
             event.target.value = s;
@@ -8,4 +8,4 @@ exports.resetTargetValue = function(s) {
     };
 };
 
-exports.emptyProp_ = {}
+export const emptyProp_ = {}
