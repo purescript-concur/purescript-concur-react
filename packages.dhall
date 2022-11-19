@@ -139,6 +139,6 @@ in upstream
         , "tuples"
         ]
     , repo = "https://github.com/purescript-concur/purescript-concur-core"
-    , version = "v0.5.0"
+    , version = "main"
     }
 
