@@ -24,6 +24,7 @@ import React.SyntheticEvent
   , SyntheticUIEvent
   , SyntheticWheelEvent
   )
+import React.SyntheticEvent (persist) as R
 import Unsafe.Coerce (unsafeCoerce)
 
 foreign import emptyProp_ :: P.Props
@@ -74,6 +75,14 @@ isEnterEvent ::
 isEnterEvent e = e'.which == 13 || e'.keyCode == 13
   where
   e' = unsafeCoerce e
+
+-- Stop React event recycling
+persist ::
+  ReactProps SyntheticInputEvent ->
+  ReactProps SyntheticInputEvent
+persist (Handler h) = Handler \hdlr ->
+  h (\e -> R.persist e >>= \_ -> hdlr e)
+persist (PrimProp p) = PrimProp p
 
 -- | IMPORTANT: UNSAFE: It's unsafe to use this outside this module
 foreign import resetTargetValue :: forall event. String -> event -> Effect Unit

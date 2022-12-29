@@ -15,6 +15,7 @@ You can edit this file as you like.
   , "prelude"
   , "react"
   , "react-dom"
+  , "refs"
   , "transformers"
   , "tuples"
   , "unsafe-coerce"

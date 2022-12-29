@@ -37,7 +37,9 @@ renderWidgetInto query w = runAffX do
   mroot <- selectElement query
   case mroot of
     Nothing -> pure unit
-    Just root -> void $ liftEffect $ ReactDOM.render (renderComponent w) (HTMLElement.toElement root)
+    Just root -> liftEffect $ renderComponent w (renderer root)
+  where
+    renderer r = \e -> void $ ReactDOM.render e (HTMLElement.toElement r)
 
 -- Attribution - Everything below was taken from Halogen.Aff.Utils
 -- https://github.com/purescript-halogen/purescript-halogen/blob/master/src/Halogen/Aff/Util.purs
