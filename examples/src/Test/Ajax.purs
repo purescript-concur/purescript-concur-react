@@ -2,7 +2,7 @@ module Test.Ajax where
 
 import Prelude
 
-import Affjax as AX
+import Affjax.Web as AX
 import Affjax.ResponseFormat as ResponseFormat
 import Concur.Core (Widget)
 import Concur.React (HTML)
