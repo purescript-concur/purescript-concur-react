@@ -2,17 +2,17 @@
 
 // Local storage functions
 
-exports.storageLength = function() {
+export const storageLength = function() {
   return window.localStorage.length;
 };
 
-exports.storageGet = function(key) {
+export const storageGet = function(key) {
   return function() {
     return window.localStorage.getItem(key);
   };
 };
 
-exports.storageSet = function(key) {
+export const storageSet = function(key) {
   return function(val) {
     return function() {
       window.localStorage.setItem(key, val);
@@ -20,18 +20,18 @@ exports.storageSet = function(key) {
   };
 };
 
-exports.storageDelete = function(key) {
+export const storageDelete = function(key) {
   return function() {
     window.localStorage.removeItem(key);
   };
 };
 
-exports.storageClear = function() {
+export const storageClear = function() {
   window.localStorage.clear();
 };
 
 // Keyboard events. Allows multiple key events at the same time
-exports.handleKeyboardEvents = function(handler) {
+export const handleKeyboardEvents = function(handler) {
   var keys = {};
   var keyUpHandler = function(event){
     const keyName = event.key;
@@ -54,7 +54,7 @@ exports.handleKeyboardEvents = function(handler) {
 };
 
 // Time interval events
-exports.setTimeInterval = function(handler) {
+export const setTimeInterval = function(handler) {
   return function(time) {
     return function() {
       setinterval(handler, time);

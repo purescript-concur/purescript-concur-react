@@ -1,2 +1,2 @@
-import Main from "./output/Main";
-Main.main();
+import { main } from "./output/Main";
+main();
