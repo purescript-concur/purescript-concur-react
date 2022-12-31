@@ -22,7 +22,6 @@ import Test.TailRec (tailRecDemo)
 import Test.TheElmArchitecture (teaWidget)
 import Test.Timers (timersWidget)
 import Test.Todos (todosWidget)
-import Test.Wire (wireWidget)
 import Test.Keyboard (keypadWidget)
 
 main :: Effect Unit
@@ -44,7 +43,6 @@ main = do
       , widget teaWidget "The Elm Architecture"
       , widget (hugeButtonListDemo 50000) "Huge List of 50 thousand buttons"
       , widget tailRecDemo "Tail Recursion Demo"
-      , widget wireWidget "Wire Example"
       ]
   where
     widget w s = orr
