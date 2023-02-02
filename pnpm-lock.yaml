@@ -3,6 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   esbuild: ^0.17.5
   parcel: ^2.8.3
+  process: ^0.11.10
   purescript: ^0.15.7
   react: ^17.0.2
   react-dom: ^17.0.2
@@ -16,6 +17,7 @@ dependencies:
 devDependencies:
   esbuild: 0.17.5
   parcel: 2.8.3
+  process: 0.11.10
   purescript: 0.15.7
   rimraf: 3.0.2
   spago: 0.20.9
@@ -2556,6 +2558,11 @@ packages:
 
   /process-nextick-args/2.0.1:
     resolution: {integrity: sha512-3ouUOpQhtgrbOa17J7+uxOTpITYWaGP7/AhoR3+A+/1e9skrzelGi/dXzEYyvbxubEF6Wn2ypscTKiKJFFn1ag==}
+    dev: true
+
+  /process/0.11.10:
+    resolution: {integrity: sha512-cdGef/drWFoydD1JsMzuFf8100nZl+GT+yacc2bEced5f9Rjk4z+WtFUTBu9PhOi9j/jfmBPu0mMEY4wIdAF8A==}
+    engines: {node: '>= 0.6.0'}
     dev: true
 
   /promise-inflight/1.0.1:
