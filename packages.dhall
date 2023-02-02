@@ -113,7 +113,7 @@ let upstream =
         sha256:e56fbdf33a5afd2a610c81f8b940b413a638931edb41532164e641bb2a9ec29c
 
 in upstream
-  with concur-core = 
+  with concur-core =
     { dependencies =
         [ "aff"
         , "aff-bus"
@@ -142,3 +142,4 @@ in upstream
     , version = "main"
     }
 
+with concur-react = ./spago.dhall as Location

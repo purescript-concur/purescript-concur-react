@@ -6,27 +6,33 @@
   "repository": "purescript-concur/purescript-concur-react",
   "author": {
     "name": "Anupam Jain",
-    "email": "ajnsit@gmail.com"
+    "email": "ajnsit at alphabet's email service"
   },
   "files": [],
   "scripts": {
     "build": "spago build",
-    "core": "cd core && spago build",
-    "stark": "cd stark && spago build",
     "examples": "cd examples && spago build",
-    "examples-dev": "cd examples && spago build && parcel build --public-url ./ index.html",
-    "examples-prod": "cd examples && rimraf temp && mkdir temp && spago bundle-app --to temp/index.prod.js && java -jar ../closure-compiler/closure-compiler-v20190301.jar --compilation_level ADVANCED_OPTIMIZATIONS --js temp/index.prod.js --js_output_file temp/index.prod.minified.js && cp index.prod.html temp && parcel build --public-url ./ temp/index.prod.html && mv dist/index.prod.html dist/index.html && rimraf temp",
-    "docs": "cd examples && npm run examples-prod && cp docs/logo.png dist && cp docs/Purescript-Concur-Performance.png dist && rimraf docs && mv dist docs",
-    "start": "cd examples && parcel index.html",
-    "watch": "cd examples && parcel watch index.html"
+    "start": "cd examples && parcel dev/index.html --open",
+    "watch": "cd examples && parcel watch dev/index.html",
+    "prod": "cd examples && rimraf temp && rimraf dist && mkdir temp && cp dev/index.html temp/ && spago bundle-app --to temp/index.js && java -jar ../closure-compiler/closure-compiler-v20190301.jar --js temp/index.js --js_output_file temp/minified.js && mv temp/minified.js temp/index.js && parcel build --public-url ./ temp/index.html && rimraf temp",
+    "docs": "cd examples && npm run examples-prod && cp docs/logo.png dist && cp docs/Purescript-Concur-Performance.png dist && rimraf docs && mv dist docs"
+  },
+
+  "//": "The alias below works around a parcel bug",
+  "//": "https://stackoverflow.com/questions/71161843/parcel-core-failed-to-resolve-process-from-node-modules-firebase-firesto",
+  "alias": {
+    "process": {
+      "global": "{}"
+    }
   },
   "dependencies": {
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
   },
   "devDependencies": {
-    "parcel-bundler": "^1.12.4",
-    "purescript": "^0.15.4",
+    "esbuild": "^0.17.5",
+    "parcel": "^2.8.3",
+    "purescript": "^0.15.7",
     "rimraf": "^3.0.2",
     "spago": "^0.20.9"
   }

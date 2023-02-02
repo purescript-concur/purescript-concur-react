@@ -1,5 +1,7 @@
 module Test.Ajax where
 
+{-
+
 import Prelude
 
 import Affjax as AX
@@ -73,3 +75,4 @@ fetchReddit sub = div'
                 , div' [button [unit <$ onClick] [text "Refresh"]]
                 ]
               fetchPosts
+-}

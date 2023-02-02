@@ -9,21 +9,21 @@ function innerHandler(event) {
 
 // Start listening for keys
 // :: Effect Unit
-exports.startListening = function() {
+export function startListening () {
   document.addEventListener('keydown', innerHandler);
-};
+}
 
 // Stop listening for keys
 // :: Effect Unit
-exports.stopListening = function() {
+export function stopListening () {
   document.removeEventListener('keydown', innerHandler);
-};
+}
 
 // Await a key
 // :: EffectFnAff KeyEvent
-exports._awaitKey = function (onError, onSuccess) {
+export function _awaitKey (onError, onSuccess) {
   observer = onSuccess;
   return function (cancelError, onCancelerError, onCancelerSuccess) {
     onCancelerSuccess();
   };
-};
+}

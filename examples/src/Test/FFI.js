@@ -2,36 +2,36 @@
 
 // Local storage functions
 
-exports.storageLength = function() {
+export function storageLength () {
   return window.localStorage.length;
-};
+}
 
-exports.storageGet = function(key) {
+export function storageGet (key) {
   return function() {
     return window.localStorage.getItem(key);
   };
-};
+}
 
-exports.storageSet = function(key) {
+export function storageSet (key) {
   return function(val) {
     return function() {
       window.localStorage.setItem(key, val);
     };
   };
-};
+}
 
-exports.storageDelete = function(key) {
+export function storageDelete (key) {
   return function() {
     window.localStorage.removeItem(key);
   };
-};
+}
 
-exports.storageClear = function() {
+export function storageClear () {
   window.localStorage.clear();
-};
+}
 
 // Keyboard events. Allows multiple key events at the same time
-exports.handleKeyboardEvents = function(handler) {
+export function handleKeyboardEvents (handler) {
   var keys = {};
   var keyUpHandler = function(event){
     const keyName = event.key;
@@ -51,10 +51,10 @@ exports.handleKeyboardEvents = function(handler) {
         document.removeEventListener('keyup', keyUpHandler);
       };
   };
-};
+}
 
 // Time interval events
-exports.setTimeInterval = function(handler) {
+export function setTimeInterval (handler) {
   return function(time) {
     return function() {
       setinterval(handler, time);
@@ -63,4 +63,4 @@ exports.setTimeInterval = function(handler) {
       };
     };
   };
-};
+}
