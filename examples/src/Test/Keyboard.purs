@@ -61,13 +61,13 @@ virtualKeyInput focus = do
 
 -- Dispay only. Renders the keypad buttons with the supplied focus
 keypadButtons :: forall a. Focus -> Widget HTML a
-keypadButtons focus = D.table' $ pure $ D.tbody'
+keypadButtons focus = D.table [spanstyle] $ pure $ D.tbody'
   [ D.tr' [ blank,         but ArrowUp,   blank          ]
   , D.tr' [ but ArrowLeft, but Enter,     but ArrowRight ]
   , D.tr' [ blank,         but ArrowDown, blank          ]
   ]
   where
-    blank = D.td' []
+    blank = D.td' [D.text ""]
     but key = D.td [style key] [D.text (show key)]
     spanstyle = P.style
       { verticalAlign: "middle"

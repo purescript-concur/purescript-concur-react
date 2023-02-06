@@ -1,6 +1,6 @@
 module Test.Wire where
 
-import Concur.Core.Patterns (Wire, local, mapWire, with, send)
+import Concur.Core.Patterns (Wire, local, mapWire, send, with)
 import Concur.Core.Types (Widget)
 import Concur.React (HTML)
 import Concur.React.DOM as D
@@ -14,6 +14,7 @@ import Data.Show (show)
 import Data.Tuple (Tuple(..))
 import Data.Void (absurd)
 import Prelude ((+))
+
 
 counter :: forall b. Wire (Widget HTML) Int -> Widget HTML b
 counter wire = map absurd do
