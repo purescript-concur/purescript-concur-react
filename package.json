@@ -11,11 +11,15 @@
   "files": [],
   "scripts": {
     "build": "spago build",
+    "test": "spago test",
+    "start": "parcel dev/index.html --open",
+    "watch": "parcel watch dev/index.html",
     "examples": "cd examples && spago build",
-    "start": "cd examples && parcel dev/index.html --open",
-    "watch": "cd examples && parcel watch dev/index.html",
-    "prod": "cd examples && rimraf temp && rimraf dist && mkdir temp && cp dev/index.html temp/ && spago bundle-app --to temp/index.js && java -jar ../closure-compiler/closure-compiler-v20190301.jar --js temp/index.js --js_output_file temp/minified.js && mv temp/minified.js temp/index.js && parcel build --public-url ./ temp/index.html && rimraf temp",
-    "docs": "cd examples && npm run examples-prod && cp docs/logo.png dist && cp docs/Purescript-Concur-Performance.png dist && rimraf docs && mv dist docs"
+    "examples-start": "cd examples && parcel dev/index.html --open",
+    "examples-watch": "cd examples && parcel watch dev/index.html",
+    "examples-prod": "cd examples && rimraf temp && rimraf dist && mkdir temp && cp dev/index.html temp/ && spago bundle-app --to temp/index.js && java -jar ../closure-compiler/closure-compiler-v20190301.jar --js temp/index.js --js_output_file temp/minified.js && mv temp/minified.js temp/index.js && parcel build --public-url ./ temp/index.html && rimraf temp",
+    "examples-docs": "cd examples && npm run examples-prod && cp docs/logo.png dist && cp docs/Purescript-Concur-Performance.png dist && rimraf docs && mv dist docs"
+
   },
   "dependencies": {
     "react": "^17.0.2",
