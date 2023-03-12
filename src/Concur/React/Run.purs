@@ -1,12 +1,18 @@
 module Concur.React.Run where
 
-import Prelude
-
 import Concur.Core.Types (Widget)
-import Concur.React (HTML, renderComponent)
+import Concur.React (HTML, toReactElement)
+import Control.Applicative (pure)
+import Control.Bind (bind, discard, (<=<), (=<<))
 import Control.Monad.Error.Class (throwError)
 import Data.Either (Either(..), either)
-import Data.Maybe (Maybe(..), maybe)
+import Data.Function (const, ($), (<<<))
+import Data.Functor ((<$>))
+import Data.Maybe (Maybe, maybe)
+import Data.Monoid (mempty)
+import Data.Semigroup ((<>))
+import Data.Traversable (for)
+import Data.Unit (Unit, unit)
 import Effect (Effect)
 import Effect.Aff (Aff, effectCanceler, error, makeAff, nonCanceler, runAff_)
 import Effect.Class (liftEffect)
@@ -35,11 +41,9 @@ renderWidgetInto :: forall a. QuerySelector -> Widget HTML a -> Effect Unit
 renderWidgetInto query w = runAffX do
   awaitLoad
   mroot <- selectElement query
-  case mroot of
-    Nothing -> pure unit
-    Just root -> liftEffect $ renderComponent w (renderer root)
-  where
-    renderer r = \e -> void $ ReactDOM.render e (HTMLElement.toElement r)
+  for mroot \root -> do
+    let rootElement = HTMLElement.toElement root
+    liftEffect $ ReactDOM.render (toReactElement "Concur" mempty w) rootElement
 
 -- Attribution - Everything below was taken from Halogen.Aff.Utils
 -- https://github.com/purescript-halogen/purescript-halogen/blob/master/src/Halogen/Aff/Util.purs
