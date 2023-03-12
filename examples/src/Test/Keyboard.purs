@@ -1,7 +1,7 @@
 module Test.Keyboard where
 
 import Concur.Core.Types (Widget)
-import Concur.React (HTML)
+import Concur.React (HTML, affAction)
 import Concur.React.DOM as D
 import Concur.React.Props as P
 import Control.Alt ((<|>))
@@ -16,7 +16,6 @@ import Data.Show (class Show, show)
 import Data.Unit (Unit)
 import Effect (Effect)
 import Effect.Aff (Aff)
-import Effect.Aff.Class (liftAff)
 import Effect.Aff.Compat (EffectFnAff, fromEffectFnAff)
 import Effect.Class (liftEffect)
 import React.SyntheticEvent as R
@@ -49,7 +48,7 @@ toggleEvents = go false
 -- Allows the user to navigate and select a key. Returns the selected key.
 virtualKeyInput :: Focus -> Widget HTML Key
 virtualKeyInput focus = do
-  evt <- liftAff awaitKey <|> keypadButtons focus
+  evt <- affAction awaitKey <|> keypadButtons focus
   key <- liftEffect $ toKey evt
   case key of
     Just Enter -> pure focus

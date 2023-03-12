@@ -3,7 +3,7 @@ module Test.FocusCount where
 import Prelude
 
 import Concur.Core (Widget)
-import Concur.Core.Props (debounce)
+-- import Concur.Core.Props (debounce)
 import Concur.React (HTML)
 import Concur.React.DOM as D
 import Concur.React.Props as P
@@ -19,7 +19,7 @@ showState s = "The current value of the input is " <> show s.currentText <> ",\n
 inputWidget :: InputState -> Widget HTML InputState
 inputWidget st = do
   D.input [ st {focusCount = st.focusCount+1} <$ P.onFocus
-  , ((\s -> st {currentText = s}) <<< P.unsafeTargetValue)  <$> debounce 400 (P.persist P.onChange)
+  , ((\s -> st {currentText = s}) <<< P.unsafeTargetValue)  <$> P.onChange
   ]
 
 focusCountWidget :: forall a. Widget HTML a

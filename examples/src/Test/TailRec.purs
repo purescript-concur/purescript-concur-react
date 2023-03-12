@@ -3,11 +3,10 @@ module Test.TailRec where
 import Prelude
 
 import Concur.Core (Widget)
-import Concur.React (HTML)
+import Concur.React (HTML, affAction)
 import Concur.React.DOM as D
 import Concur.React.Props as P
 import Effect.Aff (Milliseconds(..), delay)
-import Effect.Aff.Class (liftAff)
 
 tailRecDemo :: forall a. Widget HTML a
 tailRecDemo = do
@@ -23,7 +22,7 @@ tailRecWidget count times = do
   stopRequested <- D.div'
     [ D.text $ "Recursive call # " <> show count <> " "
     , true <$ D.button [P.onClick] [D.text $ "Stop it!"]
-    , false <$ liftAff (delay (Milliseconds 10.0))
+    , false <$ affAction (delay (Milliseconds 10.0))
     ]
   if stopRequested
     then do

@@ -3,7 +3,7 @@ module Test.Login where
 import Prelude hiding (div)
 
 import Concur.Core (Widget)
-import Concur.Core.Patterns (loopState)
+-- import Concur.Core.Patterns (loopState)
 import Concur.React (HTML)
 import Concur.React.DOM as D
 import Concur.React.Props as P
@@ -86,3 +86,17 @@ loginWidget = runTask do
   D.div'
     [ D.text "HELLO!"
     ]
+
+
+------------------------------------------------------------
+
+-- Util: A very useful combinator for widgets with localised state
+loopState ::
+  forall m a s.
+  Monad m =>
+  s ->
+  (s -> m (Either s a)) ->
+  m a
+loopState s f = f s >>= case _ of
+  Left s' -> loopState s' f
+  Right a -> pure a

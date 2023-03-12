@@ -4,7 +4,7 @@ import Prelude
 
 import Concur.Core (Widget)
 import Concur.Core.FRP (Signal, always, dyn, loopS, loopW, fireOnce_, step)
-import Concur.Core.Patterns (retryUntil)
+-- import Concur.Core.Patterns (retryUntil)
 import Concur.React (HTML)
 import Concur.React.DOM as D
 import Concur.React.Props as P
@@ -91,3 +91,7 @@ filterButtons s = step s $ D.div' (mkFilter <$> filters)
     select f = if s.filter == f
       then P.style {border:"2px solid lightgray"}
       else P.style {}
+
+-- Util: Repeat a computation until the value satisfies a predicate
+retryUntil :: forall m a. Monad m => (a -> Boolean) -> m a -> m a
+retryUntil p w = w >>= \a -> if p a then pure a else retryUntil p w

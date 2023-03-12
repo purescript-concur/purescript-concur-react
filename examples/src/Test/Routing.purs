@@ -3,7 +3,7 @@ module Test.Routing where
 import Prelude
 
 import Concur.Core (Widget)
-import Concur.React (HTML)
+import Concur.React (HTML, affAction)
 import Concur.React.DOM as D
 import Concur.React.Props as P
 import Control.Alt ((<|>))
@@ -11,7 +11,6 @@ import Data.Foldable (oneOf)
 import Effect.AVar as Evar
 import Effect.Aff (Milliseconds(..), delay)
 import Effect.Aff.AVar as Avar
-import Effect.Aff.Class (liftAff)
 import Effect.Class (liftEffect)
 import Routing.Hash (matches)
 import Routing.Match (Match, end, int, root)
@@ -25,11 +24,11 @@ routingWidget = do
     var <- Evar.empty
     void $ matches myRoutes \_ route -> void $ Evar.tryPut route var
     pure var
-  let awaitRoute = liftAff $ Avar.take routeRef
+  let awaitRoute = affAction $ Avar.take routeRef
   -- HACK: This delay is only needed the first time
   -- Since the page might still be loading,
   -- and there are weird interactions between loading the homepage and the current route
-  liftAff (delay (Milliseconds 0.0))
+  affAction (delay (Milliseconds 0.0))
   go awaitRoute Home
   where
   go awaitRoute route = do
