@@ -1,12 +1,13 @@
 module Concur.React where
 
 import Prelude
-import Concur.Core.Types (Widget, runWidget, Result(..))
+
+import Concur.Core.Types (Result(..), Widget, runWidget)
 import Data.Maybe (Maybe(..))
 import Effect (Effect)
-import Effect.Ref as Ref
-import Effect.Ref (Ref)
 import Effect.Console (log)
+import Effect.Ref (Ref)
+import Effect.Ref as Ref
 import React as R
 
 type HTML
@@ -40,6 +41,19 @@ render ::
   ComponentState ->
   R.ReactElement
 render st = R.toElement st.view
+
+toReactClass :: forall props a. String -> HTML -> (Record props -> Widget HTML a) -> R.ReactClass (Record props)
+toReactClass componentName initialView widgetBuilder = R.component componentName \this -> do
+  props <- R.getProps this
+  let widget = widgetBuilder props
+  _ <- runWidget widget \res -> do
+    case res of
+      View v -> do
+        R.writeState this (mkComponentState v)
+      _ -> log "Application exited"
+  pure { state: mkComponentState initialView
+       , render: render <$> R.getState this
+       }
 
 component ::
   Effect Unit ->

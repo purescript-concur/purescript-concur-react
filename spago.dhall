@@ -17,7 +17,6 @@ You can edit this file as you like.
   , "react-dom"
   , "refs"
   , "transformers"
-  , "tuples"
   , "unsafe-coerce"
   , "web-dom"
   , "web-events"
