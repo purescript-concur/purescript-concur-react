@@ -3,14 +3,16 @@ module Concur.React where
 import Concur.Core (mkWidget)
 import Concur.Core.Types (Result(..), Widget, runWidget)
 import Control.Applicative (pure)
+import Control.Apply ((*>))
 import Control.Bind (bind, discard)
 import Data.Either (Either(..))
 import Data.Function (const, ($))
 import Data.Functor ((<$>))
 import Data.Monoid (mempty)
-import Data.Unit (Unit)
+import Data.Unit (Unit, unit)
 import Effect (Effect)
-import Effect.Aff (Aff, killFiber, runAff, runAff_)
+import Effect.Aff (Aff, Milliseconds(..), delay, killFiber, runAff, runAff_)
+import Effect.Class (liftEffect)
 import Effect.Console (log)
 import Effect.Exception (error)
 import React as R
@@ -36,7 +38,8 @@ toReactClass componentName initialView widgetBuilder = toReactClassWithMount com
 toReactClassWithMount :: forall props a. String -> HTML -> Effect Unit -> (Record props -> Widget HTML a) -> R.ReactClass (Record props)
 toReactClassWithMount componentName initialView onMount widgetBuilder = R.component componentName \this -> do
   props <- R.getProps this
-  let widget = widgetBuilder props
+  -- TODO: Figure out why this delay is needed, else the widget doesn't render
+  let widget = affAction (delay (Milliseconds 0.0)) *> widgetBuilder props
   _ <- runWidget widget \res -> do
     case res of
       View v -> do

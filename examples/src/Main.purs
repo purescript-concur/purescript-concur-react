@@ -7,7 +7,6 @@ import Concur.React.Run (runWidgetInDom)
 import Control.Alt ((<|>))
 import Control.MultiAlternative (orr)
 import Effect (Effect)
--- import Test.Ajax (ajaxWidget)
 import Test.Calc (calcWidget)
 import Test.Color (colorWidget)
 import Test.Counter (counterWidget)
@@ -15,6 +14,7 @@ import Test.EditHeadings (editHeadings)
 import Test.FeetToInches (feetToInches)
 import Test.FocusCount (focusCountWidget)
 import Test.Hello (helloWidget)
+import Test.JSInterface (renderReactComponent)
 import Test.Keyboard (keypadWidget)
 import Test.Login (loginWidget)
 import Test.Routing (routingWidget)
@@ -28,7 +28,8 @@ import Test.Todos (todosWidget)
 main :: Effect Unit
 main = do
     runWidgetInDom "main" $ orr
-      [ widget keypadWidget "Virtual Keypad Example"
+      [ widget renderReactComponent "Bidirectional React JS interop"
+      , widget keypadWidget "Virtual Keypad Example"
       , widget helloWidget "Hello World"
       , widget (counterWidget 0 <|> counterWidget 100) "Counter"
       , widget focusCountWidget "Count Focus"
