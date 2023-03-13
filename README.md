@@ -54,12 +54,6 @@ Else, if you use Spago -
 spago install concur-react
 ```
 
-Or if you use Bower -
-
-```bash
-bower install purescript-concur-react
-```
-
 ## Building examples from source
 
 ```bash
@@ -71,12 +65,55 @@ npm run build
 # Build examples
 npm run examples
 # Start a local server
-npm run start
+npm run examples-start
 # Check examples
 open localhost:1234 in the browser
 ```
 
-## External React Components
+## Exporting Concur Widgets to React JS
+
+Concur Widgets can be exported as both React classes or React Elements, which would allow them to be used within Javascript code.
+
+Let's say you have a `counter :: Int -> Widget HTML a` concur widget that you want to expose to React.
+
+*Step 1*: Convert the `Widget` to a `ReactClass` using `Concur.React.toReactClass`. Here you would like the react class to accept a `{conut :: Int}` as props.
+
+Here, the `"Counter"` is the name of the component that will be visible to React. You can use any name.
+And `mempty` represents the initial view shown until the widget has finished initialising. We can leave this empty (views have a `Monoid` instance).
+
+```purescript
+-- Counter.purs
+counterReactClass :: ReactClass { count :: Int }
+counterReactClass = toReactClass "Counter" mempty \ {count: i} -> counter i
+```
+
+*Step 2*: Import the class from within Javascript, and give it a name starting with an uppercase letter as required by React.
+
+```javascript
+// MyApp.jsx
+import {counterClass} from '<path/to/output/folder>/Counter/index.js';
+
+// React requires all component names to start with an uppercase letter -
+let Counter = counterClass;
+```
+
+*Step 3*: Now you can use it normally from within React.
+
+```javascript
+// MyApp.jsx
+class ReactComponent extends Component {
+  render(props) {
+    let {count} = this.state;
+    return (
+      <div>
+        <h4>The counter below was imported from a Concur widget. The starting count of 10 was passed from within React</h4>
+        <Counter count={10} />
+      </div>
+    );
+}
+```
+
+## Using External React Components
 
 It's easy to add external React components to Concur. Usually all you would require to wrap an external component is to import it as a `ReactClass`, and then wrapping it with one of the `el` functions.
 
