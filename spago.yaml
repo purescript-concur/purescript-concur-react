@@ -1,0 +1,50 @@
+package:
+  dependencies:
+  - aff
+  - arrays
+  - concur-core
+  - console
+  - effect
+  - either
+  - exceptions
+  - foldable-traversable
+  - maybe
+  - prelude
+  - react
+  - react-dom
+  - transformers
+  - unsafe-coerce
+  - web-dom
+  - web-events
+  - web-html
+  name: concur-react
+workspace:
+  extra_packages:
+    concur-core:
+      dependencies:
+      - aff
+      - aff-bus
+      - arrays
+      - avar
+      - console
+      - control
+      - datetime
+      - effect
+      - either
+      - exceptions
+      - foldable-traversable
+      - free
+      - identity
+      - lazy
+      - maybe
+      - newtype
+      - parallel
+      - prelude
+      - profunctor-lenses
+      - tailrec
+      - transformers
+      - tuples
+      git: https://github.com/purescript-concur/purescript-concur-core
+      ref: main
+  package_set:
+    url: https://raw.githubusercontent.com/purescript/package-sets/psc-0.15.4-20220725/packages.json

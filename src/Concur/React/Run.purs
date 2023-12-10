@@ -17,7 +17,8 @@ import Effect (Effect)
 import Effect.Aff (Aff, effectCanceler, error, makeAff, nonCanceler, runAff_)
 import Effect.Class (liftEffect)
 import Effect.Exception (throwException)
-import ReactDOM as ReactDOM
+import React (ReactElement)
+import Web.DOM.Element (Element)
 import Web.DOM.ParentNode (QuerySelector(..), querySelector)
 import Web.Event.EventTarget (addEventListener, eventListener, removeEventListener)
 import Web.HTML (HTMLElement, window)
@@ -27,6 +28,12 @@ import Web.HTML.HTMLDocument as HTMLDocument
 import Web.HTML.HTMLDocument.ReadyState (ReadyState(..))
 import Web.HTML.HTMLElement as HTMLElement
 import Web.HTML.Window as Window
+
+foreign import data Root :: Type
+
+foreign import createRoot :: Element -> Effect Root
+
+foreign import render :: Root -> ReactElement -> Effect Unit
 
 -- | Run a Concur Widget inside a dom element with the specified id
 runWidgetInDom :: forall a. String -> Widget HTML a -> Effect Unit
@@ -38,12 +45,15 @@ runWidgetInSelector elemId = renderWidgetInto (QuerySelector elemId)
 
 -- | Run a Concur Widget inside a dom element with the specified QuerySelector
 renderWidgetInto :: forall a. QuerySelector -> Widget HTML a -> Effect Unit
-renderWidgetInto query w = runAffX do
-  awaitLoad
-  mroot <- selectElement query
-  for mroot \root -> do
-    let rootElement = HTMLElement.toElement root
-    liftEffect $ ReactDOM.render (toReactElement "Concur" mempty w) rootElement
+renderWidgetInto query w =
+  runAffX do
+    awaitLoad
+    mroot <- selectElement query
+    for mroot \root -> do
+      let
+        container = HTMLElement.toElement root
+      reactRoot <- liftEffect $ createRoot container
+      liftEffect $ render reactRoot (toReactElement "Concur" mempty w)
 
 -- Attribution - Everything below was taken from Halogen.Aff.Utils
 -- https://github.com/purescript-halogen/purescript-halogen/blob/master/src/Halogen/Aff/Util.purs
