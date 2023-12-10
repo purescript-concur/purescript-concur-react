@@ -52,26 +52,25 @@ renderWidgetInto query w =
     for mroot \root -> do
       let
         container = HTMLElement.toElement root
-      rt <- liftEffect $ createRoot container
-      liftEffect $ render rt (toReactElement "Concur" mempty w)
+      reactRoot <- liftEffect $ createRoot container
+      liftEffect $ render reactRoot (toReactElement "Concur" mempty w)
 
--- ReactDOM.render (toReactElement "Concur" mempty w) container
 -- Attribution - Everything below was taken from Halogen.Aff.Utils
 -- https://github.com/purescript-halogen/purescript-halogen/blob/master/src/Halogen/Aff/Util.purs
+
 -- | Waits for the document to load.
 awaitLoad :: Aff Unit
-awaitLoad =
-  makeAff \callback -> do
-    rs <- readyState =<< Window.document =<< window
-    case rs of
-      Loading -> do
-        et <- Window.toEventTarget <$> window
-        listener <- eventListener (\_ -> callback (Right unit))
-        addEventListener ET.domcontentloaded listener false et
-        pure $ effectCanceler (removeEventListener ET.domcontentloaded listener false et)
-      _ -> do
-        callback (Right unit)
-        pure nonCanceler
+awaitLoad = makeAff \callback -> do
+  rs <- readyState =<< Window.document =<< window
+  case rs of
+    Loading -> do
+      et <- Window.toEventTarget <$> window
+      listener <- eventListener (\_ -> callback (Right unit))
+      addEventListener ET.domcontentloaded listener false et
+      pure $ effectCanceler (removeEventListener ET.domcontentloaded listener false et)
+    _ -> do
+      callback (Right unit)
+      pure nonCanceler
 
 -- | Waits for the document to load and then finds the `body` element.
 awaitBody :: Aff HTMLElement
@@ -83,9 +82,8 @@ awaitBody = do
 -- | Tries to find an element in the document.
 selectElement :: QuerySelector -> Aff (Maybe HTMLElement)
 selectElement query = do
-  mel <-
-    liftEffect
-      $ ((querySelector query <<< HTMLDocument.toParentNode <=< Window.document) =<< window)
+  mel <- liftEffect $
+    ((querySelector query <<< HTMLDocument.toParentNode <=< Window.document) =<< window)
   pure $ HTMLElement.fromElement =<< mel
 
 -- | Runs an `Aff` value of the type commonly used by Halogen components. Any
