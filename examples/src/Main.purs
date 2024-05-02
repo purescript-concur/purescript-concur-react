@@ -25,14 +25,16 @@ import Test.TheElmArchitecture (teaWidget)
 import Test.Timers (timersWidget)
 import Test.Todos (todosWidget)
 import Test.Tabs (tabsWidget)
+import Test.Wire (wireWidget)
 
 main :: Effect Unit
 main = do
     runWidgetInDom "main" $ orr
-      [ widget tabsWidget "Tabs"
+      [ widget helloWidget "Hello World"
+      , widget tabsWidget "Tabs"
+      , widget wireWidget "Wire"
       , widget renderReactComponent "Bidirectional React JS interop"
       , widget keypadWidget "Virtual Keypad Example"
-      , widget helloWidget "Hello World"
       , widget (counterWidget 0 <|> counterWidget 100) "Counter"
       , widget focusCountWidget "Count Focus"
       , widget feetToInches "Bidirectional example widget"
