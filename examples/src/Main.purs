@@ -24,11 +24,13 @@ import Test.TailRec (tailRecDemo)
 import Test.TheElmArchitecture (teaWidget)
 import Test.Timers (timersWidget)
 import Test.Todos (todosWidget)
+import Test.Tabs (tabsWidget)
 
 main :: Effect Unit
 main = do
     runWidgetInDom "main" $ orr
-      [ widget renderReactComponent "Bidirectional React JS interop"
+      [ widget tabsWidget "Tabs"
+      , widget renderReactComponent "Bidirectional React JS interop"
       , widget keypadWidget "Virtual Keypad Example"
       , widget helloWidget "Hello World"
       , widget (counterWidget 0 <|> counterWidget 100) "Counter"
