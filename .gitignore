@@ -16,3 +16,4 @@ html/index.js
 dist
 .parcel-cache
 .pnpm-debug.log
+/.psc-ide-port
