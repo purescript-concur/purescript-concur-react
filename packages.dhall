@@ -137,4 +137,20 @@ in upstream
     , version = "main"
     }
 
+  with concur-signals =
+    { dependencies =
+      [ "control"
+      , "concur-core"
+      , "effect"
+      , "either"
+      , "foldable-traversable"
+      , "lazy"
+      , "maybe"
+      , "prelude"
+      , "tuples"
+      ]
+    , repo = "https://github.com/purescript-concur/purescript-concur-signals"
+    , version = "main"
+    }
+
 with concur-react = ./spago.dhall as Location

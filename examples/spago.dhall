@@ -5,11 +5,6 @@ You can edit this file as you like.
 { name = "purescript-concur-react-examples"
 , dependencies =
   [ "aff"
-  , "affjax"
-  , "affjax-web"
-  , "argonaut"
-  , "argonaut-codecs"
-  , "argonaut-core"
   , "arrays"
   , "avar"
   , "concur-core"
@@ -34,6 +29,7 @@ You can edit this file as you like.
   , "transformers"
   , "tuples"
   , "unsafe-coerce"
+  , "concur-signals"
   ]
 , sources = [ "src/**/*.purs" ]
 , packages = ../packages.dhall
