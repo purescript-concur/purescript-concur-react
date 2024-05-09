@@ -1,81 +1,101 @@
 module Concur.React.DOM where
 
-import Prelude hiding (div,map,sub)
+import Prelude hiding (div, map, sub)
 
-import Concur.Core.DOM (el, el', elLeaf) as CD
+import Concur.Core (mkLeafWidget, mkNodeWidget)
+import Concur.Core.DOM (viewAdapter)
 import Concur.Core.LiftWidget (class LiftWidget, liftWidget)
-import Concur.Core.Props (Props)
 import Concur.Core.Types (Widget, display)
 import Concur.React (HTML)
-import Concur.React.Props (ReactProps)
-import Control.MultiAlternative (class MultiAlternative)
-import Control.ShiftMap (class ShiftMap)
+import Concur.React.Props (Props, ReactProps, mkProp)
+import Control.MultiAlternative (class MultiAlternative, orr)
+import Control.ShiftMap (class ShiftMap, shiftMap)
+import Data.Functor (map)
 import React.DOM as D
 
--- | The React backend uses Array to make view monoidal
--- | We use this view adapter to derive our specialised `el` functions
-viewAdapter
-  :: forall ps vs res
-  .  (ps -> vs -> res)
-  -> (ps -> vs -> Array res)
-viewAdapter f = \ps vs -> [f ps vs]
-
+-- | el for array views
 el
-  :: forall m a p v
-  .  ShiftMap (Widget (Array v)) m
-  => (Array p -> Array v -> v)
-  -> Array (Props p a)
+  :: forall f p v m a
+   . ShiftMap (Widget (Array v)) m
+  => Functor f
+  => (f p -> Array v -> v)
+  -> f (Props p a)
   -> m a
   -> m a
-el f = CD.el (viewAdapter f)
+el e props = shiftMap (\f w -> mkNodeWidget (\h v -> (viewAdapter e (map (mkProp (h <<< f)) props) v)) w)
 
+-- | elLeaf for array views
+elLeaf
+  :: forall f p v m a
+   . LiftWidget (Array v) m
+  => Functor f
+  => (f p -> v)
+  -> f (Props p a)
+  -> m a
+elLeaf e props = liftWidget $ mkLeafWidget \h -> [ e (map (mkProp h) props) ]
+
+-- | el' for array views
 el'
-  :: forall m a p v
-  .  ShiftMap (Widget (Array v)) m
+  :: forall f p v m a
+   . ShiftMap (Widget (Array v)) m
   => MultiAlternative m
-  => (Array p -> Array v -> v)
-  -> Array (Props p a)
+  => Functor f
+  => (f p -> Array v -> v)
+  -> f (Props p a)
   -> Array (m a)
   -> m a
-el' f = CD.el' (viewAdapter f)
-
-elLeaf
-  :: forall p v m a
-  .  LiftWidget (Array v) m
-  => (Array p -> v)
-  -> Array (Props p a)
-  -> m a
-elLeaf f = CD.elLeaf (\ps -> [f ps])
+el' e props = el e props <<< orr
 
 -- Wrappers for all DOM elements from purescript-react
 -- TODO: Generate these mechanically somehow
-type El1
-  = forall m a. ShiftMap (Widget HTML) m => Array (ReactProps a) -> m a -> m a
+type El1 =
+  forall m a
+   . ShiftMap (Widget HTML) m
+  => Array (ReactProps a)
+  -> m a
+  -> m a
 
-type El
-  = forall m a. MultiAlternative m => ShiftMap (Widget HTML) m => Array (ReactProps a) -> Array (m a) -> m a
+type El =
+  forall m a
+   . MultiAlternative m
+  => ShiftMap (Widget HTML) m
+  => Array (ReactProps a)
+  -> Array (m a)
+  -> m a
 
-type El'
-  = forall m a. MultiAlternative m => ShiftMap (Widget HTML) m => Array (m a) -> m a
+type El' =
+  forall m a
+   . MultiAlternative m
+  => ShiftMap (Widget HTML) m
+  => Array (m a)
+  -> m a
 
-type ElLeaf
-  = forall m a. LiftWidget HTML m => Array (ReactProps a) -> m a
+type ElLeaf =
+  forall m a
+   . LiftWidget HTML m
+  => Array (ReactProps a)
+  -> m a
 
-type ElLeaf'
-  = forall m a. LiftWidget HTML m => m a
+type ElLeaf' =
+  forall m a
+   . LiftWidget HTML m
+  => m a
 
-type ElLeafFunc' x
-  = forall m a. LiftWidget HTML m => x -> m a
+type ElLeafFunc' x =
+  forall m a
+   . LiftWidget HTML m
+  => x
+  -> m a
 
 -------------------------------------------------------------------------------------------------------------------
 text :: ElLeafFunc' String
-text str = liftWidget $ display [D.text str]
+text str = liftWidget $ display [ D.text str ]
 
 int :: ElLeafFunc' Int
-int x = liftWidget $ display [D.int x]
+int x = liftWidget $ display [ D.int x ]
 
 number :: ElLeafFunc' Number
-number x = liftWidget $ display [D.number x]
+number x = liftWidget $ display [ D.number x ]
 
 a_ :: El1
 a_ = el D.a

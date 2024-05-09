@@ -2,30 +2,55 @@ module Concur.React.Props where
 
 import Prelude
 
-import Concur.Core.Props (Props(..), filterProp)
 import Data.Array (concatMap, intercalate)
 import Data.Maybe (Maybe, maybe)
 import Effect (Effect)
 import Effect.Uncurried (mkEffectFn1)
-import React.Ref as Ref
 import React.DOM.Props as P
-import React.SyntheticEvent
-  ( SyntheticAnimationEvent
-  , SyntheticClipboardEvent
-  , SyntheticCompositionEvent
-  , SyntheticEvent
-  , SyntheticEvent_
-  , SyntheticFocusEvent
-  , SyntheticInputEvent
-  , SyntheticKeyboardEvent
-  , SyntheticMouseEvent
-  , SyntheticTouchEvent
-  , SyntheticTransitionEvent
-  , SyntheticUIEvent
-  , SyntheticWheelEvent
-  )
+import React.Ref as Ref
+import React.SyntheticEvent (SyntheticAnimationEvent, SyntheticClipboardEvent, SyntheticCompositionEvent, SyntheticEvent, SyntheticEvent_, SyntheticFocusEvent, SyntheticInputEvent, SyntheticKeyboardEvent, SyntheticMouseEvent, SyntheticTouchEvent, SyntheticTransitionEvent, SyntheticUIEvent, SyntheticWheelEvent)
 import React.SyntheticEvent (persist) as R
 import Unsafe.Coerce (unsafeCoerce)
+
+data Props p a
+  = PrimProp p
+  | Handler ((a -> Effect Unit) -> p)
+
+instance functorProps :: Functor (Props p) where
+  map _ (PrimProp p) = PrimProp p
+  map f (Handler h) = Handler \k -> h (k <<< f)
+
+-- | Internal. Do not use. Use unsafeMkProp, or unsafeMkPropHandler instead.
+mkProp
+  :: forall p a
+   . (a -> Effect Unit)
+  -> Props p a
+  -> p
+mkProp _ (PrimProp a) = a
+mkProp h (Handler f) = f h
+
+-- -- | Use `handleProp` to handle an event manually
+handleProp
+  :: forall p a b
+   . (a -> Effect Unit)
+  -> Props p a
+  -> Props p b
+handleProp _ (PrimProp p) = PrimProp p
+handleProp f (Handler g) = PrimProp (g f)
+
+-- | Use this to filter the output of an event handler prop.
+-- | For example, to only handle the enter key - `filterProp isEnterEvent onKeyDown`
+filterProp
+  :: forall p a
+   . (a -> Boolean)
+  -> Props p a
+  -> Props p a
+filterProp _ p@(PrimProp _) = p
+filterProp ok (Handler g) = Handler \h ->
+  ( g \a ->
+      if ok a then h a
+      else pure unit
+  )
 
 foreign import emptyProp_ :: P.Props
 
@@ -35,51 +60,55 @@ emptyProp :: forall a. ReactProps a
 emptyProp = PrimProp emptyProp_
 
 -- | Construct a custom prop handler
-unsafeMkPropHandler ::
-  forall a.
-  String ->
-  ReactProps a
+unsafeMkPropHandler
+  :: forall a
+   . String
+  -> ReactProps a
 unsafeMkPropHandler s = Handler \f ->
   P.unsafeMkProps s (mkEffectFn1 f)
 
 -- | Construct a custom key value prop
-unsafeMkProp ::
-  forall a b.
-  String ->
-  a ->
-  ReactProps b
+unsafeMkProp
+  :: forall a b
+   . String
+  -> a
+  -> ReactProps b
 unsafeMkProp s v = PrimProp (P.unsafeMkProps s v)
 
 -- | Shortcut for the common case of a list of classes
-classList ::
-  forall a.
-  Array (Maybe String) ->
-  ReactProps a
-classList = className <<< intercalate " " <<< concatMap (maybe [] (\s ->
-  [s]))
+classList
+  :: forall a
+   . Array (Maybe String)
+  -> ReactProps a
+classList = className <<< intercalate " " <<< concatMap
+  ( maybe []
+      ( \s ->
+          [ s ]
+      )
+  )
 
 -- FFI + Util stuff
 -- | Get the event target's current value
 -- | HACK: This is brittle thanks to React's event object reuse!
 -- | Safest is to use it directly on the prop like `unsafeTargetValue <$> onKeyDown`
-unsafeTargetValue ::
-  forall r.
-  SyntheticEvent_ r ->
-  String
+unsafeTargetValue
+  :: forall r
+   . SyntheticEvent_ r
+  -> String
 unsafeTargetValue e = (unsafeCoerce e).target.value
 
 -- | Check if a keyboard event was Enter
-isEnterEvent ::
-  SyntheticKeyboardEvent ->
-  Boolean
+isEnterEvent
+  :: SyntheticKeyboardEvent
+  -> Boolean
 isEnterEvent e = e'.which == 13 || e'.keyCode == 13
   where
   e' = unsafeCoerce e
 
 -- Stop React event recycling
-persist ::
-  ReactProps SyntheticInputEvent ->
-  ReactProps SyntheticInputEvent
+persist
+  :: ReactProps SyntheticInputEvent
+  -> ReactProps SyntheticInputEvent
 persist (Handler h) = Handler \hdlr ->
   h (\e -> R.persist e >>= \_ -> hdlr e)
 persist (PrimProp p) = PrimProp p
@@ -88,19 +117,19 @@ persist (PrimProp p) = PrimProp p
 foreign import resetTargetValue :: forall event. String -> event -> Effect Unit
 
 -- The Standard Set of Props
-aria ::
-  forall ariaAttrs a.
-  { | ariaAttrs} ->
-  ReactProps a
+aria
+  :: forall ariaAttrs a
+   . { | ariaAttrs }
+  -> ReactProps a
 aria = PrimProp <<< P.aria
 
-_data :: forall dataAttrs a. { | dataAttrs} -> ReactProps a
+_data :: forall dataAttrs a. { | dataAttrs } -> ReactProps a
 _data = PrimProp <<< P._data
 
-style :: forall style a. { | style} -> ReactProps a
+style :: forall style a. { | style } -> ReactProps a
 style = PrimProp <<< P.style
 
-dangerouslySetInnerHTML :: forall a. {__html :: String} -> ReactProps a
+dangerouslySetInnerHTML :: forall a. { __html :: String } -> ReactProps a
 dangerouslySetInnerHTML = PrimProp <<< P.dangerouslySetInnerHTML
 
 accept :: forall a. String -> ReactProps a
@@ -479,10 +508,10 @@ wrap :: forall a. String -> ReactProps a
 wrap = PrimProp <<< P.wrap
 
 -- RDFa Attributes
-about ::
-  forall a.
-  String ->
-  ReactProps a
+about
+  :: forall a
+   . String
+  -> ReactProps a
 about = PrimProp <<< P.about
 
 datatype :: forall a. String -> ReactProps a
@@ -507,10 +536,10 @@ vocab :: forall a. String -> ReactProps a
 vocab = PrimProp <<< P.vocab
 
 -- Non-standard Attributes
-autoCapitalize ::
-  forall a.
-  String ->
-  ReactProps a
+autoCapitalize
+  :: forall a
+   . String
+  -> ReactProps a
 autoCapitalize = PrimProp <<< P.autoCapitalize
 
 autoCorrect :: forall a. String -> ReactProps a
@@ -970,10 +999,10 @@ suppressContentEditableWarning :: forall a. Boolean -> ReactProps a
 suppressContentEditableWarning = PrimProp <<< P.suppressContentEditableWarning
 
 -- SVG attributes
-x ::
-  forall a.
-  Int ->
-  ReactProps a
+x
+  :: forall a
+   . Int
+  -> ReactProps a
 x = PrimProp <<< P.x
 
 y :: forall a. Int -> ReactProps a

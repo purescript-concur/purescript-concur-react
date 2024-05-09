@@ -29,8 +29,6 @@
     "process": "^0.11.10",
     "esbuild": "^0.17.5",
     "parcel": "^2.8.3",
-    "purescript": "^0.15.7",
-    "rimraf": "^3.0.2",
-    "spago": "^0.20.9"
+    "rimraf": "^3.0.2"
   }
 }

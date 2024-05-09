@@ -4,32 +4,29 @@ import Concur.Core (mkWidget)
 import Concur.Core.Types (Result(..), Widget, runWidget)
 import Control.Applicative (pure)
 import Control.Apply ((*>))
-import Control.Bind (bind, discard)
+import Control.Bind (bind)
 import Data.Either (Either(..))
 import Data.Function (const, ($))
 import Data.Functor ((<$>))
 import Data.Monoid (mempty)
-import Data.Unit (Unit, unit)
+import Data.Unit (Unit)
 import Effect (Effect)
 import Effect.Aff (Aff, Milliseconds(..), delay, killFiber, runAff, runAff_)
-import Effect.Class (liftEffect)
 import Effect.Console (log)
 import Effect.Exception (error)
 import React as R
 
-type HTML
-  = Array R.ReactElement
+type HTML = Array R.ReactElement
 
 -- React requires wrapping state inside an object
-type ComponentState
-  = {view :: HTML}
+type ComponentState = { view :: HTML }
 
 mkComponentState :: HTML -> ComponentState
 mkComponentState v = { view: v }
 
-render ::
-  ComponentState ->
-  R.ReactElement
+render
+  :: ComponentState
+  -> R.ReactElement
 render st = R.toElement st.view
 
 toReactClass :: forall props a. String -> HTML -> (Record props -> Widget HTML a) -> R.ReactClass (Record props)
@@ -45,10 +42,11 @@ toReactClassWithMount componentName initialView onMount widgetBuilder = R.compon
       View v -> do
         R.writeState this (mkComponentState v)
       _ -> log "Application exited"
-  pure { state: mkComponentState initialView
-       , render: render <$> R.getState this
-       , componentDidMount: onMount
-       }
+  pure
+    { state: mkComponentState initialView
+    , render: render <$> R.getState this
+    , componentDidMount: onMount
+    }
 
 toReactElement :: forall a. String -> HTML -> Widget HTML a -> R.ReactElement
 toReactElement componentName initialView widget =
@@ -64,5 +62,5 @@ affAction aff = mkWidget \cb -> do
   pure do
     runAff_ mempty $ killFiber (error "cancelling aff") fiber
   where
-    handler cb (Right r) = cb (Completed r)
-    handler _cb (Left _) = log "error calling aff"
+  handler cb (Right r) = cb (Completed r)
+  handler _cb (Left _) = log "error calling aff"
