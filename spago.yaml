@@ -1,0 +1,30 @@
+package:
+  name: concur-react
+  dependencies:
+    - aff
+    - arrays
+    - concur-core
+    - console
+    - effect
+    - either
+    - exceptions
+    - foldable-traversable
+    - maybe
+    - prelude
+    - react
+    - react-dom
+    - transformers
+    - unsafe-coerce
+    - web-dom
+    - web-events
+    - web-html
+  test:
+    main: Test.Main
+    dependencies:
+      - console
+      - spec
+workspace:
+  packageSet:
+    registry: 61.3.1
+  extraPackages: {}
+
